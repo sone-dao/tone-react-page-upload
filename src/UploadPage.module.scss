@@ -1,0 +1,13 @@
+.component {
+  background: rgb(var(--global-secondary));
+  color: rgb(var(--global-primary));
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  padding: 1rem;
+  width: 100%;
+
+  h5 {
+    color: rgb(var(--global-primary));
+  }
+}

@@ -1,0 +1,35 @@
+.component {
+  border-radius: var(--border-radius-main);
+  box-shadow: var(--box-shadow-main);
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+
+  h5 {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  input {
+    background: rgba(var(--global-primary), 0.1);
+    border: 0;
+    color: rgb(var(--global-primary));
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  textarea {
+    background: rgba(var(--global-primary), 0.1);
+    border: 0;
+    color: rgb(var(--global-primary));
+    padding: 0.5rem;
+    resize: none;
+    width: 100%;
+  }
+}

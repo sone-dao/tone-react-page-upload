@@ -1,4 +1,3 @@
-import ClientComponent from './ClientComponent'
-import ServerComponent from './ServerComponent'
+import UploadPage from './UploadPage'
 
-export { ClientComponent, ServerComponent }
+export { UploadPage }
