@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { ColorPicker, TextInput } from '@sone-dao/tone-react-form-ui'
+import { useState } from 'react'
 import { IUploadRelease } from '../../UploadPage'
 import styles from './ReleaseArtwork.module.scss'
 
@@ -11,66 +12,28 @@ export default function ArtworkColors({}: IArtworkColorsProps) {
   const [primary, setPrimary] = useState<string>('#000000')
   const [secondary, setSecondary] = useState<string>('#FFFFFF')
 
-  useEffect(() => {
-    const primaryRgb = hexToRgb(primary)
-    const secondaryRgb = hexToRgb(secondary)
-
-    document.documentElement.style.setProperty('--global-primary', primaryRgb)
-
-    document.documentElement.style.setProperty(
-      '--global-secondary',
-      secondaryRgb
-    )
-  }, [primary, secondary])
-
   return (
     <div className={styles.artworkColors}>
-      <div className={styles.group}>
-        <div
-          className={styles.colorPicker}
-          style={{ backgroundColor: primary }}
-        >
-          <input
-            type="color"
-            value={primary}
-            onChange={(e) => setPrimary(e.target.value)}
-          />
-        </div>
-        <input value={primary} onChange={(e) => setPrimary(e.target.value)} />
-      </div>
-      <div className={styles.group}>
-        <div
-          className={styles.colorPicker}
-          style={{
-            backgroundColor: secondary,
-          }}
-        >
-          <input
-            type="color"
-            value={secondary}
-            onChange={(e) => setSecondary(e.target.value)}
-          />
-        </div>
-        <input
-          value={secondary}
-          onChange={(e) => setSecondary(e.target.value)}
-        />
-      </div>
       <p>
         <i className="fa-sharp fa-solid fa-paintbrush-fine" />
         These colors will represent your release across Tone.
       </p>
+      <div className={styles.group}>
+        <ColorPicker
+          style={{ marginRight: '0.5rem' }}
+          defaultColor={primary}
+          setHexValue={(hex: string) => setPrimary(hex)}
+        />
+        <TextInput value={primary} setValue={setPrimary} />
+      </div>
+      <div className={styles.group}>
+        <ColorPicker
+          style={{ marginRight: '0.5rem', border: `1px solid ${primary}` }}
+          defaultColor={secondary}
+          setHexValue={(hex: string) => setSecondary(hex)}
+        />
+        <TextInput value={secondary} setValue={setSecondary} />
+      </div>
     </div>
   )
-
-  function hexToRgb(hex: string) {
-    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
-    return result
-      ? parseInt(result[1], 16) +
-          ',' +
-          parseInt(result[2], 16) +
-          ',' +
-          parseInt(result[3], 16)
-      : null
-  }
 }

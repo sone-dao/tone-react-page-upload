@@ -11,3 +11,17 @@
     color: rgb(var(--global-primary));
   }
 }
+
+.section {
+  border-radius: var(--border-radius-main);
+  box-shadow: var(--box-shadow-main);
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.pillContainer {
+  background: rgba(var(--global-primary), 0.1);
+  display: flex;
+  list-style: none;
+  padding: 0.5rem;
+}

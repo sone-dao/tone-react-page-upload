@@ -5,6 +5,7 @@ interface IArtworkMenuItemProps {
   display: string
   selected: number
   setSelected: Function
+  required?: boolean
 }
 
 export default function ArtworkMenuItem({
@@ -12,6 +13,7 @@ export default function ArtworkMenuItem({
   display,
   selected,
   setSelected,
+  required = false,
 }: IArtworkMenuItemProps) {
   return (
     <li
@@ -23,6 +25,17 @@ export default function ArtworkMenuItem({
       onClick={() => setSelected(index)}
     >
       {display}
+      {required && (
+        <i
+          className="fa-sharp fa-solid fa-music"
+          style={{
+            fontSize: '0.55rem',
+            position: 'relative',
+            left: '2px',
+            bottom: '5px',
+          }}
+        />
+      )}
     </li>
   )
 }

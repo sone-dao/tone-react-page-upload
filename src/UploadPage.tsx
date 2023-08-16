@@ -3,10 +3,10 @@
 import { Page } from '@sone-dao/tone-react-core-ui'
 import { useEffect, useState } from 'react'
 import ReleaseArtwork from './components/ReleaseArtwork/ReleaseArtwork'
-import ReleaseHeader from './components/ReleaseHeader/ReleaseHeader'
+import ReleaseHeader from './components/ReleaseHeader'
 import ReleaseImporter from './components/ReleaseImporter/ReleaseImporter'
-import ReleaseMetadata from './components/ReleaseMetadata/ReleaseMetadata'
-import ReleasePricing from './components/ReleasePricing/ReleasePricing'
+import ReleaseMetadata from './components/ReleaseMetadata'
+import ReleasePricing from './components/ReleasePricing'
 import ReleaseSongs from './components/ReleaseSongs/ReleaseSongs'
 
 import styles from './UploadPage.module.scss'
@@ -63,6 +63,22 @@ export interface IUploadArtwork {
 const uploadArtworkDefaults = {}
 
 export interface IUploadRelease {
+  artists: {
+    uniqueUrl: string
+    display: string
+    colors: {
+      primary: string
+      secondary: string
+    }
+  }[]
+  labels: {
+    uniqueUrl: string
+    display: string
+    colors: {
+      primary: string
+      secondary: string
+    }
+  }[]
   display: string
   custodians: { owners: string[]; maintainers: string[] }
   description: string
@@ -81,32 +97,53 @@ export interface IUploadRelease {
   songs: IUploadReleaseSong[]
 }
 
-const uploadReleaseDefaults: IUploadRelease = {
-  display: '',
-  custodians: { owners: [], maintainers: [] },
-  description: '',
-  credits: {
-    written: '',
-    tagged: [],
-  },
-  artwork: {
-    cover: null,
-  },
-  colors: {
-    primary: '',
-    secondary: '',
-  },
-  tags: [],
-  upc: '',
-  catalog: '',
-  songs: [],
-}
-
 interface IUploadPageProps {
-  releaseId: string
+  releaseData: {
+    artists: {
+      uniqueUrl: string
+      display: string
+      colors: {
+        primary: string
+        secondary: string
+      }
+    }[]
+    labels: {
+      uniqueUrl: string
+      display: string
+      colors: {
+        primary: string
+        secondary: string
+      }
+    }[]
+    display: string
+    description: string
+  }
 }
 
-export default function UploadPage({}: IUploadPageProps) {
+export default function UploadPage({ releaseData }: IUploadPageProps) {
+  const uploadReleaseDefaults: IUploadRelease = {
+    artists: releaseData.artists.length ? releaseData.artists : [],
+    labels: releaseData.labels.length ? releaseData.labels : [],
+    display: releaseData.display || '',
+    custodians: { owners: [], maintainers: [] },
+    description: releaseData.description || '',
+    credits: {
+      written: '',
+      tagged: [],
+    },
+    artwork: {
+      cover: null,
+    },
+    colors: {
+      primary: '',
+      secondary: '',
+    },
+    tags: [],
+    upc: '',
+    catalog: '',
+    songs: [],
+  }
+
   const [release, setRelease] = useState<IUploadRelease>(uploadReleaseDefaults)
   const [songCache, setSongCache] = useState<ArrayBuffer[]>([])
 

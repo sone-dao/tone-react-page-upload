@@ -1,3 +1,4 @@
+import { FormGroup } from '@sone-dao/tone-react-form-ui'
 import { useState } from 'react'
 import { IUploadRelease } from '../../UploadPage'
 import ArtworkColors from './ArtworkColors'
@@ -16,28 +17,57 @@ export default function ReleaseArtwork({
 }: IReleaseArtworkProps) {
   const [selected, setSelected] = useState<number>(0)
 
-  const menuOptions = ['Cover*', 'Back', 'Gatefold', 'Vinyl', 'Insert', 'Tape']
-
   return (
     <div className={styles.component}>
-      <ul className={styles.artworkMenu}>
-        {menuOptions.map((option: string, i: number) => (
+      <FormGroup display="Release Artwork">
+        <ul className={styles.artworkMenu}>
           <ArtworkMenuItem
-            key={i}
-            index={i}
-            display={option}
+            index={0}
+            display="Cover"
+            selected={selected}
+            setSelected={setSelected}
+            required
+          />
+          <ArtworkMenuItem
+            index={1}
+            display="Back"
             selected={selected}
             setSelected={setSelected}
           />
-        ))}
-      </ul>
-      <ArtworkDisplay
-        selected={selected}
-        release={release}
-        setRelease={setRelease}
-      />
-      <hr />
-      <ArtworkColors release={release} setRelease={setRelease} />
+          <ArtworkMenuItem
+            index={2}
+            display="Gatefold"
+            selected={selected}
+            setSelected={setSelected}
+          />
+          <ArtworkMenuItem
+            index={3}
+            display="Insert"
+            selected={selected}
+            setSelected={setSelected}
+          />
+          <ArtworkMenuItem
+            index={4}
+            display="Vinyl"
+            selected={selected}
+            setSelected={setSelected}
+          />
+          <ArtworkMenuItem
+            index={5}
+            display="Tape"
+            selected={selected}
+            setSelected={setSelected}
+          />
+        </ul>
+        <ArtworkDisplay
+          selected={selected}
+          release={release}
+          setRelease={setRelease}
+        />
+      </FormGroup>
+      <FormGroup display="Release Colors" required>
+        <ArtworkColors release={release} setRelease={setRelease} />
+      </FormGroup>
     </div>
   )
 }
