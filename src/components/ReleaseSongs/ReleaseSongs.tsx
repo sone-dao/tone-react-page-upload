@@ -17,16 +17,15 @@ export default function ReleaseSongs({
   const songs = release.songs
   return (
     <div className={styles.component}>
-      {songs.length &&
-        songs.map((song: IUploadReleaseSong, i: number) => (
-          <SongPod
-            key={i}
-            index={i}
-            song={song}
-            release={release}
-            setRelease={setRelease}
-          />
-        ))}
+      {songs.map((song: IUploadReleaseSong, i: number) => (
+        <SongPod
+          key={i}
+          index={i}
+          song={song}
+          release={release}
+          setRelease={setRelease}
+        />
+      ))}
     </div>
   )
 }

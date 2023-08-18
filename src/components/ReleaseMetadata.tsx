@@ -1,4 +1,10 @@
-import { FormGroup, TextInput, Textarea } from '@sone-dao/tone-react-form-ui'
+import {
+  FormGroup,
+  PillInput,
+  TextInput,
+  Textarea,
+} from '@sone-dao/tone-react-form-ui'
+import { useState } from 'react'
 import { IUploadRelease } from '../UploadPage'
 import styles from '../UploadPage.module.scss'
 
@@ -11,9 +17,27 @@ export default function ReleaseMetadata({
   release,
   setRelease,
 }: IReleaseMetadataProps) {
+  const [tagSearchTerm, setTagSearchTerm] = useState<string>('')
+  const [tagsMenuData, setTagsMenuData] = useState<
+    {
+      display: string
+      value: string
+    }[]
+  >([])
+
   return (
     <div className={styles.section}>
-      <FormGroup display="Tags" />
+      <FormGroup display="Tags">
+        <PillInput
+          value={tagSearchTerm}
+          setValue={setTagSearchTerm}
+          menuData={tagsMenuData}
+          onMenuItemClick={(display: string, value: any) => {
+            console.log({ display, value })
+          }}
+          isSearching={false}
+        />
+      </FormGroup>
       <FormGroup display="About the release">
         <Textarea
           style={{ height: '25vh' }}

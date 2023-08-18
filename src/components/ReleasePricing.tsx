@@ -29,7 +29,7 @@ export default function ReleasePricing({
 
   return (
     <div className={styles.section}>
-      <FormGroup display="Default Stream Pricing" required>
+      <FormGroup display="Default Song Stream Price" required>
         <CurrencyInput value={streamPrice} setValue={setStreamPrice} />
         <InfoMessage style={{ margin: '0.5rem 0' }}>
           Song pricing can still be adjusted on an individual basis below.
@@ -44,9 +44,9 @@ export default function ReleasePricing({
         </CheckboxInput>
       </FormGroup>
       <hr />
-      <FormGroup display="Purchase Pricing">
+      <FormGroup display="Release Purchase Price">
         <CheckboxInput value={hasPurchasePricing} setValue={setPurchasePricing}>
-          Enable purchasing
+          Enable release purchasing
         </CheckboxInput>
         <InfoMessage style={{ margin: '0.5rem 0' }}>
           Allow a listener to purchase this release for a set price. A purchased

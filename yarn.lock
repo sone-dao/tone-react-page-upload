@@ -487,20 +487,20 @@
     estree-walker "^2.0.2"
     picomatch "^2.3.1"
 
-"@sone-dao/tone-react-api@^0.16.0":
-  version "0.16.0"
-  resolved "https://registry.npmjs.org/@sone-dao/tone-react-api/-/tone-react-api-0.16.0.tgz"
-  integrity sha512-0HL9tDD3YlMa5pKEbEsGTadCbB7QyodvWAJKnC8gKSv6zfnpaFH14cB5BhYsNZ7AHnVFjqcR1lRB/Akcc7gs7g==
+"@sone-dao/tone-react-api@0.17.0":
+  version "0.17.0"
+  resolved "https://registry.npmjs.org/@sone-dao/tone-react-api/-/tone-react-api-0.17.0.tgz"
+  integrity sha512-59FId5MKU0AWXtkBULaB9RYWFrJ1klTriYE6mtSxDgdrhKcG/WiZSO3v46rsgNeUe+Casjl40FrRJxloIqd0Bg==
 
-"@sone-dao/tone-react-core-ui@1.10.0":
-  version "1.10.0"
-  resolved "https://registry.npmjs.org/@sone-dao/tone-react-core-ui/-/tone-react-core-ui-1.10.0.tgz"
-  integrity sha512-1e4Mv8nnD13FdACdrtodEF1LAAXN7+HSoSgRE9ZVMpy7rZnXrWDqGXE2hF1VogIgHY6ywG61N6t7uv+J68vdPA==
+"@sone-dao/tone-react-core-ui@1.13.3":
+  version "1.13.3"
+  resolved "https://registry.npmjs.org/@sone-dao/tone-react-core-ui/-/tone-react-core-ui-1.13.3.tgz"
+  integrity sha512-PVKSMZ0+dGDFFnrV3pSWWKlTW2ULbLmLlB5fJsRKtLZilwoZP1r+LoCcfGjVXVLB7Ppr75HkS1NnmKgr6D+Uzw==
 
-"@sone-dao/tone-react-form-ui@0.5.9":
-  version "0.5.9"
-  resolved "https://registry.npmjs.org/@sone-dao/tone-react-form-ui/-/tone-react-form-ui-0.5.9.tgz"
-  integrity sha512-EGF12lxDHhpmx6iqVtWu7YAsIBoDzrkYw5syRA9JU0xP9RXv7wGe4R/tUwV1T6tcroXAEcTJfw3+QrJr5YdJcA==
+"@sone-dao/tone-react-form-ui@0.6.19":
+  version "0.6.19"
+  resolved "https://registry.npmjs.org/@sone-dao/tone-react-form-ui/-/tone-react-form-ui-0.6.19.tgz"
+  integrity sha512-J6cMJ992hL4TsSvnG6KdLHChJy4FVToyJDK4BHCzT/2k79UdX+wKH/0RBfHWrzd3P43jqy90h0vGM5PBfLeVSQ==
 
 "@swc/helpers@0.5.1":
   version "0.5.1"
