@@ -79,31 +79,30 @@ export default function UploadPage({}: UploadPageProps) {
             }
           />
           <div>
-            <div className="w-full flex items-center justify-center p-4">
-              {release.art.length ? (
+            {Object.keys(release.art).length ? (
+              <div className="w-full flex items-center justify-center p-4">
                 <img
                   src={release.art['cover']?.dataURL}
                   style={{ height: '100%', maxWidth: 'auto' }}
                 />
-              ) : (
-                <div
-                  className="flex bg-[var(--tone-upload-preview-darker)] dark:bg-[var(--tone-upload-preview-lighter)]"
-                  style={{ height: '100%', width: '100%', maxWidth: 'auto' }}
-                />
-              )}
-            </div>
-            {release.display ? (
-              <h1 className="font-release text-5xl font-bold">
-                {release.display}
-              </h1>
+              </div>
             ) : (
-              <h1 className="font-release text-5xl font-bold opacity-20">
-                Title of your release
-              </h1>
+              <></>
             )}
-            <p className="font-content text-sm mb-2">
-              by <span className="font-header">[artist]</span>
-            </p>
+            <div className="my-2">
+              {release.display ? (
+                <h1 className="font-release text-5xl font-bold">
+                  {release.display}
+                </h1>
+              ) : (
+                <h1 className="font-release text-5xl font-bold opacity-20">
+                  Title of your release
+                </h1>
+              )}
+              <p className="font-content text-sm">
+                by <span className="font-header">[artist]</span>
+              </p>
+            </div>
             <p className="font-header text-sm">
               {songs.length || 0} song{songs.length !== 1 && 's'}, total time,
               {' ' + formatReleaseType(release.type)}
