@@ -99,14 +99,14 @@ export default function UploadPage({}: UploadPageProps) {
                   Title of your release
                 </h1>
               )}
+              <p className="font-header text-sm">
+                {songs.length || 0} song{songs.length !== 1 && 's'}, total time,
+                {' ' + formatReleaseType(release.type)}
+              </p>
               <p className="font-content text-sm">
                 by <span className="font-header">[artist]</span>
               </p>
             </div>
-            <p className="font-header text-sm">
-              {songs.length || 0} song{songs.length !== 1 && 's'}, total time,
-              {' ' + formatReleaseType(release.type)}
-            </p>
             <p className="font-content text-sm">
               Released on <span className="font-header">[date]</span>
             </p>
