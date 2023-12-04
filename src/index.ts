@@ -1,3 +1,3 @@
 import UploadPage from './UploadPage'
 
-export { UploadPage }
+export default UploadPage

@@ -1,11 +1,11 @@
 {
   "name": "@sone-dao/tone-react-page-upload",
-  "version": "0.2.1",
-  "main": "dist/cjs/src/index.js",
-  "module": "dist/esm/src/index.js",
+  "version": "0.10.0",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "https://github.com/sone-dao/tone-react-page-upload.git",
   "author": "Sone DAO <dev@sone.works>",
+  "license": "MIT",
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "rollup -c",
@@ -16,28 +16,41 @@
   "files": [
     "dist"
   ],
+  "dependencies": {
+    "@sone-dao/sone-react-placeholder": "^2.0.2",
+    "@sone-dao/sone-react-utils": "^1.0.1",
+    "@sone-dao/tone-react-api": "^2.0.1",
+    "@sone-dao/tone-react-core-ui": "^2.4.0",
+    "color.js": "^1.2.0",
+    "jszip": "^3.10.1",
+    "localforage": "^1.10.0",
+    "music-metadata-browser": "^2.5.10",
+    "uuid": "^9.0.1"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
     "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-json": "^6.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-terser": "^0.4.0",
     "@rollup/plugin-typescript": "^11.0.0",
     "@types/node": "^18.11.18",
-    "@types/react": "^18.0.27",
+    "@types/react": "^18.2.37",
     "@types/react-dom": "^18.0.10",
+    "@types/uuid": "^9.0.7",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
     "@typescript-eslint/parser": "^5.59.7",
     "eslint": "^8.41.0",
     "eslint-plugin-react": "^7.32.2",
-    "husky": "^8.0.3",
-    "next": "^13.4.3",
+    "next": "^14.0.3",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^3.12.1",
     "rollup-plugin-analyze": "^0.3.0",
+    "rollup-plugin-banner2": "^1.2.2",
     "rollup-plugin-dts": "^5.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
@@ -48,16 +61,8 @@
     "typescript": "^4.9.5"
   },
   "peerDependencies": {
-    "@sone-dao/tone-react-api": "0.17.0",
-    "@sone-dao/tone-react-core-ui": "1.13.3",
-    "@sone-dao/tone-react-form-ui": "0.6.19",
-    "next": "^13.4.3",
+    "next": "^14.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  },
-  "dependencies": {
-    "jszip": "^3.10.1",
-    "music-metadata-browser": "^2.5.10",
-    "node-vibrant": "^3.2.1-alpha.1"
   }
 }
