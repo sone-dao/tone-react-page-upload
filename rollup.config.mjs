@@ -5,7 +5,6 @@ import resolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
 import banner2 from 'rollup-plugin-banner2'
 import dts from 'rollup-plugin-dts'
-import globals from 'rollup-plugin-node-globals'
 import PeerDepsExternalPlugin from 'rollup-plugin-peer-deps-external'
 import nodePolyfills from 'rollup-plugin-polyfill-node'
 
@@ -26,8 +25,7 @@ export default [
       typescript({ tsconfig: './rollup.tsconfig.cjs.json' }),
       json(),
       PeerDepsExternalPlugin(),
-      resolve(),
-      globals(),
+      resolve({ browser: true }),
       commonjs(),
       /*injectProcessEnv({
         NODE_ENV: process.NODE_ENV,
