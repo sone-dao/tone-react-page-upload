@@ -20,13 +20,13 @@ export default [
       },
     ],
     plugins: [
-      nodePolyfills({
-        include: ['stream', 'events', 'buffer', 'util', 'tty', 'os'],
-      }),
       typescript({ tsconfig: './rollup.tsconfig.cjs.json' }),
       json(),
       PeerDepsExternalPlugin(),
-      resolve({ browser: true }),
+      nodePolyfills({
+        include: ['stream', 'events', 'buffer', 'util', 'tty', 'os'],
+      }),
+      resolve({ preferBuiltins: false }),
       commonjs(),
       injectProcessEnv({
         NODE_ENV: process.NODE_ENV,
