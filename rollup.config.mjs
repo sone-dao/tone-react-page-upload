@@ -16,6 +16,9 @@ export default [
         dir: 'dist',
         format: 'cjs',
         sourcemap: true,
+        globals: {
+          process,
+        },
       },
     ],
     plugins: [
@@ -23,7 +26,7 @@ export default [
       json(),
       PeerDepsExternalPlugin(),
       builtins(),
-      resolve({ preferBuiltins: false }),
+      resolve(),
       commonjs(),
       //terser(),
       banner2(
