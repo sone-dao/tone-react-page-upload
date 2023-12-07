@@ -20,22 +20,16 @@ export default [
     ],
     plugins: [
       nodePolyfills({
-        include: [
-          'stream',
-          'events',
-          'buffer',
-          'util',
-          'tty',
-          'os',
-          'global',
-          'process',
-        ],
+        include: ['stream', 'events', 'buffer', 'util', 'tty', 'os'],
       }),
       typescript({ tsconfig: './rollup.tsconfig.cjs.json' }),
       json(),
       PeerDepsExternalPlugin(),
       resolve(),
       commonjs(),
+      /*injectProcessEnv({
+        NODE_ENV: process.NODE_ENV,
+      }),*/
       //terser(),
       banner2(
         () => `'use client'
