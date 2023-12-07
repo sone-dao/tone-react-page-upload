@@ -5,8 +5,8 @@ import resolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
 import banner2 from 'rollup-plugin-banner2'
 import dts from 'rollup-plugin-dts'
+import builtins from 'rollup-plugin-node-builtins'
 import PeerDepsExternalPlugin from 'rollup-plugin-peer-deps-external'
-import nodePolyfills from 'rollup-plugin-polyfill-node'
 
 export default [
   {
@@ -22,9 +22,7 @@ export default [
       typescript({ tsconfig: './rollup.tsconfig.cjs.json' }),
       json(),
       PeerDepsExternalPlugin(),
-      nodePolyfills({
-        include: ['stream', 'events', 'buffer', 'util', 'tty', 'os', 'process'],
-      }),
+      builtins(),
       resolve({ preferBuiltins: false }),
       commonjs(),
       //terser(),
