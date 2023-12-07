@@ -17,12 +17,13 @@ export default [
         sourcemap: true,
       },
     ],
+    external: ['react', 'react-dom'],
     plugins: [
       json(),
-      typescript({ tsconfig: './rollup.tsconfig.cjs.json' }),
-      commonjs(),
-      resolve(),
       PeerDepsExternalPlugin(),
+      resolve(),
+      commonjs(),
+      typescript({ tsconfig: './rollup.tsconfig.cjs.json' }),
       //terser(),
       banner2(
         () => `'use client'
@@ -30,7 +31,10 @@ export default [
       ),
     ],
     onwarn(warning, warn) {
-      if (warning.code !== 'MODULE_LEVEL_DIRECTIVE') {
+      if (
+        warning.code !== 'MODULE_LEVEL_DIRECTIVE' ||
+        warning.code !== 'EVAL'
+      ) {
         warn(warning)
       }
     },

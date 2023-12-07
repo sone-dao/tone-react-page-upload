@@ -10,6 +10,10 @@ export type UploadRelease = {
     primary: string
     secondary: string
   }
+  pricing?: {
+    purchase?: string
+    streamDefault?: string
+  }
 }
 
 export type ReleaseArt = {
@@ -25,4 +29,8 @@ export type ReleaseSong = {
   duration: number
   isrc: string
   fileId: string
+  pricing?: {
+    purchase?: string
+    stream?: string
+  }
 }

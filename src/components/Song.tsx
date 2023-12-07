@@ -19,7 +19,30 @@ export default function Song({ index, data }: ReleaseSongProps) {
         {index + 1}. {data.display}
       </h4>
       <div className={`${isOpen ? 'flex' : 'hidden'} flex-col`}>
+        {/**
+         * Dynamically set pricing blurb
+         */}
+        {/**
+         * "PURCHASE PRICING" COMPONENT
+         * - dollar amount
+         * - e z p z
+         * - can enter 0
+         * - allow the listner to pay more (checkbox)
+         */}
+        {/**
+         * "STREAMING PRICING" COMPONENT
+         * - dollar amount
+         * - can enter 0
+         * - can differ from main streaming price
+         * - alert about pricing concerns
+         * - "hey, 50% of tone listeners have their settings set to not play music abouve this"
+         * - listeners can choose to not pay you greedy lil bitch
+         *
+         */}
         <Input label="title" additionalClasses="my-2" value={data.display} />
+        {/** ARTIST OVERRIDE INPUT
+         * - + sign to keep adding, etc
+         */}
         <Textarea
           label="lyrics"
           additionalClasses="my-2"

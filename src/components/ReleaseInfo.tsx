@@ -38,6 +38,16 @@ export default function ReleaseInfo({
         <Radio value="split">Split</Radio>
         <Radio value="comp">Compilation</Radio>
       </RadioGroup>
+      {/* 
+      RELEASE PRICING HERE 
+      - checked by default
+      - streaming
+      - "tracks should be this much unless I override them below" input
+      - purchase
+      - purchase component has a field for purchase amount for download
+      - show avertage cost/put in tooltips for pricing suggestions???
+      - changing checkboxes will display components
+      */}
       <Textarea
         label="about the release"
         additionalClasses="my-4"
