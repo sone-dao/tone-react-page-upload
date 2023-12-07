@@ -5,22 +5,17 @@ var require$$0$4 = require('react/jsx-runtime');
 var require$$1$1 = require('react');
 var require$$2$1 = require('react-dom');
 
-/******************************************************************************
-Copyright (c) Microsoft Corporation.
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */
-/* global Reflect, Promise, SuppressedError, Symbol */
-
+(function() {
+    const env = {};
+    try {
+        if (process) {
+            process.env = Object.assign({}, process.env);
+            Object.assign(process.env, env);
+            return;
+        }
+    } catch (e) {} // avoid ReferenceError: process is not defined
+    globalThis.process = { env:env };
+})();
 
 var __assign = function() {
     __assign = Object.assign || function __assign(t) {
@@ -5867,8 +5862,6 @@ function requireStream$1 () {
 var safeBuffer = {exports: {}};
 
 var require$$2 = /*@__PURE__*/getAugmentedNamespace(_polyfillNode_buffer);
-
-/* eslint-disable node/no-deprecated-api */
 
 var hasRequiredSafeBuffer;
 
@@ -19595,13 +19588,6 @@ function commonjsRequire(path) {
 
 var localforage$1 = {exports: {}};
 
-/*!
-    localForage -- Offline Storage, Improved
-    Version 1.10.0
-    https://localforage.github.io/localForage
-    (c) 2013-2017 Mozilla, Apache License 2.0
-*/
-
 (function (module, exports) {
 	(function(f){{module.exports=f();}})(function(){return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof commonjsRequire=="function"&&commonjsRequire;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw (f.code="MODULE_NOT_FOUND", f)}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r);}return n[o].exports}var i=typeof commonjsRequire=="function"&&commonjsRequire;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
 	(function (global){
@@ -22420,10 +22406,6 @@ var src = {exports: {}};
 
 var browser = {exports: {}};
 
-/**
- * Helpers.
- */
-
 var ms;
 var hasRequiredMs;
 
@@ -22872,8 +22854,6 @@ function requireCommon () {
 	common$3 = setup;
 	return common$3;
 }
-
-/* eslint-env browser */
 
 var hasRequiredBrowser;
 
@@ -23495,10 +23475,6 @@ function requireSupportsColor () {
 	return supportsColor_1;
 }
 
-/**
- * Module dependencies.
- */
-
 var hasRequiredNode;
 
 function requireNode () {
@@ -23767,11 +23743,6 @@ function requireNode () {
 	} (node, node.exports));
 	return node.exports;
 }
-
-/**
- * Detect Electron renderer / nwjs process, which is node, but we should
- * treat as a browser.
- */
 
 if (typeof process === 'undefined' || process.type === 'renderer' || process.browser === true || process.__nwjs) {
 	src.exports = requireBrowser();
@@ -24266,8 +24237,6 @@ var ParserFactory$1 = {};
 var lib$1 = {};
 
 var ieee754 = {};
-
-/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
 
 ieee754.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m;
@@ -26597,12 +26566,6 @@ var core = fileType;
 
 var contentType = {};
 
-/*!
- * content-type
- * Copyright(c) 2015 Douglas Christopher Wilson
- * MIT Licensed
- */
-
 /**
  * RegExp to match *( ";" parameter ) in RFC 7231 sec 3.1.1.1
  *
@@ -26822,12 +26785,6 @@ function ContentType$1 (type) {
 }
 
 var mediaTyper = {};
-
-/*!
- * media-typer
- * Copyright(c) 2014-2017 Douglas Christopher Wilson
- * MIT Licensed
- */
 
 /**
  * RegExp to match type in RFC 6838

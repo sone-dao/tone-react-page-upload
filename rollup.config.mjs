@@ -5,6 +5,7 @@ import resolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
 import banner2 from 'rollup-plugin-banner2'
 import dts from 'rollup-plugin-dts'
+import injectProcessEnv from 'rollup-plugin-inject-process-env'
 import PeerDepsExternalPlugin from 'rollup-plugin-peer-deps-external'
 import nodePolyfills from 'rollup-plugin-polyfill-node'
 
@@ -20,13 +21,16 @@ export default [
     ],
     plugins: [
       nodePolyfills({
-        include: ['stream', 'events', 'buffer', 'util', 'tty', 'os', 'process'],
+        include: ['stream', 'events', 'buffer', 'util', 'tty', 'os'],
       }),
       typescript({ tsconfig: './rollup.tsconfig.cjs.json' }),
       json(),
       PeerDepsExternalPlugin(),
       resolve(),
       commonjs(),
+      injectProcessEnv({
+        NODE_ENV: process.NODE_ENV,
+      }),
       //terser(),
       banner2(
         () => `'use client'
