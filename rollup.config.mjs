@@ -6,6 +6,7 @@ import typescript from '@rollup/plugin-typescript'
 import banner2 from 'rollup-plugin-banner2'
 import dts from 'rollup-plugin-dts'
 import PeerDepsExternalPlugin from 'rollup-plugin-peer-deps-external'
+import nodePolyfills from 'rollup-plugin-polyfill-node'
 
 export default [
   {
@@ -17,13 +18,15 @@ export default [
         sourcemap: true,
       },
     ],
-    external: ['react', 'react-dom'],
     plugins: [
+      nodePolyfills({
+        include: ['stream', 'events', 'buffer', 'util', 'tty', 'os', 'process'],
+      }),
+      typescript({ tsconfig: './rollup.tsconfig.cjs.json' }),
       json(),
       PeerDepsExternalPlugin(),
       resolve(),
       commonjs(),
-      typescript({ tsconfig: './rollup.tsconfig.cjs.json' }),
       //terser(),
       banner2(
         () => `'use client'

@@ -1,15 +1,9 @@
 'use client'
   'use strict';
 
-var require$$0 = require('react/jsx-runtime');
-var require$$1 = require('react');
-var require$$2 = require('react-dom');
-var require$$0$1 = require('stream');
-var require$$2$1 = require('events');
-var require$$0$2 = require('buffer');
-var require$$1$1 = require('util');
-var require$$1$2 = require('tty');
-var require$$0$3 = require('os');
+var require$$0$4 = require('react/jsx-runtime');
+var require$$1$1 = require('react');
+var require$$2$1 = require('react-dom');
 
 /******************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -287,7 +281,7 @@ var isPropValid_esm = /*#__PURE__*/Object.freeze({
     default: index
 });
 
-var require$$3 = /*@__PURE__*/getAugmentedNamespace(isPropValid_esm);
+var require$$3$1 = /*@__PURE__*/getAugmentedNamespace(isPropValid_esm);
 
 var Textarea;
 var RadioGroup;
@@ -295,10 +289,10 @@ var Radio;
 var Page;
 var Input;
 var Chip;
-var e=require$$0,t=require$$1,r=require$$2;function n$1(e){var t=Object.create(null);return e&&Object.keys(e).forEach((function(r){if("default"!==r){var n=Object.getOwnPropertyDescriptor(e,r);Object.defineProperty(t,r,n.get?n:{enumerable:!0,get:function(){return e[r]}});}})),t.default=e,Object.freeze(t)}var s=n$1(t);const o={prefix:String(Math.round(1e10*Math.random())),current:0},a=t.createContext(o),i$1=t.createContext(!1);let l=Boolean("undefined"!=typeof window&&window.document&&window.document.createElement),u=new WeakMap;const c$1="function"==typeof t.useId?function(e){let r=t.useId(),[n]=t.useState(f()),s=n||"test"===process.env.NODE_ENV?"react-aria":`react-aria${o.prefix}`;return e||`${s}-${r}`}:function(e){let r=t.useContext(a);r!==o||l||console.warn("When server rendering, you must wrap your application in an <SSRProvider> to ensure consistent ids are generated between the client and server.");let n=function(e=!1){let r=t.useContext(a),n=t.useRef(null);if(null===n.current&&!e){var s,o;let e=null===(o=t.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED)||void 0===o||null===(s=o.ReactCurrentOwner)||void 0===s?void 0:s.current;if(e){let t=u.get(e);null==t?u.set(e,{id:r.current,state:e.memoizedState}):e.memoizedState!==t.state&&(r.current=t.id,u.delete(e));}n.current=++r.current;}return n.current}(!!e),s=r===o&&"test"===process.env.NODE_ENV?"react-aria":`react-aria${r.prefix}`;return e||`${s}-${n}`};function d(){return !1}function p(){return !0}function h(e){return ()=>{}}function f(){return "function"==typeof t.useSyncExternalStore?t.useSyncExternalStore(h,d,p):t.useContext(i$1)}function m(e,t,r){!function(e,t){if(t.has(e))throw new TypeError("Cannot initialize the same private elements twice on an object")}(e,t),t.set(e,r);}function g(e,r,n){let[s,o]=t.useState(e||r),a=t.useRef(void 0!==e),i=void 0!==e;t.useEffect((()=>{let e=a.current;e!==i&&console.warn(`WARN: A component changed from ${e?"controlled":"uncontrolled"} to ${i?"controlled":"uncontrolled"}.`),a.current=i;}),[i]);let l=i?e:s,u=t.useCallback(((e,...t)=>{let r=(e,...t)=>{n&&(Object.is(l,e)||n(e,...t)),i||(l=e);};if("function"==typeof e){console.warn("We can not support a function callback. See Github Issues for details https://github.com/adobe/react-spectrum/issues/2320"),o(((n,...s)=>{let o=e(i?l:n,...s);return r(o,...t),i?n:o}));}else i||o(e),r(e,...t);}),[i,l,n]);return [l,u]}function v(e){var t,r,n="";if("string"==typeof e||"number"==typeof e)n+=e;else if("object"==typeof e)if(Array.isArray(e))for(t=0;t<e.length;t++)e[t]&&(r=v(e[t]))&&(n&&(n+=" "),n+=r);else for(t in e)e[t]&&(n&&(n+=" "),n+=t);return n}function y(){for(var e,t,r=0,n="";r<arguments.length;)(e=arguments[r++])&&(t=v(e))&&(n&&(n+=" "),n+=t);return n}const b="undefined"!=typeof document?t.useLayoutEffect:()=>{};function x(e){const r=t.useRef(null);return b((()=>{r.current=e;}),[e]),t.useCallback(((...e)=>(0, r.current)(...e)),[])}let w=Boolean("undefined"!=typeof window&&window.document&&window.document.createElement),P=new Map;function T(e){let[r,n]=t.useState(e),s=t.useRef(null),o=c$1(r),a=t.useCallback((e=>{s.current=e;}),[]);return w&&P.set(o,a),b((()=>{let e=o;return ()=>{P.delete(e);}}),[o]),t.useEffect((()=>{let e=s.current;e&&(s.current=null,n(e));})),o}function C(e,t){if(e===t)return e;let r=P.get(e);if(r)return r(t),t;let n=P.get(t);return n?(n(e),e):t}function E(e=[]){let r=T(),[n,s]=function(e){let[r,n]=t.useState(e),s=t.useRef(null),o=x((()=>{let e=s.current.next();e.done?s.current=null:r===e.value?o():n(e.value);}));b((()=>{s.current&&o();}));let a=x((e=>{s.current=e(r),o();}));return [r,a]}(r),o=t.useCallback((()=>{s((function*(){yield r,yield document.getElementById(r)?r:void 0;}));}),[r,s]);return b(o,[r,o,...e]),n}function S(...e){return (...t)=>{for(let r of e)"function"==typeof r&&r(...t);}}const k=e=>{var t;return null!==(t=null==e?void 0:e.ownerDocument)&&void 0!==t?t:document},M=e=>{if(e&&"window"in e&&e.window===e)return e;return k(e).defaultView||window};function A(...e){let t={...e[0]};for(let r=1;r<e.length;r++){let n=e[r];for(let e in n){let r=t[e],s=n[e];"function"==typeof r&&"function"==typeof s&&"o"===e[0]&&"n"===e[1]&&e.charCodeAt(2)>=65&&e.charCodeAt(2)<=90?t[e]=S(r,s):"className"!==e&&"UNSAFE_className"!==e||"string"!=typeof r||"string"!=typeof s?"id"===e&&r&&s?t.id=C(r,s):t[e]=void 0!==s?s:r:t[e]=y(r,s);}}return t}const D=new Set(["id"]),I=new Set(["aria-label","aria-labelledby","aria-describedby","aria-details"]),V=new Set(["href","target","rel","download","ping","referrerPolicy"]),L=/^(data-.*)$/;function K(e,t={}){let{labelable:r,isLink:n,propNames:s}=t,o={};for(const t in e)Object.prototype.hasOwnProperty.call(e,t)&&(D.has(t)||r&&I.has(t)||n&&V.has(t)||(null==s?void 0:s.has(t))||L.test(t))&&(o[t]=e[t]);return o}function R(e){if(function(){if(null==N){N=!1;try{document.createElement("div").focus({get preventScroll(){return N=!0,!0}});}catch(e){}}return N}())e.focus({preventScroll:!0});else {let t=function(e){var t=e.parentNode,r=[],n=document.scrollingElement||document.documentElement;for(;t instanceof HTMLElement&&t!==n;)(t.offsetHeight<t.scrollHeight||t.offsetWidth<t.scrollWidth)&&r.push({element:t,scrollTop:t.scrollTop,scrollLeft:t.scrollLeft}),t=t.parentNode;n instanceof HTMLElement&&r.push({element:n,scrollTop:n.scrollTop,scrollLeft:n.scrollLeft});return r}(e);e.focus(),function(e){for(let{element:t,scrollTop:r,scrollLeft:n}of e)t.scrollTop=r,t.scrollLeft=n;}(t);}}let N=null;function j(e){var t;return "undefined"!=typeof window&&null!=window.navigator&&((null===(t=window.navigator.userAgentData)||void 0===t?void 0:t.brands.some((t=>e.test(t.brand))))||e.test(window.navigator.userAgent))}function F(e){var t;return "undefined"!=typeof window&&null!=window.navigator&&e.test((null===(t=window.navigator.userAgentData)||void 0===t?void 0:t.platform)||window.navigator.platform)}function O(){return F(/^Mac/i)}function B(){return F(/^iPad/i)||O()&&navigator.maxTouchPoints>1}function W(){return F(/^iPhone/i)||B()}function z(){return j(/AppleWebKit/i)&&!j(/Chrome/i)}function U(){return j(/Android/i)}const H=t.createContext({isNative:!0,open:function(e,t){!function(e,t){if(e instanceof HTMLAnchorElement)t(e);else if(e.hasAttribute("data-href")){let r=document.createElement("a");r.href=e.getAttribute("data-href"),e.hasAttribute("data-target")&&(r.target=e.getAttribute("data-target")),e.hasAttribute("data-rel")&&(r.rel=e.getAttribute("data-rel")),e.hasAttribute("data-download")&&(r.download=e.getAttribute("data-download")),e.hasAttribute("data-ping")&&(r.ping=e.getAttribute("data-ping")),e.hasAttribute("data-referrer-policy")&&(r.referrerPolicy=e.getAttribute("data-referrer-policy")),e.appendChild(r),t(r),e.removeChild(r);}}(e,(e=>_(e,t)));}});function $(){return t.useContext(H)}function _(e,t,r=!0){var n,s;let{metaKey:o,ctrlKey:a,altKey:i,shiftKey:l}=t;j(/Firefox/i)&&(null===(s=window.event)||void 0===s||null===(n=s.type)||void 0===n?void 0:n.startsWith("key"))&&"_blank"===e.target&&(O()?o=!0:a=!0);let u=z()&&O()&&!B()?new KeyboardEvent("keydown",{keyIdentifier:"Enter",metaKey:o,ctrlKey:a,altKey:i,shiftKey:l}):new MouseEvent("click",{metaKey:o,ctrlKey:a,altKey:i,shiftKey:l,bubbles:!0,cancelable:!0});_.isOpening=r,R(e),e.dispatchEvent(u),_.isOpening=!1;}_.isOpening=!1;let G=new Map,q$1=new Set;function Y(){if("undefined"==typeof window)return;let e=t=>{let r=G.get(t.target);if(r&&(r.delete(t.propertyName),0===r.size&&(t.target.removeEventListener("transitioncancel",e),G.delete(t.target)),0===G.size)){for(let e of q$1)e();q$1.clear();}};document.body.addEventListener("transitionrun",(t=>{let r=G.get(t.target);r||(r=new Set,G.set(t.target,r),t.target.addEventListener("transitioncancel",e)),r.add(t.propertyName);})),document.body.addEventListener("transitionend",e);}function X(e){requestAnimationFrame((()=>{0===G.size?e():q$1.add(e);}));}function Z(){let e=t.useRef(new Map),r=t.useCallback(((t,r,n,s)=>{let o=(null==s?void 0:s.once)?(...t)=>{e.current.delete(n),n(...t);}:n;e.current.set(n,{type:r,eventTarget:t,fn:o,options:s}),t.addEventListener(r,n,s);}),[]),n=t.useCallback(((t,r,n,s)=>{var o;let a=(null===(o=e.current.get(n))||void 0===o?void 0:o.fn)||n;t.removeEventListener(r,a,s),e.current.delete(n);}),[]),s=t.useCallback((()=>{e.current.forEach(((e,t)=>{n(e.eventTarget,e.type,t,e.options);}));}),[n]);return t.useEffect((()=>s),[s]),{addGlobalListener:r,removeGlobalListener:n,removeAllGlobalListeners:s}}function J(e,t){let{id:r,"aria-label":n,"aria-labelledby":s}=e;if(r=T(r),s&&n){let e=new Set([r,...s.trim().split(/\s+/)]);s=[...e].join(" ");}else s&&(s=s.trim().split(/\s+/).join(" "));return n||s||!t||(n=t),{id:r,"aria-label":n,"aria-labelledby":s}}function Q(e,t){b((()=>{if(e&&e.ref&&t)return e.ref.current=t.current,()=>{e.ref.current=null;}}));}function ee(e){for(te(e)&&(e=e.parentElement);e&&!te(e);)e=e.parentElement;return e||document.scrollingElement||document.documentElement}function te(e){let t=window.getComputedStyle(e);return /(auto|scroll)/.test(t.overflow+t.overflowX+t.overflowY)}"undefined"!=typeof document&&("loading"!==document.readyState?Y():document.addEventListener("DOMContentLoaded",Y));let re=0;const ne=new Map;function se(e,t){let r=oe(e,t,"left"),n=oe(e,t,"top"),s=t.offsetWidth,o=t.offsetHeight,a=e.scrollLeft,i=e.scrollTop,{borderTopWidth:l,borderLeftWidth:u}=getComputedStyle(e),c=e.scrollLeft+parseInt(u,10),d=e.scrollTop+parseInt(l,10),p=c+e.clientWidth,h=d+e.clientHeight;r<=a?a=r-parseInt(u,10):r+s>p&&(a+=r+s-p),n<=d?i=n-parseInt(l,10):n+o>h&&(i+=n+o-h),e.scrollLeft=a,e.scrollTop=i;}function oe(e,t,r){const n="left"===r?"offsetLeft":"offsetTop";let s=0;for(;t.offsetParent&&(s+=t[n],t.offsetParent!==e);){if(t.offsetParent.contains(e)){s-=e[n];break}t=t.offsetParent;}return s}function ae(e,t){if(document.contains(e)){let a=document.scrollingElement||document.documentElement;if("hidden"===window.getComputedStyle(a).overflow){let t=ee(e);for(;e&&t&&e!==a&&t!==a;)se(t,e),t=ee(e=t);}else {var r;let{left:a,top:i}=e.getBoundingClientRect();null==e||null===(r=e.scrollIntoView)||void 0===r||r.call(e,{block:"nearest"});let{left:l,top:u}=e.getBoundingClientRect();var n,s,o;if(Math.abs(a-l)>1||Math.abs(i-u)>1)null==t||null===(s=t.containingElement)||void 0===s||null===(n=s.scrollIntoView)||void 0===n||n.call(s,{block:"center",inline:"center"}),null===(o=e.scrollIntoView)||void 0===o||o.call(e,{block:"nearest"});}}}function ie(e){return !(0!==e.mozInputSource||!e.isTrusted)||(U()&&e.pointerType?"click"===e.type&&1===e.buttons:0===e.detail&&!e.pointerType)}function le(e){return !U()&&0===e.width&&0===e.height||1===e.width&&1===e.height&&0===e.pressure&&0===e.detail&&"mouse"===e.pointerType}function ue(e,r,n){let s=t.useRef(r),o=x((()=>{n&&n(s.current);}));t.useEffect((()=>{var t;let r=null==e||null===(t=e.current)||void 0===t?void 0:t.form;return null==r||r.addEventListener("reset",o),()=>{null==r||r.removeEventListener("reset",o);}}),[e,o]);}const ce=new Set(["Arab","Syrc","Samr","Mand","Thaa","Mend","Nkoo","Adlm","Rohg","Hebr"]),de=new Set(["ae","ar","arc","bcc","bqi","ckb","dv","fa","glk","he","ku","mzn","nqo","pnb","ps","sd","ug","ur","yi"]);function pe(e){if(Intl.Locale){let t=new Intl.Locale(e).maximize().script;return !!t&&ce.has(t)}let t=e.split("-")[0];return de.has(t)}function he(){let e="undefined"!=typeof navigator&&(navigator.language||navigator.userLanguage)||"en-US";try{Intl.DateTimeFormat.supportedLocalesOf([e]);}catch(t){e="en-US";}return {locale:e,direction:pe(e)?"rtl":"ltr"}}let fe=he(),me=new Set;function ge(){fe=he();for(let e of me)e(fe);}const ve=t.createContext(null);function ye(){let e=function(){let e=f(),[r,n]=t.useState(fe);return t.useEffect((()=>(0===me.size&&window.addEventListener("languagechange",ge),me.add(n),()=>{me.delete(n),0===me.size&&window.removeEventListener("languagechange",ge);})),[]),e?{locale:"en-US",direction:"ltr"}:r}();return t.useContext(ve)||e}var be=function(){return be=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var s in t=arguments[r])Object.prototype.hasOwnProperty.call(t,s)&&(e[s]=t[s]);return e},be.apply(this,arguments)};function xe(e,t,r){if(!t.has(e))throw new TypeError("attempted to "+r+" private field on non-instance");return t.get(e)}function we(e,t,r){return function(e,t,r){if(t.set)t.set.call(e,r);else {if(!t.writable)throw new TypeError("attempted to set read only private field");t.value=r;}}(e,xe(e,t,"set"),r),r}"function"==typeof SuppressedError&&SuppressedError;let Pe="default",Te="",Ce=new WeakMap;function Ee(e){if(W()){if("default"===Pe){const t=k(e);Te=t.documentElement.style.webkitUserSelect,t.documentElement.style.webkitUserSelect="none";}Pe="disabled";}else (e instanceof HTMLElement||e instanceof SVGElement)&&(Ce.set(e,e.style.userSelect),e.style.userSelect="none");}function Se(e){if(W()){if("disabled"!==Pe)return;Pe="restoring",setTimeout((()=>{X((()=>{if("restoring"===Pe){const t=k(e);"none"===t.documentElement.style.webkitUserSelect&&(t.documentElement.style.webkitUserSelect=Te||""),Te="",Pe="default";}}));}),300);}else if((e instanceof HTMLElement||e instanceof SVGElement)&&e&&Ce.has(e)){let t=Ce.get(e);"none"===e.style.userSelect&&t&&(e.style.userSelect=t),""===e.getAttribute("style")&&e.removeAttribute("style"),Ce.delete(e);}}const ke=t.createContext({register:()=>{}});ke.displayName="PressResponderContext";var Me=new WeakMap;class Ae{continuePropagation(){we(this,Me,!1);}get shouldStopPropagation(){return function(e,t){return t.get?t.get.call(e):t.value}(e=this,xe(e,Me,"get"));var e;}constructor(e,t,r){m(this,Me,{writable:!0,value:void 0}),we(this,Me,!0),this.type=e,this.pointerType=t,this.target=r.currentTarget,this.shiftKey=r.shiftKey,this.metaKey=r.metaKey,this.ctrlKey=r.ctrlKey,this.altKey=r.altKey;}}const De=Symbol("linkClicked");function Ie(e){let{onPress:r,onPressChange:n,onPressStart:s,onPressEnd:o,onPressUp:a,isDisabled:i,isPressed:l,preventFocusOnPress:u,shouldCancelOnPointerExit:c,allowTextSelectionOnPress:d,ref:p,...h}=function(e){let r=t.useContext(ke);if(r){let{register:t,...n}=r;e=A(n,e),t();}return Q(r,e.ref),e}(e),[f,m]=t.useState(!1),g=t.useRef({isPressed:!1,ignoreEmulatedMouseEvents:!1,ignoreClickAfterPress:!1,didFirePressStart:!1,isTriggeringEvent:!1,activePointerId:null,target:null,isOverTarget:!1,pointerType:null}),{addGlobalListener:v,removeAllGlobalListeners:y}=Z(),b=x(((e,t)=>{let r=g.current;if(i||r.didFirePressStart)return !1;let o=!0;if(r.isTriggeringEvent=!0,s){let r=new Ae("pressstart",t,e);s(r),o=r.shouldStopPropagation;}return n&&n(!0),r.isTriggeringEvent=!1,r.didFirePressStart=!0,m(!0),o})),w=x(((e,t,s=!0)=>{let a=g.current;if(!a.didFirePressStart)return !1;a.ignoreClickAfterPress=!0,a.didFirePressStart=!1,a.isTriggeringEvent=!0;let l=!0;if(o){let r=new Ae("pressend",t,e);o(r),l=r.shouldStopPropagation;}if(n&&n(!1),m(!1),r&&s&&!i){let n=new Ae("press",t,e);r(n),l&&(l=n.shouldStopPropagation);}return a.isTriggeringEvent=!1,l})),P=x(((e,t)=>{let r=g.current;if(i)return !1;if(a){r.isTriggeringEvent=!0;let n=new Ae("pressup",t,e);return a(n),r.isTriggeringEvent=!1,n.shouldStopPropagation}return !0})),T=x((e=>{let t=g.current;t.isPressed&&t.target&&(t.isOverTarget&&null!=t.pointerType&&w(Re(t.target,e),t.pointerType,!1),t.isPressed=!1,t.isOverTarget=!1,t.activePointerId=null,t.pointerType=null,y(),d||Se(t.target));})),C=x((e=>{c&&T(e);})),E=t.useMemo((()=>{let e=g.current,t={onKeyDown(t){if(Le(t.nativeEvent,t.currentTarget)&&t.currentTarget.contains(t.target)){var n;Fe(t.target,t.key)&&t.preventDefault();let s=!0;e.isPressed||t.repeat||(e.target=t.currentTarget,e.isPressed=!0,s=b(t,"keyboard"),v(k(t.currentTarget),"keyup",r,!1)),s&&t.stopPropagation(),t.metaKey&&O()&&(null===(n=e.metaKeyEvents)||void 0===n||n.set(t.key,t.nativeEvent));}else "Meta"===t.key&&(e.metaKeyEvents=new Map);},onKeyUp(t){Le(t.nativeEvent,t.currentTarget)&&!t.repeat&&t.currentTarget.contains(t.target)&&e.target&&P(Re(e.target,t),"keyboard");},onClick(t){if((!t||t.currentTarget.contains(t.target))&&t&&0===t.button&&!e.isTriggeringEvent&&!_.isOpening){let r=!0;if(i&&t.preventDefault(),!e.ignoreClickAfterPress&&!e.ignoreEmulatedMouseEvents&&!e.isPressed&&("virtual"===e.pointerType||ie(t.nativeEvent))){i||u||R(t.currentTarget);let e=b(t,"virtual"),n=P(t,"virtual"),s=w(t,"virtual");r=e&&n&&s;}e.ignoreEmulatedMouseEvents=!1,e.ignoreClickAfterPress=!1,r&&t.stopPropagation();}}},r=t=>{var r;if(e.isPressed&&e.target&&Le(t,e.target)){var n;Fe(t.target,t.key)&&t.preventDefault();let r=t.target,s=w(Re(e.target,t),"keyboard",e.target.contains(r));y(),s&&t.stopPropagation(),"Enter"!==t.key&&Ve(e.target)&&e.target.contains(r)&&!t[De]&&(t[De]=!0,_(e.target,t,!1)),e.isPressed=!1,null===(n=e.metaKeyEvents)||void 0===n||n.delete(t.key);}else if("Meta"===t.key&&(null===(r=e.metaKeyEvents)||void 0===r?void 0:r.size)){var s;let t=e.metaKeyEvents;e.metaKeyEvents=void 0;for(let r of t.values())null===(s=e.target)||void 0===s||s.dispatchEvent(new KeyboardEvent("keyup",r));}};if("undefined"!=typeof PointerEvent){t.onPointerDown=t=>{if(0!==t.button||!t.currentTarget.contains(t.target))return;if(le(t.nativeEvent))return void(e.pointerType="virtual");je(t.currentTarget)&&t.preventDefault(),e.pointerType=t.pointerType;let o=!0;e.isPressed||(e.isPressed=!0,e.isOverTarget=!0,e.activePointerId=t.pointerId,e.target=t.currentTarget,i||u||R(t.currentTarget),d||Ee(e.target),o=b(t,e.pointerType),v(k(t.currentTarget),"pointermove",r,!1),v(k(t.currentTarget),"pointerup",n,!1),v(k(t.currentTarget),"pointercancel",s,!1)),o&&t.stopPropagation();},t.onMouseDown=e=>{e.currentTarget.contains(e.target)&&0===e.button&&(je(e.currentTarget)&&e.preventDefault(),e.stopPropagation());},t.onPointerUp=t=>{t.currentTarget.contains(t.target)&&"virtual"!==e.pointerType&&0===t.button&&Ne(t,t.currentTarget)&&P(t,e.pointerType||t.pointerType);};let r=t=>{t.pointerId===e.activePointerId&&(e.target&&Ne(t,e.target)?e.isOverTarget||null==e.pointerType||(e.isOverTarget=!0,b(Re(e.target,t),e.pointerType)):e.target&&e.isOverTarget&&null!=e.pointerType&&(e.isOverTarget=!1,w(Re(e.target,t),e.pointerType,!1),C(t)));},n=t=>{t.pointerId===e.activePointerId&&e.isPressed&&0===t.button&&e.target&&(Ne(t,e.target)&&null!=e.pointerType?w(Re(e.target,t),e.pointerType):e.isOverTarget&&null!=e.pointerType&&w(Re(e.target,t),e.pointerType,!1),e.isPressed=!1,e.isOverTarget=!1,e.activePointerId=null,e.pointerType=null,y(),d||Se(e.target));},s=e=>{T(e);};t.onDragStart=e=>{e.currentTarget.contains(e.target)&&T(e);};}else {t.onMouseDown=t=>{if(0!==t.button||!t.currentTarget.contains(t.target))return;if(je(t.currentTarget)&&t.preventDefault(),e.ignoreEmulatedMouseEvents)return void t.stopPropagation();e.isPressed=!0,e.isOverTarget=!0,e.target=t.currentTarget,e.pointerType=ie(t.nativeEvent)?"virtual":"mouse",i||u||R(t.currentTarget),b(t,e.pointerType)&&t.stopPropagation(),v(k(t.currentTarget),"mouseup",r,!1);},t.onMouseEnter=t=>{if(!t.currentTarget.contains(t.target))return;let r=!0;e.isPressed&&!e.ignoreEmulatedMouseEvents&&null!=e.pointerType&&(e.isOverTarget=!0,r=b(t,e.pointerType)),r&&t.stopPropagation();},t.onMouseLeave=t=>{if(!t.currentTarget.contains(t.target))return;let r=!0;e.isPressed&&!e.ignoreEmulatedMouseEvents&&null!=e.pointerType&&(e.isOverTarget=!1,r=w(t,e.pointerType,!1),C(t)),r&&t.stopPropagation();},t.onMouseUp=t=>{t.currentTarget.contains(t.target)&&(e.ignoreEmulatedMouseEvents||0!==t.button||P(t,e.pointerType||"mouse"));};let r=t=>{0===t.button&&(e.isPressed=!1,y(),e.ignoreEmulatedMouseEvents?e.ignoreEmulatedMouseEvents=!1:(e.target&&Ne(t,e.target)&&null!=e.pointerType?w(Re(e.target,t),e.pointerType):e.target&&e.isOverTarget&&null!=e.pointerType&&w(Re(e.target,t),e.pointerType,!1),e.isOverTarget=!1));};t.onTouchStart=t=>{if(!t.currentTarget.contains(t.target))return;let r=function(e){const{targetTouches:t}=e;return t.length>0?t[0]:null}(t.nativeEvent);r&&(e.activePointerId=r.identifier,e.ignoreEmulatedMouseEvents=!0,e.isOverTarget=!0,e.isPressed=!0,e.target=t.currentTarget,e.pointerType="touch",i||u||R(t.currentTarget),d||Ee(e.target),b(t,e.pointerType)&&t.stopPropagation(),v(M(t.currentTarget),"scroll",n,!0));},t.onTouchMove=t=>{if(!t.currentTarget.contains(t.target))return;if(!e.isPressed)return void t.stopPropagation();let r=Ke(t.nativeEvent,e.activePointerId),n=!0;r&&Ne(r,t.currentTarget)?e.isOverTarget||null==e.pointerType||(e.isOverTarget=!0,n=b(t,e.pointerType)):e.isOverTarget&&null!=e.pointerType&&(e.isOverTarget=!1,n=w(t,e.pointerType,!1),C(t)),n&&t.stopPropagation();},t.onTouchEnd=t=>{if(!t.currentTarget.contains(t.target))return;if(!e.isPressed)return void t.stopPropagation();let r=Ke(t.nativeEvent,e.activePointerId),n=!0;r&&Ne(r,t.currentTarget)&&null!=e.pointerType?(P(t,e.pointerType),n=w(t,e.pointerType)):e.isOverTarget&&null!=e.pointerType&&(n=w(t,e.pointerType,!1)),n&&t.stopPropagation(),e.isPressed=!1,e.activePointerId=null,e.isOverTarget=!1,e.ignoreEmulatedMouseEvents=!0,e.target&&!d&&Se(e.target),y();},t.onTouchCancel=t=>{t.currentTarget.contains(t.target)&&(t.stopPropagation(),e.isPressed&&T(t));};let n=t=>{e.isPressed&&t.target.contains(e.target)&&T({currentTarget:e.target,shiftKey:!1,ctrlKey:!1,metaKey:!1,altKey:!1});};t.onDragStart=e=>{e.currentTarget.contains(e.target)&&T(e);};}return t}),[v,i,u,y,d,T,C,w,b,P]);return t.useEffect((()=>()=>{var e;d||Se(null!==(e=g.current.target)&&void 0!==e?e:void 0);}),[d]),{isPressed:l||f,pressProps:A(h,E)}}function Ve(e){return "A"===e.tagName&&e.hasAttribute("href")}function Le(e,t){const{key:r,code:n}=e,s=t,o=s.getAttribute("role");return !("Enter"!==r&&" "!==r&&"Spacebar"!==r&&"Space"!==n||s instanceof M(s).HTMLInputElement&&!Be(s,r)||s instanceof M(s).HTMLTextAreaElement||s.isContentEditable||("link"===o||!o&&Ve(s))&&"Enter"!==r)}function Ke(e,t){const r=e.changedTouches;for(let e=0;e<r.length;e++){const n=r[e];if(n.identifier===t)return n}return null}function Re(e,t){return {currentTarget:e,shiftKey:t.shiftKey,ctrlKey:t.ctrlKey,metaKey:t.metaKey,altKey:t.altKey}}function Ne(e,t){let r=t.getBoundingClientRect(),n=function(e){let t=0,r=0;return void 0!==e.width?t=e.width/2:void 0!==e.radiusX&&(t=e.radiusX),void 0!==e.height?r=e.height/2:void 0!==e.radiusY&&(r=e.radiusY),{top:e.clientY-r,right:e.clientX+t,bottom:e.clientY+r,left:e.clientX-t}}(e);return function(e,t){return !(e.left>t.right||t.left>e.right||e.top>t.bottom||t.top>e.bottom)}(r,n)}function je(e){return !(e instanceof HTMLElement&&e.hasAttribute("draggable"))}function Fe(e,t){return e instanceof HTMLInputElement?!Be(e,t):e instanceof HTMLButtonElement?"submit"!==e.type&&"reset"!==e.type:!Ve(e)}const Oe=new Set(["checkbox","radio","range","color","file","image","button","submit","reset"]);function Be(e,t){return "checkbox"===e.type||"radio"===e.type?" "===t:Oe.has(e.type)}class We{isDefaultPrevented(){return this.nativeEvent.defaultPrevented}preventDefault(){this.defaultPrevented=!0,this.nativeEvent.preventDefault();}stopPropagation(){this.nativeEvent.stopPropagation(),this.isPropagationStopped=()=>!0;}isPropagationStopped(){return !1}persist(){}constructor(e,t){this.nativeEvent=t,this.target=t.target,this.currentTarget=t.currentTarget,this.relatedTarget=t.relatedTarget,this.bubbles=t.bubbles,this.cancelable=t.cancelable,this.defaultPrevented=t.defaultPrevented,this.eventPhase=t.eventPhase,this.isTrusted=t.isTrusted,this.timeStamp=t.timeStamp,this.type=e;}}function ze(e){let r=t.useRef({isFocused:!1,observer:null});b((()=>{const e=r.current;return ()=>{e.observer&&(e.observer.disconnect(),e.observer=null);}}),[]);let n=x((t=>{null==e||e(t);}));return t.useCallback((e=>{if(e.target instanceof HTMLButtonElement||e.target instanceof HTMLInputElement||e.target instanceof HTMLTextAreaElement||e.target instanceof HTMLSelectElement){r.current.isFocused=!0;let t=e.target,s=e=>{r.current.isFocused=!1,t.disabled&&n(new We("blur",e)),r.current.observer&&(r.current.observer.disconnect(),r.current.observer=null);};t.addEventListener("focusout",s,{once:!0}),r.current.observer=new MutationObserver((()=>{if(r.current.isFocused&&t.disabled){var e;null===(e=r.current.observer)||void 0===e||e.disconnect();let n=t===document.activeElement?null:document.activeElement;t.dispatchEvent(new FocusEvent("blur",{relatedTarget:n})),t.dispatchEvent(new FocusEvent("focusout",{bubbles:!0,relatedTarget:n}));}})),r.current.observer.observe(t,{attributes:!0,attributeFilter:["disabled"]});}}),[n])}function Ue(e){let{isDisabled:r,onFocus:n,onBlur:s,onFocusChange:o}=e;const a=t.useCallback((e=>{if(e.target===e.currentTarget)return s&&s(e),o&&o(!1),!0}),[s,o]),i=ze(a),l=t.useCallback((e=>{e.target===e.currentTarget&&document.activeElement===e.target&&(n&&n(e),o&&o(!0),i(e));}),[o,n,i]);return {focusProps:{onFocus:!r&&(n||o||s)?l:void 0,onBlur:r||!s&&!o?void 0:a}}}let He=null,$e=new Set,_e=!1,Ge=!1,qe=!1;const Ye={Tab:!0,Escape:!0};function Xe(e,t){for(let r of $e)r(e,t);}function Ze(e){Ge=!0,function(e){return !(e.metaKey||!O()&&e.altKey||e.ctrlKey||"Control"===e.key||"Shift"===e.key||"Meta"===e.key)}(e)&&(He="keyboard",Xe("keyboard",e));}function Je(e){He="pointer","mousedown"!==e.type&&"pointerdown"!==e.type||(Ge=!0,Xe("pointer",e));}function Qe(e){ie(e)&&(Ge=!0,He="virtual");}function et(e){e.target!==window&&e.target!==document&&(Ge||qe||(He="virtual",Xe("virtual",e)),Ge=!1,qe=!1);}function tt(){Ge=!1,qe=!0;}function rt(){if("undefined"==typeof window||_e)return;let e=HTMLElement.prototype.focus;HTMLElement.prototype.focus=function(){Ge=!0,e.apply(this,arguments);},document.addEventListener("keydown",Ze,!0),document.addEventListener("keyup",Ze,!0),document.addEventListener("click",Qe,!0),window.addEventListener("focus",et,!0),window.addEventListener("blur",tt,!1),"undefined"!=typeof PointerEvent?(document.addEventListener("pointerdown",Je,!0),document.addEventListener("pointermove",Je,!0),document.addEventListener("pointerup",Je,!0)):(document.addEventListener("mousedown",Je,!0),document.addEventListener("mousemove",Je,!0),document.addEventListener("mouseup",Je,!0)),_e=!0;}function nt(){return "pointer"!==He}function st(){return He}"undefined"!=typeof document&&("loading"!==document.readyState?rt():document.addEventListener("DOMContentLoaded",rt));const ot=new Set(["checkbox","radio","range","color","file","image","button","submit","reset"]);function at(e,r,n){rt(),t.useEffect((()=>{let t=(t,r)=>{(function(e,t,r){var n;return !((e=e||(null==r?void 0:r.target)instanceof HTMLInputElement&&!ot.has(null==r||null===(n=r.target)||void 0===n?void 0:n.type)||(null==r?void 0:r.target)instanceof HTMLTextAreaElement||(null==r?void 0:r.target)instanceof HTMLElement&&(null==r?void 0:r.target.isContentEditable))&&"keyboard"===t&&r instanceof KeyboardEvent&&!Ye[r.key])})(!!(null==n?void 0:n.isTextInput),t,r)&&e(nt());};return $e.add(t),()=>{$e.delete(t);}}),r);}function it(e){let{isDisabled:r,onBlurWithin:n,onFocusWithin:s,onFocusWithinChange:o}=e,a=t.useRef({isFocusWithin:!1}),i=t.useCallback((e=>{a.current.isFocusWithin&&!e.currentTarget.contains(e.relatedTarget)&&(a.current.isFocusWithin=!1,n&&n(e),o&&o(!1));}),[n,o,a]),l=ze(i),u=t.useCallback((e=>{a.current.isFocusWithin||document.activeElement!==e.target||(s&&s(e),o&&o(!0),a.current.isFocusWithin=!0,l(e));}),[s,o,l]);return r?{focusWithinProps:{onFocus:void 0,onBlur:void 0}}:{focusWithinProps:{onFocus:u,onBlur:i}}}let lt=!1,ut=0;function ct(){lt=!0,setTimeout((()=>{lt=!1;}),50);}function dt(e){"touch"===e.pointerType&&ct();}function pt(){if("undefined"!=typeof document)return "undefined"!=typeof PointerEvent?document.addEventListener("pointerup",dt):document.addEventListener("touchend",ct),ut++,()=>{ut--,ut>0||("undefined"!=typeof PointerEvent?document.removeEventListener("pointerup",dt):document.removeEventListener("touchend",ct));}}function ht(e){let{onHoverStart:r,onHoverChange:n,onHoverEnd:s,isDisabled:o}=e,[a,i]=t.useState(!1),l=t.useRef({isHovered:!1,ignoreEmulatedMouseEvents:!1,pointerType:"",target:null}).current;t.useEffect(pt,[]);let{hoverProps:u,triggerHoverEnd:c}=t.useMemo((()=>{let e=(e,t)=>{if(l.pointerType=t,o||"touch"===t||l.isHovered||!e.currentTarget.contains(e.target))return;l.isHovered=!0;let s=e.currentTarget;l.target=s,r&&r({type:"hoverstart",target:s,pointerType:t}),n&&n(!0),i(!0);},t=(e,t)=>{if(l.pointerType="",l.target=null,"touch"===t||!l.isHovered)return;l.isHovered=!1;let r=e.currentTarget;s&&s({type:"hoverend",target:r,pointerType:t}),n&&n(!1),i(!1);},a={};return "undefined"!=typeof PointerEvent?(a.onPointerEnter=t=>{lt&&"mouse"===t.pointerType||e(t,t.pointerType);},a.onPointerLeave=e=>{!o&&e.currentTarget.contains(e.target)&&t(e,e.pointerType);}):(a.onTouchStart=()=>{l.ignoreEmulatedMouseEvents=!0;},a.onMouseEnter=t=>{l.ignoreEmulatedMouseEvents||lt||e(t,"mouse"),l.ignoreEmulatedMouseEvents=!1;},a.onMouseLeave=e=>{!o&&e.currentTarget.contains(e.target)&&t(e,"mouse");}),{hoverProps:a,triggerHoverEnd:t}}),[r,n,s,o,l]);return t.useEffect((()=>{o&&c({currentTarget:l.target},l.pointerType);}),[o]),{hoverProps:u,isHovered:a}}function ft(e){if(!e)return;let t=!0;return r=>{let n={...r,preventDefault(){r.preventDefault();},isDefaultPrevented:()=>r.isDefaultPrevented(),stopPropagation(){console.error("stopPropagation is now the default behavior for events in React Spectrum. You can use continuePropagation() to revert this behavior.");},continuePropagation(){t=!1;}};e(n),t&&r.stopPropagation();}}const mt=500;function gt(e){let{isDisabled:r,onLongPressStart:n,onLongPressEnd:s,onLongPress:o,threshold:a=mt,accessibilityDescription:i}=e;const l=t.useRef();let{addGlobalListener:u,removeGlobalListener:c}=Z(),{pressProps:d}=Ie({isDisabled:r,onPressStart(e){if(e.continuePropagation(),("mouse"===e.pointerType||"touch"===e.pointerType)&&(n&&n({...e,type:"longpressstart"}),l.current=setTimeout((()=>{e.target.dispatchEvent(new PointerEvent("pointercancel",{bubbles:!0})),o&&o({...e,type:"longpress"}),l.current=void 0;}),a),"touch"===e.pointerType)){let t=e=>{e.preventDefault();};u(e.target,"contextmenu",t,{once:!0}),u(window,"pointerup",(()=>{setTimeout((()=>{c(e.target,"contextmenu",t);}),30);}),{once:!0});}},onPressEnd(e){l.current&&clearTimeout(l.current),!s||"mouse"!==e.pointerType&&"touch"!==e.pointerType||s({...e,type:"longpressend"});}}),p=function(e){let[r,n]=t.useState(void 0);return b((()=>{if(!e)return;let t=ne.get(e);if(t)n(t.element.id);else {let r="react-aria-description-"+re++;n(r);let s=document.createElement("div");s.id=r,s.style.display="none",s.textContent=e,document.body.appendChild(s),t={refCount:0,element:s},ne.set(e,t);}return t.refCount++,()=>{0==--t.refCount&&(t.element.remove(),ne.delete(e));}}),[e]),{"aria-describedby":e?r:void 0}}(o&&!r?i:void 0);return {longPressProps:A(d,p)}}function vt(e){if("virtual"===st()){let t=document.activeElement;X((()=>{document.activeElement===t&&document.contains(e)&&R(e);}));}else R(e);}function yt(e,t){return "#comment"!==e.nodeName&&function(e){if(!(e instanceof HTMLElement||e instanceof SVGElement))return !1;let{display:t,visibility:r}=e.style,n="none"!==t&&"hidden"!==r&&"collapse"!==r;if(n){const{getComputedStyle:t}=e.ownerDocument.defaultView;let{display:r,visibility:s}=t(e);n="none"!==r&&"hidden"!==s&&"collapse"!==s;}return n}(e)&&function(e,t){return !e.hasAttribute("hidden")&&("DETAILS"!==e.nodeName||!t||"SUMMARY"===t.nodeName||e.hasAttribute("open"))}(e,t)&&(!e.parentElement||yt(e.parentElement,e))}const bt=["input:not([disabled]):not([type=hidden])","select:not([disabled])","textarea:not([disabled])","button:not([disabled])","a[href]","area[href]","summary","iframe","object","embed","audio[controls]","video[controls]","[contenteditable]"],xt=bt.join(":not([hidden]),")+",[tabindex]:not([disabled]):not([hidden])";bt.push('[tabindex]:not([tabindex="-1"]):not([disabled])');const wt=bt.join(':not([hidden]):not([tabindex="-1"]),');function Pt(e,t){return !!e&&(!!t&&t.some((t=>t.contains(e))))}function Tt(e,t,r){let n=(null==t?void 0:t.tabbable)?wt:xt,s=document.createTreeWalker(e,NodeFilter.SHOW_ELEMENT,{acceptNode(e){var s;return (null==t||null===(s=t.from)||void 0===s?void 0:s.contains(e))?NodeFilter.FILTER_REJECT:!e.matches(n)||!yt(e)||r&&!Pt(e,r)||(null==t?void 0:t.accept)&&!t.accept(e)?NodeFilter.FILTER_SKIP:NodeFilter.FILTER_ACCEPT}});return (null==t?void 0:t.from)&&(s.currentNode=t.from),s}class Ct{get size(){return this.fastMap.size}getTreeNode(e){return this.fastMap.get(e)}addTreeNode(e,t,r){let n=this.fastMap.get(null!=t?t:null);if(!n)return;let s=new Et({scopeRef:e});n.addChild(s),s.parent=n,this.fastMap.set(e,s),r&&(s.nodeToRestore=r);}addNode(e){this.fastMap.set(e.scopeRef,e);}removeTreeNode(e){if(null===e)return;let t=this.fastMap.get(e);if(!t)return;let r=t.parent;for(let e of this.traverse())e!==t&&t.nodeToRestore&&e.nodeToRestore&&t.scopeRef&&t.scopeRef.current&&Pt(e.nodeToRestore,t.scopeRef.current)&&(e.nodeToRestore=t.nodeToRestore);let n=t.children;r&&(r.removeChild(t),n.size>0&&n.forEach((e=>r&&r.addChild(e)))),this.fastMap.delete(t.scopeRef);}*traverse(e=this.root){if(null!=e.scopeRef&&(yield e),e.children.size>0)for(let t of e.children)yield*this.traverse(t);}clone(){var e;let t=new Ct;var r;for(let n of this.traverse())t.addTreeNode(n.scopeRef,null!==(r=null===(e=n.parent)||void 0===e?void 0:e.scopeRef)&&void 0!==r?r:null,n.nodeToRestore);return t}constructor(){this.fastMap=new Map,this.root=new Et({scopeRef:null}),this.fastMap.set(null,this.root);}}class Et{addChild(e){this.children.add(e),e.parent=this;}removeChild(e){this.children.delete(e),e.parent=void 0;}constructor(e){this.children=new Set,this.contain=!1,this.scopeRef=e.scopeRef;}}function St(e={}){let{autoFocus:r=!1,isTextInput:n,within:s}=e,o=t.useRef({isFocused:!1,isFocusVisible:r||nt()}),[a,i]=t.useState(!1),[l,u]=t.useState((()=>o.current.isFocused&&o.current.isFocusVisible)),c=t.useCallback((()=>u(o.current.isFocused&&o.current.isFocusVisible)),[]),d=t.useCallback((e=>{o.current.isFocused=e,i(e),c();}),[c]);at((e=>{o.current.isFocusVisible=e,c();}),[],{isTextInput:n});let{focusProps:p}=Ue({isDisabled:s,onFocusChange:d}),{focusWithinProps:h}=it({isDisabled:!s,onFocusWithinChange:d});return {isFocused:a,isFocusVisible:l,focusProps:s?h:p}}new Ct;let kt=t.createContext(null);function Mt(e,r){let{focusProps:n}=Ue(e),{keyboardProps:s}=function(e){return {keyboardProps:e.isDisabled?{}:{onKeyDown:ft(e.onKeyDown),onKeyUp:ft(e.onKeyUp)}}}(e),o=A(n,s),a=function(e){let r=t.useContext(kt)||{};Q(r,e);let{ref:n,...s}=r;return s}(r),i=e.isDisabled?{}:a,l=t.useRef(e.autoFocus);return t.useEffect((()=>{l.current&&r.current&&vt(r.current),l.current=!1;}),[r]),{focusableProps:A({...o,tabIndex:e.excludeFromTabOrder&&!e.isDisabled?-1:void 0},i)}}const At={border:0,clip:"rect(0 0 0 0)",clipPath:"inset(50%)",height:"1px",margin:"-1px",overflow:"hidden",padding:0,position:"absolute",width:"1px",whiteSpace:"nowrap"};function Dt(e){let{children:r,elementType:n="div",isFocusable:s,style:o,...a}=e,{visuallyHiddenProps:i}=function(e={}){let{style:r,isFocusable:n}=e,[s,o]=t.useState(!1),{focusWithinProps:a}=it({isDisabled:!n,onFocusWithinChange:e=>o(e)});return {visuallyHiddenProps:{...a,style:t.useMemo((()=>s?r:r?{...At,...r}:At),[s])}}}(e);return t.createElement(n,A(a,i),r)}function It(e){return t.forwardRef(e)}var Vt=(e,t,r=!0)=>{if(!t)return [e,{}];const n=t.reduce(((t,r)=>r in e?{...t,[r]:e[r]}:t),{});if(r){return [Object.keys(e).filter((e=>!t.includes(e))).reduce(((t,r)=>({...t,[r]:e[r]})),{}),n]}return [e,n]},Lt=["0","xs","sm","md","lg","xl","2xl","3xl","4xl","5xl","6xl","7xl","8xl","9xl","1","2","3","3.5","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","20","24","28","32","36","40","44","48","52","56","60","64","72","80","96"].map((e=>`unit-${e}`)),Kt=e=>"boolean"==typeof e?`${e}`:0===e?"0":e,Rt=e=>!e||"object"!=typeof e||0===Object.keys(e).length;function Nt(e,t){e.forEach((function(e){Array.isArray(e)?Nt(e,t):t.push(e);}));}function jt(e){let t=[];return Nt(e,t),t}var Ft=(e,t)=>{let r={},n=Object.keys(e),s=Object.keys(t);for(let o of n)if(s.includes(o)){let n=e[o],s=t[o];r[o]="object"==typeof n&&"object"==typeof s?Ft(n,s):s+" "+n;}else r[o]=e[o];for(let e of s)n.includes(e)||(r[e]=t[e]);return r},Ot=e=>e&&"string"==typeof e?e.replace(/\s+/g," ").trim():e;function Bt(){for(var e,t,r=0,n="";r<arguments.length;)(e=arguments[r++])&&(t=Wt(e))&&(n&&(n+=" "),n+=t);return n}function Wt(e){if("string"==typeof e)return e;for(var t,r="",n=0;n<e.length;n++)e[n]&&(t=Wt(e[n]))&&(r&&(r+=" "),r+=t);return r}var zt="-";function Ut(e){var t=function(e){var t=e.theme,r=e.prefix,n={nextPart:new Map,validators:[]},s=function(e,t){if(!t)return e;return e.map((function(e){return [e[0],e[1].map((function(e){return "string"==typeof e?t+e:"object"==typeof e?Object.fromEntries(Object.entries(e).map((function(e){var r=e[0],n=e[1];return [t+r,n]}))):e}))]}))}(Object.entries(e.classGroups),r);return s.forEach((function(e){var r=e[0];_t(e[1],n,r,t);})),n}(e),r=e.conflictingClassGroups,n=e.conflictingClassGroupModifiers,s=void 0===n?{}:n;return {getClassGroupId:function(e){var r=e.split(zt);return ""===r[0]&&1!==r.length&&r.shift(),Ht(r,t)||function(e){if($t.test(e)){var t=$t.exec(e)[1],r=t?.substring(0,t.indexOf(":"));if(r)return "arbitrary.."+r}}(e)},getConflictingClassGroupIds:function(e,t){var n=r[e]||[];return t&&s[e]?[].concat(n,s[e]):n}}}function Ht(e,t){if(0===e.length)return t.classGroupId;var r=e[0],n=t.nextPart.get(r),s=n?Ht(e.slice(1),n):void 0;if(s)return s;if(0!==t.validators.length){var o=e.join(zt);return t.validators.find((function(e){return (0, e.validator)(o)}))?.classGroupId}}var $t=/^\[(.+)\]$/;function _t(e,t,r,n){e.forEach((function(e){if("string"!=typeof e){if("function"==typeof e)return e.isThemeGetter?void _t(e(n),t,r,n):void t.validators.push({validator:e,classGroupId:r});Object.entries(e).forEach((function(e){var s=e[0];_t(e[1],Gt(t,s),r,n);}));}else {(""===e?t:Gt(t,e)).classGroupId=r;}}));}function Gt(e,t){var r=e;return t.split(zt).forEach((function(e){r.nextPart.has(e)||r.nextPart.set(e,{nextPart:new Map,validators:[]}),r=r.nextPart.get(e);})),r}function qt(e){if(e<1)return {get:function(){},set:function(){}};var t=0,r=new Map,n=new Map;function s(s,o){r.set(s,o),++t>e&&(t=0,n=r,r=new Map);}return {get:function(e){var t=r.get(e);return void 0!==t?t:void 0!==(t=n.get(e))?(s(e,t),t):void 0},set:function(e,t){r.has(e)?r.set(e,t):s(e,t);}}}var Yt="!";function Xt(e){var t=e.separator||":",r=1===t.length,n=t[0],s=t.length;return function(e){for(var o,a=[],i=0,l=0,u=0;u<e.length;u++){var c=e[u];if(0===i){if(c===n&&(r||e.slice(u,u+s)===t)){a.push(e.slice(l,u)),l=u+s;continue}if("/"===c){o=u;continue}}"["===c?i++:"]"===c&&i--;}var d=0===a.length?e:e.substring(l),p=d.startsWith(Yt);return {modifiers:a,hasImportantModifier:p,baseClassName:p?d.substring(1):d,maybePostfixModifierPosition:o&&o>l?o-l:void 0}}}var Zt=/\s+/;function Jt(){for(var e=arguments.length,t=new Array(e),r=0;r<e;r++)t[r]=arguments[r];var n,s,o,a=function(e){var r=t[0],l=t.slice(1).reduce((function(e,t){return t(e)}),r());return n=function(e){return {cache:qt(e.cacheSize),splitModifiers:Xt(e),...Ut(e)}}(l),s=n.cache.get,o=n.cache.set,a=i,i(e)};function i(e){var t=s(e);if(t)return t;var r=function(e,t){var r=t.splitModifiers,n=t.getClassGroupId,s=t.getConflictingClassGroupIds,o=new Set;return e.trim().split(Zt).map((function(e){var t=r(e),s=t.modifiers,o=t.hasImportantModifier,a=t.baseClassName,i=t.maybePostfixModifierPosition,l=n(i?a.substring(0,i):a),u=Boolean(i);if(!l){if(!i)return {isTailwindClass:!1,originalClassName:e};if(!(l=n(a)))return {isTailwindClass:!1,originalClassName:e};u=!1;}var c=function(e){if(e.length<=1)return e;var t=[],r=[];return e.forEach((function(e){"["===e[0]?(t.push.apply(t,r.sort().concat([e])),r=[]):r.push(e);})),t.push.apply(t,r.sort()),t}(s).join(":");return {isTailwindClass:!0,modifierId:o?c+Yt:c,classGroupId:l,originalClassName:e,hasPostfixModifier:u}})).reverse().filter((function(e){if(!e.isTailwindClass)return !0;var t=e.modifierId,r=e.classGroupId,n=e.hasPostfixModifier,a=t+r;return !o.has(a)&&(o.add(a),s(r,n).forEach((function(e){return o.add(t+e)})),!0)})).reverse().map((function(e){return e.originalClassName})).join(" ")}(e,n);return o(e,r),r}return function(){return a(Bt.apply(null,arguments))}}function Qt(e){var t=function(t){return t[e]||[]};return t.isThemeGetter=!0,t}var er=/^\[(?:([a-z-]+):)?(.+)\]$/i,tr=/^\d+\/\d+$/,rr=new Set(["px","full","screen"]),nr=/^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/,sr=/\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/,or=/^-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/;function ar(e){return pr(e)||rr.has(e)||tr.test(e)||ir(e)}function ir(e){return br(e,"length",xr)}function lr(e){return br(e,"size",wr)}function ur(e){return br(e,"position",wr)}function cr(e){return br(e,"url",Pr)}function dr(e){return br(e,"number",pr)}function pr(e){return !Number.isNaN(Number(e))}function hr(e){return e.endsWith("%")&&pr(e.slice(0,-1))}function fr(e){return Tr(e)||br(e,"number",Tr)}function mr(e){return er.test(e)}function gr(){return !0}function vr(e){return nr.test(e)}function yr(e){return br(e,"",Cr)}function br(e,t,r){var n=er.exec(e);return !!n&&(n[1]?n[1]===t:r(n[2]))}function xr(e){return sr.test(e)}function wr(){return !1}function Pr(e){return e.startsWith("url(")}function Tr(e){return Number.isInteger(Number(e))}function Cr(e){return or.test(e)}function Er(){var e=Qt("colors"),t=Qt("spacing"),r=Qt("blur"),n=Qt("brightness"),s=Qt("borderColor"),o=Qt("borderRadius"),a=Qt("borderSpacing"),i=Qt("borderWidth"),l=Qt("contrast"),u=Qt("grayscale"),c=Qt("hueRotate"),d=Qt("invert"),p=Qt("gap"),h=Qt("gradientColorStops"),f=Qt("gradientColorStopPositions"),m=Qt("inset"),g=Qt("margin"),v=Qt("opacity"),y=Qt("padding"),b=Qt("saturate"),x=Qt("scale"),w=Qt("sepia"),P=Qt("skew"),T=Qt("space"),C=Qt("translate"),E=function(){return ["auto",mr,t]},S=function(){return [mr,t]},k=function(){return ["",ar]},M=function(){return ["auto",pr,mr]},A=function(){return ["","0",mr]},D=function(){return [pr,dr]},I=function(){return [pr,mr]};return {cacheSize:500,theme:{colors:[gr],spacing:[ar],blur:["none","",vr,mr],brightness:D(),borderColor:[e],borderRadius:["none","","full",vr,mr],borderSpacing:S(),borderWidth:k(),contrast:D(),grayscale:A(),hueRotate:I(),invert:A(),gap:S(),gradientColorStops:[e],gradientColorStopPositions:[hr,ir],inset:E(),margin:E(),opacity:D(),padding:S(),saturate:D(),scale:D(),sepia:A(),skew:I(),space:S(),translate:S()},classGroups:{aspect:[{aspect:["auto","square","video",mr]}],container:["container"],columns:[{columns:[vr]}],"break-after":[{"break-after":["auto","avoid","all","avoid-page","page","left","right","column"]}],"break-before":[{"break-before":["auto","avoid","all","avoid-page","page","left","right","column"]}],"break-inside":[{"break-inside":["auto","avoid","avoid-page","avoid-column"]}],"box-decoration":[{"box-decoration":["slice","clone"]}],box:[{box:["border","content"]}],display:["block","inline-block","inline","flex","inline-flex","table","inline-table","table-caption","table-cell","table-column","table-column-group","table-footer-group","table-header-group","table-row-group","table-row","flow-root","grid","inline-grid","contents","list-item","hidden"],float:[{float:["right","left","none"]}],clear:[{clear:["left","right","both","none"]}],isolation:["isolate","isolation-auto"],"object-fit":[{object:["contain","cover","fill","none","scale-down"]}],"object-position":[{object:[].concat(["bottom","center","left","left-bottom","left-top","right","right-bottom","right-top","top"],[mr])}],overflow:[{overflow:["auto","hidden","clip","visible","scroll"]}],"overflow-x":[{"overflow-x":["auto","hidden","clip","visible","scroll"]}],"overflow-y":[{"overflow-y":["auto","hidden","clip","visible","scroll"]}],overscroll:[{overscroll:["auto","contain","none"]}],"overscroll-x":[{"overscroll-x":["auto","contain","none"]}],"overscroll-y":[{"overscroll-y":["auto","contain","none"]}],position:["static","fixed","absolute","relative","sticky"],inset:[{inset:[m]}],"inset-x":[{"inset-x":[m]}],"inset-y":[{"inset-y":[m]}],start:[{start:[m]}],end:[{end:[m]}],top:[{top:[m]}],right:[{right:[m]}],bottom:[{bottom:[m]}],left:[{left:[m]}],visibility:["visible","invisible","collapse"],z:[{z:["auto",fr]}],basis:[{basis:E()}],"flex-direction":[{flex:["row","row-reverse","col","col-reverse"]}],"flex-wrap":[{flex:["wrap","wrap-reverse","nowrap"]}],flex:[{flex:["1","auto","initial","none",mr]}],grow:[{grow:A()}],shrink:[{shrink:A()}],order:[{order:["first","last","none",fr]}],"grid-cols":[{"grid-cols":[gr]}],"col-start-end":[{col:["auto",{span:["full",fr]},mr]}],"col-start":[{"col-start":M()}],"col-end":[{"col-end":M()}],"grid-rows":[{"grid-rows":[gr]}],"row-start-end":[{row:["auto",{span:[fr]},mr]}],"row-start":[{"row-start":M()}],"row-end":[{"row-end":M()}],"grid-flow":[{"grid-flow":["row","col","dense","row-dense","col-dense"]}],"auto-cols":[{"auto-cols":["auto","min","max","fr",mr]}],"auto-rows":[{"auto-rows":["auto","min","max","fr",mr]}],gap:[{gap:[p]}],"gap-x":[{"gap-x":[p]}],"gap-y":[{"gap-y":[p]}],"justify-content":[{justify:["normal"].concat(["start","end","center","between","around","evenly","stretch"])}],"justify-items":[{"justify-items":["start","end","center","stretch"]}],"justify-self":[{"justify-self":["auto","start","end","center","stretch"]}],"align-content":[{content:["normal"].concat(["start","end","center","between","around","evenly","stretch"],["baseline"])}],"align-items":[{items:["start","end","center","baseline","stretch"]}],"align-self":[{self:["auto","start","end","center","stretch","baseline"]}],"place-content":[{"place-content":[].concat(["start","end","center","between","around","evenly","stretch"],["baseline"])}],"place-items":[{"place-items":["start","end","center","baseline","stretch"]}],"place-self":[{"place-self":["auto","start","end","center","stretch"]}],p:[{p:[y]}],px:[{px:[y]}],py:[{py:[y]}],ps:[{ps:[y]}],pe:[{pe:[y]}],pt:[{pt:[y]}],pr:[{pr:[y]}],pb:[{pb:[y]}],pl:[{pl:[y]}],m:[{m:[g]}],mx:[{mx:[g]}],my:[{my:[g]}],ms:[{ms:[g]}],me:[{me:[g]}],mt:[{mt:[g]}],mr:[{mr:[g]}],mb:[{mb:[g]}],ml:[{ml:[g]}],"space-x":[{"space-x":[T]}],"space-x-reverse":["space-x-reverse"],"space-y":[{"space-y":[T]}],"space-y-reverse":["space-y-reverse"],w:[{w:["auto","min","max","fit",mr,t]}],"min-w":[{"min-w":["min","max","fit",mr,ar]}],"max-w":[{"max-w":["0","none","full","min","max","fit","prose",{screen:[vr]},vr,mr]}],h:[{h:[mr,t,"auto","min","max","fit"]}],"min-h":[{"min-h":["min","max","fit",mr,ar]}],"max-h":[{"max-h":[mr,t,"min","max","fit"]}],"font-size":[{text:["base",vr,ir]}],"font-smoothing":["antialiased","subpixel-antialiased"],"font-style":["italic","not-italic"],"font-weight":[{font:["thin","extralight","light","normal","medium","semibold","bold","extrabold","black",dr]}],"font-family":[{font:[gr]}],"fvn-normal":["normal-nums"],"fvn-ordinal":["ordinal"],"fvn-slashed-zero":["slashed-zero"],"fvn-figure":["lining-nums","oldstyle-nums"],"fvn-spacing":["proportional-nums","tabular-nums"],"fvn-fraction":["diagonal-fractions","stacked-fractons"],tracking:[{tracking:["tighter","tight","normal","wide","wider","widest",mr]}],"line-clamp":[{"line-clamp":["none",pr,dr]}],leading:[{leading:["none","tight","snug","normal","relaxed","loose",mr,ar]}],"list-image":[{"list-image":["none",mr]}],"list-style-type":[{list:["none","disc","decimal",mr]}],"list-style-position":[{list:["inside","outside"]}],"placeholder-color":[{placeholder:[e]}],"placeholder-opacity":[{"placeholder-opacity":[v]}],"text-alignment":[{text:["left","center","right","justify","start","end"]}],"text-color":[{text:[e]}],"text-opacity":[{"text-opacity":[v]}],"text-decoration":["underline","overline","line-through","no-underline"],"text-decoration-style":[{decoration:[].concat(["solid","dashed","dotted","double","none"],["wavy"])}],"text-decoration-thickness":[{decoration:["auto","from-font",ar]}],"underline-offset":[{"underline-offset":["auto",mr,ar]}],"text-decoration-color":[{decoration:[e]}],"text-transform":["uppercase","lowercase","capitalize","normal-case"],"text-overflow":["truncate","text-ellipsis","text-clip"],indent:[{indent:S()}],"vertical-align":[{align:["baseline","top","middle","bottom","text-top","text-bottom","sub","super",mr]}],whitespace:[{whitespace:["normal","nowrap","pre","pre-line","pre-wrap","break-spaces"]}],break:[{break:["normal","words","all","keep"]}],hyphens:[{hyphens:["none","manual","auto"]}],content:[{content:["none",mr]}],"bg-attachment":[{bg:["fixed","local","scroll"]}],"bg-clip":[{"bg-clip":["border","padding","content","text"]}],"bg-opacity":[{"bg-opacity":[v]}],"bg-origin":[{"bg-origin":["border","padding","content"]}],"bg-position":[{bg:[].concat(["bottom","center","left","left-bottom","left-top","right","right-bottom","right-top","top"],[ur])}],"bg-repeat":[{bg:["no-repeat",{repeat:["","x","y","round","space"]}]}],"bg-size":[{bg:["auto","cover","contain",lr]}],"bg-image":[{bg:["none",{"gradient-to":["t","tr","r","br","b","bl","l","tl"]},cr]}],"bg-color":[{bg:[e]}],"gradient-from-pos":[{from:[f]}],"gradient-via-pos":[{via:[f]}],"gradient-to-pos":[{to:[f]}],"gradient-from":[{from:[h]}],"gradient-via":[{via:[h]}],"gradient-to":[{to:[h]}],rounded:[{rounded:[o]}],"rounded-s":[{"rounded-s":[o]}],"rounded-e":[{"rounded-e":[o]}],"rounded-t":[{"rounded-t":[o]}],"rounded-r":[{"rounded-r":[o]}],"rounded-b":[{"rounded-b":[o]}],"rounded-l":[{"rounded-l":[o]}],"rounded-ss":[{"rounded-ss":[o]}],"rounded-se":[{"rounded-se":[o]}],"rounded-ee":[{"rounded-ee":[o]}],"rounded-es":[{"rounded-es":[o]}],"rounded-tl":[{"rounded-tl":[o]}],"rounded-tr":[{"rounded-tr":[o]}],"rounded-br":[{"rounded-br":[o]}],"rounded-bl":[{"rounded-bl":[o]}],"border-w":[{border:[i]}],"border-w-x":[{"border-x":[i]}],"border-w-y":[{"border-y":[i]}],"border-w-s":[{"border-s":[i]}],"border-w-e":[{"border-e":[i]}],"border-w-t":[{"border-t":[i]}],"border-w-r":[{"border-r":[i]}],"border-w-b":[{"border-b":[i]}],"border-w-l":[{"border-l":[i]}],"border-opacity":[{"border-opacity":[v]}],"border-style":[{border:[].concat(["solid","dashed","dotted","double","none"],["hidden"])}],"divide-x":[{"divide-x":[i]}],"divide-x-reverse":["divide-x-reverse"],"divide-y":[{"divide-y":[i]}],"divide-y-reverse":["divide-y-reverse"],"divide-opacity":[{"divide-opacity":[v]}],"divide-style":[{divide:["solid","dashed","dotted","double","none"]}],"border-color":[{border:[s]}],"border-color-x":[{"border-x":[s]}],"border-color-y":[{"border-y":[s]}],"border-color-t":[{"border-t":[s]}],"border-color-r":[{"border-r":[s]}],"border-color-b":[{"border-b":[s]}],"border-color-l":[{"border-l":[s]}],"divide-color":[{divide:[s]}],"outline-style":[{outline:[""].concat(["solid","dashed","dotted","double","none"])}],"outline-offset":[{"outline-offset":[mr,ar]}],"outline-w":[{outline:[ar]}],"outline-color":[{outline:[e]}],"ring-w":[{ring:k()}],"ring-w-inset":["ring-inset"],"ring-color":[{ring:[e]}],"ring-opacity":[{"ring-opacity":[v]}],"ring-offset-w":[{"ring-offset":[ar]}],"ring-offset-color":[{"ring-offset":[e]}],shadow:[{shadow:["","inner","none",vr,yr]}],"shadow-color":[{shadow:[gr]}],opacity:[{opacity:[v]}],"mix-blend":[{"mix-blend":["normal","multiply","screen","overlay","darken","lighten","color-dodge","color-burn","hard-light","soft-light","difference","exclusion","hue","saturation","color","luminosity","plus-lighter"]}],"bg-blend":[{"bg-blend":["normal","multiply","screen","overlay","darken","lighten","color-dodge","color-burn","hard-light","soft-light","difference","exclusion","hue","saturation","color","luminosity","plus-lighter"]}],filter:[{filter:["","none"]}],blur:[{blur:[r]}],brightness:[{brightness:[n]}],contrast:[{contrast:[l]}],"drop-shadow":[{"drop-shadow":["","none",vr,mr]}],grayscale:[{grayscale:[u]}],"hue-rotate":[{"hue-rotate":[c]}],invert:[{invert:[d]}],saturate:[{saturate:[b]}],sepia:[{sepia:[w]}],"backdrop-filter":[{"backdrop-filter":["","none"]}],"backdrop-blur":[{"backdrop-blur":[r]}],"backdrop-brightness":[{"backdrop-brightness":[n]}],"backdrop-contrast":[{"backdrop-contrast":[l]}],"backdrop-grayscale":[{"backdrop-grayscale":[u]}],"backdrop-hue-rotate":[{"backdrop-hue-rotate":[c]}],"backdrop-invert":[{"backdrop-invert":[d]}],"backdrop-opacity":[{"backdrop-opacity":[v]}],"backdrop-saturate":[{"backdrop-saturate":[b]}],"backdrop-sepia":[{"backdrop-sepia":[w]}],"border-collapse":[{border:["collapse","separate"]}],"border-spacing":[{"border-spacing":[a]}],"border-spacing-x":[{"border-spacing-x":[a]}],"border-spacing-y":[{"border-spacing-y":[a]}],"table-layout":[{table:["auto","fixed"]}],caption:[{caption:["top","bottom"]}],transition:[{transition:["none","all","","colors","opacity","shadow","transform",mr]}],duration:[{duration:I()}],ease:[{ease:["linear","in","out","in-out",mr]}],delay:[{delay:I()}],animate:[{animate:["none","spin","ping","pulse","bounce",mr]}],transform:[{transform:["","gpu","none"]}],scale:[{scale:[x]}],"scale-x":[{"scale-x":[x]}],"scale-y":[{"scale-y":[x]}],rotate:[{rotate:[fr,mr]}],"translate-x":[{"translate-x":[C]}],"translate-y":[{"translate-y":[C]}],"skew-x":[{"skew-x":[P]}],"skew-y":[{"skew-y":[P]}],"transform-origin":[{origin:["center","top","top-right","right","bottom-right","bottom","bottom-left","left","top-left",mr]}],accent:[{accent:["auto",e]}],appearance:["appearance-none"],cursor:[{cursor:["auto","default","pointer","wait","text","move","help","not-allowed","none","context-menu","progress","cell","crosshair","vertical-text","alias","copy","no-drop","grab","grabbing","all-scroll","col-resize","row-resize","n-resize","e-resize","s-resize","w-resize","ne-resize","nw-resize","se-resize","sw-resize","ew-resize","ns-resize","nesw-resize","nwse-resize","zoom-in","zoom-out",mr]}],"caret-color":[{caret:[e]}],"pointer-events":[{"pointer-events":["none","auto"]}],resize:[{resize:["none","y","x",""]}],"scroll-behavior":[{scroll:["auto","smooth"]}],"scroll-m":[{"scroll-m":S()}],"scroll-mx":[{"scroll-mx":S()}],"scroll-my":[{"scroll-my":S()}],"scroll-ms":[{"scroll-ms":S()}],"scroll-me":[{"scroll-me":S()}],"scroll-mt":[{"scroll-mt":S()}],"scroll-mr":[{"scroll-mr":S()}],"scroll-mb":[{"scroll-mb":S()}],"scroll-ml":[{"scroll-ml":S()}],"scroll-p":[{"scroll-p":S()}],"scroll-px":[{"scroll-px":S()}],"scroll-py":[{"scroll-py":S()}],"scroll-ps":[{"scroll-ps":S()}],"scroll-pe":[{"scroll-pe":S()}],"scroll-pt":[{"scroll-pt":S()}],"scroll-pr":[{"scroll-pr":S()}],"scroll-pb":[{"scroll-pb":S()}],"scroll-pl":[{"scroll-pl":S()}],"snap-align":[{snap:["start","end","center","align-none"]}],"snap-stop":[{snap:["normal","always"]}],"snap-type":[{snap:["none","x","y","both"]}],"snap-strictness":[{snap:["mandatory","proximity"]}],touch:[{touch:["auto","none","pinch-zoom","manipulation",{pan:["x","left","right","y","up","down"]}]}],select:[{select:["none","text","all","auto"]}],"will-change":[{"will-change":["auto","scroll","contents","transform",mr]}],fill:[{fill:[e,"none"]}],"stroke-w":[{stroke:[ar,dr]}],stroke:[{stroke:[e,"none"]}],sr:["sr-only","not-sr-only"]},conflictingClassGroups:{overflow:["overflow-x","overflow-y"],overscroll:["overscroll-x","overscroll-y"],inset:["inset-x","inset-y","start","end","top","right","bottom","left"],"inset-x":["right","left"],"inset-y":["top","bottom"],flex:["basis","grow","shrink"],gap:["gap-x","gap-y"],p:["px","py","ps","pe","pt","pr","pb","pl"],px:["pr","pl"],py:["pt","pb"],m:["mx","my","ms","me","mt","mr","mb","ml"],mx:["mr","ml"],my:["mt","mb"],"font-size":["leading"],"fvn-normal":["fvn-ordinal","fvn-slashed-zero","fvn-figure","fvn-spacing","fvn-fraction"],"fvn-ordinal":["fvn-normal"],"fvn-slashed-zero":["fvn-normal"],"fvn-figure":["fvn-normal"],"fvn-spacing":["fvn-normal"],"fvn-fraction":["fvn-normal"],rounded:["rounded-s","rounded-e","rounded-t","rounded-r","rounded-b","rounded-l","rounded-ss","rounded-se","rounded-ee","rounded-es","rounded-tl","rounded-tr","rounded-br","rounded-bl"],"rounded-s":["rounded-ss","rounded-es"],"rounded-e":["rounded-se","rounded-ee"],"rounded-t":["rounded-tl","rounded-tr"],"rounded-r":["rounded-tr","rounded-br"],"rounded-b":["rounded-br","rounded-bl"],"rounded-l":["rounded-tl","rounded-bl"],"border-spacing":["border-spacing-x","border-spacing-y"],"border-w":["border-w-s","border-w-e","border-w-t","border-w-r","border-w-b","border-w-l"],"border-w-x":["border-w-r","border-w-l"],"border-w-y":["border-w-t","border-w-b"],"border-color":["border-color-t","border-color-r","border-color-b","border-color-l"],"border-color-x":["border-color-r","border-color-l"],"border-color-y":["border-color-t","border-color-b"],"scroll-m":["scroll-mx","scroll-my","scroll-ms","scroll-me","scroll-mt","scroll-mr","scroll-mb","scroll-ml"],"scroll-mx":["scroll-mr","scroll-ml"],"scroll-my":["scroll-mt","scroll-mb"],"scroll-p":["scroll-px","scroll-py","scroll-ps","scroll-pe","scroll-pt","scroll-pr","scroll-pb","scroll-pl"],"scroll-px":["scroll-pr","scroll-pl"],"scroll-py":["scroll-pt","scroll-pb"]},conflictingClassGroupModifiers:{"font-size":["leading"]}}}var Sr=Object.prototype.hasOwnProperty,kr=new Set(["string","number","boolean"]);function Mr(e,t,r){if(Sr.call(e,t)&&!kr.has(typeof r)&&null!==r){if(Array.isArray(r)&&Array.isArray(e[t]))e[t]=e[t].concat(r);else if("object"==typeof r&&"object"==typeof e[t]){if(null===e[t])return void(e[t]=r);for(var n in r)Mr(e[t],n,r[n]);}}else e[t]=r;}function Ar(e){for(var t=arguments.length,r=new Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];return "function"==typeof e?Jt.apply(void 0,[Er,e].concat(r)):Jt.apply(void 0,[function(){return function(e,t){for(var r in t)Mr(e,r,t[r]);return e}(Er(),e)}].concat(r))}var Dr=Jt(Er),Ir={twMerge:!0,twMergeConfig:{},responsiveVariants:!1},Vr=e=>e||void 0,Lr=(...e)=>Vr(jt(e).filter(Boolean).join(" ")),Kr=null,Rr={},Nr=!1,jr=(...e)=>t=>t.twMerge?((!Kr||Nr)&&(Nr=!1,Kr=Rt(Rr)?Dr:Ar(Rr)),Vr(Kr(Lr(e)))):Lr(e),Fr=(e,t)=>{for(let r in t)e.hasOwnProperty(r)?e[r]=Lr(e[r],t[r]):e[r]=t[r];return e},Or=(e,t)=>{let{extend:r=null,slots:n={},variants:s={},compoundVariants:o=[],compoundSlots:a=[],defaultVariants:i={}}=e,l={...Ir,...t},u=null!=r&&r.base?Lr(r.base,null==e?void 0:e.base):null==e?void 0:e.base,c=null!=r&&r.variants&&!Rt(r.variants)?Ft(s,r.variants):s,d=null!=r&&r.defaultVariants&&!Rt(r.defaultVariants)?{...r.defaultVariants,...i}:i;!Rt(l.twMergeConfig)&&!((e,t)=>JSON.stringify(e)===JSON.stringify(t))(l.twMergeConfig,Rr)&&(Nr=!0,Rr=l.twMergeConfig);let p=Rt(n)?{}:{base:null==e?void 0:e.base,...n},h=Rt(null==r?void 0:r.slots)?p:Fr({...null==r?void 0:r.slots},Rt(p)?{base:null==e?void 0:e.base}:p),f=e=>{if(Rt(c)&&Rt(n)&&Rt(null==r?void 0:r.slots))return jr(u,null==e?void 0:e.class,null==e?void 0:e.className)(l);if(o&&!Array.isArray(o))throw new TypeError('The "compoundVariants" prop must be an array. Received: '+typeof o);if(a&&!Array.isArray(a))throw new TypeError('The "compoundSlots" prop must be an array. Received: '+typeof a);let t=(e,t,r=[],n)=>{let s=r;if("string"==typeof t)s=s.concat(Ot(t).split(" ").map((t=>`${e}:${t}`)));else if(Array.isArray(t))s=s.concat(t.reduce(((t,r)=>t.concat(`${e}:${r}`)),[]));else if("object"==typeof t&&"string"==typeof n)for(let r in t)if(t.hasOwnProperty(r)&&r===n){let o=t[r];if(o&&"string"==typeof o){let t=Ot(o);s[n]?s[n]=s[n].concat(t.split(" ").map((t=>`${e}:${t}`))):s[n]=t.split(" ").map((t=>`${e}:${t}`));}else Array.isArray(o)&&o.length>0&&(s[n]=o.reduce(((t,r)=>t.concat(`${e}:${r}`)),[]));}return s},s=(r,n=c,s=null,o=null)=>{var a;let i=n[r];if(!i||Rt(i))return null;let u=null!=(a=null==o?void 0:o[r])?a:null==e?void 0:e[r];if(null===u)return null;let p=Kt(u),h=Array.isArray(l.responsiveVariants)&&l.responsiveVariants.length>0||!0===l.responsiveVariants,f=null==d?void 0:d[r],m=[];if("object"==typeof p&&h)for(let[e,r]of Object.entries(p)){let n=i[r];"initial"!==e?Array.isArray(l.responsiveVariants)&&!l.responsiveVariants.includes(e)||(m=t(e,n,m,s)):f=r;}let g=i[p]||i[Kt(f)];return "object"==typeof m&&"string"==typeof s&&m[s]?Fr(m,g):m.length>0?(m.push(g),m):g},i=(e,t)=>{if(!c||"object"!=typeof c)return null;let r=new Array;for(let n in c){let o=s(n,c,e,t),a="base"===e&&"string"==typeof o?o:o&&o[e];a&&(r[r.length]=a);}return r},p={};for(let t in e)void 0!==e[t]&&(p[t]=e[t]);let f=(t,r)=>{var n;let s="object"==typeof(null==e?void 0:e[t])?{[t]:null==(n=e[t])?void 0:n.initial}:{};return {...d,...p,...s,...r}},m=(e=[],t)=>{let r=[];for(let{class:n,className:s,...o}of e){let e=!0;for(let[r,n]of Object.entries(o)){let s=f(r,t);if(Array.isArray(n)){if(!n.includes(s[r])){e=!1;break}}else if(s[r]!==n){e=!1;break}}e&&(n&&r.push(n),s&&r.push(s));}return r},g=e=>{let t=m(o,e);return ((...e)=>jt(e).filter(Boolean))(m(null==r?void 0:r.compoundVariants,e),t)},v=e=>{let t=g(e);if(!Array.isArray(t))return t;let r={};for(let e of t)if("string"==typeof e&&(r.base=jr(r.base,e)(l)),"object"==typeof e)for(let[t,n]of Object.entries(e))r[t]=jr(r[t],n)(l);return r},y=e=>{if(a.length<1)return null;let t={};for(let{slots:r=[],class:n,className:s,...o}of a){if(!Rt(o)){let t=!0;for(let r of Object.keys(o)){let n=f(r,e)[r];if(void 0===n||(Array.isArray(o[r])?!o[r].includes(n):o[r]!==n)){t=!1;break}}if(!t)continue}for(let e of r)t[e]=t[e]||[],t[e].push([n,s]);}return t};if(!Rt(n)||!Rt(null==r?void 0:r.slots)){let e={};if("object"==typeof h&&!Rt(h))for(let t of Object.keys(h))e[t]=e=>{var r,n;return jr(h[t],i(t,e),(null!=(r=v(e))?r:[])[t],(null!=(n=y(e))?n:[])[t],null==e?void 0:e.class,null==e?void 0:e.className)(l)};return e}return jr(u,c?Object.keys(c).map((e=>s(e,c))):null,g(),null==e?void 0:e.class,null==e?void 0:e.className)(l)};return f.variantKeys=(()=>{if(c&&"object"==typeof c)return Object.keys(c)})(),f.extend=r,f.base=u,f.slots=h,f.variants=c,f.defaultVariants=d,f.compoundSlots=a,f.compoundVariants=o,f},Br=["small","medium","large"],Wr=(e,t)=>{var r,n,s;return Or(e,{...t,twMerge:null==(r=null==t?void 0:t.twMerge)||r,twMergeConfig:{...null==t?void 0:t.twMergeConfig,theme:{...null==(n=null==t?void 0:t.twMergeConfig)?void 0:n.theme,opacity:["disabled"],spacing:["divider","unit",...Lt],borderWidth:Br,borderRadius:Br},classGroups:{...null==(s=null==t?void 0:t.twMergeConfig)?void 0:s.classGroups,shadow:[{shadow:Br}],"font-size":[{text:["tiny",...Br]}],"bg-image":["bg-stripe-gradient"],"min-w":[{"min-w":["unit",...Lt]}],"min-h":[{"min-h":["unit",...Lt]}]}}})},zr=["outline-none","data-[focus-visible=true]:z-10","data-[focus-visible=true]:outline-2","data-[focus-visible=true]:outline-focus","data-[focus-visible=true]:outline-offset-2"],Ur=["outline-none","group-data-[focus-visible=true]:z-10","group-data-[focus-visible=true]:ring-2","group-data-[focus-visible=true]:ring-focus","group-data-[focus-visible=true]:ring-offset-2","group-data-[focus-visible=true]:ring-offset-background"],Hr=["absolute","top-1/2","left-1/2","-translate-x-1/2","-translate-y-1/2"],$r={default:["[&+.border-medium.border-default]:ms-[calc(theme(borderWidth.medium)*-1)]"],primary:["[&+.border-medium.border-primary]:ms-[calc(theme(borderWidth.medium)*-1)]"],secondary:["[&+.border-medium.border-secondary]:ms-[calc(theme(borderWidth.medium)*-1)]"],success:["[&+.border-medium.border-success]:ms-[calc(theme(borderWidth.medium)*-1)]"],warning:["[&+.border-medium.border-warning]:ms-[calc(theme(borderWidth.medium)*-1)]"],danger:["[&+.border-medium.border-danger]:ms-[calc(theme(borderWidth.medium)*-1)]"]},_r={default:"bg-default text-default-foreground",primary:"bg-primary text-primary-foreground",secondary:"bg-secondary text-secondary-foreground",success:"bg-success text-success-foreground",warning:"bg-warning text-warning-foreground",danger:"bg-danger text-danger-foreground",foreground:"bg-foreground text-background"},Gr={default:"shadow-lg shadow-default/50 bg-default text-default-foreground",primary:"shadow-lg shadow-primary/40 bg-primary text-primary-foreground",secondary:"shadow-lg shadow-secondary/40 bg-secondary text-secondary-foreground",success:"shadow-lg shadow-success/40 bg-success text-success-foreground",warning:"shadow-lg shadow-warning/40 bg-warning text-warning-foreground",danger:"shadow-lg shadow-danger/40 bg-danger text-danger-foreground",foreground:"shadow-lg shadow-foreground/40 bg-foreground text-background"},qr={default:"bg-transparent border-default text-foreground",primary:"bg-transparent border-primary text-primary",secondary:"bg-transparent border-secondary text-secondary",success:"bg-transparent border-success text-success",warning:"bg-transparent border-warning text-warning",danger:"bg-transparent border-danger text-danger",foreground:"bg-transparent border-foreground text-foreground"},Yr={default:"bg-default/40 text-default-foreground",primary:"bg-primary/20 text-primary",secondary:"bg-secondary/20 text-secondary",success:"bg-success/20 text-success-600 dark:text-success",warning:"bg-warning/20 text-warning-600 dark:text-warning",danger:"bg-danger/20 text-danger dark:text-danger-500",foreground:"bg-foreground/10 text-foreground"},Xr={default:"border-default bg-default-100 text-default-foreground",primary:"border-default bg-default-100 text-primary",secondary:"border-default bg-default-100 text-secondary",success:"border-default bg-default-100 text-success",warning:"border-default bg-default-100 text-warning",danger:"border-default bg-default-100 text-danger",foreground:"border-default bg-default-100 text-foreground"},Zr={default:"bg-transparent text-default-foreground",primary:"bg-transparent text-primary",secondary:"bg-transparent text-secondary",success:"bg-transparent text-success",warning:"bg-transparent text-warning",danger:"bg-transparent text-danger",foreground:"bg-transparent text-foreground"},Jr={default:"border-default text-default-foreground hover:!bg-default",primary:"border-primary text-primary hover:!text-primary-foreground hover:!bg-primary",secondary:"border-secondary text-secondary hover:text-secondary-foreground hover:!bg-secondary",success:"border-success text-success hover:!text-success-foreground hover:!bg-success",warning:"border-warning text-warning hover:!text-warning-foreground hover:!bg-warning",danger:"border-danger text-danger hover:!text-danger-foreground hover:!bg-danger",foreground:"border-foreground text-foreground hover:!bg-foreground"},Qr=Wr({slots:{base:"relative inline-flex flex-col gap-2 items-center justify-center",wrapper:"relative flex",circle1:["absolute","w-full","h-full","rounded-full","animate-spinner-ease-spin","border-2","border-solid","border-t-transparent","border-l-transparent","border-r-transparent"],circle2:["absolute","w-full","h-full","rounded-full","opacity-75","animate-spinner-linear-spin","border-2","border-dotted","border-t-transparent","border-l-transparent","border-r-transparent"],label:"text-foreground dark:text-foreground-dark font-regular"},variants:{size:{sm:{wrapper:"w-5 h-5",circle1:"border-2",circle2:"border-2",label:"text-small"},md:{wrapper:"w-8 h-8",circle1:"border-3",circle2:"border-3",label:"text-medium"},lg:{wrapper:"w-10 h-10",circle1:"border-3",circle2:"border-3",label:"text-large"}},color:{current:{circle1:"border-b-current",circle2:"border-b-current"},white:{circle1:"border-b-white",circle2:"border-b-white"},default:{circle1:"border-b-default",circle2:"border-b-default"},primary:{circle1:"border-b-primary",circle2:"border-b-primary"},secondary:{circle1:"border-b-secondary",circle2:"border-b-secondary"},success:{circle1:"border-b-success",circle2:"border-b-success"},warning:{circle1:"border-b-warning",circle2:"border-b-warning"},danger:{circle1:"border-b-danger",circle2:"border-b-danger"}},labelColor:{foreground:{label:"text-foreground"},primary:{label:"text-primary"},secondary:{label:"text-secondary"},success:{label:"text-success"},warning:{label:"text-warning"},danger:{label:"text-danger"}}},defaultVariants:{size:"md",color:"primary",labelColor:"foreground"}}),en=Wr({slots:{base:"inline-flex",tabList:["flex","p-1","h-fit","gap-2","items-center","flex-nowrap","overflow-x-scroll","scrollbar-hide","bg-default-100"],tab:["z-0","w-full","px-3","py-1","flex","group","relative","justify-center","items-center","outline-none","cursor-pointer","transition-opacity","tap-highlight-transparent","data-[disabled=true]:cursor-not-allowed","data-[disabled=true]:opacity-30","data-[hover-unselected=true]:opacity-disabled",...zr],tabContent:["relative","z-10","text-inherit","whitespace-nowrap","transition-colors","text-default-500","group-data-[selected=true]:text-foreground"],cursor:["absolute","z-0","bg-white"],panel:["py-3","px-1","outline-none",...zr]},variants:{variant:{solid:{cursor:"inset-0"},light:{tabList:"bg-transparent dark:bg-transparent",cursor:"inset-0"},underlined:{tabList:"bg-transparent dark:bg-transparent",cursor:"h-[2px] w-[80%] bottom-0 shadow-[0_1px_0px_0_rgba(0,0,0,0.05)]"},bordered:{tabList:"bg-transparent dark:bg-transparent border-medium border-default-200 shadow-sm",cursor:"inset-0"}},color:{default:{},primary:{},secondary:{},success:{},warning:{},danger:{}},size:{sm:{tabList:"rounded-medium",tab:"h-7 text-tiny rounded-small",cursor:"rounded-small"},md:{tabList:"rounded-medium",tab:"h-8 text-small rounded-small",cursor:"rounded-small"},lg:{tabList:"rounded-large",tab:"h-9 text-medium rounded-medium",cursor:"rounded-medium"}},radius:{none:{tabList:"rounded-none",tab:"rounded-none",cursor:"rounded-none"},sm:{tabList:"rounded-medium",tab:"rounded-small",cursor:"rounded-small"},md:{tabList:"rounded-medium",tab:"rounded-small",cursor:"rounded-small"},lg:{tabList:"rounded-large",tab:"rounded-medium",cursor:"rounded-medium"},full:{tabList:"rounded-full",tab:"rounded-full",cursor:"rounded-full"}},fullWidth:{true:{base:"w-full",tabList:"w-full"}},isDisabled:{true:{tabList:"opacity-disabled pointer-events-none"}},disableAnimation:{true:{tab:"transition-none",tabContent:"transition-none"}}},defaultVariants:{color:"default",variant:"solid",size:"md",fullWidth:!1,isDisabled:!1,disableAnimation:!1},compoundVariants:[{variant:["solid","bordered","light"],color:"default",class:{cursor:["bg-background","dark:bg-default","shadow-small"],tabContent:"group-data-[selected=true]:text-default-foreground"}},{variant:["solid","bordered","light"],color:"primary",class:{cursor:_r.primary,tabContent:"group-data-[selected=true]:text-primary-foreground"}},{variant:["solid","bordered","light"],color:"secondary",class:{cursor:_r.secondary,tabContent:"group-data-[selected=true]:text-secondary-foreground"}},{variant:["solid","bordered","light"],color:"success",class:{cursor:_r.success,tabContent:"group-data-[selected=true]:text-success-foreground"}},{variant:["solid","bordered","light"],color:"warning",class:{cursor:_r.warning,tabContent:"group-data-[selected=true]:text-warning-foreground"}},{variant:["solid","bordered","light"],color:"danger",class:{cursor:_r.danger,tabContent:"group-data-[selected=true]:text-danger-foreground"}},{variant:"underlined",color:"default",class:{cursor:"bg-foreground",tabContent:"group-data-[selected=true]:text-foreground"}},{variant:"underlined",color:"primary",class:{cursor:"bg-primary",tabContent:"group-data-[selected=true]:text-primary"}},{variant:"underlined",color:"secondary",class:{cursor:"bg-secondary",tabContent:"group-data-[selected=true]:text-secondary"}},{variant:"underlined",color:"success",class:{cursor:"bg-success",tabContent:"group-data-[selected=true]:text-success"}},{variant:"underlined",color:"warning",class:{cursor:"bg-warning",tabContent:"group-data-[selected=true]:text-warning"}},{variant:"underlined",color:"danger",class:{cursor:"bg-danger",tabContent:"group-data-[selected=true]:text-danger"}},{disableAnimation:!0,variant:"underlined",class:{tab:["after:content-['']","after:absolute","after:bottom-0","after:h-[2px]","after:w-[80%]","after:opacity-0","after:shadow-[0_1px_0px_0_rgba(0,0,0,0.05)]","data-[selected=true]:after:opacity-100"]}},{disableAnimation:!0,color:"default",variant:["solid","bordered","light"],class:{tab:"data-[selected=true]:bg-default data-[selected=true]:text-default-foreground"}},{disableAnimation:!0,color:"primary",variant:["solid","bordered","light"],class:{tab:"data-[selected=true]:bg-primary data-[selected=true]:text-primary-foreground"}},{disableAnimation:!0,color:"secondary",variant:["solid","bordered","light"],class:{tab:"data-[selected=true]:bg-secondary data-[selected=true]:text-secondary-foreground"}},{disableAnimation:!0,color:"success",variant:["solid","bordered","light"],class:{tab:"data-[selected=true]:bg-success data-[selected=true]:text-success-foreground"}},{disableAnimation:!0,color:"warning",variant:["solid","bordered","light"],class:{tab:"data-[selected=true]:bg-warning data-[selected=true]:text-warning-foreground"}},{disableAnimation:!0,color:"danger",variant:["solid","bordered","light"],class:{tab:"data-[selected=true]:bg-danger data-[selected=true]:text-danger-foreground"}},{disableAnimation:!0,color:"default",variant:"underlined",class:{tab:"data-[selected=true]:after:bg-foreground"}},{disableAnimation:!0,color:"primary",variant:"underlined",class:{tab:"data-[selected=true]:after:bg-primary"}},{disableAnimation:!0,color:"secondary",variant:"underlined",class:{tab:"data-[selected=true]:after:bg-secondary"}},{disableAnimation:!0,color:"success",variant:"underlined",class:{tab:"data-[selected=true]:after:bg-success"}},{disableAnimation:!0,color:"warning",variant:"underlined",class:{tab:"data-[selected=true]:after:bg-warning"}},{disableAnimation:!0,color:"danger",variant:"underlined",class:{tab:"data-[selected=true]:after:bg-danger"}}],compoundSlots:[{variant:"underlined",slots:["tab","tabList","cursor"],class:["rounded-none"]}]}),tn=Wr({slots:{base:"group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent",wrapper:["px-1","relative","inline-flex","items-center","justify-start","flex-shrink-0","overflow-hidden","bg-default-200","rounded-full",...Ur],thumb:["z-10","flex","items-center","justify-center","bg-white","shadow-small","rounded-full","origin-right"],startContent:"z-0 absolute left-1.5 text-current",endContent:"z-0 absolute right-1.5 text-default-600",thumbIcon:"text-black",label:"relative text-foreground select-none"},variants:{color:{default:{wrapper:["group-data-[selected=true]:bg-default-400","group-data-[selected=true]:text-default-foreground"]},primary:{wrapper:["group-data-[selected=true]:bg-primary","group-data-[selected=true]:text-primary-foreground"]},secondary:{wrapper:["group-data-[selected=true]:bg-secondary","group-data-[selected=true]:text-secondary-foreground"]},success:{wrapper:["group-data-[selected=true]:bg-success","group-data-[selected=true]:text-success-foreground"]},warning:{wrapper:["group-data-[selected=true]:bg-warning","group-data-[selected=true]:text-warning-foreground"]},danger:{wrapper:["group-data-[selected=true]:bg-danger","data-[selected=true]:text-danger-foreground"]}},size:{sm:{wrapper:"w-10 h-6 mr-2",thumb:["w-4 h-4 text-tiny","group-data-[selected=true]:ml-4"],endContent:"text-tiny",startContent:"text-tiny",label:"text-small"},md:{wrapper:"w-12 h-7 mr-2",thumb:["w-5 h-5 text-small","group-data-[selected=true]:ml-5"],endContent:"text-small",startContent:"text-small",label:"text-medium"},lg:{wrapper:"w-14 h-8 mr-2",thumb:["w-6 h-6 text-medium","group-data-[selected=true]:ml-6"],endContent:"text-medium",startContent:"text-medium",label:"text-large"}},isDisabled:{true:{base:"opacity-disabled pointer-events-none"}},disableAnimation:{true:{wrapper:"transition-none",thumb:"transition-none"},false:{wrapper:"transition-background",thumb:"transition-all",startContent:["opacity-0","scale-50","transition-transform-opacity","group-data-[selected=true]:scale-100","group-data-[selected=true]:opacity-100"],endContent:["opacity-100","transition-transform-opacity","group-data-[selected=true]:translate-x-3","group-data-[selected=true]:opacity-0"]}}},defaultVariants:{color:"primary",size:"md",isDisabled:!1,disableAnimation:!1},compoundVariants:[{disableAnimation:!1,size:"sm",class:{thumb:["group-data-[pressed=true]:w-5","group-data-[selected]:group-data-[pressed]:ml-3"]}},{disableAnimation:!1,size:"md",class:{thumb:["group-data-[pressed=true]:w-6","group-data-[selected]:group-data-[pressed]:ml-4"]}},{disableAnimation:!1,size:"lg",class:{thumb:["group-data-[pressed=true]:w-7","group-data-[selected]:group-data-[pressed]:ml-5"]}}]}),rn=Wr({slots:{base:"group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2",wrapper:["relative","inline-flex","items-center","justify-center","flex-shrink-0","overflow-hidden","border-solid","border-medium","box-border","border-default","rounded-full","group-data-[hover-unselected=true]:bg-default-100",...Ur],labelWrapper:"flex flex-col ml-1",control:["z-10","w-2","h-2","opacity-0","scale-0","origin-center","rounded-full","group-data-[selected=true]:opacity-100","group-data-[selected=true]:scale-100"],label:"relative text-foreground select-none",description:"relative text-foreground-400"},variants:{color:{default:{control:"bg-default-500 text-default-foreground",wrapper:"group-data-[selected=true]:border-default-500"},primary:{control:"bg-primary text-primary-foreground",wrapper:"group-data-[selected=true]:border-primary"},secondary:{control:"bg-secondary text-secondary-foreground",wrapper:"group-data-[selected=true]:border-secondary"},success:{control:"bg-success text-success-foreground",wrapper:"group-data-[selected=true]:border-success"},warning:{control:"bg-warning text-warning-foreground",wrapper:"group-data-[selected=true]:border-warning"},danger:{control:"bg-danger text-danger-foreground",wrapper:"group-data-[selected=true]:border-danger"}},size:{sm:{wrapper:"w-4 h-4",control:"w-1.5 h-1.5",labelWrapper:"ml-1",label:"text-small",description:"text-tiny"},md:{wrapper:"w-5 h-5",control:"w-2 h-2",labelWrapper:"ml-2",label:"text-medium",description:"text-small"},lg:{wrapper:"w-6 h-6",control:"w-2.5 h-2.5",labelWrapper:"ml-2",label:"text-large",description:"text-medium"}},isDisabled:{true:{base:"opacity-disabled pointer-events-none"}},isInvalid:{true:{control:"bg-danger text-danger-foreground",wrapper:"border-danger group-data-[selected=true]:border-danger",label:"text-danger",description:"text-danger-300"}},disableAnimation:{true:{},false:{wrapper:["group-data-[pressed=true]:scale-95","transition-transform-colors","motion-reduce:transition-none"],control:"transition-transform-opacity motion-reduce:transition-none",label:"transition-colors motion-reduce:transition-none",description:"transition-colors motion-reduce:transition-none"}}},defaultVariants:{color:"primary",size:"md",isDisabled:!1,isInvalid:!1,disableAnimation:!1}}),nn=Wr({slots:{base:"relative flex flex-col gap-2",label:"relative text-foreground-500",wrapper:"flex flex-col flex-wrap gap-2 data-[orientation=horizontal]:flex-row",description:"text-tiny text-foreground-400",errorMessage:"text-tiny text-danger"},variants:{isRequired:{true:{label:"after:content-['*'] after:text-danger after:ml-0.5"}},isInvalid:{true:{description:"text-danger"}},disableAnimation:{true:{},false:{description:"transition-colors !duration-150 motion-reduce:transition-none"}}},defaultVariants:{isInvalid:!1,isRequired:!1,disableAnimation:!1}}),sn=Wr({slots:{base:"group flex flex-col",label:["absolute","z-10","pointer-events-none","origin-top-left","subpixel-antialiased","block","text-small","text-foreground-500"],mainWrapper:"h-full",inputWrapper:"relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3",innerWrapper:"inline-flex w-full items-center h-full box-border",input:["w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none","data-[has-start-content=true]:ps-1.5","data-[has-end-content=true]:pe-1.5"],clearButton:["p-2","-m-2","z-10","hidden","absolute","right-3","appearance-none","outline-none","select-none","opacity-0","hover:!opacity-100","cursor-pointer","active:!opacity-70","rounded-full",...zr],helperWrapper:"hidden group-data-[has-helper=true]:flex p-1 relative flex-col gap-1.5",description:"text-tiny text-foreground-400",errorMessage:"text-tiny text-danger"},variants:{variant:{flat:{inputWrapper:["bg-default-100","data-[hover=true]:bg-default-200","group-data-[focus=true]:bg-default-100"]},faded:{inputWrapper:["bg-default-100","border-medium","border-default-200","data-[hover=true]:border-default-400"],value:"group-data-[has-value=true]:text-default-foreground"},bordered:{inputWrapper:["border-medium","border-default-200","data-[hover=true]:border-default-400","group-data-[focus=true]:border-default-foreground"]},underlined:{inputWrapper:["!px-1","!pb-0","!gap-0","relative","box-border","border-b-medium","shadow-[0_1px_0px_0_rgba(0,0,0,0.05)]","border-default-200","!rounded-none","hover:border-default-300","after:content-['']","after:w-0","after:origin-center","after:bg-default-foreground","after:absolute","after:left-1/2","after:-translate-x-1/2","after:-bottom-[2px]","after:h-[2px]","group-data-[focus=true]:after:w-full"],innerWrapper:"pb-1",label:"group-data-[filled-within=true]:text-foreground"}},color:{default:{},primary:{},secondary:{},success:{},warning:{},danger:{}},size:{sm:{label:"text-tiny",inputWrapper:"h-unit-8 min-h-unit-8 px-2 rounded-small",input:"text-small",clearButton:"text-medium"},md:{inputWrapper:"h-unit-10 min-h-unit-10 rounded-medium",input:"text-small",clearButton:"text-large"},lg:{inputWrapper:"h-unit-12 min-h-unit-12 rounded-large",input:"text-medium",clearButton:"text-large"}},radius:{none:{inputWrapper:"rounded-none"},sm:{inputWrapper:"rounded-small"},md:{inputWrapper:"rounded-medium"},lg:{inputWrapper:"rounded-large"},full:{inputWrapper:"rounded-full"}},labelPlacement:{outside:{mainWrapper:"flex flex-col"},"outside-left":{base:"flex-row items-center flex-nowrap data-[has-helper=true]:items-start",inputWrapper:"flex-1",mainWrapper:"flex flex-col",label:"relative text-foreground pr-2"},inside:{label:"text-tiny cursor-text",inputWrapper:"flex-col items-start justify-center gap-0",innerWrapper:"group-data-[has-label=true]:items-end"}},fullWidth:{true:{base:"w-full"}},isClearable:{true:{input:"peer pr-6",clearButton:"peer-data-[filled=true]:opacity-70 peer-data-[filled=true]:block"}},isDisabled:{true:{base:"opacity-disabled pointer-events-none",inputWrapper:"pointer-events-none",label:"pointer-events-none"}},isInvalid:{true:{label:"!text-danger",input:"!placeholder:text-danger !text-danger"}},isRequired:{true:{label:"after:content-['*'] after:text-danger after:ml-0.5"}},isMultiline:{true:{label:"relative",inputWrapper:"!h-auto",innerWrapper:"items-start group-data-[has-label=true]:items-start",input:"resize-none data-[hide-scroll=true]:scrollbar-hide"}},disableAnimation:{true:{input:"transition-none",inputWrapper:"transition-none",label:"transition-none"},false:{inputWrapper:"transition-background motion-reduce:transition-none !duration-150",label:["will-change-auto","!duration-200","!ease-out","motion-reduce:transition-none","transition-[transform,color,left,opacity]"],clearButton:["transition-opacity","motion-reduce:transition-none"]}}},defaultVariants:{variant:"flat",color:"default",size:"md",fullWidth:!0,labelPlacement:"inside",isDisabled:!1,isMultiline:!1,disableAnimation:!1},compoundVariants:[{variant:"flat",color:"default",class:{input:"group-data-[has-value=true]:text-default-foreground"}},{variant:"flat",color:"primary",class:{inputWrapper:["bg-primary-50","data-[hover=true]:bg-primary-100","text-primary","group-data-[focus=true]:bg-primary-50","placeholder:text-primary"],input:"placeholder:text-primary",label:"text-primary"}},{variant:"flat",color:"secondary",class:{inputWrapper:["bg-secondary-50","text-secondary","data-[hover=true]:bg-secondary-100","group-data-[focus=true]:bg-secondary-50","placeholder:text-secondary"],input:"placeholder:text-secondary",label:"text-secondary"}},{variant:"flat",color:"success",class:{inputWrapper:["bg-success-50","text-success-600","dark:text-success","placeholder:text-success-600","dark:placeholder:text-success","data-[hover=true]:bg-success-100","group-data-[focus=true]:bg-success-50"],input:"placeholder:text-success-600 dark:placeholder:text-success",label:"text-success-600 dark:text-success"}},{variant:"flat",color:"warning",class:{inputWrapper:["bg-warning-50","text-warning-600","dark:text-warning","placeholder:text-warning-600","dark:placeholder:text-warning","data-[hover=true]:bg-warning-100","group-data-[focus=true]:bg-warning-50"],input:"placeholder:text-warning-600 dark:placeholder:text-warning",label:"text-warning-600 dark:text-warning"}},{variant:"flat",color:"danger",class:{inputWrapper:["bg-danger-50","text-danger","dark:text-danger-500","placeholder:text-danger","dark:placeholder:text-danger-500","data-[hover=true]:bg-danger-100","group-data-[focus=true]:bg-danger-50"],input:"placeholder:text-danger dark:placeholder:text-danger-500",label:"text-danger dark:text-danger-500"}},{variant:"faded",color:"primary",class:{label:"text-primary",inputWrapper:"data-[hover=true]:border-primary focus-within:border-primary"}},{variant:"faded",color:"secondary",class:{label:"text-secondary",inputWrapper:"data-[hover=true]:border-secondary focus-within:border-secondary"}},{variant:"faded",color:"success",class:{label:"text-success",inputWrapper:"data-[hover=true]:border-success focus-within:border-success"}},{variant:"faded",color:"warning",class:{label:"text-warning",inputWrapper:"data-[hover=true]:border-warning focus-within:border-warning"}},{variant:"faded",color:"danger",class:{label:"text-danger",inputWrapper:"data-[hover=true]:border-danger focus-within:border-danger"}},{variant:"underlined",color:"default",class:{input:"group-data-[has-value=true]:text-foreground"}},{variant:"underlined",color:"primary",class:{inputWrapper:"after:bg-primary",label:"text-primary"}},{variant:"underlined",color:"secondary",class:{inputWrapper:"after:bg-secondary",label:"text-secondary"}},{variant:"underlined",color:"success",class:{inputWrapper:"after:bg-success",label:"text-success"}},{variant:"underlined",color:"warning",class:{inputWrapper:"after:bg-warning",label:"text-warning"}},{variant:"underlined",color:"danger",class:{inputWrapper:"after:bg-danger",label:"text-danger"}},{variant:"bordered",color:"primary",class:{inputWrapper:"group-data-[focus=true]:border-primary",label:"text-primary"}},{variant:"bordered",color:"secondary",class:{inputWrapper:"group-data-[focus=true]:border-secondary",label:"text-secondary"}},{variant:"bordered",color:"success",class:{inputWrapper:"group-data-[focus=true]:border-success",label:"text-success"}},{variant:"bordered",color:"warning",class:{inputWrapper:"group-data-[focus=true]:border-warning",label:"text-warning"}},{variant:"bordered",color:"danger",class:{inputWrapper:"group-data-[focus=true]:border-danger",label:"text-danger"}},{labelPlacement:"inside",color:"default",class:{label:"group-data-[filled-within=true]:text-default-600"}},{labelPlacement:"outside",color:"default",class:{label:"group-data-[filled-within=true]:text-foreground"}},{radius:"full",size:["sm"],class:{inputWrapper:"px-3"}},{radius:"full",size:"md",class:{inputWrapper:"px-4"}},{radius:"full",size:"lg",class:{inputWrapper:"px-5"}},{disableAnimation:!1,variant:["faded","bordered"],class:{inputWrapper:"transition-colors motion-reduce:transition-none"}},{disableAnimation:!1,variant:"underlined",class:{inputWrapper:"after:transition-width motion-reduce:after:transition-none"}},{variant:["flat","faded"],class:{inputWrapper:[...Ur]}},{isInvalid:!0,variant:"flat",class:{inputWrapper:["bg-danger-50","data-[hover=true]:bg-danger-100","group-data-[focus=true]:bg-danger-50"]}},{isInvalid:!0,variant:"bordered",class:{inputWrapper:"!border-danger group-data-[focus=true]:border-danger"}},{isInvalid:!0,variant:"underlined",class:{inputWrapper:"after:bg-danger"}},{labelPlacement:"inside",size:"sm",class:{inputWrapper:"h-12 py-1.5 px-3"}},{labelPlacement:"inside",size:"md",class:{inputWrapper:"h-14 py-2"}},{labelPlacement:"inside",size:"lg",class:{label:"text-small",inputWrapper:"h-16 py-2.5 gap-0"}},{labelPlacement:"inside",size:"sm",variant:["bordered","faded"],class:{inputWrapper:"py-1"}},{labelPlacement:["inside","outside"],class:{label:["group-data-[filled-within=true]:pointer-events-auto"]}},{labelPlacement:["outside","outside-left"],class:{input:"h-full"}},{labelPlacement:"outside",isMultiline:!1,class:{base:"group relative justify-end",label:["pb-0","z-20","top-1/2","-translate-y-1/2","group-data-[filled-within=true]:left-0"]}},{labelPlacement:["inside"],class:{label:["group-data-[filled-within=true]:scale-85"]}},{labelPlacement:["inside"],variant:"flat",class:{innerWrapper:"pb-0.5"}},{variant:"underlined",size:"sm",class:{innerWrapper:"pb-1"}},{variant:"underlined",size:["md","lg"],class:{innerWrapper:"pb-1.5"}},{labelPlacement:"inside",size:["sm","md"],class:{label:"text-small"}},{labelPlacement:"inside",isMultiline:!1,size:"sm",class:{label:["group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.tiny)/2_-_8px)]"]}},{labelPlacement:"inside",isMultiline:!1,size:"md",class:{label:["group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_6px)]"]}},{labelPlacement:"inside",isMultiline:!1,size:"lg",class:{label:["text-medium","group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_8px)]"]}},{labelPlacement:"inside",variant:["faded","bordered"],isMultiline:!1,size:"sm",class:{label:["group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.tiny)/2_-_8px_-_theme(borderWidth.medium))]"]}},{labelPlacement:"inside",variant:["faded","bordered"],isMultiline:!1,size:"md",class:{label:["group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_6px_-_theme(borderWidth.medium))]"]}},{labelPlacement:"inside",variant:["faded","bordered"],isMultiline:!1,size:"lg",class:{label:["text-medium","group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_8px_-_theme(borderWidth.medium))]"]}},{labelPlacement:"inside",variant:"underlined",isMultiline:!1,size:"sm",class:{label:["group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.tiny)/2_-_5px)]"]}},{labelPlacement:"inside",variant:"underlined",isMultiline:!1,size:"md",class:{label:["group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_3.5px)]"]}},{labelPlacement:"inside",variant:"underlined",size:"lg",isMultiline:!1,class:{label:["text-medium","group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_4px)]"]}},{labelPlacement:"outside",size:"sm",isMultiline:!1,class:{label:["left-2","text-tiny","group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.tiny)/2_+_16px)]"],base:"data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_8px)]"}},{labelPlacement:"outside",size:"md",isMultiline:!1,class:{label:["left-3","text-small","group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)]"],base:"data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"}},{labelPlacement:"outside",size:"lg",isMultiline:!1,class:{label:["left-3","text-medium","group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_24px)]"],base:"data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_12px)]"}},{labelPlacement:"outside-left",size:"sm",class:{label:"group-data-[has-helper=true]:pt-2"}},{labelPlacement:"outside-left",size:"md",class:{label:"group-data-[has-helper=true]:pt-3"}},{labelPlacement:"outside-left",size:"lg",class:{label:"group-data-[has-helper=true]:pt-4"}},{labelPlacement:["outside","outside-left"],isMultiline:!0,class:{inputWrapper:"py-2"}},{labelPlacement:"outside",isMultiline:!0,class:{label:"pb-1.5"}},{labelPlacement:"inside",isMultiline:!0,class:{label:"pb-0.5",input:"pt-0"}},{isMultiline:!0,disableAnimation:!1,class:{input:"transition-height !duration-100 motion-reduce:transition-none"}},{labelPlacement:["inside","outside"],class:{label:["pe-2","max-w-full","text-ellipsis","overflow-hidden"]}},{isMultiline:!0,radius:"full",class:{inputWrapper:"data-[has-multiple-rows=true]:rounded-large"}}]}),on=Wr({slots:{base:["relative","max-w-fit","inline-flex","items-center","justify-between","box-border","whitespace-nowrap"],content:"flex-1 text-inherit font-normal",dot:["w-2","h-2","ml-1","rounded-full"],avatar:"flex-shrink-0",closeButton:["z-10","appearance-none","outline-none","select-none","transition-opacity","opacity-70","hover:opacity-100","cursor-pointer","active:opacity-disabled","tap-highlight-transparent"]},variants:{variant:{solid:{},bordered:{base:"border-medium bg-transparent"},light:{base:"bg-transparent"},flat:{},faded:{base:"border-medium"},shadow:{},dot:{base:"border-medium border-default text-foreground bg-transparent"}},color:{default:{dot:"bg-default-400"},primary:{dot:"bg-primary"},secondary:{dot:"bg-secondary"},success:{dot:"bg-success"},warning:{dot:"bg-warning"},danger:{dot:"bg-danger"}},size:{sm:{base:"px-1 h-6 text-tiny",content:"px-1",closeButton:"text-medium",avatar:"w-4 h-4"},md:{base:"px-1 h-7 text-small",content:"px-2",closeButton:"text-large",avatar:"w-5 h-5"},lg:{base:"px-2 h-8 text-medium",content:"px-2",closeButton:"text-xl",avatar:"w-6 h-6"}},radius:{none:{base:"rounded-none"},sm:{base:"rounded-small"},md:{base:"rounded-medium"},lg:{base:"rounded-large"},full:{base:"rounded-full"}},isOneChar:{true:{},false:{}},isCloseable:{true:{},false:{}},hasStartContent:{true:{}},hasEndContent:{true:{}},isDisabled:{true:{base:"opacity-disabled pointer-events-none"}},isCloseButtonFocusVisible:{true:{closeButton:["outline-none","ring-2","ring-focus","ring-offset-2","ring-offset-background","ring-1","rounded-full"]}}},defaultVariants:{variant:"solid",color:"default",size:"md",radius:"full",isDisabled:!1},compoundVariants:[{variant:"solid",color:"default",class:{base:_r.default}},{variant:"solid",color:"primary",class:{base:_r.primary}},{variant:"solid",color:"secondary",class:{base:_r.secondary}},{variant:"solid",color:"success",class:{base:_r.success}},{variant:"solid",color:"warning",class:{base:_r.warning}},{variant:"solid",color:"danger",class:{base:_r.danger}},{variant:"shadow",color:"default",class:{base:Gr.default}},{variant:"shadow",color:"primary",class:{base:Gr.primary}},{variant:"shadow",color:"secondary",class:{base:Gr.secondary}},{variant:"shadow",color:"success",class:{base:Gr.success}},{variant:"shadow",color:"warning",class:{base:Gr.warning}},{variant:"shadow",color:"danger",class:{base:Gr.danger}},{variant:"bordered",color:"default",class:{base:qr.default}},{variant:"bordered",color:"primary",class:{base:qr.primary}},{variant:"bordered",color:"secondary",class:{base:qr.secondary}},{variant:"bordered",color:"success",class:{base:qr.success}},{variant:"bordered",color:"warning",class:{base:qr.warning}},{variant:"bordered",color:"danger",class:{base:qr.danger}},{variant:"flat",color:"default",class:{base:Yr.default}},{variant:"flat",color:"primary",class:{base:Yr.primary}},{variant:"flat",color:"secondary",class:{base:Yr.secondary}},{variant:"flat",color:"success",class:{base:Yr.success}},{variant:"flat",color:"warning",class:{base:Yr.warning}},{variant:"flat",color:"danger",class:{base:Yr.danger}},{variant:"faded",color:"default",class:{base:Xr.default}},{variant:"faded",color:"primary",class:{base:Xr.primary}},{variant:"faded",color:"secondary",class:{base:Xr.secondary}},{variant:"faded",color:"success",class:{base:Xr.success}},{variant:"faded",color:"warning",class:{base:Xr.warning}},{variant:"faded",color:"danger",class:{base:Xr.danger}},{variant:"light",color:"default",class:{base:Zr.default}},{variant:"light",color:"primary",class:{base:Zr.primary}},{variant:"light",color:"secondary",class:{base:Zr.secondary}},{variant:"light",color:"success",class:{base:Zr.success}},{variant:"light",color:"warning",class:{base:Zr.warning}},{variant:"light",color:"danger",class:{base:Zr.danger}},{isOneChar:!0,size:"sm",class:{base:"w-5 h-5 min-w-unit-5 min-h-5"}},{isOneChar:!0,size:"md",class:{base:"w-6 h-6 min-w-unit-6 min-h-6"}},{isOneChar:!0,size:"lg",class:{base:"w-7 h-7 min-w-unit-7 min-h-7"}},{isOneChar:!0,isCloseable:!1,class:{base:"px-0 justify-center",content:"px-0 flex-none"}},{isOneChar:!0,isCloseable:!0,class:{base:"w-auto"}},{hasStartContent:!0,size:"sm",class:{content:"pl-0.5"}},{hasStartContent:!0,size:["md","lg"],class:{content:"pl-1"}},{hasEndContent:!0,size:"sm",class:{content:"pr-0.5"}},{hasEndContent:!0,size:["md","lg"],class:{content:"pr-1"}}]}),an=Wr({slots:{base:["flex","relative","justify-center","items-center","box-border","overflow-hidden","align-middle","text-white","z-0",...zr],img:["flex","object-cover","w-full","h-full","transition-opacity","!duration-500","opacity-0","data-[loaded=true]:opacity-100"],fallback:[...Hr,"flex","items-center","justify-center"],name:[...Hr,"font-normal","text-center","text-inherit"],icon:[...Hr,"flex","items-center","justify-center","text-inherit","w-full","h-full"]},variants:{size:{sm:{base:"w-8 h-8 text-tiny"},md:{base:"w-10 h-10 text-tiny"},lg:{base:"w-14 h-14 text-small"}},color:{default:{base:_r.default},primary:{base:_r.primary},secondary:{base:_r.secondary},success:{base:_r.success},warning:{base:_r.warning},danger:{base:_r.danger}},radius:{none:{base:"rounded-none"},sm:{base:"rounded-small"},md:{base:"rounded-medium"},lg:{base:"rounded-large"},full:{base:"rounded-full"}},isBordered:{true:{base:"ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark"}},isDisabled:{true:{base:"opacity-disabled"}},isInGroup:{true:{base:["-ms-2 data-[hover=true]:-translate-x-3 transition-transform","data-[focus-visible=true]:-translate-x-3"]}},isInGridGroup:{true:{base:"m-0 data-[hover=true]:translate-x-0"}}},defaultVariants:{size:"md",color:"default",radius:"full"},compoundVariants:[{color:"default",isBordered:!0,class:{base:"ring-default"}},{color:"primary",isBordered:!0,class:{base:"ring-primary"}},{color:"secondary",isBordered:!0,class:{base:"ring-secondary"}},{color:"success",isBordered:!0,class:{base:"ring-success"}},{color:"warning",isBordered:!0,class:{base:"ring-warning"}},{color:"danger",isBordered:!0,class:{base:"ring-danger"}}]});Wr({base:"flex items-center justify-center h-auto w-max-content",variants:{isGrid:{true:"inline-grid grid-cols-4 gap-3"}}});var ln=Wr({base:["z-0","group","relative","inline-flex","items-center","justify-center","box-border","appearance-none","outline-none","select-none","whitespace-nowrap","min-w-max","font-normal","subpixel-antialiased","overflow-hidden","tap-highlight-transparent",...zr],variants:{variant:{solid:"",bordered:"border-medium bg-transparent",light:"bg-transparent",flat:"",faded:"border-medium",shadow:"",ghost:"border-medium bg-transparent"},size:{sm:"px-unit-3 min-w-unit-16 h-unit-8 text-tiny gap-unit-2 rounded-small",md:"px-unit-4 min-w-unit-20 h-unit-10 text-small gap-unit-2 rounded-medium",lg:"px-unit-6 min-w-unit-24 h-unit-12 text-medium gap-unit-3 rounded-large"},color:{default:"",primary:"",secondary:"",success:"",warning:"",danger:""},radius:{none:"rounded-none",sm:"rounded-small",md:"rounded-medium",lg:"rounded-large",full:"rounded-full"},fullWidth:{true:"w-full"},isDisabled:{true:"opacity-disabled pointer-events-none"},isInGroup:{true:"[&:not(:first-child):not(:last-child)]:rounded-none"},isIconOnly:{true:"px-unit-0 !gap-unit-0",false:"[&>svg]:max-w-[theme(spacing.unit-8)]"},disableAnimation:{true:"!transition-none",false:"data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none"}},defaultVariants:{size:"md",variant:"solid",color:"default",fullWidth:!1,isDisabled:!1,isInGroup:!1,disableAnimation:!1},compoundVariants:[{variant:"solid",color:"default",class:_r.default},{variant:"solid",color:"primary",class:_r.primary},{variant:"solid",color:"secondary",class:_r.secondary},{variant:"solid",color:"success",class:_r.success},{variant:"solid",color:"warning",class:_r.warning},{variant:"solid",color:"danger",class:_r.danger},{variant:"shadow",color:"default",class:Gr.default},{variant:"shadow",color:"primary",class:Gr.primary},{variant:"shadow",color:"secondary",class:Gr.secondary},{variant:"shadow",color:"success",class:Gr.success},{variant:"shadow",color:"warning",class:Gr.warning},{variant:"shadow",color:"danger",class:Gr.danger},{variant:"bordered",color:"default",class:qr.default},{variant:"bordered",color:"primary",class:qr.primary},{variant:"bordered",color:"secondary",class:qr.secondary},{variant:"bordered",color:"success",class:qr.success},{variant:"bordered",color:"warning",class:qr.warning},{variant:"bordered",color:"danger",class:qr.danger},{variant:"flat",color:"default",class:Yr.default},{variant:"flat",color:"primary",class:Yr.primary},{variant:"flat",color:"secondary",class:Yr.secondary},{variant:"flat",color:"success",class:Yr.success},{variant:"flat",color:"warning",class:Yr.warning},{variant:"flat",color:"danger",class:Yr.danger},{variant:"faded",color:"default",class:Xr.default},{variant:"faded",color:"primary",class:Xr.primary},{variant:"faded",color:"secondary",class:Xr.secondary},{variant:"faded",color:"success",class:Xr.success},{variant:"faded",color:"warning",class:Xr.warning},{variant:"faded",color:"danger",class:Xr.danger},{variant:"light",color:"default",class:[Zr.default,"data-[hover=true]:bg-default/40"]},{variant:"light",color:"primary",class:[Zr.primary,"data-[hover=true]:bg-primary/20"]},{variant:"light",color:"secondary",class:[Zr.secondary,"data-[hover=true]:bg-secondary/20"]},{variant:"light",color:"success",class:[Zr.success,"data-[hover=true]:bg-success/20"]},{variant:"light",color:"warning",class:[Zr.warning,"data-[hover=true]:bg-warning/20"]},{variant:"light",color:"danger",class:[Zr.danger,"data-[hover=true]:bg-danger/20"]},{variant:"ghost",color:"default",class:Jr.default},{variant:"ghost",color:"primary",class:Jr.primary},{variant:"ghost",color:"secondary",class:Jr.secondary},{variant:"ghost",color:"success",class:Jr.success},{variant:"ghost",color:"warning",class:Jr.warning},{variant:"ghost",color:"danger",class:Jr.danger},{isInGroup:!0,class:"rounded-none first:rounded-s-medium last:rounded-e-medium"},{isInGroup:!0,size:"sm",class:"rounded-none first:rounded-s-small last:rounded-e-small"},{isInGroup:!0,size:"md",class:"rounded-none first:rounded-s-medium last:rounded-e-medium"},{isInGroup:!0,size:"lg",class:"rounded-none first:rounded-s-large last:rounded-e-large"},{isInGroup:!0,isRounded:!0,class:"rounded-none first:rounded-s-full last:rounded-e-full"},{isInGroup:!0,radius:"none",class:"rounded-none first:rounded-s-none last:rounded-e-none"},{isInGroup:!0,radius:"sm",class:"rounded-none first:rounded-s-small last:rounded-e-small"},{isInGroup:!0,radius:"md",class:"rounded-none first:rounded-s-medium last:rounded-e-medium"},{isInGroup:!0,radius:"lg",class:"rounded-none first:rounded-s-large last:rounded-e-large"},{isInGroup:!0,radius:"full",class:"rounded-none first:rounded-s-full last:rounded-e-full"},{isInGroup:!0,variant:["ghost","bordered"],color:"default",className:$r.default},{isInGroup:!0,variant:["ghost","bordered"],color:"primary",className:$r.primary},{isInGroup:!0,variant:["ghost","bordered"],color:"secondary",className:$r.secondary},{isInGroup:!0,variant:["ghost","bordered"],color:"success",className:$r.success},{isInGroup:!0,variant:["ghost","bordered"],color:"warning",className:$r.warning},{isInGroup:!0,variant:["ghost","bordered"],color:"danger",className:$r.danger},{isIconOnly:!0,size:"sm",class:"min-w-unit-8 w-unit-8 h-unit-8"},{isIconOnly:!0,size:"md",class:"min-w-unit-10 w-unit-10 h-unit-10"},{isIconOnly:!0,size:"lg",class:"min-w-unit-12 w-unit-12 h-unit-12"},{variant:["solid","faded","flat","bordered","shadow"],class:"data-[hover=true]:opacity-hover"}]});Wr({base:"inline-flex items-center justify-center h-auto",variants:{fullWidth:{true:"w-full"}},defaultVariants:{fullWidth:!1}});var un=e=>(null==e?void 0:e.length)<=4?e:null==e?void 0:e.slice(0,3),cn=(...e)=>{let t=" ";for(const r of e)if("string"==typeof r&&r.length>0){t=r;break}return t};function dn(e){var t,r,n="";if("string"==typeof e||"number"==typeof e)n+=e;else if("object"==typeof e)if(Array.isArray(e))for(t=0;t<e.length;t++)e[t]&&(r=dn(e[t]))&&(n&&(n+=" "),n+=r);else for(t in e)e[t]&&(n&&(n+=" "),n+=t);return n}function pn(...e){for(var t,r,n=0,s="";n<e.length;)(t=e[n++])&&(r=dn(t))&&(s&&(s+=" "),s+=r);return s}var hn={};function fn(e,t,...r){var n;const s=`[Next UI]${t?` [${t}]`:" "}: ${e}`;if("undefined"!=typeof console&&!hn[s])return hn[s]=!0,"production"!==(null==(n=null==process?void 0:process.env)?void 0:n.NODE_ENV)?console.warn(s,r):void 0}var mn="production"!==process.env.NODE_ENV;process.env.NODE_ENV;var gn=e=>e?"true":void 0;function vn(e={}){const{strict:t=!0,errorMessage:r="useContext: `context` is undefined. Seems you forgot to wrap component within the Provider",name:n}=e,o=s.createContext(void 0);return o.displayName=n,[o.Provider,function e(){var n;const a=s.useContext(o);if(!a&&t){const t=new Error(r);throw t.name="ContextError",null==(n=Error.captureStackTrace)||n.call(Error,t,e),t}return a},o]}function yn(e){const r=t.useRef(null);return t.useImperativeHandle(e,(()=>r.current)),r}var bn=new Set(["id","type","style","title","role","tabIndex","htmlFor","width","height","abbr","accept","acceptCharset","accessKey","action","allowFullScreen","allowTransparency","alt","async","autoComplete","autoFocus","autoPlay","cellPadding","cellSpacing","challenge","charset","checked","cite","class","className","cols","colSpan","command","content","contentEditable","contextMenu","controls","coords","crossOrigin","data","dateTime","default","defer","dir","disabled","download","draggable","dropzone","encType","for","form","formAction","formEncType","formMethod","formNoValidate","formTarget","frameBorder","headers","hidden","high","href","hrefLang","httpEquiv","icon","inputMode","isMap","itemId","itemProp","itemRef","itemScope","itemType","kind","label","lang","list","loop","manifest","max","maxLength","media","mediaGroup","method","min","minLength","multiple","muted","name","noValidate","open","optimum","pattern","ping","placeholder","poster","preload","radioGroup","referrerPolicy","readOnly","rel","required","rows","rowSpan","sandbox","scope","scoped","scrolling","seamless","selected","shape","size","sizes","slot","sortable","span","spellCheck","src","srcDoc","srcSet","start","step","target","translate","typeMustMatch","useMap","value","wmode","wrap"]),xn=new Set(["onCopy","onCut","onPaste","onLoad","onError","onWheel","onScroll","onCompositionEnd","onCompositionStart","onCompositionUpdate","onKeyDown","onKeyPress","onKeyUp","onFocus","onBlur","onChange","onInput","onSubmit","onClick","onContextMenu","onDoubleClick","onDrag","onDragEnd","onDragEnter","onDragExit","onDragLeave","onDragOver","onDragStart","onDrop","onMouseDown","onMouseEnter","onMouseLeave","onMouseMove","onMouseOut","onMouseOver","onMouseUp","onPointerDown","onPointerEnter","onPointerLeave","onPointerUp","onSelect","onTouchCancel","onTouchEnd","onTouchMove","onTouchStart","onAnimationStart","onAnimationEnd","onAnimationIteration","onTransitionEnd"]),wn=/^(data-.*)$/,Pn=/^(aria-.*)$/,Tn=/^(on[A-Z].*)$/;function Cn(e,t={}){let{labelable:r=!0,enabled:n=!0,propNames:s,omitPropNames:o,omitEventNames:a}=t,i={};if(!n)return e;for(const t in e)(null==o?void 0:o.has(t))||(null==a?void 0:a.has(t))&&Tn.test(t)||Tn.test(t)&&!xn.has(t)||(Object.prototype.hasOwnProperty.call(e,t)&&(bn.has(t)||r&&Pn.test(t)||(null==s?void 0:s.has(t))||wn.test(t))||Tn.test(t))&&(i[t]=e[t]);return i}function En(e){return O()||W()?e.altKey:e.ctrlKey}function Sn(e){return O()?e.metaKey:e.ctrlKey}const kn=1e3;function Mn(e){let{selectionManager:n,keyboardDelegate:s,ref:o,autoFocus:a=!1,shouldFocusWrap:i=!1,disallowEmptySelection:l=!1,disallowSelectAll:u=!1,selectOnFocus:c="replace"===n.selectionBehavior,disallowTypeAhead:d=!1,shouldUseVirtualFocus:p,allowsTabNavigation:h=!1,isVirtualized:f,scrollRef:m=o,linkBehavior:g="action"}=e,{direction:v}=ye(),y=$(),b=t.useRef({top:0,left:0});!function(e,r,n,s){let o=x(n),a=null==n;t.useEffect((()=>{if(a)return;let t=e.current;return t.addEventListener(r,o,s),()=>{t.removeEventListener(r,o,s);}}),[e,r,s,a,o]);}(m,"scroll",f?null:()=>{b.current={top:m.current.scrollTop,left:m.current.scrollLeft};});const w=t.useRef(a);t.useEffect((()=>{if(w.current){let e=null;"first"===a&&(e=s.getFirstKey()),"last"===a&&(e=s.getLastKey());let t=n.selectedKeys;t.size&&(e=t.values().next().value),n.setFocused(!0),n.setFocusedKey(e),null!=e||p||vt(o.current);}w.current=!1;}),[]);let P=t.useRef(n.focusedKey);t.useEffect((()=>{let e=st();if(n.isFocused&&null!=n.focusedKey&&(null==m?void 0:m.current)){let t=m.current.querySelector(`[data-key="${n.focusedKey}"]`);t&&"keyboard"===e&&(f||se(m.current,t),ae(t,{containingElement:o.current}));}n.isFocused&&null==n.focusedKey&&null!=P.current&&vt(o.current),P.current=n.focusedKey;}),[f,m,n.focusedKey,n.isFocused,o]);let T,C={onKeyDown:e=>{if(e.altKey&&"Tab"===e.key&&e.preventDefault(),!o.current.contains(e.target))return;const t=(t,s)=>{if(null!=t){if(n.isLink(t)&&"selection"===g&&c&&!En(e)){r.flushSync((()=>{n.setFocusedKey(t,s);}));let o=m.current.querySelector(`[data-key="${t}"]`);return void y.open(o,e)}if(n.setFocusedKey(t,s),n.isLink(t)&&"override"===g)return;e.shiftKey&&"multiple"===n.selectionMode?n.extendSelection(t):c&&!En(e)&&n.replaceSelection(t);}};switch(e.key){case"ArrowDown":if(s.getKeyBelow){var a,d;e.preventDefault();let r=null!=n.focusedKey?s.getKeyBelow(n.focusedKey):null===(a=s.getFirstKey)||void 0===a?void 0:a.call(s);null==r&&i&&(r=null===(d=s.getFirstKey)||void 0===d?void 0:d.call(s,n.focusedKey)),t(r);}break;case"ArrowUp":if(s.getKeyAbove){var p,f;e.preventDefault();let r=null!=n.focusedKey?s.getKeyAbove(n.focusedKey):null===(p=s.getLastKey)||void 0===p?void 0:p.call(s);null==r&&i&&(r=null===(f=s.getLastKey)||void 0===f?void 0:f.call(s,n.focusedKey)),t(r);}break;case"ArrowLeft":if(s.getKeyLeftOf){var b,x;e.preventDefault();let r=s.getKeyLeftOf(n.focusedKey);null==r&&i&&(r="rtl"===v?null===(b=s.getFirstKey)||void 0===b?void 0:b.call(s,n.focusedKey):null===(x=s.getLastKey)||void 0===x?void 0:x.call(s,n.focusedKey)),t(r,"rtl"===v?"first":"last");}break;case"ArrowRight":if(s.getKeyRightOf){var w,P;e.preventDefault();let r=s.getKeyRightOf(n.focusedKey);null==r&&i&&(r="rtl"===v?null===(w=s.getLastKey)||void 0===w?void 0:w.call(s,n.focusedKey):null===(P=s.getFirstKey)||void 0===P?void 0:P.call(s,n.focusedKey)),t(r,"rtl"===v?"last":"first");}break;case"Home":if(s.getFirstKey){e.preventDefault();let t=s.getFirstKey(n.focusedKey,Sn(e));n.setFocusedKey(t),Sn(e)&&e.shiftKey&&"multiple"===n.selectionMode?n.extendSelection(t):c&&n.replaceSelection(t);}break;case"End":if(s.getLastKey){e.preventDefault();let t=s.getLastKey(n.focusedKey,Sn(e));n.setFocusedKey(t),Sn(e)&&e.shiftKey&&"multiple"===n.selectionMode?n.extendSelection(t):c&&n.replaceSelection(t);}break;case"PageDown":if(s.getKeyPageBelow){e.preventDefault(),t(s.getKeyPageBelow(n.focusedKey));}break;case"PageUp":if(s.getKeyPageAbove){e.preventDefault(),t(s.getKeyPageAbove(n.focusedKey));}break;case"a":Sn(e)&&"multiple"===n.selectionMode&&!0!==u&&(e.preventDefault(),n.selectAll());break;case"Escape":e.preventDefault(),l||n.clearSelection();break;case"Tab":if(!h){if(e.shiftKey)o.current.focus();else {let e,t,r=Tt(o.current,{tabbable:!0});do{t=r.lastChild(),t&&(e=t);}while(t);e&&!e.contains(document.activeElement)&&R(e);}break}}},onFocus:e=>{if(n.isFocused)e.currentTarget.contains(e.target)||n.setFocused(!1);else if(e.currentTarget.contains(e.target)){if(n.setFocused(!0),null==n.focusedKey){let o=e=>{null!=e&&(n.setFocusedKey(e),c&&n.replaceSelection(e));},a=e.relatedTarget;var t,r;a&&e.currentTarget.compareDocumentPosition(a)&Node.DOCUMENT_POSITION_FOLLOWING?o(null!==(t=n.lastSelectedKey)&&void 0!==t?t:s.getLastKey()):o(null!==(r=n.firstSelectedKey)&&void 0!==r?r:s.getFirstKey());}else f||(m.current.scrollTop=b.current.top,m.current.scrollLeft=b.current.left);if(!f&&null!=n.focusedKey){let e=m.current.querySelector(`[data-key="${n.focusedKey}"]`);if(e){e.contains(document.activeElement)||R(e),"keyboard"===st()&&ae(e,{containingElement:o.current});}}}},onBlur:e=>{e.currentTarget.contains(e.relatedTarget)||n.setFocused(!1);},onMouseDown(e){m.current===e.target&&e.preventDefault();}},{typeSelectProps:E}=function(e){let{keyboardDelegate:r,selectionManager:n,onTypeSelect:s}=e,o=t.useRef({search:"",timeout:null}).current;return {typeSelectProps:{onKeyDownCapture:r.getKeyForSearch?e=>{let t=function(e){return 1!==e.length&&/^[A-Z]/i.test(e)?"":e}(e.key);if(!t||e.ctrlKey||e.metaKey||!e.currentTarget.contains(e.target))return;" "===t&&o.search.trim().length>0&&(e.preventDefault(),"continuePropagation"in e||e.stopPropagation()),o.search+=t;let a=r.getKeyForSearch(o.search,n.focusedKey);null==a&&(a=r.getKeyForSearch(o.search)),null!=a&&(n.setFocusedKey(a),s&&s(a)),clearTimeout(o.timeout),o.timeout=setTimeout((()=>{o.search="";}),kn);}:null}}}({keyboardDelegate:s,selectionManager:n});return d||(C=A(E,C)),p||(T=null==n.focusedKey?0:-1),{collectionProps:{...C,tabIndex:T}}}function An(){let e=window.event;return "Enter"===(null==e?void 0:e.key)}function Dn(){let e=window.event;return " "===(null==e?void 0:e.key)||"Space"===(null==e?void 0:e.code)}var In=t.createContext(null);In.displayName="PressResponderContext";var Vn,Ln=Object.defineProperty,Kn=(e,t,r)=>(((e,t,r)=>{t in e?Ln(e,t,{enumerable:!0,configurable:!0,writable:!0,value:r}):e[t]=r;})(e,"symbol"!=typeof t?t+"":t,r),r),Rn=(e,t,r)=>{if(!t.has(e))throw TypeError("Cannot "+r)},Nn=class{constructor(e,t,r){Kn(this,"type"),Kn(this,"pointerType"),Kn(this,"target"),Kn(this,"shiftKey"),Kn(this,"ctrlKey"),Kn(this,"metaKey"),Kn(this,"altKey"),((e,t,r)=>{if(t.has(e))throw TypeError("Cannot add the same private member more than once");t instanceof WeakSet?t.add(e):t.set(e,r);})(this,Vn,!0),this.type=e,this.pointerType=t,this.target=r.currentTarget,this.shiftKey=r.shiftKey,this.metaKey=r.metaKey,this.ctrlKey=r.ctrlKey,this.altKey=r.altKey;}continuePropagation(){var e,t,r;r=!1,Rn(e=this,t=Vn,"write to private field"),t.set(e,r);}get shouldStopPropagation(){return Rn(e=this,t=Vn,"read from private field"),r?r.call(e):t.get(e);var e,t,r;}};Vn=new WeakMap;var jn=e=>{var t;return null!=(t=null==e?void 0:e.ownerDocument)?t:document},Fn=e=>{var t,r;return null!=(r=null==(t=null==e?void 0:e.ownerDocument)?void 0:t.defaultView)?r:window},On="default",Bn="",Wn=new WeakMap;function zn(e){if(W()){if("default"===On){const t=jn(e);Bn=t.documentElement.style.webkitUserSelect,t.documentElement.style.webkitUserSelect="none";}On="disabled";}else (e instanceof HTMLElement||e instanceof SVGElement)&&(Wn.set(e,e.style.userSelect),e.style.userSelect="none");}function Un(e){if(W()){if("disabled"!==On)return;On="restoring",setTimeout((()=>{X((()=>{if("restoring"===On){const t=jn(e);"none"===t.documentElement.style.webkitUserSelect&&(t.documentElement.style.webkitUserSelect=Bn||""),Bn="",On="default";}}));}),300);}else if((e instanceof HTMLElement||e instanceof SVGElement)&&e&&Wn.has(e)){let t=Wn.get(e);"none"===e.style.userSelect&&t&&(e.style.userSelect=t),""===e.getAttribute("style")&&e.removeAttribute("style"),Wn.delete(e);}}var Hn=Symbol("linkClicked");function $n(e){let{onPress:r,onPressChange:n,onPressStart:s,onPressEnd:o,onPressUp:a,isDisabled:i,isPressed:l,preventFocusOnPress:u,shouldCancelOnPointerExit:c,allowTextSelectionOnPress:d,ref:p,...h}=function(e){let r=t.useContext(In);if(r){let{register:t,...n}=r;e=A(n,e),t();}return Q(r,e.ref),e}(e),[f,m]=t.useState(!1),g=t.useRef({isPressed:!1,ignoreEmulatedMouseEvents:!1,ignoreClickAfterPress:!1,didFirePressStart:!1,isTriggeringEvent:!1,activePointerId:null,target:null,isOverTarget:!1,pointerType:null}),{addGlobalListener:v,removeAllGlobalListeners:y}=Z(),b=x(((e,t)=>{let r=g.current;if(i||r.didFirePressStart)return;let o=!0;if(r.isTriggeringEvent=!0,s){let r=new Nn("pressstart",t,e);s(r),o=r.shouldStopPropagation;}return n&&n(!0),r.isTriggeringEvent=!1,r.didFirePressStart=!0,m(!0),o})),w=x(((e,t,s=!0)=>{let a=g.current;if(!a.didFirePressStart)return;a.ignoreClickAfterPress=!0,a.didFirePressStart=!1,a.isTriggeringEvent=!0;let l=!0;if(o){let r=new Nn("pressend",t,e);o(r),l=r.shouldStopPropagation;}if(n&&n(!1),m(!1),r&&s&&!i){let n=new Nn("press",t,e);r(n),l&&(l=n.shouldStopPropagation);}return a.isTriggeringEvent=!1,l})),P=x(((e,t)=>{let r=g.current;if(!i){if(a){r.isTriggeringEvent=!0;let n=new Nn("pressup",t,e);return a(n),r.isTriggeringEvent=!1,n.shouldStopPropagation}return !0}})),T=x((e=>{let t=g.current;t.isPressed&&(t.isOverTarget&&t.target&&w(Yn(t.target,e),t.pointerType,!1),t.isPressed=!1,t.isOverTarget=!1,t.activePointerId=null,t.pointerType=null,y(),!d&&t.target&&Un(t.target));})),C=x((e=>{c&&T(e);})),E=t.useMemo((()=>{let e=g.current,t={onKeyDown(t){var n;if(Gn(t.nativeEvent,t.currentTarget)&&t.currentTarget.contains(t.target)){Jn(t.target,t.key)&&t.preventDefault();let s=!0;e.isPressed||t.repeat||(e.target=t.currentTarget,e.isPressed=!0,s=b(t,"keyboard"),v(jn(t.currentTarget),"keyup",r,!1)),s&&t.stopPropagation(),t.metaKey&&O()&&(null==(n=e.metaKeyEvents)||n.set(t.key,t.nativeEvent));}else "Meta"===t.key&&(e.metaKeyEvents=new Map);},onKeyUp(t){e.target&&Gn(t.nativeEvent,t.currentTarget)&&!t.repeat&&t.currentTarget.contains(t.target)&&P(Yn(e.target,t),"keyboard");},onClick(t){if((!t||t.currentTarget.contains(t.target))&&t&&0===t.button&&!e.isTriggeringEvent&&!_.isOpening){let r=!0;if(i&&t.preventDefault(),!e.ignoreClickAfterPress&&!e.ignoreEmulatedMouseEvents&&!e.isPressed&&("virtual"===e.pointerType||ie(t.nativeEvent))){i||u||R(t.currentTarget);let e=b(t,"virtual"),n=P(t,"virtual"),s=w(t,"virtual");r=e&&n&&s;}e.ignoreEmulatedMouseEvents=!1,e.ignoreClickAfterPress=!1,r&&t.stopPropagation();}}},r=t=>{var r,n;if(e.isPressed&&e.target&&Gn(t,e.target)){Jn(t.target,t.key)&&t.preventDefault();let n=t.target,s=w(Yn(e.target,t),"keyboard",e.target.contains(n));y(),s&&t.stopPropagation(),"Enter"!==t.key&&_n(e.target)&&e.target.contains(n)&&!t[Hn]&&(t[Hn]=!0,_(e.target,t,!1)),e.isPressed=!1,null==(r=e.metaKeyEvents)||r.delete(t.key);}else if("Meta"===t.key&&(null==(n=e.metaKeyEvents)?void 0:n.size)){let t=e.metaKeyEvents;e.metaKeyEvents=null;for(let r of t.values())e.target&&e.target.dispatchEvent(new KeyboardEvent("keyup",r));}};if("undefined"!=typeof PointerEvent){t.onPointerDown=t=>{if(0!==t.button||!t.currentTarget.contains(t.target))return;if(le(t.nativeEvent))return void(e.pointerType="virtual");Zn(t.currentTarget)&&t.preventDefault(),e.pointerType=t.pointerType;let o=!0;e.isPressed||(e.isPressed=!0,e.isOverTarget=!0,e.activePointerId=t.pointerId,e.target=t.currentTarget,i||u||R(t.currentTarget),d||zn(e.target),o=b(t,e.pointerType),v(jn(t.currentTarget),"pointermove",r,!1),v(jn(t.currentTarget),"pointerup",n,!1),v(jn(t.currentTarget),"pointercancel",s,!1)),o&&t.stopPropagation();},t.onMouseDown=e=>{e.currentTarget.contains(e.target)&&0===e.button&&(Zn(e.currentTarget)&&e.preventDefault(),e.stopPropagation());},t.onPointerUp=t=>{t.currentTarget.contains(t.target)&&"virtual"!==e.pointerType&&0===t.button&&Xn(t,t.currentTarget)&&P(t,e.pointerType||t.pointerType);};let r=t=>{t.pointerId===e.activePointerId&&e.target&&(Xn(t,e.target)?e.isOverTarget||(e.isOverTarget=!0,b(Yn(e.target,t),e.pointerType)):e.isOverTarget&&(e.isOverTarget=!1,w(Yn(e.target,t),e.pointerType,!1),C(t)));},n=t=>{t.pointerId===e.activePointerId&&e.isPressed&&0===t.button&&e.target&&((Xn(t,e.target)||e.isOverTarget)&&w(Yn(e.target,t),e.pointerType),e.isPressed=!1,e.isOverTarget=!1,e.activePointerId=null,e.pointerType=null,y(),d||Un(e.target));},s=e=>{T(e);};t.onDragStart=e=>{e.currentTarget.contains(e.target)&&T(e);};}else {t.onMouseDown=t=>{if(0!==t.button||!t.currentTarget.contains(t.target))return;if(Zn(t.currentTarget)&&t.preventDefault(),e.ignoreEmulatedMouseEvents)return void t.stopPropagation();e.isPressed=!0,e.isOverTarget=!0,e.target=t.currentTarget,e.pointerType=ie(t.nativeEvent)?"virtual":"mouse",i||u||R(t.currentTarget),b(t,e.pointerType)&&t.stopPropagation(),v(jn(t.currentTarget),"mouseup",r,!1);},t.onMouseEnter=t=>{if(!t.currentTarget.contains(t.target))return;let r=!0;e.isPressed&&!e.ignoreEmulatedMouseEvents&&(e.isOverTarget=!0,r=b(t,e.pointerType)),r&&t.stopPropagation();},t.onMouseLeave=t=>{if(!t.currentTarget.contains(t.target))return;let r=!0;e.isPressed&&!e.ignoreEmulatedMouseEvents&&(e.isOverTarget=!1,r=w(t,e.pointerType,!1),C(t)),r&&t.stopPropagation();},t.onMouseUp=t=>{t.currentTarget.contains(t.target)&&(e.ignoreEmulatedMouseEvents||0!==t.button||P(t,e.pointerType||"mouse"));};let r=t=>{0===t.button&&(e.isPressed=!1,y(),e.ignoreEmulatedMouseEvents?e.ignoreEmulatedMouseEvents=!1:e.target&&(Xn(t,e.target)?w(Yn(e.target,t),e.pointerType):e.isOverTarget&&w(Yn(e.target,t),e.pointerType,!1),e.isOverTarget=!1));};t.onTouchStart=t=>{if(!t.currentTarget.contains(t.target))return;let r=function(e){const{targetTouches:t}=e;if(t.length>0)return t[0];return null}(t.nativeEvent);r&&(e.activePointerId=r.identifier,e.ignoreEmulatedMouseEvents=!0,e.isOverTarget=!0,e.isPressed=!0,e.target=t.currentTarget,e.pointerType="touch",i||u||R(t.currentTarget),d||zn(e.target),b(t,e.pointerType)&&t.stopPropagation(),v(Fn(t.currentTarget),"scroll",n,!0));},t.onTouchMove=t=>{if(!t.currentTarget.contains(t.target))return;if(!e.isPressed)return void t.stopPropagation();let r=qn(t.nativeEvent,e.activePointerId),n=!0;r&&Xn(r,t.currentTarget)?e.isOverTarget||(e.isOverTarget=!0,n=b(t,e.pointerType)):e.isOverTarget&&(e.isOverTarget=!1,n=w(t,e.pointerType,!1),C(t)),n&&t.stopPropagation();},t.onTouchEnd=t=>{if(!t.currentTarget.contains(t.target))return;if(!e.isPressed)return void t.stopPropagation();let r=qn(t.nativeEvent,e.activePointerId),n=!0;r&&Xn(r,t.currentTarget)?(P(t,e.pointerType),n=w(t,e.pointerType)):e.isOverTarget&&(n=w(t,e.pointerType,!1)),n&&t.stopPropagation(),e.isPressed=!1,e.activePointerId=null,e.isOverTarget=!1,e.ignoreEmulatedMouseEvents=!0,!d&&e.target&&Un(e.target),y();},t.onTouchCancel=t=>{t.currentTarget.contains(t.target)&&(t.stopPropagation(),e.isPressed&&T(t));};let n=t=>{e.isPressed&&t.target.contains(e.target)&&T({currentTarget:e.target,shiftKey:!1,ctrlKey:!1,metaKey:!1,altKey:!1});};t.onDragStart=e=>{e.currentTarget.contains(e.target)&&T(e);};}return t}),[v,i,u,y,d,T,C,w,b,P]);return t.useEffect((()=>()=>{!d&&g.current.target&&Un(g.current.target);}),[d]),{isPressed:l||f,pressProps:A(h,E)}}function _n(e){return "A"===e.tagName&&e.hasAttribute("href")}function Gn(e,t){const{key:r,code:n}=e,s=t,o=s.getAttribute("role");return !("Enter"!==r&&" "!==r&&"Spacebar"!==r&&"Space"!==n||s instanceof Fn(s).HTMLInputElement&&!es(s,r)||s instanceof Fn(s).HTMLTextAreaElement||s.isContentEditable||("link"===o||!o&&_n(s))&&"Enter"!==r)}function qn(e,t){const r=e.changedTouches;for(let e=0;e<r.length;e++){const n=r[e];if(n.identifier===t)return n}return null}function Yn(e,t){return {currentTarget:e,shiftKey:t.shiftKey,ctrlKey:t.ctrlKey,metaKey:t.metaKey,altKey:t.altKey}}function Xn(e,t){let r=t.getBoundingClientRect(),n=function(e){let t=e.width?e.width/2:e.radiusX||0,r=e.height?e.height/2:e.radiusY||0;return {top:e.clientY-r,right:e.clientX+t,bottom:e.clientY+r,left:e.clientX-t}}(e);return function(e,t){return !(e.left>t.right||t.left>e.right||e.top>t.bottom||t.top>e.bottom)}(r,n)}function Zn(e){return !(e instanceof HTMLElement&&e.hasAttribute("draggable"))}function Jn(e,t){return e instanceof HTMLInputElement?!es(e,t):e instanceof HTMLButtonElement?"submit"!==e.type&&"reset"!==e.type:!_n(e)}var Qn=new Set(["checkbox","radio","range","color","file","image","button","submit","reset"]);function es(e,t){return "checkbox"===e.type||"radio"===e.type?" "===t:Qn.has(e.type)}var ts=t=>e.jsx("svg",{"aria-hidden":"true",focusable:"false",height:"1em",role:"presentation",viewBox:"0 0 24 24",width:"1em",...t,children:e.jsx("path",{d:"M12 2a10 10 0 1010 10A10.016 10.016 0 0012 2zm3.36 12.3a.754.754 0 010 1.06.748.748 0 01-1.06 0l-2.3-2.3-2.3 2.3a.748.748 0 01-1.06 0 .754.754 0 010-1.06l2.3-2.3-2.3-2.3A.75.75 0 019.7 8.64l2.3 2.3 2.3-2.3a.75.75 0 011.06 1.06l-2.3 2.3z",fill:"currentColor"})});const rs=t.createContext({transformPagePoint:e=>e,isStatic:!1,reducedMotion:"never"}),ns=t.createContext({}),ss=t.createContext(null),os="undefined"!=typeof document,as=os?t.useLayoutEffect:t.useEffect,is=t.createContext({strict:!1});function ls(e){return "object"==typeof e&&Object.prototype.hasOwnProperty.call(e,"current")}function us(e){return "string"==typeof e||Array.isArray(e)}function cs(e){return "object"==typeof e&&"function"==typeof e.start}const ds=["animate","whileInView","whileFocus","whileHover","whileTap","whileDrag","exit"],ps=["initial",...ds];function hs(e){return cs(e.animate)||ps.some((t=>us(e[t])))}function fs(e){return Boolean(hs(e)||e.variants)}function ms$1(e){const{initial:r,animate:n}=function(e,t){if(hs(e)){const{initial:t,animate:r}=e;return {initial:!1===t||us(t)?t:void 0,animate:us(r)?r:void 0}}return !1!==e.inherit?t:{}}(e,t.useContext(ns));return t.useMemo((()=>({initial:r,animate:n})),[gs(r),gs(n)])}function gs(e){return Array.isArray(e)?e.join(" "):e}const vs={animation:["animate","variants","whileHover","whileTap","exit","whileInView","whileFocus","whileDrag"],exit:["exit"],drag:["drag","dragControls"],focus:["whileFocus"],hover:["whileHover","onHoverStart","onHoverEnd"],tap:["whileTap","onTap","onTapStart","onTapCancel"],pan:["onPan","onPanStart","onPanSessionStart","onPanEnd"],inView:["whileInView","onViewportEnter","onViewportLeave"],layout:["layout","layoutId"]},ys={};for(const e in vs)ys[e]={isEnabled:t=>vs[e].some((e=>!!t[e]))};const bs=t.createContext({}),xs=t.createContext({}),ws=Symbol.for("motionComponentSymbol");function Ps({preloadedFeatures:e,createVisualElement:r,useRender:n,useVisualState:o,Component:a}){e&&function(e){for(const t in e)ys[t]={...ys[t],...e[t]};}(e);const i=t.forwardRef((function(i,l){let u;const c={...t.useContext(rs),...i,layoutId:Ts(i)},{isStatic:d}=c,p=ms$1(i),h=o(i,d);if(!d&&os){p.visualElement=function(e,r,n,s){const{visualElement:o}=t.useContext(ns),a=t.useContext(is),i=t.useContext(ss),l=t.useContext(rs).reducedMotion,u=t.useRef();s=s||a.renderer,!u.current&&s&&(u.current=s(e,{visualState:r,parent:o,props:n,presenceContext:i,blockInitialAnimation:!!i&&!1===i.initial,reducedMotionConfig:l}));const c=u.current;t.useInsertionEffect((()=>{c&&c.update(n,i);}));const d=t.useRef(Boolean(window.HandoffAppearAnimations));return as((()=>{c&&(c.render(),d.current&&c.animationState&&c.animationState.animateChanges());})),t.useEffect((()=>{c&&(c.updateFeatures(),!d.current&&c.animationState&&c.animationState.animateChanges(),window.HandoffAppearAnimations=void 0,d.current=!1);})),c}(a,h,c,r);const n=t.useContext(xs),s=t.useContext(is).strict;p.visualElement&&(u=p.visualElement.loadFeatures(c,s,e,n));}return s.createElement(ns.Provider,{value:p},u&&p.visualElement?s.createElement(u,{visualElement:p.visualElement,...c}):null,n(a,i,function(e,r,n){return t.useCallback((t=>{t&&e.mount&&e.mount(t),r&&(t?r.mount(t):r.unmount()),n&&("function"==typeof n?n(t):ls(n)&&(n.current=t));}),[r])}(h,p.visualElement,l),h,d,p.visualElement))}));return i[ws]=a,i}function Ts({layoutId:e}){const r=t.useContext(bs).id;return r&&void 0!==e?r+"-"+e:e}function Cs(e){function t(t,r={}){return Ps(e(t,r))}if("undefined"==typeof Proxy)return t;const r=new Map;return new Proxy(t,{get:(e,n)=>(r.has(n)||r.set(n,t(n)),r.get(n))})}const Es=["animate","circle","defs","desc","ellipse","g","image","line","filter","marker","mask","metadata","path","pattern","polygon","polyline","rect","stop","switch","symbol","svg","text","tspan","use","view"];function Ss(e){return "string"==typeof e&&!e.includes("-")&&!!(Es.indexOf(e)>-1||/[A-Z]/.test(e))}const ks={};const Ms=["transformPerspective","x","y","z","translateX","translateY","translateZ","scale","scaleX","scaleY","rotate","rotateX","rotateY","rotateZ","skew","skewX","skewY"],As=new Set(Ms);function Ds(e,{layout:t,layoutId:r}){return As.has(e)||e.startsWith("origin")||(t||void 0!==r)&&(!!ks[e]||"opacity"===e)}const Is=e=>Boolean(e&&e.getVelocity),Vs={x:"translateX",y:"translateY",z:"translateZ",transformPerspective:"perspective"},Ls=Ms.length;const Ks=e=>t=>"string"==typeof t&&t.startsWith(e),Rs=Ks("--"),Ns=Ks("var(--"),js=(e,t)=>t&&"number"==typeof e?t.transform(e):e,Fs=(e,t,r)=>Math.min(Math.max(r,e),t),Os={test:e=>"number"==typeof e,parse:parseFloat,transform:e=>e},Bs={...Os,transform:e=>Fs(0,1,e)},Ws={...Os,default:1},zs=e=>Math.round(1e5*e)/1e5,Us=/(-)?([\d]*\.?[\d])+/g,Hs=/(#[0-9a-f]{3,8}|(rgb|hsl)a?\((-?[\d\.]+%?[,\s]+){2}(-?[\d\.]+%?)\s*[\,\/]?\s*[\d\.]*%?\))/gi,$s=/^(#[0-9a-f]{3,8}|(rgb|hsl)a?\((-?[\d\.]+%?[,\s]+){2}(-?[\d\.]+%?)\s*[\,\/]?\s*[\d\.]*%?\))$/i;function _s(e){return "string"==typeof e}const Gs=e=>({test:t=>_s(t)&&t.endsWith(e)&&1===t.split(" ").length,parse:parseFloat,transform:t=>`${t}${e}`}),qs=Gs("deg"),Ys=Gs("%"),Xs=Gs("px"),Zs=Gs("vh"),Js=Gs("vw"),Qs={...Ys,parse:e=>Ys.parse(e)/100,transform:e=>Ys.transform(100*e)},eo={...Os,transform:Math.round},to={borderWidth:Xs,borderTopWidth:Xs,borderRightWidth:Xs,borderBottomWidth:Xs,borderLeftWidth:Xs,borderRadius:Xs,radius:Xs,borderTopLeftRadius:Xs,borderTopRightRadius:Xs,borderBottomRightRadius:Xs,borderBottomLeftRadius:Xs,width:Xs,maxWidth:Xs,height:Xs,maxHeight:Xs,size:Xs,top:Xs,right:Xs,bottom:Xs,left:Xs,padding:Xs,paddingTop:Xs,paddingRight:Xs,paddingBottom:Xs,paddingLeft:Xs,margin:Xs,marginTop:Xs,marginRight:Xs,marginBottom:Xs,marginLeft:Xs,rotate:qs,rotateX:qs,rotateY:qs,rotateZ:qs,scale:Ws,scaleX:Ws,scaleY:Ws,scaleZ:Ws,skew:qs,skewX:qs,skewY:qs,distance:Xs,translateX:Xs,translateY:Xs,translateZ:Xs,x:Xs,y:Xs,z:Xs,perspective:Xs,transformPerspective:Xs,opacity:Bs,originX:Qs,originY:Qs,originZ:Xs,zIndex:eo,fillOpacity:Bs,strokeOpacity:Bs,numOctaves:eo};function ro(e,t,r,n){const{style:s,vars:o,transform:a,transformOrigin:i}=e;let l=!1,u=!1,c=!0;for(const e in t){const r=t[e];if(Rs(e)){o[e]=r;continue}const n=to[e],d=js(r,n);if(As.has(e)){if(l=!0,a[e]=d,!c)continue;r!==(n.default||0)&&(c=!1);}else e.startsWith("origin")?(u=!0,i[e]=d):s[e]=d;}if(t.transform||(l||n?s.transform=function(e,{enableHardwareAcceleration:t=!0,allowTransformNone:r=!0},n,s){let o="";for(let t=0;t<Ls;t++){const r=Ms[t];void 0!==e[r]&&(o+=`${Vs[r]||r}(${e[r]}) `);}return t&&!e.z&&(o+="translateZ(0)"),o=o.trim(),s?o=s(e,n?"":o):r&&n&&(o="none"),o}(e.transform,r,c,n):s.transform&&(s.transform="none")),u){const{originX:e="50%",originY:t="50%",originZ:r=0}=i;s.transformOrigin=`${e} ${t} ${r}`;}}const no=()=>({style:{},transform:{},transformOrigin:{},vars:{}});function so(e,t,r){for(const n in t)Is(t[n])||Ds(n,r)||(e[n]=t[n]);}function oo(e,r,n){const s={};return so(s,e.style||{},e),Object.assign(s,function({transformTemplate:e},r,n){return t.useMemo((()=>{const t=no();return ro(t,r,{enableHardwareAcceleration:!n},e),Object.assign({},t.vars,t.style)}),[r])}(e,r,n)),e.transformValues?e.transformValues(s):s}function ao(e,t,r){const n={},s=oo(e,t,r);return e.drag&&!1!==e.dragListener&&(n.draggable=!1,s.userSelect=s.WebkitUserSelect=s.WebkitTouchCallout="none",s.touchAction=!0===e.drag?"none":"pan-"+("x"===e.drag?"y":"x")),void 0===e.tabIndex&&(e.onTap||e.onTapStart||e.whileTap)&&(n.tabIndex=0),n.style=s,n}const io=new Set(["animate","exit","variants","initial","style","values","variants","transition","transformTemplate","transformValues","custom","inherit","onLayoutAnimationStart","onLayoutAnimationComplete","onLayoutMeasure","onBeforeLayoutMeasure","onAnimationStart","onAnimationComplete","onUpdate","onDragStart","onDrag","onDragEnd","onMeasureDragConstraints","onDirectionLock","onDragTransitionEnd","_dragX","_dragY","onHoverStart","onHoverEnd","onViewportEnter","onViewportLeave","ignoreStrict","viewport"]);function lo(e){return e.startsWith("while")||e.startsWith("drag")&&"draggable"!==e||e.startsWith("layout")||e.startsWith("onTap")||e.startsWith("onPan")||io.has(e)}let uo=e=>!lo(e);try{(co=require$$3.default)&&(uo=e=>e.startsWith("on")?!lo(e):co(e));}catch(e){}var co;function po(e,t,r){return "string"==typeof e?e:Xs.transform(t+r*e)}const ho={offset:"stroke-dashoffset",array:"stroke-dasharray"},fo={offset:"strokeDashoffset",array:"strokeDasharray"};function mo(e,{attrX:t,attrY:r,attrScale:n,originX:s,originY:o,pathLength:a,pathSpacing:i=1,pathOffset:l=0,...u},c,d,p){if(ro(e,u,c,p),d)return void(e.style.viewBox&&(e.attrs.viewBox=e.style.viewBox));e.attrs=e.style,e.style={};const{attrs:h,style:f,dimensions:m}=e;h.transform&&(m&&(f.transform=h.transform),delete h.transform),m&&(void 0!==s||void 0!==o||f.transform)&&(f.transformOrigin=function(e,t,r){return `${po(t,e.x,e.width)} ${po(r,e.y,e.height)}`}(m,void 0!==s?s:.5,void 0!==o?o:.5)),void 0!==t&&(h.x=t),void 0!==r&&(h.y=r),void 0!==n&&(h.scale=n),void 0!==a&&function(e,t,r=1,n=0,s=!0){e.pathLength=1;const o=s?ho:fo;e[o.offset]=Xs.transform(-n);const a=Xs.transform(t),i=Xs.transform(r);e[o.array]=`${a} ${i}`;}(h,a,i,l,!1);}const go=()=>({...no(),attrs:{}}),vo=e=>"string"==typeof e&&"svg"===e.toLowerCase();function yo(e,r,n,s){const o=t.useMemo((()=>{const t=go();return mo(t,r,{enableHardwareAcceleration:!1},vo(s),e.transformTemplate),{...t.attrs,style:{...t.style}}}),[r]);if(e.style){const t={};so(t,e.style,e),o.style={...t,...o.style};}return o}function bo(e=!1){return (r,n,s,{latestValues:o},a)=>{const i=(Ss(r)?yo:ao)(n,o,a,r),l=function(e,t,r){const n={};for(const s in e)"values"===s&&"object"==typeof e.values||(uo(s)||!0===r&&lo(s)||!t&&!lo(s)||e.draggable&&s.startsWith("onDrag"))&&(n[s]=e[s]);return n}(n,"string"==typeof r,e),u={...l,...i,ref:s},{children:c}=n,d=t.useMemo((()=>Is(c)?c.get():c),[c]);return t.createElement(r,{...u,children:d})}}const xo=e=>e.replace(/([a-z])([A-Z])/g,"$1-$2").toLowerCase();function wo(e,{style:t,vars:r},n,s){Object.assign(e.style,t,s&&s.getProjectionStyles(n));for(const t in r)e.style.setProperty(t,r[t]);}const Po=new Set(["baseFrequency","diffuseConstant","kernelMatrix","kernelUnitLength","keySplines","keyTimes","limitingConeAngle","markerHeight","markerWidth","numOctaves","targetX","targetY","surfaceScale","specularConstant","specularExponent","stdDeviation","tableValues","viewBox","gradientTransform","pathLength","startOffset","textLength","lengthAdjust"]);function To(e,t,r,n){wo(e,t,void 0,n);for(const r in t.attrs)e.setAttribute(Po.has(r)?r:xo(r),t.attrs[r]);}function Co(e,t){const{style:r}=e,n={};for(const s in r)(Is(r[s])||t.style&&Is(t.style[s])||Ds(s,e))&&(n[s]=r[s]);return n}function Eo(e,t){const r=Co(e,t);for(const n in e)if(Is(e[n])||Is(t[n])){r[-1!==Ms.indexOf(n)?"attr"+n.charAt(0).toUpperCase()+n.substring(1):n]=e[n];}return r}function So(e,t,r,n={},s={}){return "function"==typeof t&&(t=t(void 0!==r?r:e.custom,n,s)),"string"==typeof t&&(t=e.variants&&e.variants[t]),"function"==typeof t&&(t=t(void 0!==r?r:e.custom,n,s)),t}function ko(e){const r=t.useRef(null);return null===r.current&&(r.current=e()),r.current}const Mo=e=>Array.isArray(e),Ao=e=>Boolean(e&&"object"==typeof e&&e.mix&&e.toValue),Do=e=>Mo(e)?e[e.length-1]||0:e;function Io(e){const t=Is(e)?e.get():e;return Ao(t)?t.toValue():t}const Vo=e=>(r,n)=>{const s=t.useContext(ns),o=t.useContext(ss),a=()=>function({scrapeMotionValuesFromProps:e,createRenderState:t,onMount:r},n,s,o){const a={latestValues:Lo(n,s,o,e),renderState:t()};return r&&(a.mount=e=>r(n,e,a)),a}(e,r,s,o);return n?a():ko(a)};function Lo(e,t,r,n){const s={},o=n(e,{});for(const e in o)s[e]=Io(o[e]);let{initial:a,animate:i}=e;const l=hs(e),u=fs(e);t&&u&&!l&&!1!==e.inherit&&(void 0===a&&(a=t.initial),void 0===i&&(i=t.animate));let c=!!r&&!1===r.initial;c=c||!1===a;const d=c?i:a;if(d&&"boolean"!=typeof d&&!cs(d)){(Array.isArray(d)?d:[d]).forEach((t=>{const r=So(e,t);if(!r)return;const{transitionEnd:n,transition:o,...a}=r;for(const e in a){let t=a[e];if(Array.isArray(t)){t=t[c?t.length-1:0];}null!==t&&(s[e]=t);}for(const e in n)s[e]=n[e];}));}return s}const Ko=e=>e;class Ro{constructor(){this.order=[],this.scheduled=new Set;}add(e){if(!this.scheduled.has(e))return this.scheduled.add(e),this.order.push(e),!0}remove(e){const t=this.order.indexOf(e);-1!==t&&(this.order.splice(t,1),this.scheduled.delete(e));}clear(){this.order.length=0,this.scheduled.clear();}}const No=["prepare","read","update","preRender","render","postRender"];const{schedule:jo,cancel:Fo,state:Oo,steps:Bo}=function(e,t){let r=!1,n=!0;const s={delta:0,timestamp:0,isProcessing:!1},o=No.reduce(((e,t)=>(e[t]=function(e){let t=new Ro,r=new Ro,n=0,s=!1,o=!1;const a=new WeakSet,i={schedule:(e,o=!1,i=!1)=>{const l=i&&s,u=l?t:r;return o&&a.add(e),u.add(e)&&l&&s&&(n=t.order.length),e},cancel:e=>{r.remove(e),a.delete(e);},process:l=>{if(s)o=!0;else {if(s=!0,[t,r]=[r,t],r.clear(),n=t.order.length,n)for(let r=0;r<n;r++){const n=t.order[r];n(l),a.has(n)&&(i.schedule(n),e());}s=!1,o&&(o=!1,i.process(l));}}};return i}((()=>r=!0)),e)),{}),a=e=>o[e].process(s),i=()=>{const o=performance.now();r=!1,s.delta=n?1e3/60:Math.max(Math.min(o-s.timestamp,40),1),s.timestamp=o,s.isProcessing=!0,No.forEach(a),s.isProcessing=!1,r&&t&&(n=!1,e(i));};return {schedule:No.reduce(((t,a)=>{const l=o[a];return t[a]=(t,o=!1,a=!1)=>(r||(r=!0,n=!0,s.isProcessing||e(i)),l.schedule(t,o,a)),t}),{}),cancel:e=>No.forEach((t=>o[t].cancel(e))),state:s,steps:o}}("undefined"!=typeof requestAnimationFrame?requestAnimationFrame:Ko,!0),Wo={useVisualState:Vo({scrapeMotionValuesFromProps:Eo,createRenderState:go,onMount:(e,t,{renderState:r,latestValues:n})=>{jo.read((()=>{try{r.dimensions="function"==typeof t.getBBox?t.getBBox():t.getBoundingClientRect();}catch(e){r.dimensions={x:0,y:0,width:0,height:0};}})),jo.render((()=>{mo(r,n,{enableHardwareAcceleration:!1},vo(t.tagName),e.transformTemplate),To(t,r);}));}})},zo={useVisualState:Vo({scrapeMotionValuesFromProps:Co,createRenderState:no})};function Uo(e,t,r,n={passive:!0}){return e.addEventListener(t,r,n),()=>e.removeEventListener(t,r)}const Ho=e=>"mouse"===e.pointerType?"number"!=typeof e.button||e.button<=0:!1!==e.isPrimary;function $o(e,t="page"){return {point:{x:e[t+"X"],y:e[t+"Y"]}}}const _o=e=>t=>Ho(t)&&e(t,$o(t));function Go(e,t,r,n){return Uo(e,t,_o(r),n)}const qo=(e,t)=>r=>t(e(r)),Yo=(...e)=>e.reduce(qo);function Xo(e){let t=null;return ()=>{const r=()=>{t=null;};return null===t&&(t=e,r)}}const Zo=Xo("dragHorizontal"),Jo=Xo("dragVertical");function Qo(e){let t=!1;if("y"===e)t=Jo();else if("x"===e)t=Zo();else {const e=Zo(),r=Jo();e&&r?t=()=>{e(),r();}:(e&&e(),r&&r());}return t}function ea(){const e=Qo(!0);return !e||(e(),!1)}class ta{constructor(e){this.isMounted=!1,this.node=e;}update(){}}function ra(e,t){const r="pointer"+(t?"enter":"leave"),n="onHover"+(t?"Start":"End");return Go(e.current,r,((r,s)=>{if("touch"===r.type||ea())return;const o=e.getProps();e.animationState&&o.whileHover&&e.animationState.setActive("whileHover",t),o[n]&&jo.update((()=>o[n](r,s)));}),{passive:!e.getProps()[n]})}const na=(e,t)=>!!t&&(e===t||na(e,t.parentElement));function sa(e,t){if(!t)return;const r=new PointerEvent("pointer"+e);t(r,$o(r));}const oa=new WeakMap,aa=new WeakMap,ia=e=>{const t=oa.get(e.target);t&&t(e);},la=e=>{e.forEach(ia);};function ua(e,t,r){const n=function({root:e,...t}){const r=e||document;aa.has(r)||aa.set(r,{});const n=aa.get(r),s=JSON.stringify(t);return n[s]||(n[s]=new IntersectionObserver(la,{root:e,...t})),n[s]}(t);return oa.set(e,r),n.observe(e),()=>{oa.delete(e),n.unobserve(e);}}const ca={some:0,all:1};const da={inView:{Feature:class extends ta{constructor(){super(...arguments),this.hasEnteredView=!1,this.isInView=!1;}startObserver(){this.unmount();const{viewport:e={}}=this.node.getProps(),{root:t,margin:r,amount:n="some",once:s}=e,o={root:t?t.current:void 0,rootMargin:r,threshold:"number"==typeof n?n:ca[n]};return ua(this.node.current,o,(e=>{const{isIntersecting:t}=e;if(this.isInView===t)return;if(this.isInView=t,s&&!t&&this.hasEnteredView)return;t&&(this.hasEnteredView=!0),this.node.animationState&&this.node.animationState.setActive("whileInView",t);const{onViewportEnter:r,onViewportLeave:n}=this.node.getProps(),o=t?r:n;o&&o(e);}))}mount(){this.startObserver();}update(){if("undefined"==typeof IntersectionObserver)return;const{props:e,prevProps:t}=this.node;["amount","margin","root"].some(function({viewport:e={}},{viewport:t={}}={}){return r=>e[r]!==t[r]}(e,t))&&this.startObserver();}unmount(){}}},tap:{Feature:class extends ta{constructor(){super(...arguments),this.removeStartListeners=Ko,this.removeEndListeners=Ko,this.removeAccessibleListeners=Ko,this.startPointerPress=(e,t)=>{if(this.removeEndListeners(),this.isPressing)return;const r=this.node.getProps(),n=Go(window,"pointerup",((e,t)=>{if(!this.checkPressEnd())return;const{onTap:r,onTapCancel:n}=this.node.getProps();jo.update((()=>{na(this.node.current,e.target)?r&&r(e,t):n&&n(e,t);}));}),{passive:!(r.onTap||r.onPointerUp)}),s=Go(window,"pointercancel",((e,t)=>this.cancelPress(e,t)),{passive:!(r.onTapCancel||r.onPointerCancel)});this.removeEndListeners=Yo(n,s),this.startPress(e,t);},this.startAccessiblePress=()=>{const e=Uo(this.node.current,"keydown",(e=>{if("Enter"!==e.key||this.isPressing)return;this.removeEndListeners(),this.removeEndListeners=Uo(this.node.current,"keyup",(e=>{"Enter"===e.key&&this.checkPressEnd()&&sa("up",((e,t)=>{const{onTap:r}=this.node.getProps();r&&jo.update((()=>r(e,t)));}));})),sa("down",((e,t)=>{this.startPress(e,t);}));})),t=Uo(this.node.current,"blur",(()=>{this.isPressing&&sa("cancel",((e,t)=>this.cancelPress(e,t)));}));this.removeAccessibleListeners=Yo(e,t);};}startPress(e,t){this.isPressing=!0;const{onTapStart:r,whileTap:n}=this.node.getProps();n&&this.node.animationState&&this.node.animationState.setActive("whileTap",!0),r&&jo.update((()=>r(e,t)));}checkPressEnd(){this.removeEndListeners(),this.isPressing=!1;return this.node.getProps().whileTap&&this.node.animationState&&this.node.animationState.setActive("whileTap",!1),!ea()}cancelPress(e,t){if(!this.checkPressEnd())return;const{onTapCancel:r}=this.node.getProps();r&&jo.update((()=>r(e,t)));}mount(){const e=this.node.getProps(),t=Go(this.node.current,"pointerdown",this.startPointerPress,{passive:!(e.onTapStart||e.onPointerStart)}),r=Uo(this.node.current,"focus",this.startAccessiblePress);this.removeStartListeners=Yo(t,r);}unmount(){this.removeStartListeners(),this.removeEndListeners(),this.removeAccessibleListeners();}}},focus:{Feature:class extends ta{constructor(){super(...arguments),this.isActive=!1;}onFocus(){let e=!1;try{e=this.node.current.matches(":focus-visible");}catch(t){e=!0;}e&&this.node.animationState&&(this.node.animationState.setActive("whileFocus",!0),this.isActive=!0);}onBlur(){this.isActive&&this.node.animationState&&(this.node.animationState.setActive("whileFocus",!1),this.isActive=!1);}mount(){this.unmount=Yo(Uo(this.node.current,"focus",(()=>this.onFocus())),Uo(this.node.current,"blur",(()=>this.onBlur())));}unmount(){}}},hover:{Feature:class extends ta{mount(){this.unmount=Yo(ra(this.node,!0),ra(this.node,!1));}unmount(){}}}};function pa(e,t){if(!Array.isArray(t))return !1;const r=t.length;if(r!==e.length)return !1;for(let n=0;n<r;n++)if(t[n]!==e[n])return !1;return !0}function ha(e,t,r){const n=e.getProps();return So(n,t,void 0!==r?r:n.custom,function(e){const t={};return e.values.forEach(((e,r)=>t[r]=e.get())),t}(e),function(e){const t={};return e.values.forEach(((e,r)=>t[r]=e.getVelocity())),t}(e))}const fa="data-"+xo("framerAppearId");let ma=Ko,ga=Ko;"production"!==process.env.NODE_ENV&&(ma=(e,t)=>{e||"undefined"==typeof console||console.warn(t);},ga=(e,t)=>{if(!e)throw new Error(t)});const va=e=>1e3*e,ya=e=>e/1e3,ba=!1,xa=e=>Array.isArray(e)&&"number"==typeof e[0];function wa(e){return Boolean(!e||"string"==typeof e&&Ta[e]||xa(e)||Array.isArray(e)&&e.every(wa))}const Pa=([e,t,r,n])=>`cubic-bezier(${e}, ${t}, ${r}, ${n})`,Ta={linear:"linear",ease:"ease",easeIn:"ease-in",easeOut:"ease-out",easeInOut:"ease-in-out",circIn:Pa([0,.65,.55,1]),circOut:Pa([.55,0,1,.45]),backIn:Pa([.31,.01,.66,-.59]),backOut:Pa([.33,1.53,.69,.99])};function Ca(e){if(e)return xa(e)?Pa(e):Array.isArray(e)?e.map(Ca):Ta[e]}const Ea=(e,t,r)=>(((1-3*r+3*t)*e+(3*r-6*t))*e+3*t)*e,Sa=1e-7,ka=12;function Ma(e,t,r,n){if(e===t&&r===n)return Ko;const s=t=>function(e,t,r,n,s){let o,a,i=0;do{a=t+(r-t)/2,o=Ea(a,n,s)-e,o>0?r=a:t=a;}while(Math.abs(o)>Sa&&++i<ka);return a}(t,0,1,e,r);return e=>0===e||1===e?e:Ea(s(e),t,n)}const Aa=Ma(.42,0,1,1),Da=Ma(0,0,.58,1),Ia=Ma(.42,0,.58,1),Va=e=>Array.isArray(e)&&"number"!=typeof e[0],La=e=>t=>t<=.5?e(2*t)/2:(2-e(2*(1-t)))/2,Ka=e=>t=>1-e(1-t),Ra=e=>1-Math.sin(Math.acos(e)),Na=Ka(Ra),ja=La(Na),Fa=Ma(.33,1.53,.69,.99),Oa=Ka(Fa),Ba=La(Oa),Wa={linear:Ko,easeIn:Aa,easeInOut:Ia,easeOut:Da,circIn:Ra,circInOut:ja,circOut:Na,backIn:Oa,backInOut:Ba,backOut:Fa,anticipate:e=>(e*=2)<1?.5*Oa(e):.5*(2-Math.pow(2,-10*(e-1)))},za=e=>{if(Array.isArray(e)){ga(4===e.length,"Cubic bezier arrays must contain four numerical values.");const[t,r,n,s]=e;return Ma(t,r,n,s)}return "string"==typeof e?(ga(void 0!==Wa[e],`Invalid easing type '${e}'`),Wa[e]):e},Ua=(e,t)=>r=>Boolean(_s(r)&&$s.test(r)&&r.startsWith(e)||t&&Object.prototype.hasOwnProperty.call(r,t)),Ha=(e,t,r)=>n=>{if(!_s(n))return n;const[s,o,a,i]=n.match(Us);return {[e]:parseFloat(s),[t]:parseFloat(o),[r]:parseFloat(a),alpha:void 0!==i?parseFloat(i):1}},$a={...Os,transform:e=>Math.round((e=>Fs(0,255,e))(e))},_a={test:Ua("rgb","red"),parse:Ha("red","green","blue"),transform:({red:e,green:t,blue:r,alpha:n=1})=>"rgba("+$a.transform(e)+", "+$a.transform(t)+", "+$a.transform(r)+", "+zs(Bs.transform(n))+")"};const Ga={test:Ua("#"),parse:function(e){let t="",r="",n="",s="";return e.length>5?(t=e.substring(1,3),r=e.substring(3,5),n=e.substring(5,7),s=e.substring(7,9)):(t=e.substring(1,2),r=e.substring(2,3),n=e.substring(3,4),s=e.substring(4,5),t+=t,r+=r,n+=n,s+=s),{red:parseInt(t,16),green:parseInt(r,16),blue:parseInt(n,16),alpha:s?parseInt(s,16)/255:1}},transform:_a.transform},qa={test:Ua("hsl","hue"),parse:Ha("hue","saturation","lightness"),transform:({hue:e,saturation:t,lightness:r,alpha:n=1})=>"hsla("+Math.round(e)+", "+Ys.transform(zs(t))+", "+Ys.transform(zs(r))+", "+zs(Bs.transform(n))+")"},Ya={test:e=>_a.test(e)||Ga.test(e)||qa.test(e),parse:e=>_a.test(e)?_a.parse(e):qa.test(e)?qa.parse(e):Ga.parse(e),transform:e=>_s(e)?e:e.hasOwnProperty("red")?_a.transform(e):qa.transform(e)},Xa=(e,t,r)=>-r*e+r*t+e;function Za(e,t,r){return r<0&&(r+=1),r>1&&(r-=1),r<1/6?e+6*(t-e)*r:r<.5?t:r<2/3?e+(t-e)*(2/3-r)*6:e}const Ja=(e,t,r)=>{const n=e*e;return Math.sqrt(Math.max(0,r*(t*t-n)+n))},Qa=[Ga,_a,qa];function ei(e){const t=(r=e,Qa.find((e=>e.test(r))));var r;ga(Boolean(t),`'${e}' is not an animatable color. Use the equivalent color code instead.`);let n=t.parse(e);return t===qa&&(n=function({hue:e,saturation:t,lightness:r,alpha:n}){e/=360,r/=100;let s=0,o=0,a=0;if(t/=100){const n=r<.5?r*(1+t):r+t-r*t,i=2*r-n;s=Za(i,n,e+1/3),o=Za(i,n,e),a=Za(i,n,e-1/3);}else s=o=a=r;return {red:Math.round(255*s),green:Math.round(255*o),blue:Math.round(255*a),alpha:n}}(n)),n}const ti=(e,t)=>{const r=ei(e),n=ei(t),s={...r};return e=>(s.red=Ja(r.red,n.red,e),s.green=Ja(r.green,n.green,e),s.blue=Ja(r.blue,n.blue,e),s.alpha=Xa(r.alpha,n.alpha,e),_a.transform(s))};const ri={regex:/var\s*\(\s*--[\w-]+(\s*,\s*(?:(?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)+)?\s*\)/g,countKey:"Vars",token:"${v}",parse:Ko},ni={regex:Hs,countKey:"Colors",token:"${c}",parse:Ya.parse},si={regex:Us,countKey:"Numbers",token:"${n}",parse:Os.parse};function oi(e,{regex:t,countKey:r,token:n,parse:s}){const o=e.tokenised.match(t);o&&(e["num"+r]=o.length,e.tokenised=e.tokenised.replace(t,n),e.values.push(...o.map(s)));}function ai(e){const t=e.toString(),r={value:t,tokenised:t,values:[],numVars:0,numColors:0,numNumbers:0};return r.value.includes("var(--")&&oi(r,ri),oi(r,ni),oi(r,si),r}function ii(e){return ai(e).values}function li(e){const{values:t,numColors:r,numVars:n,tokenised:s}=ai(e),o=t.length;return e=>{let t=s;for(let s=0;s<o;s++)t=s<n?t.replace(ri.token,e[s]):s<n+r?t.replace(ni.token,Ya.transform(e[s])):t.replace(si.token,zs(e[s]));return t}}const ui=e=>"number"==typeof e?0:e;const ci={test:function(e){var t,r;return isNaN(e)&&_s(e)&&((null===(t=e.match(Us))||void 0===t?void 0:t.length)||0)+((null===(r=e.match(Hs))||void 0===r?void 0:r.length)||0)>0},parse:ii,createTransformer:li,getAnimatableNone:function(e){const t=ii(e);return li(e)(t.map(ui))}},di=(e,t)=>r=>`${r>0?t:e}`;function pi(e,t){return "number"==typeof e?r=>Xa(e,t,r):Ya.test(e)?ti(e,t):e.startsWith("var(")?di(e,t):mi(e,t)}const hi=(e,t)=>{const r=[...e],n=r.length,s=e.map(((e,r)=>pi(e,t[r])));return e=>{for(let t=0;t<n;t++)r[t]=s[t](e);return r}},fi=(e,t)=>{const r={...e,...t},n={};for(const s in r)void 0!==e[s]&&void 0!==t[s]&&(n[s]=pi(e[s],t[s]));return e=>{for(const t in n)r[t]=n[t](e);return r}},mi=(e,t)=>{const r=ci.createTransformer(t),n=ai(e),s=ai(t);return n.numVars===s.numVars&&n.numColors===s.numColors&&n.numNumbers>=s.numNumbers?Yo(hi(n.values,s.values),r):(ma(!0,`Complex values '${e}' and '${t}' too different to mix. Ensure all colors are of the same type, and that each contains the same quantity of number and color values. Falling back to instant transition.`),di(e,t))},gi=(e,t,r)=>{const n=t-e;return 0===n?1:(r-e)/n},vi=(e,t)=>r=>Xa(e,t,r);function yi(e,t,r){const n=[],s=r||("number"==typeof(o=e[0])?vi:"string"==typeof o?Ya.test(o)?ti:mi:Array.isArray(o)?hi:"object"==typeof o?fi:vi);var o;const a=e.length-1;for(let r=0;r<a;r++){let o=s(e[r],e[r+1]);if(t){const e=Array.isArray(t)?t[r]||Ko:t;o=Yo(e,o);}n.push(o);}return n}function bi(e,t,{clamp:r=!0,ease:n,mixer:s}={}){const o=e.length;if(ga(o===t.length,"Both input and output ranges must be the same length"),1===o)return ()=>t[0];e[0]>e[o-1]&&(e=[...e].reverse(),t=[...t].reverse());const a=yi(t,n,s),i=a.length,l=t=>{let r=0;if(i>1)for(;r<e.length-2&&!(t<e[r+1]);r++);const n=gi(e[r],e[r+1],t);return a[r](n)};return r?t=>l(Fs(e[0],e[o-1],t)):l}function xi(e){const t=[0];return function(e,t){const r=e[e.length-1];for(let n=1;n<=t;n++){const s=gi(0,t,n);e.push(Xa(r,1,s));}}(t,e.length-1),t}function wi({duration:e=300,keyframes:t,times:r,ease:n="easeInOut"}){const s=Va(n)?n.map(za):za(n),o={done:!1,value:t[0]},a=function(e,t){return e.map((e=>e*t))}(r&&r.length===t.length?r:xi(t),e),i=bi(a,t,{ease:Array.isArray(s)?s:(l=t,u=s,l.map((()=>u||Ia)).splice(0,l.length-1))});var l,u;return {calculatedDuration:e,next:t=>(o.value=i(t),o.done=t>=e,o)}}function Pi(e,t){return t?e*(1e3/t):0}const Ti=5;function Ci(e,t,r){const n=Math.max(t-Ti,0);return Pi(r-e(n),t-n)}const Ei=.001,Si=.01,ki=10,Mi=.05,Ai=1;function Di({duration:e=800,bounce:t=.25,velocity:r=0,mass:n=1}){let s,o;ma(e<=va(ki),"Spring duration must be 10 seconds or less");let a=1-t;a=Fs(Mi,Ai,a),e=Fs(Si,ki,ya(e)),a<1?(s=t=>{const n=t*a,s=n*e,o=n-r,i=Vi(t,a),l=Math.exp(-s);return Ei-o/i*l},o=t=>{const n=t*a*e,o=n*r+r,i=Math.pow(a,2)*Math.pow(t,2)*e,l=Math.exp(-n),u=Vi(Math.pow(t,2),a);return (-s(t)+Ei>0?-1:1)*((o-i)*l)/u}):(s=t=>Math.exp(-t*e)*((t-r)*e+1)-Ei,o=t=>Math.exp(-t*e)*(e*e*(r-t)));const i=function(e,t,r){let n=r;for(let r=1;r<Ii;r++)n-=e(n)/t(n);return n}(s,o,5/e);if(e=va(e),isNaN(i))return {stiffness:100,damping:10,duration:e};{const t=Math.pow(i,2)*n;return {stiffness:t,damping:2*a*Math.sqrt(n*t),duration:e}}}const Ii=12;function Vi(e,t){return e*Math.sqrt(1-t*t)}const Li=["duration","bounce"],Ki=["stiffness","damping","mass"];function Ri(e,t){return t.some((t=>void 0!==e[t]))}function Ni({keyframes:e,restDelta:t,restSpeed:r,...n}){const s=e[0],o=e[e.length-1],a={done:!1,value:s},{stiffness:i,damping:l,mass:u,velocity:c,duration:d,isResolvedFromDuration:p}=function(e){let t={velocity:0,stiffness:100,damping:10,mass:1,isResolvedFromDuration:!1,...e};if(!Ri(e,Ki)&&Ri(e,Li)){const r=Di(e);t={...t,...r,velocity:0,mass:1},t.isResolvedFromDuration=!0;}return t}(n),h=c?-ya(c):0,f=l/(2*Math.sqrt(i*u)),m=o-s,g=ya(Math.sqrt(i/u)),v=Math.abs(m)<5;let y;if(r||(r=v?.01:2),t||(t=v?.005:.5),f<1){const e=Vi(g,f);y=t=>{const r=Math.exp(-f*g*t);return o-r*((h+f*g*m)/e*Math.sin(e*t)+m*Math.cos(e*t))};}else if(1===f)y=e=>o-Math.exp(-g*e)*(m+(h+g*m)*e);else {const e=g*Math.sqrt(f*f-1);y=t=>{const r=Math.exp(-f*g*t),n=Math.min(e*t,300);return o-r*((h+f*g*m)*Math.sinh(n)+e*m*Math.cosh(n))/e};}return {calculatedDuration:p&&d||null,next:e=>{const n=y(e);if(p)a.done=e>=d;else {let s=h;0!==e&&(s=f<1?Ci(y,e,n):0);const i=Math.abs(s)<=r,l=Math.abs(o-n)<=t;a.done=i&&l;}return a.value=a.done?o:n,a}}}function ji({keyframes:e,velocity:t=0,power:r=.8,timeConstant:n=325,bounceDamping:s=10,bounceStiffness:o=500,modifyTarget:a,min:i,max:l,restDelta:u=.5,restSpeed:c}){const d=e[0],p={done:!1,value:d},h=e=>void 0===i?l:void 0===l||Math.abs(i-e)<Math.abs(l-e)?i:l;let f=r*t;const m=d+f,g=void 0===a?m:a(m);g!==m&&(f=g-d);const v=e=>-f*Math.exp(-e/n),y=e=>g+v(e),b=e=>{const t=v(e),r=y(e);p.done=Math.abs(t)<=u,p.value=p.done?g:r;};let x,w;const P=e=>{var t;(t=p.value,void 0!==i&&t<i||void 0!==l&&t>l)&&(x=e,w=Ni({keyframes:[p.value,h(p.value)],velocity:Ci(y,e,p.value),damping:s,stiffness:o,restDelta:u,restSpeed:c}));};return P(0),{calculatedDuration:null,next:e=>{let t=!1;return w||void 0!==x||(t=!0,b(e),P(e)),void 0!==x&&e>x?w.next(e-x):(!t&&b(e),p)}}}const Fi=e=>{const t=({timestamp:t})=>e(t);return {start:()=>jo.update(t,!0),stop:()=>Fo(t),now:()=>Oo.isProcessing?Oo.timestamp:performance.now()}},Oi=2e4;function Bi(e){let t=0;let r=e.next(t);for(;!r.done&&t<Oi;)t+=50,r=e.next(t);return t>=Oi?1/0:t}const Wi={decay:ji,inertia:ji,tween:wi,keyframes:wi,spring:Ni};function zi({autoplay:e=!0,delay:t=0,driver:r=Fi,keyframes:n,type:s="keyframes",repeat:o=0,repeatDelay:a=0,repeatType:i="loop",onPlay:l,onStop:u,onComplete:c,onUpdate:d,...p}){let h,f,m=1,g=!1;const v=()=>{f=new Promise((e=>{h=e;}));};let y;v();const b=Wi[s]||wi;let x;b!==wi&&"number"!=typeof n[0]&&(x=bi([0,100],n,{clamp:!1}),n=[0,100]);const w=b({...p,keyframes:n});let P;"mirror"===i&&(P=b({...p,keyframes:[...n].reverse(),velocity:-(p.velocity||0)}));let T="idle",C=null,E=null,S=null;null===w.calculatedDuration&&o&&(w.calculatedDuration=Bi(w));const{calculatedDuration:k}=w;let M=1/0,A=1/0;null!==k&&(M=k+a,A=M*(o+1)-a);let D=0;const I=e=>{if(null===E)return;m>0&&(E=Math.min(E,e)),m<0&&(E=Math.min(e-A/m,E)),D=null!==C?C:Math.round(e-E)*m;const r=D-t*(m>=0?1:-1),s=m>=0?r<0:r>A;D=Math.max(r,0),"finished"===T&&null===C&&(D=A);let l=D,u=w;if(o){const e=D/M;let t=Math.floor(e),r=e%1;!r&&e>=1&&(r=1),1===r&&t--,t=Math.min(t,o+1);const n=Boolean(t%2);n&&("reverse"===i?(r=1-r,a&&(r-=a/M)):"mirror"===i&&(u=P));let s=Fs(0,1,r);D>A&&(s="reverse"===i&&n?1:0),l=s*M;}const c=s?{done:!1,value:n[0]}:u.next(l);x&&(c.value=x(c.value));let{done:p}=c;s||null===k||(p=m>=0?D>=A:D<=0);const h=null===C&&("finished"===T||"running"===T&&p);return d&&d(c.value),h&&K(),c},V=()=>{y&&y.stop(),y=void 0;},L=()=>{T="idle",V(),h(),v(),E=S=null;},K=()=>{T="finished",c&&c(),V(),h();},R=()=>{if(g)return;y||(y=r(I));const e=y.now();l&&l(),null!==C?E=e-C:E&&"finished"!==T||(E=e),"finished"===T&&v(),S=E,C=null,T="running",y.start();};e&&R();const N={then:(e,t)=>f.then(e,t),get time(){return ya(D)},set time(e){e=va(e),D=e,null===C&&y&&0!==m?E=y.now()-e/m:C=e;},get duration(){const e=null===w.calculatedDuration?Bi(w):w.calculatedDuration;return ya(e)},get speed(){return m},set speed(e){e!==m&&y&&(m=e,N.time=ya(D));},get state(){return T},play:R,pause:()=>{T="paused",C=D;},stop:()=>{g=!0,"idle"!==T&&(T="idle",u&&u(),L());},cancel:()=>{null!==S&&I(S),L();},complete:()=>{T="finished";},sample:e=>(E=0,I(e))};return N}const Ui=function(e){let t;return ()=>(void 0===t&&(t=e()),t)}((()=>Object.hasOwnProperty.call(Element.prototype,"animate"))),Hi=new Set(["opacity","clipPath","filter","transform","backgroundColor"]);function $i(e,t,{onUpdate:r,onComplete:n,...s}){if(!(Ui()&&Hi.has(t)&&!s.repeatDelay&&"mirror"!==s.repeatType&&0!==s.damping&&"inertia"!==s.type))return !1;let o,a,i=!1;const l=()=>{a=new Promise((e=>{o=e;}));};l();let{keyframes:u,duration:c=300,ease:d,times:p}=s;if(((e,t)=>"spring"===t.type||"backgroundColor"===e||!wa(t.ease))(t,s)){const e=zi({...s,repeat:0,delay:0});let t={done:!1,value:u[0]};const r=[];let n=0;for(;!t.done&&n<2e4;)t=e.sample(n),r.push(t.value),n+=10;p=void 0,u=r,c=n-10,d="linear";}const h=function(e,t,r,{delay:n=0,duration:s,repeat:o=0,repeatType:a="loop",ease:i,times:l}={}){const u={[t]:r};l&&(u.offset=l);const c=Ca(i);return Array.isArray(c)&&(u.easing=c),e.animate(u,{delay:n,duration:s,easing:Array.isArray(c)?"linear":c,fill:"both",iterations:o+1,direction:"reverse"===a?"alternate":"normal"})}(e.owner.current,t,u,{...s,duration:c,ease:d,times:p});s.syncStart&&(h.startTime=Oo.isProcessing?Oo.timestamp:document.timeline?document.timeline.currentTime:performance.now());const f=()=>h.cancel(),m=()=>{jo.update(f),o(),l();};h.onfinish=()=>{e.set(function(e,{repeat:t,repeatType:r="loop"}){return e[t&&"loop"!==r&&t%2==1?0:e.length-1]}(u,s)),n&&n(),m();};return {then:(e,t)=>a.then(e,t),attachTimeline:e=>(h.timeline=e,h.onfinish=null,Ko),get time(){return ya(h.currentTime||0)},set time(e){h.currentTime=va(e);},get speed(){return h.playbackRate},set speed(e){h.playbackRate=e;},get duration(){return ya(c)},play:()=>{i||(h.play(),Fo(f));},pause:()=>h.pause(),stop:()=>{if(i=!0,"idle"===h.playState)return;const{currentTime:t}=h;if(t){const r=zi({...s,autoplay:!1});e.setWithVelocity(r.sample(t-10).value,r.sample(t).value,10);}m();},complete:()=>h.finish(),cancel:m}}const _i={type:"spring",stiffness:500,damping:25,restSpeed:10},Gi={type:"keyframes",duration:.8},qi={type:"keyframes",ease:[.25,.1,.35,1],duration:.3},Yi=(e,{keyframes:t})=>t.length>2?Gi:As.has(e)?e.startsWith("scale")?{type:"spring",stiffness:550,damping:0===t[1]?2*Math.sqrt(550):30,restSpeed:10}:_i:qi,Xi=(e,t)=>"zIndex"!==e&&(!("number"!=typeof t&&!Array.isArray(t))||!("string"!=typeof t||!ci.test(t)&&"0"!==t||t.startsWith("url("))),Zi=new Set(["brightness","contrast","saturate","opacity"]);function Ji(e){const[t,r]=e.slice(0,-1).split("(");if("drop-shadow"===t)return e;const[n]=r.match(Us)||[];if(!n)return e;const s=r.replace(n,"");let o=Zi.has(t)?1:0;return n!==r&&(o*=100),t+"("+o+s+")"}const Qi=/([a-z-]*)\(.*?\)/g,el={...ci,getAnimatableNone:e=>{const t=e.match(Qi);return t?t.map(Ji).join(" "):e}},tl={...to,color:Ya,backgroundColor:Ya,outlineColor:Ya,fill:Ya,stroke:Ya,borderColor:Ya,borderTopColor:Ya,borderRightColor:Ya,borderBottomColor:Ya,borderLeftColor:Ya,filter:el,WebkitFilter:el},rl=e=>tl[e];function nl(e,t){let r=rl(e);return r!==el&&(r=ci),r.getAnimatableNone?r.getAnimatableNone(t):void 0}const sl=e=>/^0[^.\s]+$/.test(e);function ol(e){return "number"==typeof e?0===e:null!==e?"none"===e||"0"===e||sl(e):void 0}function al(e,t){return e[t]||e.default||e}const il=(e,t,r,n={})=>s=>{const o=al(n,e)||{},a=o.delay||n.delay||0;let{elapsed:i=0}=n;i-=va(a);const l=function(e,t,r,n){const s=Xi(t,r);let o;o=Array.isArray(r)?[...r]:[null,r];const a=void 0!==n.from?n.from:e.get();let i;const l=[];for(let e=0;e<o.length;e++)null===o[e]&&(o[e]=0===e?a:o[e-1]),ol(o[e])&&l.push(e),"string"==typeof o[e]&&"none"!==o[e]&&"0"!==o[e]&&(i=o[e]);if(s&&l.length&&i)for(let e=0;e<l.length;e++)o[l[e]]=nl(t,i);return o}(t,e,r,o),u=l[0],c=l[l.length-1],d=Xi(e,u),p=Xi(e,c);ma(d===p,`You are trying to animate ${e} from "${u}" to "${c}". ${u} is not an animatable value - to enable this animation set ${u} to a value animatable to ${c} via the \`style\` property.`);let h={keyframes:l,velocity:t.getVelocity(),ease:"easeOut",...o,delay:-i,onUpdate:e=>{t.set(e),o.onUpdate&&o.onUpdate(e);},onComplete:()=>{s(),o.onComplete&&o.onComplete();}};if(function({when:e,delay:t,delayChildren:r,staggerChildren:n,staggerDirection:s,repeat:o,repeatType:a,repeatDelay:i,from:l,elapsed:u,...c}){return !!Object.keys(c).length}(o)||(h={...h,...Yi(e,h)}),h.duration&&(h.duration=va(h.duration)),h.repeatDelay&&(h.repeatDelay=va(h.repeatDelay)),!d||!p||ba||!1===o.type)return function({keyframes:e,delay:t,onUpdate:r,onComplete:n}){const s=()=>(r&&r(e[e.length-1]),n&&n(),{time:0,speed:1,duration:0,play:Ko,pause:Ko,stop:Ko,then:e=>(e(),Promise.resolve()),cancel:Ko,complete:Ko});return t?zi({keyframes:[0,1],duration:0,delay:t,onComplete:s}):s()}(h);if(t.owner&&t.owner.current instanceof HTMLElement&&!t.owner.getProps().onUpdate){const r=$i(t,e,h);if(r)return r}return zi(h)};function ll(e){return Boolean(Is(e)&&e.add)}const ul=e=>/^\-?\d*\.?\d+$/.test(e);function cl(e,t){-1===e.indexOf(t)&&e.push(t);}function dl(e,t){const r=e.indexOf(t);r>-1&&e.splice(r,1);}class pl{constructor(){this.subscriptions=[];}add(e){return cl(this.subscriptions,e),()=>dl(this.subscriptions,e)}notify(e,t,r){const n=this.subscriptions.length;if(n)if(1===n)this.subscriptions[0](e,t,r);else for(let s=0;s<n;s++){const n=this.subscriptions[s];n&&n(e,t,r);}}getSize(){return this.subscriptions.length}clear(){this.subscriptions.length=0;}}const hl=new Set;function fl(e,t,r){e||hl.has(t)||(console.warn(t),r&&console.warn(r),hl.add(t));}class ml{constructor(e,t={}){var r;this.version="10.16.5",this.timeDelta=0,this.lastUpdated=0,this.canTrackVelocity=!1,this.events={},this.updateAndNotify=(e,t=!0)=>{this.prev=this.current,this.current=e;const{delta:r,timestamp:n}=Oo;this.lastUpdated!==n&&(this.timeDelta=r,this.lastUpdated=n,jo.postRender(this.scheduleVelocityCheck)),this.prev!==this.current&&this.events.change&&this.events.change.notify(this.current),this.events.velocityChange&&this.events.velocityChange.notify(this.getVelocity()),t&&this.events.renderRequest&&this.events.renderRequest.notify(this.current);},this.scheduleVelocityCheck=()=>jo.postRender(this.velocityCheck),this.velocityCheck=({timestamp:e})=>{e!==this.lastUpdated&&(this.prev=this.current,this.events.velocityChange&&this.events.velocityChange.notify(this.getVelocity()));},this.hasAnimated=!1,this.prev=this.current=e,this.canTrackVelocity=(r=this.current,!isNaN(parseFloat(r))),this.owner=t.owner;}onChange(e){return "production"!==process.env.NODE_ENV&&fl(!1,'value.onChange(callback) is deprecated. Switch to value.on("change", callback).'),this.on("change",e)}on(e,t){this.events[e]||(this.events[e]=new pl);const r=this.events[e].add(t);return "change"===e?()=>{r(),jo.read((()=>{this.events.change.getSize()||this.stop();}));}:r}clearListeners(){for(const e in this.events)this.events[e].clear();}attach(e,t){this.passiveEffect=e,this.stopPassiveEffect=t;}set(e,t=!0){t&&this.passiveEffect?this.passiveEffect(e,this.updateAndNotify):this.updateAndNotify(e,t);}setWithVelocity(e,t,r){this.set(t),this.prev=e,this.timeDelta=r;}jump(e){this.updateAndNotify(e),this.prev=e,this.stop(),this.stopPassiveEffect&&this.stopPassiveEffect();}get(){return this.current}getPrevious(){return this.prev}getVelocity(){return this.canTrackVelocity?Pi(parseFloat(this.current)-parseFloat(this.prev),this.timeDelta):0}start(e){return this.stop(),new Promise((t=>{this.hasAnimated=!0,this.animation=e(t),this.events.animationStart&&this.events.animationStart.notify();})).then((()=>{this.events.animationComplete&&this.events.animationComplete.notify(),this.clearAnimation();}))}stop(){this.animation&&(this.animation.stop(),this.events.animationCancel&&this.events.animationCancel.notify()),this.clearAnimation();}isAnimating(){return !!this.animation}clearAnimation(){delete this.animation;}destroy(){this.clearListeners(),this.stop(),this.stopPassiveEffect&&this.stopPassiveEffect();}}function gl(e,t){return new ml(e,t)}const vl=e=>t=>t.test(e),yl=[Os,Xs,Ys,qs,Js,Zs,{test:e=>"auto"===e,parse:e=>e}],bl=e=>yl.find(vl(e)),xl=[...yl,Ya,ci];function wl(e,t,r){e.hasValue(t)?e.getValue(t).set(r):e.addValue(t,gl(r));}function Pl(e,t){if(!t)return;return (t[e]||t.default||t).from}function Tl({protectedKeys:e,needsAnimating:t},r){const n=e.hasOwnProperty(r)&&!0!==t[r];return t[r]=!1,n}function Cl(e,t,{delay:r=0,transitionOverride:n,type:s}={}){let{transition:o=e.getDefaultTransition(),transitionEnd:a,...i}=e.makeTargetAnimatable(t);const l=e.getValue("willChange");n&&(o=n);const u=[],c=s&&e.animationState&&e.animationState.getState()[s];for(const t in i){const n=e.getValue(t),s=i[t];if(!n||void 0===s||c&&Tl(c,t))continue;const a={delay:r,elapsed:0,...o};if(window.HandoffAppearAnimations&&!n.hasAnimated){const r=e.getProps()[fa];r&&(a.elapsed=window.HandoffAppearAnimations(r,t,n,jo),a.syncStart=!0);}n.start(il(t,n,s,e.shouldReduceMotion&&As.has(t)?{type:!1}:a));const d=n.animation;ll(l)&&(l.add(t),d.then((()=>l.remove(t)))),u.push(d);}return a&&Promise.all(u).then((()=>{a&&function(e,t){const r=ha(e,t);let{transitionEnd:n={},transition:s={},...o}=r?e.makeTargetAnimatable(r,!1):{};o={...o,...n};for(const t in o)wl(e,t,Do(o[t]));}(e,a);})),u}function El(e,t,r={}){const n=ha(e,t,r.custom);let{transition:s=e.getDefaultTransition()||{}}=n||{};r.transitionOverride&&(s=r.transitionOverride);const o=n?()=>Promise.all(Cl(e,n,r)):()=>Promise.resolve(),a=e.variantChildren&&e.variantChildren.size?(n=0)=>{const{delayChildren:o=0,staggerChildren:a,staggerDirection:i}=s;return function(e,t,r=0,n=0,s=1,o){const a=[],i=(e.variantChildren.size-1)*n,l=1===s?(e=0)=>e*n:(e=0)=>i-e*n;return Array.from(e.variantChildren).sort(Sl).forEach(((e,n)=>{e.notify("AnimationStart",t),a.push(El(e,t,{...o,delay:r+l(n)}).then((()=>e.notify("AnimationComplete",t))));})),Promise.all(a)}(e,t,o+n,a,i,r)}:()=>Promise.resolve(),{when:i}=s;if(i){const[e,t]="beforeChildren"===i?[o,a]:[a,o];return e().then((()=>t()))}return Promise.all([o(),a(r.delay)])}function Sl(e,t){return e.sortNodePosition(t)}const kl=[...ds].reverse(),Ml=ds.length;function Al(e){return t=>Promise.all(t.map((({animation:t,options:r})=>function(e,t,r={}){let n;if(e.notify("AnimationStart",t),Array.isArray(t)){const s=t.map((t=>El(e,t,r)));n=Promise.all(s);}else if("string"==typeof t)n=El(e,t,r);else {const s="function"==typeof t?ha(e,t,r.custom):t;n=Promise.all(Cl(e,s,r));}return n.then((()=>e.notify("AnimationComplete",t)))}(e,t,r))))}function Dl(e){let t=Al(e);const r={animate:Vl(!0),whileInView:Vl(),whileHover:Vl(),whileTap:Vl(),whileDrag:Vl(),whileFocus:Vl(),exit:Vl()};let n=!0;const s=(t,r)=>{const n=ha(e,r);if(n){const{transition:e,transitionEnd:r,...s}=n;t={...t,...s,...r};}return t};function o(o,a){const i=e.getProps(),l=e.getVariantContext(!0)||{},u=[],c=new Set;let d={},p=1/0;for(let t=0;t<Ml;t++){const h=kl[t],f=r[h],m=void 0!==i[h]?i[h]:l[h],g=us(m),v=h===a?f.isActive:null;!1===v&&(p=t);let y=m===l[h]&&m!==i[h]&&g;if(y&&n&&e.manuallyAnimateOnMount&&(y=!1),f.protectedKeys={...d},!f.isActive&&null===v||!m&&!f.prevProp||cs(m)||"boolean"==typeof m)continue;const b=Il(f.prevProp,m);let x=b||h===a&&f.isActive&&!y&&g||t>p&&g;const w=Array.isArray(m)?m:[m];let P=w.reduce(s,{});!1===v&&(P={});const{prevResolvedValues:T={}}=f,C={...T,...P},E=e=>{x=!0,c.delete(e),f.needsAnimating[e]=!0;};for(const e in C){const t=P[e],r=T[e];d.hasOwnProperty(e)||(t!==r?Mo(t)&&Mo(r)?!pa(t,r)||b?E(e):f.protectedKeys[e]=!0:void 0!==t?E(e):c.add(e):void 0!==t&&c.has(e)?E(e):f.protectedKeys[e]=!0);}f.prevProp=m,f.prevResolvedValues=P,f.isActive&&(d={...d,...P}),n&&e.blockInitialAnimation&&(x=!1),x&&!y&&u.push(...w.map((e=>({animation:e,options:{type:h,...o}}))));}if(c.size){const t={};c.forEach((r=>{const n=e.getBaseTarget(r);void 0!==n&&(t[r]=n);})),u.push({animation:t});}let h=Boolean(u.length);return n&&!1===i.initial&&!e.manuallyAnimateOnMount&&(h=!1),n=!1,h?t(u):Promise.resolve()}return {animateChanges:o,setActive:function(t,n,s){var a;if(r[t].isActive===n)return Promise.resolve();null===(a=e.variantChildren)||void 0===a||a.forEach((e=>{var r;return null===(r=e.animationState)||void 0===r?void 0:r.setActive(t,n)})),r[t].isActive=n;const i=o(s,t);for(const e in r)r[e].protectedKeys={};return i},setAnimateFunction:function(r){t=r(e);},getState:()=>r}}function Il(e,t){return "string"==typeof t?t!==e:!!Array.isArray(t)&&!pa(t,e)}function Vl(e=!1){return {isActive:e,protectedKeys:{},needsAnimating:{},prevResolvedValues:{}}}let Ll=0;const Kl={animation:{Feature:class extends ta{constructor(e){super(e),e.animationState||(e.animationState=Dl(e));}updateAnimationControlsSubscription(){const{animate:e}=this.node.getProps();this.unmount(),cs(e)&&(this.unmount=e.subscribe(this.node));}mount(){this.updateAnimationControlsSubscription();}update(){const{animate:e}=this.node.getProps(),{animate:t}=this.node.prevProps||{};e!==t&&this.updateAnimationControlsSubscription();}unmount(){}}},exit:{Feature:class extends ta{constructor(){super(...arguments),this.id=Ll++;}update(){if(!this.node.presenceContext)return;const{isPresent:e,onExitComplete:t,custom:r}=this.node.presenceContext,{isPresent:n}=this.node.prevPresenceContext||{};if(!this.node.animationState||e===n)return;const s=this.node.animationState.setActive("exit",!e,{custom:null!=r?r:this.node.getProps().custom});t&&!e&&s.then((()=>t(this.id)));}mount(){const{register:e}=this.node.presenceContext||{};e&&(this.unmount=e(this.id));}unmount(){}}}},Rl=(e,t)=>Math.abs(e-t);class Nl{constructor(e,t,{transformPagePoint:r}={}){if(this.startEvent=null,this.lastMoveEvent=null,this.lastMoveEventInfo=null,this.handlers={},this.updatePoint=()=>{if(!this.lastMoveEvent||!this.lastMoveEventInfo)return;const e=Ol(this.lastMoveEventInfo,this.history),t=null!==this.startEvent,r=function(e,t){const r=Rl(e.x,t.x),n=Rl(e.y,t.y);return Math.sqrt(r**2+n**2)}(e.offset,{x:0,y:0})>=3;if(!t&&!r)return;const{point:n}=e,{timestamp:s}=Oo;this.history.push({...n,timestamp:s});const{onStart:o,onMove:a}=this.handlers;t||(o&&o(this.lastMoveEvent,e),this.startEvent=this.lastMoveEvent),a&&a(this.lastMoveEvent,e);},this.handlePointerMove=(e,t)=>{this.lastMoveEvent=e,this.lastMoveEventInfo=jl(t,this.transformPagePoint),jo.update(this.updatePoint,!0);},this.handlePointerUp=(e,t)=>{if(this.end(),!this.lastMoveEvent||!this.lastMoveEventInfo)return;const{onEnd:r,onSessionEnd:n}=this.handlers,s=Ol("pointercancel"===e.type?this.lastMoveEventInfo:jl(t,this.transformPagePoint),this.history);this.startEvent&&r&&r(e,s),n&&n(e,s);},!Ho(e))return;this.handlers=t,this.transformPagePoint=r;const n=jl($o(e),this.transformPagePoint),{point:s}=n,{timestamp:o}=Oo;this.history=[{...s,timestamp:o}];const{onSessionStart:a}=t;a&&a(e,Ol(n,this.history)),this.removeListeners=Yo(Go(window,"pointermove",this.handlePointerMove),Go(window,"pointerup",this.handlePointerUp),Go(window,"pointercancel",this.handlePointerUp));}updateHandlers(e){this.handlers=e;}end(){this.removeListeners&&this.removeListeners(),Fo(this.updatePoint);}}function jl(e,t){return t?{point:t(e.point)}:e}function Fl(e,t){return {x:e.x-t.x,y:e.y-t.y}}function Ol({point:e},t){return {point:e,delta:Fl(e,Wl(t)),offset:Fl(e,Bl(t)),velocity:zl(t,.1)}}function Bl(e){return e[0]}function Wl(e){return e[e.length-1]}function zl(e,t){if(e.length<2)return {x:0,y:0};let r=e.length-1,n=null;const s=Wl(e);for(;r>=0&&(n=e[r],!(s.timestamp-n.timestamp>va(t)));)r--;if(!n)return {x:0,y:0};const o=ya(s.timestamp-n.timestamp);if(0===o)return {x:0,y:0};const a={x:(s.x-n.x)/o,y:(s.y-n.y)/o};return a.x===1/0&&(a.x=0),a.y===1/0&&(a.y=0),a}function Ul(e){return e.max-e.min}function Hl(e,t=0,r=.01){return Math.abs(e-t)<=r}function $l(e,t,r,n=.5){e.origin=n,e.originPoint=Xa(t.min,t.max,e.origin),e.scale=Ul(r)/Ul(t),(Hl(e.scale,1,1e-4)||isNaN(e.scale))&&(e.scale=1),e.translate=Xa(r.min,r.max,e.origin)-e.originPoint,(Hl(e.translate)||isNaN(e.translate))&&(e.translate=0);}function _l(e,t,r,n){$l(e.x,t.x,r.x,n?n.originX:void 0),$l(e.y,t.y,r.y,n?n.originY:void 0);}function Gl(e,t,r){e.min=r.min+t.min,e.max=e.min+Ul(t);}function ql(e,t,r){e.min=t.min-r.min,e.max=e.min+Ul(t);}function Yl(e,t,r){ql(e.x,t.x,r.x),ql(e.y,t.y,r.y);}function Xl(e,t,r){return {min:void 0!==t?e.min+t:void 0,max:void 0!==r?e.max+r-(e.max-e.min):void 0}}function Zl(e,t){let r=t.min-e.min,n=t.max-e.max;return t.max-t.min<e.max-e.min&&([r,n]=[n,r]),{min:r,max:n}}const Jl=.35;function Ql(e,t,r){return {min:eu(e,t),max:eu(e,r)}}function eu(e,t){return "number"==typeof e?e:e[t]||0}const tu=()=>({x:{translate:0,scale:1,origin:0,originPoint:0},y:{translate:0,scale:1,origin:0,originPoint:0}}),ru=()=>({x:{min:0,max:0},y:{min:0,max:0}});function nu(e){return [e("x"),e("y")]}function su({top:e,left:t,right:r,bottom:n}){return {x:{min:t,max:r},y:{min:e,max:n}}}function ou(e){return void 0===e||1===e}function au({scale:e,scaleX:t,scaleY:r}){return !ou(e)||!ou(t)||!ou(r)}function iu(e){return au(e)||lu(e)||e.z||e.rotate||e.rotateX||e.rotateY}function lu(e){return uu(e.x)||uu(e.y)}function uu(e){return e&&"0%"!==e}function cu(e,t,r){return r+t*(e-r)}function du(e,t,r,n,s){return void 0!==s&&(e=cu(e,s,n)),cu(e,r,n)+t}function pu(e,t=0,r=1,n,s){e.min=du(e.min,t,r,n,s),e.max=du(e.max,t,r,n,s);}function hu(e,{x:t,y:r}){pu(e.x,t.translate,t.scale,t.originPoint),pu(e.y,r.translate,r.scale,r.originPoint);}function fu(e){return Number.isInteger(e)||e>1.0000000000001||e<.999999999999?e:1}function mu(e,t){e.min=e.min+t,e.max=e.max+t;}function gu(e,t,[r,n,s]){const o=void 0!==t[s]?t[s]:.5,a=Xa(e.min,e.max,o);pu(e,t[r],t[n],a,t.scale);}const vu=["x","scaleX","originX"],yu=["y","scaleY","originY"];function bu(e,t){gu(e.x,t,vu),gu(e.y,t,yu);}function xu(e,t){return su(function(e,t){if(!t)return e;const r=t({x:e.left,y:e.top}),n=t({x:e.right,y:e.bottom});return {top:r.y,left:r.x,bottom:n.y,right:n.x}}(e.getBoundingClientRect(),t))}const wu=new WeakMap;class Pu{constructor(e){this.openGlobalLock=null,this.isDragging=!1,this.currentDirection=null,this.originPoint={x:0,y:0},this.constraints=!1,this.hasMutatedConstraints=!1,this.elastic=ru(),this.visualElement=e;}start(e,{snapToCursor:t=!1}={}){const{presenceContext:r}=this.visualElement;if(r&&!1===r.isPresent)return;this.panSession=new Nl(e,{onSessionStart:e=>{this.stopAnimation(),t&&this.snapToCursor($o(e,"page").point);},onStart:(e,t)=>{const{drag:r,dragPropagation:n,onDragStart:s}=this.getProps();if(r&&!n&&(this.openGlobalLock&&this.openGlobalLock(),this.openGlobalLock=Qo(r),!this.openGlobalLock))return;this.isDragging=!0,this.currentDirection=null,this.resolveConstraints(),this.visualElement.projection&&(this.visualElement.projection.isAnimationBlocked=!0,this.visualElement.projection.target=void 0),nu((e=>{let t=this.getAxisMotionValue(e).get()||0;if(Ys.test(t)){const{projection:r}=this.visualElement;if(r&&r.layout){const n=r.layout.layoutBox[e];if(n){t=Ul(n)*(parseFloat(t)/100);}}}this.originPoint[e]=t;})),s&&jo.update((()=>s(e,t)),!1,!0);const{animationState:o}=this.visualElement;o&&o.setActive("whileDrag",!0);},onMove:(e,t)=>{const{dragPropagation:r,dragDirectionLock:n,onDirectionLock:s,onDrag:o}=this.getProps();if(!r&&!this.openGlobalLock)return;const{offset:a}=t;if(n&&null===this.currentDirection)return this.currentDirection=function(e,t=10){let r=null;Math.abs(e.y)>t?r="y":Math.abs(e.x)>t&&(r="x");return r}(a),void(null!==this.currentDirection&&s&&s(this.currentDirection));this.updateAxis("x",t.point,a),this.updateAxis("y",t.point,a),this.visualElement.render(),o&&o(e,t);},onSessionEnd:(e,t)=>this.stop(e,t)},{transformPagePoint:this.visualElement.getTransformPagePoint()});}stop(e,t){const r=this.isDragging;if(this.cancel(),!r)return;const{velocity:n}=t;this.startAnimation(n);const{onDragEnd:s}=this.getProps();s&&jo.update((()=>s(e,t)));}cancel(){this.isDragging=!1;const{projection:e,animationState:t}=this.visualElement;e&&(e.isAnimationBlocked=!1),this.panSession&&this.panSession.end(),this.panSession=void 0;const{dragPropagation:r}=this.getProps();!r&&this.openGlobalLock&&(this.openGlobalLock(),this.openGlobalLock=null),t&&t.setActive("whileDrag",!1);}updateAxis(e,t,r){const{drag:n}=this.getProps();if(!r||!Tu(e,n,this.currentDirection))return;const s=this.getAxisMotionValue(e);let o=this.originPoint[e]+r[e];this.constraints&&this.constraints[e]&&(o=function(e,{min:t,max:r},n){return void 0!==t&&e<t?e=n?Xa(t,e,n.min):Math.max(e,t):void 0!==r&&e>r&&(e=n?Xa(r,e,n.max):Math.min(e,r)),e}(o,this.constraints[e],this.elastic[e])),s.set(o);}resolveConstraints(){const{dragConstraints:e,dragElastic:t}=this.getProps(),{layout:r}=this.visualElement.projection||{},n=this.constraints;e&&ls(e)?this.constraints||(this.constraints=this.resolveRefConstraints()):this.constraints=!(!e||!r)&&function(e,{top:t,left:r,bottom:n,right:s}){return {x:Xl(e.x,r,s),y:Xl(e.y,t,n)}}(r.layoutBox,e),this.elastic=function(e=Jl){return !1===e?e=0:!0===e&&(e=Jl),{x:Ql(e,"left","right"),y:Ql(e,"top","bottom")}}(t),n!==this.constraints&&r&&this.constraints&&!this.hasMutatedConstraints&&nu((e=>{this.getAxisMotionValue(e)&&(this.constraints[e]=function(e,t){const r={};return void 0!==t.min&&(r.min=t.min-e.min),void 0!==t.max&&(r.max=t.max-e.min),r}(r.layoutBox[e],this.constraints[e]));}));}resolveRefConstraints(){const{dragConstraints:e,onMeasureDragConstraints:t}=this.getProps();if(!e||!ls(e))return !1;const r=e.current;ga(null!==r,"If `dragConstraints` is set as a React ref, that ref must be passed to another component's `ref` prop.");const{projection:n}=this.visualElement;if(!n||!n.layout)return !1;const s=function(e,t,r){const n=xu(e,r),{scroll:s}=t;return s&&(mu(n.x,s.offset.x),mu(n.y,s.offset.y)),n}(r,n.root,this.visualElement.getTransformPagePoint());let o=function(e,t){return {x:Zl(e.x,t.x),y:Zl(e.y,t.y)}}(n.layout.layoutBox,s);if(t){const e=t(function({x:e,y:t}){return {top:t.min,right:e.max,bottom:t.max,left:e.min}}(o));this.hasMutatedConstraints=!!e,e&&(o=su(e));}return o}startAnimation(e){const{drag:t,dragMomentum:r,dragElastic:n,dragTransition:s,dragSnapToOrigin:o,onDragTransitionEnd:a}=this.getProps(),i=this.constraints||{},l=nu((a=>{if(!Tu(a,t,this.currentDirection))return;let l=i&&i[a]||{};o&&(l={min:0,max:0});const u=n?200:1e6,c=n?40:1e7,d={type:"inertia",velocity:r?e[a]:0,bounceStiffness:u,bounceDamping:c,timeConstant:750,restDelta:1,restSpeed:10,...s,...l};return this.startAxisValueAnimation(a,d)}));return Promise.all(l).then(a)}startAxisValueAnimation(e,t){const r=this.getAxisMotionValue(e);return r.start(il(e,r,0,t))}stopAnimation(){nu((e=>this.getAxisMotionValue(e).stop()));}getAxisMotionValue(e){const t="_drag"+e.toUpperCase(),r=this.visualElement.getProps(),n=r[t];return n||this.visualElement.getValue(e,(r.initial?r.initial[e]:void 0)||0)}snapToCursor(e){nu((t=>{const{drag:r}=this.getProps();if(!Tu(t,r,this.currentDirection))return;const{projection:n}=this.visualElement,s=this.getAxisMotionValue(t);if(n&&n.layout){const{min:r,max:o}=n.layout.layoutBox[t];s.set(e[t]-Xa(r,o,.5));}}));}scalePositionWithinConstraints(){if(!this.visualElement.current)return;const{drag:e,dragConstraints:t}=this.getProps(),{projection:r}=this.visualElement;if(!ls(t)||!r||!this.constraints)return;this.stopAnimation();const n={x:0,y:0};nu((e=>{const t=this.getAxisMotionValue(e);if(t){const r=t.get();n[e]=function(e,t){let r=.5;const n=Ul(e),s=Ul(t);return s>n?r=gi(t.min,t.max-n,e.min):n>s&&(r=gi(e.min,e.max-s,t.min)),Fs(0,1,r)}({min:r,max:r},this.constraints[e]);}}));const{transformTemplate:s}=this.visualElement.getProps();this.visualElement.current.style.transform=s?s({},""):"none",r.root&&r.root.updateScroll(),r.updateLayout(),this.resolveConstraints(),nu((t=>{if(!Tu(t,e,null))return;const r=this.getAxisMotionValue(t),{min:s,max:o}=this.constraints[t];r.set(Xa(s,o,n[t]));}));}addListeners(){if(!this.visualElement.current)return;wu.set(this.visualElement,this);const e=Go(this.visualElement.current,"pointerdown",(e=>{const{drag:t,dragListener:r=!0}=this.getProps();t&&r&&this.start(e);})),t=()=>{const{dragConstraints:e}=this.getProps();ls(e)&&(this.constraints=this.resolveRefConstraints());},{projection:r}=this.visualElement,n=r.addEventListener("measure",t);r&&!r.layout&&(r.root&&r.root.updateScroll(),r.updateLayout()),t();const s=Uo(window,"resize",(()=>this.scalePositionWithinConstraints())),o=r.addEventListener("didUpdate",(({delta:e,hasLayoutChanged:t})=>{this.isDragging&&t&&(nu((t=>{const r=this.getAxisMotionValue(t);r&&(this.originPoint[t]+=e[t].translate,r.set(r.get()+e[t].translate));})),this.visualElement.render());}));return ()=>{s(),e(),n(),o&&o();}}getProps(){const e=this.visualElement.getProps(),{drag:t=!1,dragDirectionLock:r=!1,dragPropagation:n=!1,dragConstraints:s=!1,dragElastic:o=Jl,dragMomentum:a=!0}=e;return {...e,drag:t,dragDirectionLock:r,dragPropagation:n,dragConstraints:s,dragElastic:o,dragMomentum:a}}}function Tu(e,t,r){return !(!0!==t&&t!==e||null!==r&&r!==e)}const Cu=e=>(t,r)=>{e&&jo.update((()=>e(t,r)));};const Eu={hasAnimatedSinceResize:!0,hasEverUpdated:!1};function Su(e,t){return t.max===t.min?0:e/(t.max-t.min)*100}const ku={correct:(e,t)=>{if(!t.target)return e;if("string"==typeof e){if(!Xs.test(e))return e;e=parseFloat(e);}return `${Su(e,t.target.x)}% ${Su(e,t.target.y)}%`}},Mu={correct:(e,{treeScale:t,projectionDelta:r})=>{const n=e,s=ci.parse(e);if(s.length>5)return n;const o=ci.createTransformer(e),a="number"!=typeof s[0]?1:0,i=r.x.scale*t.x,l=r.y.scale*t.y;s[0+a]/=i,s[1+a]/=l;const u=Xa(i,l,.5);return "number"==typeof s[2+a]&&(s[2+a]/=u),"number"==typeof s[3+a]&&(s[3+a]/=u),o(s)}};class Au extends t.Component{componentDidMount(){const{visualElement:e,layoutGroup:t,switchLayoutGroup:r,layoutId:n}=this.props,{projection:s}=e;var o;o=Iu,Object.assign(ks,o),s&&(t.group&&t.group.add(s),r&&r.register&&n&&r.register(s),s.root.didUpdate(),s.addEventListener("animationComplete",(()=>{this.safeToRemove();})),s.setOptions({...s.options,onExitComplete:()=>this.safeToRemove()})),Eu.hasEverUpdated=!0;}getSnapshotBeforeUpdate(e){const{layoutDependency:t,visualElement:r,drag:n,isPresent:s}=this.props,o=r.projection;return o?(o.isPresent=s,n||e.layoutDependency!==t||void 0===t?o.willUpdate():this.safeToRemove(),e.isPresent!==s&&(s?o.promote():o.relegate()||jo.postRender((()=>{const e=o.getStack();e&&e.members.length||this.safeToRemove();}))),null):null}componentDidUpdate(){const{projection:e}=this.props.visualElement;e&&(e.root.didUpdate(),queueMicrotask((()=>{!e.currentAnimation&&e.isLead()&&this.safeToRemove();})));}componentWillUnmount(){const{visualElement:e,layoutGroup:t,switchLayoutGroup:r}=this.props,{projection:n}=e;n&&(n.scheduleCheckAfterUnmount(),t&&t.group&&t.group.remove(n),r&&r.deregister&&r.deregister(n));}safeToRemove(){const{safeToRemove:e}=this.props;e&&e();}render(){return null}}function Du(e){const[r,n]=function(){const e=t.useContext(ss);if(null===e)return [!0,null];const{isPresent:r,onExitComplete:n,register:s}=e,o=t.useId();return t.useEffect((()=>s(o)),[]),!r&&n?[!1,()=>n&&n(o)]:[!0]}(),s=t.useContext(bs);return t.createElement(Au,{...e,layoutGroup:s,switchLayoutGroup:t.useContext(xs),isPresent:r,safeToRemove:n})}const Iu={borderRadius:{...ku,applyTo:["borderTopLeftRadius","borderTopRightRadius","borderBottomLeftRadius","borderBottomRightRadius"]},borderTopLeftRadius:ku,borderTopRightRadius:ku,borderBottomLeftRadius:ku,borderBottomRightRadius:ku,boxShadow:Mu},Vu=["TopLeft","TopRight","BottomLeft","BottomRight"],Lu=Vu.length,Ku=e=>"string"==typeof e?parseFloat(e):e,Ru=e=>"number"==typeof e||Xs.test(e);function Nu(e,t){return void 0!==e[t]?e[t]:e.borderRadius}const ju=Ou(0,.5,Na),Fu=Ou(.5,.95,Ko);function Ou(e,t,r){return n=>n<e?0:n>t?1:r(gi(e,t,n))}function Bu(e,t){e.min=t.min,e.max=t.max;}function Wu(e,t){Bu(e.x,t.x),Bu(e.y,t.y);}function zu(e,t,r,n,s){return e=cu(e-=t,1/r,n),void 0!==s&&(e=cu(e,1/s,n)),e}function Uu(e,t,[r,n,s],o,a){!function(e,t=0,r=1,n=.5,s,o=e,a=e){Ys.test(t)&&(t=parseFloat(t),t=Xa(a.min,a.max,t/100)-a.min);if("number"!=typeof t)return;let i=Xa(o.min,o.max,n);e===o&&(i-=t),e.min=zu(e.min,t,r,i,s),e.max=zu(e.max,t,r,i,s);}(e,t[r],t[n],t[s],t.scale,o,a);}const Hu=["x","scaleX","originX"],$u=["y","scaleY","originY"];function _u(e,t,r,n){Uu(e.x,t,Hu,r?r.x:void 0,n?n.x:void 0),Uu(e.y,t,$u,r?r.y:void 0,n?n.y:void 0);}function Gu(e){return 0===e.translate&&1===e.scale}function qu(e){return Gu(e.x)&&Gu(e.y)}function Yu(e,t){return Math.round(e.x.min)===Math.round(t.x.min)&&Math.round(e.x.max)===Math.round(t.x.max)&&Math.round(e.y.min)===Math.round(t.y.min)&&Math.round(e.y.max)===Math.round(t.y.max)}function Xu(e){return Ul(e.x)/Ul(e.y)}class Zu{constructor(){this.members=[];}add(e){cl(this.members,e),e.scheduleRender();}remove(e){if(dl(this.members,e),e===this.prevLead&&(this.prevLead=void 0),e===this.lead){const e=this.members[this.members.length-1];e&&this.promote(e);}}relegate(e){const t=this.members.findIndex((t=>e===t));if(0===t)return !1;let r;for(let e=t;e>=0;e--){const t=this.members[e];if(!1!==t.isPresent){r=t;break}}return !!r&&(this.promote(r),!0)}promote(e,t){const r=this.lead;if(e!==r&&(this.prevLead=r,this.lead=e,e.show(),r)){r.instance&&r.scheduleRender(),e.scheduleRender(),e.resumeFrom=r,t&&(e.resumeFrom.preserveOpacity=!0),r.snapshot&&(e.snapshot=r.snapshot,e.snapshot.latestValues=r.animationValues||r.latestValues),e.root&&e.root.isUpdating&&(e.isLayoutDirty=!0);const{crossfade:n}=e.options;!1===n&&r.hide();}}exitAnimationComplete(){this.members.forEach((e=>{const{options:t,resumingFrom:r}=e;t.onExitComplete&&t.onExitComplete(),r&&r.options.onExitComplete&&r.options.onExitComplete();}));}scheduleRender(){this.members.forEach((e=>{e.instance&&e.scheduleRender(!1);}));}removeLeadSnapshot(){this.lead&&this.lead.snapshot&&(this.lead.snapshot=void 0);}}function Ju(e,t,r){let n="";const s=e.x.translate/t.x,o=e.y.translate/t.y;if((s||o)&&(n=`translate3d(${s}px, ${o}px, 0) `),1===t.x&&1===t.y||(n+=`scale(${1/t.x}, ${1/t.y}) `),r){const{rotate:e,rotateX:t,rotateY:s}=r;e&&(n+=`rotate(${e}deg) `),t&&(n+=`rotateX(${t}deg) `),s&&(n+=`rotateY(${s}deg) `);}const a=e.x.scale*t.x,i=e.y.scale*t.y;return 1===a&&1===i||(n+=`scale(${a}, ${i})`),n||"none"}const Qu=(e,t)=>e.depth-t.depth;class ec{constructor(){this.children=[],this.isDirty=!1;}add(e){cl(this.children,e),this.isDirty=!0;}remove(e){dl(this.children,e),this.isDirty=!0;}forEach(e){this.isDirty&&this.children.sort(Qu),this.isDirty=!1,this.children.forEach(e);}}const tc=["","X","Y","Z"];let rc=0;const nc={type:"projectionFrame",totalNodes:0,resolvedTargetDeltas:0,recalculatedProjection:0};function sc({attachResizeListener:e,defaultParent:t,measureScroll:r,checkIsScrollRoot:n,resetTransform:s}){return class{constructor(e={},r=(null==t?void 0:t())){this.id=rc++,this.animationId=0,this.children=new Set,this.options={},this.isTreeAnimating=!1,this.isAnimationBlocked=!1,this.isLayoutDirty=!1,this.isProjectionDirty=!1,this.isSharedProjectionDirty=!1,this.isTransformDirty=!1,this.updateManuallyBlocked=!1,this.updateBlockedByResize=!1,this.isUpdating=!1,this.isSVG=!1,this.needsReset=!1,this.shouldResetTransform=!1,this.treeScale={x:1,y:1},this.eventHandlers=new Map,this.hasTreeAnimated=!1,this.updateScheduled=!1,this.checkUpdateFailed=()=>{this.isUpdating&&(this.isUpdating=!1,this.clearAllSnapshots());},this.updateProjection=()=>{var e;nc.totalNodes=nc.resolvedTargetDeltas=nc.recalculatedProjection=0,this.nodes.forEach(ic),this.nodes.forEach(fc),this.nodes.forEach(mc),this.nodes.forEach(lc),e=nc,window.MotionDebug&&window.MotionDebug.record(e);},this.hasProjected=!1,this.isVisible=!0,this.animationProgress=0,this.sharedNodes=new Map,this.latestValues=e,this.root=r?r.root||r:this,this.path=r?[...r.path,r]:[],this.parent=r,this.depth=r?r.depth+1:0;for(let e=0;e<this.path.length;e++)this.path[e].shouldResetTransform=!0;this.root===this&&(this.nodes=new ec);}addEventListener(e,t){return this.eventHandlers.has(e)||this.eventHandlers.set(e,new pl),this.eventHandlers.get(e).add(t)}notifyListeners(e,...t){const r=this.eventHandlers.get(e);r&&r.notify(...t);}hasListeners(e){return this.eventHandlers.has(e)}mount(t,r=this.root.hasTreeAnimated){if(this.instance)return;var n;this.isSVG=(n=t)instanceof SVGElement&&"svg"!==n.tagName,this.instance=t;const{layoutId:s,layout:o,visualElement:a}=this.options;if(a&&!a.current&&a.mount(t),this.root.nodes.add(this),this.parent&&this.parent.children.add(this),r&&(o||s)&&(this.isLayoutDirty=!0),e){let r;const n=()=>this.root.updateBlockedByResize=!1;e(t,(()=>{this.root.updateBlockedByResize=!0,r&&r(),r=function(e,t){const r=performance.now(),n=({timestamp:s})=>{const o=s-r;o>=t&&(Fo(n),e(o-t));};return jo.read(n,!0),()=>Fo(n)}(n,250),Eu.hasAnimatedSinceResize&&(Eu.hasAnimatedSinceResize=!1,this.nodes.forEach(hc));}));}s&&this.root.registerSharedNode(s,this),!1!==this.options.animate&&a&&(s||o)&&this.addEventListener("didUpdate",(({delta:e,hasLayoutChanged:t,hasRelativeTargetChanged:r,layout:n})=>{if(this.isTreeAnimationBlocked())return this.target=void 0,void(this.relativeTarget=void 0);const s=this.options.transition||a.getDefaultTransition()||wc,{onLayoutAnimationStart:o,onLayoutAnimationComplete:i}=a.getProps(),l=!this.targetLayout||!Yu(this.targetLayout,n)||r,u=!t&&r;if(this.options.layoutRoot||this.resumeFrom&&this.resumeFrom.instance||u||t&&(l||!this.currentAnimation)){this.resumeFrom&&(this.resumingFrom=this.resumeFrom,this.resumingFrom.resumingFrom=void 0),this.setAnimationOrigin(e,u);const t={...al(s,"layout"),onPlay:o,onComplete:i};(a.shouldReduceMotion||this.options.layoutRoot)&&(t.delay=0,t.type=!1),this.startAnimation(t);}else t||hc(this),this.isLead()&&this.options.onExitComplete&&this.options.onExitComplete();this.targetLayout=n;}));}unmount(){this.options.layoutId&&this.willUpdate(),this.root.nodes.remove(this);const e=this.getStack();e&&e.remove(this),this.parent&&this.parent.children.delete(this),this.instance=void 0,Fo(this.updateProjection);}blockUpdate(){this.updateManuallyBlocked=!0;}unblockUpdate(){this.updateManuallyBlocked=!1;}isUpdateBlocked(){return this.updateManuallyBlocked||this.updateBlockedByResize}isTreeAnimationBlocked(){return this.isAnimationBlocked||this.parent&&this.parent.isTreeAnimationBlocked()||!1}startUpdate(){this.isUpdateBlocked()||(this.isUpdating=!0,this.nodes&&this.nodes.forEach(gc),this.animationId++);}getTransformTemplate(){const{visualElement:e}=this.options;return e&&e.getProps().transformTemplate}willUpdate(e=!0){if(this.root.hasTreeAnimated=!0,this.root.isUpdateBlocked())return void(this.options.onExitComplete&&this.options.onExitComplete());if(!this.root.isUpdating&&this.root.startUpdate(),this.isLayoutDirty)return;this.isLayoutDirty=!0;for(let e=0;e<this.path.length;e++){const t=this.path[e];t.shouldResetTransform=!0,t.updateScroll("snapshot"),t.options.layoutRoot&&t.willUpdate(!1);}const{layoutId:t,layout:r}=this.options;if(void 0===t&&!r)return;const n=this.getTransformTemplate();this.prevTransformTemplateValue=n?n(this.latestValues,""):void 0,this.updateSnapshot(),e&&this.notifyListeners("willUpdate");}update(){this.updateScheduled=!1;if(this.isUpdateBlocked())return this.unblockUpdate(),this.clearAllSnapshots(),void this.nodes.forEach(cc);this.isUpdating||this.nodes.forEach(dc),this.isUpdating=!1,this.nodes.forEach(pc),this.nodes.forEach(oc),this.nodes.forEach(ac),this.clearAllSnapshots();const e=performance.now();Oo.delta=Fs(0,1e3/60,e-Oo.timestamp),Oo.timestamp=e,Oo.isProcessing=!0,Bo.update.process(Oo),Bo.preRender.process(Oo),Bo.render.process(Oo),Oo.isProcessing=!1;}didUpdate(){this.updateScheduled||(this.updateScheduled=!0,queueMicrotask((()=>this.update())));}clearAllSnapshots(){this.nodes.forEach(uc),this.sharedNodes.forEach(vc);}scheduleUpdateProjection(){jo.preRender(this.updateProjection,!1,!0);}scheduleCheckAfterUnmount(){jo.postRender((()=>{this.isLayoutDirty?this.root.didUpdate():this.root.checkUpdateFailed();}));}updateSnapshot(){!this.snapshot&&this.instance&&(this.snapshot=this.measure());}updateLayout(){if(!this.instance)return;if(this.updateScroll(),!(this.options.alwaysMeasureLayout&&this.isLead()||this.isLayoutDirty))return;if(this.resumeFrom&&!this.resumeFrom.instance)for(let e=0;e<this.path.length;e++){this.path[e].updateScroll();}const e=this.layout;this.layout=this.measure(!1),this.layoutCorrected=ru(),this.isLayoutDirty=!1,this.projectionDelta=void 0,this.notifyListeners("measure",this.layout.layoutBox);const{visualElement:t}=this.options;t&&t.notify("LayoutMeasure",this.layout.layoutBox,e?e.layoutBox:void 0);}updateScroll(e="measure"){let t=Boolean(this.options.layoutScroll&&this.instance);this.scroll&&this.scroll.animationId===this.root.animationId&&this.scroll.phase===e&&(t=!1),t&&(this.scroll={animationId:this.root.animationId,phase:e,isRoot:n(this.instance),offset:r(this.instance)});}resetTransform(){if(!s)return;const e=this.isLayoutDirty||this.shouldResetTransform,t=this.projectionDelta&&!qu(this.projectionDelta),r=this.getTransformTemplate(),n=r?r(this.latestValues,""):void 0,o=n!==this.prevTransformTemplateValue;e&&(t||iu(this.latestValues)||o)&&(s(this.instance,n),this.shouldResetTransform=!1,this.scheduleRender());}measure(e=!0){const t=this.measurePageBox();let r=this.removeElementScroll(t);var n;return e&&(r=this.removeTransform(r)),Cc((n=r).x),Cc(n.y),{animationId:this.root.animationId,measuredBox:t,layoutBox:r,latestValues:{},source:this.id}}measurePageBox(){const{visualElement:e}=this.options;if(!e)return ru();const t=e.measureViewportBox(),{scroll:r}=this.root;return r&&(mu(t.x,r.offset.x),mu(t.y,r.offset.y)),t}removeElementScroll(e){const t=ru();Wu(t,e);for(let r=0;r<this.path.length;r++){const n=this.path[r],{scroll:s,options:o}=n;if(n!==this.root&&s&&o.layoutScroll){if(s.isRoot){Wu(t,e);const{scroll:r}=this.root;r&&(mu(t.x,-r.offset.x),mu(t.y,-r.offset.y));}mu(t.x,s.offset.x),mu(t.y,s.offset.y);}}return t}applyTransform(e,t=!1){const r=ru();Wu(r,e);for(let e=0;e<this.path.length;e++){const n=this.path[e];!t&&n.options.layoutScroll&&n.scroll&&n!==n.root&&bu(r,{x:-n.scroll.offset.x,y:-n.scroll.offset.y}),iu(n.latestValues)&&bu(r,n.latestValues);}return iu(this.latestValues)&&bu(r,this.latestValues),r}removeTransform(e){const t=ru();Wu(t,e);for(let e=0;e<this.path.length;e++){const r=this.path[e];if(!r.instance)continue;if(!iu(r.latestValues))continue;au(r.latestValues)&&r.updateSnapshot();const n=ru();Wu(n,r.measurePageBox()),_u(t,r.latestValues,r.snapshot?r.snapshot.layoutBox:void 0,n);}return iu(this.latestValues)&&_u(t,this.latestValues),t}setTargetDelta(e){this.targetDelta=e,this.root.scheduleUpdateProjection(),this.isProjectionDirty=!0;}setOptions(e){this.options={...this.options,...e,crossfade:void 0===e.crossfade||e.crossfade};}clearMeasurements(){this.scroll=void 0,this.layout=void 0,this.snapshot=void 0,this.prevTransformTemplateValue=void 0,this.targetDelta=void 0,this.target=void 0,this.isLayoutDirty=!1;}forceRelativeParentToResolveTarget(){this.relativeParent&&this.relativeParent.resolvedRelativeTargetAt!==Oo.timestamp&&this.relativeParent.resolveTargetDelta(!0);}resolveTargetDelta(e=!1){var t;const r=this.getLead();this.isProjectionDirty||(this.isProjectionDirty=r.isProjectionDirty),this.isTransformDirty||(this.isTransformDirty=r.isTransformDirty),this.isSharedProjectionDirty||(this.isSharedProjectionDirty=r.isSharedProjectionDirty);const n=Boolean(this.resumingFrom)||this!==r;if(!(e||n&&this.isSharedProjectionDirty||this.isProjectionDirty||(null===(t=this.parent)||void 0===t?void 0:t.isProjectionDirty)||this.attemptToResolveRelativeTarget))return;const{layout:s,layoutId:o}=this.options;if(this.layout&&(s||o)){if(this.resolvedRelativeTargetAt=Oo.timestamp,!this.targetDelta&&!this.relativeTarget){const e=this.getClosestProjectingParent();e&&e.layout&&1!==this.animationProgress?(this.relativeParent=e,this.forceRelativeParentToResolveTarget(),this.relativeTarget=ru(),this.relativeTargetOrigin=ru(),Yl(this.relativeTargetOrigin,this.layout.layoutBox,e.layout.layoutBox),Wu(this.relativeTarget,this.relativeTargetOrigin)):this.relativeParent=this.relativeTarget=void 0;}if(this.relativeTarget||this.targetDelta){var a,i,l;if(this.target||(this.target=ru(),this.targetWithTransforms=ru()),this.relativeTarget&&this.relativeTargetOrigin&&this.relativeParent&&this.relativeParent.target?(this.forceRelativeParentToResolveTarget(),a=this.target,i=this.relativeTarget,l=this.relativeParent.target,Gl(a.x,i.x,l.x),Gl(a.y,i.y,l.y)):this.targetDelta?(Boolean(this.resumingFrom)?this.target=this.applyTransform(this.layout.layoutBox):Wu(this.target,this.layout.layoutBox),hu(this.target,this.targetDelta)):Wu(this.target,this.layout.layoutBox),this.attemptToResolveRelativeTarget){this.attemptToResolveRelativeTarget=!1;const e=this.getClosestProjectingParent();e&&Boolean(e.resumingFrom)===Boolean(this.resumingFrom)&&!e.options.layoutScroll&&e.target&&1!==this.animationProgress?(this.relativeParent=e,this.forceRelativeParentToResolveTarget(),this.relativeTarget=ru(),this.relativeTargetOrigin=ru(),Yl(this.relativeTargetOrigin,this.target,e.target),Wu(this.relativeTarget,this.relativeTargetOrigin)):this.relativeParent=this.relativeTarget=void 0;}nc.resolvedTargetDeltas++;}}}getClosestProjectingParent(){if(this.parent&&!au(this.parent.latestValues)&&!lu(this.parent.latestValues))return this.parent.isProjecting()?this.parent:this.parent.getClosestProjectingParent()}isProjecting(){return Boolean((this.relativeTarget||this.targetDelta||this.options.layoutRoot)&&this.layout)}calcProjection(){var e;const t=this.getLead(),r=Boolean(this.resumingFrom)||this!==t;let n=!0;if((this.isProjectionDirty||(null===(e=this.parent)||void 0===e?void 0:e.isProjectionDirty))&&(n=!1),r&&(this.isSharedProjectionDirty||this.isTransformDirty)&&(n=!1),this.resolvedRelativeTargetAt===Oo.timestamp&&(n=!1),n)return;const{layout:s,layoutId:o}=this.options;if(this.isTreeAnimating=Boolean(this.parent&&this.parent.isTreeAnimating||this.currentAnimation||this.pendingAnimation),this.isTreeAnimating||(this.targetDelta=this.relativeTarget=void 0),!this.layout||!s&&!o)return;Wu(this.layoutCorrected,this.layout.layoutBox);const a=this.treeScale.x,i=this.treeScale.y;!function(e,t,r,n=!1){const s=r.length;if(!s)return;let o,a;t.x=t.y=1;for(let i=0;i<s;i++){o=r[i],a=o.projectionDelta;const s=o.instance;s&&s.style&&"contents"===s.style.display||(n&&o.options.layoutScroll&&o.scroll&&o!==o.root&&bu(e,{x:-o.scroll.offset.x,y:-o.scroll.offset.y}),a&&(t.x*=a.x.scale,t.y*=a.y.scale,hu(e,a)),n&&iu(o.latestValues)&&bu(e,o.latestValues));}t.x=fu(t.x),t.y=fu(t.y);}(this.layoutCorrected,this.treeScale,this.path,r),!t.layout||t.target||1===this.treeScale.x&&1===this.treeScale.y||(t.target=t.layout.layoutBox);const{target:l}=t;if(!l)return void(this.projectionTransform&&(this.projectionDelta=tu(),this.projectionTransform="none",this.scheduleRender()));this.projectionDelta||(this.projectionDelta=tu(),this.projectionDeltaWithTransform=tu());const u=this.projectionTransform;_l(this.projectionDelta,this.layoutCorrected,l,this.latestValues),this.projectionTransform=Ju(this.projectionDelta,this.treeScale),this.projectionTransform===u&&this.treeScale.x===a&&this.treeScale.y===i||(this.hasProjected=!0,this.scheduleRender(),this.notifyListeners("projectionUpdate",l)),nc.recalculatedProjection++;}hide(){this.isVisible=!1;}show(){this.isVisible=!0;}scheduleRender(e=!0){if(this.options.scheduleRender&&this.options.scheduleRender(),e){const e=this.getStack();e&&e.scheduleRender();}this.resumingFrom&&!this.resumingFrom.instance&&(this.resumingFrom=void 0);}setAnimationOrigin(e,t=!1){const r=this.snapshot,n=r?r.latestValues:{},s={...this.latestValues},o=tu();this.relativeParent&&this.relativeParent.options.layoutRoot||(this.relativeTarget=this.relativeTargetOrigin=void 0),this.attemptToResolveRelativeTarget=!t;const a=ru(),i=(r?r.source:void 0)!==(this.layout?this.layout.source:void 0),l=this.getStack(),u=!l||l.members.length<=1,c=Boolean(i&&!u&&!0===this.options.crossfade&&!this.path.some(xc));let d;this.animationProgress=0,this.mixTargetDelta=t=>{const r=t/1e3;yc(o.x,e.x,r),yc(o.y,e.y,r),this.setTargetDelta(o),this.relativeTarget&&this.relativeTargetOrigin&&this.layout&&this.relativeParent&&this.relativeParent.layout&&(Yl(a,this.layout.layoutBox,this.relativeParent.layout.layoutBox),function(e,t,r,n){bc(e.x,t.x,r.x,n),bc(e.y,t.y,r.y,n);}(this.relativeTarget,this.relativeTargetOrigin,a,r),d&&function(e,t){return e.x.min===t.x.min&&e.x.max===t.x.max&&e.y.min===t.y.min&&e.y.max===t.y.max}(this.relativeTarget,d)&&(this.isProjectionDirty=!1),d||(d=ru()),Wu(d,this.relativeTarget)),i&&(this.animationValues=s,function(e,t,r,n,s,o){s?(e.opacity=Xa(0,void 0!==r.opacity?r.opacity:1,ju(n)),e.opacityExit=Xa(void 0!==t.opacity?t.opacity:1,0,Fu(n))):o&&(e.opacity=Xa(void 0!==t.opacity?t.opacity:1,void 0!==r.opacity?r.opacity:1,n));for(let s=0;s<Lu;s++){const o=`border${Vu[s]}Radius`;let a=Nu(t,o),i=Nu(r,o);void 0===a&&void 0===i||(a||(a=0),i||(i=0),0===a||0===i||Ru(a)===Ru(i)?(e[o]=Math.max(Xa(Ku(a),Ku(i),n),0),(Ys.test(i)||Ys.test(a))&&(e[o]+="%")):e[o]=i);}(t.rotate||r.rotate)&&(e.rotate=Xa(t.rotate||0,r.rotate||0,n));}(s,n,this.latestValues,r,c,u)),this.root.scheduleUpdateProjection(),this.scheduleRender(),this.animationProgress=r;},this.mixTargetDelta(this.options.layoutRoot?1e3:0);}startAnimation(e){this.notifyListeners("animationStart"),this.currentAnimation&&this.currentAnimation.stop(),this.resumingFrom&&this.resumingFrom.currentAnimation&&this.resumingFrom.currentAnimation.stop(),this.pendingAnimation&&(Fo(this.pendingAnimation),this.pendingAnimation=void 0),this.pendingAnimation=jo.update((()=>{Eu.hasAnimatedSinceResize=!0,this.currentAnimation=function(e,t,r){const n=Is(e)?e:gl(e);return n.start(il("",n,t,r)),n.animation}(0,1e3,{...e,onUpdate:t=>{this.mixTargetDelta(t),e.onUpdate&&e.onUpdate(t);},onComplete:()=>{e.onComplete&&e.onComplete(),this.completeAnimation();}}),this.resumingFrom&&(this.resumingFrom.currentAnimation=this.currentAnimation),this.pendingAnimation=void 0;}));}completeAnimation(){this.resumingFrom&&(this.resumingFrom.currentAnimation=void 0,this.resumingFrom.preserveOpacity=void 0);const e=this.getStack();e&&e.exitAnimationComplete(),this.resumingFrom=this.currentAnimation=this.animationValues=void 0,this.notifyListeners("animationComplete");}finishAnimation(){this.currentAnimation&&(this.mixTargetDelta&&this.mixTargetDelta(1e3),this.currentAnimation.stop()),this.completeAnimation();}applyTransformsToTarget(){const e=this.getLead();let{targetWithTransforms:t,target:r,layout:n,latestValues:s}=e;if(t&&r&&n){if(this!==e&&this.layout&&n&&Ec(this.options.animationType,this.layout.layoutBox,n.layoutBox)){r=this.target||ru();const t=Ul(this.layout.layoutBox.x);r.x.min=e.target.x.min,r.x.max=r.x.min+t;const n=Ul(this.layout.layoutBox.y);r.y.min=e.target.y.min,r.y.max=r.y.min+n;}Wu(t,r),bu(t,s),_l(this.projectionDeltaWithTransform,this.layoutCorrected,t,s);}}registerSharedNode(e,t){this.sharedNodes.has(e)||this.sharedNodes.set(e,new Zu);this.sharedNodes.get(e).add(t);const r=t.options.initialPromotionConfig;t.promote({transition:r?r.transition:void 0,preserveFollowOpacity:r&&r.shouldPreserveFollowOpacity?r.shouldPreserveFollowOpacity(t):void 0});}isLead(){const e=this.getStack();return !e||e.lead===this}getLead(){var e;const{layoutId:t}=this.options;return t&&(null===(e=this.getStack())||void 0===e?void 0:e.lead)||this}getPrevLead(){var e;const{layoutId:t}=this.options;return t?null===(e=this.getStack())||void 0===e?void 0:e.prevLead:void 0}getStack(){const{layoutId:e}=this.options;if(e)return this.root.sharedNodes.get(e)}promote({needsReset:e,transition:t,preserveFollowOpacity:r}={}){const n=this.getStack();n&&n.promote(this,r),e&&(this.projectionDelta=void 0,this.needsReset=!0),t&&this.setOptions({transition:t});}relegate(){const e=this.getStack();return !!e&&e.relegate(this)}resetRotation(){const{visualElement:e}=this.options;if(!e)return;let t=!1;const{latestValues:r}=e;if((r.rotate||r.rotateX||r.rotateY||r.rotateZ)&&(t=!0),!t)return;const n={};for(let t=0;t<tc.length;t++){const s="rotate"+tc[t];r[s]&&(n[s]=r[s],e.setStaticValue(s,0));}e.render();for(const t in n)e.setStaticValue(t,n[t]);e.scheduleRender();}getProjectionStyles(e={}){var t,r;const n={};if(!this.instance||this.isSVG)return n;if(!this.isVisible)return {visibility:"hidden"};n.visibility="";const s=this.getTransformTemplate();if(this.needsReset)return this.needsReset=!1,n.opacity="",n.pointerEvents=Io(e.pointerEvents)||"",n.transform=s?s(this.latestValues,""):"none",n;const o=this.getLead();if(!this.projectionDelta||!this.layout||!o.target){const t={};return this.options.layoutId&&(t.opacity=void 0!==this.latestValues.opacity?this.latestValues.opacity:1,t.pointerEvents=Io(e.pointerEvents)||""),this.hasProjected&&!iu(this.latestValues)&&(t.transform=s?s({},""):"none",this.hasProjected=!1),t}const a=o.animationValues||o.latestValues;this.applyTransformsToTarget(),n.transform=Ju(this.projectionDeltaWithTransform,this.treeScale,a),s&&(n.transform=s(a,n.transform));const{x:i,y:l}=this.projectionDelta;n.transformOrigin=`${100*i.origin}% ${100*l.origin}% 0`,o.animationValues?n.opacity=o===this?null!==(r=null!==(t=a.opacity)&&void 0!==t?t:this.latestValues.opacity)&&void 0!==r?r:1:this.preserveOpacity?this.latestValues.opacity:a.opacityExit:n.opacity=o===this?void 0!==a.opacity?a.opacity:"":void 0!==a.opacityExit?a.opacityExit:0;for(const e in ks){if(void 0===a[e])continue;const{correct:t,applyTo:r}=ks[e],s="none"===n.transform?a[e]:t(a[e],o);if(r){const e=r.length;for(let t=0;t<e;t++)n[r[t]]=s;}else n[e]=s;}return this.options.layoutId&&(n.pointerEvents=o===this?Io(e.pointerEvents)||"":"none"),n}clearSnapshot(){this.resumeFrom=this.snapshot=void 0;}resetTree(){this.root.nodes.forEach((e=>{var t;return null===(t=e.currentAnimation)||void 0===t?void 0:t.stop()})),this.root.nodes.forEach(cc),this.root.sharedNodes.clear();}}}function oc(e){e.updateLayout();}function ac(e){var t;const r=(null===(t=e.resumeFrom)||void 0===t?void 0:t.snapshot)||e.snapshot;if(e.isLead()&&e.layout&&r&&e.hasListeners("didUpdate")){const{layoutBox:t,measuredBox:n}=e.layout,{animationType:s}=e.options,o=r.source!==e.layout.source;"size"===s?nu((e=>{const n=o?r.measuredBox[e]:r.layoutBox[e],s=Ul(n);n.min=t[e].min,n.max=n.min+s;})):Ec(s,r.layoutBox,t)&&nu((n=>{const s=o?r.measuredBox[n]:r.layoutBox[n],a=Ul(t[n]);s.max=s.min+a,e.relativeTarget&&!e.currentAnimation&&(e.isProjectionDirty=!0,e.relativeTarget[n].max=e.relativeTarget[n].min+a);}));const a=tu();_l(a,t,r.layoutBox);const i=tu();o?_l(i,e.applyTransform(n,!0),r.measuredBox):_l(i,t,r.layoutBox);const l=!qu(a);let u=!1;if(!e.resumeFrom){const n=e.getClosestProjectingParent();if(n&&!n.resumeFrom){const{snapshot:s,layout:o}=n;if(s&&o){const a=ru();Yl(a,r.layoutBox,s.layoutBox);const i=ru();Yl(i,t,o.layoutBox),Yu(a,i)||(u=!0),n.options.layoutRoot&&(e.relativeTarget=i,e.relativeTargetOrigin=a,e.relativeParent=n);}}}e.notifyListeners("didUpdate",{layout:t,snapshot:r,delta:i,layoutDelta:a,hasLayoutChanged:l,hasRelativeTargetChanged:u});}else if(e.isLead()){const{onExitComplete:t}=e.options;t&&t();}e.options.transition=void 0;}function ic(e){nc.totalNodes++,e.parent&&(e.isProjecting()||(e.isProjectionDirty=e.parent.isProjectionDirty),e.isSharedProjectionDirty||(e.isSharedProjectionDirty=Boolean(e.isProjectionDirty||e.parent.isProjectionDirty||e.parent.isSharedProjectionDirty)),e.isTransformDirty||(e.isTransformDirty=e.parent.isTransformDirty));}function lc(e){e.isProjectionDirty=e.isSharedProjectionDirty=e.isTransformDirty=!1;}function uc(e){e.clearSnapshot();}function cc(e){e.clearMeasurements();}function dc(e){e.isLayoutDirty=!1;}function pc(e){const{visualElement:t}=e.options;t&&t.getProps().onBeforeLayoutMeasure&&t.notify("BeforeLayoutMeasure"),e.resetTransform();}function hc(e){e.finishAnimation(),e.targetDelta=e.relativeTarget=e.target=void 0,e.isProjectionDirty=!0;}function fc(e){e.resolveTargetDelta();}function mc(e){e.calcProjection();}function gc(e){e.resetRotation();}function vc(e){e.removeLeadSnapshot();}function yc(e,t,r){e.translate=Xa(t.translate,0,r),e.scale=Xa(t.scale,1,r),e.origin=t.origin,e.originPoint=t.originPoint;}function bc(e,t,r,n){e.min=Xa(t.min,r.min,n),e.max=Xa(t.max,r.max,n);}function xc(e){return e.animationValues&&void 0!==e.animationValues.opacityExit}const wc={duration:.45,ease:[.4,0,.1,1]},Pc=e=>"undefined"!=typeof navigator&&navigator.userAgent.toLowerCase().includes(e),Tc=Pc("applewebkit/")&&!Pc("chrome/")?Math.round:Ko;function Cc(e){e.min=Tc(e.min),e.max=Tc(e.max);}function Ec(e,t,r){return "position"===e||"preserve-aspect"===e&&!Hl(Xu(t),Xu(r),.2)}const Sc=sc({attachResizeListener:(e,t)=>Uo(e,"resize",t),measureScroll:()=>({x:document.documentElement.scrollLeft||document.body.scrollLeft,y:document.documentElement.scrollTop||document.body.scrollTop}),checkIsScrollRoot:()=>!0}),kc={current:void 0},Mc=sc({measureScroll:e=>({x:e.scrollLeft,y:e.scrollTop}),defaultParent:()=>{if(!kc.current){const e=new Sc({});e.mount(window),e.setOptions({layoutScroll:!0}),kc.current=e;}return kc.current},resetTransform:(e,t)=>{e.style.transform=void 0!==t?t:"none";},checkIsScrollRoot:e=>Boolean("fixed"===window.getComputedStyle(e).position)}),Ac={pan:{Feature:class extends ta{constructor(){super(...arguments),this.removePointerDownListener=Ko;}onPointerDown(e){this.session=new Nl(e,this.createPanHandlers(),{transformPagePoint:this.node.getTransformPagePoint()});}createPanHandlers(){const{onPanSessionStart:e,onPanStart:t,onPan:r,onPanEnd:n}=this.node.getProps();return {onSessionStart:Cu(e),onStart:Cu(t),onMove:r,onEnd:(e,t)=>{delete this.session,n&&jo.update((()=>n(e,t)));}}}mount(){this.removePointerDownListener=Go(this.node.current,"pointerdown",(e=>this.onPointerDown(e)));}update(){this.session&&this.session.updateHandlers(this.createPanHandlers());}unmount(){this.removePointerDownListener(),this.session&&this.session.end();}}},drag:{Feature:class extends ta{constructor(e){super(e),this.removeGroupControls=Ko,this.removeListeners=Ko,this.controls=new Pu(e);}mount(){const{dragControls:e}=this.node.getProps();e&&(this.removeGroupControls=e.subscribe(this.controls)),this.removeListeners=this.controls.addListeners()||Ko;}unmount(){this.removeGroupControls(),this.removeListeners();}},ProjectionNode:Mc,MeasureLayout:Du}},Dc=/var\((--[a-zA-Z0-9-_]+),? ?([a-zA-Z0-9 ()%#.,-]+)?\)/;const Ic=4;function Vc(e,t,r=1){ga(r<=Ic,`Max CSS variable fallback depth detected in property "${e}". This may indicate a circular fallback dependency.`);const[n,s]=function(e){const t=Dc.exec(e);if(!t)return [,];const[,r,n]=t;return [r,n]}(e);if(!n)return;const o=window.getComputedStyle(t).getPropertyValue(n);if(o){const e=o.trim();return ul(e)?parseFloat(e):e}return Ns(s)?Vc(s,t,r+1):s}const Lc=new Set(["width","height","top","left","right","bottom","x","y","translateX","translateY"]),Kc=e=>Lc.has(e),Rc=e=>e===Os||e===Xs,Nc=(e,t)=>parseFloat(e.split(", ")[t]),jc=(e,t)=>(r,{transform:n})=>{if("none"===n||!n)return 0;const s=n.match(/^matrix3d\((.+)\)$/);if(s)return Nc(s[1],t);{const t=n.match(/^matrix\((.+)\)$/);return t?Nc(t[1],e):0}},Fc=new Set(["x","y","z"]),Oc=Ms.filter((e=>!Fc.has(e)));const Bc={width:({x:e},{paddingLeft:t="0",paddingRight:r="0"})=>e.max-e.min-parseFloat(t)-parseFloat(r),height:({y:e},{paddingTop:t="0",paddingBottom:r="0"})=>e.max-e.min-parseFloat(t)-parseFloat(r),top:(e,{top:t})=>parseFloat(t),left:(e,{left:t})=>parseFloat(t),bottom:({y:e},{top:t})=>parseFloat(t)+(e.max-e.min),right:({x:e},{left:t})=>parseFloat(t)+(e.max-e.min),x:jc(4,13),y:jc(5,14)};Bc.translateX=Bc.x,Bc.translateY=Bc.y;const Wc=(e,t,r={},n={})=>{t={...t},n={...n};const s=Object.keys(t).filter(Kc);let o=[],a=!1;const i=[];if(s.forEach((s=>{const l=e.getValue(s);if(!e.hasValue(s))return;let u=r[s],c=bl(u);const d=t[s];let p;if(Mo(d)){const e=d.length,t=null===d[0]?1:0;u=d[t],c=bl(u);for(let r=t;r<e&&null!==d[r];r++)p?ga(bl(d[r])===p,"All keyframes must be of the same type"):(p=bl(d[r]),ga(p===c||Rc(c)&&Rc(p),"Keyframes must be of the same dimension as the current value"));}else p=bl(d);if(c!==p)if(Rc(c)&&Rc(p)){const e=l.get();"string"==typeof e&&l.set(parseFloat(e)),"string"==typeof d?t[s]=parseFloat(d):Array.isArray(d)&&p===Xs&&(t[s]=d.map(parseFloat));}else (null==c?void 0:c.transform)&&(null==p?void 0:p.transform)&&(0===u||0===d)?0===u?l.set(p.transform(u)):t[s]=c.transform(d):(a||(o=function(e){const t=[];return Oc.forEach((r=>{const n=e.getValue(r);void 0!==n&&(t.push([r,n.get()]),n.set(r.startsWith("scale")?1:0));})),t.length&&e.render(),t}(e),a=!0),i.push(s),n[s]=void 0!==n[s]?n[s]:t[s],l.jump(d));})),i.length){const r=i.indexOf("height")>=0?window.pageYOffset:null,s=((e,t,r)=>{const n=t.measureViewportBox(),s=t.current,o=getComputedStyle(s),{display:a}=o,i={};"none"===a&&t.setStaticValue("display",e.display||"block"),r.forEach((e=>{i[e]=Bc[e](n,o);})),t.render();const l=t.measureViewportBox();return r.forEach((r=>{const n=t.getValue(r);n&&n.jump(i[r]),e[r]=Bc[r](l,o);})),e})(t,e,i);return o.length&&o.forEach((([t,r])=>{e.getValue(t).set(r);})),e.render(),os&&null!==r&&window.scrollTo({top:r}),{target:s,transitionEnd:n}}return {target:t,transitionEnd:n}};function zc(e,t,r,n){return (e=>Object.keys(e).some(Kc))(t)?Wc(e,t,r,n):{target:t,transitionEnd:n}}const Uc=(e,t,r,n)=>{const s=function(e,{...t},r){const n=e.current;if(!(n instanceof Element))return {target:t,transitionEnd:r};r&&(r={...r}),e.values.forEach((e=>{const t=e.get();if(!Ns(t))return;const r=Vc(t,n);r&&e.set(r);}));for(const e in t){const s=t[e];if(!Ns(s))continue;const o=Vc(s,n);o&&(t[e]=o,r||(r={}),void 0===r[e]&&(r[e]=s));}return {target:t,transitionEnd:r}}(e,t,n);return zc(e,t=s.target,r,n=s.transitionEnd)},Hc={current:null},$c={current:!1};const _c=new WeakMap,Gc=Object.keys(ys),qc=Gc.length,Yc=["AnimationStart","AnimationComplete","Update","BeforeLayoutMeasure","LayoutMeasure","LayoutAnimationStart","LayoutAnimationComplete"],Xc=ps.length;class Zc{constructor({parent:e,props:t,presenceContext:r,reducedMotionConfig:n,visualState:s},o={}){this.current=null,this.children=new Set,this.isVariantNode=!1,this.isControllingVariants=!1,this.shouldReduceMotion=null,this.values=new Map,this.features={},this.valueSubscriptions=new Map,this.prevMotionValues={},this.events={},this.propEventSubscriptions={},this.notifyUpdate=()=>this.notify("Update",this.latestValues),this.render=()=>{this.current&&(this.triggerBuild(),this.renderInstance(this.current,this.renderState,this.props.style,this.projection));},this.scheduleRender=()=>jo.render(this.render,!1,!0);const{latestValues:a,renderState:i}=s;this.latestValues=a,this.baseTarget={...a},this.initialValues=t.initial?{...a}:{},this.renderState=i,this.parent=e,this.props=t,this.presenceContext=r,this.depth=e?e.depth+1:0,this.reducedMotionConfig=n,this.options=o,this.isControllingVariants=hs(t),this.isVariantNode=fs(t),this.isVariantNode&&(this.variantChildren=new Set),this.manuallyAnimateOnMount=Boolean(e&&e.current);const{willChange:l,...u}=this.scrapeMotionValuesFromProps(t,{});for(const e in u){const t=u[e];void 0!==a[e]&&Is(t)&&(t.set(a[e],!1),ll(l)&&l.add(e));}}scrapeMotionValuesFromProps(e,t){return {}}mount(e){this.current=e,_c.set(e,this),this.projection&&!this.projection.instance&&this.projection.mount(e),this.parent&&this.isVariantNode&&!this.isControllingVariants&&(this.removeFromVariantTree=this.parent.addVariantChild(this)),this.values.forEach(((e,t)=>this.bindToMotionValue(t,e))),$c.current||function(){if($c.current=!0,os)if(window.matchMedia){const e=window.matchMedia("(prefers-reduced-motion)"),t=()=>Hc.current=e.matches;e.addListener(t),t();}else Hc.current=!1;}(),this.shouldReduceMotion="never"!==this.reducedMotionConfig&&("always"===this.reducedMotionConfig||Hc.current),"production"!==process.env.NODE_ENV&&fl(!0!==this.shouldReduceMotion,"You have Reduced Motion enabled on your device. Animations may not appear as expected."),this.parent&&this.parent.children.add(this),this.update(this.props,this.presenceContext);}unmount(){_c.delete(this.current),this.projection&&this.projection.unmount(),Fo(this.notifyUpdate),Fo(this.render),this.valueSubscriptions.forEach((e=>e())),this.removeFromVariantTree&&this.removeFromVariantTree(),this.parent&&this.parent.children.delete(this);for(const e in this.events)this.events[e].clear();for(const e in this.features)this.features[e].unmount();this.current=null;}bindToMotionValue(e,t){const r=As.has(e),n=t.on("change",(t=>{this.latestValues[e]=t,this.props.onUpdate&&jo.update(this.notifyUpdate,!1,!0),r&&this.projection&&(this.projection.isTransformDirty=!0);})),s=t.on("renderRequest",this.scheduleRender);this.valueSubscriptions.set(e,(()=>{n(),s();}));}sortNodePosition(e){return this.current&&this.sortInstanceNodePosition&&this.type===e.type?this.sortInstanceNodePosition(this.current,e.current):0}loadFeatures({children:e,...t},r,n,s){let o,a;if("production"!==process.env.NODE_ENV&&n&&r){const e="You have rendered a `motion` component within a `LazyMotion` component. This will break tree shaking. Import and render a `m` component instead.";t.ignoreStrict?ma(!1,e):ga(!1,e);}for(let e=0;e<qc;e++){const r=Gc[e],{isEnabled:n,Feature:s,ProjectionNode:i,MeasureLayout:l}=ys[r];i&&(o=i),n(t)&&(!this.features[r]&&s&&(this.features[r]=new s(this)),l&&(a=l));}if(!this.projection&&o){this.projection=new o(this.latestValues,this.parent&&this.parent.projection);const{layoutId:e,layout:r,drag:n,dragConstraints:a,layoutScroll:i,layoutRoot:l}=t;this.projection.setOptions({layoutId:e,layout:r,alwaysMeasureLayout:Boolean(n)||a&&ls(a),visualElement:this,scheduleRender:()=>this.scheduleRender(),animationType:"string"==typeof r?r:"both",initialPromotionConfig:s,layoutScroll:i,layoutRoot:l});}return a}updateFeatures(){for(const e in this.features){const t=this.features[e];t.isMounted?t.update():(t.mount(),t.isMounted=!0);}}triggerBuild(){this.build(this.renderState,this.latestValues,this.options,this.props);}measureViewportBox(){return this.current?this.measureInstanceViewportBox(this.current,this.props):ru()}getStaticValue(e){return this.latestValues[e]}setStaticValue(e,t){this.latestValues[e]=t;}makeTargetAnimatable(e,t=!0){return this.makeTargetAnimatableFromInstance(e,this.props,t)}update(e,t){(e.transformTemplate||this.props.transformTemplate)&&this.scheduleRender(),this.prevProps=this.props,this.props=e,this.prevPresenceContext=this.presenceContext,this.presenceContext=t;for(let t=0;t<Yc.length;t++){const r=Yc[t];this.propEventSubscriptions[r]&&(this.propEventSubscriptions[r](),delete this.propEventSubscriptions[r]);const n=e["on"+r];n&&(this.propEventSubscriptions[r]=this.on(r,n));}this.prevMotionValues=function(e,t,r){const{willChange:n}=t;for(const s in t){const o=t[s],a=r[s];if(Is(o))e.addValue(s,o),ll(n)&&n.add(s),"development"===process.env.NODE_ENV&&fl("10.16.5"===o.version,`Attempting to mix Framer Motion versions ${o.version} with 10.16.5 may not work as expected.`);else if(Is(a))e.addValue(s,gl(o,{owner:e})),ll(n)&&n.remove(s);else if(a!==o)if(e.hasValue(s)){const t=e.getValue(s);!t.hasAnimated&&t.set(o);}else {const t=e.getStaticValue(s);e.addValue(s,gl(void 0!==t?t:o,{owner:e}));}}for(const n in r)void 0===t[n]&&e.removeValue(n);return t}(this,this.scrapeMotionValuesFromProps(e,this.prevProps),this.prevMotionValues),this.handleChildMotionValue&&this.handleChildMotionValue();}getProps(){return this.props}getVariant(e){return this.props.variants?this.props.variants[e]:void 0}getDefaultTransition(){return this.props.transition}getTransformPagePoint(){return this.props.transformPagePoint}getClosestVariantNode(){return this.isVariantNode?this:this.parent?this.parent.getClosestVariantNode():void 0}getVariantContext(e=!1){if(e)return this.parent?this.parent.getVariantContext():void 0;if(!this.isControllingVariants){const e=this.parent&&this.parent.getVariantContext()||{};return void 0!==this.props.initial&&(e.initial=this.props.initial),e}const t={};for(let e=0;e<Xc;e++){const r=ps[e],n=this.props[r];(us(n)||!1===n)&&(t[r]=n);}return t}addVariantChild(e){const t=this.getClosestVariantNode();if(t)return t.variantChildren&&t.variantChildren.add(e),()=>t.variantChildren.delete(e)}addValue(e,t){t!==this.values.get(e)&&(this.removeValue(e),this.bindToMotionValue(e,t)),this.values.set(e,t),this.latestValues[e]=t.get();}removeValue(e){this.values.delete(e);const t=this.valueSubscriptions.get(e);t&&(t(),this.valueSubscriptions.delete(e)),delete this.latestValues[e],this.removeValueFromRenderState(e,this.renderState);}hasValue(e){return this.values.has(e)}getValue(e,t){if(this.props.values&&this.props.values[e])return this.props.values[e];let r=this.values.get(e);return void 0===r&&void 0!==t&&(r=gl(t,{owner:this}),this.addValue(e,r)),r}readValue(e){var t;return void 0===this.latestValues[e]&&this.current?null!==(t=this.getBaseTargetFromProps(this.props,e))&&void 0!==t?t:this.readValueFromInstance(this.current,e,this.options):this.latestValues[e]}setBaseTarget(e,t){this.baseTarget[e]=t;}getBaseTarget(e){var t;const{initial:r}=this.props,n="string"==typeof r||"object"==typeof r?null===(t=So(this.props,r))||void 0===t?void 0:t[e]:void 0;if(r&&void 0!==n)return n;const s=this.getBaseTargetFromProps(this.props,e);return void 0===s||Is(s)?void 0!==this.initialValues[e]&&void 0===n?void 0:this.baseTarget[e]:s}on(e,t){return this.events[e]||(this.events[e]=new pl),this.events[e].add(t)}notify(e,...t){this.events[e]&&this.events[e].notify(...t);}}class Jc extends Zc{sortInstanceNodePosition(e,t){return 2&e.compareDocumentPosition(t)?1:-1}getBaseTargetFromProps(e,t){return e.style?e.style[t]:void 0}removeValueFromRenderState(e,{vars:t,style:r}){delete t[e],delete r[e];}makeTargetAnimatableFromInstance({transition:e,transitionEnd:t,...r},{transformValues:n},s){let o=function(e,t,r){const n={};for(const s in e){const e=Pl(s,t);if(void 0!==e)n[s]=e;else {const e=r.getValue(s);e&&(n[s]=e.get());}}return n}(r,e||{},this);if(n&&(t&&(t=n(t)),r&&(r=n(r)),o&&(o=n(o))),s){!function(e,t,r){var n,s;const o=Object.keys(t).filter((t=>!e.hasValue(t))),a=o.length;var i;if(a)for(let l=0;l<a;l++){const a=o[l],u=t[a];let c=null;Array.isArray(u)&&(c=u[0]),null===c&&(c=null!==(s=null!==(n=r[a])&&void 0!==n?n:e.readValue(a))&&void 0!==s?s:t[a]),null!=c&&("string"==typeof c&&(ul(c)||sl(c))?c=parseFloat(c):(i=c,!xl.find(vl(i))&&ci.test(u)&&(c=nl(a,u))),e.addValue(a,gl(c,{owner:e})),void 0===r[a]&&(r[a]=c),null!==c&&e.setBaseTarget(a,c));}}(this,r,o);const e=Uc(this,r,o,t);t=e.transitionEnd,r=e.target;}return {transition:e,transitionEnd:t,...r}}}class Qc extends Jc{readValueFromInstance(e,t){if(As.has(t)){const e=rl(t);return e&&e.default||0}{const n=(r=e,window.getComputedStyle(r)),s=(Rs(t)?n.getPropertyValue(t):n[t])||0;return "string"==typeof s?s.trim():s}var r;}measureInstanceViewportBox(e,{transformPagePoint:t}){return xu(e,t)}build(e,t,r,n){ro(e,t,r,n.transformTemplate);}scrapeMotionValuesFromProps(e,t){return Co(e,t)}handleChildMotionValue(){this.childSubscription&&(this.childSubscription(),delete this.childSubscription);const{children:e}=this.props;Is(e)&&(this.childSubscription=e.on("change",(e=>{this.current&&(this.current.textContent=`${e}`);})));}renderInstance(e,t,r,n){wo(e,t,r,n);}}class ed extends Jc{constructor(){super(...arguments),this.isSVGTag=!1;}getBaseTargetFromProps(e,t){return e[t]}readValueFromInstance(e,t){if(As.has(t)){const e=rl(t);return e&&e.default||0}return t=Po.has(t)?t:xo(t),e.getAttribute(t)}measureInstanceViewportBox(){return ru()}scrapeMotionValuesFromProps(e,t){return Eo(e,t)}build(e,t,r,n){mo(e,t,r,this.isSVGTag,n.transformTemplate);}renderInstance(e,t,r,n){To(e,t,0,n);}mount(e){this.isSVGTag=vo(e.tagName),super.mount(e);}}const td=(e,t)=>Ss(e)?new ed(t,{enableHardwareAcceleration:!1}):new Qc(t,{enableHardwareAcceleration:!0}),rd={...Kl,...da,...Ac,...{layout:{ProjectionNode:Mc,MeasureLayout:Du}}},nd=Cs(((e,t)=>function(e,{forwardMotionProps:t=!1},r,n){return {...Ss(e)?Wo:zo,preloadedFeatures:r,useRender:bo(t),createVisualElement:n,Component:e}}(e,t,rd,td)));function sd(){const e=t.useRef(!1);return as((()=>(e.current=!0,()=>{e.current=!1;})),[]),e}function od(){const e=sd(),[r,n]=t.useState(0),s=t.useCallback((()=>{e.current&&n(r+1);}),[r]);return [t.useCallback((()=>jo.postRender(s)),[s]),r]}class ad extends s.Component{getSnapshotBeforeUpdate(e){const t=this.props.childRef.current;if(t&&e.isPresent&&!this.props.isPresent){const e=this.props.sizeRef.current;e.height=t.offsetHeight||0,e.width=t.offsetWidth||0,e.top=t.offsetTop,e.left=t.offsetLeft;}return null}componentDidUpdate(){}render(){return this.props.children}}function id({children:e,isPresent:r}){const n=t.useId(),o=t.useRef(null),a=t.useRef({width:0,height:0,top:0,left:0});return t.useInsertionEffect((()=>{const{width:e,height:t,top:s,left:i}=a.current;if(r||!o.current||!e||!t)return;o.current.dataset.motionPopId=n;const l=document.createElement("style");return document.head.appendChild(l),l.sheet&&l.sheet.insertRule(`\n          [data-motion-pop-id="${n}"] {\n            position: absolute !important;\n            width: ${e}px !important;\n            height: ${t}px !important;\n            top: ${s}px !important;\n            left: ${i}px !important;\n          }\n        `),()=>{document.head.removeChild(l);}}),[r]),s.createElement(ad,{isPresent:r,childRef:o,sizeRef:a},s.cloneElement(e,{ref:o}))}const ld=({children:e,initial:r,isPresent:n,onExitComplete:o,custom:a,presenceAffectsLayout:i,mode:l})=>{const u=ko(ud),c=t.useId(),d=t.useMemo((()=>({id:c,initial:r,isPresent:n,custom:a,onExitComplete:e=>{u.set(e,!0);for(const e of u.values())if(!e)return;o&&o();},register:e=>(u.set(e,!1),()=>u.delete(e))})),i?void 0:[n]);return t.useMemo((()=>{u.forEach(((e,t)=>u.set(t,!1)));}),[n]),s.useEffect((()=>{!n&&!u.size&&o&&o();}),[n]),"popLayout"===l&&(e=s.createElement(id,{isPresent:n},e)),s.createElement(ss.Provider,{value:d},e)};function ud(){return new Map}const cd=e=>e.key||"";const dd=({children:e,custom:r,initial:n=!0,onExitComplete:o,exitBeforeEnter:a,presenceAffectsLayout:i=!0,mode:l="sync"})=>{ga(!a,"Replace exitBeforeEnter with mode='wait'");const u=t.useContext(bs).forceRender||od()[0],c=sd(),d=function(e){const r=[];return t.Children.forEach(e,(e=>{t.isValidElement(e)&&r.push(e);})),r}(e);let p=d;const h=t.useRef(new Map).current,f=t.useRef(p),m=t.useRef(new Map).current,g=t.useRef(!0);var v;if(as((()=>{g.current=!1,function(e,t){e.forEach((e=>{const r=cd(e);t.set(r,e);}));}(d,m),f.current=p;})),v=()=>{g.current=!0,m.clear(),h.clear();},t.useEffect((()=>()=>v()),[]),g.current)return s.createElement(s.Fragment,null,p.map((e=>s.createElement(ld,{key:cd(e),isPresent:!0,initial:!!n&&void 0,presenceAffectsLayout:i,mode:l},e))));p=[...p];const y=f.current.map(cd),b=d.map(cd),x=y.length;for(let e=0;e<x;e++){const t=y[e];-1!==b.indexOf(t)||h.has(t)||h.set(t,void 0);}return "wait"===l&&h.size&&(p=[]),h.forEach(((e,t)=>{if(-1!==b.indexOf(t))return;const n=m.get(t);if(!n)return;const a=y.indexOf(t);let g=e;if(!g){const e=()=>{h.delete(t);const e=Array.from(m.keys()).filter((e=>!b.includes(e)));if(e.forEach((e=>m.delete(e))),f.current=d.filter((r=>{const n=cd(r);return n===t||e.includes(n)})),!h.size){if(!1===c.current)return;u(),o&&o();}};g=s.createElement(ld,{key:cd(n),isPresent:!1,onExitComplete:e,custom:r,presenceAffectsLayout:i,mode:l},n),h.set(t,g);}p.splice(a,0,g);})),p=p.map((e=>{const t=e.key;return h.has(t)?e:s.createElement(ld,{key:cd(e),isPresent:!0,presenceAffectsLayout:i,mode:l},e)})),"production"!==process.env.NODE_ENV&&"wait"===l&&p.length>1&&console.warn('You\'re attempting to animate multiple children within AnimatePresence, but its mode is set to "wait". This will lead to odd visual behaviour.'),s.createElement(s.Fragment,null,h.size?p:p.map((e=>t.cloneElement(e))))},pd=t.createContext(null),hd=e=>!e.isLayoutDirty&&e.willUpdate(!1);function fd(){const e=new Set,t=new WeakMap,r=()=>e.forEach(hd);return {add:n=>{e.add(n),t.set(n,n.addEventListener("willUpdate",r));},remove:n=>{e.delete(n);const s=t.get(n);s&&(s(),t.delete(n)),r();},dirty:r}}const md=e=>!0===e,gd=({children:e,id:r,inherit:n=!0})=>{const o=t.useContext(bs),a=t.useContext(pd),[i,l]=od(),u=t.useRef(null),c=o.id||a;null===u.current&&((e=>md(!0===e)||"id"===e)(n)&&c&&(r=r?c+"-"+r:c),u.current={id:r,group:md(n)&&o.group||fd()});const d=t.useMemo((()=>({...u.current,forceRender:i})),[l]);return s.createElement(bs.Provider,{value:d},e)};class xd{build(e,t){return this.context=t,wd((()=>this.iterateCollection(e)))}*iterateCollection(e){let{children:r,items:n}=e;if("function"==typeof r){if(!n)throw new Error("props.children was a function but props.items is missing");for(let t of e.items)yield*this.getFullNode({value:t},{renderer:r});}else {let e=[];t.Children.forEach(r,(t=>{e.push(t);}));let n=0;for(let t of e){let e=this.getFullNode({element:t,index:n},{});for(let t of e)n++,yield t;}}}getKey(e,t,r,n){if(null!=e.key)return e.key;if("cell"===t.type&&null!=t.key)return `${n}${t.key}`;let s=t.value;if(null!=s){var o;let e=null!==(o=s.key)&&void 0!==o?o:s.id;if(null==e)throw new Error("No key found for item");return e}return n?`${n}.${t.index}`:`$.${t.index}`}getChildState(e,t){return {renderer:t.renderer||e.renderer}}*getFullNode(e,r,n,s){let o=e.element;if(!o&&e.value&&r&&r.renderer){let t=this.cache.get(e.value);if(t&&(!t.shouldInvalidate||!t.shouldInvalidate(this.context)))return t.index=e.index,t.parentKey=s?s.key:null,void(yield t);o=r.renderer(e.value);}if(t.isValidElement(o)){let t=o.type;if("function"!=typeof t&&"function"!=typeof t.getCollectionNode){let e="function"==typeof o.type?o.type.name:o.type;throw new Error(`Unknown element <${e}> in collection.`)}let a=t.getCollectionNode(o.props,this.context),i=e.index,l=a.next();for(;!l.done&&l.value;){let t=l.value;e.index=i;let u=t.key;u||(u=t.element?null:this.getKey(o,e,r,n));let c=[...this.getFullNode({...t,key:u,index:i,wrapper:Pd(e.wrapper,t.wrapper)},this.getChildState(r,t),n?`${n}${o.key}`:o.key,s)];for(let r of c){if(r.value=t.value||e.value,r.value&&this.cache.set(r.value,r),e.type&&r.type!==e.type)throw new Error(`Unsupported type <${Td(r.type)}> in <${Td(s.type)}>. Only <${Td(e.type)}> is supported.`);i++,yield r;}l=a.next(c);}return}if(null==e.key)return;let a=this,i={type:e.type,props:e.props,key:e.key,parentKey:s?s.key:null,value:e.value,level:s?s.level+1:0,index:e.index,rendered:e.rendered,textValue:e.textValue,"aria-label":e["aria-label"],wrapper:e.wrapper,shouldInvalidate:e.shouldInvalidate,hasChildNodes:e.hasChildNodes,childNodes:wd((function*(){if(!e.hasChildNodes)return;let t=0;for(let n of e.childNodes()){null!=n.key&&(n.key=`${i.key}${n.key}`),n.index=t;let e=a.getFullNode(n,a.getChildState(r,n),i.key,i);for(let r of e)t++,yield r;}}))};yield i;}constructor(){this.cache=new WeakMap;}}function wd(e){let t=[],r=null;return {*[Symbol.iterator](){for(let e of t)yield e;r||(r=e());for(let e of r)t.push(e),yield e;}}}function Pd(e,t){return e&&t?r=>e(t(r)):e||(t||void 0)}function Td(e){return e[0].toUpperCase()+e.slice(1)}function Cd(e){return function(e,t){if(t<0)return;let r=0;for(let n of e){if(r===t)return n;r++;}}(e,0)}function Ed(e,t,r){if(t.parentKey===r.parentKey)return t.index-r.index;let n=[...Sd(e,t),t],s=[...Sd(e,r),r],o=n.slice(0,s.length).findIndex(((e,t)=>e!==s[t]));return -1!==o?(t=n[o],r=s[o],t.index-r.index):n.findIndex((e=>e===r))>=0?1:(s.findIndex((e=>e===t)),-1)}function Sd(e,t){let r=[];for(;null!=(null==t?void 0:t.parentKey);)t=e.getItem(t.parentKey),r.unshift(t);return r}class kd extends Set{constructor(e,t,r){super(e),e instanceof kd?(this.anchorKey=t||e.anchorKey,this.currentKey=r||e.currentKey):(this.anchorKey=t,this.currentKey=r);}}function Md(e,t){return e?"all"===e?"all":new kd(e):t}class Ad{get selectionMode(){return this.state.selectionMode}get disallowEmptySelection(){return this.state.disallowEmptySelection}get selectionBehavior(){return this.state.selectionBehavior}setSelectionBehavior(e){this.state.setSelectionBehavior(e);}get isFocused(){return this.state.isFocused}setFocused(e){this.state.setFocused(e);}get focusedKey(){return this.state.focusedKey}get childFocusStrategy(){return this.state.childFocusStrategy}setFocusedKey(e,t){(null==e||this.collection.getItem(e))&&this.state.setFocusedKey(e,t);}get selectedKeys(){return "all"===this.state.selectedKeys?new Set(this.getSelectAllKeys()):this.state.selectedKeys}get rawSelection(){return this.state.selectedKeys}isSelected(e){return "none"!==this.state.selectionMode&&(e=this.getKey(e),"all"===this.state.selectedKeys?this.canSelectItem(e):this.state.selectedKeys.has(e))}get isEmpty(){return "all"!==this.state.selectedKeys&&0===this.state.selectedKeys.size}get isSelectAll(){if(this.isEmpty)return !1;if("all"===this.state.selectedKeys)return !0;if(null!=this._isSelectAll)return this._isSelectAll;let e=this.getSelectAllKeys(),t=this.state.selectedKeys;return this._isSelectAll=e.every((e=>t.has(e))),this._isSelectAll}get firstSelectedKey(){let e=null;for(let t of this.state.selectedKeys){let r=this.collection.getItem(t);(!e||r&&Ed(this.collection,r,e)<0)&&(e=r);}return null==e?void 0:e.key}get lastSelectedKey(){let e=null;for(let t of this.state.selectedKeys){let r=this.collection.getItem(t);(!e||r&&Ed(this.collection,r,e)>0)&&(e=r);}return null==e?void 0:e.key}get disabledKeys(){return this.state.disabledKeys}get disabledBehavior(){return this.state.disabledBehavior}extendSelection(e){if("none"===this.selectionMode)return;if("single"===this.selectionMode)return void this.replaceSelection(e);let t;if(e=this.getKey(e),"all"===this.state.selectedKeys)t=new kd([e],e,e);else {let r=this.state.selectedKeys,n=r.anchorKey||e;t=new kd(r,n,e);for(let s of this.getKeyRange(n,r.currentKey||e))t.delete(s);for(let r of this.getKeyRange(e,n))this.canSelectItem(r)&&t.add(r);}this.state.setSelectedKeys(t);}getKeyRange(e,t){let r=this.collection.getItem(e),n=this.collection.getItem(t);return r&&n?Ed(this.collection,r,n)<=0?this.getKeyRangeInternal(e,t):this.getKeyRangeInternal(t,e):[]}getKeyRangeInternal(e,t){let r=[],n=e;for(;n;){let e=this.collection.getItem(n);if((e&&"item"===e.type||"cell"===e.type&&this.allowsCellSelection)&&r.push(n),n===t)return r;n=this.collection.getKeyAfter(n);}return []}getKey(e){let t=this.collection.getItem(e);if(!t)return e;if("cell"===t.type&&this.allowsCellSelection)return e;for(;"item"!==t.type&&null!=t.parentKey;)t=this.collection.getItem(t.parentKey);return t&&"item"===t.type?t.key:null}toggleSelection(e){if("none"===this.selectionMode)return;if("single"===this.selectionMode&&!this.isSelected(e))return void this.replaceSelection(e);if(null==(e=this.getKey(e)))return;let t=new kd("all"===this.state.selectedKeys?this.getSelectAllKeys():this.state.selectedKeys);t.has(e)?t.delete(e):this.canSelectItem(e)&&(t.add(e),t.anchorKey=e,t.currentKey=e),this.disallowEmptySelection&&0===t.size||this.state.setSelectedKeys(t);}replaceSelection(e){if("none"===this.selectionMode)return;if(null==(e=this.getKey(e)))return;let t=this.canSelectItem(e)?new kd([e],e,e):new kd;this.state.setSelectedKeys(t);}setSelectedKeys(e){if("none"===this.selectionMode)return;let t=new kd;for(let r of e)if(r=this.getKey(r),null!=r&&(t.add(r),"single"===this.selectionMode))break;this.state.setSelectedKeys(t);}getSelectAllKeys(){let e=[],t=r=>{for(;r;){if(this.canSelectItem(r)){let o=this.collection.getItem(r);"item"===o.type&&e.push(r),o.hasChildNodes&&(this.allowsCellSelection||"item"!==o.type)&&t(Cd((n=o,s=this.collection,"function"==typeof s.getChildren?s.getChildren(n.key):n.childNodes)).key);}r=this.collection.getKeyAfter(r);}var n,s;};return t(this.collection.getFirstKey()),e}selectAll(){this.isSelectAll||"multiple"!==this.selectionMode||this.state.setSelectedKeys("all");}clearSelection(){!this.disallowEmptySelection&&("all"===this.state.selectedKeys||this.state.selectedKeys.size>0)&&this.state.setSelectedKeys(new kd);}toggleSelectAll(){this.isSelectAll?this.clearSelection():this.selectAll();}select(e,t){"none"!==this.selectionMode&&("single"===this.selectionMode?this.isSelected(e)&&!this.disallowEmptySelection?this.toggleSelection(e):this.replaceSelection(e):"toggle"===this.selectionBehavior||t&&("touch"===t.pointerType||"virtual"===t.pointerType)?this.toggleSelection(e):this.replaceSelection(e));}isSelectionEqual(e){if(e===this.state.selectedKeys)return !0;let t=this.selectedKeys;if(e.size!==t.size)return !1;for(let r of e)if(!t.has(r))return !1;for(let r of t)if(!e.has(r))return !1;return !0}canSelectItem(e){if("none"===this.state.selectionMode||this.state.disabledKeys.has(e))return !1;let t=this.collection.getItem(e);return !(!t||"cell"===t.type&&!this.allowsCellSelection)}isDisabled(e){return this.state.disabledKeys.has(e)&&"all"===this.state.disabledBehavior}isLink(e){var t,r;return !!(null===(r=this.collection.getItem(e))||void 0===r||null===(t=r.props)||void 0===t?void 0:t.href)}constructor(e,t,r){var n;this.collection=e,this.state=t,this.allowsCellSelection=null!==(n=null==r?void 0:r.allowsCellSelection)&&void 0!==n&&n,this._isSelectAll=null;}}var Dd=()=>e.jsxs("svg",{"aria-hidden":"true",fill:"none",height:"80%",role:"presentation",viewBox:"0 0 24 24",width:"80%",children:[e.jsx("path",{d:"M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z",fill:"currentColor"}),e.jsx("path",{d:"M17.0809 14.1489C14.2909 12.2889 9.74094 12.2889 6.93094 14.1489C5.66094 14.9989 4.96094 16.1489 4.96094 17.3789C4.96094 18.6089 5.66094 19.7489 6.92094 20.5889C8.32094 21.5289 10.1609 21.9989 12.0009 21.9989C13.8409 21.9989 15.6809 21.5289 17.0809 20.5889C18.3409 19.7389 19.0409 18.5989 19.0409 17.3589C19.0309 16.1289 18.3409 14.9889 17.0809 14.1489Z",fill:"currentColor"})]}),[Id,Vd]=vn({name:"AvatarGroupContext",strict:!1}),Ld=Boolean(null==globalThis?void 0:globalThis.document)?t.useLayoutEffect:t.useEffect;function Kd(e={}){var r,n,s,o,a;const i=Vd(),l=!!i,{as:u,ref:c,src:d,name:p,icon:h,classNames:f,fallback:m,alt:g=p||"avatar",imgRef:v,color:y=(null!=(r=null==i?void 0:i.color)?r:"default"),radius:b=(null!=(n=null==i?void 0:i.radius)?n:"full"),size:x=(null!=(s=null==i?void 0:i.size)?s:"md"),isBordered:w=null!=(o=null==i?void 0:i.isBordered)&&o,isDisabled:P=null!=(a=null==i?void 0:i.isDisabled)&&a,isFocusable:T=!1,getInitials:C=un,ignoreFallback:E=!1,showFallback:S=!1,ImgComponent:k="img",imgProps:M,className:D,onError:I,...V}=e,L=u||"span",K=yn(c),R=yn(v),{isFocusVisible:N,isFocused:j,focusProps:F}=St(),{isHovered:O,hoverProps:B}=ht({isDisabled:P}),W=function(e={}){const{loading:r,src:n,srcSet:s,onLoad:o,onError:a,crossOrigin:i,sizes:l,ignoreFallback:u}=e,[c,d]=t.useState("pending");t.useEffect((()=>{d(n?"loading":"pending");}),[n]);const p=t.useRef(),h=t.useCallback((()=>{if(!n)return;f();const e=new Image;e.src=n,i&&(e.crossOrigin=i),s&&(e.srcset=s),l&&(e.sizes=l),r&&(e.loading=r),e.onload=e=>{f(),d("loaded"),null==o||o(e);},e.onerror=e=>{f(),d("failed"),null==a||a(e);},p.current=e;}),[n,i,s,l,o,a,r]),f=()=>{p.current&&(p.current.onload=null,p.current.onerror=null,p.current=null);};return Ld((()=>{if(!u)return "loading"===c&&h(),()=>{f();}}),[c,h,u]),u?"loaded":c}({src:d,onError:I,ignoreFallback:E}),z="loaded"===W,U=(!d||!z)&&S,H=t.useMemo((()=>{var e;return an({color:y,radius:b,size:x,isBordered:w,isDisabled:P,isInGroup:l,isInGridGroup:null!=(e=null==i?void 0:i.isGrid)&&e})}),[y,b,x,w,P,l,null==i?void 0:i.isGrid]),$=pn(null==f?void 0:f.base,D),_=t.useMemo((()=>T||"button"===u),[T,u]),G=t.useCallback(((e={})=>({ref:K,tabIndex:_?0:-1,"data-hover":gn(O),"data-focus":gn(j),"data-focus-visible":gn(N),className:H.base({class:pn($,null==e?void 0:e.className)}),...A(V,B,_?F:{})})),[_,H,$,F,V]),q=t.useCallback(((e={})=>({ref:R,src:d,"data-loaded":gn(z),className:H.img({class:null==f?void 0:f.img}),...A(M,e)})),[H,z,M,d,R]);return {Component:L,ImgComponent:k,src:d,alt:g,icon:h,name:p,imgRef:R,slots:H,classNames:f,fallback:m,isImgLoaded:z,showFallback:U,ignoreFallback:E,getInitials:C,getAvatarProps:G,getImageProps:q}}var Rd=It(((r,n)=>{const{Component:s,ImgComponent:o,src:a,icon:i=e.jsx(Dd,{}),alt:l,classNames:u,slots:c,name:d,showFallback:p,fallback:h,getInitials:f,getAvatarProps:m,getImageProps:g}=Kd({...r,ref:n}),v=t.useMemo((()=>!p&&a?null:h?e.jsx("div",{"aria-label":l,className:c.fallback({class:null==u?void 0:u.fallback}),role:"img",children:h}):d?e.jsx("span",{"aria-label":l,className:c.name({class:null==u?void 0:u.name}),role:"img",children:f(d)}):e.jsx("span",{"aria-label":l,className:c.icon({class:null==u?void 0:u.icon}),role:"img",children:i})),[p,a,h,d,u]);return e.jsxs(s,{...m(),children:[a&&e.jsx(o,{...g(),alt:l}),v]})}));Rd.displayName="NextUI.Avatar";var [jd,Fd]=vn({name:"ButtonGroupContext",strict:!1});var Od=t=>{const{ripples:r=[],motionProps:n,color:s="currentColor",style:o,onClear:a}=t;return e.jsx(e.Fragment,{children:r.map((t=>{const r=(i=.01*t.size,l=.2,u=t.size>100?.75:.5,Math.min(Math.max(i,l),u));var i,l,u;return e.jsx(dd,{mode:"popLayout",children:e.jsx(nd.span,{animate:{transform:"scale(2)",opacity:0},className:"nextui-ripple",exit:{opacity:0},initial:{transform:"scale(0)",opacity:.35},style:{position:"absolute",backgroundColor:s,borderRadius:"100%",transformOrigin:"center",pointerEvents:"none",zIndex:10,top:t.y,left:t.x,width:`${t.size}px`,height:`${t.size}px`,...o},transition:{duration:r},onAnimationComplete:()=>{a(t.key);},...n})},t.key)}))})};Od.displayName="NextUI.Ripple";var Bd=Od;function Wd(e){var r,n,s,o,a,i,l,u;const c=Fd(),d=!!c,{ref:p,as:h,children:f,startContent:m,endContent:g,autoFocus:v,className:y,spinner:b,fullWidth:x=null!=(r=null==c?void 0:c.fullWidth)&&r,size:w=(null!=(n=null==c?void 0:c.size)?n:"md"),color:P=(null!=(s=null==c?void 0:c.color)?s:"default"),variant:T=(null!=(o=null==c?void 0:c.variant)?o:"solid"),disableAnimation:C=null!=(a=null==c?void 0:c.disableAnimation)&&a,radius:E=(null==c?void 0:c.radius),disableRipple:k=null!=(i=null==c?void 0:c.disableRipple)&&i,isDisabled:M=null!=(l=null==c?void 0:c.isDisabled)&&l,isIconOnly:D=null!=(u=null==c?void 0:c.isIconOnly)&&u,isLoading:I=!1,spinnerPlacement:V="start",onPress:L,onClick:R,...N}=e,j=h||"button",F="string"==typeof j,O=yn(p),{isFocusVisible:B,isFocused:W,focusProps:z}=St({autoFocus:v}),U=M||I,H=t.useMemo((()=>ln({size:w,color:P,variant:T,radius:E,fullWidth:x,isDisabled:U,isInGroup:d,disableAnimation:C,isIconOnly:D,className:y})),[w,P,T,E,x,U,d,D,C,y]),{onClick:$,onClear:_,ripples:G}=function(e={}){const[r,n]=t.useState([]);return {ripples:r,onClick:t.useCallback((e=>{const t=e.currentTarget,r=Math.max(t.clientWidth,t.clientHeight),s=t.getBoundingClientRect();n((t=>{return [...t,{key:(n=t.length.toString(),`${n}-${Math.floor(1e6*Math.random())}`),size:r,x:e.clientX-s.x-r/2,y:e.clientY-s.y-r/2}];var n;}));}),[]),onClear:t.useCallback((e=>{n((t=>t.filter((t=>t.key!==e))));}),[]),...e}}(),q=t.useCallback((e=>{k||U||C||O.current&&$(e);}),[k,U,C,O,$]),{buttonProps:Y,isPressed:X}=function(e,t){let r,{elementType:n="button",isDisabled:s,onPress:o,onPressStart:a,onPressEnd:i,onPressChange:l,preventFocusOnPress:u,allowFocusWhenDisabled:c,onClick:d,href:p,target:h,rel:f,type:m="button",allowTextSelectionOnPress:g}=e;r="button"===n?{type:m,disabled:s}:{role:"button",tabIndex:s?void 0:0,href:"a"===n&&s?void 0:p,target:"a"===n?h:void 0,type:"input"===n?m:void 0,disabled:"input"===n?s:void 0,"aria-disabled":s&&"input"!==n?s:void 0,rel:"a"===n?f:void 0};let{pressProps:v,isPressed:y}=$n({onPressStart:a,onPressEnd:i,onPressChange:l,onPress:o,isDisabled:s,preventFocusOnPress:u,allowTextSelectionOnPress:g,ref:t}),{focusableProps:b}=Mt(e,t);c&&(b.tabIndex=s?-1:b.tabIndex);let x=A(b,v,K(e,{labelable:!0}));return {isPressed:y,buttonProps:A(r,x,{"aria-haspopup":e["aria-haspopup"],"aria-expanded":e["aria-expanded"],"aria-controls":e["aria-controls"],"aria-pressed":e["aria-pressed"],onClick:e=>{null==d||d(e);}})}}({elementType:h,isDisabled:U,onPress:L,onClick:S(R,q),...N},O),{isHovered:Z,hoverProps:J}=ht({isDisabled:U}),Q=t.useCallback(((e={})=>({"data-disabled":gn(U),"data-focus":gn(W),"data-pressed":gn(X),"data-focus-visible":gn(B),"data-hover":gn(Z),"data-loading":gn(I),...A(Y,z,J,Cn(N,{enabled:F}),Cn(e))})),[I,U,W,X,F,B,Z,Y,z,J,N]),ee=e=>t.isValidElement(e)?t.cloneElement(e,{"aria-hidden":!0,focusable:!1,tabIndex:-1}):null,te=ee(m),re=ee(g),ne=t.useMemo((()=>({sm:"sm",md:"sm",lg:"md"}[w])),[w]),se=t.useCallback((()=>({ripples:G,onClear:_})),[G,_]);return {Component:j,children:f,domRef:O,spinner:b,styles:H,startContent:te,endContent:re,isLoading:I,spinnerPlacement:V,spinnerSize:ne,disableRipple:k,getButtonProps:Q,getRippleProps:se,isIconOnly:D}}var zd=It(((r,n)=>{const{slots:s,classNames:o,label:a,getSpinnerProps:i}=function(e){const[r,n]=Vt(e,Qr.variantKeys),{children:s,className:o,classNames:a,label:i,...l}=r,u=t.useMemo((()=>Qr({...n})),[...Object.values(n)]),c=pn(null==a?void 0:a.base,o),d=i||s,p=t.useMemo((()=>d&&"string"==typeof d?d:l["aria-label"]?"":"Loading"),[s,d,l["aria-label"]]),h=t.useCallback((()=>({"aria-label":p,className:u.base({class:c}),...l})),[p,u,c,l]);return {label:d,slots:u,classNames:a,getSpinnerProps:h}}({...r});return e.jsxs("div",{ref:n,...i(),children:[e.jsxs("div",{className:s.wrapper({class:null==o?void 0:o.wrapper}),children:[e.jsx("i",{className:s.circle1({class:null==o?void 0:o.circle1})}),e.jsx("i",{className:s.circle2({class:null==o?void 0:o.circle2})})]}),a&&e.jsx("span",{className:s.label(),children:a})]})}));zd.displayName="NextUI.Spinner";var Ud=zd,Hd=It(((t,r)=>{const{Component:n,domRef:s,children:o,styles:a,spinnerSize:i,spinner:l=e.jsx(Ud,{color:"current",size:i}),spinnerPlacement:u,startContent:c,endContent:d,isLoading:p,disableRipple:h,getButtonProps:f,getRippleProps:m,isIconOnly:g}=Wd({...t,ref:r});return e.jsxs(n,{ref:s,className:a,...f(),children:[c,p&&"start"===u&&l,p&&g?null:o,p&&"end"===u&&l,d,!h&&e.jsx(Bd,{...m()})]})}));Hd.displayName="NextUI.Button";var _d=It(((r,n)=>{const{Component:s,children:o,slots:a,classNames:i,isDot:l,isCloseable:u,startContent:c,endContent:d,getCloseButtonProps:p,getChipProps:h}=function(e){const[r,n]=Vt(e,on.variantKeys),{ref:s,as:o,children:a,avatar:i,startContent:l,endContent:u,onClose:c,classNames:d,className:p,...h}=r,f=o||"div",m=yn(s),g=pn(null==d?void 0:d.base,p),v=!!c,y="dot"===e.variant,{focusProps:b,isFocusVisible:x}=St(),w=t.useMemo((()=>"string"==typeof a&&1===(null==a?void 0:a.length)),[a]),P=t.useMemo((()=>!!i||!!l),[i,l]),T=t.useMemo((()=>!!u||v),[u,v]),C=t.useMemo((()=>on({...n,hasStartContent:P,hasEndContent:T,isOneChar:w,isCloseable:v,isCloseButtonFocusVisible:x})),[...Object.values(n),x,P,T,w,v]),{pressProps:E}=$n({isDisabled:!!(null==e?void 0:e.isDisabled),onPress:c}),S=e=>t.isValidElement(e)?t.cloneElement(e,{className:pn("max-h-[80%]",e.props.className)}):null;return {Component:f,children:a,slots:C,classNames:d,isDot:y,isCloseable:v,startContent:(k=i,(t.isValidElement(k)?t.cloneElement(k,{className:C.avatar({class:null==d?void 0:d.avatar})}):null)||S(l)),endContent:S(u),getCloseButtonProps:()=>({role:"button",tabIndex:0,className:C.closeButton({class:null==d?void 0:d.closeButton}),...A(E,b)}),getChipProps:()=>({ref:m,className:C.base({class:g}),...h})};var k;}({...r,ref:n}),f=t.useMemo((()=>l&&!c?e.jsx("span",{className:a.dot({class:null==i?void 0:i.dot})}):c),[a,c,l]),m=t.useMemo((()=>u?e.jsx("span",{...p(),children:d||e.jsx(ts,{})}):d),[d,u,p]);return e.jsxs(s,{...h(),children:[f,e.jsx("span",{className:a.content({class:null==i?void 0:i.content}),children:o}),m]})}));_d.displayName="NextUI.Chip";var Gd=_d;function qd(e,r,n){let{validationBehavior:s,focus:o}=e;b((()=>{if("native"===s&&(null==n?void 0:n.current)){let e=r.realtimeValidation.isInvalid?r.realtimeValidation.validationErrors.join(" ")||"Invalid value.":"";n.current.setCustomValidity(e),n.current.hasAttribute("title")||(n.current.title=""),r.realtimeValidation.isInvalid||r.updateValidation(function(e){return {isInvalid:!e.validity.valid,validationDetails:Yd(e),validationErrors:e.validationMessage?[e.validationMessage]:[]}}(n.current));}}));let a=x((()=>{r.resetValidation();})),i=x((e=>{var t;r.displayValidation.isInvalid||r.commitValidation();let s=null==n||null===(t=n.current)||void 0===t?void 0:t.form;var a,i;!e.defaultPrevented&&n&&s&&function(e){for(let t=0;t<e.elements.length;t++){let r=e.elements[t];if(!r.validity.valid)return r}return null}(s)===n.current&&(o?o():null===(a=n.current)||void 0===a||a.focus(),He=i="keyboard",Xe(i,null));e.preventDefault();})),l=x((()=>{r.commitValidation();}));t.useEffect((()=>{let e=null==n?void 0:n.current;if(!e)return;let t=e.form;return e.addEventListener("invalid",i),e.addEventListener("change",l),null==t||t.addEventListener("reset",a),()=>{e.removeEventListener("invalid",i),e.removeEventListener("change",l),null==t||t.removeEventListener("reset",a);}}),[n,i,l,a,s]);}function Yd(e){let t=e.validity;return {badInput:t.badInput,customError:t.customError,patternMismatch:t.patternMismatch,rangeOverflow:t.rangeOverflow,rangeUnderflow:t.rangeUnderflow,stepMismatch:t.stepMismatch,tooLong:t.tooLong,tooShort:t.tooShort,typeMismatch:t.typeMismatch,valueMissing:t.valueMissing,valid:t.valid}}const Xd={badInput:!1,customError:!1,patternMismatch:!1,rangeOverflow:!1,rangeUnderflow:!1,stepMismatch:!1,tooLong:!1,tooShort:!1,typeMismatch:!1,valueMissing:!1,valid:!0},Zd={...Xd,customError:!0,valid:!1},Jd={isInvalid:!1,validationDetails:Xd,validationErrors:[]},Qd=t.createContext({}),ep="__formValidationState"+Date.now();function tp(e){if(e[ep]){let{realtimeValidation:t,displayValidation:r,updateValidation:n,resetValidation:s,commitValidation:o}=e[ep];return {realtimeValidation:t,displayValidation:r,updateValidation:n,resetValidation:s,commitValidation:o}}return function(e){let{isInvalid:r,validationState:n,name:s,value:o,builtinValidation:a,validate:i,validationBehavior:l="aria"}=e;n&&(r||(r="invalid"===n));let u=r?{isInvalid:!0,validationErrors:[],validationDetails:Zd}:null,c=t.useMemo((()=>np(function(e,t){if("function"==typeof e){let r=e(t);if(r&&"boolean"!=typeof r)return rp(r)}return []}(i,o))),[i,o]);(null==a?void 0:a.validationDetails.valid)&&(a=null);let d=t.useContext(Qd),p=t.useMemo((()=>s?Array.isArray(s)?s.flatMap((e=>rp(d[e]))):rp(d[s]):[]),[d,s]),[h,f]=t.useState(d),[m,g]=t.useState(!1);d!==h&&(f(d),g(!1));let v=t.useMemo((()=>np(m?[]:p)),[m,p]),y=t.useRef(Jd),[b,x]=t.useState(Jd),w=t.useRef(Jd),P=()=>{if(!T)return;C(!1);let e=c||a||y.current;sp(e,w.current)||(w.current=e,x(e));},[T,C]=t.useState(!1);return t.useEffect(P),{realtimeValidation:u||v||c||a||Jd,displayValidation:"native"===l?u||v||b:u||v||c||a||b,updateValidation(e){"aria"!==l||sp(b,e)?y.current=e:x(e);},resetValidation(){let e=Jd;sp(e,w.current)||(w.current=e,x(e)),"native"===l&&C(!1),g(!0);},commitValidation(){"native"===l&&C(!0),g(!0);}}}(e)}function rp(e){return e?Array.isArray(e)?e:[e]:[]}function np(e){return e.length?{isInvalid:!0,validationErrors:e,validationDetails:Zd}:null}function sp(e,t){return e===t||e&&t&&e.isInvalid===t.isInvalid&&e.validationErrors.length===t.validationErrors.length&&e.validationErrors.every(((e,r)=>e===t.validationErrors[r]))&&Object.entries(e.validationDetails).every((([e,r])=>t.validationDetails[e]===r))}function op(e){let{description:t,errorMessage:r,isInvalid:n,validationState:s}=e,{labelProps:o,fieldProps:a}=function(e){let{id:t,label:r,"aria-labelledby":n,"aria-label":s,labelElementType:o="label"}=e;t=T(t);let a=T(),i={};return r?(n=n?`${a} ${n}`:a,i={id:a,htmlFor:"label"===o?t:void 0}):n||s||console.warn("If you do not provide a visible label, you must specify an aria-label or aria-labelledby attribute for accessibility"),{labelProps:i,fieldProps:J({id:t,"aria-label":s,"aria-labelledby":n})}}(e),i=E([Boolean(t),Boolean(r),n,s]),l=E([Boolean(t),Boolean(r),n,s]);return a=A(a,{"aria-describedby":[i,l,e["aria-describedby"]].filter(Boolean).join(" ")||void 0}),{labelProps:o,fieldProps:a,descriptionProps:{id:i},errorMessageProps:{id:l}}}const ap=e=>"object"==typeof e&&null!=e&&1===e.nodeType,ip=(e,t)=>(!t||"hidden"!==e)&&"visible"!==e&&"clip"!==e,lp=(e,t)=>{if(e.clientHeight<e.scrollHeight||e.clientWidth<e.scrollWidth){const r=getComputedStyle(e,null);return ip(r.overflowY,t)||ip(r.overflowX,t)||(e=>{const t=(e=>{if(!e.ownerDocument||!e.ownerDocument.defaultView)return null;try{return e.ownerDocument.defaultView.frameElement}catch(e){return null}})(e);return !!t&&(t.clientHeight<e.scrollHeight||t.clientWidth<e.scrollWidth)})(e)}return !1},up=(e,t,r,n,s,o,a,i)=>o<e&&a>t||o>e&&a<t?0:o<=e&&i<=r||a>=t&&i>=r?o-e-n:a>t&&i<r||o<e&&i>r?a-t+s:0,cp=e=>{const t=e.parentElement;return null==t?e.getRootNode().host||null:t},dp=(e,t)=>{var r,n,s,o;if("undefined"==typeof document)return [];const{scrollMode:a,block:i,inline:l,boundary:u,skipOverflowHiddenElements:c}=t,d="function"==typeof u?u:e=>e!==u;if(!ap(e))throw new TypeError("Invalid target");const p=document.scrollingElement||document.documentElement,h=[];let f=e;for(;ap(f)&&d(f);){if(f=cp(f),f===p){h.push(f);break}null!=f&&f===document.body&&lp(f)&&!lp(document.documentElement)||null!=f&&lp(f,c)&&h.push(f);}const m=null!=(n=null==(r=window.visualViewport)?void 0:r.width)?n:innerWidth,g=null!=(o=null==(s=window.visualViewport)?void 0:s.height)?o:innerHeight,{scrollX:v,scrollY:y}=window,{height:b,width:x,top:w,right:P,bottom:T,left:C}=e.getBoundingClientRect(),{top:E,right:S,bottom:k,left:M}=(e=>{const t=window.getComputedStyle(e);return {top:parseFloat(t.scrollMarginTop)||0,right:parseFloat(t.scrollMarginRight)||0,bottom:parseFloat(t.scrollMarginBottom)||0,left:parseFloat(t.scrollMarginLeft)||0}})(e);let A="start"===i||"nearest"===i?w-E:"end"===i?T+k:w+b/2-E+k,D="center"===l?C+x/2-M+S:"end"===l?P+S:C-M;const I=[];for(let e=0;e<h.length;e++){const t=h[e],{height:r,width:n,top:s,right:o,bottom:u,left:c}=t.getBoundingClientRect();if("if-needed"===a&&w>=0&&C>=0&&T<=g&&P<=m&&w>=s&&T<=u&&C>=c&&P<=o)return I;const d=getComputedStyle(t),f=parseInt(d.borderLeftWidth,10),E=parseInt(d.borderTopWidth,10),S=parseInt(d.borderRightWidth,10),k=parseInt(d.borderBottomWidth,10);let M=0,V=0;const L="offsetWidth"in t?t.offsetWidth-t.clientWidth-f-S:0,K="offsetHeight"in t?t.offsetHeight-t.clientHeight-E-k:0,R="offsetWidth"in t?0===t.offsetWidth?0:n/t.offsetWidth:0,N="offsetHeight"in t?0===t.offsetHeight?0:r/t.offsetHeight:0;if(p===t)M="start"===i?A:"end"===i?A-g:"nearest"===i?up(y,y+g,g,E,k,y+A,y+A+b,b):A-g/2,V="start"===l?D:"center"===l?D-m/2:"end"===l?D-m:up(v,v+m,m,f,S,v+D,v+D+x,x),M=Math.max(0,M+y),V=Math.max(0,V+v);else {M="start"===i?A-s-E:"end"===i?A-u+k+K:"nearest"===i?up(s,u,r,E,k+K,A,A+b,b):A-(s+r/2)+K/2,V="start"===l?D-c-f:"center"===l?D-(c+n/2)+L/2:"end"===l?D-o+S+L:up(c,o,n,f,S+L,D,D+x,x);const{scrollLeft:e,scrollTop:a}=t;M=0===N?0:Math.max(0,Math.min(a+M/N,t.scrollHeight-r/N+K)),V=0===R?0:Math.max(0,Math.min(e+V/R,t.scrollWidth-n/R+L)),A+=a-M,D+=e-V;}I.push({el:t,top:M,left:V});}return I};function pp(e,t){if(!e.isConnected||!(e=>{let t=e;for(;t&&t.parentNode;){if(t.parentNode===document)return !0;t=t.parentNode instanceof ShadowRoot?t.parentNode.host:t.parentNode;}return !1})(e))return;if((e=>"object"==typeof e&&"function"==typeof e.behavior)(t))return t.behavior(dp(e,t));const r="boolean"==typeof t||null==t?void 0:t.behavior;for(const{el:n,top:s,left:o}of dp(e,(e=>!1===e?{block:"end",inline:"nearest"}:(e=>e===Object(e)&&0!==Object.keys(e).length)(e)?e:{block:"start",inline:"nearest"})(t)))n.scroll({top:s,left:o,behavior:r});}let hp=Math.round(1e10*Math.random()),fp=0;const mp=new WeakMap;function gp(e){const{as:r,ref:n,classNames:s,children:o,label:a,value:i,name:l,size:u="md",color:c="primary",isDisabled:d=!1,disableAnimation:p=!1,orientation:h="vertical",isRequired:f=!1,validationState:m,isInvalid:v="invalid"===m,isReadOnly:y,errorMessage:b,description:x,className:w,onChange:P,onValueChange:C,...E}=e,S=r||"div",k=yn(n),M=t.useMemo((()=>({...E,value:i,name:l,"aria-label":cn(E["aria-label"],a),isRequired:f,isReadOnly:y,isInvalid:v,orientation:h,onChange:C})),[E,i,l,a,f,y,v,h,C]),D=function(e){let r=t.useMemo((()=>e.name||`radio-group-${hp}-${++fp}`),[e.name]);var n;let[s,o]=g(e.value,null!==(n=e.defaultValue)&&void 0!==n?n:null,e.onChange),[a,i]=t.useState(null),l=tp({...e,value:s}),u=l.displayValidation.isInvalid;return {...l,name:r,selectedValue:s,setSelectedValue:t=>{e.isReadOnly||e.isDisabled||(o(t),l.commitValidation());},lastFocusedValue:a,setLastFocusedValue:i,isDisabled:e.isDisabled||!1,isReadOnly:e.isReadOnly||!1,isRequired:e.isRequired||!1,validationState:e.validationState||(u?"invalid":null),isInvalid:u}}(M),{labelProps:I,radioGroupProps:V,errorMessageProps:L,descriptionProps:R}=function(e,t){let{name:r,isReadOnly:n,isRequired:s,isDisabled:o,orientation:a="vertical",validationBehavior:i="aria"}=e,{direction:l}=ye(),{isInvalid:u,validationErrors:c,validationDetails:d}=t.displayValidation,{labelProps:p,fieldProps:h,descriptionProps:f,errorMessageProps:m}=op({...e,labelElementType:"span",isInvalid:t.isInvalid,errorMessage:e.errorMessage||c}),g=K(e,{labelable:!0}),{focusWithinProps:v}=it({onBlurWithin(){t.selectedValue||t.setLastFocusedValue(null);}}),y=T(r);return mp.set(t,{name:y,descriptionId:f.id,errorMessageId:m.id,validationBehavior:i}),{radioGroupProps:A(g,{role:"radiogroup",onKeyDown:e=>{let r;switch(e.key){case"ArrowRight":r="rtl"===l&&"vertical"!==a?"prev":"next";break;case"ArrowLeft":r="rtl"===l&&"vertical"!==a?"next":"prev";break;case"ArrowDown":r="next";break;case"ArrowUp":r="prev";break;default:return}e.preventDefault();let n,s=Tt(e.currentTarget,{from:e.target});"next"===r?(n=s.nextNode(),n||(s.currentNode=e.currentTarget,n=s.firstChild())):(n=s.previousNode(),n||(s.currentNode=e.currentTarget,n=s.lastChild())),n&&(n.focus(),t.setSelectedValue(n.value));},"aria-invalid":t.isInvalid||void 0,"aria-errormessage":e["aria-errormessage"],"aria-readonly":n||void 0,"aria-required":s||void 0,"aria-disabled":o||void 0,"aria-orientation":a,...h,...v}),labelProps:p,descriptionProps:f,errorMessageProps:m,isInvalid:u,validationErrors:c,validationDetails:d}}(M,D),N=t.useMemo((()=>({size:u,color:c,groupState:D,isRequired:f,isInvalid:v,isDisabled:d,disableAnimation:p,onChange:P})),[u,c,f,d,v,P,p,D.name,null==D?void 0:D.isDisabled,null==D?void 0:D.isReadOnly,null==D?void 0:D.isRequired,null==D?void 0:D.selectedValue,null==D?void 0:D.lastFocusedValue]),j=t.useMemo((()=>nn({isRequired:f,isInvalid:v,disableAnimation:p})),[v,f,p]),F=pn(null==s?void 0:s.base,w),O=t.useCallback((()=>({ref:k,className:j.base({class:F}),...A(V,E)})),[k,j,F,V,E]),B=t.useCallback((()=>({className:j.label({class:null==s?void 0:s.label}),...I})),[j,null==s?void 0:s.label,I,null==s?void 0:s.label]),W=t.useCallback((()=>({className:j.wrapper({class:null==s?void 0:s.wrapper}),role:"presentation","data-orientation":h})),[j,null==s?void 0:s.wrapper,h,j.wrapper]),z=t.useCallback(((e={})=>({...e,...R,className:j.description({class:pn(null==s?void 0:s.description,null==e?void 0:e.className)})})),[j,null==s?void 0:s.description,R,j.description]),U=t.useCallback(((e={})=>({...e,...L,className:j.errorMessage({class:pn(null==s?void 0:s.errorMessage,null==e?void 0:e.className)})})),[j,null==s?void 0:s.errorMessage,L]);return {Component:S,children:o,label:a,context:N,errorMessage:b,description:x,getGroupProps:O,getLabelProps:B,getWrapperProps:W,getDescriptionProps:z,getErrorMessageProps:U}}var[vp,yp]=vn({name:"RadioGroupContext",strict:!1}),bp=It(((t,r)=>{const{Component:n,children:s,label:o,context:a,description:i,errorMessage:l,getGroupProps:u,getLabelProps:c,getWrapperProps:d,getDescriptionProps:p,getErrorMessageProps:h}=gp({...t,ref:r});return e.jsxs(n,{...u(),children:[o&&e.jsx("span",{...c(),children:o}),e.jsx("div",{...d(),children:e.jsx(vp,{value:a,children:s})}),l?e.jsx("div",{...h(),children:l}):i?e.jsx("div",{...p(),children:i}):null]})}));bp.displayName="NextUI.RadioGroup";var xp=bp;function wp(e){var r,n,s,o;const a=yp(),{as:i,ref:l,classNames:u,id:c,value:d,children:p,description:h,size:f=(null!=(r=null==a?void 0:a.size)?r:"md"),color:m=(null!=(n=null==a?void 0:a.color)?n:"primary"),isDisabled:g=null!=(s=null==a?void 0:a.isDisabled)&&s,disableAnimation:v=null!=(o=null==a?void 0:a.disableAnimation)&&o,onChange:y=(null==a?void 0:a.onChange),autoFocus:b=!1,className:x,...w}=e;a&&mn&&("checked"in w&&fn('Remove props "checked" if in the Radio.Group.',"Radio"),void 0===d&&fn('Props "value" must be defined if in the Radio.Group.',"Radio"));const P=i||"label",T=yn(l),C=t.useRef(null),E=t.useId(),k=t.useMemo((()=>{var e;return null!=(e=a.isRequired)&&e}),[a.isRequired]),M=a.isInvalid,D=t.useMemo((()=>{const e=w["aria-label"]||"string"==typeof p?p:void 0,t=w["aria-describedby"]||"string"==typeof h?h:void 0;return {id:c,isRequired:k,isDisabled:g,"aria-label":e,"aria-labelledby":w["aria-labelledby"]||E,"aria-describedby":t}}),[E,c,g,k]),{inputProps:I,isDisabled:V,isSelected:L,isPressed:R}=function(e,t,r){let{value:n,children:s,"aria-label":o,"aria-labelledby":a}=e;const i=e.isDisabled||t.isDisabled;null!=s||null!=o||null!=a||console.warn("If you do not provide children, you must specify an aria-label for accessibility");let l=t.selectedValue===n,{pressProps:u,isPressed:c}=Ie({isDisabled:i}),{focusableProps:d}=Mt(A(e,{onFocus:()=>t.setLastFocusedValue(n)}),r),p=A(u,d),h=K(e,{labelable:!0}),f=-1;null!=t.selectedValue?t.selectedValue===n&&(f=0):t.lastFocusedValue!==n&&null!=t.lastFocusedValue||(f=0),i&&(f=void 0);let{name:m,descriptionId:g,errorMessageId:v,validationBehavior:y}=mp.get(t);return ue(r,t.selectedValue,t.setSelectedValue),qd({validationBehavior:y},t,r),{inputProps:A(h,{...p,type:"radio",name:m,tabIndex:f,disabled:i,required:t.isRequired&&"native"===y,checked:l,value:n,onChange:e=>{e.stopPropagation(),t.setSelectedValue(n);},"aria-describedby":[e["aria-describedby"],t.isInvalid?v:null,g].filter(Boolean).join(" ")||void 0}),isDisabled:i,isSelected:l,isPressed:c}}({value:d,children:p,...a,...D},a.groupState,C),{focusProps:N,isFocused:j,isFocusVisible:F}=St({autoFocus:b}),O=V||I.readOnly,[B,W]=t.useState(!1),{pressProps:z}=$n({isDisabled:O,onPressStart(e){"keyboard"!==e.pointerType&&W(!0);},onPressEnd(e){"keyboard"!==e.pointerType&&W(!1);}}),{hoverProps:U,isHovered:H}=ht({isDisabled:O}),$=!O&&(B||R),_=t.useMemo((()=>rn({color:m,size:f,isInvalid:M,isDisabled:V,disableAnimation:v})),[m,f,V,M,v]),G=pn(null==u?void 0:u.base,x),q=t.useCallback(((e={})=>({...e,ref:T,className:_.base({class:G}),"data-disabled":gn(V),"data-focus":gn(j),"data-focus-visible":gn(F),"data-selected":gn(L),"data-invalid":gn(M),"data-hover":gn(H),"data-pressed":gn($),"data-hover-unselected":gn(H&&!L),"data-readonly":gn(I.readOnly),"aria-required":gn(k),...A(U,z,w)})),[_,G,T,V,j,F,L,M,H,$,I.readOnly,k,w]),Y=t.useCallback(((e={})=>({...e,"aria-hidden":!0,className:pn(_.wrapper({class:pn(null==u?void 0:u.wrapper,e.className)}))})),[_,null==u?void 0:u.wrapper]),X=t.useCallback(((e={})=>({...e,ref:C,required:k,...A(I,N),onChange:S(I.onChange,y)})),[I,N,k,y]),Z=t.useCallback(((e={})=>({...e,id:E,className:_.label({class:null==u?void 0:u.label})})),[_,null==u?void 0:u.label,V,L,M]),J=t.useCallback(((e={})=>({...e,className:_.labelWrapper({class:null==u?void 0:u.labelWrapper})})),[_,null==u?void 0:u.labelWrapper]),Q=t.useCallback(((e={})=>({...e,className:_.control({class:null==u?void 0:u.control})})),[_,null==u?void 0:u.control]);return {Component:P,children:p,slots:_,classNames:u,description:h,isSelected:L,isDisabled:V,isInvalid:M,isFocusVisible:F,getBaseProps:q,getWrapperProps:Y,getInputProps:X,getLabelProps:Z,getLabelWrapperProps:J,getControlProps:Q}}var Pp=It(((t,r)=>{const{Component:n,children:s,slots:o,classNames:a,description:i,getBaseProps:l,getWrapperProps:u,getInputProps:c,getLabelProps:d,getLabelWrapperProps:p,getControlProps:h}=wp({...t,ref:r});return e.jsxs(n,{...l(),children:[e.jsx(Dt,{children:e.jsx("input",{...c()})}),e.jsx("span",{...u(),children:e.jsx("span",{...h()})}),e.jsxs("div",{...p(),children:[s&&e.jsx("span",{...d(),children:s}),i&&e.jsx("span",{className:o.description({class:null==a?void 0:a.description}),children:i})]})]})}));Pp.displayName="NextUI.Radio";var Tp=Pp;function Cp(e,t,r){let{inputProps:n,isSelected:s,isPressed:o,isDisabled:a,isReadOnly:i}=function(e,t,r){let{isDisabled:n=!1,isReadOnly:s=!1,value:o,name:a,children:i,"aria-label":l,"aria-labelledby":u,validationState:c="valid",isInvalid:d}=e;null!=i||null!=l||null!=u||console.warn("If you do not provide children, you must specify an aria-label for accessibility");let{pressProps:p,isPressed:h}=Ie({isDisabled:n}),{focusableProps:f}=Mt(e,r),m=A(p,f),g=K(e,{labelable:!0});return ue(r,t.isSelected,t.setSelected),{inputProps:A(g,{"aria-invalid":d||"invalid"===c||void 0,"aria-errormessage":e["aria-errormessage"],"aria-controls":e["aria-controls"],"aria-readonly":s||void 0,onChange:e=>{e.stopPropagation(),t.setSelected(e.target.checked);},disabled:n,...null==o?{}:{value:o},name:a,type:"checkbox",...m}),isSelected:t.isSelected,isPressed:h,isDisabled:n,isReadOnly:s,isInvalid:d||"invalid"===c}}(e,t,r);return {inputProps:{...n,role:"switch",checked:s},isSelected:s,isPressed:o,isDisabled:a,isReadOnly:i}}function Ep(e={}){const[r,n]=Vt(e,tn.variantKeys),{ref:s,as:o,name:a,value:i="",isReadOnly:l=!1,autoFocus:u=!1,startContent:c,endContent:d,defaultSelected:p,isSelected:h,children:f,thumbIcon:m,className:v,classNames:y,onChange:b,onValueChange:x,...w}=r,P=o||"label",T=t.useRef(null),C=function(e,r){const n=t.useRef(null);return t.useImperativeHandle(e,(()=>function(e,t=e){return {...(r=e,{UNSAFE_getDOMNode:()=>r.current}),focus(){t.current&&t.current.focus();}};var r;}(n,r))),n}(s,T),E=t.useId(),k=t.useMemo((()=>{const t=w["aria-label"]||"string"==typeof f?f:void 0;return {name:a,value:i,children:f,autoFocus:u,defaultSelected:p,isSelected:h,isDisabled:!!e.isDisabled,isReadOnly:l,"aria-label":t,"aria-labelledby":w["aria-labelledby"]||E,onChange:x}}),[i,a,E,f,u,l,h,p,e.isDisabled,w["aria-label"],w["aria-labelledby"],x]),M=function(e={}){let{isReadOnly:t}=e,[r,n]=g(e.isSelected,e.defaultSelected||!1,e.onChange);return {isSelected:r,setSelected:function(e){t||n(e);},toggle:function(){t||n(!r);}}}(k),{inputProps:D,isPressed:I,isReadOnly:V}=Cp(k,M,T),{focusProps:L,isFocused:K,isFocusVisible:R}=St({autoFocus:D.autoFocus}),{hoverProps:N,isHovered:j}=ht({isDisabled:D.disabled}),F=k.isDisabled||V,[O,B]=t.useState(!1),{pressProps:W}=$n({isDisabled:F,onPressStart(e){"keyboard"!==e.pointerType&&B(!0);},onPressEnd(e){"keyboard"!==e.pointerType&&B(!1);}}),z=!F&&(O||I),U=D.checked,H=D.disabled,$=t.useMemo((()=>tn({...n})),[...Object.values(n)]),_=pn(null==y?void 0:y.base,v),G=t.useCallback(((e={})=>({...e,"aria-hidden":!0,className:pn($.wrapper({class:pn(null==y?void 0:y.wrapper,null==e?void 0:e.className)}))})),[$,null==y?void 0:y.wrapper]),q=t.useCallback(((e={})=>({...e,className:$.thumb({class:pn(null==y?void 0:y.thumb,null==e?void 0:e.className)})})),[$,null==y?void 0:y.thumb]),Y=t.useCallback(((e={})=>({...e,id:E,className:$.label({class:pn(null==y?void 0:y.label,null==e?void 0:e.className)})})),[$,null==y?void 0:y.label,H,U]),X=t.useCallback(((e={includeStateProps:!1})=>A({width:"1em",height:"1em",className:$.thumbIcon({class:pn(null==y?void 0:y.thumbIcon)})},e.includeStateProps?{isSelected:U}:{})),[$,null==y?void 0:y.thumbIcon,U]),Z=t.useCallback(((e={})=>({width:"1em",height:"1em",...e,className:$.startContent({class:pn(null==y?void 0:y.startContent,null==e?void 0:e.className)})})),[$,null==y?void 0:y.startContent,U]),J=t.useCallback(((e={})=>({width:"1em",height:"1em",...e,className:$.endContent({class:pn(null==y?void 0:y.endContent,null==e?void 0:e.className)})})),[$,null==y?void 0:y.endContent,U]);return {Component:P,slots:$,classNames:y,domRef:C,children:f,thumbIcon:m,startContent:c,endContent:d,isHovered:j,isSelected:U,isPressed:z,isFocused:K,isFocusVisible:R,isDisabled:H,getBaseProps:e=>({...A(N,W,w,e),ref:C,className:$.base({class:pn(_,null==e?void 0:e.className)}),"data-disabled":gn(H),"data-selected":gn(U),"data-readonly":gn(V),"data-focus":gn(K),"data-focus-visible":gn(R),"data-hover":gn(j),"data-pressed":gn(z)}),getWrapperProps:G,getInputProps:(e={})=>({...A(D,L,e),ref:T,id:D.id,onChange:S(b,D.onChange)}),getLabelProps:Y,getThumbProps:q,getThumbIconProps:X,getStartContentProps:Z,getEndContentProps:J}}var Sp=It(((r,n)=>{const{Component:s,children:o,startContent:a,endContent:i,thumbIcon:l,getBaseProps:u,getInputProps:c,getWrapperProps:d,getThumbProps:p,getThumbIconProps:h,getLabelProps:f,getStartContentProps:m,getEndContentProps:g}=Ep({...r,ref:n}),v="function"==typeof l?l(h({includeStateProps:!0})):l&&t.cloneElement(l,h()),y=a&&t.cloneElement(a,m()),b=i&&t.cloneElement(i,g());return e.jsxs(s,{...u(),children:[e.jsx(Dt,{children:e.jsx("input",{...c()})}),e.jsxs("span",{...d(),children:[a&&y,e.jsx("span",{...p(),children:l&&v}),i&&b]}),o&&e.jsx("span",{...f(),children:o})]})}));Sp.displayName="NextUI.Switch";function Mp(e){const[r,n]=Vt(e,sn.variantKeys),{ref:s,as:o,label:a,baseRef:i,wrapperRef:l,description:u,errorMessage:c,className:d,classNames:p,autoFocus:h,startContent:f,endContent:m,onClear:v,onChange:y,validationState:b,innerWrapperRef:x,onValueChange:w=(()=>{}),...P}=r,T=t.useCallback((e=>{w(null!=e?e:"");}),[w]),[C,E]=g(r.value,r.defaultValue,T),[k,D]=t.useState(!1),I=o||"div",V=!!C,L=V||k,R=pn(null==p?void 0:p.base,d,V?"is-filled":""),N=e.isMultiline,j=yn(s),F=yn(i),O=yn(l),B=yn(x),W=t.useCallback((()=>{E(""),j.current&&(j.current.value="",j.current.focus()),null==v||v();}),[j,E,v]),{labelProps:z,inputProps:U,descriptionProps:H,errorMessageProps:$}=function(e,r){let{inputElementType:n="input",isDisabled:s=!1,isRequired:o=!1,isReadOnly:a=!1,type:i="text",validationBehavior:l="aria"}=e,[u,c]=g(e.value,e.defaultValue||"",e.onChange),{focusableProps:d}=Mt(e,r),p=tp({...e,value:u}),{isInvalid:h,validationErrors:f,validationDetails:m}=p.displayValidation,{labelProps:v,fieldProps:y,descriptionProps:b,errorMessageProps:x}=op({...e,isInvalid:h,errorMessage:e.errorMessage||f}),w=K(e,{labelable:!0});const P={type:i,pattern:e.pattern};return ue(r,u,c),qd(e,p,r),t.useEffect((()=>{if(r.current instanceof M(r.current).HTMLTextAreaElement){let e=r.current;Object.defineProperty(e,"defaultValue",{get:()=>e.value,set:()=>{},configurable:!0});}}),[r]),{labelProps:v,inputProps:A(w,"input"===n&&P,{disabled:s,readOnly:a,required:o&&"native"===l,"aria-required":o&&"aria"===l||void 0,"aria-invalid":h||void 0,"aria-errormessage":e["aria-errormessage"],"aria-activedescendant":e["aria-activedescendant"],"aria-autocomplete":e["aria-autocomplete"],"aria-haspopup":e["aria-haspopup"],value:u,onChange:e=>c(e.target.value),autoComplete:e.autoComplete,maxLength:e.maxLength,minLength:e.minLength,name:e.name,placeholder:e.placeholder,inputMode:e.inputMode,onCopy:e.onCopy,onCut:e.onCut,onPaste:e.onPaste,onCompositionEnd:e.onCompositionEnd,onCompositionStart:e.onCompositionStart,onCompositionUpdate:e.onCompositionUpdate,onSelect:e.onSelect,onBeforeInput:e.onBeforeInput,onInput:e.onInput,...d,...y}),descriptionProps:b,errorMessageProps:x,isInvalid:h,validationErrors:f,validationDetails:m}}({...e,"aria-label":cn(null==e?void 0:e["aria-label"],null==e?void 0:e.label,null==e?void 0:e.placeholder),inputElementType:N?"textarea":"input",onChange:E},j),{isFocusVisible:_,isFocused:G,focusProps:q}=St({autoFocus:h,isTextInput:!0}),{isHovered:Y,hoverProps:X}=ht({isDisabled:!!(null==e?void 0:e.isDisabled)}),{focusProps:Z,isFocusVisible:J}=St(),{focusWithinProps:Q}=it({onFocusWithinChange:D}),{pressProps:ee}=Ie({isDisabled:!!(null==e?void 0:e.isDisabled),onPress:W}),te="invalid"===b||e.isInvalid,re=t.useMemo((()=>{var t;return e.labelPlacement&&"inside"!==e.labelPlacement||a?null!=(t=e.labelPlacement)?t:"inside":"outside"}),[e.labelPlacement,a]),ne=!!v||e.isClearable,se=!!a||!!u||!!c,oe=!!r.placeholder,ae=!!a,ie=!!u||!!c,le="outside"===re||"outside-left"===re,ce="inside"===re,de=!!j.current&&((!j.current.value||""===j.current.value||!C||""===C)&&oe),pe="outside-left"===re,he=!!f,fe=!!le&&("outside-left"===re||oe||"outside"===re&&he),me="outside"===re&&!oe&&!he,ge=t.useMemo((()=>sn({...n,isInvalid:te,isClearable:ne})),[...Object.values(n),te,ne,he]),ve=t.useCallback(((t={})=>({ref:F,className:ge.base({class:R}),"data-slot":"base","data-filled":gn(V||oe||he||de),"data-filled-within":gn(L||oe||he||de),"data-focus-within":gn(k),"data-focus-visible":gn(_),"data-readonly":gn(e.isReadOnly),"data-focus":gn(G),"data-hover":gn(Y),"data-required":gn(e.isRequired),"data-invalid":gn(te),"data-disabled":gn(e.isDisabled),"data-has-elements":gn(se),"data-has-helper":gn(ie),"data-has-label":gn(ae),"data-has-value":gn(!de),...Q,...t})),[ge,R,V,G,Y,te,ie,ae,se,de,he,k,_,L,oe,Q,e.isReadOnly,e.isRequired,e.isDisabled]),ye=t.useCallback(((e={})=>({"data-slot":"label",className:ge.label({class:null==p?void 0:p.label}),...z,...e})),[ge,z,null==p?void 0:p.label]),be=t.useCallback(((t={})=>({ref:j,"data-slot":"input","data-filled":gn(V),"data-filled-within":gn(L),"data-has-start-content":gn(he),"data-has-end-content":gn(!!m),className:ge.input({class:pn(null==p?void 0:p.input,C?"is-filled":"")}),...A(q,U,Cn(P,{enabled:!0,labelable:!0,omitEventNames:new Set(Object.keys(U))}),t),required:e.isRequired,"aria-readonly":gn(e.isReadOnly),"aria-required":gn(e.isRequired),onChange:S(U.onChange,y)})),[ge,C,q,U,P,V,L,he,m,null==p?void 0:p.input,e.isReadOnly,e.isRequired,y]),xe=t.useCallback(((e={})=>({ref:O,"data-slot":"input-wrapper","data-hover":gn(Y),"data-focus-visible":gn(_),"data-focus":gn(G),className:ge.inputWrapper({class:pn(null==p?void 0:p.inputWrapper,C?"is-filled":"")}),...A(e,X),onClick:e=>{j.current&&e.currentTarget===e.target&&j.current.focus();},style:{cursor:"text",...e.style}})),[ge,Y,_,G,C,null==p?void 0:p.inputWrapper]),we=t.useCallback(((e={})=>({...e,ref:B,"data-slot":"inner-wrapper",onClick:e=>{j.current&&e.currentTarget===e.target&&j.current.focus();},className:ge.innerWrapper({class:pn(null==p?void 0:p.innerWrapper,null==e?void 0:e.className)})})),[ge,null==p?void 0:p.innerWrapper]),Pe=t.useCallback(((e={})=>({...e,"data-slot":"main-wrapper",className:ge.mainWrapper({class:pn(null==p?void 0:p.mainWrapper,null==e?void 0:e.className)})})),[ge,null==p?void 0:p.mainWrapper]),Te=t.useCallback(((e={})=>({...e,"data-slot":"helper-wrapper",className:ge.helperWrapper({class:pn(null==p?void 0:p.helperWrapper,null==e?void 0:e.className)})})),[ge,null==p?void 0:p.helperWrapper]),Ce=t.useCallback(((e={})=>({...e,...H,"data-slot":"description",className:ge.description({class:pn(null==p?void 0:p.description,null==e?void 0:e.className)})})),[ge,null==p?void 0:p.description]),Ee=t.useCallback(((e={})=>({...e,...$,"data-slot":"error-message",className:ge.errorMessage({class:pn(null==p?void 0:p.errorMessage,null==e?void 0:e.className)})})),[ge,$,null==p?void 0:p.errorMessage]),Se=t.useCallback(((e={})=>({...e,role:"button",tabIndex:0,"data-slot":"clear-button","data-focus-visible":gn(J),className:ge.clearButton({class:pn(null==p?void 0:p.clearButton,null==e?void 0:e.className)}),...A(ee,Z)})),[ge,J,ee,Z,null==p?void 0:p.clearButton]);return {Component:I,classNames:p,domRef:j,label:a,description:u,startContent:f,endContent:m,labelPlacement:re,isClearable:ne,isInvalid:te,hasHelper:ie,hasStartContent:he,isLabelOutside:fe,isOutsideLeft:pe,isLabelOutsideAsPlaceholder:me,shouldLabelBeOutside:le,shouldLabelBeInside:ce,hasPlaceholder:oe,errorMessage:c,getBaseProps:ve,getLabelProps:ye,getInputProps:be,getMainWrapperProps:Pe,getInputWrapperProps:xe,getInnerWrapperProps:we,getHelperWrapperProps:Te,getDescriptionProps:Ce,getErrorMessageProps:Ee,getClearButtonProps:Se}}var Ap=It(((r,n)=>{const{Component:s,label:o,description:a,isClearable:i,startContent:l,endContent:u,labelPlacement:c,hasHelper:d,isOutsideLeft:p,shouldLabelBeOutside:h,errorMessage:f,getBaseProps:m,getLabelProps:g,getInputProps:v,getInnerWrapperProps:y,getInputWrapperProps:b,getMainWrapperProps:x,getHelperWrapperProps:w,getDescriptionProps:P,getErrorMessageProps:T,getClearButtonProps:C}=Mp({...r,ref:n}),E=o?e.jsx("label",{...g(),children:o}):null,S=t.useMemo((()=>i?e.jsx("span",{...C(),children:u||e.jsx(ts,{})}):u),[i,C]),k=t.useMemo((()=>d?e.jsx("div",{...w(),children:f?e.jsx("div",{...T(),children:f}):a?e.jsx("div",{...P(),children:a}):null}):null),[d,f,a,w,T,P]),M=t.useMemo((()=>l||S?e.jsxs("div",{...y(),children:[l,e.jsx("input",{...v()}),S]}):e.jsx("div",{...y(),children:e.jsx("input",{...v()})})),[l,S,v,y]),A=t.useMemo((()=>h?e.jsxs("div",{...x(),children:[e.jsxs("div",{...b(),children:[p?null:E,M]}),k]}):e.jsxs(e.Fragment,{children:[e.jsxs("div",{...b(),children:[E,M]}),k]})),[c,k,h,E,M,f,a,x,b,T,P]);return e.jsxs(s,{...m(),children:[p?E:null,A]})}));Ap.displayName="NextUI.Input";var Dp=Ap;function Ip(){return Ip=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var n in r)Object.prototype.hasOwnProperty.call(r,n)&&(e[n]=r[n]);}return e},Ip.apply(this,arguments)}var Vp=function(e,t){"function"!=typeof e?e.current=t:e(t);},Lp=function(){},Kp=["cacheMeasurements","maxRows","minRows","onChange","onHeightChange"],Rp=function(e,r){e.cacheMeasurements,e.maxRows,e.minRows;var n=e.onChange,o=void 0===n?Lp:n;e.onHeightChange;var a=function(e,t){if(null==e)return {};var r,n,s={},o=Object.keys(e);for(n=0;n<o.length;n++)r=o[n],t.indexOf(r)>=0||(s[r]=e[r]);return s}(e,Kp);a.value;var i=function(e,r){var n=t.useRef();return t.useCallback((function(t){e.current=t,n.current&&Vp(n.current,null),n.current=r,r&&Vp(r,t);}),[r])}(s.useRef(null),r);return s.useRef(0),s.useRef(),s.createElement("textarea",Ip({},a,{onChange:o,ref:i}))},Np=s.forwardRef(Rp),jp=It((({style:r,minRows:n=3,maxRows:s=8,cacheMeasurements:o=!1,disableAutosize:a=!1,onHeightChange:i,...l},u)=>{const{Component:c,label:d,description:p,startContent:h,endContent:f,hasHelper:m,shouldLabelBeOutside:g,shouldLabelBeInside:v,errorMessage:y,getBaseProps:b,getLabelProps:x,getInputProps:w,getInnerWrapperProps:P,getInputWrapperProps:T,getHelperWrapperProps:C,getDescriptionProps:E,getErrorMessageProps:S}=Mp({...l,ref:u,isMultiline:!0}),[k,M]=t.useState(n>1),[D,I]=t.useState(!1),V=d?e.jsx("label",{...x(),children:d}):null,L=w(),K=a?e.jsx("textarea",{...L,style:A(L.style,null!=r?r:{})}):e.jsx(Np,{...L,cacheMeasurements:o,"data-hide-scroll":gn(!D),maxRows:s,minRows:n,style:A(L.style,null!=r?r:{}),onHeightChange:(e,t)=>{if(1===n&&M(e>=2*t.rowHeight),s>n){const r=e>=s*t.rowHeight;I(r);}null==i||i(e,t);}}),R=t.useMemo((()=>h||f?e.jsxs("div",{...P(),children:[h,K,f]}):e.jsx("div",{...P(),children:K})),[h,L,f,P]);return e.jsxs(c,{...b(),children:[g?V:null,e.jsxs("div",{...T(),"data-has-multiple-rows":gn(k),children:[v?V:null,R]}),m?e.jsx("div",{...C(),children:y?e.jsx("div",{...S(),children:y}):p?e.jsx("div",{...E(),children:p}):null}):null]})}));jp.displayName="NextUI.Textarea";var Fp=jp;const Op=new WeakMap;function Bp(e,t,r){return "string"==typeof t&&(t=t.replace(/\s+/g,"")),`${Op.get(e)}-${r}-${t}`}function Wp(e,r,n){var s;let{key:o,isDisabled:a,shouldSelectOnPressUp:i}=e,{selectionManager:l,selectedKey:u}=r,c=o===u,d=a||r.isDisabled||r.disabledKeys.has(o),{itemProps:p,isPressed:h}=function(e){let{selectionManager:r,key:n,ref:s,shouldSelectOnPressUp:o,shouldUseVirtualFocus:a,focus:i,isDisabled:l,onAction:u,allowsDifferentPressOrigin:c,linkBehavior:d="action"}=e,p=$(),h=e=>{if("keyboard"===e.pointerType&&En(e))r.toggleSelection(n);else {if("none"===r.selectionMode)return;if(r.isLink(n)){if("selection"===d)return p.open(s.current,e),void r.setSelectedKeys(r.selectedKeys);if("override"===d||"none"===d)return}"single"===r.selectionMode?r.isSelected(n)&&!r.disallowEmptySelection?r.toggleSelection(n):r.replaceSelection(n):e&&e.shiftKey?r.extendSelection(n):"toggle"===r.selectionBehavior||e&&(Sn(e)||"touch"===e.pointerType||"virtual"===e.pointerType)?r.toggleSelection(n):r.replaceSelection(n);}};t.useEffect((()=>{n===r.focusedKey&&r.isFocused&&!a&&(i?i():document.activeElement!==s.current&&vt(s.current));}),[s,n,r.focusedKey,r.childFocusStrategy,r.isFocused,a]),l=l||r.isDisabled(n);let f={};a||l?l&&(f.onMouseDown=e=>{e.preventDefault();}):f={tabIndex:n===r.focusedKey?0:-1,onFocus(e){e.target===s.current&&r.setFocusedKey(n);}};let m=r.isLink(n)&&"override"===d,g=r.isLink(n)&&"selection"!==d&&"none"!==d,v=!l&&r.canSelectItem(n)&&!m,y=(u||g)&&!l,b=y&&("replace"===r.selectionBehavior?!v:!v||r.isEmpty),x=y&&v&&"replace"===r.selectionBehavior,w=b||x,P=t.useRef(null),T=w&&v,C=t.useRef(!1),E=t.useRef(!1),S=e=>{u&&u(),g&&p.open(s.current,e);},k={};o?(k.onPressStart=e=>{P.current=e.pointerType,C.current=T,"keyboard"!==e.pointerType||w&&!Dn()||h(e);},c?(k.onPressUp=b?null:e=>{"keyboard"!==e.pointerType&&v&&h(e);},k.onPress=b?S:null):k.onPress=e=>{if(b||x&&"mouse"!==e.pointerType){if("keyboard"===e.pointerType&&!An())return;S(e);}else "keyboard"!==e.pointerType&&v&&h(e);}):(k.onPressStart=e=>{P.current=e.pointerType,C.current=T,E.current=b,v&&("mouse"===e.pointerType&&!b||"keyboard"===e.pointerType&&(!y||Dn()))&&h(e);},k.onPress=e=>{("touch"===e.pointerType||"pen"===e.pointerType||"virtual"===e.pointerType||"keyboard"===e.pointerType&&w&&An()||"mouse"===e.pointerType&&E.current)&&(w?S(e):v&&h(e));}),f["data-key"]=n,k.preventFocusOnPress=a;let{pressProps:M,isPressed:D}=Ie(k),I=x?e=>{"mouse"===P.current&&(e.stopPropagation(),e.preventDefault(),S(e));}:void 0,{longPressProps:V}=gt({isDisabled:!T,onLongPress(e){"touch"===e.pointerType&&(h(e),r.setSelectionBehavior("toggle"));}}),L=r.isLink(n)?e=>{_.isOpening||e.preventDefault();}:void 0;return {itemProps:A(f,v||b?M:{},T?V:{},{onDoubleClick:I,onDragStartCapture:e=>{"touch"===P.current&&C.current&&e.preventDefault();},onClick:L}),isPressed:D,isSelected:r.isSelected(n),isFocused:r.isFocused&&r.focusedKey===n,isDisabled:l,allowsSelection:v,hasAction:w}}({selectionManager:l,key:o,ref:n,isDisabled:d,shouldSelectOnPressUp:i,linkBehavior:"selection"}),f=Bp(r,o,"tab"),m=Bp(r,o,"tabpanel"),{tabIndex:g}=p,v=r.collection.getItem(o),y=K(null==v?void 0:v.props,{isLink:!!(null==v||null===(s=v.props)||void 0===s?void 0:s.href)});return delete y.id,{tabProps:A(y,p,{id:f,"aria-selected":c,"aria-disabled":d||void 0,"aria-controls":c?m:void 0,tabIndex:d?void 0:g,role:"tab"}),isSelected:c,isDisabled:d,isPressed:h}}function zp(e,r,n){let s=function(e,r){let n=null==r?void 0:r.isDisabled,[s,o]=t.useState(!1);return b((()=>{if((null==e?void 0:e.current)&&!n){let t=()=>{if(e.current){let t=Tt(e.current,{tabbable:!0});o(!!t.nextNode());}};t();let r=new MutationObserver(t);return r.observe(e.current,{subtree:!0,childList:!0,attributes:!0,attributeFilter:["tabIndex","disabled"]}),()=>{r.disconnect();}}})),!n&&s}(n)?void 0:0;var o;const a=Bp(r,null!==(o=e.id)&&void 0!==o?o:null==r?void 0:r.selectedKey,"tabpanel");return {tabPanelProps:A(J({...e,id:a,"aria-labelledby":Bp(r,null==r?void 0:r.selectedKey,"tab")}),{tabIndex:s,role:"tabpanel","aria-describedby":e["aria-describedby"],"aria-details":e["aria-details"]})}}class Up{getKeyLeftOf(e){return this.flipDirection?this.getNextKey(e):this.getPreviousKey(e)}getKeyRightOf(e){return this.flipDirection?this.getPreviousKey(e):this.getNextKey(e)}getKeyAbove(e){return this.getPreviousKey(e)}getKeyBelow(e){return this.getNextKey(e)}getFirstKey(){let e=this.collection.getFirstKey();return this.disabledKeys.has(e)&&(e=this.getNextKey(e)),e}getLastKey(){let e=this.collection.getLastKey();return this.disabledKeys.has(e)&&(e=this.getPreviousKey(e)),e}getNextKey(e){do{null==(e=this.collection.getKeyAfter(e))&&(e=this.collection.getFirstKey());}while(this.disabledKeys.has(e));return e}getPreviousKey(e){do{null==(e=this.collection.getKeyBefore(e))&&(e=this.collection.getLastKey());}while(this.disabledKeys.has(e));return e}constructor(e,t,r,n=new Set){this.collection=e,this.flipDirection="rtl"===t&&"horizontal"===r,this.disabledKeys=n;}}var Hp=It(((t,r)=>{var n,s,o;const{as:a,state:i,className:l,slots:u,classNames:c,...d}=t,p=a||"div",h=yn(r),{tabPanelProps:f}=zp(t,i,h),{focusProps:m,isFocused:g,isFocusVisible:v}=St(),y=i.selectedItem,b=null==(n=null==y?void 0:y.props)?void 0:n.children,x=pn(null==c?void 0:c.panel,l,null==(s=null==y?void 0:y.props)?void 0:s.className);return b?e.jsx(p,{ref:h,"data-focus":g,"data-focus-visible":v,...A(f,m,d),className:null==(o=u.panel)?void 0:o.call(u,{class:x}),"data-slot":"panel",children:b}):null}));Hp.displayName="NextUI.TabPanel";var $p=Hp,_p=It(((r,n)=>{var s;const{className:o,as:a,item:i,state:l,classNames:u,isDisabled:c,listRef:d,slots:p,motionProps:h,disableAnimation:f,disableCursorAnimation:m,shouldSelectOnPressUp:g,onClick:v,...y}=r,{key:b}=i,x=yn(n),w=a||(r.href?"a":"button"),P="string"==typeof w,{tabProps:T,isSelected:C,isDisabled:E,isPressed:k}=Wp({key:b,isDisabled:c,shouldSelectOnPressUp:g},l,x),M=c||E,{focusProps:D,isFocused:I,isFocusVisible:V}=St(),{hoverProps:L,isHovered:K}=ht({isDisabled:M}),R=pn(null==u?void 0:u.tab,o),[,N]=function(e={}){const{rerender:r=!1,delay:n=0}=e,s=t.useRef(!1),[o,a]=t.useState(!1);return t.useEffect((()=>{s.current=!0;let e=null;return r&&(n>0?e=setTimeout((()=>{a(!0);}),n):a(!0)),()=>{s.current=!1,r&&a(!1),e&&clearTimeout(e);}}),[r]),[t.useCallback((()=>s.current),[]),o]}({rerender:!0});return e.jsxs(w,{ref:x,"data-disabled":gn(E),"data-focus":gn(I),"data-focus-visible":gn(V),"data-hover":gn(K),"data-hover-unselected":gn((K||k)&&!C),"data-pressed":gn(k),"data-selected":gn(C),"data-slot":"tab",...A(T,M?{}:{...D,...L},Cn(y,{enabled:P,omitPropNames:new Set(["title"])})),className:null==(s=p.tab)?void 0:s.call(p,{class:R}),title:null==y?void 0:y.titleValue,type:"button"===w?"button":void 0,onClick:()=>{S(v,T.onClick),(null==x?void 0:x.current)&&(null==d?void 0:d.current)&&pp(x.current,{scrollMode:"if-needed",behavior:"smooth",block:"end",inline:"end",boundary:null==d?void 0:d.current});},children:[C&&!f&&!m&&N?e.jsx(nd.span,{className:p.cursor({class:null==u?void 0:u.cursor}),"data-slot":"cursor",layoutDependency:!1,layoutId:"cursor",transition:{type:"spring",bounce:.15,duration:.5},...h}):null,e.jsx("div",{className:p.tabContent({class:null==u?void 0:u.tabContent}),"data-slot":"tabContent",children:i.rendered})]})}));_p.displayName="NextUI.Tab";var Gp=_p;class qp{*[Symbol.iterator](){yield*this.iterable;}get size(){return this.keyMap.size}getKeys(){return this.keyMap.keys()}getKeyBefore(e){let t=this.keyMap.get(e);return t?t.prevKey:null}getKeyAfter(e){let t=this.keyMap.get(e);return t?t.nextKey:null}getFirstKey(){return this.firstKey}getLastKey(){return this.lastKey}getItem(e){return this.keyMap.get(e)}at(e){const t=[...this.getKeys()];return this.getItem(t[e])}getChildren(e){let t=this.keyMap.get(e);return (null==t?void 0:t.childNodes)||[]}constructor(e){this.keyMap=new Map,this.iterable=e;let t,r=e=>{if(this.keyMap.set(e.key,e),e.childNodes&&"section"===e.type)for(let t of e.childNodes)r(t);};for(let t of e)r(t);let n=0;for(let[e,r]of this.keyMap)t?(t.nextKey=e,r.prevKey=t.key):(this.firstKey=e,r.prevKey=void 0),"item"===r.type&&(r.index=n++),t=r,t.nextKey=void 0;this.lastKey=null==t?void 0:t.key;}}function Yp(e){let{filter:r}=e,n=function(e){let{selectionMode:r="none",disallowEmptySelection:n,allowDuplicateSelectionEvents:s,selectionBehavior:o="toggle",disabledBehavior:a="all"}=e,i=t.useRef(!1),[,l]=t.useState(!1),u=t.useRef(null),c=t.useRef(null),[,d]=t.useState(null),p=t.useMemo((()=>Md(e.selectedKeys)),[e.selectedKeys]),h=t.useMemo((()=>Md(e.defaultSelectedKeys,new kd)),[e.defaultSelectedKeys]),[f,m]=g(p,h,e.onSelectionChange),v=t.useMemo((()=>e.disabledKeys?new Set(e.disabledKeys):new Set),[e.disabledKeys]),[y,b]=t.useState(o);"replace"===o&&"toggle"===y&&"object"==typeof f&&0===f.size&&b("replace");let x=t.useRef(o);return t.useEffect((()=>{o!==x.current&&(b(o),x.current=o);}),[o]),{selectionMode:r,disallowEmptySelection:n,selectionBehavior:y,setSelectionBehavior:b,get isFocused(){return i.current},setFocused(e){i.current=e,l(e);},get focusedKey(){return u.current},get childFocusStrategy(){return c.current},setFocusedKey(e,t="first"){u.current=e,c.current=t,d(e);},selectedKeys:f,setSelectedKeys(e){!s&&function(e,t){if(e.size!==t.size)return !1;for(let r of e)if(!t.has(r))return !1;return !0}(e,f)||m(e);},disabledKeys:v,disabledBehavior:a}}(e),s=t.useMemo((()=>e.disabledKeys?new Set(e.disabledKeys):new Set),[e.disabledKeys]),o=t.useCallback((e=>new qp(r?r(e):e)),[r]),a=t.useMemo((()=>({suppressTextValueWarning:e.suppressTextValueWarning})),[e.suppressTextValueWarning]),i=function(e,r,n){let s=t.useMemo((()=>new xd),[]),{children:o,items:a,collection:i}=e;return t.useMemo((()=>{if(i)return i;let e=s.build({children:o,items:a},n);return r(e)}),[s,o,a,i,n,r])}(e,o,a),l=t.useMemo((()=>new Ad(i,n)),[i,n]);const u=t.useRef(null);return t.useEffect((()=>{if(null!=n.focusedKey&&!i.getItem(n.focusedKey)){const e=u.current.getItem(n.focusedKey),t=[...u.current.getKeys()].map((e=>{const t=u.current.getItem(e);return "item"===t.type?t:null})).filter((e=>null!==e)),r=[...i.getKeys()].map((e=>{const t=i.getItem(e);return "item"===t.type?t:null})).filter((e=>null!==e)),s=t.length-r.length;let o,a=Math.min(s>1?Math.max(e.index-s+1,0):e.index,r.length-1);for(;a>=0;){if(!l.isDisabled(r[a].key)){o=r[a];break}a<r.length-1?a++:(a>e.index&&(a=e.index),a--);}n.setFocusedKey(o?o.key:null);}u.current=i;}),[i,l,n,n.focusedKey]),{collection:i,disabledKeys:s,selectionManager:l}}function Xp(e){var r;let n=function(e){var r;let[n,s]=g(e.selectedKey,null!==(r=e.defaultSelectedKey)&&void 0!==r?r:null,e.onSelectionChange),o=t.useMemo((()=>null!=n?[n]:[]),[n]),{collection:a,disabledKeys:i,selectionManager:l}=Yp({...e,selectionMode:"single",disallowEmptySelection:!0,allowDuplicateSelectionEvents:!0,selectedKeys:o,onSelectionChange:t=>{var r;let o=null!==(r=t.values().next().value)&&void 0!==r?r:null;o===n&&e.onSelectionChange&&e.onSelectionChange(o),s(o);}}),u=null!=n?a.getItem(n):null;return {collection:a,disabledKeys:i,selectionManager:l,selectedKey:n,setSelectedKey:s,selectedItem:u}}({...e,suppressTextValueWarning:!0,defaultSelectedKey:null!==(r=e.defaultSelectedKey)&&void 0!==r?r:Zp(e.collection,e.disabledKeys?new Set(e.disabledKeys):new Set)}),{selectionManager:s,collection:o,selectedKey:a}=n,i=t.useRef(a);return t.useEffect((()=>{let e=a;!s.isEmpty&&o.getItem(e)||(e=Zp(o,n.disabledKeys),null!=e&&s.setSelectedKeys([e])),(null!=e&&null==s.focusedKey||!s.isFocused&&e!==i.current)&&s.setFocusedKey(e),i.current=e;})),{...n,isDisabled:e.isDisabled||!1}}function Zp(e,t){let r=null;if(e){for(r=e.getFirstKey();t.has(r)&&r!==e.getLastKey();)r=e.getKeyAfter(r);t.has(r)&&r===e.getLastKey()&&(r=e.getFirstKey());}return r}function Jp(e){const[r,n]=Vt(e,en.variantKeys),{ref:s,as:o,className:a,classNames:i,children:l,disableCursorAnimation:u,shouldSelectOnPressUp:c=!0,motionProps:d,...p}=r,h=o||"div",f="string"==typeof h,m=yn(s),g=Xp({children:l,...p}),{tabListProps:v}=function(e,r,n){let{orientation:s="horizontal",keyboardActivation:o="automatic"}=e,{collection:a,selectionManager:i,disabledKeys:l}=r,{direction:u}=ye(),c=t.useMemo((()=>new Up(a,u,s,l)),[a,l,s,u]),{collectionProps:d}=Mn({ref:n,selectionManager:i,keyboardDelegate:c,selectOnFocus:"automatic"===o,disallowEmptySelection:!0,scrollRef:n,linkBehavior:"selection"}),p=T();return Op.set(r,p),{tabListProps:{...A(d,J({...e,id:p})),role:"tablist","aria-orientation":s,tabIndex:void 0}}}(p,g,m),y=t.useMemo((()=>en({...n,className:a})),[...Object.values(n),a]),b=pn(null==i?void 0:i.base,a),x=t.useMemo((()=>({state:g,slots:y,classNames:i,motionProps:d,listRef:m,shouldSelectOnPressUp:c,disableCursorAnimation:u,isDisabled:null==e?void 0:e.isDisabled,disableAnimation:null==e?void 0:e.disableAnimation})),[g,y,m,d,u,c,null==e?void 0:e.disableAnimation,null==e?void 0:e.isDisabled,i]),w=t.useCallback((e=>({"data-slot":"base",className:y.base({class:pn(b,null==e?void 0:e.className)}),...A(Cn(p,{enabled:f}),e)})),[b,p,y]),P=t.useCallback((e=>({ref:m,"data-slot":"tabList",className:y.tabList({class:pn(null==i?void 0:i.tabList,null==e?void 0:e.className)}),...A(v,e)})),[m,v,i,y]);return {Component:h,domRef:m,state:g,values:x,getBaseProps:w,getTabListProps:P}}function Qp(r,n){var s;const{Component:o,values:a,state:i,getBaseProps:l,getTabListProps:u}=Jp({...r,ref:n}),c=t.useId(),d=!r.disableAnimation&&!r.disableCursorAnimation,p={state:i,listRef:a.listRef,slots:a.slots,classNames:a.classNames,isDisabled:a.isDisabled,motionProps:a.motionProps,disableAnimation:a.disableAnimation,shouldSelectOnPressUp:a.shouldSelectOnPressUp,disableCursorAnimation:a.disableCursorAnimation},h=[...i.collection].map((t=>e.jsx(Gp,{item:t,...p,...t.props},t.key)));return e.jsxs(e.Fragment,{children:[e.jsx("div",{...l(),children:e.jsx(o,{...u(),children:d?e.jsx(gd,{id:c,children:h}):h})}),e.jsx($p,{classNames:a.classNames,slots:a.slots,state:a.state},null==(s=i.selectedItem)?void 0:s.key)]})}It(Qp);Qp.displayName="NextUI.Tabs";var rh="undefined"!=typeof window?window:null;Chip = function(t){var r=t.children,n=t.className,s=t.variant,o=t.size,a=t.onClick,i=void 0===a?function(){}:a;return e.jsx(Gd,be({className:n,variant:s,radius:"lg",size:o,classNames:{base:"font-header selection:none"},onClick:function(e){return i(e)}},{children:r}))},Input = function(t){var r=t.label,n=t.placeholder,s=t.description,o=t.value,a=t.setValue,i=void 0===a?function(){}:a,l=t.defaultValue,u=t.isInvalid,c=t.errorMessage,d=t.isDisabled,p=t.className,h=t.additionalClasses,f=t.style,m=t.startContent,g=t.endContent,v=t.variant;return e.jsx(Dp,{label:r,placeholder:n,description:s,value:o,radius:"lg",labelPlacement:"inside",onChange:function(e){return i(e.target.value)},defaultValue:l,isInvalid:u,errorMessage:c,isDisabled:d,className:h?p+" "+h:p,classNames:{base:"placeholder-gray-100",label:"font-header text-sm py-1",input:"font-content text-base",innerWrapper:"flex items-center",errorMessage:"font-header text-base"},style:f,startContent:m,endContent:g,variant:v})},Page = function(r){var n=r.name,s=r.version,o=r.children,a=r.className,i=r.additionalClasses,l=r.style;return t.useEffect((function(){rh.TONE_DEBUG&&(rh.TONE_PAGE={name:n,version:s});}),[]),e.jsx("div",be({className:a||"h-full p-4 w-full "+i,style:l},{children:o}))},Radio = function(t){var r=t.children,n=t.value;return t.classNames,e.jsx(Tp,be({value:n,className:"font-content"},{children:r}))},RadioGroup = function(t){var r=t.children,n=t.label,s=t.orientation,o=t.additionalClasses,a=t.value,i=t.setValue,l=void 0===i?function(){}:i;return e.jsx(xp,be({label:n,orientation:s,className:o&&" "+o,classNames:{label:"font-header text-sm"},value:a,onValueChange:function(e){return l(e)}},{children:r}))},Textarea = function(t){var r=t.label,n=t.value,s=t.setValue,o=void 0===s?function(){}:s,a=t.isDisabled,i=t.className,l=t.additionalClasses,u=t.style;return e.jsx(Fp,{label:r,labelPlacement:"inside",value:n,onChange:function(e){return o(e.target.value)},isDisabled:a,className:l?"".concat(i," ").concat(l):i,classNames:{label:"font-header text-sm py-1",input:"font-content text-base"},style:u})};
+var e=require$$0$4,t=require$$1$1,r=require$$2$1;function n$1(e){var t=Object.create(null);return e&&Object.keys(e).forEach((function(r){if("default"!==r){var n=Object.getOwnPropertyDescriptor(e,r);Object.defineProperty(t,r,n.get?n:{enumerable:!0,get:function(){return e[r]}});}})),t.default=e,Object.freeze(t)}var s=n$1(t);const o={prefix:String(Math.round(1e10*Math.random())),current:0},a=t.createContext(o),i$1=t.createContext(!1);let l=Boolean("undefined"!=typeof window&&window.document&&window.document.createElement),u=new WeakMap;const c$1="function"==typeof t.useId?function(e){let r=t.useId(),[n]=t.useState(f()),s=n||"test"===process.env.NODE_ENV?"react-aria":`react-aria${o.prefix}`;return e||`${s}-${r}`}:function(e){let r=t.useContext(a);r!==o||l||console.warn("When server rendering, you must wrap your application in an <SSRProvider> to ensure consistent ids are generated between the client and server.");let n=function(e=!1){let r=t.useContext(a),n=t.useRef(null);if(null===n.current&&!e){var s,o;let e=null===(o=t.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED)||void 0===o||null===(s=o.ReactCurrentOwner)||void 0===s?void 0:s.current;if(e){let t=u.get(e);null==t?u.set(e,{id:r.current,state:e.memoizedState}):e.memoizedState!==t.state&&(r.current=t.id,u.delete(e));}n.current=++r.current;}return n.current}(!!e),s=r===o&&"test"===process.env.NODE_ENV?"react-aria":`react-aria${r.prefix}`;return e||`${s}-${n}`};function d(){return !1}function p(){return !0}function h(e){return ()=>{}}function f(){return "function"==typeof t.useSyncExternalStore?t.useSyncExternalStore(h,d,p):t.useContext(i$1)}function m(e,t,r){!function(e,t){if(t.has(e))throw new TypeError("Cannot initialize the same private elements twice on an object")}(e,t),t.set(e,r);}function g(e,r,n){let[s,o]=t.useState(e||r),a=t.useRef(void 0!==e),i=void 0!==e;t.useEffect((()=>{let e=a.current;e!==i&&console.warn(`WARN: A component changed from ${e?"controlled":"uncontrolled"} to ${i?"controlled":"uncontrolled"}.`),a.current=i;}),[i]);let l=i?e:s,u=t.useCallback(((e,...t)=>{let r=(e,...t)=>{n&&(Object.is(l,e)||n(e,...t)),i||(l=e);};if("function"==typeof e){console.warn("We can not support a function callback. See Github Issues for details https://github.com/adobe/react-spectrum/issues/2320"),o(((n,...s)=>{let o=e(i?l:n,...s);return r(o,...t),i?n:o}));}else i||o(e),r(e,...t);}),[i,l,n]);return [l,u]}function v$1(e){var t,r,n="";if("string"==typeof e||"number"==typeof e)n+=e;else if("object"==typeof e)if(Array.isArray(e))for(t=0;t<e.length;t++)e[t]&&(r=v$1(e[t]))&&(n&&(n+=" "),n+=r);else for(t in e)e[t]&&(n&&(n+=" "),n+=t);return n}function y(){for(var e,t,r=0,n="";r<arguments.length;)(e=arguments[r++])&&(t=v$1(e))&&(n&&(n+=" "),n+=t);return n}const b="undefined"!=typeof document?t.useLayoutEffect:()=>{};function x(e){const r=t.useRef(null);return b((()=>{r.current=e;}),[e]),t.useCallback(((...e)=>(0, r.current)(...e)),[])}let w=Boolean("undefined"!=typeof window&&window.document&&window.document.createElement),P=new Map;function T(e){let[r,n]=t.useState(e),s=t.useRef(null),o=c$1(r),a=t.useCallback((e=>{s.current=e;}),[]);return w&&P.set(o,a),b((()=>{let e=o;return ()=>{P.delete(e);}}),[o]),t.useEffect((()=>{let e=s.current;e&&(s.current=null,n(e));})),o}function C(e,t){if(e===t)return e;let r=P.get(e);if(r)return r(t),t;let n=P.get(t);return n?(n(e),e):t}function E(e=[]){let r=T(),[n,s]=function(e){let[r,n]=t.useState(e),s=t.useRef(null),o=x((()=>{let e=s.current.next();e.done?s.current=null:r===e.value?o():n(e.value);}));b((()=>{s.current&&o();}));let a=x((e=>{s.current=e(r),o();}));return [r,a]}(r),o=t.useCallback((()=>{s((function*(){yield r,yield document.getElementById(r)?r:void 0;}));}),[r,s]);return b(o,[r,o,...e]),n}function S(...e){return (...t)=>{for(let r of e)"function"==typeof r&&r(...t);}}const k=e=>{var t;return null!==(t=null==e?void 0:e.ownerDocument)&&void 0!==t?t:document},M=e=>{if(e&&"window"in e&&e.window===e)return e;return k(e).defaultView||window};function A(...e){let t={...e[0]};for(let r=1;r<e.length;r++){let n=e[r];for(let e in n){let r=t[e],s=n[e];"function"==typeof r&&"function"==typeof s&&"o"===e[0]&&"n"===e[1]&&e.charCodeAt(2)>=65&&e.charCodeAt(2)<=90?t[e]=S(r,s):"className"!==e&&"UNSAFE_className"!==e||"string"!=typeof r||"string"!=typeof s?"id"===e&&r&&s?t.id=C(r,s):t[e]=void 0!==s?s:r:t[e]=y(r,s);}}return t}const D=new Set(["id"]),I=new Set(["aria-label","aria-labelledby","aria-describedby","aria-details"]),V=new Set(["href","target","rel","download","ping","referrerPolicy"]),L=/^(data-.*)$/;function K(e,t={}){let{labelable:r,isLink:n,propNames:s}=t,o={};for(const t in e)Object.prototype.hasOwnProperty.call(e,t)&&(D.has(t)||r&&I.has(t)||n&&V.has(t)||(null==s?void 0:s.has(t))||L.test(t))&&(o[t]=e[t]);return o}function R(e){if(function(){if(null==N){N=!1;try{document.createElement("div").focus({get preventScroll(){return N=!0,!0}});}catch(e){}}return N}())e.focus({preventScroll:!0});else {let t=function(e){var t=e.parentNode,r=[],n=document.scrollingElement||document.documentElement;for(;t instanceof HTMLElement&&t!==n;)(t.offsetHeight<t.scrollHeight||t.offsetWidth<t.scrollWidth)&&r.push({element:t,scrollTop:t.scrollTop,scrollLeft:t.scrollLeft}),t=t.parentNode;n instanceof HTMLElement&&r.push({element:n,scrollTop:n.scrollTop,scrollLeft:n.scrollLeft});return r}(e);e.focus(),function(e){for(let{element:t,scrollTop:r,scrollLeft:n}of e)t.scrollTop=r,t.scrollLeft=n;}(t);}}let N=null;function j(e){var t;return "undefined"!=typeof window&&null!=window.navigator&&((null===(t=window.navigator.userAgentData)||void 0===t?void 0:t.brands.some((t=>e.test(t.brand))))||e.test(window.navigator.userAgent))}function F(e){var t;return "undefined"!=typeof window&&null!=window.navigator&&e.test((null===(t=window.navigator.userAgentData)||void 0===t?void 0:t.platform)||window.navigator.platform)}function O(){return F(/^Mac/i)}function B(){return F(/^iPad/i)||O()&&navigator.maxTouchPoints>1}function W(){return F(/^iPhone/i)||B()}function z(){return j(/AppleWebKit/i)&&!j(/Chrome/i)}function U(){return j(/Android/i)}const H=t.createContext({isNative:!0,open:function(e,t){!function(e,t){if(e instanceof HTMLAnchorElement)t(e);else if(e.hasAttribute("data-href")){let r=document.createElement("a");r.href=e.getAttribute("data-href"),e.hasAttribute("data-target")&&(r.target=e.getAttribute("data-target")),e.hasAttribute("data-rel")&&(r.rel=e.getAttribute("data-rel")),e.hasAttribute("data-download")&&(r.download=e.getAttribute("data-download")),e.hasAttribute("data-ping")&&(r.ping=e.getAttribute("data-ping")),e.hasAttribute("data-referrer-policy")&&(r.referrerPolicy=e.getAttribute("data-referrer-policy")),e.appendChild(r),t(r),e.removeChild(r);}}(e,(e=>_(e,t)));}});function $(){return t.useContext(H)}function _(e,t,r=!0){var n,s;let{metaKey:o,ctrlKey:a,altKey:i,shiftKey:l}=t;j(/Firefox/i)&&(null===(s=window.event)||void 0===s||null===(n=s.type)||void 0===n?void 0:n.startsWith("key"))&&"_blank"===e.target&&(O()?o=!0:a=!0);let u=z()&&O()&&!B()?new KeyboardEvent("keydown",{keyIdentifier:"Enter",metaKey:o,ctrlKey:a,altKey:i,shiftKey:l}):new MouseEvent("click",{metaKey:o,ctrlKey:a,altKey:i,shiftKey:l,bubbles:!0,cancelable:!0});_.isOpening=r,R(e),e.dispatchEvent(u),_.isOpening=!1;}_.isOpening=!1;let G=new Map,q$1=new Set;function Y(){if("undefined"==typeof window)return;let e=t=>{let r=G.get(t.target);if(r&&(r.delete(t.propertyName),0===r.size&&(t.target.removeEventListener("transitioncancel",e),G.delete(t.target)),0===G.size)){for(let e of q$1)e();q$1.clear();}};document.body.addEventListener("transitionrun",(t=>{let r=G.get(t.target);r||(r=new Set,G.set(t.target,r),t.target.addEventListener("transitioncancel",e)),r.add(t.propertyName);})),document.body.addEventListener("transitionend",e);}function X(e){requestAnimationFrame((()=>{0===G.size?e():q$1.add(e);}));}function Z(){let e=t.useRef(new Map),r=t.useCallback(((t,r,n,s)=>{let o=(null==s?void 0:s.once)?(...t)=>{e.current.delete(n),n(...t);}:n;e.current.set(n,{type:r,eventTarget:t,fn:o,options:s}),t.addEventListener(r,n,s);}),[]),n=t.useCallback(((t,r,n,s)=>{var o;let a=(null===(o=e.current.get(n))||void 0===o?void 0:o.fn)||n;t.removeEventListener(r,a,s),e.current.delete(n);}),[]),s=t.useCallback((()=>{e.current.forEach(((e,t)=>{n(e.eventTarget,e.type,t,e.options);}));}),[n]);return t.useEffect((()=>s),[s]),{addGlobalListener:r,removeGlobalListener:n,removeAllGlobalListeners:s}}function J(e,t){let{id:r,"aria-label":n,"aria-labelledby":s}=e;if(r=T(r),s&&n){let e=new Set([r,...s.trim().split(/\s+/)]);s=[...e].join(" ");}else s&&(s=s.trim().split(/\s+/).join(" "));return n||s||!t||(n=t),{id:r,"aria-label":n,"aria-labelledby":s}}function Q(e,t){b((()=>{if(e&&e.ref&&t)return e.ref.current=t.current,()=>{e.ref.current=null;}}));}function ee(e){for(te(e)&&(e=e.parentElement);e&&!te(e);)e=e.parentElement;return e||document.scrollingElement||document.documentElement}function te(e){let t=window.getComputedStyle(e);return /(auto|scroll)/.test(t.overflow+t.overflowX+t.overflowY)}"undefined"!=typeof document&&("loading"!==document.readyState?Y():document.addEventListener("DOMContentLoaded",Y));let re=0;const ne=new Map;function se(e,t){let r=oe(e,t,"left"),n=oe(e,t,"top"),s=t.offsetWidth,o=t.offsetHeight,a=e.scrollLeft,i=e.scrollTop,{borderTopWidth:l,borderLeftWidth:u}=getComputedStyle(e),c=e.scrollLeft+parseInt(u,10),d=e.scrollTop+parseInt(l,10),p=c+e.clientWidth,h=d+e.clientHeight;r<=a?a=r-parseInt(u,10):r+s>p&&(a+=r+s-p),n<=d?i=n-parseInt(l,10):n+o>h&&(i+=n+o-h),e.scrollLeft=a,e.scrollTop=i;}function oe(e,t,r){const n="left"===r?"offsetLeft":"offsetTop";let s=0;for(;t.offsetParent&&(s+=t[n],t.offsetParent!==e);){if(t.offsetParent.contains(e)){s-=e[n];break}t=t.offsetParent;}return s}function ae(e,t){if(document.contains(e)){let a=document.scrollingElement||document.documentElement;if("hidden"===window.getComputedStyle(a).overflow){let t=ee(e);for(;e&&t&&e!==a&&t!==a;)se(t,e),t=ee(e=t);}else {var r;let{left:a,top:i}=e.getBoundingClientRect();null==e||null===(r=e.scrollIntoView)||void 0===r||r.call(e,{block:"nearest"});let{left:l,top:u}=e.getBoundingClientRect();var n,s,o;if(Math.abs(a-l)>1||Math.abs(i-u)>1)null==t||null===(s=t.containingElement)||void 0===s||null===(n=s.scrollIntoView)||void 0===n||n.call(s,{block:"center",inline:"center"}),null===(o=e.scrollIntoView)||void 0===o||o.call(e,{block:"nearest"});}}}function ie(e){return !(0!==e.mozInputSource||!e.isTrusted)||(U()&&e.pointerType?"click"===e.type&&1===e.buttons:0===e.detail&&!e.pointerType)}function le(e){return !U()&&0===e.width&&0===e.height||1===e.width&&1===e.height&&0===e.pressure&&0===e.detail&&"mouse"===e.pointerType}function ue(e,r,n){let s=t.useRef(r),o=x((()=>{n&&n(s.current);}));t.useEffect((()=>{var t;let r=null==e||null===(t=e.current)||void 0===t?void 0:t.form;return null==r||r.addEventListener("reset",o),()=>{null==r||r.removeEventListener("reset",o);}}),[e,o]);}const ce=new Set(["Arab","Syrc","Samr","Mand","Thaa","Mend","Nkoo","Adlm","Rohg","Hebr"]),de=new Set(["ae","ar","arc","bcc","bqi","ckb","dv","fa","glk","he","ku","mzn","nqo","pnb","ps","sd","ug","ur","yi"]);function pe(e){if(Intl.Locale){let t=new Intl.Locale(e).maximize().script;return !!t&&ce.has(t)}let t=e.split("-")[0];return de.has(t)}function he(){let e="undefined"!=typeof navigator&&(navigator.language||navigator.userLanguage)||"en-US";try{Intl.DateTimeFormat.supportedLocalesOf([e]);}catch(t){e="en-US";}return {locale:e,direction:pe(e)?"rtl":"ltr"}}let fe=he(),me=new Set;function ge(){fe=he();for(let e of me)e(fe);}const ve=t.createContext(null);function ye(){let e=function(){let e=f(),[r,n]=t.useState(fe);return t.useEffect((()=>(0===me.size&&window.addEventListener("languagechange",ge),me.add(n),()=>{me.delete(n),0===me.size&&window.removeEventListener("languagechange",ge);})),[]),e?{locale:"en-US",direction:"ltr"}:r}();return t.useContext(ve)||e}var be=function(){return be=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var s in t=arguments[r])Object.prototype.hasOwnProperty.call(t,s)&&(e[s]=t[s]);return e},be.apply(this,arguments)};function xe(e,t,r){if(!t.has(e))throw new TypeError("attempted to "+r+" private field on non-instance");return t.get(e)}function we(e,t,r){return function(e,t,r){if(t.set)t.set.call(e,r);else {if(!t.writable)throw new TypeError("attempted to set read only private field");t.value=r;}}(e,xe(e,t,"set"),r),r}"function"==typeof SuppressedError&&SuppressedError;let Pe="default",Te="",Ce=new WeakMap;function Ee(e){if(W()){if("default"===Pe){const t=k(e);Te=t.documentElement.style.webkitUserSelect,t.documentElement.style.webkitUserSelect="none";}Pe="disabled";}else (e instanceof HTMLElement||e instanceof SVGElement)&&(Ce.set(e,e.style.userSelect),e.style.userSelect="none");}function Se(e){if(W()){if("disabled"!==Pe)return;Pe="restoring",setTimeout((()=>{X((()=>{if("restoring"===Pe){const t=k(e);"none"===t.documentElement.style.webkitUserSelect&&(t.documentElement.style.webkitUserSelect=Te||""),Te="",Pe="default";}}));}),300);}else if((e instanceof HTMLElement||e instanceof SVGElement)&&e&&Ce.has(e)){let t=Ce.get(e);"none"===e.style.userSelect&&t&&(e.style.userSelect=t),""===e.getAttribute("style")&&e.removeAttribute("style"),Ce.delete(e);}}const ke=t.createContext({register:()=>{}});ke.displayName="PressResponderContext";var Me=new WeakMap;class Ae{continuePropagation(){we(this,Me,!1);}get shouldStopPropagation(){return function(e,t){return t.get?t.get.call(e):t.value}(e=this,xe(e,Me,"get"));var e;}constructor(e,t,r){m(this,Me,{writable:!0,value:void 0}),we(this,Me,!0),this.type=e,this.pointerType=t,this.target=r.currentTarget,this.shiftKey=r.shiftKey,this.metaKey=r.metaKey,this.ctrlKey=r.ctrlKey,this.altKey=r.altKey;}}const De=Symbol("linkClicked");function Ie(e){let{onPress:r,onPressChange:n,onPressStart:s,onPressEnd:o,onPressUp:a,isDisabled:i,isPressed:l,preventFocusOnPress:u,shouldCancelOnPointerExit:c,allowTextSelectionOnPress:d,ref:p,...h}=function(e){let r=t.useContext(ke);if(r){let{register:t,...n}=r;e=A(n,e),t();}return Q(r,e.ref),e}(e),[f,m]=t.useState(!1),g=t.useRef({isPressed:!1,ignoreEmulatedMouseEvents:!1,ignoreClickAfterPress:!1,didFirePressStart:!1,isTriggeringEvent:!1,activePointerId:null,target:null,isOverTarget:!1,pointerType:null}),{addGlobalListener:v,removeAllGlobalListeners:y}=Z(),b=x(((e,t)=>{let r=g.current;if(i||r.didFirePressStart)return !1;let o=!0;if(r.isTriggeringEvent=!0,s){let r=new Ae("pressstart",t,e);s(r),o=r.shouldStopPropagation;}return n&&n(!0),r.isTriggeringEvent=!1,r.didFirePressStart=!0,m(!0),o})),w=x(((e,t,s=!0)=>{let a=g.current;if(!a.didFirePressStart)return !1;a.ignoreClickAfterPress=!0,a.didFirePressStart=!1,a.isTriggeringEvent=!0;let l=!0;if(o){let r=new Ae("pressend",t,e);o(r),l=r.shouldStopPropagation;}if(n&&n(!1),m(!1),r&&s&&!i){let n=new Ae("press",t,e);r(n),l&&(l=n.shouldStopPropagation);}return a.isTriggeringEvent=!1,l})),P=x(((e,t)=>{let r=g.current;if(i)return !1;if(a){r.isTriggeringEvent=!0;let n=new Ae("pressup",t,e);return a(n),r.isTriggeringEvent=!1,n.shouldStopPropagation}return !0})),T=x((e=>{let t=g.current;t.isPressed&&t.target&&(t.isOverTarget&&null!=t.pointerType&&w(Re(t.target,e),t.pointerType,!1),t.isPressed=!1,t.isOverTarget=!1,t.activePointerId=null,t.pointerType=null,y(),d||Se(t.target));})),C=x((e=>{c&&T(e);})),E=t.useMemo((()=>{let e=g.current,t={onKeyDown(t){if(Le(t.nativeEvent,t.currentTarget)&&t.currentTarget.contains(t.target)){var n;Fe(t.target,t.key)&&t.preventDefault();let s=!0;e.isPressed||t.repeat||(e.target=t.currentTarget,e.isPressed=!0,s=b(t,"keyboard"),v(k(t.currentTarget),"keyup",r,!1)),s&&t.stopPropagation(),t.metaKey&&O()&&(null===(n=e.metaKeyEvents)||void 0===n||n.set(t.key,t.nativeEvent));}else "Meta"===t.key&&(e.metaKeyEvents=new Map);},onKeyUp(t){Le(t.nativeEvent,t.currentTarget)&&!t.repeat&&t.currentTarget.contains(t.target)&&e.target&&P(Re(e.target,t),"keyboard");},onClick(t){if((!t||t.currentTarget.contains(t.target))&&t&&0===t.button&&!e.isTriggeringEvent&&!_.isOpening){let r=!0;if(i&&t.preventDefault(),!e.ignoreClickAfterPress&&!e.ignoreEmulatedMouseEvents&&!e.isPressed&&("virtual"===e.pointerType||ie(t.nativeEvent))){i||u||R(t.currentTarget);let e=b(t,"virtual"),n=P(t,"virtual"),s=w(t,"virtual");r=e&&n&&s;}e.ignoreEmulatedMouseEvents=!1,e.ignoreClickAfterPress=!1,r&&t.stopPropagation();}}},r=t=>{var r;if(e.isPressed&&e.target&&Le(t,e.target)){var n;Fe(t.target,t.key)&&t.preventDefault();let r=t.target,s=w(Re(e.target,t),"keyboard",e.target.contains(r));y(),s&&t.stopPropagation(),"Enter"!==t.key&&Ve(e.target)&&e.target.contains(r)&&!t[De]&&(t[De]=!0,_(e.target,t,!1)),e.isPressed=!1,null===(n=e.metaKeyEvents)||void 0===n||n.delete(t.key);}else if("Meta"===t.key&&(null===(r=e.metaKeyEvents)||void 0===r?void 0:r.size)){var s;let t=e.metaKeyEvents;e.metaKeyEvents=void 0;for(let r of t.values())null===(s=e.target)||void 0===s||s.dispatchEvent(new KeyboardEvent("keyup",r));}};if("undefined"!=typeof PointerEvent){t.onPointerDown=t=>{if(0!==t.button||!t.currentTarget.contains(t.target))return;if(le(t.nativeEvent))return void(e.pointerType="virtual");je(t.currentTarget)&&t.preventDefault(),e.pointerType=t.pointerType;let o=!0;e.isPressed||(e.isPressed=!0,e.isOverTarget=!0,e.activePointerId=t.pointerId,e.target=t.currentTarget,i||u||R(t.currentTarget),d||Ee(e.target),o=b(t,e.pointerType),v(k(t.currentTarget),"pointermove",r,!1),v(k(t.currentTarget),"pointerup",n,!1),v(k(t.currentTarget),"pointercancel",s,!1)),o&&t.stopPropagation();},t.onMouseDown=e=>{e.currentTarget.contains(e.target)&&0===e.button&&(je(e.currentTarget)&&e.preventDefault(),e.stopPropagation());},t.onPointerUp=t=>{t.currentTarget.contains(t.target)&&"virtual"!==e.pointerType&&0===t.button&&Ne(t,t.currentTarget)&&P(t,e.pointerType||t.pointerType);};let r=t=>{t.pointerId===e.activePointerId&&(e.target&&Ne(t,e.target)?e.isOverTarget||null==e.pointerType||(e.isOverTarget=!0,b(Re(e.target,t),e.pointerType)):e.target&&e.isOverTarget&&null!=e.pointerType&&(e.isOverTarget=!1,w(Re(e.target,t),e.pointerType,!1),C(t)));},n=t=>{t.pointerId===e.activePointerId&&e.isPressed&&0===t.button&&e.target&&(Ne(t,e.target)&&null!=e.pointerType?w(Re(e.target,t),e.pointerType):e.isOverTarget&&null!=e.pointerType&&w(Re(e.target,t),e.pointerType,!1),e.isPressed=!1,e.isOverTarget=!1,e.activePointerId=null,e.pointerType=null,y(),d||Se(e.target));},s=e=>{T(e);};t.onDragStart=e=>{e.currentTarget.contains(e.target)&&T(e);};}else {t.onMouseDown=t=>{if(0!==t.button||!t.currentTarget.contains(t.target))return;if(je(t.currentTarget)&&t.preventDefault(),e.ignoreEmulatedMouseEvents)return void t.stopPropagation();e.isPressed=!0,e.isOverTarget=!0,e.target=t.currentTarget,e.pointerType=ie(t.nativeEvent)?"virtual":"mouse",i||u||R(t.currentTarget),b(t,e.pointerType)&&t.stopPropagation(),v(k(t.currentTarget),"mouseup",r,!1);},t.onMouseEnter=t=>{if(!t.currentTarget.contains(t.target))return;let r=!0;e.isPressed&&!e.ignoreEmulatedMouseEvents&&null!=e.pointerType&&(e.isOverTarget=!0,r=b(t,e.pointerType)),r&&t.stopPropagation();},t.onMouseLeave=t=>{if(!t.currentTarget.contains(t.target))return;let r=!0;e.isPressed&&!e.ignoreEmulatedMouseEvents&&null!=e.pointerType&&(e.isOverTarget=!1,r=w(t,e.pointerType,!1),C(t)),r&&t.stopPropagation();},t.onMouseUp=t=>{t.currentTarget.contains(t.target)&&(e.ignoreEmulatedMouseEvents||0!==t.button||P(t,e.pointerType||"mouse"));};let r=t=>{0===t.button&&(e.isPressed=!1,y(),e.ignoreEmulatedMouseEvents?e.ignoreEmulatedMouseEvents=!1:(e.target&&Ne(t,e.target)&&null!=e.pointerType?w(Re(e.target,t),e.pointerType):e.target&&e.isOverTarget&&null!=e.pointerType&&w(Re(e.target,t),e.pointerType,!1),e.isOverTarget=!1));};t.onTouchStart=t=>{if(!t.currentTarget.contains(t.target))return;let r=function(e){const{targetTouches:t}=e;return t.length>0?t[0]:null}(t.nativeEvent);r&&(e.activePointerId=r.identifier,e.ignoreEmulatedMouseEvents=!0,e.isOverTarget=!0,e.isPressed=!0,e.target=t.currentTarget,e.pointerType="touch",i||u||R(t.currentTarget),d||Ee(e.target),b(t,e.pointerType)&&t.stopPropagation(),v(M(t.currentTarget),"scroll",n,!0));},t.onTouchMove=t=>{if(!t.currentTarget.contains(t.target))return;if(!e.isPressed)return void t.stopPropagation();let r=Ke(t.nativeEvent,e.activePointerId),n=!0;r&&Ne(r,t.currentTarget)?e.isOverTarget||null==e.pointerType||(e.isOverTarget=!0,n=b(t,e.pointerType)):e.isOverTarget&&null!=e.pointerType&&(e.isOverTarget=!1,n=w(t,e.pointerType,!1),C(t)),n&&t.stopPropagation();},t.onTouchEnd=t=>{if(!t.currentTarget.contains(t.target))return;if(!e.isPressed)return void t.stopPropagation();let r=Ke(t.nativeEvent,e.activePointerId),n=!0;r&&Ne(r,t.currentTarget)&&null!=e.pointerType?(P(t,e.pointerType),n=w(t,e.pointerType)):e.isOverTarget&&null!=e.pointerType&&(n=w(t,e.pointerType,!1)),n&&t.stopPropagation(),e.isPressed=!1,e.activePointerId=null,e.isOverTarget=!1,e.ignoreEmulatedMouseEvents=!0,e.target&&!d&&Se(e.target),y();},t.onTouchCancel=t=>{t.currentTarget.contains(t.target)&&(t.stopPropagation(),e.isPressed&&T(t));};let n=t=>{e.isPressed&&t.target.contains(e.target)&&T({currentTarget:e.target,shiftKey:!1,ctrlKey:!1,metaKey:!1,altKey:!1});};t.onDragStart=e=>{e.currentTarget.contains(e.target)&&T(e);};}return t}),[v,i,u,y,d,T,C,w,b,P]);return t.useEffect((()=>()=>{var e;d||Se(null!==(e=g.current.target)&&void 0!==e?e:void 0);}),[d]),{isPressed:l||f,pressProps:A(h,E)}}function Ve(e){return "A"===e.tagName&&e.hasAttribute("href")}function Le(e,t){const{key:r,code:n}=e,s=t,o=s.getAttribute("role");return !("Enter"!==r&&" "!==r&&"Spacebar"!==r&&"Space"!==n||s instanceof M(s).HTMLInputElement&&!Be(s,r)||s instanceof M(s).HTMLTextAreaElement||s.isContentEditable||("link"===o||!o&&Ve(s))&&"Enter"!==r)}function Ke(e,t){const r=e.changedTouches;for(let e=0;e<r.length;e++){const n=r[e];if(n.identifier===t)return n}return null}function Re(e,t){return {currentTarget:e,shiftKey:t.shiftKey,ctrlKey:t.ctrlKey,metaKey:t.metaKey,altKey:t.altKey}}function Ne(e,t){let r=t.getBoundingClientRect(),n=function(e){let t=0,r=0;return void 0!==e.width?t=e.width/2:void 0!==e.radiusX&&(t=e.radiusX),void 0!==e.height?r=e.height/2:void 0!==e.radiusY&&(r=e.radiusY),{top:e.clientY-r,right:e.clientX+t,bottom:e.clientY+r,left:e.clientX-t}}(e);return function(e,t){return !(e.left>t.right||t.left>e.right||e.top>t.bottom||t.top>e.bottom)}(r,n)}function je(e){return !(e instanceof HTMLElement&&e.hasAttribute("draggable"))}function Fe(e,t){return e instanceof HTMLInputElement?!Be(e,t):e instanceof HTMLButtonElement?"submit"!==e.type&&"reset"!==e.type:!Ve(e)}const Oe=new Set(["checkbox","radio","range","color","file","image","button","submit","reset"]);function Be(e,t){return "checkbox"===e.type||"radio"===e.type?" "===t:Oe.has(e.type)}class We{isDefaultPrevented(){return this.nativeEvent.defaultPrevented}preventDefault(){this.defaultPrevented=!0,this.nativeEvent.preventDefault();}stopPropagation(){this.nativeEvent.stopPropagation(),this.isPropagationStopped=()=>!0;}isPropagationStopped(){return !1}persist(){}constructor(e,t){this.nativeEvent=t,this.target=t.target,this.currentTarget=t.currentTarget,this.relatedTarget=t.relatedTarget,this.bubbles=t.bubbles,this.cancelable=t.cancelable,this.defaultPrevented=t.defaultPrevented,this.eventPhase=t.eventPhase,this.isTrusted=t.isTrusted,this.timeStamp=t.timeStamp,this.type=e;}}function ze(e){let r=t.useRef({isFocused:!1,observer:null});b((()=>{const e=r.current;return ()=>{e.observer&&(e.observer.disconnect(),e.observer=null);}}),[]);let n=x((t=>{null==e||e(t);}));return t.useCallback((e=>{if(e.target instanceof HTMLButtonElement||e.target instanceof HTMLInputElement||e.target instanceof HTMLTextAreaElement||e.target instanceof HTMLSelectElement){r.current.isFocused=!0;let t=e.target,s=e=>{r.current.isFocused=!1,t.disabled&&n(new We("blur",e)),r.current.observer&&(r.current.observer.disconnect(),r.current.observer=null);};t.addEventListener("focusout",s,{once:!0}),r.current.observer=new MutationObserver((()=>{if(r.current.isFocused&&t.disabled){var e;null===(e=r.current.observer)||void 0===e||e.disconnect();let n=t===document.activeElement?null:document.activeElement;t.dispatchEvent(new FocusEvent("blur",{relatedTarget:n})),t.dispatchEvent(new FocusEvent("focusout",{bubbles:!0,relatedTarget:n}));}})),r.current.observer.observe(t,{attributes:!0,attributeFilter:["disabled"]});}}),[n])}function Ue(e){let{isDisabled:r,onFocus:n,onBlur:s,onFocusChange:o}=e;const a=t.useCallback((e=>{if(e.target===e.currentTarget)return s&&s(e),o&&o(!1),!0}),[s,o]),i=ze(a),l=t.useCallback((e=>{e.target===e.currentTarget&&document.activeElement===e.target&&(n&&n(e),o&&o(!0),i(e));}),[o,n,i]);return {focusProps:{onFocus:!r&&(n||o||s)?l:void 0,onBlur:r||!s&&!o?void 0:a}}}let He=null,$e=new Set,_e=!1,Ge=!1,qe=!1;const Ye={Tab:!0,Escape:!0};function Xe(e,t){for(let r of $e)r(e,t);}function Ze(e){Ge=!0,function(e){return !(e.metaKey||!O()&&e.altKey||e.ctrlKey||"Control"===e.key||"Shift"===e.key||"Meta"===e.key)}(e)&&(He="keyboard",Xe("keyboard",e));}function Je(e){He="pointer","mousedown"!==e.type&&"pointerdown"!==e.type||(Ge=!0,Xe("pointer",e));}function Qe(e){ie(e)&&(Ge=!0,He="virtual");}function et(e){e.target!==window&&e.target!==document&&(Ge||qe||(He="virtual",Xe("virtual",e)),Ge=!1,qe=!1);}function tt(){Ge=!1,qe=!0;}function rt(){if("undefined"==typeof window||_e)return;let e=HTMLElement.prototype.focus;HTMLElement.prototype.focus=function(){Ge=!0,e.apply(this,arguments);},document.addEventListener("keydown",Ze,!0),document.addEventListener("keyup",Ze,!0),document.addEventListener("click",Qe,!0),window.addEventListener("focus",et,!0),window.addEventListener("blur",tt,!1),"undefined"!=typeof PointerEvent?(document.addEventListener("pointerdown",Je,!0),document.addEventListener("pointermove",Je,!0),document.addEventListener("pointerup",Je,!0)):(document.addEventListener("mousedown",Je,!0),document.addEventListener("mousemove",Je,!0),document.addEventListener("mouseup",Je,!0)),_e=!0;}function nt(){return "pointer"!==He}function st(){return He}"undefined"!=typeof document&&("loading"!==document.readyState?rt():document.addEventListener("DOMContentLoaded",rt));const ot=new Set(["checkbox","radio","range","color","file","image","button","submit","reset"]);function at(e,r,n){rt(),t.useEffect((()=>{let t=(t,r)=>{(function(e,t,r){var n;return !((e=e||(null==r?void 0:r.target)instanceof HTMLInputElement&&!ot.has(null==r||null===(n=r.target)||void 0===n?void 0:n.type)||(null==r?void 0:r.target)instanceof HTMLTextAreaElement||(null==r?void 0:r.target)instanceof HTMLElement&&(null==r?void 0:r.target.isContentEditable))&&"keyboard"===t&&r instanceof KeyboardEvent&&!Ye[r.key])})(!!(null==n?void 0:n.isTextInput),t,r)&&e(nt());};return $e.add(t),()=>{$e.delete(t);}}),r);}function it(e){let{isDisabled:r,onBlurWithin:n,onFocusWithin:s,onFocusWithinChange:o}=e,a=t.useRef({isFocusWithin:!1}),i=t.useCallback((e=>{a.current.isFocusWithin&&!e.currentTarget.contains(e.relatedTarget)&&(a.current.isFocusWithin=!1,n&&n(e),o&&o(!1));}),[n,o,a]),l=ze(i),u=t.useCallback((e=>{a.current.isFocusWithin||document.activeElement!==e.target||(s&&s(e),o&&o(!0),a.current.isFocusWithin=!0,l(e));}),[s,o,l]);return r?{focusWithinProps:{onFocus:void 0,onBlur:void 0}}:{focusWithinProps:{onFocus:u,onBlur:i}}}let lt=!1,ut=0;function ct(){lt=!0,setTimeout((()=>{lt=!1;}),50);}function dt(e){"touch"===e.pointerType&&ct();}function pt(){if("undefined"!=typeof document)return "undefined"!=typeof PointerEvent?document.addEventListener("pointerup",dt):document.addEventListener("touchend",ct),ut++,()=>{ut--,ut>0||("undefined"!=typeof PointerEvent?document.removeEventListener("pointerup",dt):document.removeEventListener("touchend",ct));}}function ht(e){let{onHoverStart:r,onHoverChange:n,onHoverEnd:s,isDisabled:o}=e,[a,i]=t.useState(!1),l=t.useRef({isHovered:!1,ignoreEmulatedMouseEvents:!1,pointerType:"",target:null}).current;t.useEffect(pt,[]);let{hoverProps:u,triggerHoverEnd:c}=t.useMemo((()=>{let e=(e,t)=>{if(l.pointerType=t,o||"touch"===t||l.isHovered||!e.currentTarget.contains(e.target))return;l.isHovered=!0;let s=e.currentTarget;l.target=s,r&&r({type:"hoverstart",target:s,pointerType:t}),n&&n(!0),i(!0);},t=(e,t)=>{if(l.pointerType="",l.target=null,"touch"===t||!l.isHovered)return;l.isHovered=!1;let r=e.currentTarget;s&&s({type:"hoverend",target:r,pointerType:t}),n&&n(!1),i(!1);},a={};return "undefined"!=typeof PointerEvent?(a.onPointerEnter=t=>{lt&&"mouse"===t.pointerType||e(t,t.pointerType);},a.onPointerLeave=e=>{!o&&e.currentTarget.contains(e.target)&&t(e,e.pointerType);}):(a.onTouchStart=()=>{l.ignoreEmulatedMouseEvents=!0;},a.onMouseEnter=t=>{l.ignoreEmulatedMouseEvents||lt||e(t,"mouse"),l.ignoreEmulatedMouseEvents=!1;},a.onMouseLeave=e=>{!o&&e.currentTarget.contains(e.target)&&t(e,"mouse");}),{hoverProps:a,triggerHoverEnd:t}}),[r,n,s,o,l]);return t.useEffect((()=>{o&&c({currentTarget:l.target},l.pointerType);}),[o]),{hoverProps:u,isHovered:a}}function ft(e){if(!e)return;let t=!0;return r=>{let n={...r,preventDefault(){r.preventDefault();},isDefaultPrevented:()=>r.isDefaultPrevented(),stopPropagation(){console.error("stopPropagation is now the default behavior for events in React Spectrum. You can use continuePropagation() to revert this behavior.");},continuePropagation(){t=!1;}};e(n),t&&r.stopPropagation();}}const mt=500;function gt(e){let{isDisabled:r,onLongPressStart:n,onLongPressEnd:s,onLongPress:o,threshold:a=mt,accessibilityDescription:i}=e;const l=t.useRef();let{addGlobalListener:u,removeGlobalListener:c}=Z(),{pressProps:d}=Ie({isDisabled:r,onPressStart(e){if(e.continuePropagation(),("mouse"===e.pointerType||"touch"===e.pointerType)&&(n&&n({...e,type:"longpressstart"}),l.current=setTimeout((()=>{e.target.dispatchEvent(new PointerEvent("pointercancel",{bubbles:!0})),o&&o({...e,type:"longpress"}),l.current=void 0;}),a),"touch"===e.pointerType)){let t=e=>{e.preventDefault();};u(e.target,"contextmenu",t,{once:!0}),u(window,"pointerup",(()=>{setTimeout((()=>{c(e.target,"contextmenu",t);}),30);}),{once:!0});}},onPressEnd(e){l.current&&clearTimeout(l.current),!s||"mouse"!==e.pointerType&&"touch"!==e.pointerType||s({...e,type:"longpressend"});}}),p=function(e){let[r,n]=t.useState(void 0);return b((()=>{if(!e)return;let t=ne.get(e);if(t)n(t.element.id);else {let r="react-aria-description-"+re++;n(r);let s=document.createElement("div");s.id=r,s.style.display="none",s.textContent=e,document.body.appendChild(s),t={refCount:0,element:s},ne.set(e,t);}return t.refCount++,()=>{0==--t.refCount&&(t.element.remove(),ne.delete(e));}}),[e]),{"aria-describedby":e?r:void 0}}(o&&!r?i:void 0);return {longPressProps:A(d,p)}}function vt(e){if("virtual"===st()){let t=document.activeElement;X((()=>{document.activeElement===t&&document.contains(e)&&R(e);}));}else R(e);}function yt(e,t){return "#comment"!==e.nodeName&&function(e){if(!(e instanceof HTMLElement||e instanceof SVGElement))return !1;let{display:t,visibility:r}=e.style,n="none"!==t&&"hidden"!==r&&"collapse"!==r;if(n){const{getComputedStyle:t}=e.ownerDocument.defaultView;let{display:r,visibility:s}=t(e);n="none"!==r&&"hidden"!==s&&"collapse"!==s;}return n}(e)&&function(e,t){return !e.hasAttribute("hidden")&&("DETAILS"!==e.nodeName||!t||"SUMMARY"===t.nodeName||e.hasAttribute("open"))}(e,t)&&(!e.parentElement||yt(e.parentElement,e))}const bt=["input:not([disabled]):not([type=hidden])","select:not([disabled])","textarea:not([disabled])","button:not([disabled])","a[href]","area[href]","summary","iframe","object","embed","audio[controls]","video[controls]","[contenteditable]"],xt=bt.join(":not([hidden]),")+",[tabindex]:not([disabled]):not([hidden])";bt.push('[tabindex]:not([tabindex="-1"]):not([disabled])');const wt=bt.join(':not([hidden]):not([tabindex="-1"]),');function Pt(e,t){return !!e&&(!!t&&t.some((t=>t.contains(e))))}function Tt(e,t,r){let n=(null==t?void 0:t.tabbable)?wt:xt,s=document.createTreeWalker(e,NodeFilter.SHOW_ELEMENT,{acceptNode(e){var s;return (null==t||null===(s=t.from)||void 0===s?void 0:s.contains(e))?NodeFilter.FILTER_REJECT:!e.matches(n)||!yt(e)||r&&!Pt(e,r)||(null==t?void 0:t.accept)&&!t.accept(e)?NodeFilter.FILTER_SKIP:NodeFilter.FILTER_ACCEPT}});return (null==t?void 0:t.from)&&(s.currentNode=t.from),s}class Ct{get size(){return this.fastMap.size}getTreeNode(e){return this.fastMap.get(e)}addTreeNode(e,t,r){let n=this.fastMap.get(null!=t?t:null);if(!n)return;let s=new Et({scopeRef:e});n.addChild(s),s.parent=n,this.fastMap.set(e,s),r&&(s.nodeToRestore=r);}addNode(e){this.fastMap.set(e.scopeRef,e);}removeTreeNode(e){if(null===e)return;let t=this.fastMap.get(e);if(!t)return;let r=t.parent;for(let e of this.traverse())e!==t&&t.nodeToRestore&&e.nodeToRestore&&t.scopeRef&&t.scopeRef.current&&Pt(e.nodeToRestore,t.scopeRef.current)&&(e.nodeToRestore=t.nodeToRestore);let n=t.children;r&&(r.removeChild(t),n.size>0&&n.forEach((e=>r&&r.addChild(e)))),this.fastMap.delete(t.scopeRef);}*traverse(e=this.root){if(null!=e.scopeRef&&(yield e),e.children.size>0)for(let t of e.children)yield*this.traverse(t);}clone(){var e;let t=new Ct;var r;for(let n of this.traverse())t.addTreeNode(n.scopeRef,null!==(r=null===(e=n.parent)||void 0===e?void 0:e.scopeRef)&&void 0!==r?r:null,n.nodeToRestore);return t}constructor(){this.fastMap=new Map,this.root=new Et({scopeRef:null}),this.fastMap.set(null,this.root);}}class Et{addChild(e){this.children.add(e),e.parent=this;}removeChild(e){this.children.delete(e),e.parent=void 0;}constructor(e){this.children=new Set,this.contain=!1,this.scopeRef=e.scopeRef;}}function St(e={}){let{autoFocus:r=!1,isTextInput:n,within:s}=e,o=t.useRef({isFocused:!1,isFocusVisible:r||nt()}),[a,i]=t.useState(!1),[l,u]=t.useState((()=>o.current.isFocused&&o.current.isFocusVisible)),c=t.useCallback((()=>u(o.current.isFocused&&o.current.isFocusVisible)),[]),d=t.useCallback((e=>{o.current.isFocused=e,i(e),c();}),[c]);at((e=>{o.current.isFocusVisible=e,c();}),[],{isTextInput:n});let{focusProps:p}=Ue({isDisabled:s,onFocusChange:d}),{focusWithinProps:h}=it({isDisabled:!s,onFocusWithinChange:d});return {isFocused:a,isFocusVisible:l,focusProps:s?h:p}}new Ct;let kt=t.createContext(null);function Mt(e,r){let{focusProps:n}=Ue(e),{keyboardProps:s}=function(e){return {keyboardProps:e.isDisabled?{}:{onKeyDown:ft(e.onKeyDown),onKeyUp:ft(e.onKeyUp)}}}(e),o=A(n,s),a=function(e){let r=t.useContext(kt)||{};Q(r,e);let{ref:n,...s}=r;return s}(r),i=e.isDisabled?{}:a,l=t.useRef(e.autoFocus);return t.useEffect((()=>{l.current&&r.current&&vt(r.current),l.current=!1;}),[r]),{focusableProps:A({...o,tabIndex:e.excludeFromTabOrder&&!e.isDisabled?-1:void 0},i)}}const At={border:0,clip:"rect(0 0 0 0)",clipPath:"inset(50%)",height:"1px",margin:"-1px",overflow:"hidden",padding:0,position:"absolute",width:"1px",whiteSpace:"nowrap"};function Dt(e){let{children:r,elementType:n="div",isFocusable:s,style:o,...a}=e,{visuallyHiddenProps:i}=function(e={}){let{style:r,isFocusable:n}=e,[s,o]=t.useState(!1),{focusWithinProps:a}=it({isDisabled:!n,onFocusWithinChange:e=>o(e)});return {visuallyHiddenProps:{...a,style:t.useMemo((()=>s?r:r?{...At,...r}:At),[s])}}}(e);return t.createElement(n,A(a,i),r)}function It(e){return t.forwardRef(e)}var Vt=(e,t,r=!0)=>{if(!t)return [e,{}];const n=t.reduce(((t,r)=>r in e?{...t,[r]:e[r]}:t),{});if(r){return [Object.keys(e).filter((e=>!t.includes(e))).reduce(((t,r)=>({...t,[r]:e[r]})),{}),n]}return [e,n]},Lt=["0","xs","sm","md","lg","xl","2xl","3xl","4xl","5xl","6xl","7xl","8xl","9xl","1","2","3","3.5","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","20","24","28","32","36","40","44","48","52","56","60","64","72","80","96"].map((e=>`unit-${e}`)),Kt=e=>"boolean"==typeof e?`${e}`:0===e?"0":e,Rt=e=>!e||"object"!=typeof e||0===Object.keys(e).length;function Nt(e,t){e.forEach((function(e){Array.isArray(e)?Nt(e,t):t.push(e);}));}function jt(e){let t=[];return Nt(e,t),t}var Ft=(e,t)=>{let r={},n=Object.keys(e),s=Object.keys(t);for(let o of n)if(s.includes(o)){let n=e[o],s=t[o];r[o]="object"==typeof n&&"object"==typeof s?Ft(n,s):s+" "+n;}else r[o]=e[o];for(let e of s)n.includes(e)||(r[e]=t[e]);return r},Ot=e=>e&&"string"==typeof e?e.replace(/\s+/g," ").trim():e;function Bt(){for(var e,t,r=0,n="";r<arguments.length;)(e=arguments[r++])&&(t=Wt(e))&&(n&&(n+=" "),n+=t);return n}function Wt(e){if("string"==typeof e)return e;for(var t,r="",n=0;n<e.length;n++)e[n]&&(t=Wt(e[n]))&&(r&&(r+=" "),r+=t);return r}var zt="-";function Ut(e){var t=function(e){var t=e.theme,r=e.prefix,n={nextPart:new Map,validators:[]},s=function(e,t){if(!t)return e;return e.map((function(e){return [e[0],e[1].map((function(e){return "string"==typeof e?t+e:"object"==typeof e?Object.fromEntries(Object.entries(e).map((function(e){var r=e[0],n=e[1];return [t+r,n]}))):e}))]}))}(Object.entries(e.classGroups),r);return s.forEach((function(e){var r=e[0];_t(e[1],n,r,t);})),n}(e),r=e.conflictingClassGroups,n=e.conflictingClassGroupModifiers,s=void 0===n?{}:n;return {getClassGroupId:function(e){var r=e.split(zt);return ""===r[0]&&1!==r.length&&r.shift(),Ht(r,t)||function(e){if($t.test(e)){var t=$t.exec(e)[1],r=t?.substring(0,t.indexOf(":"));if(r)return "arbitrary.."+r}}(e)},getConflictingClassGroupIds:function(e,t){var n=r[e]||[];return t&&s[e]?[].concat(n,s[e]):n}}}function Ht(e,t){if(0===e.length)return t.classGroupId;var r=e[0],n=t.nextPart.get(r),s=n?Ht(e.slice(1),n):void 0;if(s)return s;if(0!==t.validators.length){var o=e.join(zt);return t.validators.find((function(e){return (0, e.validator)(o)}))?.classGroupId}}var $t=/^\[(.+)\]$/;function _t(e,t,r,n){e.forEach((function(e){if("string"!=typeof e){if("function"==typeof e)return e.isThemeGetter?void _t(e(n),t,r,n):void t.validators.push({validator:e,classGroupId:r});Object.entries(e).forEach((function(e){var s=e[0];_t(e[1],Gt(t,s),r,n);}));}else {(""===e?t:Gt(t,e)).classGroupId=r;}}));}function Gt(e,t){var r=e;return t.split(zt).forEach((function(e){r.nextPart.has(e)||r.nextPart.set(e,{nextPart:new Map,validators:[]}),r=r.nextPart.get(e);})),r}function qt(e){if(e<1)return {get:function(){},set:function(){}};var t=0,r=new Map,n=new Map;function s(s,o){r.set(s,o),++t>e&&(t=0,n=r,r=new Map);}return {get:function(e){var t=r.get(e);return void 0!==t?t:void 0!==(t=n.get(e))?(s(e,t),t):void 0},set:function(e,t){r.has(e)?r.set(e,t):s(e,t);}}}var Yt="!";function Xt(e){var t=e.separator||":",r=1===t.length,n=t[0],s=t.length;return function(e){for(var o,a=[],i=0,l=0,u=0;u<e.length;u++){var c=e[u];if(0===i){if(c===n&&(r||e.slice(u,u+s)===t)){a.push(e.slice(l,u)),l=u+s;continue}if("/"===c){o=u;continue}}"["===c?i++:"]"===c&&i--;}var d=0===a.length?e:e.substring(l),p=d.startsWith(Yt);return {modifiers:a,hasImportantModifier:p,baseClassName:p?d.substring(1):d,maybePostfixModifierPosition:o&&o>l?o-l:void 0}}}var Zt=/\s+/;function Jt(){for(var e=arguments.length,t=new Array(e),r=0;r<e;r++)t[r]=arguments[r];var n,s,o,a=function(e){var r=t[0],l=t.slice(1).reduce((function(e,t){return t(e)}),r());return n=function(e){return {cache:qt(e.cacheSize),splitModifiers:Xt(e),...Ut(e)}}(l),s=n.cache.get,o=n.cache.set,a=i,i(e)};function i(e){var t=s(e);if(t)return t;var r=function(e,t){var r=t.splitModifiers,n=t.getClassGroupId,s=t.getConflictingClassGroupIds,o=new Set;return e.trim().split(Zt).map((function(e){var t=r(e),s=t.modifiers,o=t.hasImportantModifier,a=t.baseClassName,i=t.maybePostfixModifierPosition,l=n(i?a.substring(0,i):a),u=Boolean(i);if(!l){if(!i)return {isTailwindClass:!1,originalClassName:e};if(!(l=n(a)))return {isTailwindClass:!1,originalClassName:e};u=!1;}var c=function(e){if(e.length<=1)return e;var t=[],r=[];return e.forEach((function(e){"["===e[0]?(t.push.apply(t,r.sort().concat([e])),r=[]):r.push(e);})),t.push.apply(t,r.sort()),t}(s).join(":");return {isTailwindClass:!0,modifierId:o?c+Yt:c,classGroupId:l,originalClassName:e,hasPostfixModifier:u}})).reverse().filter((function(e){if(!e.isTailwindClass)return !0;var t=e.modifierId,r=e.classGroupId,n=e.hasPostfixModifier,a=t+r;return !o.has(a)&&(o.add(a),s(r,n).forEach((function(e){return o.add(t+e)})),!0)})).reverse().map((function(e){return e.originalClassName})).join(" ")}(e,n);return o(e,r),r}return function(){return a(Bt.apply(null,arguments))}}function Qt(e){var t=function(t){return t[e]||[]};return t.isThemeGetter=!0,t}var er=/^\[(?:([a-z-]+):)?(.+)\]$/i,tr=/^\d+\/\d+$/,rr=new Set(["px","full","screen"]),nr=/^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/,sr=/\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/,or=/^-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/;function ar(e){return pr(e)||rr.has(e)||tr.test(e)||ir(e)}function ir(e){return br(e,"length",xr)}function lr(e){return br(e,"size",wr)}function ur(e){return br(e,"position",wr)}function cr(e){return br(e,"url",Pr)}function dr(e){return br(e,"number",pr)}function pr(e){return !Number.isNaN(Number(e))}function hr(e){return e.endsWith("%")&&pr(e.slice(0,-1))}function fr(e){return Tr(e)||br(e,"number",Tr)}function mr(e){return er.test(e)}function gr(){return !0}function vr(e){return nr.test(e)}function yr(e){return br(e,"",Cr)}function br(e,t,r){var n=er.exec(e);return !!n&&(n[1]?n[1]===t:r(n[2]))}function xr(e){return sr.test(e)}function wr(){return !1}function Pr(e){return e.startsWith("url(")}function Tr(e){return Number.isInteger(Number(e))}function Cr(e){return or.test(e)}function Er(){var e=Qt("colors"),t=Qt("spacing"),r=Qt("blur"),n=Qt("brightness"),s=Qt("borderColor"),o=Qt("borderRadius"),a=Qt("borderSpacing"),i=Qt("borderWidth"),l=Qt("contrast"),u=Qt("grayscale"),c=Qt("hueRotate"),d=Qt("invert"),p=Qt("gap"),h=Qt("gradientColorStops"),f=Qt("gradientColorStopPositions"),m=Qt("inset"),g=Qt("margin"),v=Qt("opacity"),y=Qt("padding"),b=Qt("saturate"),x=Qt("scale"),w=Qt("sepia"),P=Qt("skew"),T=Qt("space"),C=Qt("translate"),E=function(){return ["auto",mr,t]},S=function(){return [mr,t]},k=function(){return ["",ar]},M=function(){return ["auto",pr,mr]},A=function(){return ["","0",mr]},D=function(){return [pr,dr]},I=function(){return [pr,mr]};return {cacheSize:500,theme:{colors:[gr],spacing:[ar],blur:["none","",vr,mr],brightness:D(),borderColor:[e],borderRadius:["none","","full",vr,mr],borderSpacing:S(),borderWidth:k(),contrast:D(),grayscale:A(),hueRotate:I(),invert:A(),gap:S(),gradientColorStops:[e],gradientColorStopPositions:[hr,ir],inset:E(),margin:E(),opacity:D(),padding:S(),saturate:D(),scale:D(),sepia:A(),skew:I(),space:S(),translate:S()},classGroups:{aspect:[{aspect:["auto","square","video",mr]}],container:["container"],columns:[{columns:[vr]}],"break-after":[{"break-after":["auto","avoid","all","avoid-page","page","left","right","column"]}],"break-before":[{"break-before":["auto","avoid","all","avoid-page","page","left","right","column"]}],"break-inside":[{"break-inside":["auto","avoid","avoid-page","avoid-column"]}],"box-decoration":[{"box-decoration":["slice","clone"]}],box:[{box:["border","content"]}],display:["block","inline-block","inline","flex","inline-flex","table","inline-table","table-caption","table-cell","table-column","table-column-group","table-footer-group","table-header-group","table-row-group","table-row","flow-root","grid","inline-grid","contents","list-item","hidden"],float:[{float:["right","left","none"]}],clear:[{clear:["left","right","both","none"]}],isolation:["isolate","isolation-auto"],"object-fit":[{object:["contain","cover","fill","none","scale-down"]}],"object-position":[{object:[].concat(["bottom","center","left","left-bottom","left-top","right","right-bottom","right-top","top"],[mr])}],overflow:[{overflow:["auto","hidden","clip","visible","scroll"]}],"overflow-x":[{"overflow-x":["auto","hidden","clip","visible","scroll"]}],"overflow-y":[{"overflow-y":["auto","hidden","clip","visible","scroll"]}],overscroll:[{overscroll:["auto","contain","none"]}],"overscroll-x":[{"overscroll-x":["auto","contain","none"]}],"overscroll-y":[{"overscroll-y":["auto","contain","none"]}],position:["static","fixed","absolute","relative","sticky"],inset:[{inset:[m]}],"inset-x":[{"inset-x":[m]}],"inset-y":[{"inset-y":[m]}],start:[{start:[m]}],end:[{end:[m]}],top:[{top:[m]}],right:[{right:[m]}],bottom:[{bottom:[m]}],left:[{left:[m]}],visibility:["visible","invisible","collapse"],z:[{z:["auto",fr]}],basis:[{basis:E()}],"flex-direction":[{flex:["row","row-reverse","col","col-reverse"]}],"flex-wrap":[{flex:["wrap","wrap-reverse","nowrap"]}],flex:[{flex:["1","auto","initial","none",mr]}],grow:[{grow:A()}],shrink:[{shrink:A()}],order:[{order:["first","last","none",fr]}],"grid-cols":[{"grid-cols":[gr]}],"col-start-end":[{col:["auto",{span:["full",fr]},mr]}],"col-start":[{"col-start":M()}],"col-end":[{"col-end":M()}],"grid-rows":[{"grid-rows":[gr]}],"row-start-end":[{row:["auto",{span:[fr]},mr]}],"row-start":[{"row-start":M()}],"row-end":[{"row-end":M()}],"grid-flow":[{"grid-flow":["row","col","dense","row-dense","col-dense"]}],"auto-cols":[{"auto-cols":["auto","min","max","fr",mr]}],"auto-rows":[{"auto-rows":["auto","min","max","fr",mr]}],gap:[{gap:[p]}],"gap-x":[{"gap-x":[p]}],"gap-y":[{"gap-y":[p]}],"justify-content":[{justify:["normal"].concat(["start","end","center","between","around","evenly","stretch"])}],"justify-items":[{"justify-items":["start","end","center","stretch"]}],"justify-self":[{"justify-self":["auto","start","end","center","stretch"]}],"align-content":[{content:["normal"].concat(["start","end","center","between","around","evenly","stretch"],["baseline"])}],"align-items":[{items:["start","end","center","baseline","stretch"]}],"align-self":[{self:["auto","start","end","center","stretch","baseline"]}],"place-content":[{"place-content":[].concat(["start","end","center","between","around","evenly","stretch"],["baseline"])}],"place-items":[{"place-items":["start","end","center","baseline","stretch"]}],"place-self":[{"place-self":["auto","start","end","center","stretch"]}],p:[{p:[y]}],px:[{px:[y]}],py:[{py:[y]}],ps:[{ps:[y]}],pe:[{pe:[y]}],pt:[{pt:[y]}],pr:[{pr:[y]}],pb:[{pb:[y]}],pl:[{pl:[y]}],m:[{m:[g]}],mx:[{mx:[g]}],my:[{my:[g]}],ms:[{ms:[g]}],me:[{me:[g]}],mt:[{mt:[g]}],mr:[{mr:[g]}],mb:[{mb:[g]}],ml:[{ml:[g]}],"space-x":[{"space-x":[T]}],"space-x-reverse":["space-x-reverse"],"space-y":[{"space-y":[T]}],"space-y-reverse":["space-y-reverse"],w:[{w:["auto","min","max","fit",mr,t]}],"min-w":[{"min-w":["min","max","fit",mr,ar]}],"max-w":[{"max-w":["0","none","full","min","max","fit","prose",{screen:[vr]},vr,mr]}],h:[{h:[mr,t,"auto","min","max","fit"]}],"min-h":[{"min-h":["min","max","fit",mr,ar]}],"max-h":[{"max-h":[mr,t,"min","max","fit"]}],"font-size":[{text:["base",vr,ir]}],"font-smoothing":["antialiased","subpixel-antialiased"],"font-style":["italic","not-italic"],"font-weight":[{font:["thin","extralight","light","normal","medium","semibold","bold","extrabold","black",dr]}],"font-family":[{font:[gr]}],"fvn-normal":["normal-nums"],"fvn-ordinal":["ordinal"],"fvn-slashed-zero":["slashed-zero"],"fvn-figure":["lining-nums","oldstyle-nums"],"fvn-spacing":["proportional-nums","tabular-nums"],"fvn-fraction":["diagonal-fractions","stacked-fractons"],tracking:[{tracking:["tighter","tight","normal","wide","wider","widest",mr]}],"line-clamp":[{"line-clamp":["none",pr,dr]}],leading:[{leading:["none","tight","snug","normal","relaxed","loose",mr,ar]}],"list-image":[{"list-image":["none",mr]}],"list-style-type":[{list:["none","disc","decimal",mr]}],"list-style-position":[{list:["inside","outside"]}],"placeholder-color":[{placeholder:[e]}],"placeholder-opacity":[{"placeholder-opacity":[v]}],"text-alignment":[{text:["left","center","right","justify","start","end"]}],"text-color":[{text:[e]}],"text-opacity":[{"text-opacity":[v]}],"text-decoration":["underline","overline","line-through","no-underline"],"text-decoration-style":[{decoration:[].concat(["solid","dashed","dotted","double","none"],["wavy"])}],"text-decoration-thickness":[{decoration:["auto","from-font",ar]}],"underline-offset":[{"underline-offset":["auto",mr,ar]}],"text-decoration-color":[{decoration:[e]}],"text-transform":["uppercase","lowercase","capitalize","normal-case"],"text-overflow":["truncate","text-ellipsis","text-clip"],indent:[{indent:S()}],"vertical-align":[{align:["baseline","top","middle","bottom","text-top","text-bottom","sub","super",mr]}],whitespace:[{whitespace:["normal","nowrap","pre","pre-line","pre-wrap","break-spaces"]}],break:[{break:["normal","words","all","keep"]}],hyphens:[{hyphens:["none","manual","auto"]}],content:[{content:["none",mr]}],"bg-attachment":[{bg:["fixed","local","scroll"]}],"bg-clip":[{"bg-clip":["border","padding","content","text"]}],"bg-opacity":[{"bg-opacity":[v]}],"bg-origin":[{"bg-origin":["border","padding","content"]}],"bg-position":[{bg:[].concat(["bottom","center","left","left-bottom","left-top","right","right-bottom","right-top","top"],[ur])}],"bg-repeat":[{bg:["no-repeat",{repeat:["","x","y","round","space"]}]}],"bg-size":[{bg:["auto","cover","contain",lr]}],"bg-image":[{bg:["none",{"gradient-to":["t","tr","r","br","b","bl","l","tl"]},cr]}],"bg-color":[{bg:[e]}],"gradient-from-pos":[{from:[f]}],"gradient-via-pos":[{via:[f]}],"gradient-to-pos":[{to:[f]}],"gradient-from":[{from:[h]}],"gradient-via":[{via:[h]}],"gradient-to":[{to:[h]}],rounded:[{rounded:[o]}],"rounded-s":[{"rounded-s":[o]}],"rounded-e":[{"rounded-e":[o]}],"rounded-t":[{"rounded-t":[o]}],"rounded-r":[{"rounded-r":[o]}],"rounded-b":[{"rounded-b":[o]}],"rounded-l":[{"rounded-l":[o]}],"rounded-ss":[{"rounded-ss":[o]}],"rounded-se":[{"rounded-se":[o]}],"rounded-ee":[{"rounded-ee":[o]}],"rounded-es":[{"rounded-es":[o]}],"rounded-tl":[{"rounded-tl":[o]}],"rounded-tr":[{"rounded-tr":[o]}],"rounded-br":[{"rounded-br":[o]}],"rounded-bl":[{"rounded-bl":[o]}],"border-w":[{border:[i]}],"border-w-x":[{"border-x":[i]}],"border-w-y":[{"border-y":[i]}],"border-w-s":[{"border-s":[i]}],"border-w-e":[{"border-e":[i]}],"border-w-t":[{"border-t":[i]}],"border-w-r":[{"border-r":[i]}],"border-w-b":[{"border-b":[i]}],"border-w-l":[{"border-l":[i]}],"border-opacity":[{"border-opacity":[v]}],"border-style":[{border:[].concat(["solid","dashed","dotted","double","none"],["hidden"])}],"divide-x":[{"divide-x":[i]}],"divide-x-reverse":["divide-x-reverse"],"divide-y":[{"divide-y":[i]}],"divide-y-reverse":["divide-y-reverse"],"divide-opacity":[{"divide-opacity":[v]}],"divide-style":[{divide:["solid","dashed","dotted","double","none"]}],"border-color":[{border:[s]}],"border-color-x":[{"border-x":[s]}],"border-color-y":[{"border-y":[s]}],"border-color-t":[{"border-t":[s]}],"border-color-r":[{"border-r":[s]}],"border-color-b":[{"border-b":[s]}],"border-color-l":[{"border-l":[s]}],"divide-color":[{divide:[s]}],"outline-style":[{outline:[""].concat(["solid","dashed","dotted","double","none"])}],"outline-offset":[{"outline-offset":[mr,ar]}],"outline-w":[{outline:[ar]}],"outline-color":[{outline:[e]}],"ring-w":[{ring:k()}],"ring-w-inset":["ring-inset"],"ring-color":[{ring:[e]}],"ring-opacity":[{"ring-opacity":[v]}],"ring-offset-w":[{"ring-offset":[ar]}],"ring-offset-color":[{"ring-offset":[e]}],shadow:[{shadow:["","inner","none",vr,yr]}],"shadow-color":[{shadow:[gr]}],opacity:[{opacity:[v]}],"mix-blend":[{"mix-blend":["normal","multiply","screen","overlay","darken","lighten","color-dodge","color-burn","hard-light","soft-light","difference","exclusion","hue","saturation","color","luminosity","plus-lighter"]}],"bg-blend":[{"bg-blend":["normal","multiply","screen","overlay","darken","lighten","color-dodge","color-burn","hard-light","soft-light","difference","exclusion","hue","saturation","color","luminosity","plus-lighter"]}],filter:[{filter:["","none"]}],blur:[{blur:[r]}],brightness:[{brightness:[n]}],contrast:[{contrast:[l]}],"drop-shadow":[{"drop-shadow":["","none",vr,mr]}],grayscale:[{grayscale:[u]}],"hue-rotate":[{"hue-rotate":[c]}],invert:[{invert:[d]}],saturate:[{saturate:[b]}],sepia:[{sepia:[w]}],"backdrop-filter":[{"backdrop-filter":["","none"]}],"backdrop-blur":[{"backdrop-blur":[r]}],"backdrop-brightness":[{"backdrop-brightness":[n]}],"backdrop-contrast":[{"backdrop-contrast":[l]}],"backdrop-grayscale":[{"backdrop-grayscale":[u]}],"backdrop-hue-rotate":[{"backdrop-hue-rotate":[c]}],"backdrop-invert":[{"backdrop-invert":[d]}],"backdrop-opacity":[{"backdrop-opacity":[v]}],"backdrop-saturate":[{"backdrop-saturate":[b]}],"backdrop-sepia":[{"backdrop-sepia":[w]}],"border-collapse":[{border:["collapse","separate"]}],"border-spacing":[{"border-spacing":[a]}],"border-spacing-x":[{"border-spacing-x":[a]}],"border-spacing-y":[{"border-spacing-y":[a]}],"table-layout":[{table:["auto","fixed"]}],caption:[{caption:["top","bottom"]}],transition:[{transition:["none","all","","colors","opacity","shadow","transform",mr]}],duration:[{duration:I()}],ease:[{ease:["linear","in","out","in-out",mr]}],delay:[{delay:I()}],animate:[{animate:["none","spin","ping","pulse","bounce",mr]}],transform:[{transform:["","gpu","none"]}],scale:[{scale:[x]}],"scale-x":[{"scale-x":[x]}],"scale-y":[{"scale-y":[x]}],rotate:[{rotate:[fr,mr]}],"translate-x":[{"translate-x":[C]}],"translate-y":[{"translate-y":[C]}],"skew-x":[{"skew-x":[P]}],"skew-y":[{"skew-y":[P]}],"transform-origin":[{origin:["center","top","top-right","right","bottom-right","bottom","bottom-left","left","top-left",mr]}],accent:[{accent:["auto",e]}],appearance:["appearance-none"],cursor:[{cursor:["auto","default","pointer","wait","text","move","help","not-allowed","none","context-menu","progress","cell","crosshair","vertical-text","alias","copy","no-drop","grab","grabbing","all-scroll","col-resize","row-resize","n-resize","e-resize","s-resize","w-resize","ne-resize","nw-resize","se-resize","sw-resize","ew-resize","ns-resize","nesw-resize","nwse-resize","zoom-in","zoom-out",mr]}],"caret-color":[{caret:[e]}],"pointer-events":[{"pointer-events":["none","auto"]}],resize:[{resize:["none","y","x",""]}],"scroll-behavior":[{scroll:["auto","smooth"]}],"scroll-m":[{"scroll-m":S()}],"scroll-mx":[{"scroll-mx":S()}],"scroll-my":[{"scroll-my":S()}],"scroll-ms":[{"scroll-ms":S()}],"scroll-me":[{"scroll-me":S()}],"scroll-mt":[{"scroll-mt":S()}],"scroll-mr":[{"scroll-mr":S()}],"scroll-mb":[{"scroll-mb":S()}],"scroll-ml":[{"scroll-ml":S()}],"scroll-p":[{"scroll-p":S()}],"scroll-px":[{"scroll-px":S()}],"scroll-py":[{"scroll-py":S()}],"scroll-ps":[{"scroll-ps":S()}],"scroll-pe":[{"scroll-pe":S()}],"scroll-pt":[{"scroll-pt":S()}],"scroll-pr":[{"scroll-pr":S()}],"scroll-pb":[{"scroll-pb":S()}],"scroll-pl":[{"scroll-pl":S()}],"snap-align":[{snap:["start","end","center","align-none"]}],"snap-stop":[{snap:["normal","always"]}],"snap-type":[{snap:["none","x","y","both"]}],"snap-strictness":[{snap:["mandatory","proximity"]}],touch:[{touch:["auto","none","pinch-zoom","manipulation",{pan:["x","left","right","y","up","down"]}]}],select:[{select:["none","text","all","auto"]}],"will-change":[{"will-change":["auto","scroll","contents","transform",mr]}],fill:[{fill:[e,"none"]}],"stroke-w":[{stroke:[ar,dr]}],stroke:[{stroke:[e,"none"]}],sr:["sr-only","not-sr-only"]},conflictingClassGroups:{overflow:["overflow-x","overflow-y"],overscroll:["overscroll-x","overscroll-y"],inset:["inset-x","inset-y","start","end","top","right","bottom","left"],"inset-x":["right","left"],"inset-y":["top","bottom"],flex:["basis","grow","shrink"],gap:["gap-x","gap-y"],p:["px","py","ps","pe","pt","pr","pb","pl"],px:["pr","pl"],py:["pt","pb"],m:["mx","my","ms","me","mt","mr","mb","ml"],mx:["mr","ml"],my:["mt","mb"],"font-size":["leading"],"fvn-normal":["fvn-ordinal","fvn-slashed-zero","fvn-figure","fvn-spacing","fvn-fraction"],"fvn-ordinal":["fvn-normal"],"fvn-slashed-zero":["fvn-normal"],"fvn-figure":["fvn-normal"],"fvn-spacing":["fvn-normal"],"fvn-fraction":["fvn-normal"],rounded:["rounded-s","rounded-e","rounded-t","rounded-r","rounded-b","rounded-l","rounded-ss","rounded-se","rounded-ee","rounded-es","rounded-tl","rounded-tr","rounded-br","rounded-bl"],"rounded-s":["rounded-ss","rounded-es"],"rounded-e":["rounded-se","rounded-ee"],"rounded-t":["rounded-tl","rounded-tr"],"rounded-r":["rounded-tr","rounded-br"],"rounded-b":["rounded-br","rounded-bl"],"rounded-l":["rounded-tl","rounded-bl"],"border-spacing":["border-spacing-x","border-spacing-y"],"border-w":["border-w-s","border-w-e","border-w-t","border-w-r","border-w-b","border-w-l"],"border-w-x":["border-w-r","border-w-l"],"border-w-y":["border-w-t","border-w-b"],"border-color":["border-color-t","border-color-r","border-color-b","border-color-l"],"border-color-x":["border-color-r","border-color-l"],"border-color-y":["border-color-t","border-color-b"],"scroll-m":["scroll-mx","scroll-my","scroll-ms","scroll-me","scroll-mt","scroll-mr","scroll-mb","scroll-ml"],"scroll-mx":["scroll-mr","scroll-ml"],"scroll-my":["scroll-mt","scroll-mb"],"scroll-p":["scroll-px","scroll-py","scroll-ps","scroll-pe","scroll-pt","scroll-pr","scroll-pb","scroll-pl"],"scroll-px":["scroll-pr","scroll-pl"],"scroll-py":["scroll-pt","scroll-pb"]},conflictingClassGroupModifiers:{"font-size":["leading"]}}}var Sr=Object.prototype.hasOwnProperty,kr=new Set(["string","number","boolean"]);function Mr(e,t,r){if(Sr.call(e,t)&&!kr.has(typeof r)&&null!==r){if(Array.isArray(r)&&Array.isArray(e[t]))e[t]=e[t].concat(r);else if("object"==typeof r&&"object"==typeof e[t]){if(null===e[t])return void(e[t]=r);for(var n in r)Mr(e[t],n,r[n]);}}else e[t]=r;}function Ar(e){for(var t=arguments.length,r=new Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];return "function"==typeof e?Jt.apply(void 0,[Er,e].concat(r)):Jt.apply(void 0,[function(){return function(e,t){for(var r in t)Mr(e,r,t[r]);return e}(Er(),e)}].concat(r))}var Dr=Jt(Er),Ir={twMerge:!0,twMergeConfig:{},responsiveVariants:!1},Vr=e=>e||void 0,Lr=(...e)=>Vr(jt(e).filter(Boolean).join(" ")),Kr=null,Rr={},Nr=!1,jr=(...e)=>t=>t.twMerge?((!Kr||Nr)&&(Nr=!1,Kr=Rt(Rr)?Dr:Ar(Rr)),Vr(Kr(Lr(e)))):Lr(e),Fr=(e,t)=>{for(let r in t)e.hasOwnProperty(r)?e[r]=Lr(e[r],t[r]):e[r]=t[r];return e},Or=(e,t)=>{let{extend:r=null,slots:n={},variants:s={},compoundVariants:o=[],compoundSlots:a=[],defaultVariants:i={}}=e,l={...Ir,...t},u=null!=r&&r.base?Lr(r.base,null==e?void 0:e.base):null==e?void 0:e.base,c=null!=r&&r.variants&&!Rt(r.variants)?Ft(s,r.variants):s,d=null!=r&&r.defaultVariants&&!Rt(r.defaultVariants)?{...r.defaultVariants,...i}:i;!Rt(l.twMergeConfig)&&!((e,t)=>JSON.stringify(e)===JSON.stringify(t))(l.twMergeConfig,Rr)&&(Nr=!0,Rr=l.twMergeConfig);let p=Rt(n)?{}:{base:null==e?void 0:e.base,...n},h=Rt(null==r?void 0:r.slots)?p:Fr({...null==r?void 0:r.slots},Rt(p)?{base:null==e?void 0:e.base}:p),f=e=>{if(Rt(c)&&Rt(n)&&Rt(null==r?void 0:r.slots))return jr(u,null==e?void 0:e.class,null==e?void 0:e.className)(l);if(o&&!Array.isArray(o))throw new TypeError('The "compoundVariants" prop must be an array. Received: '+typeof o);if(a&&!Array.isArray(a))throw new TypeError('The "compoundSlots" prop must be an array. Received: '+typeof a);let t=(e,t,r=[],n)=>{let s=r;if("string"==typeof t)s=s.concat(Ot(t).split(" ").map((t=>`${e}:${t}`)));else if(Array.isArray(t))s=s.concat(t.reduce(((t,r)=>t.concat(`${e}:${r}`)),[]));else if("object"==typeof t&&"string"==typeof n)for(let r in t)if(t.hasOwnProperty(r)&&r===n){let o=t[r];if(o&&"string"==typeof o){let t=Ot(o);s[n]?s[n]=s[n].concat(t.split(" ").map((t=>`${e}:${t}`))):s[n]=t.split(" ").map((t=>`${e}:${t}`));}else Array.isArray(o)&&o.length>0&&(s[n]=o.reduce(((t,r)=>t.concat(`${e}:${r}`)),[]));}return s},s=(r,n=c,s=null,o=null)=>{var a;let i=n[r];if(!i||Rt(i))return null;let u=null!=(a=null==o?void 0:o[r])?a:null==e?void 0:e[r];if(null===u)return null;let p=Kt(u),h=Array.isArray(l.responsiveVariants)&&l.responsiveVariants.length>0||!0===l.responsiveVariants,f=null==d?void 0:d[r],m=[];if("object"==typeof p&&h)for(let[e,r]of Object.entries(p)){let n=i[r];"initial"!==e?Array.isArray(l.responsiveVariants)&&!l.responsiveVariants.includes(e)||(m=t(e,n,m,s)):f=r;}let g=i[p]||i[Kt(f)];return "object"==typeof m&&"string"==typeof s&&m[s]?Fr(m,g):m.length>0?(m.push(g),m):g},i=(e,t)=>{if(!c||"object"!=typeof c)return null;let r=new Array;for(let n in c){let o=s(n,c,e,t),a="base"===e&&"string"==typeof o?o:o&&o[e];a&&(r[r.length]=a);}return r},p={};for(let t in e)void 0!==e[t]&&(p[t]=e[t]);let f=(t,r)=>{var n;let s="object"==typeof(null==e?void 0:e[t])?{[t]:null==(n=e[t])?void 0:n.initial}:{};return {...d,...p,...s,...r}},m=(e=[],t)=>{let r=[];for(let{class:n,className:s,...o}of e){let e=!0;for(let[r,n]of Object.entries(o)){let s=f(r,t);if(Array.isArray(n)){if(!n.includes(s[r])){e=!1;break}}else if(s[r]!==n){e=!1;break}}e&&(n&&r.push(n),s&&r.push(s));}return r},g=e=>{let t=m(o,e);return ((...e)=>jt(e).filter(Boolean))(m(null==r?void 0:r.compoundVariants,e),t)},v=e=>{let t=g(e);if(!Array.isArray(t))return t;let r={};for(let e of t)if("string"==typeof e&&(r.base=jr(r.base,e)(l)),"object"==typeof e)for(let[t,n]of Object.entries(e))r[t]=jr(r[t],n)(l);return r},y=e=>{if(a.length<1)return null;let t={};for(let{slots:r=[],class:n,className:s,...o}of a){if(!Rt(o)){let t=!0;for(let r of Object.keys(o)){let n=f(r,e)[r];if(void 0===n||(Array.isArray(o[r])?!o[r].includes(n):o[r]!==n)){t=!1;break}}if(!t)continue}for(let e of r)t[e]=t[e]||[],t[e].push([n,s]);}return t};if(!Rt(n)||!Rt(null==r?void 0:r.slots)){let e={};if("object"==typeof h&&!Rt(h))for(let t of Object.keys(h))e[t]=e=>{var r,n;return jr(h[t],i(t,e),(null!=(r=v(e))?r:[])[t],(null!=(n=y(e))?n:[])[t],null==e?void 0:e.class,null==e?void 0:e.className)(l)};return e}return jr(u,c?Object.keys(c).map((e=>s(e,c))):null,g(),null==e?void 0:e.class,null==e?void 0:e.className)(l)};return f.variantKeys=(()=>{if(c&&"object"==typeof c)return Object.keys(c)})(),f.extend=r,f.base=u,f.slots=h,f.variants=c,f.defaultVariants=d,f.compoundSlots=a,f.compoundVariants=o,f},Br=["small","medium","large"],Wr=(e,t)=>{var r,n,s;return Or(e,{...t,twMerge:null==(r=null==t?void 0:t.twMerge)||r,twMergeConfig:{...null==t?void 0:t.twMergeConfig,theme:{...null==(n=null==t?void 0:t.twMergeConfig)?void 0:n.theme,opacity:["disabled"],spacing:["divider","unit",...Lt],borderWidth:Br,borderRadius:Br},classGroups:{...null==(s=null==t?void 0:t.twMergeConfig)?void 0:s.classGroups,shadow:[{shadow:Br}],"font-size":[{text:["tiny",...Br]}],"bg-image":["bg-stripe-gradient"],"min-w":[{"min-w":["unit",...Lt]}],"min-h":[{"min-h":["unit",...Lt]}]}}})},zr=["outline-none","data-[focus-visible=true]:z-10","data-[focus-visible=true]:outline-2","data-[focus-visible=true]:outline-focus","data-[focus-visible=true]:outline-offset-2"],Ur=["outline-none","group-data-[focus-visible=true]:z-10","group-data-[focus-visible=true]:ring-2","group-data-[focus-visible=true]:ring-focus","group-data-[focus-visible=true]:ring-offset-2","group-data-[focus-visible=true]:ring-offset-background"],Hr=["absolute","top-1/2","left-1/2","-translate-x-1/2","-translate-y-1/2"],$r={default:["[&+.border-medium.border-default]:ms-[calc(theme(borderWidth.medium)*-1)]"],primary:["[&+.border-medium.border-primary]:ms-[calc(theme(borderWidth.medium)*-1)]"],secondary:["[&+.border-medium.border-secondary]:ms-[calc(theme(borderWidth.medium)*-1)]"],success:["[&+.border-medium.border-success]:ms-[calc(theme(borderWidth.medium)*-1)]"],warning:["[&+.border-medium.border-warning]:ms-[calc(theme(borderWidth.medium)*-1)]"],danger:["[&+.border-medium.border-danger]:ms-[calc(theme(borderWidth.medium)*-1)]"]},_r={default:"bg-default text-default-foreground",primary:"bg-primary text-primary-foreground",secondary:"bg-secondary text-secondary-foreground",success:"bg-success text-success-foreground",warning:"bg-warning text-warning-foreground",danger:"bg-danger text-danger-foreground",foreground:"bg-foreground text-background"},Gr={default:"shadow-lg shadow-default/50 bg-default text-default-foreground",primary:"shadow-lg shadow-primary/40 bg-primary text-primary-foreground",secondary:"shadow-lg shadow-secondary/40 bg-secondary text-secondary-foreground",success:"shadow-lg shadow-success/40 bg-success text-success-foreground",warning:"shadow-lg shadow-warning/40 bg-warning text-warning-foreground",danger:"shadow-lg shadow-danger/40 bg-danger text-danger-foreground",foreground:"shadow-lg shadow-foreground/40 bg-foreground text-background"},qr={default:"bg-transparent border-default text-foreground",primary:"bg-transparent border-primary text-primary",secondary:"bg-transparent border-secondary text-secondary",success:"bg-transparent border-success text-success",warning:"bg-transparent border-warning text-warning",danger:"bg-transparent border-danger text-danger",foreground:"bg-transparent border-foreground text-foreground"},Yr={default:"bg-default/40 text-default-foreground",primary:"bg-primary/20 text-primary",secondary:"bg-secondary/20 text-secondary",success:"bg-success/20 text-success-600 dark:text-success",warning:"bg-warning/20 text-warning-600 dark:text-warning",danger:"bg-danger/20 text-danger dark:text-danger-500",foreground:"bg-foreground/10 text-foreground"},Xr={default:"border-default bg-default-100 text-default-foreground",primary:"border-default bg-default-100 text-primary",secondary:"border-default bg-default-100 text-secondary",success:"border-default bg-default-100 text-success",warning:"border-default bg-default-100 text-warning",danger:"border-default bg-default-100 text-danger",foreground:"border-default bg-default-100 text-foreground"},Zr={default:"bg-transparent text-default-foreground",primary:"bg-transparent text-primary",secondary:"bg-transparent text-secondary",success:"bg-transparent text-success",warning:"bg-transparent text-warning",danger:"bg-transparent text-danger",foreground:"bg-transparent text-foreground"},Jr={default:"border-default text-default-foreground hover:!bg-default",primary:"border-primary text-primary hover:!text-primary-foreground hover:!bg-primary",secondary:"border-secondary text-secondary hover:text-secondary-foreground hover:!bg-secondary",success:"border-success text-success hover:!text-success-foreground hover:!bg-success",warning:"border-warning text-warning hover:!text-warning-foreground hover:!bg-warning",danger:"border-danger text-danger hover:!text-danger-foreground hover:!bg-danger",foreground:"border-foreground text-foreground hover:!bg-foreground"},Qr=Wr({slots:{base:"relative inline-flex flex-col gap-2 items-center justify-center",wrapper:"relative flex",circle1:["absolute","w-full","h-full","rounded-full","animate-spinner-ease-spin","border-2","border-solid","border-t-transparent","border-l-transparent","border-r-transparent"],circle2:["absolute","w-full","h-full","rounded-full","opacity-75","animate-spinner-linear-spin","border-2","border-dotted","border-t-transparent","border-l-transparent","border-r-transparent"],label:"text-foreground dark:text-foreground-dark font-regular"},variants:{size:{sm:{wrapper:"w-5 h-5",circle1:"border-2",circle2:"border-2",label:"text-small"},md:{wrapper:"w-8 h-8",circle1:"border-3",circle2:"border-3",label:"text-medium"},lg:{wrapper:"w-10 h-10",circle1:"border-3",circle2:"border-3",label:"text-large"}},color:{current:{circle1:"border-b-current",circle2:"border-b-current"},white:{circle1:"border-b-white",circle2:"border-b-white"},default:{circle1:"border-b-default",circle2:"border-b-default"},primary:{circle1:"border-b-primary",circle2:"border-b-primary"},secondary:{circle1:"border-b-secondary",circle2:"border-b-secondary"},success:{circle1:"border-b-success",circle2:"border-b-success"},warning:{circle1:"border-b-warning",circle2:"border-b-warning"},danger:{circle1:"border-b-danger",circle2:"border-b-danger"}},labelColor:{foreground:{label:"text-foreground"},primary:{label:"text-primary"},secondary:{label:"text-secondary"},success:{label:"text-success"},warning:{label:"text-warning"},danger:{label:"text-danger"}}},defaultVariants:{size:"md",color:"primary",labelColor:"foreground"}}),en=Wr({slots:{base:"inline-flex",tabList:["flex","p-1","h-fit","gap-2","items-center","flex-nowrap","overflow-x-scroll","scrollbar-hide","bg-default-100"],tab:["z-0","w-full","px-3","py-1","flex","group","relative","justify-center","items-center","outline-none","cursor-pointer","transition-opacity","tap-highlight-transparent","data-[disabled=true]:cursor-not-allowed","data-[disabled=true]:opacity-30","data-[hover-unselected=true]:opacity-disabled",...zr],tabContent:["relative","z-10","text-inherit","whitespace-nowrap","transition-colors","text-default-500","group-data-[selected=true]:text-foreground"],cursor:["absolute","z-0","bg-white"],panel:["py-3","px-1","outline-none",...zr]},variants:{variant:{solid:{cursor:"inset-0"},light:{tabList:"bg-transparent dark:bg-transparent",cursor:"inset-0"},underlined:{tabList:"bg-transparent dark:bg-transparent",cursor:"h-[2px] w-[80%] bottom-0 shadow-[0_1px_0px_0_rgba(0,0,0,0.05)]"},bordered:{tabList:"bg-transparent dark:bg-transparent border-medium border-default-200 shadow-sm",cursor:"inset-0"}},color:{default:{},primary:{},secondary:{},success:{},warning:{},danger:{}},size:{sm:{tabList:"rounded-medium",tab:"h-7 text-tiny rounded-small",cursor:"rounded-small"},md:{tabList:"rounded-medium",tab:"h-8 text-small rounded-small",cursor:"rounded-small"},lg:{tabList:"rounded-large",tab:"h-9 text-medium rounded-medium",cursor:"rounded-medium"}},radius:{none:{tabList:"rounded-none",tab:"rounded-none",cursor:"rounded-none"},sm:{tabList:"rounded-medium",tab:"rounded-small",cursor:"rounded-small"},md:{tabList:"rounded-medium",tab:"rounded-small",cursor:"rounded-small"},lg:{tabList:"rounded-large",tab:"rounded-medium",cursor:"rounded-medium"},full:{tabList:"rounded-full",tab:"rounded-full",cursor:"rounded-full"}},fullWidth:{true:{base:"w-full",tabList:"w-full"}},isDisabled:{true:{tabList:"opacity-disabled pointer-events-none"}},disableAnimation:{true:{tab:"transition-none",tabContent:"transition-none"}}},defaultVariants:{color:"default",variant:"solid",size:"md",fullWidth:!1,isDisabled:!1,disableAnimation:!1},compoundVariants:[{variant:["solid","bordered","light"],color:"default",class:{cursor:["bg-background","dark:bg-default","shadow-small"],tabContent:"group-data-[selected=true]:text-default-foreground"}},{variant:["solid","bordered","light"],color:"primary",class:{cursor:_r.primary,tabContent:"group-data-[selected=true]:text-primary-foreground"}},{variant:["solid","bordered","light"],color:"secondary",class:{cursor:_r.secondary,tabContent:"group-data-[selected=true]:text-secondary-foreground"}},{variant:["solid","bordered","light"],color:"success",class:{cursor:_r.success,tabContent:"group-data-[selected=true]:text-success-foreground"}},{variant:["solid","bordered","light"],color:"warning",class:{cursor:_r.warning,tabContent:"group-data-[selected=true]:text-warning-foreground"}},{variant:["solid","bordered","light"],color:"danger",class:{cursor:_r.danger,tabContent:"group-data-[selected=true]:text-danger-foreground"}},{variant:"underlined",color:"default",class:{cursor:"bg-foreground",tabContent:"group-data-[selected=true]:text-foreground"}},{variant:"underlined",color:"primary",class:{cursor:"bg-primary",tabContent:"group-data-[selected=true]:text-primary"}},{variant:"underlined",color:"secondary",class:{cursor:"bg-secondary",tabContent:"group-data-[selected=true]:text-secondary"}},{variant:"underlined",color:"success",class:{cursor:"bg-success",tabContent:"group-data-[selected=true]:text-success"}},{variant:"underlined",color:"warning",class:{cursor:"bg-warning",tabContent:"group-data-[selected=true]:text-warning"}},{variant:"underlined",color:"danger",class:{cursor:"bg-danger",tabContent:"group-data-[selected=true]:text-danger"}},{disableAnimation:!0,variant:"underlined",class:{tab:["after:content-['']","after:absolute","after:bottom-0","after:h-[2px]","after:w-[80%]","after:opacity-0","after:shadow-[0_1px_0px_0_rgba(0,0,0,0.05)]","data-[selected=true]:after:opacity-100"]}},{disableAnimation:!0,color:"default",variant:["solid","bordered","light"],class:{tab:"data-[selected=true]:bg-default data-[selected=true]:text-default-foreground"}},{disableAnimation:!0,color:"primary",variant:["solid","bordered","light"],class:{tab:"data-[selected=true]:bg-primary data-[selected=true]:text-primary-foreground"}},{disableAnimation:!0,color:"secondary",variant:["solid","bordered","light"],class:{tab:"data-[selected=true]:bg-secondary data-[selected=true]:text-secondary-foreground"}},{disableAnimation:!0,color:"success",variant:["solid","bordered","light"],class:{tab:"data-[selected=true]:bg-success data-[selected=true]:text-success-foreground"}},{disableAnimation:!0,color:"warning",variant:["solid","bordered","light"],class:{tab:"data-[selected=true]:bg-warning data-[selected=true]:text-warning-foreground"}},{disableAnimation:!0,color:"danger",variant:["solid","bordered","light"],class:{tab:"data-[selected=true]:bg-danger data-[selected=true]:text-danger-foreground"}},{disableAnimation:!0,color:"default",variant:"underlined",class:{tab:"data-[selected=true]:after:bg-foreground"}},{disableAnimation:!0,color:"primary",variant:"underlined",class:{tab:"data-[selected=true]:after:bg-primary"}},{disableAnimation:!0,color:"secondary",variant:"underlined",class:{tab:"data-[selected=true]:after:bg-secondary"}},{disableAnimation:!0,color:"success",variant:"underlined",class:{tab:"data-[selected=true]:after:bg-success"}},{disableAnimation:!0,color:"warning",variant:"underlined",class:{tab:"data-[selected=true]:after:bg-warning"}},{disableAnimation:!0,color:"danger",variant:"underlined",class:{tab:"data-[selected=true]:after:bg-danger"}}],compoundSlots:[{variant:"underlined",slots:["tab","tabList","cursor"],class:["rounded-none"]}]}),tn=Wr({slots:{base:"group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent",wrapper:["px-1","relative","inline-flex","items-center","justify-start","flex-shrink-0","overflow-hidden","bg-default-200","rounded-full",...Ur],thumb:["z-10","flex","items-center","justify-center","bg-white","shadow-small","rounded-full","origin-right"],startContent:"z-0 absolute left-1.5 text-current",endContent:"z-0 absolute right-1.5 text-default-600",thumbIcon:"text-black",label:"relative text-foreground select-none"},variants:{color:{default:{wrapper:["group-data-[selected=true]:bg-default-400","group-data-[selected=true]:text-default-foreground"]},primary:{wrapper:["group-data-[selected=true]:bg-primary","group-data-[selected=true]:text-primary-foreground"]},secondary:{wrapper:["group-data-[selected=true]:bg-secondary","group-data-[selected=true]:text-secondary-foreground"]},success:{wrapper:["group-data-[selected=true]:bg-success","group-data-[selected=true]:text-success-foreground"]},warning:{wrapper:["group-data-[selected=true]:bg-warning","group-data-[selected=true]:text-warning-foreground"]},danger:{wrapper:["group-data-[selected=true]:bg-danger","data-[selected=true]:text-danger-foreground"]}},size:{sm:{wrapper:"w-10 h-6 mr-2",thumb:["w-4 h-4 text-tiny","group-data-[selected=true]:ml-4"],endContent:"text-tiny",startContent:"text-tiny",label:"text-small"},md:{wrapper:"w-12 h-7 mr-2",thumb:["w-5 h-5 text-small","group-data-[selected=true]:ml-5"],endContent:"text-small",startContent:"text-small",label:"text-medium"},lg:{wrapper:"w-14 h-8 mr-2",thumb:["w-6 h-6 text-medium","group-data-[selected=true]:ml-6"],endContent:"text-medium",startContent:"text-medium",label:"text-large"}},isDisabled:{true:{base:"opacity-disabled pointer-events-none"}},disableAnimation:{true:{wrapper:"transition-none",thumb:"transition-none"},false:{wrapper:"transition-background",thumb:"transition-all",startContent:["opacity-0","scale-50","transition-transform-opacity","group-data-[selected=true]:scale-100","group-data-[selected=true]:opacity-100"],endContent:["opacity-100","transition-transform-opacity","group-data-[selected=true]:translate-x-3","group-data-[selected=true]:opacity-0"]}}},defaultVariants:{color:"primary",size:"md",isDisabled:!1,disableAnimation:!1},compoundVariants:[{disableAnimation:!1,size:"sm",class:{thumb:["group-data-[pressed=true]:w-5","group-data-[selected]:group-data-[pressed]:ml-3"]}},{disableAnimation:!1,size:"md",class:{thumb:["group-data-[pressed=true]:w-6","group-data-[selected]:group-data-[pressed]:ml-4"]}},{disableAnimation:!1,size:"lg",class:{thumb:["group-data-[pressed=true]:w-7","group-data-[selected]:group-data-[pressed]:ml-5"]}}]}),rn=Wr({slots:{base:"group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2",wrapper:["relative","inline-flex","items-center","justify-center","flex-shrink-0","overflow-hidden","border-solid","border-medium","box-border","border-default","rounded-full","group-data-[hover-unselected=true]:bg-default-100",...Ur],labelWrapper:"flex flex-col ml-1",control:["z-10","w-2","h-2","opacity-0","scale-0","origin-center","rounded-full","group-data-[selected=true]:opacity-100","group-data-[selected=true]:scale-100"],label:"relative text-foreground select-none",description:"relative text-foreground-400"},variants:{color:{default:{control:"bg-default-500 text-default-foreground",wrapper:"group-data-[selected=true]:border-default-500"},primary:{control:"bg-primary text-primary-foreground",wrapper:"group-data-[selected=true]:border-primary"},secondary:{control:"bg-secondary text-secondary-foreground",wrapper:"group-data-[selected=true]:border-secondary"},success:{control:"bg-success text-success-foreground",wrapper:"group-data-[selected=true]:border-success"},warning:{control:"bg-warning text-warning-foreground",wrapper:"group-data-[selected=true]:border-warning"},danger:{control:"bg-danger text-danger-foreground",wrapper:"group-data-[selected=true]:border-danger"}},size:{sm:{wrapper:"w-4 h-4",control:"w-1.5 h-1.5",labelWrapper:"ml-1",label:"text-small",description:"text-tiny"},md:{wrapper:"w-5 h-5",control:"w-2 h-2",labelWrapper:"ml-2",label:"text-medium",description:"text-small"},lg:{wrapper:"w-6 h-6",control:"w-2.5 h-2.5",labelWrapper:"ml-2",label:"text-large",description:"text-medium"}},isDisabled:{true:{base:"opacity-disabled pointer-events-none"}},isInvalid:{true:{control:"bg-danger text-danger-foreground",wrapper:"border-danger group-data-[selected=true]:border-danger",label:"text-danger",description:"text-danger-300"}},disableAnimation:{true:{},false:{wrapper:["group-data-[pressed=true]:scale-95","transition-transform-colors","motion-reduce:transition-none"],control:"transition-transform-opacity motion-reduce:transition-none",label:"transition-colors motion-reduce:transition-none",description:"transition-colors motion-reduce:transition-none"}}},defaultVariants:{color:"primary",size:"md",isDisabled:!1,isInvalid:!1,disableAnimation:!1}}),nn=Wr({slots:{base:"relative flex flex-col gap-2",label:"relative text-foreground-500",wrapper:"flex flex-col flex-wrap gap-2 data-[orientation=horizontal]:flex-row",description:"text-tiny text-foreground-400",errorMessage:"text-tiny text-danger"},variants:{isRequired:{true:{label:"after:content-['*'] after:text-danger after:ml-0.5"}},isInvalid:{true:{description:"text-danger"}},disableAnimation:{true:{},false:{description:"transition-colors !duration-150 motion-reduce:transition-none"}}},defaultVariants:{isInvalid:!1,isRequired:!1,disableAnimation:!1}}),sn=Wr({slots:{base:"group flex flex-col",label:["absolute","z-10","pointer-events-none","origin-top-left","subpixel-antialiased","block","text-small","text-foreground-500"],mainWrapper:"h-full",inputWrapper:"relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3",innerWrapper:"inline-flex w-full items-center h-full box-border",input:["w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none","data-[has-start-content=true]:ps-1.5","data-[has-end-content=true]:pe-1.5"],clearButton:["p-2","-m-2","z-10","hidden","absolute","right-3","appearance-none","outline-none","select-none","opacity-0","hover:!opacity-100","cursor-pointer","active:!opacity-70","rounded-full",...zr],helperWrapper:"hidden group-data-[has-helper=true]:flex p-1 relative flex-col gap-1.5",description:"text-tiny text-foreground-400",errorMessage:"text-tiny text-danger"},variants:{variant:{flat:{inputWrapper:["bg-default-100","data-[hover=true]:bg-default-200","group-data-[focus=true]:bg-default-100"]},faded:{inputWrapper:["bg-default-100","border-medium","border-default-200","data-[hover=true]:border-default-400"],value:"group-data-[has-value=true]:text-default-foreground"},bordered:{inputWrapper:["border-medium","border-default-200","data-[hover=true]:border-default-400","group-data-[focus=true]:border-default-foreground"]},underlined:{inputWrapper:["!px-1","!pb-0","!gap-0","relative","box-border","border-b-medium","shadow-[0_1px_0px_0_rgba(0,0,0,0.05)]","border-default-200","!rounded-none","hover:border-default-300","after:content-['']","after:w-0","after:origin-center","after:bg-default-foreground","after:absolute","after:left-1/2","after:-translate-x-1/2","after:-bottom-[2px]","after:h-[2px]","group-data-[focus=true]:after:w-full"],innerWrapper:"pb-1",label:"group-data-[filled-within=true]:text-foreground"}},color:{default:{},primary:{},secondary:{},success:{},warning:{},danger:{}},size:{sm:{label:"text-tiny",inputWrapper:"h-unit-8 min-h-unit-8 px-2 rounded-small",input:"text-small",clearButton:"text-medium"},md:{inputWrapper:"h-unit-10 min-h-unit-10 rounded-medium",input:"text-small",clearButton:"text-large"},lg:{inputWrapper:"h-unit-12 min-h-unit-12 rounded-large",input:"text-medium",clearButton:"text-large"}},radius:{none:{inputWrapper:"rounded-none"},sm:{inputWrapper:"rounded-small"},md:{inputWrapper:"rounded-medium"},lg:{inputWrapper:"rounded-large"},full:{inputWrapper:"rounded-full"}},labelPlacement:{outside:{mainWrapper:"flex flex-col"},"outside-left":{base:"flex-row items-center flex-nowrap data-[has-helper=true]:items-start",inputWrapper:"flex-1",mainWrapper:"flex flex-col",label:"relative text-foreground pr-2"},inside:{label:"text-tiny cursor-text",inputWrapper:"flex-col items-start justify-center gap-0",innerWrapper:"group-data-[has-label=true]:items-end"}},fullWidth:{true:{base:"w-full"}},isClearable:{true:{input:"peer pr-6",clearButton:"peer-data-[filled=true]:opacity-70 peer-data-[filled=true]:block"}},isDisabled:{true:{base:"opacity-disabled pointer-events-none",inputWrapper:"pointer-events-none",label:"pointer-events-none"}},isInvalid:{true:{label:"!text-danger",input:"!placeholder:text-danger !text-danger"}},isRequired:{true:{label:"after:content-['*'] after:text-danger after:ml-0.5"}},isMultiline:{true:{label:"relative",inputWrapper:"!h-auto",innerWrapper:"items-start group-data-[has-label=true]:items-start",input:"resize-none data-[hide-scroll=true]:scrollbar-hide"}},disableAnimation:{true:{input:"transition-none",inputWrapper:"transition-none",label:"transition-none"},false:{inputWrapper:"transition-background motion-reduce:transition-none !duration-150",label:["will-change-auto","!duration-200","!ease-out","motion-reduce:transition-none","transition-[transform,color,left,opacity]"],clearButton:["transition-opacity","motion-reduce:transition-none"]}}},defaultVariants:{variant:"flat",color:"default",size:"md",fullWidth:!0,labelPlacement:"inside",isDisabled:!1,isMultiline:!1,disableAnimation:!1},compoundVariants:[{variant:"flat",color:"default",class:{input:"group-data-[has-value=true]:text-default-foreground"}},{variant:"flat",color:"primary",class:{inputWrapper:["bg-primary-50","data-[hover=true]:bg-primary-100","text-primary","group-data-[focus=true]:bg-primary-50","placeholder:text-primary"],input:"placeholder:text-primary",label:"text-primary"}},{variant:"flat",color:"secondary",class:{inputWrapper:["bg-secondary-50","text-secondary","data-[hover=true]:bg-secondary-100","group-data-[focus=true]:bg-secondary-50","placeholder:text-secondary"],input:"placeholder:text-secondary",label:"text-secondary"}},{variant:"flat",color:"success",class:{inputWrapper:["bg-success-50","text-success-600","dark:text-success","placeholder:text-success-600","dark:placeholder:text-success","data-[hover=true]:bg-success-100","group-data-[focus=true]:bg-success-50"],input:"placeholder:text-success-600 dark:placeholder:text-success",label:"text-success-600 dark:text-success"}},{variant:"flat",color:"warning",class:{inputWrapper:["bg-warning-50","text-warning-600","dark:text-warning","placeholder:text-warning-600","dark:placeholder:text-warning","data-[hover=true]:bg-warning-100","group-data-[focus=true]:bg-warning-50"],input:"placeholder:text-warning-600 dark:placeholder:text-warning",label:"text-warning-600 dark:text-warning"}},{variant:"flat",color:"danger",class:{inputWrapper:["bg-danger-50","text-danger","dark:text-danger-500","placeholder:text-danger","dark:placeholder:text-danger-500","data-[hover=true]:bg-danger-100","group-data-[focus=true]:bg-danger-50"],input:"placeholder:text-danger dark:placeholder:text-danger-500",label:"text-danger dark:text-danger-500"}},{variant:"faded",color:"primary",class:{label:"text-primary",inputWrapper:"data-[hover=true]:border-primary focus-within:border-primary"}},{variant:"faded",color:"secondary",class:{label:"text-secondary",inputWrapper:"data-[hover=true]:border-secondary focus-within:border-secondary"}},{variant:"faded",color:"success",class:{label:"text-success",inputWrapper:"data-[hover=true]:border-success focus-within:border-success"}},{variant:"faded",color:"warning",class:{label:"text-warning",inputWrapper:"data-[hover=true]:border-warning focus-within:border-warning"}},{variant:"faded",color:"danger",class:{label:"text-danger",inputWrapper:"data-[hover=true]:border-danger focus-within:border-danger"}},{variant:"underlined",color:"default",class:{input:"group-data-[has-value=true]:text-foreground"}},{variant:"underlined",color:"primary",class:{inputWrapper:"after:bg-primary",label:"text-primary"}},{variant:"underlined",color:"secondary",class:{inputWrapper:"after:bg-secondary",label:"text-secondary"}},{variant:"underlined",color:"success",class:{inputWrapper:"after:bg-success",label:"text-success"}},{variant:"underlined",color:"warning",class:{inputWrapper:"after:bg-warning",label:"text-warning"}},{variant:"underlined",color:"danger",class:{inputWrapper:"after:bg-danger",label:"text-danger"}},{variant:"bordered",color:"primary",class:{inputWrapper:"group-data-[focus=true]:border-primary",label:"text-primary"}},{variant:"bordered",color:"secondary",class:{inputWrapper:"group-data-[focus=true]:border-secondary",label:"text-secondary"}},{variant:"bordered",color:"success",class:{inputWrapper:"group-data-[focus=true]:border-success",label:"text-success"}},{variant:"bordered",color:"warning",class:{inputWrapper:"group-data-[focus=true]:border-warning",label:"text-warning"}},{variant:"bordered",color:"danger",class:{inputWrapper:"group-data-[focus=true]:border-danger",label:"text-danger"}},{labelPlacement:"inside",color:"default",class:{label:"group-data-[filled-within=true]:text-default-600"}},{labelPlacement:"outside",color:"default",class:{label:"group-data-[filled-within=true]:text-foreground"}},{radius:"full",size:["sm"],class:{inputWrapper:"px-3"}},{radius:"full",size:"md",class:{inputWrapper:"px-4"}},{radius:"full",size:"lg",class:{inputWrapper:"px-5"}},{disableAnimation:!1,variant:["faded","bordered"],class:{inputWrapper:"transition-colors motion-reduce:transition-none"}},{disableAnimation:!1,variant:"underlined",class:{inputWrapper:"after:transition-width motion-reduce:after:transition-none"}},{variant:["flat","faded"],class:{inputWrapper:[...Ur]}},{isInvalid:!0,variant:"flat",class:{inputWrapper:["bg-danger-50","data-[hover=true]:bg-danger-100","group-data-[focus=true]:bg-danger-50"]}},{isInvalid:!0,variant:"bordered",class:{inputWrapper:"!border-danger group-data-[focus=true]:border-danger"}},{isInvalid:!0,variant:"underlined",class:{inputWrapper:"after:bg-danger"}},{labelPlacement:"inside",size:"sm",class:{inputWrapper:"h-12 py-1.5 px-3"}},{labelPlacement:"inside",size:"md",class:{inputWrapper:"h-14 py-2"}},{labelPlacement:"inside",size:"lg",class:{label:"text-small",inputWrapper:"h-16 py-2.5 gap-0"}},{labelPlacement:"inside",size:"sm",variant:["bordered","faded"],class:{inputWrapper:"py-1"}},{labelPlacement:["inside","outside"],class:{label:["group-data-[filled-within=true]:pointer-events-auto"]}},{labelPlacement:["outside","outside-left"],class:{input:"h-full"}},{labelPlacement:"outside",isMultiline:!1,class:{base:"group relative justify-end",label:["pb-0","z-20","top-1/2","-translate-y-1/2","group-data-[filled-within=true]:left-0"]}},{labelPlacement:["inside"],class:{label:["group-data-[filled-within=true]:scale-85"]}},{labelPlacement:["inside"],variant:"flat",class:{innerWrapper:"pb-0.5"}},{variant:"underlined",size:"sm",class:{innerWrapper:"pb-1"}},{variant:"underlined",size:["md","lg"],class:{innerWrapper:"pb-1.5"}},{labelPlacement:"inside",size:["sm","md"],class:{label:"text-small"}},{labelPlacement:"inside",isMultiline:!1,size:"sm",class:{label:["group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.tiny)/2_-_8px)]"]}},{labelPlacement:"inside",isMultiline:!1,size:"md",class:{label:["group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_6px)]"]}},{labelPlacement:"inside",isMultiline:!1,size:"lg",class:{label:["text-medium","group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_8px)]"]}},{labelPlacement:"inside",variant:["faded","bordered"],isMultiline:!1,size:"sm",class:{label:["group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.tiny)/2_-_8px_-_theme(borderWidth.medium))]"]}},{labelPlacement:"inside",variant:["faded","bordered"],isMultiline:!1,size:"md",class:{label:["group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_6px_-_theme(borderWidth.medium))]"]}},{labelPlacement:"inside",variant:["faded","bordered"],isMultiline:!1,size:"lg",class:{label:["text-medium","group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_8px_-_theme(borderWidth.medium))]"]}},{labelPlacement:"inside",variant:"underlined",isMultiline:!1,size:"sm",class:{label:["group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.tiny)/2_-_5px)]"]}},{labelPlacement:"inside",variant:"underlined",isMultiline:!1,size:"md",class:{label:["group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_3.5px)]"]}},{labelPlacement:"inside",variant:"underlined",size:"lg",isMultiline:!1,class:{label:["text-medium","group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_4px)]"]}},{labelPlacement:"outside",size:"sm",isMultiline:!1,class:{label:["left-2","text-tiny","group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.tiny)/2_+_16px)]"],base:"data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_8px)]"}},{labelPlacement:"outside",size:"md",isMultiline:!1,class:{label:["left-3","text-small","group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)]"],base:"data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"}},{labelPlacement:"outside",size:"lg",isMultiline:!1,class:{label:["left-3","text-medium","group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_24px)]"],base:"data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_12px)]"}},{labelPlacement:"outside-left",size:"sm",class:{label:"group-data-[has-helper=true]:pt-2"}},{labelPlacement:"outside-left",size:"md",class:{label:"group-data-[has-helper=true]:pt-3"}},{labelPlacement:"outside-left",size:"lg",class:{label:"group-data-[has-helper=true]:pt-4"}},{labelPlacement:["outside","outside-left"],isMultiline:!0,class:{inputWrapper:"py-2"}},{labelPlacement:"outside",isMultiline:!0,class:{label:"pb-1.5"}},{labelPlacement:"inside",isMultiline:!0,class:{label:"pb-0.5",input:"pt-0"}},{isMultiline:!0,disableAnimation:!1,class:{input:"transition-height !duration-100 motion-reduce:transition-none"}},{labelPlacement:["inside","outside"],class:{label:["pe-2","max-w-full","text-ellipsis","overflow-hidden"]}},{isMultiline:!0,radius:"full",class:{inputWrapper:"data-[has-multiple-rows=true]:rounded-large"}}]}),on$1=Wr({slots:{base:["relative","max-w-fit","inline-flex","items-center","justify-between","box-border","whitespace-nowrap"],content:"flex-1 text-inherit font-normal",dot:["w-2","h-2","ml-1","rounded-full"],avatar:"flex-shrink-0",closeButton:["z-10","appearance-none","outline-none","select-none","transition-opacity","opacity-70","hover:opacity-100","cursor-pointer","active:opacity-disabled","tap-highlight-transparent"]},variants:{variant:{solid:{},bordered:{base:"border-medium bg-transparent"},light:{base:"bg-transparent"},flat:{},faded:{base:"border-medium"},shadow:{},dot:{base:"border-medium border-default text-foreground bg-transparent"}},color:{default:{dot:"bg-default-400"},primary:{dot:"bg-primary"},secondary:{dot:"bg-secondary"},success:{dot:"bg-success"},warning:{dot:"bg-warning"},danger:{dot:"bg-danger"}},size:{sm:{base:"px-1 h-6 text-tiny",content:"px-1",closeButton:"text-medium",avatar:"w-4 h-4"},md:{base:"px-1 h-7 text-small",content:"px-2",closeButton:"text-large",avatar:"w-5 h-5"},lg:{base:"px-2 h-8 text-medium",content:"px-2",closeButton:"text-xl",avatar:"w-6 h-6"}},radius:{none:{base:"rounded-none"},sm:{base:"rounded-small"},md:{base:"rounded-medium"},lg:{base:"rounded-large"},full:{base:"rounded-full"}},isOneChar:{true:{},false:{}},isCloseable:{true:{},false:{}},hasStartContent:{true:{}},hasEndContent:{true:{}},isDisabled:{true:{base:"opacity-disabled pointer-events-none"}},isCloseButtonFocusVisible:{true:{closeButton:["outline-none","ring-2","ring-focus","ring-offset-2","ring-offset-background","ring-1","rounded-full"]}}},defaultVariants:{variant:"solid",color:"default",size:"md",radius:"full",isDisabled:!1},compoundVariants:[{variant:"solid",color:"default",class:{base:_r.default}},{variant:"solid",color:"primary",class:{base:_r.primary}},{variant:"solid",color:"secondary",class:{base:_r.secondary}},{variant:"solid",color:"success",class:{base:_r.success}},{variant:"solid",color:"warning",class:{base:_r.warning}},{variant:"solid",color:"danger",class:{base:_r.danger}},{variant:"shadow",color:"default",class:{base:Gr.default}},{variant:"shadow",color:"primary",class:{base:Gr.primary}},{variant:"shadow",color:"secondary",class:{base:Gr.secondary}},{variant:"shadow",color:"success",class:{base:Gr.success}},{variant:"shadow",color:"warning",class:{base:Gr.warning}},{variant:"shadow",color:"danger",class:{base:Gr.danger}},{variant:"bordered",color:"default",class:{base:qr.default}},{variant:"bordered",color:"primary",class:{base:qr.primary}},{variant:"bordered",color:"secondary",class:{base:qr.secondary}},{variant:"bordered",color:"success",class:{base:qr.success}},{variant:"bordered",color:"warning",class:{base:qr.warning}},{variant:"bordered",color:"danger",class:{base:qr.danger}},{variant:"flat",color:"default",class:{base:Yr.default}},{variant:"flat",color:"primary",class:{base:Yr.primary}},{variant:"flat",color:"secondary",class:{base:Yr.secondary}},{variant:"flat",color:"success",class:{base:Yr.success}},{variant:"flat",color:"warning",class:{base:Yr.warning}},{variant:"flat",color:"danger",class:{base:Yr.danger}},{variant:"faded",color:"default",class:{base:Xr.default}},{variant:"faded",color:"primary",class:{base:Xr.primary}},{variant:"faded",color:"secondary",class:{base:Xr.secondary}},{variant:"faded",color:"success",class:{base:Xr.success}},{variant:"faded",color:"warning",class:{base:Xr.warning}},{variant:"faded",color:"danger",class:{base:Xr.danger}},{variant:"light",color:"default",class:{base:Zr.default}},{variant:"light",color:"primary",class:{base:Zr.primary}},{variant:"light",color:"secondary",class:{base:Zr.secondary}},{variant:"light",color:"success",class:{base:Zr.success}},{variant:"light",color:"warning",class:{base:Zr.warning}},{variant:"light",color:"danger",class:{base:Zr.danger}},{isOneChar:!0,size:"sm",class:{base:"w-5 h-5 min-w-unit-5 min-h-5"}},{isOneChar:!0,size:"md",class:{base:"w-6 h-6 min-w-unit-6 min-h-6"}},{isOneChar:!0,size:"lg",class:{base:"w-7 h-7 min-w-unit-7 min-h-7"}},{isOneChar:!0,isCloseable:!1,class:{base:"px-0 justify-center",content:"px-0 flex-none"}},{isOneChar:!0,isCloseable:!0,class:{base:"w-auto"}},{hasStartContent:!0,size:"sm",class:{content:"pl-0.5"}},{hasStartContent:!0,size:["md","lg"],class:{content:"pl-1"}},{hasEndContent:!0,size:"sm",class:{content:"pr-0.5"}},{hasEndContent:!0,size:["md","lg"],class:{content:"pr-1"}}]}),an=Wr({slots:{base:["flex","relative","justify-center","items-center","box-border","overflow-hidden","align-middle","text-white","z-0",...zr],img:["flex","object-cover","w-full","h-full","transition-opacity","!duration-500","opacity-0","data-[loaded=true]:opacity-100"],fallback:[...Hr,"flex","items-center","justify-center"],name:[...Hr,"font-normal","text-center","text-inherit"],icon:[...Hr,"flex","items-center","justify-center","text-inherit","w-full","h-full"]},variants:{size:{sm:{base:"w-8 h-8 text-tiny"},md:{base:"w-10 h-10 text-tiny"},lg:{base:"w-14 h-14 text-small"}},color:{default:{base:_r.default},primary:{base:_r.primary},secondary:{base:_r.secondary},success:{base:_r.success},warning:{base:_r.warning},danger:{base:_r.danger}},radius:{none:{base:"rounded-none"},sm:{base:"rounded-small"},md:{base:"rounded-medium"},lg:{base:"rounded-large"},full:{base:"rounded-full"}},isBordered:{true:{base:"ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark"}},isDisabled:{true:{base:"opacity-disabled"}},isInGroup:{true:{base:["-ms-2 data-[hover=true]:-translate-x-3 transition-transform","data-[focus-visible=true]:-translate-x-3"]}},isInGridGroup:{true:{base:"m-0 data-[hover=true]:translate-x-0"}}},defaultVariants:{size:"md",color:"default",radius:"full"},compoundVariants:[{color:"default",isBordered:!0,class:{base:"ring-default"}},{color:"primary",isBordered:!0,class:{base:"ring-primary"}},{color:"secondary",isBordered:!0,class:{base:"ring-secondary"}},{color:"success",isBordered:!0,class:{base:"ring-success"}},{color:"warning",isBordered:!0,class:{base:"ring-warning"}},{color:"danger",isBordered:!0,class:{base:"ring-danger"}}]});Wr({base:"flex items-center justify-center h-auto w-max-content",variants:{isGrid:{true:"inline-grid grid-cols-4 gap-3"}}});var ln=Wr({base:["z-0","group","relative","inline-flex","items-center","justify-center","box-border","appearance-none","outline-none","select-none","whitespace-nowrap","min-w-max","font-normal","subpixel-antialiased","overflow-hidden","tap-highlight-transparent",...zr],variants:{variant:{solid:"",bordered:"border-medium bg-transparent",light:"bg-transparent",flat:"",faded:"border-medium",shadow:"",ghost:"border-medium bg-transparent"},size:{sm:"px-unit-3 min-w-unit-16 h-unit-8 text-tiny gap-unit-2 rounded-small",md:"px-unit-4 min-w-unit-20 h-unit-10 text-small gap-unit-2 rounded-medium",lg:"px-unit-6 min-w-unit-24 h-unit-12 text-medium gap-unit-3 rounded-large"},color:{default:"",primary:"",secondary:"",success:"",warning:"",danger:""},radius:{none:"rounded-none",sm:"rounded-small",md:"rounded-medium",lg:"rounded-large",full:"rounded-full"},fullWidth:{true:"w-full"},isDisabled:{true:"opacity-disabled pointer-events-none"},isInGroup:{true:"[&:not(:first-child):not(:last-child)]:rounded-none"},isIconOnly:{true:"px-unit-0 !gap-unit-0",false:"[&>svg]:max-w-[theme(spacing.unit-8)]"},disableAnimation:{true:"!transition-none",false:"data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none"}},defaultVariants:{size:"md",variant:"solid",color:"default",fullWidth:!1,isDisabled:!1,isInGroup:!1,disableAnimation:!1},compoundVariants:[{variant:"solid",color:"default",class:_r.default},{variant:"solid",color:"primary",class:_r.primary},{variant:"solid",color:"secondary",class:_r.secondary},{variant:"solid",color:"success",class:_r.success},{variant:"solid",color:"warning",class:_r.warning},{variant:"solid",color:"danger",class:_r.danger},{variant:"shadow",color:"default",class:Gr.default},{variant:"shadow",color:"primary",class:Gr.primary},{variant:"shadow",color:"secondary",class:Gr.secondary},{variant:"shadow",color:"success",class:Gr.success},{variant:"shadow",color:"warning",class:Gr.warning},{variant:"shadow",color:"danger",class:Gr.danger},{variant:"bordered",color:"default",class:qr.default},{variant:"bordered",color:"primary",class:qr.primary},{variant:"bordered",color:"secondary",class:qr.secondary},{variant:"bordered",color:"success",class:qr.success},{variant:"bordered",color:"warning",class:qr.warning},{variant:"bordered",color:"danger",class:qr.danger},{variant:"flat",color:"default",class:Yr.default},{variant:"flat",color:"primary",class:Yr.primary},{variant:"flat",color:"secondary",class:Yr.secondary},{variant:"flat",color:"success",class:Yr.success},{variant:"flat",color:"warning",class:Yr.warning},{variant:"flat",color:"danger",class:Yr.danger},{variant:"faded",color:"default",class:Xr.default},{variant:"faded",color:"primary",class:Xr.primary},{variant:"faded",color:"secondary",class:Xr.secondary},{variant:"faded",color:"success",class:Xr.success},{variant:"faded",color:"warning",class:Xr.warning},{variant:"faded",color:"danger",class:Xr.danger},{variant:"light",color:"default",class:[Zr.default,"data-[hover=true]:bg-default/40"]},{variant:"light",color:"primary",class:[Zr.primary,"data-[hover=true]:bg-primary/20"]},{variant:"light",color:"secondary",class:[Zr.secondary,"data-[hover=true]:bg-secondary/20"]},{variant:"light",color:"success",class:[Zr.success,"data-[hover=true]:bg-success/20"]},{variant:"light",color:"warning",class:[Zr.warning,"data-[hover=true]:bg-warning/20"]},{variant:"light",color:"danger",class:[Zr.danger,"data-[hover=true]:bg-danger/20"]},{variant:"ghost",color:"default",class:Jr.default},{variant:"ghost",color:"primary",class:Jr.primary},{variant:"ghost",color:"secondary",class:Jr.secondary},{variant:"ghost",color:"success",class:Jr.success},{variant:"ghost",color:"warning",class:Jr.warning},{variant:"ghost",color:"danger",class:Jr.danger},{isInGroup:!0,class:"rounded-none first:rounded-s-medium last:rounded-e-medium"},{isInGroup:!0,size:"sm",class:"rounded-none first:rounded-s-small last:rounded-e-small"},{isInGroup:!0,size:"md",class:"rounded-none first:rounded-s-medium last:rounded-e-medium"},{isInGroup:!0,size:"lg",class:"rounded-none first:rounded-s-large last:rounded-e-large"},{isInGroup:!0,isRounded:!0,class:"rounded-none first:rounded-s-full last:rounded-e-full"},{isInGroup:!0,radius:"none",class:"rounded-none first:rounded-s-none last:rounded-e-none"},{isInGroup:!0,radius:"sm",class:"rounded-none first:rounded-s-small last:rounded-e-small"},{isInGroup:!0,radius:"md",class:"rounded-none first:rounded-s-medium last:rounded-e-medium"},{isInGroup:!0,radius:"lg",class:"rounded-none first:rounded-s-large last:rounded-e-large"},{isInGroup:!0,radius:"full",class:"rounded-none first:rounded-s-full last:rounded-e-full"},{isInGroup:!0,variant:["ghost","bordered"],color:"default",className:$r.default},{isInGroup:!0,variant:["ghost","bordered"],color:"primary",className:$r.primary},{isInGroup:!0,variant:["ghost","bordered"],color:"secondary",className:$r.secondary},{isInGroup:!0,variant:["ghost","bordered"],color:"success",className:$r.success},{isInGroup:!0,variant:["ghost","bordered"],color:"warning",className:$r.warning},{isInGroup:!0,variant:["ghost","bordered"],color:"danger",className:$r.danger},{isIconOnly:!0,size:"sm",class:"min-w-unit-8 w-unit-8 h-unit-8"},{isIconOnly:!0,size:"md",class:"min-w-unit-10 w-unit-10 h-unit-10"},{isIconOnly:!0,size:"lg",class:"min-w-unit-12 w-unit-12 h-unit-12"},{variant:["solid","faded","flat","bordered","shadow"],class:"data-[hover=true]:opacity-hover"}]});Wr({base:"inline-flex items-center justify-center h-auto",variants:{fullWidth:{true:"w-full"}},defaultVariants:{fullWidth:!1}});var un=e=>(null==e?void 0:e.length)<=4?e:null==e?void 0:e.slice(0,3),cn=(...e)=>{let t=" ";for(const r of e)if("string"==typeof r&&r.length>0){t=r;break}return t};function dn(e){var t,r,n="";if("string"==typeof e||"number"==typeof e)n+=e;else if("object"==typeof e)if(Array.isArray(e))for(t=0;t<e.length;t++)e[t]&&(r=dn(e[t]))&&(n&&(n+=" "),n+=r);else for(t in e)e[t]&&(n&&(n+=" "),n+=t);return n}function pn(...e){for(var t,r,n=0,s="";n<e.length;)(t=e[n++])&&(r=dn(t))&&(s&&(s+=" "),s+=r);return s}var hn={};function fn(e,t,...r){var n;const s=`[Next UI]${t?` [${t}]`:" "}: ${e}`;if("undefined"!=typeof console&&!hn[s])return hn[s]=!0,"production"!==(null==(n=null==process?void 0:process.env)?void 0:n.NODE_ENV)?console.warn(s,r):void 0}var mn="production"!==process.env.NODE_ENV;process.env.NODE_ENV;var gn=e=>e?"true":void 0;function vn(e={}){const{strict:t=!0,errorMessage:r="useContext: `context` is undefined. Seems you forgot to wrap component within the Provider",name:n}=e,o=s.createContext(void 0);return o.displayName=n,[o.Provider,function e(){var n;const a=s.useContext(o);if(!a&&t){const t=new Error(r);throw t.name="ContextError",null==(n=Error.captureStackTrace)||n.call(Error,t,e),t}return a},o]}function yn(e){const r=t.useRef(null);return t.useImperativeHandle(e,(()=>r.current)),r}var bn=new Set(["id","type","style","title","role","tabIndex","htmlFor","width","height","abbr","accept","acceptCharset","accessKey","action","allowFullScreen","allowTransparency","alt","async","autoComplete","autoFocus","autoPlay","cellPadding","cellSpacing","challenge","charset","checked","cite","class","className","cols","colSpan","command","content","contentEditable","contextMenu","controls","coords","crossOrigin","data","dateTime","default","defer","dir","disabled","download","draggable","dropzone","encType","for","form","formAction","formEncType","formMethod","formNoValidate","formTarget","frameBorder","headers","hidden","high","href","hrefLang","httpEquiv","icon","inputMode","isMap","itemId","itemProp","itemRef","itemScope","itemType","kind","label","lang","list","loop","manifest","max","maxLength","media","mediaGroup","method","min","minLength","multiple","muted","name","noValidate","open","optimum","pattern","ping","placeholder","poster","preload","radioGroup","referrerPolicy","readOnly","rel","required","rows","rowSpan","sandbox","scope","scoped","scrolling","seamless","selected","shape","size","sizes","slot","sortable","span","spellCheck","src","srcDoc","srcSet","start","step","target","translate","typeMustMatch","useMap","value","wmode","wrap"]),xn=new Set(["onCopy","onCut","onPaste","onLoad","onError","onWheel","onScroll","onCompositionEnd","onCompositionStart","onCompositionUpdate","onKeyDown","onKeyPress","onKeyUp","onFocus","onBlur","onChange","onInput","onSubmit","onClick","onContextMenu","onDoubleClick","onDrag","onDragEnd","onDragEnter","onDragExit","onDragLeave","onDragOver","onDragStart","onDrop","onMouseDown","onMouseEnter","onMouseLeave","onMouseMove","onMouseOut","onMouseOver","onMouseUp","onPointerDown","onPointerEnter","onPointerLeave","onPointerUp","onSelect","onTouchCancel","onTouchEnd","onTouchMove","onTouchStart","onAnimationStart","onAnimationEnd","onAnimationIteration","onTransitionEnd"]),wn=/^(data-.*)$/,Pn=/^(aria-.*)$/,Tn=/^(on[A-Z].*)$/;function Cn(e,t={}){let{labelable:r=!0,enabled:n=!0,propNames:s,omitPropNames:o,omitEventNames:a}=t,i={};if(!n)return e;for(const t in e)(null==o?void 0:o.has(t))||(null==a?void 0:a.has(t))&&Tn.test(t)||Tn.test(t)&&!xn.has(t)||(Object.prototype.hasOwnProperty.call(e,t)&&(bn.has(t)||r&&Pn.test(t)||(null==s?void 0:s.has(t))||wn.test(t))||Tn.test(t))&&(i[t]=e[t]);return i}function En(e){return O()||W()?e.altKey:e.ctrlKey}function Sn(e){return O()?e.metaKey:e.ctrlKey}const kn=1e3;function Mn(e){let{selectionManager:n,keyboardDelegate:s,ref:o,autoFocus:a=!1,shouldFocusWrap:i=!1,disallowEmptySelection:l=!1,disallowSelectAll:u=!1,selectOnFocus:c="replace"===n.selectionBehavior,disallowTypeAhead:d=!1,shouldUseVirtualFocus:p,allowsTabNavigation:h=!1,isVirtualized:f,scrollRef:m=o,linkBehavior:g="action"}=e,{direction:v}=ye(),y=$(),b=t.useRef({top:0,left:0});!function(e,r,n,s){let o=x(n),a=null==n;t.useEffect((()=>{if(a)return;let t=e.current;return t.addEventListener(r,o,s),()=>{t.removeEventListener(r,o,s);}}),[e,r,s,a,o]);}(m,"scroll",f?null:()=>{b.current={top:m.current.scrollTop,left:m.current.scrollLeft};});const w=t.useRef(a);t.useEffect((()=>{if(w.current){let e=null;"first"===a&&(e=s.getFirstKey()),"last"===a&&(e=s.getLastKey());let t=n.selectedKeys;t.size&&(e=t.values().next().value),n.setFocused(!0),n.setFocusedKey(e),null!=e||p||vt(o.current);}w.current=!1;}),[]);let P=t.useRef(n.focusedKey);t.useEffect((()=>{let e=st();if(n.isFocused&&null!=n.focusedKey&&(null==m?void 0:m.current)){let t=m.current.querySelector(`[data-key="${n.focusedKey}"]`);t&&"keyboard"===e&&(f||se(m.current,t),ae(t,{containingElement:o.current}));}n.isFocused&&null==n.focusedKey&&null!=P.current&&vt(o.current),P.current=n.focusedKey;}),[f,m,n.focusedKey,n.isFocused,o]);let T,C={onKeyDown:e=>{if(e.altKey&&"Tab"===e.key&&e.preventDefault(),!o.current.contains(e.target))return;const t=(t,s)=>{if(null!=t){if(n.isLink(t)&&"selection"===g&&c&&!En(e)){r.flushSync((()=>{n.setFocusedKey(t,s);}));let o=m.current.querySelector(`[data-key="${t}"]`);return void y.open(o,e)}if(n.setFocusedKey(t,s),n.isLink(t)&&"override"===g)return;e.shiftKey&&"multiple"===n.selectionMode?n.extendSelection(t):c&&!En(e)&&n.replaceSelection(t);}};switch(e.key){case"ArrowDown":if(s.getKeyBelow){var a,d;e.preventDefault();let r=null!=n.focusedKey?s.getKeyBelow(n.focusedKey):null===(a=s.getFirstKey)||void 0===a?void 0:a.call(s);null==r&&i&&(r=null===(d=s.getFirstKey)||void 0===d?void 0:d.call(s,n.focusedKey)),t(r);}break;case"ArrowUp":if(s.getKeyAbove){var p,f;e.preventDefault();let r=null!=n.focusedKey?s.getKeyAbove(n.focusedKey):null===(p=s.getLastKey)||void 0===p?void 0:p.call(s);null==r&&i&&(r=null===(f=s.getLastKey)||void 0===f?void 0:f.call(s,n.focusedKey)),t(r);}break;case"ArrowLeft":if(s.getKeyLeftOf){var b,x;e.preventDefault();let r=s.getKeyLeftOf(n.focusedKey);null==r&&i&&(r="rtl"===v?null===(b=s.getFirstKey)||void 0===b?void 0:b.call(s,n.focusedKey):null===(x=s.getLastKey)||void 0===x?void 0:x.call(s,n.focusedKey)),t(r,"rtl"===v?"first":"last");}break;case"ArrowRight":if(s.getKeyRightOf){var w,P;e.preventDefault();let r=s.getKeyRightOf(n.focusedKey);null==r&&i&&(r="rtl"===v?null===(w=s.getLastKey)||void 0===w?void 0:w.call(s,n.focusedKey):null===(P=s.getFirstKey)||void 0===P?void 0:P.call(s,n.focusedKey)),t(r,"rtl"===v?"last":"first");}break;case"Home":if(s.getFirstKey){e.preventDefault();let t=s.getFirstKey(n.focusedKey,Sn(e));n.setFocusedKey(t),Sn(e)&&e.shiftKey&&"multiple"===n.selectionMode?n.extendSelection(t):c&&n.replaceSelection(t);}break;case"End":if(s.getLastKey){e.preventDefault();let t=s.getLastKey(n.focusedKey,Sn(e));n.setFocusedKey(t),Sn(e)&&e.shiftKey&&"multiple"===n.selectionMode?n.extendSelection(t):c&&n.replaceSelection(t);}break;case"PageDown":if(s.getKeyPageBelow){e.preventDefault(),t(s.getKeyPageBelow(n.focusedKey));}break;case"PageUp":if(s.getKeyPageAbove){e.preventDefault(),t(s.getKeyPageAbove(n.focusedKey));}break;case"a":Sn(e)&&"multiple"===n.selectionMode&&!0!==u&&(e.preventDefault(),n.selectAll());break;case"Escape":e.preventDefault(),l||n.clearSelection();break;case"Tab":if(!h){if(e.shiftKey)o.current.focus();else {let e,t,r=Tt(o.current,{tabbable:!0});do{t=r.lastChild(),t&&(e=t);}while(t);e&&!e.contains(document.activeElement)&&R(e);}break}}},onFocus:e=>{if(n.isFocused)e.currentTarget.contains(e.target)||n.setFocused(!1);else if(e.currentTarget.contains(e.target)){if(n.setFocused(!0),null==n.focusedKey){let o=e=>{null!=e&&(n.setFocusedKey(e),c&&n.replaceSelection(e));},a=e.relatedTarget;var t,r;a&&e.currentTarget.compareDocumentPosition(a)&Node.DOCUMENT_POSITION_FOLLOWING?o(null!==(t=n.lastSelectedKey)&&void 0!==t?t:s.getLastKey()):o(null!==(r=n.firstSelectedKey)&&void 0!==r?r:s.getFirstKey());}else f||(m.current.scrollTop=b.current.top,m.current.scrollLeft=b.current.left);if(!f&&null!=n.focusedKey){let e=m.current.querySelector(`[data-key="${n.focusedKey}"]`);if(e){e.contains(document.activeElement)||R(e),"keyboard"===st()&&ae(e,{containingElement:o.current});}}}},onBlur:e=>{e.currentTarget.contains(e.relatedTarget)||n.setFocused(!1);},onMouseDown(e){m.current===e.target&&e.preventDefault();}},{typeSelectProps:E}=function(e){let{keyboardDelegate:r,selectionManager:n,onTypeSelect:s}=e,o=t.useRef({search:"",timeout:null}).current;return {typeSelectProps:{onKeyDownCapture:r.getKeyForSearch?e=>{let t=function(e){return 1!==e.length&&/^[A-Z]/i.test(e)?"":e}(e.key);if(!t||e.ctrlKey||e.metaKey||!e.currentTarget.contains(e.target))return;" "===t&&o.search.trim().length>0&&(e.preventDefault(),"continuePropagation"in e||e.stopPropagation()),o.search+=t;let a=r.getKeyForSearch(o.search,n.focusedKey);null==a&&(a=r.getKeyForSearch(o.search)),null!=a&&(n.setFocusedKey(a),s&&s(a)),clearTimeout(o.timeout),o.timeout=setTimeout((()=>{o.search="";}),kn);}:null}}}({keyboardDelegate:s,selectionManager:n});return d||(C=A(E,C)),p||(T=null==n.focusedKey?0:-1),{collectionProps:{...C,tabIndex:T}}}function An(){let e=window.event;return "Enter"===(null==e?void 0:e.key)}function Dn(){let e=window.event;return " "===(null==e?void 0:e.key)||"Space"===(null==e?void 0:e.code)}var In=t.createContext(null);In.displayName="PressResponderContext";var Vn,Ln=Object.defineProperty,Kn=(e,t,r)=>(((e,t,r)=>{t in e?Ln(e,t,{enumerable:!0,configurable:!0,writable:!0,value:r}):e[t]=r;})(e,"symbol"!=typeof t?t+"":t,r),r),Rn=(e,t,r)=>{if(!t.has(e))throw TypeError("Cannot "+r)},Nn=class{constructor(e,t,r){Kn(this,"type"),Kn(this,"pointerType"),Kn(this,"target"),Kn(this,"shiftKey"),Kn(this,"ctrlKey"),Kn(this,"metaKey"),Kn(this,"altKey"),((e,t,r)=>{if(t.has(e))throw TypeError("Cannot add the same private member more than once");t instanceof WeakSet?t.add(e):t.set(e,r);})(this,Vn,!0),this.type=e,this.pointerType=t,this.target=r.currentTarget,this.shiftKey=r.shiftKey,this.metaKey=r.metaKey,this.ctrlKey=r.ctrlKey,this.altKey=r.altKey;}continuePropagation(){var e,t,r;r=!1,Rn(e=this,t=Vn,"write to private field"),t.set(e,r);}get shouldStopPropagation(){return Rn(e=this,t=Vn,"read from private field"),r?r.call(e):t.get(e);var e,t,r;}};Vn=new WeakMap;var jn=e=>{var t;return null!=(t=null==e?void 0:e.ownerDocument)?t:document},Fn=e=>{var t,r;return null!=(r=null==(t=null==e?void 0:e.ownerDocument)?void 0:t.defaultView)?r:window},On="default",Bn="",Wn=new WeakMap;function zn(e){if(W()){if("default"===On){const t=jn(e);Bn=t.documentElement.style.webkitUserSelect,t.documentElement.style.webkitUserSelect="none";}On="disabled";}else (e instanceof HTMLElement||e instanceof SVGElement)&&(Wn.set(e,e.style.userSelect),e.style.userSelect="none");}function Un(e){if(W()){if("disabled"!==On)return;On="restoring",setTimeout((()=>{X((()=>{if("restoring"===On){const t=jn(e);"none"===t.documentElement.style.webkitUserSelect&&(t.documentElement.style.webkitUserSelect=Bn||""),Bn="",On="default";}}));}),300);}else if((e instanceof HTMLElement||e instanceof SVGElement)&&e&&Wn.has(e)){let t=Wn.get(e);"none"===e.style.userSelect&&t&&(e.style.userSelect=t),""===e.getAttribute("style")&&e.removeAttribute("style"),Wn.delete(e);}}var Hn=Symbol("linkClicked");function $n(e){let{onPress:r,onPressChange:n,onPressStart:s,onPressEnd:o,onPressUp:a,isDisabled:i,isPressed:l,preventFocusOnPress:u,shouldCancelOnPointerExit:c,allowTextSelectionOnPress:d,ref:p,...h}=function(e){let r=t.useContext(In);if(r){let{register:t,...n}=r;e=A(n,e),t();}return Q(r,e.ref),e}(e),[f,m]=t.useState(!1),g=t.useRef({isPressed:!1,ignoreEmulatedMouseEvents:!1,ignoreClickAfterPress:!1,didFirePressStart:!1,isTriggeringEvent:!1,activePointerId:null,target:null,isOverTarget:!1,pointerType:null}),{addGlobalListener:v,removeAllGlobalListeners:y}=Z(),b=x(((e,t)=>{let r=g.current;if(i||r.didFirePressStart)return;let o=!0;if(r.isTriggeringEvent=!0,s){let r=new Nn("pressstart",t,e);s(r),o=r.shouldStopPropagation;}return n&&n(!0),r.isTriggeringEvent=!1,r.didFirePressStart=!0,m(!0),o})),w=x(((e,t,s=!0)=>{let a=g.current;if(!a.didFirePressStart)return;a.ignoreClickAfterPress=!0,a.didFirePressStart=!1,a.isTriggeringEvent=!0;let l=!0;if(o){let r=new Nn("pressend",t,e);o(r),l=r.shouldStopPropagation;}if(n&&n(!1),m(!1),r&&s&&!i){let n=new Nn("press",t,e);r(n),l&&(l=n.shouldStopPropagation);}return a.isTriggeringEvent=!1,l})),P=x(((e,t)=>{let r=g.current;if(!i){if(a){r.isTriggeringEvent=!0;let n=new Nn("pressup",t,e);return a(n),r.isTriggeringEvent=!1,n.shouldStopPropagation}return !0}})),T=x((e=>{let t=g.current;t.isPressed&&(t.isOverTarget&&t.target&&w(Yn(t.target,e),t.pointerType,!1),t.isPressed=!1,t.isOverTarget=!1,t.activePointerId=null,t.pointerType=null,y(),!d&&t.target&&Un(t.target));})),C=x((e=>{c&&T(e);})),E=t.useMemo((()=>{let e=g.current,t={onKeyDown(t){var n;if(Gn(t.nativeEvent,t.currentTarget)&&t.currentTarget.contains(t.target)){Jn(t.target,t.key)&&t.preventDefault();let s=!0;e.isPressed||t.repeat||(e.target=t.currentTarget,e.isPressed=!0,s=b(t,"keyboard"),v(jn(t.currentTarget),"keyup",r,!1)),s&&t.stopPropagation(),t.metaKey&&O()&&(null==(n=e.metaKeyEvents)||n.set(t.key,t.nativeEvent));}else "Meta"===t.key&&(e.metaKeyEvents=new Map);},onKeyUp(t){e.target&&Gn(t.nativeEvent,t.currentTarget)&&!t.repeat&&t.currentTarget.contains(t.target)&&P(Yn(e.target,t),"keyboard");},onClick(t){if((!t||t.currentTarget.contains(t.target))&&t&&0===t.button&&!e.isTriggeringEvent&&!_.isOpening){let r=!0;if(i&&t.preventDefault(),!e.ignoreClickAfterPress&&!e.ignoreEmulatedMouseEvents&&!e.isPressed&&("virtual"===e.pointerType||ie(t.nativeEvent))){i||u||R(t.currentTarget);let e=b(t,"virtual"),n=P(t,"virtual"),s=w(t,"virtual");r=e&&n&&s;}e.ignoreEmulatedMouseEvents=!1,e.ignoreClickAfterPress=!1,r&&t.stopPropagation();}}},r=t=>{var r,n;if(e.isPressed&&e.target&&Gn(t,e.target)){Jn(t.target,t.key)&&t.preventDefault();let n=t.target,s=w(Yn(e.target,t),"keyboard",e.target.contains(n));y(),s&&t.stopPropagation(),"Enter"!==t.key&&_n(e.target)&&e.target.contains(n)&&!t[Hn]&&(t[Hn]=!0,_(e.target,t,!1)),e.isPressed=!1,null==(r=e.metaKeyEvents)||r.delete(t.key);}else if("Meta"===t.key&&(null==(n=e.metaKeyEvents)?void 0:n.size)){let t=e.metaKeyEvents;e.metaKeyEvents=null;for(let r of t.values())e.target&&e.target.dispatchEvent(new KeyboardEvent("keyup",r));}};if("undefined"!=typeof PointerEvent){t.onPointerDown=t=>{if(0!==t.button||!t.currentTarget.contains(t.target))return;if(le(t.nativeEvent))return void(e.pointerType="virtual");Zn(t.currentTarget)&&t.preventDefault(),e.pointerType=t.pointerType;let o=!0;e.isPressed||(e.isPressed=!0,e.isOverTarget=!0,e.activePointerId=t.pointerId,e.target=t.currentTarget,i||u||R(t.currentTarget),d||zn(e.target),o=b(t,e.pointerType),v(jn(t.currentTarget),"pointermove",r,!1),v(jn(t.currentTarget),"pointerup",n,!1),v(jn(t.currentTarget),"pointercancel",s,!1)),o&&t.stopPropagation();},t.onMouseDown=e=>{e.currentTarget.contains(e.target)&&0===e.button&&(Zn(e.currentTarget)&&e.preventDefault(),e.stopPropagation());},t.onPointerUp=t=>{t.currentTarget.contains(t.target)&&"virtual"!==e.pointerType&&0===t.button&&Xn(t,t.currentTarget)&&P(t,e.pointerType||t.pointerType);};let r=t=>{t.pointerId===e.activePointerId&&e.target&&(Xn(t,e.target)?e.isOverTarget||(e.isOverTarget=!0,b(Yn(e.target,t),e.pointerType)):e.isOverTarget&&(e.isOverTarget=!1,w(Yn(e.target,t),e.pointerType,!1),C(t)));},n=t=>{t.pointerId===e.activePointerId&&e.isPressed&&0===t.button&&e.target&&((Xn(t,e.target)||e.isOverTarget)&&w(Yn(e.target,t),e.pointerType),e.isPressed=!1,e.isOverTarget=!1,e.activePointerId=null,e.pointerType=null,y(),d||Un(e.target));},s=e=>{T(e);};t.onDragStart=e=>{e.currentTarget.contains(e.target)&&T(e);};}else {t.onMouseDown=t=>{if(0!==t.button||!t.currentTarget.contains(t.target))return;if(Zn(t.currentTarget)&&t.preventDefault(),e.ignoreEmulatedMouseEvents)return void t.stopPropagation();e.isPressed=!0,e.isOverTarget=!0,e.target=t.currentTarget,e.pointerType=ie(t.nativeEvent)?"virtual":"mouse",i||u||R(t.currentTarget),b(t,e.pointerType)&&t.stopPropagation(),v(jn(t.currentTarget),"mouseup",r,!1);},t.onMouseEnter=t=>{if(!t.currentTarget.contains(t.target))return;let r=!0;e.isPressed&&!e.ignoreEmulatedMouseEvents&&(e.isOverTarget=!0,r=b(t,e.pointerType)),r&&t.stopPropagation();},t.onMouseLeave=t=>{if(!t.currentTarget.contains(t.target))return;let r=!0;e.isPressed&&!e.ignoreEmulatedMouseEvents&&(e.isOverTarget=!1,r=w(t,e.pointerType,!1),C(t)),r&&t.stopPropagation();},t.onMouseUp=t=>{t.currentTarget.contains(t.target)&&(e.ignoreEmulatedMouseEvents||0!==t.button||P(t,e.pointerType||"mouse"));};let r=t=>{0===t.button&&(e.isPressed=!1,y(),e.ignoreEmulatedMouseEvents?e.ignoreEmulatedMouseEvents=!1:e.target&&(Xn(t,e.target)?w(Yn(e.target,t),e.pointerType):e.isOverTarget&&w(Yn(e.target,t),e.pointerType,!1),e.isOverTarget=!1));};t.onTouchStart=t=>{if(!t.currentTarget.contains(t.target))return;let r=function(e){const{targetTouches:t}=e;if(t.length>0)return t[0];return null}(t.nativeEvent);r&&(e.activePointerId=r.identifier,e.ignoreEmulatedMouseEvents=!0,e.isOverTarget=!0,e.isPressed=!0,e.target=t.currentTarget,e.pointerType="touch",i||u||R(t.currentTarget),d||zn(e.target),b(t,e.pointerType)&&t.stopPropagation(),v(Fn(t.currentTarget),"scroll",n,!0));},t.onTouchMove=t=>{if(!t.currentTarget.contains(t.target))return;if(!e.isPressed)return void t.stopPropagation();let r=qn(t.nativeEvent,e.activePointerId),n=!0;r&&Xn(r,t.currentTarget)?e.isOverTarget||(e.isOverTarget=!0,n=b(t,e.pointerType)):e.isOverTarget&&(e.isOverTarget=!1,n=w(t,e.pointerType,!1),C(t)),n&&t.stopPropagation();},t.onTouchEnd=t=>{if(!t.currentTarget.contains(t.target))return;if(!e.isPressed)return void t.stopPropagation();let r=qn(t.nativeEvent,e.activePointerId),n=!0;r&&Xn(r,t.currentTarget)?(P(t,e.pointerType),n=w(t,e.pointerType)):e.isOverTarget&&(n=w(t,e.pointerType,!1)),n&&t.stopPropagation(),e.isPressed=!1,e.activePointerId=null,e.isOverTarget=!1,e.ignoreEmulatedMouseEvents=!0,!d&&e.target&&Un(e.target),y();},t.onTouchCancel=t=>{t.currentTarget.contains(t.target)&&(t.stopPropagation(),e.isPressed&&T(t));};let n=t=>{e.isPressed&&t.target.contains(e.target)&&T({currentTarget:e.target,shiftKey:!1,ctrlKey:!1,metaKey:!1,altKey:!1});};t.onDragStart=e=>{e.currentTarget.contains(e.target)&&T(e);};}return t}),[v,i,u,y,d,T,C,w,b,P]);return t.useEffect((()=>()=>{!d&&g.current.target&&Un(g.current.target);}),[d]),{isPressed:l||f,pressProps:A(h,E)}}function _n(e){return "A"===e.tagName&&e.hasAttribute("href")}function Gn(e,t){const{key:r,code:n}=e,s=t,o=s.getAttribute("role");return !("Enter"!==r&&" "!==r&&"Spacebar"!==r&&"Space"!==n||s instanceof Fn(s).HTMLInputElement&&!es(s,r)||s instanceof Fn(s).HTMLTextAreaElement||s.isContentEditable||("link"===o||!o&&_n(s))&&"Enter"!==r)}function qn(e,t){const r=e.changedTouches;for(let e=0;e<r.length;e++){const n=r[e];if(n.identifier===t)return n}return null}function Yn(e,t){return {currentTarget:e,shiftKey:t.shiftKey,ctrlKey:t.ctrlKey,metaKey:t.metaKey,altKey:t.altKey}}function Xn(e,t){let r=t.getBoundingClientRect(),n=function(e){let t=e.width?e.width/2:e.radiusX||0,r=e.height?e.height/2:e.radiusY||0;return {top:e.clientY-r,right:e.clientX+t,bottom:e.clientY+r,left:e.clientX-t}}(e);return function(e,t){return !(e.left>t.right||t.left>e.right||e.top>t.bottom||t.top>e.bottom)}(r,n)}function Zn(e){return !(e instanceof HTMLElement&&e.hasAttribute("draggable"))}function Jn(e,t){return e instanceof HTMLInputElement?!es(e,t):e instanceof HTMLButtonElement?"submit"!==e.type&&"reset"!==e.type:!_n(e)}var Qn=new Set(["checkbox","radio","range","color","file","image","button","submit","reset"]);function es(e,t){return "checkbox"===e.type||"radio"===e.type?" "===t:Qn.has(e.type)}var ts=t=>e.jsx("svg",{"aria-hidden":"true",focusable:"false",height:"1em",role:"presentation",viewBox:"0 0 24 24",width:"1em",...t,children:e.jsx("path",{d:"M12 2a10 10 0 1010 10A10.016 10.016 0 0012 2zm3.36 12.3a.754.754 0 010 1.06.748.748 0 01-1.06 0l-2.3-2.3-2.3 2.3a.748.748 0 01-1.06 0 .754.754 0 010-1.06l2.3-2.3-2.3-2.3A.75.75 0 019.7 8.64l2.3 2.3 2.3-2.3a.75.75 0 011.06 1.06l-2.3 2.3z",fill:"currentColor"})});const rs=t.createContext({transformPagePoint:e=>e,isStatic:!1,reducedMotion:"never"}),ns=t.createContext({}),ss=t.createContext(null),os="undefined"!=typeof document,as=os?t.useLayoutEffect:t.useEffect,is=t.createContext({strict:!1});function ls(e){return "object"==typeof e&&Object.prototype.hasOwnProperty.call(e,"current")}function us(e){return "string"==typeof e||Array.isArray(e)}function cs(e){return "object"==typeof e&&"function"==typeof e.start}const ds=["animate","whileInView","whileFocus","whileHover","whileTap","whileDrag","exit"],ps=["initial",...ds];function hs(e){return cs(e.animate)||ps.some((t=>us(e[t])))}function fs(e){return Boolean(hs(e)||e.variants)}function ms$1(e){const{initial:r,animate:n}=function(e,t){if(hs(e)){const{initial:t,animate:r}=e;return {initial:!1===t||us(t)?t:void 0,animate:us(r)?r:void 0}}return !1!==e.inherit?t:{}}(e,t.useContext(ns));return t.useMemo((()=>({initial:r,animate:n})),[gs(r),gs(n)])}function gs(e){return Array.isArray(e)?e.join(" "):e}const vs={animation:["animate","variants","whileHover","whileTap","exit","whileInView","whileFocus","whileDrag"],exit:["exit"],drag:["drag","dragControls"],focus:["whileFocus"],hover:["whileHover","onHoverStart","onHoverEnd"],tap:["whileTap","onTap","onTapStart","onTapCancel"],pan:["onPan","onPanStart","onPanSessionStart","onPanEnd"],inView:["whileInView","onViewportEnter","onViewportLeave"],layout:["layout","layoutId"]},ys={};for(const e in vs)ys[e]={isEnabled:t=>vs[e].some((e=>!!t[e]))};const bs=t.createContext({}),xs=t.createContext({}),ws=Symbol.for("motionComponentSymbol");function Ps({preloadedFeatures:e,createVisualElement:r,useRender:n,useVisualState:o,Component:a}){e&&function(e){for(const t in e)ys[t]={...ys[t],...e[t]};}(e);const i=t.forwardRef((function(i,l){let u;const c={...t.useContext(rs),...i,layoutId:Ts(i)},{isStatic:d}=c,p=ms$1(i),h=o(i,d);if(!d&&os){p.visualElement=function(e,r,n,s){const{visualElement:o}=t.useContext(ns),a=t.useContext(is),i=t.useContext(ss),l=t.useContext(rs).reducedMotion,u=t.useRef();s=s||a.renderer,!u.current&&s&&(u.current=s(e,{visualState:r,parent:o,props:n,presenceContext:i,blockInitialAnimation:!!i&&!1===i.initial,reducedMotionConfig:l}));const c=u.current;t.useInsertionEffect((()=>{c&&c.update(n,i);}));const d=t.useRef(Boolean(window.HandoffAppearAnimations));return as((()=>{c&&(c.render(),d.current&&c.animationState&&c.animationState.animateChanges());})),t.useEffect((()=>{c&&(c.updateFeatures(),!d.current&&c.animationState&&c.animationState.animateChanges(),window.HandoffAppearAnimations=void 0,d.current=!1);})),c}(a,h,c,r);const n=t.useContext(xs),s=t.useContext(is).strict;p.visualElement&&(u=p.visualElement.loadFeatures(c,s,e,n));}return s.createElement(ns.Provider,{value:p},u&&p.visualElement?s.createElement(u,{visualElement:p.visualElement,...c}):null,n(a,i,function(e,r,n){return t.useCallback((t=>{t&&e.mount&&e.mount(t),r&&(t?r.mount(t):r.unmount()),n&&("function"==typeof n?n(t):ls(n)&&(n.current=t));}),[r])}(h,p.visualElement,l),h,d,p.visualElement))}));return i[ws]=a,i}function Ts({layoutId:e}){const r=t.useContext(bs).id;return r&&void 0!==e?r+"-"+e:e}function Cs(e){function t(t,r={}){return Ps(e(t,r))}if("undefined"==typeof Proxy)return t;const r=new Map;return new Proxy(t,{get:(e,n)=>(r.has(n)||r.set(n,t(n)),r.get(n))})}const Es=["animate","circle","defs","desc","ellipse","g","image","line","filter","marker","mask","metadata","path","pattern","polygon","polyline","rect","stop","switch","symbol","svg","text","tspan","use","view"];function Ss(e){return "string"==typeof e&&!e.includes("-")&&!!(Es.indexOf(e)>-1||/[A-Z]/.test(e))}const ks={};const Ms=["transformPerspective","x","y","z","translateX","translateY","translateZ","scale","scaleX","scaleY","rotate","rotateX","rotateY","rotateZ","skew","skewX","skewY"],As=new Set(Ms);function Ds(e,{layout:t,layoutId:r}){return As.has(e)||e.startsWith("origin")||(t||void 0!==r)&&(!!ks[e]||"opacity"===e)}const Is=e=>Boolean(e&&e.getVelocity),Vs={x:"translateX",y:"translateY",z:"translateZ",transformPerspective:"perspective"},Ls=Ms.length;const Ks=e=>t=>"string"==typeof t&&t.startsWith(e),Rs=Ks("--"),Ns=Ks("var(--"),js=(e,t)=>t&&"number"==typeof e?t.transform(e):e,Fs=(e,t,r)=>Math.min(Math.max(r,e),t),Os={test:e=>"number"==typeof e,parse:parseFloat,transform:e=>e},Bs={...Os,transform:e=>Fs(0,1,e)},Ws={...Os,default:1},zs=e=>Math.round(1e5*e)/1e5,Us=/(-)?([\d]*\.?[\d])+/g,Hs=/(#[0-9a-f]{3,8}|(rgb|hsl)a?\((-?[\d\.]+%?[,\s]+){2}(-?[\d\.]+%?)\s*[\,\/]?\s*[\d\.]*%?\))/gi,$s=/^(#[0-9a-f]{3,8}|(rgb|hsl)a?\((-?[\d\.]+%?[,\s]+){2}(-?[\d\.]+%?)\s*[\,\/]?\s*[\d\.]*%?\))$/i;function _s(e){return "string"==typeof e}const Gs=e=>({test:t=>_s(t)&&t.endsWith(e)&&1===t.split(" ").length,parse:parseFloat,transform:t=>`${t}${e}`}),qs=Gs("deg"),Ys=Gs("%"),Xs=Gs("px"),Zs=Gs("vh"),Js=Gs("vw"),Qs={...Ys,parse:e=>Ys.parse(e)/100,transform:e=>Ys.transform(100*e)},eo={...Os,transform:Math.round},to={borderWidth:Xs,borderTopWidth:Xs,borderRightWidth:Xs,borderBottomWidth:Xs,borderLeftWidth:Xs,borderRadius:Xs,radius:Xs,borderTopLeftRadius:Xs,borderTopRightRadius:Xs,borderBottomRightRadius:Xs,borderBottomLeftRadius:Xs,width:Xs,maxWidth:Xs,height:Xs,maxHeight:Xs,size:Xs,top:Xs,right:Xs,bottom:Xs,left:Xs,padding:Xs,paddingTop:Xs,paddingRight:Xs,paddingBottom:Xs,paddingLeft:Xs,margin:Xs,marginTop:Xs,marginRight:Xs,marginBottom:Xs,marginLeft:Xs,rotate:qs,rotateX:qs,rotateY:qs,rotateZ:qs,scale:Ws,scaleX:Ws,scaleY:Ws,scaleZ:Ws,skew:qs,skewX:qs,skewY:qs,distance:Xs,translateX:Xs,translateY:Xs,translateZ:Xs,x:Xs,y:Xs,z:Xs,perspective:Xs,transformPerspective:Xs,opacity:Bs,originX:Qs,originY:Qs,originZ:Xs,zIndex:eo,fillOpacity:Bs,strokeOpacity:Bs,numOctaves:eo};function ro(e,t,r,n){const{style:s,vars:o,transform:a,transformOrigin:i}=e;let l=!1,u=!1,c=!0;for(const e in t){const r=t[e];if(Rs(e)){o[e]=r;continue}const n=to[e],d=js(r,n);if(As.has(e)){if(l=!0,a[e]=d,!c)continue;r!==(n.default||0)&&(c=!1);}else e.startsWith("origin")?(u=!0,i[e]=d):s[e]=d;}if(t.transform||(l||n?s.transform=function(e,{enableHardwareAcceleration:t=!0,allowTransformNone:r=!0},n,s){let o="";for(let t=0;t<Ls;t++){const r=Ms[t];void 0!==e[r]&&(o+=`${Vs[r]||r}(${e[r]}) `);}return t&&!e.z&&(o+="translateZ(0)"),o=o.trim(),s?o=s(e,n?"":o):r&&n&&(o="none"),o}(e.transform,r,c,n):s.transform&&(s.transform="none")),u){const{originX:e="50%",originY:t="50%",originZ:r=0}=i;s.transformOrigin=`${e} ${t} ${r}`;}}const no=()=>({style:{},transform:{},transformOrigin:{},vars:{}});function so(e,t,r){for(const n in t)Is(t[n])||Ds(n,r)||(e[n]=t[n]);}function oo(e,r,n){const s={};return so(s,e.style||{},e),Object.assign(s,function({transformTemplate:e},r,n){return t.useMemo((()=>{const t=no();return ro(t,r,{enableHardwareAcceleration:!n},e),Object.assign({},t.vars,t.style)}),[r])}(e,r,n)),e.transformValues?e.transformValues(s):s}function ao(e,t,r){const n={},s=oo(e,t,r);return e.drag&&!1!==e.dragListener&&(n.draggable=!1,s.userSelect=s.WebkitUserSelect=s.WebkitTouchCallout="none",s.touchAction=!0===e.drag?"none":"pan-"+("x"===e.drag?"y":"x")),void 0===e.tabIndex&&(e.onTap||e.onTapStart||e.whileTap)&&(n.tabIndex=0),n.style=s,n}const io=new Set(["animate","exit","variants","initial","style","values","variants","transition","transformTemplate","transformValues","custom","inherit","onLayoutAnimationStart","onLayoutAnimationComplete","onLayoutMeasure","onBeforeLayoutMeasure","onAnimationStart","onAnimationComplete","onUpdate","onDragStart","onDrag","onDragEnd","onMeasureDragConstraints","onDirectionLock","onDragTransitionEnd","_dragX","_dragY","onHoverStart","onHoverEnd","onViewportEnter","onViewportLeave","ignoreStrict","viewport"]);function lo(e){return e.startsWith("while")||e.startsWith("drag")&&"draggable"!==e||e.startsWith("layout")||e.startsWith("onTap")||e.startsWith("onPan")||io.has(e)}let uo=e=>!lo(e);try{(co=require$$3$1.default)&&(uo=e=>e.startsWith("on")?!lo(e):co(e));}catch(e){}var co;function po(e,t,r){return "string"==typeof e?e:Xs.transform(t+r*e)}const ho={offset:"stroke-dashoffset",array:"stroke-dasharray"},fo={offset:"strokeDashoffset",array:"strokeDasharray"};function mo(e,{attrX:t,attrY:r,attrScale:n,originX:s,originY:o,pathLength:a,pathSpacing:i=1,pathOffset:l=0,...u},c,d,p){if(ro(e,u,c,p),d)return void(e.style.viewBox&&(e.attrs.viewBox=e.style.viewBox));e.attrs=e.style,e.style={};const{attrs:h,style:f,dimensions:m}=e;h.transform&&(m&&(f.transform=h.transform),delete h.transform),m&&(void 0!==s||void 0!==o||f.transform)&&(f.transformOrigin=function(e,t,r){return `${po(t,e.x,e.width)} ${po(r,e.y,e.height)}`}(m,void 0!==s?s:.5,void 0!==o?o:.5)),void 0!==t&&(h.x=t),void 0!==r&&(h.y=r),void 0!==n&&(h.scale=n),void 0!==a&&function(e,t,r=1,n=0,s=!0){e.pathLength=1;const o=s?ho:fo;e[o.offset]=Xs.transform(-n);const a=Xs.transform(t),i=Xs.transform(r);e[o.array]=`${a} ${i}`;}(h,a,i,l,!1);}const go=()=>({...no(),attrs:{}}),vo=e=>"string"==typeof e&&"svg"===e.toLowerCase();function yo(e,r,n,s){const o=t.useMemo((()=>{const t=go();return mo(t,r,{enableHardwareAcceleration:!1},vo(s),e.transformTemplate),{...t.attrs,style:{...t.style}}}),[r]);if(e.style){const t={};so(t,e.style,e),o.style={...t,...o.style};}return o}function bo(e=!1){return (r,n,s,{latestValues:o},a)=>{const i=(Ss(r)?yo:ao)(n,o,a,r),l=function(e,t,r){const n={};for(const s in e)"values"===s&&"object"==typeof e.values||(uo(s)||!0===r&&lo(s)||!t&&!lo(s)||e.draggable&&s.startsWith("onDrag"))&&(n[s]=e[s]);return n}(n,"string"==typeof r,e),u={...l,...i,ref:s},{children:c}=n,d=t.useMemo((()=>Is(c)?c.get():c),[c]);return t.createElement(r,{...u,children:d})}}const xo=e=>e.replace(/([a-z])([A-Z])/g,"$1-$2").toLowerCase();function wo(e,{style:t,vars:r},n,s){Object.assign(e.style,t,s&&s.getProjectionStyles(n));for(const t in r)e.style.setProperty(t,r[t]);}const Po=new Set(["baseFrequency","diffuseConstant","kernelMatrix","kernelUnitLength","keySplines","keyTimes","limitingConeAngle","markerHeight","markerWidth","numOctaves","targetX","targetY","surfaceScale","specularConstant","specularExponent","stdDeviation","tableValues","viewBox","gradientTransform","pathLength","startOffset","textLength","lengthAdjust"]);function To(e,t,r,n){wo(e,t,void 0,n);for(const r in t.attrs)e.setAttribute(Po.has(r)?r:xo(r),t.attrs[r]);}function Co(e,t){const{style:r}=e,n={};for(const s in r)(Is(r[s])||t.style&&Is(t.style[s])||Ds(s,e))&&(n[s]=r[s]);return n}function Eo(e,t){const r=Co(e,t);for(const n in e)if(Is(e[n])||Is(t[n])){r[-1!==Ms.indexOf(n)?"attr"+n.charAt(0).toUpperCase()+n.substring(1):n]=e[n];}return r}function So(e,t,r,n={},s={}){return "function"==typeof t&&(t=t(void 0!==r?r:e.custom,n,s)),"string"==typeof t&&(t=e.variants&&e.variants[t]),"function"==typeof t&&(t=t(void 0!==r?r:e.custom,n,s)),t}function ko(e){const r=t.useRef(null);return null===r.current&&(r.current=e()),r.current}const Mo=e=>Array.isArray(e),Ao=e=>Boolean(e&&"object"==typeof e&&e.mix&&e.toValue),Do=e=>Mo(e)?e[e.length-1]||0:e;function Io(e){const t=Is(e)?e.get():e;return Ao(t)?t.toValue():t}const Vo=e=>(r,n)=>{const s=t.useContext(ns),o=t.useContext(ss),a=()=>function({scrapeMotionValuesFromProps:e,createRenderState:t,onMount:r},n,s,o){const a={latestValues:Lo(n,s,o,e),renderState:t()};return r&&(a.mount=e=>r(n,e,a)),a}(e,r,s,o);return n?a():ko(a)};function Lo(e,t,r,n){const s={},o=n(e,{});for(const e in o)s[e]=Io(o[e]);let{initial:a,animate:i}=e;const l=hs(e),u=fs(e);t&&u&&!l&&!1!==e.inherit&&(void 0===a&&(a=t.initial),void 0===i&&(i=t.animate));let c=!!r&&!1===r.initial;c=c||!1===a;const d=c?i:a;if(d&&"boolean"!=typeof d&&!cs(d)){(Array.isArray(d)?d:[d]).forEach((t=>{const r=So(e,t);if(!r)return;const{transitionEnd:n,transition:o,...a}=r;for(const e in a){let t=a[e];if(Array.isArray(t)){t=t[c?t.length-1:0];}null!==t&&(s[e]=t);}for(const e in n)s[e]=n[e];}));}return s}const Ko=e=>e;class Ro{constructor(){this.order=[],this.scheduled=new Set;}add(e){if(!this.scheduled.has(e))return this.scheduled.add(e),this.order.push(e),!0}remove(e){const t=this.order.indexOf(e);-1!==t&&(this.order.splice(t,1),this.scheduled.delete(e));}clear(){this.order.length=0,this.scheduled.clear();}}const No=["prepare","read","update","preRender","render","postRender"];const{schedule:jo,cancel:Fo,state:Oo,steps:Bo}=function(e,t){let r=!1,n=!0;const s={delta:0,timestamp:0,isProcessing:!1},o=No.reduce(((e,t)=>(e[t]=function(e){let t=new Ro,r=new Ro,n=0,s=!1,o=!1;const a=new WeakSet,i={schedule:(e,o=!1,i=!1)=>{const l=i&&s,u=l?t:r;return o&&a.add(e),u.add(e)&&l&&s&&(n=t.order.length),e},cancel:e=>{r.remove(e),a.delete(e);},process:l=>{if(s)o=!0;else {if(s=!0,[t,r]=[r,t],r.clear(),n=t.order.length,n)for(let r=0;r<n;r++){const n=t.order[r];n(l),a.has(n)&&(i.schedule(n),e());}s=!1,o&&(o=!1,i.process(l));}}};return i}((()=>r=!0)),e)),{}),a=e=>o[e].process(s),i=()=>{const o=performance.now();r=!1,s.delta=n?1e3/60:Math.max(Math.min(o-s.timestamp,40),1),s.timestamp=o,s.isProcessing=!0,No.forEach(a),s.isProcessing=!1,r&&t&&(n=!1,e(i));};return {schedule:No.reduce(((t,a)=>{const l=o[a];return t[a]=(t,o=!1,a=!1)=>(r||(r=!0,n=!0,s.isProcessing||e(i)),l.schedule(t,o,a)),t}),{}),cancel:e=>No.forEach((t=>o[t].cancel(e))),state:s,steps:o}}("undefined"!=typeof requestAnimationFrame?requestAnimationFrame:Ko,!0),Wo={useVisualState:Vo({scrapeMotionValuesFromProps:Eo,createRenderState:go,onMount:(e,t,{renderState:r,latestValues:n})=>{jo.read((()=>{try{r.dimensions="function"==typeof t.getBBox?t.getBBox():t.getBoundingClientRect();}catch(e){r.dimensions={x:0,y:0,width:0,height:0};}})),jo.render((()=>{mo(r,n,{enableHardwareAcceleration:!1},vo(t.tagName),e.transformTemplate),To(t,r);}));}})},zo={useVisualState:Vo({scrapeMotionValuesFromProps:Co,createRenderState:no})};function Uo(e,t,r,n={passive:!0}){return e.addEventListener(t,r,n),()=>e.removeEventListener(t,r)}const Ho=e=>"mouse"===e.pointerType?"number"!=typeof e.button||e.button<=0:!1!==e.isPrimary;function $o(e,t="page"){return {point:{x:e[t+"X"],y:e[t+"Y"]}}}const _o=e=>t=>Ho(t)&&e(t,$o(t));function Go(e,t,r,n){return Uo(e,t,_o(r),n)}const qo=(e,t)=>r=>t(e(r)),Yo=(...e)=>e.reduce(qo);function Xo(e){let t=null;return ()=>{const r=()=>{t=null;};return null===t&&(t=e,r)}}const Zo=Xo("dragHorizontal"),Jo=Xo("dragVertical");function Qo(e){let t=!1;if("y"===e)t=Jo();else if("x"===e)t=Zo();else {const e=Zo(),r=Jo();e&&r?t=()=>{e(),r();}:(e&&e(),r&&r());}return t}function ea(){const e=Qo(!0);return !e||(e(),!1)}class ta{constructor(e){this.isMounted=!1,this.node=e;}update(){}}function ra(e,t){const r="pointer"+(t?"enter":"leave"),n="onHover"+(t?"Start":"End");return Go(e.current,r,((r,s)=>{if("touch"===r.type||ea())return;const o=e.getProps();e.animationState&&o.whileHover&&e.animationState.setActive("whileHover",t),o[n]&&jo.update((()=>o[n](r,s)));}),{passive:!e.getProps()[n]})}const na=(e,t)=>!!t&&(e===t||na(e,t.parentElement));function sa(e,t){if(!t)return;const r=new PointerEvent("pointer"+e);t(r,$o(r));}const oa=new WeakMap,aa=new WeakMap,ia=e=>{const t=oa.get(e.target);t&&t(e);},la=e=>{e.forEach(ia);};function ua(e,t,r){const n=function({root:e,...t}){const r=e||document;aa.has(r)||aa.set(r,{});const n=aa.get(r),s=JSON.stringify(t);return n[s]||(n[s]=new IntersectionObserver(la,{root:e,...t})),n[s]}(t);return oa.set(e,r),n.observe(e),()=>{oa.delete(e),n.unobserve(e);}}const ca={some:0,all:1};const da={inView:{Feature:class extends ta{constructor(){super(...arguments),this.hasEnteredView=!1,this.isInView=!1;}startObserver(){this.unmount();const{viewport:e={}}=this.node.getProps(),{root:t,margin:r,amount:n="some",once:s}=e,o={root:t?t.current:void 0,rootMargin:r,threshold:"number"==typeof n?n:ca[n]};return ua(this.node.current,o,(e=>{const{isIntersecting:t}=e;if(this.isInView===t)return;if(this.isInView=t,s&&!t&&this.hasEnteredView)return;t&&(this.hasEnteredView=!0),this.node.animationState&&this.node.animationState.setActive("whileInView",t);const{onViewportEnter:r,onViewportLeave:n}=this.node.getProps(),o=t?r:n;o&&o(e);}))}mount(){this.startObserver();}update(){if("undefined"==typeof IntersectionObserver)return;const{props:e,prevProps:t}=this.node;["amount","margin","root"].some(function({viewport:e={}},{viewport:t={}}={}){return r=>e[r]!==t[r]}(e,t))&&this.startObserver();}unmount(){}}},tap:{Feature:class extends ta{constructor(){super(...arguments),this.removeStartListeners=Ko,this.removeEndListeners=Ko,this.removeAccessibleListeners=Ko,this.startPointerPress=(e,t)=>{if(this.removeEndListeners(),this.isPressing)return;const r=this.node.getProps(),n=Go(window,"pointerup",((e,t)=>{if(!this.checkPressEnd())return;const{onTap:r,onTapCancel:n}=this.node.getProps();jo.update((()=>{na(this.node.current,e.target)?r&&r(e,t):n&&n(e,t);}));}),{passive:!(r.onTap||r.onPointerUp)}),s=Go(window,"pointercancel",((e,t)=>this.cancelPress(e,t)),{passive:!(r.onTapCancel||r.onPointerCancel)});this.removeEndListeners=Yo(n,s),this.startPress(e,t);},this.startAccessiblePress=()=>{const e=Uo(this.node.current,"keydown",(e=>{if("Enter"!==e.key||this.isPressing)return;this.removeEndListeners(),this.removeEndListeners=Uo(this.node.current,"keyup",(e=>{"Enter"===e.key&&this.checkPressEnd()&&sa("up",((e,t)=>{const{onTap:r}=this.node.getProps();r&&jo.update((()=>r(e,t)));}));})),sa("down",((e,t)=>{this.startPress(e,t);}));})),t=Uo(this.node.current,"blur",(()=>{this.isPressing&&sa("cancel",((e,t)=>this.cancelPress(e,t)));}));this.removeAccessibleListeners=Yo(e,t);};}startPress(e,t){this.isPressing=!0;const{onTapStart:r,whileTap:n}=this.node.getProps();n&&this.node.animationState&&this.node.animationState.setActive("whileTap",!0),r&&jo.update((()=>r(e,t)));}checkPressEnd(){this.removeEndListeners(),this.isPressing=!1;return this.node.getProps().whileTap&&this.node.animationState&&this.node.animationState.setActive("whileTap",!1),!ea()}cancelPress(e,t){if(!this.checkPressEnd())return;const{onTapCancel:r}=this.node.getProps();r&&jo.update((()=>r(e,t)));}mount(){const e=this.node.getProps(),t=Go(this.node.current,"pointerdown",this.startPointerPress,{passive:!(e.onTapStart||e.onPointerStart)}),r=Uo(this.node.current,"focus",this.startAccessiblePress);this.removeStartListeners=Yo(t,r);}unmount(){this.removeStartListeners(),this.removeEndListeners(),this.removeAccessibleListeners();}}},focus:{Feature:class extends ta{constructor(){super(...arguments),this.isActive=!1;}onFocus(){let e=!1;try{e=this.node.current.matches(":focus-visible");}catch(t){e=!0;}e&&this.node.animationState&&(this.node.animationState.setActive("whileFocus",!0),this.isActive=!0);}onBlur(){this.isActive&&this.node.animationState&&(this.node.animationState.setActive("whileFocus",!1),this.isActive=!1);}mount(){this.unmount=Yo(Uo(this.node.current,"focus",(()=>this.onFocus())),Uo(this.node.current,"blur",(()=>this.onBlur())));}unmount(){}}},hover:{Feature:class extends ta{mount(){this.unmount=Yo(ra(this.node,!0),ra(this.node,!1));}unmount(){}}}};function pa(e,t){if(!Array.isArray(t))return !1;const r=t.length;if(r!==e.length)return !1;for(let n=0;n<r;n++)if(t[n]!==e[n])return !1;return !0}function ha(e,t,r){const n=e.getProps();return So(n,t,void 0!==r?r:n.custom,function(e){const t={};return e.values.forEach(((e,r)=>t[r]=e.get())),t}(e),function(e){const t={};return e.values.forEach(((e,r)=>t[r]=e.getVelocity())),t}(e))}const fa="data-"+xo("framerAppearId");let ma=Ko,ga=Ko;"production"!==process.env.NODE_ENV&&(ma=(e,t)=>{e||"undefined"==typeof console||console.warn(t);},ga=(e,t)=>{if(!e)throw new Error(t)});const va=e=>1e3*e,ya=e=>e/1e3,ba=!1,xa=e=>Array.isArray(e)&&"number"==typeof e[0];function wa(e){return Boolean(!e||"string"==typeof e&&Ta[e]||xa(e)||Array.isArray(e)&&e.every(wa))}const Pa=([e,t,r,n])=>`cubic-bezier(${e}, ${t}, ${r}, ${n})`,Ta={linear:"linear",ease:"ease",easeIn:"ease-in",easeOut:"ease-out",easeInOut:"ease-in-out",circIn:Pa([0,.65,.55,1]),circOut:Pa([.55,0,1,.45]),backIn:Pa([.31,.01,.66,-.59]),backOut:Pa([.33,1.53,.69,.99])};function Ca(e){if(e)return xa(e)?Pa(e):Array.isArray(e)?e.map(Ca):Ta[e]}const Ea=(e,t,r)=>(((1-3*r+3*t)*e+(3*r-6*t))*e+3*t)*e,Sa=1e-7,ka=12;function Ma(e,t,r,n){if(e===t&&r===n)return Ko;const s=t=>function(e,t,r,n,s){let o,a,i=0;do{a=t+(r-t)/2,o=Ea(a,n,s)-e,o>0?r=a:t=a;}while(Math.abs(o)>Sa&&++i<ka);return a}(t,0,1,e,r);return e=>0===e||1===e?e:Ea(s(e),t,n)}const Aa=Ma(.42,0,1,1),Da=Ma(0,0,.58,1),Ia=Ma(.42,0,.58,1),Va=e=>Array.isArray(e)&&"number"!=typeof e[0],La=e=>t=>t<=.5?e(2*t)/2:(2-e(2*(1-t)))/2,Ka=e=>t=>1-e(1-t),Ra=e=>1-Math.sin(Math.acos(e)),Na=Ka(Ra),ja=La(Na),Fa=Ma(.33,1.53,.69,.99),Oa=Ka(Fa),Ba=La(Oa),Wa={linear:Ko,easeIn:Aa,easeInOut:Ia,easeOut:Da,circIn:Ra,circInOut:ja,circOut:Na,backIn:Oa,backInOut:Ba,backOut:Fa,anticipate:e=>(e*=2)<1?.5*Oa(e):.5*(2-Math.pow(2,-10*(e-1)))},za=e=>{if(Array.isArray(e)){ga(4===e.length,"Cubic bezier arrays must contain four numerical values.");const[t,r,n,s]=e;return Ma(t,r,n,s)}return "string"==typeof e?(ga(void 0!==Wa[e],`Invalid easing type '${e}'`),Wa[e]):e},Ua=(e,t)=>r=>Boolean(_s(r)&&$s.test(r)&&r.startsWith(e)||t&&Object.prototype.hasOwnProperty.call(r,t)),Ha=(e,t,r)=>n=>{if(!_s(n))return n;const[s,o,a,i]=n.match(Us);return {[e]:parseFloat(s),[t]:parseFloat(o),[r]:parseFloat(a),alpha:void 0!==i?parseFloat(i):1}},$a={...Os,transform:e=>Math.round((e=>Fs(0,255,e))(e))},_a={test:Ua("rgb","red"),parse:Ha("red","green","blue"),transform:({red:e,green:t,blue:r,alpha:n=1})=>"rgba("+$a.transform(e)+", "+$a.transform(t)+", "+$a.transform(r)+", "+zs(Bs.transform(n))+")"};const Ga={test:Ua("#"),parse:function(e){let t="",r="",n="",s="";return e.length>5?(t=e.substring(1,3),r=e.substring(3,5),n=e.substring(5,7),s=e.substring(7,9)):(t=e.substring(1,2),r=e.substring(2,3),n=e.substring(3,4),s=e.substring(4,5),t+=t,r+=r,n+=n,s+=s),{red:parseInt(t,16),green:parseInt(r,16),blue:parseInt(n,16),alpha:s?parseInt(s,16)/255:1}},transform:_a.transform},qa={test:Ua("hsl","hue"),parse:Ha("hue","saturation","lightness"),transform:({hue:e,saturation:t,lightness:r,alpha:n=1})=>"hsla("+Math.round(e)+", "+Ys.transform(zs(t))+", "+Ys.transform(zs(r))+", "+zs(Bs.transform(n))+")"},Ya={test:e=>_a.test(e)||Ga.test(e)||qa.test(e),parse:e=>_a.test(e)?_a.parse(e):qa.test(e)?qa.parse(e):Ga.parse(e),transform:e=>_s(e)?e:e.hasOwnProperty("red")?_a.transform(e):qa.transform(e)},Xa=(e,t,r)=>-r*e+r*t+e;function Za(e,t,r){return r<0&&(r+=1),r>1&&(r-=1),r<1/6?e+6*(t-e)*r:r<.5?t:r<2/3?e+(t-e)*(2/3-r)*6:e}const Ja=(e,t,r)=>{const n=e*e;return Math.sqrt(Math.max(0,r*(t*t-n)+n))},Qa=[Ga,_a,qa];function ei(e){const t=(r=e,Qa.find((e=>e.test(r))));var r;ga(Boolean(t),`'${e}' is not an animatable color. Use the equivalent color code instead.`);let n=t.parse(e);return t===qa&&(n=function({hue:e,saturation:t,lightness:r,alpha:n}){e/=360,r/=100;let s=0,o=0,a=0;if(t/=100){const n=r<.5?r*(1+t):r+t-r*t,i=2*r-n;s=Za(i,n,e+1/3),o=Za(i,n,e),a=Za(i,n,e-1/3);}else s=o=a=r;return {red:Math.round(255*s),green:Math.round(255*o),blue:Math.round(255*a),alpha:n}}(n)),n}const ti=(e,t)=>{const r=ei(e),n=ei(t),s={...r};return e=>(s.red=Ja(r.red,n.red,e),s.green=Ja(r.green,n.green,e),s.blue=Ja(r.blue,n.blue,e),s.alpha=Xa(r.alpha,n.alpha,e),_a.transform(s))};const ri={regex:/var\s*\(\s*--[\w-]+(\s*,\s*(?:(?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)+)?\s*\)/g,countKey:"Vars",token:"${v}",parse:Ko},ni={regex:Hs,countKey:"Colors",token:"${c}",parse:Ya.parse},si={regex:Us,countKey:"Numbers",token:"${n}",parse:Os.parse};function oi(e,{regex:t,countKey:r,token:n,parse:s}){const o=e.tokenised.match(t);o&&(e["num"+r]=o.length,e.tokenised=e.tokenised.replace(t,n),e.values.push(...o.map(s)));}function ai(e){const t=e.toString(),r={value:t,tokenised:t,values:[],numVars:0,numColors:0,numNumbers:0};return r.value.includes("var(--")&&oi(r,ri),oi(r,ni),oi(r,si),r}function ii(e){return ai(e).values}function li(e){const{values:t,numColors:r,numVars:n,tokenised:s}=ai(e),o=t.length;return e=>{let t=s;for(let s=0;s<o;s++)t=s<n?t.replace(ri.token,e[s]):s<n+r?t.replace(ni.token,Ya.transform(e[s])):t.replace(si.token,zs(e[s]));return t}}const ui=e=>"number"==typeof e?0:e;const ci={test:function(e){var t,r;return isNaN(e)&&_s(e)&&((null===(t=e.match(Us))||void 0===t?void 0:t.length)||0)+((null===(r=e.match(Hs))||void 0===r?void 0:r.length)||0)>0},parse:ii,createTransformer:li,getAnimatableNone:function(e){const t=ii(e);return li(e)(t.map(ui))}},di=(e,t)=>r=>`${r>0?t:e}`;function pi(e,t){return "number"==typeof e?r=>Xa(e,t,r):Ya.test(e)?ti(e,t):e.startsWith("var(")?di(e,t):mi(e,t)}const hi=(e,t)=>{const r=[...e],n=r.length,s=e.map(((e,r)=>pi(e,t[r])));return e=>{for(let t=0;t<n;t++)r[t]=s[t](e);return r}},fi=(e,t)=>{const r={...e,...t},n={};for(const s in r)void 0!==e[s]&&void 0!==t[s]&&(n[s]=pi(e[s],t[s]));return e=>{for(const t in n)r[t]=n[t](e);return r}},mi=(e,t)=>{const r=ci.createTransformer(t),n=ai(e),s=ai(t);return n.numVars===s.numVars&&n.numColors===s.numColors&&n.numNumbers>=s.numNumbers?Yo(hi(n.values,s.values),r):(ma(!0,`Complex values '${e}' and '${t}' too different to mix. Ensure all colors are of the same type, and that each contains the same quantity of number and color values. Falling back to instant transition.`),di(e,t))},gi=(e,t,r)=>{const n=t-e;return 0===n?1:(r-e)/n},vi=(e,t)=>r=>Xa(e,t,r);function yi(e,t,r){const n=[],s=r||("number"==typeof(o=e[0])?vi:"string"==typeof o?Ya.test(o)?ti:mi:Array.isArray(o)?hi:"object"==typeof o?fi:vi);var o;const a=e.length-1;for(let r=0;r<a;r++){let o=s(e[r],e[r+1]);if(t){const e=Array.isArray(t)?t[r]||Ko:t;o=Yo(e,o);}n.push(o);}return n}function bi(e,t,{clamp:r=!0,ease:n,mixer:s}={}){const o=e.length;if(ga(o===t.length,"Both input and output ranges must be the same length"),1===o)return ()=>t[0];e[0]>e[o-1]&&(e=[...e].reverse(),t=[...t].reverse());const a=yi(t,n,s),i=a.length,l=t=>{let r=0;if(i>1)for(;r<e.length-2&&!(t<e[r+1]);r++);const n=gi(e[r],e[r+1],t);return a[r](n)};return r?t=>l(Fs(e[0],e[o-1],t)):l}function xi(e){const t=[0];return function(e,t){const r=e[e.length-1];for(let n=1;n<=t;n++){const s=gi(0,t,n);e.push(Xa(r,1,s));}}(t,e.length-1),t}function wi({duration:e=300,keyframes:t,times:r,ease:n="easeInOut"}){const s=Va(n)?n.map(za):za(n),o={done:!1,value:t[0]},a=function(e,t){return e.map((e=>e*t))}(r&&r.length===t.length?r:xi(t),e),i=bi(a,t,{ease:Array.isArray(s)?s:(l=t,u=s,l.map((()=>u||Ia)).splice(0,l.length-1))});var l,u;return {calculatedDuration:e,next:t=>(o.value=i(t),o.done=t>=e,o)}}function Pi(e,t){return t?e*(1e3/t):0}const Ti=5;function Ci(e,t,r){const n=Math.max(t-Ti,0);return Pi(r-e(n),t-n)}const Ei=.001,Si=.01,ki=10,Mi=.05,Ai=1;function Di({duration:e=800,bounce:t=.25,velocity:r=0,mass:n=1}){let s,o;ma(e<=va(ki),"Spring duration must be 10 seconds or less");let a=1-t;a=Fs(Mi,Ai,a),e=Fs(Si,ki,ya(e)),a<1?(s=t=>{const n=t*a,s=n*e,o=n-r,i=Vi(t,a),l=Math.exp(-s);return Ei-o/i*l},o=t=>{const n=t*a*e,o=n*r+r,i=Math.pow(a,2)*Math.pow(t,2)*e,l=Math.exp(-n),u=Vi(Math.pow(t,2),a);return (-s(t)+Ei>0?-1:1)*((o-i)*l)/u}):(s=t=>Math.exp(-t*e)*((t-r)*e+1)-Ei,o=t=>Math.exp(-t*e)*(e*e*(r-t)));const i=function(e,t,r){let n=r;for(let r=1;r<Ii;r++)n-=e(n)/t(n);return n}(s,o,5/e);if(e=va(e),isNaN(i))return {stiffness:100,damping:10,duration:e};{const t=Math.pow(i,2)*n;return {stiffness:t,damping:2*a*Math.sqrt(n*t),duration:e}}}const Ii=12;function Vi(e,t){return e*Math.sqrt(1-t*t)}const Li=["duration","bounce"],Ki=["stiffness","damping","mass"];function Ri(e,t){return t.some((t=>void 0!==e[t]))}function Ni({keyframes:e,restDelta:t,restSpeed:r,...n}){const s=e[0],o=e[e.length-1],a={done:!1,value:s},{stiffness:i,damping:l,mass:u,velocity:c,duration:d,isResolvedFromDuration:p}=function(e){let t={velocity:0,stiffness:100,damping:10,mass:1,isResolvedFromDuration:!1,...e};if(!Ri(e,Ki)&&Ri(e,Li)){const r=Di(e);t={...t,...r,velocity:0,mass:1},t.isResolvedFromDuration=!0;}return t}(n),h=c?-ya(c):0,f=l/(2*Math.sqrt(i*u)),m=o-s,g=ya(Math.sqrt(i/u)),v=Math.abs(m)<5;let y;if(r||(r=v?.01:2),t||(t=v?.005:.5),f<1){const e=Vi(g,f);y=t=>{const r=Math.exp(-f*g*t);return o-r*((h+f*g*m)/e*Math.sin(e*t)+m*Math.cos(e*t))};}else if(1===f)y=e=>o-Math.exp(-g*e)*(m+(h+g*m)*e);else {const e=g*Math.sqrt(f*f-1);y=t=>{const r=Math.exp(-f*g*t),n=Math.min(e*t,300);return o-r*((h+f*g*m)*Math.sinh(n)+e*m*Math.cosh(n))/e};}return {calculatedDuration:p&&d||null,next:e=>{const n=y(e);if(p)a.done=e>=d;else {let s=h;0!==e&&(s=f<1?Ci(y,e,n):0);const i=Math.abs(s)<=r,l=Math.abs(o-n)<=t;a.done=i&&l;}return a.value=a.done?o:n,a}}}function ji({keyframes:e,velocity:t=0,power:r=.8,timeConstant:n=325,bounceDamping:s=10,bounceStiffness:o=500,modifyTarget:a,min:i,max:l,restDelta:u=.5,restSpeed:c}){const d=e[0],p={done:!1,value:d},h=e=>void 0===i?l:void 0===l||Math.abs(i-e)<Math.abs(l-e)?i:l;let f=r*t;const m=d+f,g=void 0===a?m:a(m);g!==m&&(f=g-d);const v=e=>-f*Math.exp(-e/n),y=e=>g+v(e),b=e=>{const t=v(e),r=y(e);p.done=Math.abs(t)<=u,p.value=p.done?g:r;};let x,w;const P=e=>{var t;(t=p.value,void 0!==i&&t<i||void 0!==l&&t>l)&&(x=e,w=Ni({keyframes:[p.value,h(p.value)],velocity:Ci(y,e,p.value),damping:s,stiffness:o,restDelta:u,restSpeed:c}));};return P(0),{calculatedDuration:null,next:e=>{let t=!1;return w||void 0!==x||(t=!0,b(e),P(e)),void 0!==x&&e>x?w.next(e-x):(!t&&b(e),p)}}}const Fi=e=>{const t=({timestamp:t})=>e(t);return {start:()=>jo.update(t,!0),stop:()=>Fo(t),now:()=>Oo.isProcessing?Oo.timestamp:performance.now()}},Oi=2e4;function Bi(e){let t=0;let r=e.next(t);for(;!r.done&&t<Oi;)t+=50,r=e.next(t);return t>=Oi?1/0:t}const Wi={decay:ji,inertia:ji,tween:wi,keyframes:wi,spring:Ni};function zi({autoplay:e=!0,delay:t=0,driver:r=Fi,keyframes:n,type:s="keyframes",repeat:o=0,repeatDelay:a=0,repeatType:i="loop",onPlay:l,onStop:u,onComplete:c,onUpdate:d,...p}){let h,f,m=1,g=!1;const v=()=>{f=new Promise((e=>{h=e;}));};let y;v();const b=Wi[s]||wi;let x;b!==wi&&"number"!=typeof n[0]&&(x=bi([0,100],n,{clamp:!1}),n=[0,100]);const w=b({...p,keyframes:n});let P;"mirror"===i&&(P=b({...p,keyframes:[...n].reverse(),velocity:-(p.velocity||0)}));let T="idle",C=null,E=null,S=null;null===w.calculatedDuration&&o&&(w.calculatedDuration=Bi(w));const{calculatedDuration:k}=w;let M=1/0,A=1/0;null!==k&&(M=k+a,A=M*(o+1)-a);let D=0;const I=e=>{if(null===E)return;m>0&&(E=Math.min(E,e)),m<0&&(E=Math.min(e-A/m,E)),D=null!==C?C:Math.round(e-E)*m;const r=D-t*(m>=0?1:-1),s=m>=0?r<0:r>A;D=Math.max(r,0),"finished"===T&&null===C&&(D=A);let l=D,u=w;if(o){const e=D/M;let t=Math.floor(e),r=e%1;!r&&e>=1&&(r=1),1===r&&t--,t=Math.min(t,o+1);const n=Boolean(t%2);n&&("reverse"===i?(r=1-r,a&&(r-=a/M)):"mirror"===i&&(u=P));let s=Fs(0,1,r);D>A&&(s="reverse"===i&&n?1:0),l=s*M;}const c=s?{done:!1,value:n[0]}:u.next(l);x&&(c.value=x(c.value));let{done:p}=c;s||null===k||(p=m>=0?D>=A:D<=0);const h=null===C&&("finished"===T||"running"===T&&p);return d&&d(c.value),h&&K(),c},V=()=>{y&&y.stop(),y=void 0;},L=()=>{T="idle",V(),h(),v(),E=S=null;},K=()=>{T="finished",c&&c(),V(),h();},R=()=>{if(g)return;y||(y=r(I));const e=y.now();l&&l(),null!==C?E=e-C:E&&"finished"!==T||(E=e),"finished"===T&&v(),S=E,C=null,T="running",y.start();};e&&R();const N={then:(e,t)=>f.then(e,t),get time(){return ya(D)},set time(e){e=va(e),D=e,null===C&&y&&0!==m?E=y.now()-e/m:C=e;},get duration(){const e=null===w.calculatedDuration?Bi(w):w.calculatedDuration;return ya(e)},get speed(){return m},set speed(e){e!==m&&y&&(m=e,N.time=ya(D));},get state(){return T},play:R,pause:()=>{T="paused",C=D;},stop:()=>{g=!0,"idle"!==T&&(T="idle",u&&u(),L());},cancel:()=>{null!==S&&I(S),L();},complete:()=>{T="finished";},sample:e=>(E=0,I(e))};return N}const Ui=function(e){let t;return ()=>(void 0===t&&(t=e()),t)}((()=>Object.hasOwnProperty.call(Element.prototype,"animate"))),Hi=new Set(["opacity","clipPath","filter","transform","backgroundColor"]);function $i(e,t,{onUpdate:r,onComplete:n,...s}){if(!(Ui()&&Hi.has(t)&&!s.repeatDelay&&"mirror"!==s.repeatType&&0!==s.damping&&"inertia"!==s.type))return !1;let o,a,i=!1;const l=()=>{a=new Promise((e=>{o=e;}));};l();let{keyframes:u,duration:c=300,ease:d,times:p}=s;if(((e,t)=>"spring"===t.type||"backgroundColor"===e||!wa(t.ease))(t,s)){const e=zi({...s,repeat:0,delay:0});let t={done:!1,value:u[0]};const r=[];let n=0;for(;!t.done&&n<2e4;)t=e.sample(n),r.push(t.value),n+=10;p=void 0,u=r,c=n-10,d="linear";}const h=function(e,t,r,{delay:n=0,duration:s,repeat:o=0,repeatType:a="loop",ease:i,times:l}={}){const u={[t]:r};l&&(u.offset=l);const c=Ca(i);return Array.isArray(c)&&(u.easing=c),e.animate(u,{delay:n,duration:s,easing:Array.isArray(c)?"linear":c,fill:"both",iterations:o+1,direction:"reverse"===a?"alternate":"normal"})}(e.owner.current,t,u,{...s,duration:c,ease:d,times:p});s.syncStart&&(h.startTime=Oo.isProcessing?Oo.timestamp:document.timeline?document.timeline.currentTime:performance.now());const f=()=>h.cancel(),m=()=>{jo.update(f),o(),l();};h.onfinish=()=>{e.set(function(e,{repeat:t,repeatType:r="loop"}){return e[t&&"loop"!==r&&t%2==1?0:e.length-1]}(u,s)),n&&n(),m();};return {then:(e,t)=>a.then(e,t),attachTimeline:e=>(h.timeline=e,h.onfinish=null,Ko),get time(){return ya(h.currentTime||0)},set time(e){h.currentTime=va(e);},get speed(){return h.playbackRate},set speed(e){h.playbackRate=e;},get duration(){return ya(c)},play:()=>{i||(h.play(),Fo(f));},pause:()=>h.pause(),stop:()=>{if(i=!0,"idle"===h.playState)return;const{currentTime:t}=h;if(t){const r=zi({...s,autoplay:!1});e.setWithVelocity(r.sample(t-10).value,r.sample(t).value,10);}m();},complete:()=>h.finish(),cancel:m}}const _i={type:"spring",stiffness:500,damping:25,restSpeed:10},Gi={type:"keyframes",duration:.8},qi={type:"keyframes",ease:[.25,.1,.35,1],duration:.3},Yi=(e,{keyframes:t})=>t.length>2?Gi:As.has(e)?e.startsWith("scale")?{type:"spring",stiffness:550,damping:0===t[1]?2*Math.sqrt(550):30,restSpeed:10}:_i:qi,Xi=(e,t)=>"zIndex"!==e&&(!("number"!=typeof t&&!Array.isArray(t))||!("string"!=typeof t||!ci.test(t)&&"0"!==t||t.startsWith("url("))),Zi=new Set(["brightness","contrast","saturate","opacity"]);function Ji(e){const[t,r]=e.slice(0,-1).split("(");if("drop-shadow"===t)return e;const[n]=r.match(Us)||[];if(!n)return e;const s=r.replace(n,"");let o=Zi.has(t)?1:0;return n!==r&&(o*=100),t+"("+o+s+")"}const Qi=/([a-z-]*)\(.*?\)/g,el={...ci,getAnimatableNone:e=>{const t=e.match(Qi);return t?t.map(Ji).join(" "):e}},tl={...to,color:Ya,backgroundColor:Ya,outlineColor:Ya,fill:Ya,stroke:Ya,borderColor:Ya,borderTopColor:Ya,borderRightColor:Ya,borderBottomColor:Ya,borderLeftColor:Ya,filter:el,WebkitFilter:el},rl=e=>tl[e];function nl(e,t){let r=rl(e);return r!==el&&(r=ci),r.getAnimatableNone?r.getAnimatableNone(t):void 0}const sl=e=>/^0[^.\s]+$/.test(e);function ol(e){return "number"==typeof e?0===e:null!==e?"none"===e||"0"===e||sl(e):void 0}function al(e,t){return e[t]||e.default||e}const il=(e,t,r,n={})=>s=>{const o=al(n,e)||{},a=o.delay||n.delay||0;let{elapsed:i=0}=n;i-=va(a);const l=function(e,t,r,n){const s=Xi(t,r);let o;o=Array.isArray(r)?[...r]:[null,r];const a=void 0!==n.from?n.from:e.get();let i;const l=[];for(let e=0;e<o.length;e++)null===o[e]&&(o[e]=0===e?a:o[e-1]),ol(o[e])&&l.push(e),"string"==typeof o[e]&&"none"!==o[e]&&"0"!==o[e]&&(i=o[e]);if(s&&l.length&&i)for(let e=0;e<l.length;e++)o[l[e]]=nl(t,i);return o}(t,e,r,o),u=l[0],c=l[l.length-1],d=Xi(e,u),p=Xi(e,c);ma(d===p,`You are trying to animate ${e} from "${u}" to "${c}". ${u} is not an animatable value - to enable this animation set ${u} to a value animatable to ${c} via the \`style\` property.`);let h={keyframes:l,velocity:t.getVelocity(),ease:"easeOut",...o,delay:-i,onUpdate:e=>{t.set(e),o.onUpdate&&o.onUpdate(e);},onComplete:()=>{s(),o.onComplete&&o.onComplete();}};if(function({when:e,delay:t,delayChildren:r,staggerChildren:n,staggerDirection:s,repeat:o,repeatType:a,repeatDelay:i,from:l,elapsed:u,...c}){return !!Object.keys(c).length}(o)||(h={...h,...Yi(e,h)}),h.duration&&(h.duration=va(h.duration)),h.repeatDelay&&(h.repeatDelay=va(h.repeatDelay)),!d||!p||ba||!1===o.type)return function({keyframes:e,delay:t,onUpdate:r,onComplete:n}){const s=()=>(r&&r(e[e.length-1]),n&&n(),{time:0,speed:1,duration:0,play:Ko,pause:Ko,stop:Ko,then:e=>(e(),Promise.resolve()),cancel:Ko,complete:Ko});return t?zi({keyframes:[0,1],duration:0,delay:t,onComplete:s}):s()}(h);if(t.owner&&t.owner.current instanceof HTMLElement&&!t.owner.getProps().onUpdate){const r=$i(t,e,h);if(r)return r}return zi(h)};function ll(e){return Boolean(Is(e)&&e.add)}const ul=e=>/^\-?\d*\.?\d+$/.test(e);function cl(e,t){-1===e.indexOf(t)&&e.push(t);}function dl(e,t){const r=e.indexOf(t);r>-1&&e.splice(r,1);}class pl{constructor(){this.subscriptions=[];}add(e){return cl(this.subscriptions,e),()=>dl(this.subscriptions,e)}notify(e,t,r){const n=this.subscriptions.length;if(n)if(1===n)this.subscriptions[0](e,t,r);else for(let s=0;s<n;s++){const n=this.subscriptions[s];n&&n(e,t,r);}}getSize(){return this.subscriptions.length}clear(){this.subscriptions.length=0;}}const hl=new Set;function fl(e,t,r){e||hl.has(t)||(console.warn(t),r&&console.warn(r),hl.add(t));}class ml{constructor(e,t={}){var r;this.version="10.16.5",this.timeDelta=0,this.lastUpdated=0,this.canTrackVelocity=!1,this.events={},this.updateAndNotify=(e,t=!0)=>{this.prev=this.current,this.current=e;const{delta:r,timestamp:n}=Oo;this.lastUpdated!==n&&(this.timeDelta=r,this.lastUpdated=n,jo.postRender(this.scheduleVelocityCheck)),this.prev!==this.current&&this.events.change&&this.events.change.notify(this.current),this.events.velocityChange&&this.events.velocityChange.notify(this.getVelocity()),t&&this.events.renderRequest&&this.events.renderRequest.notify(this.current);},this.scheduleVelocityCheck=()=>jo.postRender(this.velocityCheck),this.velocityCheck=({timestamp:e})=>{e!==this.lastUpdated&&(this.prev=this.current,this.events.velocityChange&&this.events.velocityChange.notify(this.getVelocity()));},this.hasAnimated=!1,this.prev=this.current=e,this.canTrackVelocity=(r=this.current,!isNaN(parseFloat(r))),this.owner=t.owner;}onChange(e){return "production"!==process.env.NODE_ENV&&fl(!1,'value.onChange(callback) is deprecated. Switch to value.on("change", callback).'),this.on("change",e)}on(e,t){this.events[e]||(this.events[e]=new pl);const r=this.events[e].add(t);return "change"===e?()=>{r(),jo.read((()=>{this.events.change.getSize()||this.stop();}));}:r}clearListeners(){for(const e in this.events)this.events[e].clear();}attach(e,t){this.passiveEffect=e,this.stopPassiveEffect=t;}set(e,t=!0){t&&this.passiveEffect?this.passiveEffect(e,this.updateAndNotify):this.updateAndNotify(e,t);}setWithVelocity(e,t,r){this.set(t),this.prev=e,this.timeDelta=r;}jump(e){this.updateAndNotify(e),this.prev=e,this.stop(),this.stopPassiveEffect&&this.stopPassiveEffect();}get(){return this.current}getPrevious(){return this.prev}getVelocity(){return this.canTrackVelocity?Pi(parseFloat(this.current)-parseFloat(this.prev),this.timeDelta):0}start(e){return this.stop(),new Promise((t=>{this.hasAnimated=!0,this.animation=e(t),this.events.animationStart&&this.events.animationStart.notify();})).then((()=>{this.events.animationComplete&&this.events.animationComplete.notify(),this.clearAnimation();}))}stop(){this.animation&&(this.animation.stop(),this.events.animationCancel&&this.events.animationCancel.notify()),this.clearAnimation();}isAnimating(){return !!this.animation}clearAnimation(){delete this.animation;}destroy(){this.clearListeners(),this.stop(),this.stopPassiveEffect&&this.stopPassiveEffect();}}function gl(e,t){return new ml(e,t)}const vl=e=>t=>t.test(e),yl=[Os,Xs,Ys,qs,Js,Zs,{test:e=>"auto"===e,parse:e=>e}],bl=e=>yl.find(vl(e)),xl=[...yl,Ya,ci];function wl(e,t,r){e.hasValue(t)?e.getValue(t).set(r):e.addValue(t,gl(r));}function Pl(e,t){if(!t)return;return (t[e]||t.default||t).from}function Tl({protectedKeys:e,needsAnimating:t},r){const n=e.hasOwnProperty(r)&&!0!==t[r];return t[r]=!1,n}function Cl(e,t,{delay:r=0,transitionOverride:n,type:s}={}){let{transition:o=e.getDefaultTransition(),transitionEnd:a,...i}=e.makeTargetAnimatable(t);const l=e.getValue("willChange");n&&(o=n);const u=[],c=s&&e.animationState&&e.animationState.getState()[s];for(const t in i){const n=e.getValue(t),s=i[t];if(!n||void 0===s||c&&Tl(c,t))continue;const a={delay:r,elapsed:0,...o};if(window.HandoffAppearAnimations&&!n.hasAnimated){const r=e.getProps()[fa];r&&(a.elapsed=window.HandoffAppearAnimations(r,t,n,jo),a.syncStart=!0);}n.start(il(t,n,s,e.shouldReduceMotion&&As.has(t)?{type:!1}:a));const d=n.animation;ll(l)&&(l.add(t),d.then((()=>l.remove(t)))),u.push(d);}return a&&Promise.all(u).then((()=>{a&&function(e,t){const r=ha(e,t);let{transitionEnd:n={},transition:s={},...o}=r?e.makeTargetAnimatable(r,!1):{};o={...o,...n};for(const t in o)wl(e,t,Do(o[t]));}(e,a);})),u}function El(e,t,r={}){const n=ha(e,t,r.custom);let{transition:s=e.getDefaultTransition()||{}}=n||{};r.transitionOverride&&(s=r.transitionOverride);const o=n?()=>Promise.all(Cl(e,n,r)):()=>Promise.resolve(),a=e.variantChildren&&e.variantChildren.size?(n=0)=>{const{delayChildren:o=0,staggerChildren:a,staggerDirection:i}=s;return function(e,t,r=0,n=0,s=1,o){const a=[],i=(e.variantChildren.size-1)*n,l=1===s?(e=0)=>e*n:(e=0)=>i-e*n;return Array.from(e.variantChildren).sort(Sl).forEach(((e,n)=>{e.notify("AnimationStart",t),a.push(El(e,t,{...o,delay:r+l(n)}).then((()=>e.notify("AnimationComplete",t))));})),Promise.all(a)}(e,t,o+n,a,i,r)}:()=>Promise.resolve(),{when:i}=s;if(i){const[e,t]="beforeChildren"===i?[o,a]:[a,o];return e().then((()=>t()))}return Promise.all([o(),a(r.delay)])}function Sl(e,t){return e.sortNodePosition(t)}const kl=[...ds].reverse(),Ml=ds.length;function Al(e){return t=>Promise.all(t.map((({animation:t,options:r})=>function(e,t,r={}){let n;if(e.notify("AnimationStart",t),Array.isArray(t)){const s=t.map((t=>El(e,t,r)));n=Promise.all(s);}else if("string"==typeof t)n=El(e,t,r);else {const s="function"==typeof t?ha(e,t,r.custom):t;n=Promise.all(Cl(e,s,r));}return n.then((()=>e.notify("AnimationComplete",t)))}(e,t,r))))}function Dl(e){let t=Al(e);const r={animate:Vl(!0),whileInView:Vl(),whileHover:Vl(),whileTap:Vl(),whileDrag:Vl(),whileFocus:Vl(),exit:Vl()};let n=!0;const s=(t,r)=>{const n=ha(e,r);if(n){const{transition:e,transitionEnd:r,...s}=n;t={...t,...s,...r};}return t};function o(o,a){const i=e.getProps(),l=e.getVariantContext(!0)||{},u=[],c=new Set;let d={},p=1/0;for(let t=0;t<Ml;t++){const h=kl[t],f=r[h],m=void 0!==i[h]?i[h]:l[h],g=us(m),v=h===a?f.isActive:null;!1===v&&(p=t);let y=m===l[h]&&m!==i[h]&&g;if(y&&n&&e.manuallyAnimateOnMount&&(y=!1),f.protectedKeys={...d},!f.isActive&&null===v||!m&&!f.prevProp||cs(m)||"boolean"==typeof m)continue;const b=Il(f.prevProp,m);let x=b||h===a&&f.isActive&&!y&&g||t>p&&g;const w=Array.isArray(m)?m:[m];let P=w.reduce(s,{});!1===v&&(P={});const{prevResolvedValues:T={}}=f,C={...T,...P},E=e=>{x=!0,c.delete(e),f.needsAnimating[e]=!0;};for(const e in C){const t=P[e],r=T[e];d.hasOwnProperty(e)||(t!==r?Mo(t)&&Mo(r)?!pa(t,r)||b?E(e):f.protectedKeys[e]=!0:void 0!==t?E(e):c.add(e):void 0!==t&&c.has(e)?E(e):f.protectedKeys[e]=!0);}f.prevProp=m,f.prevResolvedValues=P,f.isActive&&(d={...d,...P}),n&&e.blockInitialAnimation&&(x=!1),x&&!y&&u.push(...w.map((e=>({animation:e,options:{type:h,...o}}))));}if(c.size){const t={};c.forEach((r=>{const n=e.getBaseTarget(r);void 0!==n&&(t[r]=n);})),u.push({animation:t});}let h=Boolean(u.length);return n&&!1===i.initial&&!e.manuallyAnimateOnMount&&(h=!1),n=!1,h?t(u):Promise.resolve()}return {animateChanges:o,setActive:function(t,n,s){var a;if(r[t].isActive===n)return Promise.resolve();null===(a=e.variantChildren)||void 0===a||a.forEach((e=>{var r;return null===(r=e.animationState)||void 0===r?void 0:r.setActive(t,n)})),r[t].isActive=n;const i=o(s,t);for(const e in r)r[e].protectedKeys={};return i},setAnimateFunction:function(r){t=r(e);},getState:()=>r}}function Il(e,t){return "string"==typeof t?t!==e:!!Array.isArray(t)&&!pa(t,e)}function Vl(e=!1){return {isActive:e,protectedKeys:{},needsAnimating:{},prevResolvedValues:{}}}let Ll=0;const Kl={animation:{Feature:class extends ta{constructor(e){super(e),e.animationState||(e.animationState=Dl(e));}updateAnimationControlsSubscription(){const{animate:e}=this.node.getProps();this.unmount(),cs(e)&&(this.unmount=e.subscribe(this.node));}mount(){this.updateAnimationControlsSubscription();}update(){const{animate:e}=this.node.getProps(),{animate:t}=this.node.prevProps||{};e!==t&&this.updateAnimationControlsSubscription();}unmount(){}}},exit:{Feature:class extends ta{constructor(){super(...arguments),this.id=Ll++;}update(){if(!this.node.presenceContext)return;const{isPresent:e,onExitComplete:t,custom:r}=this.node.presenceContext,{isPresent:n}=this.node.prevPresenceContext||{};if(!this.node.animationState||e===n)return;const s=this.node.animationState.setActive("exit",!e,{custom:null!=r?r:this.node.getProps().custom});t&&!e&&s.then((()=>t(this.id)));}mount(){const{register:e}=this.node.presenceContext||{};e&&(this.unmount=e(this.id));}unmount(){}}}},Rl=(e,t)=>Math.abs(e-t);class Nl{constructor(e,t,{transformPagePoint:r}={}){if(this.startEvent=null,this.lastMoveEvent=null,this.lastMoveEventInfo=null,this.handlers={},this.updatePoint=()=>{if(!this.lastMoveEvent||!this.lastMoveEventInfo)return;const e=Ol(this.lastMoveEventInfo,this.history),t=null!==this.startEvent,r=function(e,t){const r=Rl(e.x,t.x),n=Rl(e.y,t.y);return Math.sqrt(r**2+n**2)}(e.offset,{x:0,y:0})>=3;if(!t&&!r)return;const{point:n}=e,{timestamp:s}=Oo;this.history.push({...n,timestamp:s});const{onStart:o,onMove:a}=this.handlers;t||(o&&o(this.lastMoveEvent,e),this.startEvent=this.lastMoveEvent),a&&a(this.lastMoveEvent,e);},this.handlePointerMove=(e,t)=>{this.lastMoveEvent=e,this.lastMoveEventInfo=jl(t,this.transformPagePoint),jo.update(this.updatePoint,!0);},this.handlePointerUp=(e,t)=>{if(this.end(),!this.lastMoveEvent||!this.lastMoveEventInfo)return;const{onEnd:r,onSessionEnd:n}=this.handlers,s=Ol("pointercancel"===e.type?this.lastMoveEventInfo:jl(t,this.transformPagePoint),this.history);this.startEvent&&r&&r(e,s),n&&n(e,s);},!Ho(e))return;this.handlers=t,this.transformPagePoint=r;const n=jl($o(e),this.transformPagePoint),{point:s}=n,{timestamp:o}=Oo;this.history=[{...s,timestamp:o}];const{onSessionStart:a}=t;a&&a(e,Ol(n,this.history)),this.removeListeners=Yo(Go(window,"pointermove",this.handlePointerMove),Go(window,"pointerup",this.handlePointerUp),Go(window,"pointercancel",this.handlePointerUp));}updateHandlers(e){this.handlers=e;}end(){this.removeListeners&&this.removeListeners(),Fo(this.updatePoint);}}function jl(e,t){return t?{point:t(e.point)}:e}function Fl(e,t){return {x:e.x-t.x,y:e.y-t.y}}function Ol({point:e},t){return {point:e,delta:Fl(e,Wl(t)),offset:Fl(e,Bl(t)),velocity:zl(t,.1)}}function Bl(e){return e[0]}function Wl(e){return e[e.length-1]}function zl(e,t){if(e.length<2)return {x:0,y:0};let r=e.length-1,n=null;const s=Wl(e);for(;r>=0&&(n=e[r],!(s.timestamp-n.timestamp>va(t)));)r--;if(!n)return {x:0,y:0};const o=ya(s.timestamp-n.timestamp);if(0===o)return {x:0,y:0};const a={x:(s.x-n.x)/o,y:(s.y-n.y)/o};return a.x===1/0&&(a.x=0),a.y===1/0&&(a.y=0),a}function Ul(e){return e.max-e.min}function Hl(e,t=0,r=.01){return Math.abs(e-t)<=r}function $l(e,t,r,n=.5){e.origin=n,e.originPoint=Xa(t.min,t.max,e.origin),e.scale=Ul(r)/Ul(t),(Hl(e.scale,1,1e-4)||isNaN(e.scale))&&(e.scale=1),e.translate=Xa(r.min,r.max,e.origin)-e.originPoint,(Hl(e.translate)||isNaN(e.translate))&&(e.translate=0);}function _l(e,t,r,n){$l(e.x,t.x,r.x,n?n.originX:void 0),$l(e.y,t.y,r.y,n?n.originY:void 0);}function Gl(e,t,r){e.min=r.min+t.min,e.max=e.min+Ul(t);}function ql(e,t,r){e.min=t.min-r.min,e.max=e.min+Ul(t);}function Yl(e,t,r){ql(e.x,t.x,r.x),ql(e.y,t.y,r.y);}function Xl(e,t,r){return {min:void 0!==t?e.min+t:void 0,max:void 0!==r?e.max+r-(e.max-e.min):void 0}}function Zl(e,t){let r=t.min-e.min,n=t.max-e.max;return t.max-t.min<e.max-e.min&&([r,n]=[n,r]),{min:r,max:n}}const Jl=.35;function Ql(e,t,r){return {min:eu(e,t),max:eu(e,r)}}function eu(e,t){return "number"==typeof e?e:e[t]||0}const tu=()=>({x:{translate:0,scale:1,origin:0,originPoint:0},y:{translate:0,scale:1,origin:0,originPoint:0}}),ru=()=>({x:{min:0,max:0},y:{min:0,max:0}});function nu(e){return [e("x"),e("y")]}function su({top:e,left:t,right:r,bottom:n}){return {x:{min:t,max:r},y:{min:e,max:n}}}function ou(e){return void 0===e||1===e}function au({scale:e,scaleX:t,scaleY:r}){return !ou(e)||!ou(t)||!ou(r)}function iu(e){return au(e)||lu(e)||e.z||e.rotate||e.rotateX||e.rotateY}function lu(e){return uu(e.x)||uu(e.y)}function uu(e){return e&&"0%"!==e}function cu(e,t,r){return r+t*(e-r)}function du(e,t,r,n,s){return void 0!==s&&(e=cu(e,s,n)),cu(e,r,n)+t}function pu(e,t=0,r=1,n,s){e.min=du(e.min,t,r,n,s),e.max=du(e.max,t,r,n,s);}function hu(e,{x:t,y:r}){pu(e.x,t.translate,t.scale,t.originPoint),pu(e.y,r.translate,r.scale,r.originPoint);}function fu(e){return Number.isInteger(e)||e>1.0000000000001||e<.999999999999?e:1}function mu(e,t){e.min=e.min+t,e.max=e.max+t;}function gu(e,t,[r,n,s]){const o=void 0!==t[s]?t[s]:.5,a=Xa(e.min,e.max,o);pu(e,t[r],t[n],a,t.scale);}const vu=["x","scaleX","originX"],yu=["y","scaleY","originY"];function bu(e,t){gu(e.x,t,vu),gu(e.y,t,yu);}function xu(e,t){return su(function(e,t){if(!t)return e;const r=t({x:e.left,y:e.top}),n=t({x:e.right,y:e.bottom});return {top:r.y,left:r.x,bottom:n.y,right:n.x}}(e.getBoundingClientRect(),t))}const wu=new WeakMap;class Pu{constructor(e){this.openGlobalLock=null,this.isDragging=!1,this.currentDirection=null,this.originPoint={x:0,y:0},this.constraints=!1,this.hasMutatedConstraints=!1,this.elastic=ru(),this.visualElement=e;}start(e,{snapToCursor:t=!1}={}){const{presenceContext:r}=this.visualElement;if(r&&!1===r.isPresent)return;this.panSession=new Nl(e,{onSessionStart:e=>{this.stopAnimation(),t&&this.snapToCursor($o(e,"page").point);},onStart:(e,t)=>{const{drag:r,dragPropagation:n,onDragStart:s}=this.getProps();if(r&&!n&&(this.openGlobalLock&&this.openGlobalLock(),this.openGlobalLock=Qo(r),!this.openGlobalLock))return;this.isDragging=!0,this.currentDirection=null,this.resolveConstraints(),this.visualElement.projection&&(this.visualElement.projection.isAnimationBlocked=!0,this.visualElement.projection.target=void 0),nu((e=>{let t=this.getAxisMotionValue(e).get()||0;if(Ys.test(t)){const{projection:r}=this.visualElement;if(r&&r.layout){const n=r.layout.layoutBox[e];if(n){t=Ul(n)*(parseFloat(t)/100);}}}this.originPoint[e]=t;})),s&&jo.update((()=>s(e,t)),!1,!0);const{animationState:o}=this.visualElement;o&&o.setActive("whileDrag",!0);},onMove:(e,t)=>{const{dragPropagation:r,dragDirectionLock:n,onDirectionLock:s,onDrag:o}=this.getProps();if(!r&&!this.openGlobalLock)return;const{offset:a}=t;if(n&&null===this.currentDirection)return this.currentDirection=function(e,t=10){let r=null;Math.abs(e.y)>t?r="y":Math.abs(e.x)>t&&(r="x");return r}(a),void(null!==this.currentDirection&&s&&s(this.currentDirection));this.updateAxis("x",t.point,a),this.updateAxis("y",t.point,a),this.visualElement.render(),o&&o(e,t);},onSessionEnd:(e,t)=>this.stop(e,t)},{transformPagePoint:this.visualElement.getTransformPagePoint()});}stop(e,t){const r=this.isDragging;if(this.cancel(),!r)return;const{velocity:n}=t;this.startAnimation(n);const{onDragEnd:s}=this.getProps();s&&jo.update((()=>s(e,t)));}cancel(){this.isDragging=!1;const{projection:e,animationState:t}=this.visualElement;e&&(e.isAnimationBlocked=!1),this.panSession&&this.panSession.end(),this.panSession=void 0;const{dragPropagation:r}=this.getProps();!r&&this.openGlobalLock&&(this.openGlobalLock(),this.openGlobalLock=null),t&&t.setActive("whileDrag",!1);}updateAxis(e,t,r){const{drag:n}=this.getProps();if(!r||!Tu(e,n,this.currentDirection))return;const s=this.getAxisMotionValue(e);let o=this.originPoint[e]+r[e];this.constraints&&this.constraints[e]&&(o=function(e,{min:t,max:r},n){return void 0!==t&&e<t?e=n?Xa(t,e,n.min):Math.max(e,t):void 0!==r&&e>r&&(e=n?Xa(r,e,n.max):Math.min(e,r)),e}(o,this.constraints[e],this.elastic[e])),s.set(o);}resolveConstraints(){const{dragConstraints:e,dragElastic:t}=this.getProps(),{layout:r}=this.visualElement.projection||{},n=this.constraints;e&&ls(e)?this.constraints||(this.constraints=this.resolveRefConstraints()):this.constraints=!(!e||!r)&&function(e,{top:t,left:r,bottom:n,right:s}){return {x:Xl(e.x,r,s),y:Xl(e.y,t,n)}}(r.layoutBox,e),this.elastic=function(e=Jl){return !1===e?e=0:!0===e&&(e=Jl),{x:Ql(e,"left","right"),y:Ql(e,"top","bottom")}}(t),n!==this.constraints&&r&&this.constraints&&!this.hasMutatedConstraints&&nu((e=>{this.getAxisMotionValue(e)&&(this.constraints[e]=function(e,t){const r={};return void 0!==t.min&&(r.min=t.min-e.min),void 0!==t.max&&(r.max=t.max-e.min),r}(r.layoutBox[e],this.constraints[e]));}));}resolveRefConstraints(){const{dragConstraints:e,onMeasureDragConstraints:t}=this.getProps();if(!e||!ls(e))return !1;const r=e.current;ga(null!==r,"If `dragConstraints` is set as a React ref, that ref must be passed to another component's `ref` prop.");const{projection:n}=this.visualElement;if(!n||!n.layout)return !1;const s=function(e,t,r){const n=xu(e,r),{scroll:s}=t;return s&&(mu(n.x,s.offset.x),mu(n.y,s.offset.y)),n}(r,n.root,this.visualElement.getTransformPagePoint());let o=function(e,t){return {x:Zl(e.x,t.x),y:Zl(e.y,t.y)}}(n.layout.layoutBox,s);if(t){const e=t(function({x:e,y:t}){return {top:t.min,right:e.max,bottom:t.max,left:e.min}}(o));this.hasMutatedConstraints=!!e,e&&(o=su(e));}return o}startAnimation(e){const{drag:t,dragMomentum:r,dragElastic:n,dragTransition:s,dragSnapToOrigin:o,onDragTransitionEnd:a}=this.getProps(),i=this.constraints||{},l=nu((a=>{if(!Tu(a,t,this.currentDirection))return;let l=i&&i[a]||{};o&&(l={min:0,max:0});const u=n?200:1e6,c=n?40:1e7,d={type:"inertia",velocity:r?e[a]:0,bounceStiffness:u,bounceDamping:c,timeConstant:750,restDelta:1,restSpeed:10,...s,...l};return this.startAxisValueAnimation(a,d)}));return Promise.all(l).then(a)}startAxisValueAnimation(e,t){const r=this.getAxisMotionValue(e);return r.start(il(e,r,0,t))}stopAnimation(){nu((e=>this.getAxisMotionValue(e).stop()));}getAxisMotionValue(e){const t="_drag"+e.toUpperCase(),r=this.visualElement.getProps(),n=r[t];return n||this.visualElement.getValue(e,(r.initial?r.initial[e]:void 0)||0)}snapToCursor(e){nu((t=>{const{drag:r}=this.getProps();if(!Tu(t,r,this.currentDirection))return;const{projection:n}=this.visualElement,s=this.getAxisMotionValue(t);if(n&&n.layout){const{min:r,max:o}=n.layout.layoutBox[t];s.set(e[t]-Xa(r,o,.5));}}));}scalePositionWithinConstraints(){if(!this.visualElement.current)return;const{drag:e,dragConstraints:t}=this.getProps(),{projection:r}=this.visualElement;if(!ls(t)||!r||!this.constraints)return;this.stopAnimation();const n={x:0,y:0};nu((e=>{const t=this.getAxisMotionValue(e);if(t){const r=t.get();n[e]=function(e,t){let r=.5;const n=Ul(e),s=Ul(t);return s>n?r=gi(t.min,t.max-n,e.min):n>s&&(r=gi(e.min,e.max-s,t.min)),Fs(0,1,r)}({min:r,max:r},this.constraints[e]);}}));const{transformTemplate:s}=this.visualElement.getProps();this.visualElement.current.style.transform=s?s({},""):"none",r.root&&r.root.updateScroll(),r.updateLayout(),this.resolveConstraints(),nu((t=>{if(!Tu(t,e,null))return;const r=this.getAxisMotionValue(t),{min:s,max:o}=this.constraints[t];r.set(Xa(s,o,n[t]));}));}addListeners(){if(!this.visualElement.current)return;wu.set(this.visualElement,this);const e=Go(this.visualElement.current,"pointerdown",(e=>{const{drag:t,dragListener:r=!0}=this.getProps();t&&r&&this.start(e);})),t=()=>{const{dragConstraints:e}=this.getProps();ls(e)&&(this.constraints=this.resolveRefConstraints());},{projection:r}=this.visualElement,n=r.addEventListener("measure",t);r&&!r.layout&&(r.root&&r.root.updateScroll(),r.updateLayout()),t();const s=Uo(window,"resize",(()=>this.scalePositionWithinConstraints())),o=r.addEventListener("didUpdate",(({delta:e,hasLayoutChanged:t})=>{this.isDragging&&t&&(nu((t=>{const r=this.getAxisMotionValue(t);r&&(this.originPoint[t]+=e[t].translate,r.set(r.get()+e[t].translate));})),this.visualElement.render());}));return ()=>{s(),e(),n(),o&&o();}}getProps(){const e=this.visualElement.getProps(),{drag:t=!1,dragDirectionLock:r=!1,dragPropagation:n=!1,dragConstraints:s=!1,dragElastic:o=Jl,dragMomentum:a=!0}=e;return {...e,drag:t,dragDirectionLock:r,dragPropagation:n,dragConstraints:s,dragElastic:o,dragMomentum:a}}}function Tu(e,t,r){return !(!0!==t&&t!==e||null!==r&&r!==e)}const Cu=e=>(t,r)=>{e&&jo.update((()=>e(t,r)));};const Eu={hasAnimatedSinceResize:!0,hasEverUpdated:!1};function Su(e,t){return t.max===t.min?0:e/(t.max-t.min)*100}const ku={correct:(e,t)=>{if(!t.target)return e;if("string"==typeof e){if(!Xs.test(e))return e;e=parseFloat(e);}return `${Su(e,t.target.x)}% ${Su(e,t.target.y)}%`}},Mu={correct:(e,{treeScale:t,projectionDelta:r})=>{const n=e,s=ci.parse(e);if(s.length>5)return n;const o=ci.createTransformer(e),a="number"!=typeof s[0]?1:0,i=r.x.scale*t.x,l=r.y.scale*t.y;s[0+a]/=i,s[1+a]/=l;const u=Xa(i,l,.5);return "number"==typeof s[2+a]&&(s[2+a]/=u),"number"==typeof s[3+a]&&(s[3+a]/=u),o(s)}};class Au extends t.Component{componentDidMount(){const{visualElement:e,layoutGroup:t,switchLayoutGroup:r,layoutId:n}=this.props,{projection:s}=e;var o;o=Iu,Object.assign(ks,o),s&&(t.group&&t.group.add(s),r&&r.register&&n&&r.register(s),s.root.didUpdate(),s.addEventListener("animationComplete",(()=>{this.safeToRemove();})),s.setOptions({...s.options,onExitComplete:()=>this.safeToRemove()})),Eu.hasEverUpdated=!0;}getSnapshotBeforeUpdate(e){const{layoutDependency:t,visualElement:r,drag:n,isPresent:s}=this.props,o=r.projection;return o?(o.isPresent=s,n||e.layoutDependency!==t||void 0===t?o.willUpdate():this.safeToRemove(),e.isPresent!==s&&(s?o.promote():o.relegate()||jo.postRender((()=>{const e=o.getStack();e&&e.members.length||this.safeToRemove();}))),null):null}componentDidUpdate(){const{projection:e}=this.props.visualElement;e&&(e.root.didUpdate(),queueMicrotask((()=>{!e.currentAnimation&&e.isLead()&&this.safeToRemove();})));}componentWillUnmount(){const{visualElement:e,layoutGroup:t,switchLayoutGroup:r}=this.props,{projection:n}=e;n&&(n.scheduleCheckAfterUnmount(),t&&t.group&&t.group.remove(n),r&&r.deregister&&r.deregister(n));}safeToRemove(){const{safeToRemove:e}=this.props;e&&e();}render(){return null}}function Du(e){const[r,n]=function(){const e=t.useContext(ss);if(null===e)return [!0,null];const{isPresent:r,onExitComplete:n,register:s}=e,o=t.useId();return t.useEffect((()=>s(o)),[]),!r&&n?[!1,()=>n&&n(o)]:[!0]}(),s=t.useContext(bs);return t.createElement(Au,{...e,layoutGroup:s,switchLayoutGroup:t.useContext(xs),isPresent:r,safeToRemove:n})}const Iu={borderRadius:{...ku,applyTo:["borderTopLeftRadius","borderTopRightRadius","borderBottomLeftRadius","borderBottomRightRadius"]},borderTopLeftRadius:ku,borderTopRightRadius:ku,borderBottomLeftRadius:ku,borderBottomRightRadius:ku,boxShadow:Mu},Vu=["TopLeft","TopRight","BottomLeft","BottomRight"],Lu=Vu.length,Ku=e=>"string"==typeof e?parseFloat(e):e,Ru=e=>"number"==typeof e||Xs.test(e);function Nu(e,t){return void 0!==e[t]?e[t]:e.borderRadius}const ju=Ou(0,.5,Na),Fu=Ou(.5,.95,Ko);function Ou(e,t,r){return n=>n<e?0:n>t?1:r(gi(e,t,n))}function Bu(e,t){e.min=t.min,e.max=t.max;}function Wu(e,t){Bu(e.x,t.x),Bu(e.y,t.y);}function zu(e,t,r,n,s){return e=cu(e-=t,1/r,n),void 0!==s&&(e=cu(e,1/s,n)),e}function Uu(e,t,[r,n,s],o,a){!function(e,t=0,r=1,n=.5,s,o=e,a=e){Ys.test(t)&&(t=parseFloat(t),t=Xa(a.min,a.max,t/100)-a.min);if("number"!=typeof t)return;let i=Xa(o.min,o.max,n);e===o&&(i-=t),e.min=zu(e.min,t,r,i,s),e.max=zu(e.max,t,r,i,s);}(e,t[r],t[n],t[s],t.scale,o,a);}const Hu=["x","scaleX","originX"],$u=["y","scaleY","originY"];function _u(e,t,r,n){Uu(e.x,t,Hu,r?r.x:void 0,n?n.x:void 0),Uu(e.y,t,$u,r?r.y:void 0,n?n.y:void 0);}function Gu(e){return 0===e.translate&&1===e.scale}function qu(e){return Gu(e.x)&&Gu(e.y)}function Yu(e,t){return Math.round(e.x.min)===Math.round(t.x.min)&&Math.round(e.x.max)===Math.round(t.x.max)&&Math.round(e.y.min)===Math.round(t.y.min)&&Math.round(e.y.max)===Math.round(t.y.max)}function Xu(e){return Ul(e.x)/Ul(e.y)}class Zu{constructor(){this.members=[];}add(e){cl(this.members,e),e.scheduleRender();}remove(e){if(dl(this.members,e),e===this.prevLead&&(this.prevLead=void 0),e===this.lead){const e=this.members[this.members.length-1];e&&this.promote(e);}}relegate(e){const t=this.members.findIndex((t=>e===t));if(0===t)return !1;let r;for(let e=t;e>=0;e--){const t=this.members[e];if(!1!==t.isPresent){r=t;break}}return !!r&&(this.promote(r),!0)}promote(e,t){const r=this.lead;if(e!==r&&(this.prevLead=r,this.lead=e,e.show(),r)){r.instance&&r.scheduleRender(),e.scheduleRender(),e.resumeFrom=r,t&&(e.resumeFrom.preserveOpacity=!0),r.snapshot&&(e.snapshot=r.snapshot,e.snapshot.latestValues=r.animationValues||r.latestValues),e.root&&e.root.isUpdating&&(e.isLayoutDirty=!0);const{crossfade:n}=e.options;!1===n&&r.hide();}}exitAnimationComplete(){this.members.forEach((e=>{const{options:t,resumingFrom:r}=e;t.onExitComplete&&t.onExitComplete(),r&&r.options.onExitComplete&&r.options.onExitComplete();}));}scheduleRender(){this.members.forEach((e=>{e.instance&&e.scheduleRender(!1);}));}removeLeadSnapshot(){this.lead&&this.lead.snapshot&&(this.lead.snapshot=void 0);}}function Ju(e,t,r){let n="";const s=e.x.translate/t.x,o=e.y.translate/t.y;if((s||o)&&(n=`translate3d(${s}px, ${o}px, 0) `),1===t.x&&1===t.y||(n+=`scale(${1/t.x}, ${1/t.y}) `),r){const{rotate:e,rotateX:t,rotateY:s}=r;e&&(n+=`rotate(${e}deg) `),t&&(n+=`rotateX(${t}deg) `),s&&(n+=`rotateY(${s}deg) `);}const a=e.x.scale*t.x,i=e.y.scale*t.y;return 1===a&&1===i||(n+=`scale(${a}, ${i})`),n||"none"}const Qu=(e,t)=>e.depth-t.depth;class ec{constructor(){this.children=[],this.isDirty=!1;}add(e){cl(this.children,e),this.isDirty=!0;}remove(e){dl(this.children,e),this.isDirty=!0;}forEach(e){this.isDirty&&this.children.sort(Qu),this.isDirty=!1,this.children.forEach(e);}}const tc=["","X","Y","Z"];let rc=0;const nc={type:"projectionFrame",totalNodes:0,resolvedTargetDeltas:0,recalculatedProjection:0};function sc({attachResizeListener:e,defaultParent:t,measureScroll:r,checkIsScrollRoot:n,resetTransform:s}){return class{constructor(e={},r=(null==t?void 0:t())){this.id=rc++,this.animationId=0,this.children=new Set,this.options={},this.isTreeAnimating=!1,this.isAnimationBlocked=!1,this.isLayoutDirty=!1,this.isProjectionDirty=!1,this.isSharedProjectionDirty=!1,this.isTransformDirty=!1,this.updateManuallyBlocked=!1,this.updateBlockedByResize=!1,this.isUpdating=!1,this.isSVG=!1,this.needsReset=!1,this.shouldResetTransform=!1,this.treeScale={x:1,y:1},this.eventHandlers=new Map,this.hasTreeAnimated=!1,this.updateScheduled=!1,this.checkUpdateFailed=()=>{this.isUpdating&&(this.isUpdating=!1,this.clearAllSnapshots());},this.updateProjection=()=>{var e;nc.totalNodes=nc.resolvedTargetDeltas=nc.recalculatedProjection=0,this.nodes.forEach(ic),this.nodes.forEach(fc),this.nodes.forEach(mc),this.nodes.forEach(lc),e=nc,window.MotionDebug&&window.MotionDebug.record(e);},this.hasProjected=!1,this.isVisible=!0,this.animationProgress=0,this.sharedNodes=new Map,this.latestValues=e,this.root=r?r.root||r:this,this.path=r?[...r.path,r]:[],this.parent=r,this.depth=r?r.depth+1:0;for(let e=0;e<this.path.length;e++)this.path[e].shouldResetTransform=!0;this.root===this&&(this.nodes=new ec);}addEventListener(e,t){return this.eventHandlers.has(e)||this.eventHandlers.set(e,new pl),this.eventHandlers.get(e).add(t)}notifyListeners(e,...t){const r=this.eventHandlers.get(e);r&&r.notify(...t);}hasListeners(e){return this.eventHandlers.has(e)}mount(t,r=this.root.hasTreeAnimated){if(this.instance)return;var n;this.isSVG=(n=t)instanceof SVGElement&&"svg"!==n.tagName,this.instance=t;const{layoutId:s,layout:o,visualElement:a}=this.options;if(a&&!a.current&&a.mount(t),this.root.nodes.add(this),this.parent&&this.parent.children.add(this),r&&(o||s)&&(this.isLayoutDirty=!0),e){let r;const n=()=>this.root.updateBlockedByResize=!1;e(t,(()=>{this.root.updateBlockedByResize=!0,r&&r(),r=function(e,t){const r=performance.now(),n=({timestamp:s})=>{const o=s-r;o>=t&&(Fo(n),e(o-t));};return jo.read(n,!0),()=>Fo(n)}(n,250),Eu.hasAnimatedSinceResize&&(Eu.hasAnimatedSinceResize=!1,this.nodes.forEach(hc));}));}s&&this.root.registerSharedNode(s,this),!1!==this.options.animate&&a&&(s||o)&&this.addEventListener("didUpdate",(({delta:e,hasLayoutChanged:t,hasRelativeTargetChanged:r,layout:n})=>{if(this.isTreeAnimationBlocked())return this.target=void 0,void(this.relativeTarget=void 0);const s=this.options.transition||a.getDefaultTransition()||wc,{onLayoutAnimationStart:o,onLayoutAnimationComplete:i}=a.getProps(),l=!this.targetLayout||!Yu(this.targetLayout,n)||r,u=!t&&r;if(this.options.layoutRoot||this.resumeFrom&&this.resumeFrom.instance||u||t&&(l||!this.currentAnimation)){this.resumeFrom&&(this.resumingFrom=this.resumeFrom,this.resumingFrom.resumingFrom=void 0),this.setAnimationOrigin(e,u);const t={...al(s,"layout"),onPlay:o,onComplete:i};(a.shouldReduceMotion||this.options.layoutRoot)&&(t.delay=0,t.type=!1),this.startAnimation(t);}else t||hc(this),this.isLead()&&this.options.onExitComplete&&this.options.onExitComplete();this.targetLayout=n;}));}unmount(){this.options.layoutId&&this.willUpdate(),this.root.nodes.remove(this);const e=this.getStack();e&&e.remove(this),this.parent&&this.parent.children.delete(this),this.instance=void 0,Fo(this.updateProjection);}blockUpdate(){this.updateManuallyBlocked=!0;}unblockUpdate(){this.updateManuallyBlocked=!1;}isUpdateBlocked(){return this.updateManuallyBlocked||this.updateBlockedByResize}isTreeAnimationBlocked(){return this.isAnimationBlocked||this.parent&&this.parent.isTreeAnimationBlocked()||!1}startUpdate(){this.isUpdateBlocked()||(this.isUpdating=!0,this.nodes&&this.nodes.forEach(gc),this.animationId++);}getTransformTemplate(){const{visualElement:e}=this.options;return e&&e.getProps().transformTemplate}willUpdate(e=!0){if(this.root.hasTreeAnimated=!0,this.root.isUpdateBlocked())return void(this.options.onExitComplete&&this.options.onExitComplete());if(!this.root.isUpdating&&this.root.startUpdate(),this.isLayoutDirty)return;this.isLayoutDirty=!0;for(let e=0;e<this.path.length;e++){const t=this.path[e];t.shouldResetTransform=!0,t.updateScroll("snapshot"),t.options.layoutRoot&&t.willUpdate(!1);}const{layoutId:t,layout:r}=this.options;if(void 0===t&&!r)return;const n=this.getTransformTemplate();this.prevTransformTemplateValue=n?n(this.latestValues,""):void 0,this.updateSnapshot(),e&&this.notifyListeners("willUpdate");}update(){this.updateScheduled=!1;if(this.isUpdateBlocked())return this.unblockUpdate(),this.clearAllSnapshots(),void this.nodes.forEach(cc);this.isUpdating||this.nodes.forEach(dc),this.isUpdating=!1,this.nodes.forEach(pc),this.nodes.forEach(oc),this.nodes.forEach(ac),this.clearAllSnapshots();const e=performance.now();Oo.delta=Fs(0,1e3/60,e-Oo.timestamp),Oo.timestamp=e,Oo.isProcessing=!0,Bo.update.process(Oo),Bo.preRender.process(Oo),Bo.render.process(Oo),Oo.isProcessing=!1;}didUpdate(){this.updateScheduled||(this.updateScheduled=!0,queueMicrotask((()=>this.update())));}clearAllSnapshots(){this.nodes.forEach(uc),this.sharedNodes.forEach(vc);}scheduleUpdateProjection(){jo.preRender(this.updateProjection,!1,!0);}scheduleCheckAfterUnmount(){jo.postRender((()=>{this.isLayoutDirty?this.root.didUpdate():this.root.checkUpdateFailed();}));}updateSnapshot(){!this.snapshot&&this.instance&&(this.snapshot=this.measure());}updateLayout(){if(!this.instance)return;if(this.updateScroll(),!(this.options.alwaysMeasureLayout&&this.isLead()||this.isLayoutDirty))return;if(this.resumeFrom&&!this.resumeFrom.instance)for(let e=0;e<this.path.length;e++){this.path[e].updateScroll();}const e=this.layout;this.layout=this.measure(!1),this.layoutCorrected=ru(),this.isLayoutDirty=!1,this.projectionDelta=void 0,this.notifyListeners("measure",this.layout.layoutBox);const{visualElement:t}=this.options;t&&t.notify("LayoutMeasure",this.layout.layoutBox,e?e.layoutBox:void 0);}updateScroll(e="measure"){let t=Boolean(this.options.layoutScroll&&this.instance);this.scroll&&this.scroll.animationId===this.root.animationId&&this.scroll.phase===e&&(t=!1),t&&(this.scroll={animationId:this.root.animationId,phase:e,isRoot:n(this.instance),offset:r(this.instance)});}resetTransform(){if(!s)return;const e=this.isLayoutDirty||this.shouldResetTransform,t=this.projectionDelta&&!qu(this.projectionDelta),r=this.getTransformTemplate(),n=r?r(this.latestValues,""):void 0,o=n!==this.prevTransformTemplateValue;e&&(t||iu(this.latestValues)||o)&&(s(this.instance,n),this.shouldResetTransform=!1,this.scheduleRender());}measure(e=!0){const t=this.measurePageBox();let r=this.removeElementScroll(t);var n;return e&&(r=this.removeTransform(r)),Cc((n=r).x),Cc(n.y),{animationId:this.root.animationId,measuredBox:t,layoutBox:r,latestValues:{},source:this.id}}measurePageBox(){const{visualElement:e}=this.options;if(!e)return ru();const t=e.measureViewportBox(),{scroll:r}=this.root;return r&&(mu(t.x,r.offset.x),mu(t.y,r.offset.y)),t}removeElementScroll(e){const t=ru();Wu(t,e);for(let r=0;r<this.path.length;r++){const n=this.path[r],{scroll:s,options:o}=n;if(n!==this.root&&s&&o.layoutScroll){if(s.isRoot){Wu(t,e);const{scroll:r}=this.root;r&&(mu(t.x,-r.offset.x),mu(t.y,-r.offset.y));}mu(t.x,s.offset.x),mu(t.y,s.offset.y);}}return t}applyTransform(e,t=!1){const r=ru();Wu(r,e);for(let e=0;e<this.path.length;e++){const n=this.path[e];!t&&n.options.layoutScroll&&n.scroll&&n!==n.root&&bu(r,{x:-n.scroll.offset.x,y:-n.scroll.offset.y}),iu(n.latestValues)&&bu(r,n.latestValues);}return iu(this.latestValues)&&bu(r,this.latestValues),r}removeTransform(e){const t=ru();Wu(t,e);for(let e=0;e<this.path.length;e++){const r=this.path[e];if(!r.instance)continue;if(!iu(r.latestValues))continue;au(r.latestValues)&&r.updateSnapshot();const n=ru();Wu(n,r.measurePageBox()),_u(t,r.latestValues,r.snapshot?r.snapshot.layoutBox:void 0,n);}return iu(this.latestValues)&&_u(t,this.latestValues),t}setTargetDelta(e){this.targetDelta=e,this.root.scheduleUpdateProjection(),this.isProjectionDirty=!0;}setOptions(e){this.options={...this.options,...e,crossfade:void 0===e.crossfade||e.crossfade};}clearMeasurements(){this.scroll=void 0,this.layout=void 0,this.snapshot=void 0,this.prevTransformTemplateValue=void 0,this.targetDelta=void 0,this.target=void 0,this.isLayoutDirty=!1;}forceRelativeParentToResolveTarget(){this.relativeParent&&this.relativeParent.resolvedRelativeTargetAt!==Oo.timestamp&&this.relativeParent.resolveTargetDelta(!0);}resolveTargetDelta(e=!1){var t;const r=this.getLead();this.isProjectionDirty||(this.isProjectionDirty=r.isProjectionDirty),this.isTransformDirty||(this.isTransformDirty=r.isTransformDirty),this.isSharedProjectionDirty||(this.isSharedProjectionDirty=r.isSharedProjectionDirty);const n=Boolean(this.resumingFrom)||this!==r;if(!(e||n&&this.isSharedProjectionDirty||this.isProjectionDirty||(null===(t=this.parent)||void 0===t?void 0:t.isProjectionDirty)||this.attemptToResolveRelativeTarget))return;const{layout:s,layoutId:o}=this.options;if(this.layout&&(s||o)){if(this.resolvedRelativeTargetAt=Oo.timestamp,!this.targetDelta&&!this.relativeTarget){const e=this.getClosestProjectingParent();e&&e.layout&&1!==this.animationProgress?(this.relativeParent=e,this.forceRelativeParentToResolveTarget(),this.relativeTarget=ru(),this.relativeTargetOrigin=ru(),Yl(this.relativeTargetOrigin,this.layout.layoutBox,e.layout.layoutBox),Wu(this.relativeTarget,this.relativeTargetOrigin)):this.relativeParent=this.relativeTarget=void 0;}if(this.relativeTarget||this.targetDelta){var a,i,l;if(this.target||(this.target=ru(),this.targetWithTransforms=ru()),this.relativeTarget&&this.relativeTargetOrigin&&this.relativeParent&&this.relativeParent.target?(this.forceRelativeParentToResolveTarget(),a=this.target,i=this.relativeTarget,l=this.relativeParent.target,Gl(a.x,i.x,l.x),Gl(a.y,i.y,l.y)):this.targetDelta?(Boolean(this.resumingFrom)?this.target=this.applyTransform(this.layout.layoutBox):Wu(this.target,this.layout.layoutBox),hu(this.target,this.targetDelta)):Wu(this.target,this.layout.layoutBox),this.attemptToResolveRelativeTarget){this.attemptToResolveRelativeTarget=!1;const e=this.getClosestProjectingParent();e&&Boolean(e.resumingFrom)===Boolean(this.resumingFrom)&&!e.options.layoutScroll&&e.target&&1!==this.animationProgress?(this.relativeParent=e,this.forceRelativeParentToResolveTarget(),this.relativeTarget=ru(),this.relativeTargetOrigin=ru(),Yl(this.relativeTargetOrigin,this.target,e.target),Wu(this.relativeTarget,this.relativeTargetOrigin)):this.relativeParent=this.relativeTarget=void 0;}nc.resolvedTargetDeltas++;}}}getClosestProjectingParent(){if(this.parent&&!au(this.parent.latestValues)&&!lu(this.parent.latestValues))return this.parent.isProjecting()?this.parent:this.parent.getClosestProjectingParent()}isProjecting(){return Boolean((this.relativeTarget||this.targetDelta||this.options.layoutRoot)&&this.layout)}calcProjection(){var e;const t=this.getLead(),r=Boolean(this.resumingFrom)||this!==t;let n=!0;if((this.isProjectionDirty||(null===(e=this.parent)||void 0===e?void 0:e.isProjectionDirty))&&(n=!1),r&&(this.isSharedProjectionDirty||this.isTransformDirty)&&(n=!1),this.resolvedRelativeTargetAt===Oo.timestamp&&(n=!1),n)return;const{layout:s,layoutId:o}=this.options;if(this.isTreeAnimating=Boolean(this.parent&&this.parent.isTreeAnimating||this.currentAnimation||this.pendingAnimation),this.isTreeAnimating||(this.targetDelta=this.relativeTarget=void 0),!this.layout||!s&&!o)return;Wu(this.layoutCorrected,this.layout.layoutBox);const a=this.treeScale.x,i=this.treeScale.y;!function(e,t,r,n=!1){const s=r.length;if(!s)return;let o,a;t.x=t.y=1;for(let i=0;i<s;i++){o=r[i],a=o.projectionDelta;const s=o.instance;s&&s.style&&"contents"===s.style.display||(n&&o.options.layoutScroll&&o.scroll&&o!==o.root&&bu(e,{x:-o.scroll.offset.x,y:-o.scroll.offset.y}),a&&(t.x*=a.x.scale,t.y*=a.y.scale,hu(e,a)),n&&iu(o.latestValues)&&bu(e,o.latestValues));}t.x=fu(t.x),t.y=fu(t.y);}(this.layoutCorrected,this.treeScale,this.path,r),!t.layout||t.target||1===this.treeScale.x&&1===this.treeScale.y||(t.target=t.layout.layoutBox);const{target:l}=t;if(!l)return void(this.projectionTransform&&(this.projectionDelta=tu(),this.projectionTransform="none",this.scheduleRender()));this.projectionDelta||(this.projectionDelta=tu(),this.projectionDeltaWithTransform=tu());const u=this.projectionTransform;_l(this.projectionDelta,this.layoutCorrected,l,this.latestValues),this.projectionTransform=Ju(this.projectionDelta,this.treeScale),this.projectionTransform===u&&this.treeScale.x===a&&this.treeScale.y===i||(this.hasProjected=!0,this.scheduleRender(),this.notifyListeners("projectionUpdate",l)),nc.recalculatedProjection++;}hide(){this.isVisible=!1;}show(){this.isVisible=!0;}scheduleRender(e=!0){if(this.options.scheduleRender&&this.options.scheduleRender(),e){const e=this.getStack();e&&e.scheduleRender();}this.resumingFrom&&!this.resumingFrom.instance&&(this.resumingFrom=void 0);}setAnimationOrigin(e,t=!1){const r=this.snapshot,n=r?r.latestValues:{},s={...this.latestValues},o=tu();this.relativeParent&&this.relativeParent.options.layoutRoot||(this.relativeTarget=this.relativeTargetOrigin=void 0),this.attemptToResolveRelativeTarget=!t;const a=ru(),i=(r?r.source:void 0)!==(this.layout?this.layout.source:void 0),l=this.getStack(),u=!l||l.members.length<=1,c=Boolean(i&&!u&&!0===this.options.crossfade&&!this.path.some(xc));let d;this.animationProgress=0,this.mixTargetDelta=t=>{const r=t/1e3;yc(o.x,e.x,r),yc(o.y,e.y,r),this.setTargetDelta(o),this.relativeTarget&&this.relativeTargetOrigin&&this.layout&&this.relativeParent&&this.relativeParent.layout&&(Yl(a,this.layout.layoutBox,this.relativeParent.layout.layoutBox),function(e,t,r,n){bc(e.x,t.x,r.x,n),bc(e.y,t.y,r.y,n);}(this.relativeTarget,this.relativeTargetOrigin,a,r),d&&function(e,t){return e.x.min===t.x.min&&e.x.max===t.x.max&&e.y.min===t.y.min&&e.y.max===t.y.max}(this.relativeTarget,d)&&(this.isProjectionDirty=!1),d||(d=ru()),Wu(d,this.relativeTarget)),i&&(this.animationValues=s,function(e,t,r,n,s,o){s?(e.opacity=Xa(0,void 0!==r.opacity?r.opacity:1,ju(n)),e.opacityExit=Xa(void 0!==t.opacity?t.opacity:1,0,Fu(n))):o&&(e.opacity=Xa(void 0!==t.opacity?t.opacity:1,void 0!==r.opacity?r.opacity:1,n));for(let s=0;s<Lu;s++){const o=`border${Vu[s]}Radius`;let a=Nu(t,o),i=Nu(r,o);void 0===a&&void 0===i||(a||(a=0),i||(i=0),0===a||0===i||Ru(a)===Ru(i)?(e[o]=Math.max(Xa(Ku(a),Ku(i),n),0),(Ys.test(i)||Ys.test(a))&&(e[o]+="%")):e[o]=i);}(t.rotate||r.rotate)&&(e.rotate=Xa(t.rotate||0,r.rotate||0,n));}(s,n,this.latestValues,r,c,u)),this.root.scheduleUpdateProjection(),this.scheduleRender(),this.animationProgress=r;},this.mixTargetDelta(this.options.layoutRoot?1e3:0);}startAnimation(e){this.notifyListeners("animationStart"),this.currentAnimation&&this.currentAnimation.stop(),this.resumingFrom&&this.resumingFrom.currentAnimation&&this.resumingFrom.currentAnimation.stop(),this.pendingAnimation&&(Fo(this.pendingAnimation),this.pendingAnimation=void 0),this.pendingAnimation=jo.update((()=>{Eu.hasAnimatedSinceResize=!0,this.currentAnimation=function(e,t,r){const n=Is(e)?e:gl(e);return n.start(il("",n,t,r)),n.animation}(0,1e3,{...e,onUpdate:t=>{this.mixTargetDelta(t),e.onUpdate&&e.onUpdate(t);},onComplete:()=>{e.onComplete&&e.onComplete(),this.completeAnimation();}}),this.resumingFrom&&(this.resumingFrom.currentAnimation=this.currentAnimation),this.pendingAnimation=void 0;}));}completeAnimation(){this.resumingFrom&&(this.resumingFrom.currentAnimation=void 0,this.resumingFrom.preserveOpacity=void 0);const e=this.getStack();e&&e.exitAnimationComplete(),this.resumingFrom=this.currentAnimation=this.animationValues=void 0,this.notifyListeners("animationComplete");}finishAnimation(){this.currentAnimation&&(this.mixTargetDelta&&this.mixTargetDelta(1e3),this.currentAnimation.stop()),this.completeAnimation();}applyTransformsToTarget(){const e=this.getLead();let{targetWithTransforms:t,target:r,layout:n,latestValues:s}=e;if(t&&r&&n){if(this!==e&&this.layout&&n&&Ec(this.options.animationType,this.layout.layoutBox,n.layoutBox)){r=this.target||ru();const t=Ul(this.layout.layoutBox.x);r.x.min=e.target.x.min,r.x.max=r.x.min+t;const n=Ul(this.layout.layoutBox.y);r.y.min=e.target.y.min,r.y.max=r.y.min+n;}Wu(t,r),bu(t,s),_l(this.projectionDeltaWithTransform,this.layoutCorrected,t,s);}}registerSharedNode(e,t){this.sharedNodes.has(e)||this.sharedNodes.set(e,new Zu);this.sharedNodes.get(e).add(t);const r=t.options.initialPromotionConfig;t.promote({transition:r?r.transition:void 0,preserveFollowOpacity:r&&r.shouldPreserveFollowOpacity?r.shouldPreserveFollowOpacity(t):void 0});}isLead(){const e=this.getStack();return !e||e.lead===this}getLead(){var e;const{layoutId:t}=this.options;return t&&(null===(e=this.getStack())||void 0===e?void 0:e.lead)||this}getPrevLead(){var e;const{layoutId:t}=this.options;return t?null===(e=this.getStack())||void 0===e?void 0:e.prevLead:void 0}getStack(){const{layoutId:e}=this.options;if(e)return this.root.sharedNodes.get(e)}promote({needsReset:e,transition:t,preserveFollowOpacity:r}={}){const n=this.getStack();n&&n.promote(this,r),e&&(this.projectionDelta=void 0,this.needsReset=!0),t&&this.setOptions({transition:t});}relegate(){const e=this.getStack();return !!e&&e.relegate(this)}resetRotation(){const{visualElement:e}=this.options;if(!e)return;let t=!1;const{latestValues:r}=e;if((r.rotate||r.rotateX||r.rotateY||r.rotateZ)&&(t=!0),!t)return;const n={};for(let t=0;t<tc.length;t++){const s="rotate"+tc[t];r[s]&&(n[s]=r[s],e.setStaticValue(s,0));}e.render();for(const t in n)e.setStaticValue(t,n[t]);e.scheduleRender();}getProjectionStyles(e={}){var t,r;const n={};if(!this.instance||this.isSVG)return n;if(!this.isVisible)return {visibility:"hidden"};n.visibility="";const s=this.getTransformTemplate();if(this.needsReset)return this.needsReset=!1,n.opacity="",n.pointerEvents=Io(e.pointerEvents)||"",n.transform=s?s(this.latestValues,""):"none",n;const o=this.getLead();if(!this.projectionDelta||!this.layout||!o.target){const t={};return this.options.layoutId&&(t.opacity=void 0!==this.latestValues.opacity?this.latestValues.opacity:1,t.pointerEvents=Io(e.pointerEvents)||""),this.hasProjected&&!iu(this.latestValues)&&(t.transform=s?s({},""):"none",this.hasProjected=!1),t}const a=o.animationValues||o.latestValues;this.applyTransformsToTarget(),n.transform=Ju(this.projectionDeltaWithTransform,this.treeScale,a),s&&(n.transform=s(a,n.transform));const{x:i,y:l}=this.projectionDelta;n.transformOrigin=`${100*i.origin}% ${100*l.origin}% 0`,o.animationValues?n.opacity=o===this?null!==(r=null!==(t=a.opacity)&&void 0!==t?t:this.latestValues.opacity)&&void 0!==r?r:1:this.preserveOpacity?this.latestValues.opacity:a.opacityExit:n.opacity=o===this?void 0!==a.opacity?a.opacity:"":void 0!==a.opacityExit?a.opacityExit:0;for(const e in ks){if(void 0===a[e])continue;const{correct:t,applyTo:r}=ks[e],s="none"===n.transform?a[e]:t(a[e],o);if(r){const e=r.length;for(let t=0;t<e;t++)n[r[t]]=s;}else n[e]=s;}return this.options.layoutId&&(n.pointerEvents=o===this?Io(e.pointerEvents)||"":"none"),n}clearSnapshot(){this.resumeFrom=this.snapshot=void 0;}resetTree(){this.root.nodes.forEach((e=>{var t;return null===(t=e.currentAnimation)||void 0===t?void 0:t.stop()})),this.root.nodes.forEach(cc),this.root.sharedNodes.clear();}}}function oc(e){e.updateLayout();}function ac(e){var t;const r=(null===(t=e.resumeFrom)||void 0===t?void 0:t.snapshot)||e.snapshot;if(e.isLead()&&e.layout&&r&&e.hasListeners("didUpdate")){const{layoutBox:t,measuredBox:n}=e.layout,{animationType:s}=e.options,o=r.source!==e.layout.source;"size"===s?nu((e=>{const n=o?r.measuredBox[e]:r.layoutBox[e],s=Ul(n);n.min=t[e].min,n.max=n.min+s;})):Ec(s,r.layoutBox,t)&&nu((n=>{const s=o?r.measuredBox[n]:r.layoutBox[n],a=Ul(t[n]);s.max=s.min+a,e.relativeTarget&&!e.currentAnimation&&(e.isProjectionDirty=!0,e.relativeTarget[n].max=e.relativeTarget[n].min+a);}));const a=tu();_l(a,t,r.layoutBox);const i=tu();o?_l(i,e.applyTransform(n,!0),r.measuredBox):_l(i,t,r.layoutBox);const l=!qu(a);let u=!1;if(!e.resumeFrom){const n=e.getClosestProjectingParent();if(n&&!n.resumeFrom){const{snapshot:s,layout:o}=n;if(s&&o){const a=ru();Yl(a,r.layoutBox,s.layoutBox);const i=ru();Yl(i,t,o.layoutBox),Yu(a,i)||(u=!0),n.options.layoutRoot&&(e.relativeTarget=i,e.relativeTargetOrigin=a,e.relativeParent=n);}}}e.notifyListeners("didUpdate",{layout:t,snapshot:r,delta:i,layoutDelta:a,hasLayoutChanged:l,hasRelativeTargetChanged:u});}else if(e.isLead()){const{onExitComplete:t}=e.options;t&&t();}e.options.transition=void 0;}function ic(e){nc.totalNodes++,e.parent&&(e.isProjecting()||(e.isProjectionDirty=e.parent.isProjectionDirty),e.isSharedProjectionDirty||(e.isSharedProjectionDirty=Boolean(e.isProjectionDirty||e.parent.isProjectionDirty||e.parent.isSharedProjectionDirty)),e.isTransformDirty||(e.isTransformDirty=e.parent.isTransformDirty));}function lc(e){e.isProjectionDirty=e.isSharedProjectionDirty=e.isTransformDirty=!1;}function uc(e){e.clearSnapshot();}function cc(e){e.clearMeasurements();}function dc(e){e.isLayoutDirty=!1;}function pc(e){const{visualElement:t}=e.options;t&&t.getProps().onBeforeLayoutMeasure&&t.notify("BeforeLayoutMeasure"),e.resetTransform();}function hc(e){e.finishAnimation(),e.targetDelta=e.relativeTarget=e.target=void 0,e.isProjectionDirty=!0;}function fc(e){e.resolveTargetDelta();}function mc(e){e.calcProjection();}function gc(e){e.resetRotation();}function vc(e){e.removeLeadSnapshot();}function yc(e,t,r){e.translate=Xa(t.translate,0,r),e.scale=Xa(t.scale,1,r),e.origin=t.origin,e.originPoint=t.originPoint;}function bc(e,t,r,n){e.min=Xa(t.min,r.min,n),e.max=Xa(t.max,r.max,n);}function xc(e){return e.animationValues&&void 0!==e.animationValues.opacityExit}const wc={duration:.45,ease:[.4,0,.1,1]},Pc=e=>"undefined"!=typeof navigator&&navigator.userAgent.toLowerCase().includes(e),Tc=Pc("applewebkit/")&&!Pc("chrome/")?Math.round:Ko;function Cc(e){e.min=Tc(e.min),e.max=Tc(e.max);}function Ec(e,t,r){return "position"===e||"preserve-aspect"===e&&!Hl(Xu(t),Xu(r),.2)}const Sc=sc({attachResizeListener:(e,t)=>Uo(e,"resize",t),measureScroll:()=>({x:document.documentElement.scrollLeft||document.body.scrollLeft,y:document.documentElement.scrollTop||document.body.scrollTop}),checkIsScrollRoot:()=>!0}),kc={current:void 0},Mc=sc({measureScroll:e=>({x:e.scrollLeft,y:e.scrollTop}),defaultParent:()=>{if(!kc.current){const e=new Sc({});e.mount(window),e.setOptions({layoutScroll:!0}),kc.current=e;}return kc.current},resetTransform:(e,t)=>{e.style.transform=void 0!==t?t:"none";},checkIsScrollRoot:e=>Boolean("fixed"===window.getComputedStyle(e).position)}),Ac={pan:{Feature:class extends ta{constructor(){super(...arguments),this.removePointerDownListener=Ko;}onPointerDown(e){this.session=new Nl(e,this.createPanHandlers(),{transformPagePoint:this.node.getTransformPagePoint()});}createPanHandlers(){const{onPanSessionStart:e,onPanStart:t,onPan:r,onPanEnd:n}=this.node.getProps();return {onSessionStart:Cu(e),onStart:Cu(t),onMove:r,onEnd:(e,t)=>{delete this.session,n&&jo.update((()=>n(e,t)));}}}mount(){this.removePointerDownListener=Go(this.node.current,"pointerdown",(e=>this.onPointerDown(e)));}update(){this.session&&this.session.updateHandlers(this.createPanHandlers());}unmount(){this.removePointerDownListener(),this.session&&this.session.end();}}},drag:{Feature:class extends ta{constructor(e){super(e),this.removeGroupControls=Ko,this.removeListeners=Ko,this.controls=new Pu(e);}mount(){const{dragControls:e}=this.node.getProps();e&&(this.removeGroupControls=e.subscribe(this.controls)),this.removeListeners=this.controls.addListeners()||Ko;}unmount(){this.removeGroupControls(),this.removeListeners();}},ProjectionNode:Mc,MeasureLayout:Du}},Dc=/var\((--[a-zA-Z0-9-_]+),? ?([a-zA-Z0-9 ()%#.,-]+)?\)/;const Ic=4;function Vc(e,t,r=1){ga(r<=Ic,`Max CSS variable fallback depth detected in property "${e}". This may indicate a circular fallback dependency.`);const[n,s]=function(e){const t=Dc.exec(e);if(!t)return [,];const[,r,n]=t;return [r,n]}(e);if(!n)return;const o=window.getComputedStyle(t).getPropertyValue(n);if(o){const e=o.trim();return ul(e)?parseFloat(e):e}return Ns(s)?Vc(s,t,r+1):s}const Lc=new Set(["width","height","top","left","right","bottom","x","y","translateX","translateY"]),Kc=e=>Lc.has(e),Rc=e=>e===Os||e===Xs,Nc=(e,t)=>parseFloat(e.split(", ")[t]),jc=(e,t)=>(r,{transform:n})=>{if("none"===n||!n)return 0;const s=n.match(/^matrix3d\((.+)\)$/);if(s)return Nc(s[1],t);{const t=n.match(/^matrix\((.+)\)$/);return t?Nc(t[1],e):0}},Fc=new Set(["x","y","z"]),Oc=Ms.filter((e=>!Fc.has(e)));const Bc={width:({x:e},{paddingLeft:t="0",paddingRight:r="0"})=>e.max-e.min-parseFloat(t)-parseFloat(r),height:({y:e},{paddingTop:t="0",paddingBottom:r="0"})=>e.max-e.min-parseFloat(t)-parseFloat(r),top:(e,{top:t})=>parseFloat(t),left:(e,{left:t})=>parseFloat(t),bottom:({y:e},{top:t})=>parseFloat(t)+(e.max-e.min),right:({x:e},{left:t})=>parseFloat(t)+(e.max-e.min),x:jc(4,13),y:jc(5,14)};Bc.translateX=Bc.x,Bc.translateY=Bc.y;const Wc=(e,t,r={},n={})=>{t={...t},n={...n};const s=Object.keys(t).filter(Kc);let o=[],a=!1;const i=[];if(s.forEach((s=>{const l=e.getValue(s);if(!e.hasValue(s))return;let u=r[s],c=bl(u);const d=t[s];let p;if(Mo(d)){const e=d.length,t=null===d[0]?1:0;u=d[t],c=bl(u);for(let r=t;r<e&&null!==d[r];r++)p?ga(bl(d[r])===p,"All keyframes must be of the same type"):(p=bl(d[r]),ga(p===c||Rc(c)&&Rc(p),"Keyframes must be of the same dimension as the current value"));}else p=bl(d);if(c!==p)if(Rc(c)&&Rc(p)){const e=l.get();"string"==typeof e&&l.set(parseFloat(e)),"string"==typeof d?t[s]=parseFloat(d):Array.isArray(d)&&p===Xs&&(t[s]=d.map(parseFloat));}else (null==c?void 0:c.transform)&&(null==p?void 0:p.transform)&&(0===u||0===d)?0===u?l.set(p.transform(u)):t[s]=c.transform(d):(a||(o=function(e){const t=[];return Oc.forEach((r=>{const n=e.getValue(r);void 0!==n&&(t.push([r,n.get()]),n.set(r.startsWith("scale")?1:0));})),t.length&&e.render(),t}(e),a=!0),i.push(s),n[s]=void 0!==n[s]?n[s]:t[s],l.jump(d));})),i.length){const r=i.indexOf("height")>=0?window.pageYOffset:null,s=((e,t,r)=>{const n=t.measureViewportBox(),s=t.current,o=getComputedStyle(s),{display:a}=o,i={};"none"===a&&t.setStaticValue("display",e.display||"block"),r.forEach((e=>{i[e]=Bc[e](n,o);})),t.render();const l=t.measureViewportBox();return r.forEach((r=>{const n=t.getValue(r);n&&n.jump(i[r]),e[r]=Bc[r](l,o);})),e})(t,e,i);return o.length&&o.forEach((([t,r])=>{e.getValue(t).set(r);})),e.render(),os&&null!==r&&window.scrollTo({top:r}),{target:s,transitionEnd:n}}return {target:t,transitionEnd:n}};function zc(e,t,r,n){return (e=>Object.keys(e).some(Kc))(t)?Wc(e,t,r,n):{target:t,transitionEnd:n}}const Uc=(e,t,r,n)=>{const s=function(e,{...t},r){const n=e.current;if(!(n instanceof Element))return {target:t,transitionEnd:r};r&&(r={...r}),e.values.forEach((e=>{const t=e.get();if(!Ns(t))return;const r=Vc(t,n);r&&e.set(r);}));for(const e in t){const s=t[e];if(!Ns(s))continue;const o=Vc(s,n);o&&(t[e]=o,r||(r={}),void 0===r[e]&&(r[e]=s));}return {target:t,transitionEnd:r}}(e,t,n);return zc(e,t=s.target,r,n=s.transitionEnd)},Hc={current:null},$c={current:!1};const _c=new WeakMap,Gc=Object.keys(ys),qc=Gc.length,Yc=["AnimationStart","AnimationComplete","Update","BeforeLayoutMeasure","LayoutMeasure","LayoutAnimationStart","LayoutAnimationComplete"],Xc=ps.length;class Zc{constructor({parent:e,props:t,presenceContext:r,reducedMotionConfig:n,visualState:s},o={}){this.current=null,this.children=new Set,this.isVariantNode=!1,this.isControllingVariants=!1,this.shouldReduceMotion=null,this.values=new Map,this.features={},this.valueSubscriptions=new Map,this.prevMotionValues={},this.events={},this.propEventSubscriptions={},this.notifyUpdate=()=>this.notify("Update",this.latestValues),this.render=()=>{this.current&&(this.triggerBuild(),this.renderInstance(this.current,this.renderState,this.props.style,this.projection));},this.scheduleRender=()=>jo.render(this.render,!1,!0);const{latestValues:a,renderState:i}=s;this.latestValues=a,this.baseTarget={...a},this.initialValues=t.initial?{...a}:{},this.renderState=i,this.parent=e,this.props=t,this.presenceContext=r,this.depth=e?e.depth+1:0,this.reducedMotionConfig=n,this.options=o,this.isControllingVariants=hs(t),this.isVariantNode=fs(t),this.isVariantNode&&(this.variantChildren=new Set),this.manuallyAnimateOnMount=Boolean(e&&e.current);const{willChange:l,...u}=this.scrapeMotionValuesFromProps(t,{});for(const e in u){const t=u[e];void 0!==a[e]&&Is(t)&&(t.set(a[e],!1),ll(l)&&l.add(e));}}scrapeMotionValuesFromProps(e,t){return {}}mount(e){this.current=e,_c.set(e,this),this.projection&&!this.projection.instance&&this.projection.mount(e),this.parent&&this.isVariantNode&&!this.isControllingVariants&&(this.removeFromVariantTree=this.parent.addVariantChild(this)),this.values.forEach(((e,t)=>this.bindToMotionValue(t,e))),$c.current||function(){if($c.current=!0,os)if(window.matchMedia){const e=window.matchMedia("(prefers-reduced-motion)"),t=()=>Hc.current=e.matches;e.addListener(t),t();}else Hc.current=!1;}(),this.shouldReduceMotion="never"!==this.reducedMotionConfig&&("always"===this.reducedMotionConfig||Hc.current),"production"!==process.env.NODE_ENV&&fl(!0!==this.shouldReduceMotion,"You have Reduced Motion enabled on your device. Animations may not appear as expected."),this.parent&&this.parent.children.add(this),this.update(this.props,this.presenceContext);}unmount(){_c.delete(this.current),this.projection&&this.projection.unmount(),Fo(this.notifyUpdate),Fo(this.render),this.valueSubscriptions.forEach((e=>e())),this.removeFromVariantTree&&this.removeFromVariantTree(),this.parent&&this.parent.children.delete(this);for(const e in this.events)this.events[e].clear();for(const e in this.features)this.features[e].unmount();this.current=null;}bindToMotionValue(e,t){const r=As.has(e),n=t.on("change",(t=>{this.latestValues[e]=t,this.props.onUpdate&&jo.update(this.notifyUpdate,!1,!0),r&&this.projection&&(this.projection.isTransformDirty=!0);})),s=t.on("renderRequest",this.scheduleRender);this.valueSubscriptions.set(e,(()=>{n(),s();}));}sortNodePosition(e){return this.current&&this.sortInstanceNodePosition&&this.type===e.type?this.sortInstanceNodePosition(this.current,e.current):0}loadFeatures({children:e,...t},r,n,s){let o,a;if("production"!==process.env.NODE_ENV&&n&&r){const e="You have rendered a `motion` component within a `LazyMotion` component. This will break tree shaking. Import and render a `m` component instead.";t.ignoreStrict?ma(!1,e):ga(!1,e);}for(let e=0;e<qc;e++){const r=Gc[e],{isEnabled:n,Feature:s,ProjectionNode:i,MeasureLayout:l}=ys[r];i&&(o=i),n(t)&&(!this.features[r]&&s&&(this.features[r]=new s(this)),l&&(a=l));}if(!this.projection&&o){this.projection=new o(this.latestValues,this.parent&&this.parent.projection);const{layoutId:e,layout:r,drag:n,dragConstraints:a,layoutScroll:i,layoutRoot:l}=t;this.projection.setOptions({layoutId:e,layout:r,alwaysMeasureLayout:Boolean(n)||a&&ls(a),visualElement:this,scheduleRender:()=>this.scheduleRender(),animationType:"string"==typeof r?r:"both",initialPromotionConfig:s,layoutScroll:i,layoutRoot:l});}return a}updateFeatures(){for(const e in this.features){const t=this.features[e];t.isMounted?t.update():(t.mount(),t.isMounted=!0);}}triggerBuild(){this.build(this.renderState,this.latestValues,this.options,this.props);}measureViewportBox(){return this.current?this.measureInstanceViewportBox(this.current,this.props):ru()}getStaticValue(e){return this.latestValues[e]}setStaticValue(e,t){this.latestValues[e]=t;}makeTargetAnimatable(e,t=!0){return this.makeTargetAnimatableFromInstance(e,this.props,t)}update(e,t){(e.transformTemplate||this.props.transformTemplate)&&this.scheduleRender(),this.prevProps=this.props,this.props=e,this.prevPresenceContext=this.presenceContext,this.presenceContext=t;for(let t=0;t<Yc.length;t++){const r=Yc[t];this.propEventSubscriptions[r]&&(this.propEventSubscriptions[r](),delete this.propEventSubscriptions[r]);const n=e["on"+r];n&&(this.propEventSubscriptions[r]=this.on(r,n));}this.prevMotionValues=function(e,t,r){const{willChange:n}=t;for(const s in t){const o=t[s],a=r[s];if(Is(o))e.addValue(s,o),ll(n)&&n.add(s),"development"===process.env.NODE_ENV&&fl("10.16.5"===o.version,`Attempting to mix Framer Motion versions ${o.version} with 10.16.5 may not work as expected.`);else if(Is(a))e.addValue(s,gl(o,{owner:e})),ll(n)&&n.remove(s);else if(a!==o)if(e.hasValue(s)){const t=e.getValue(s);!t.hasAnimated&&t.set(o);}else {const t=e.getStaticValue(s);e.addValue(s,gl(void 0!==t?t:o,{owner:e}));}}for(const n in r)void 0===t[n]&&e.removeValue(n);return t}(this,this.scrapeMotionValuesFromProps(e,this.prevProps),this.prevMotionValues),this.handleChildMotionValue&&this.handleChildMotionValue();}getProps(){return this.props}getVariant(e){return this.props.variants?this.props.variants[e]:void 0}getDefaultTransition(){return this.props.transition}getTransformPagePoint(){return this.props.transformPagePoint}getClosestVariantNode(){return this.isVariantNode?this:this.parent?this.parent.getClosestVariantNode():void 0}getVariantContext(e=!1){if(e)return this.parent?this.parent.getVariantContext():void 0;if(!this.isControllingVariants){const e=this.parent&&this.parent.getVariantContext()||{};return void 0!==this.props.initial&&(e.initial=this.props.initial),e}const t={};for(let e=0;e<Xc;e++){const r=ps[e],n=this.props[r];(us(n)||!1===n)&&(t[r]=n);}return t}addVariantChild(e){const t=this.getClosestVariantNode();if(t)return t.variantChildren&&t.variantChildren.add(e),()=>t.variantChildren.delete(e)}addValue(e,t){t!==this.values.get(e)&&(this.removeValue(e),this.bindToMotionValue(e,t)),this.values.set(e,t),this.latestValues[e]=t.get();}removeValue(e){this.values.delete(e);const t=this.valueSubscriptions.get(e);t&&(t(),this.valueSubscriptions.delete(e)),delete this.latestValues[e],this.removeValueFromRenderState(e,this.renderState);}hasValue(e){return this.values.has(e)}getValue(e,t){if(this.props.values&&this.props.values[e])return this.props.values[e];let r=this.values.get(e);return void 0===r&&void 0!==t&&(r=gl(t,{owner:this}),this.addValue(e,r)),r}readValue(e){var t;return void 0===this.latestValues[e]&&this.current?null!==(t=this.getBaseTargetFromProps(this.props,e))&&void 0!==t?t:this.readValueFromInstance(this.current,e,this.options):this.latestValues[e]}setBaseTarget(e,t){this.baseTarget[e]=t;}getBaseTarget(e){var t;const{initial:r}=this.props,n="string"==typeof r||"object"==typeof r?null===(t=So(this.props,r))||void 0===t?void 0:t[e]:void 0;if(r&&void 0!==n)return n;const s=this.getBaseTargetFromProps(this.props,e);return void 0===s||Is(s)?void 0!==this.initialValues[e]&&void 0===n?void 0:this.baseTarget[e]:s}on(e,t){return this.events[e]||(this.events[e]=new pl),this.events[e].add(t)}notify(e,...t){this.events[e]&&this.events[e].notify(...t);}}class Jc extends Zc{sortInstanceNodePosition(e,t){return 2&e.compareDocumentPosition(t)?1:-1}getBaseTargetFromProps(e,t){return e.style?e.style[t]:void 0}removeValueFromRenderState(e,{vars:t,style:r}){delete t[e],delete r[e];}makeTargetAnimatableFromInstance({transition:e,transitionEnd:t,...r},{transformValues:n},s){let o=function(e,t,r){const n={};for(const s in e){const e=Pl(s,t);if(void 0!==e)n[s]=e;else {const e=r.getValue(s);e&&(n[s]=e.get());}}return n}(r,e||{},this);if(n&&(t&&(t=n(t)),r&&(r=n(r)),o&&(o=n(o))),s){!function(e,t,r){var n,s;const o=Object.keys(t).filter((t=>!e.hasValue(t))),a=o.length;var i;if(a)for(let l=0;l<a;l++){const a=o[l],u=t[a];let c=null;Array.isArray(u)&&(c=u[0]),null===c&&(c=null!==(s=null!==(n=r[a])&&void 0!==n?n:e.readValue(a))&&void 0!==s?s:t[a]),null!=c&&("string"==typeof c&&(ul(c)||sl(c))?c=parseFloat(c):(i=c,!xl.find(vl(i))&&ci.test(u)&&(c=nl(a,u))),e.addValue(a,gl(c,{owner:e})),void 0===r[a]&&(r[a]=c),null!==c&&e.setBaseTarget(a,c));}}(this,r,o);const e=Uc(this,r,o,t);t=e.transitionEnd,r=e.target;}return {transition:e,transitionEnd:t,...r}}}class Qc extends Jc{readValueFromInstance(e,t){if(As.has(t)){const e=rl(t);return e&&e.default||0}{const n=(r=e,window.getComputedStyle(r)),s=(Rs(t)?n.getPropertyValue(t):n[t])||0;return "string"==typeof s?s.trim():s}var r;}measureInstanceViewportBox(e,{transformPagePoint:t}){return xu(e,t)}build(e,t,r,n){ro(e,t,r,n.transformTemplate);}scrapeMotionValuesFromProps(e,t){return Co(e,t)}handleChildMotionValue(){this.childSubscription&&(this.childSubscription(),delete this.childSubscription);const{children:e}=this.props;Is(e)&&(this.childSubscription=e.on("change",(e=>{this.current&&(this.current.textContent=`${e}`);})));}renderInstance(e,t,r,n){wo(e,t,r,n);}}class ed extends Jc{constructor(){super(...arguments),this.isSVGTag=!1;}getBaseTargetFromProps(e,t){return e[t]}readValueFromInstance(e,t){if(As.has(t)){const e=rl(t);return e&&e.default||0}return t=Po.has(t)?t:xo(t),e.getAttribute(t)}measureInstanceViewportBox(){return ru()}scrapeMotionValuesFromProps(e,t){return Eo(e,t)}build(e,t,r,n){mo(e,t,r,this.isSVGTag,n.transformTemplate);}renderInstance(e,t,r,n){To(e,t,0,n);}mount(e){this.isSVGTag=vo(e.tagName),super.mount(e);}}const td=(e,t)=>Ss(e)?new ed(t,{enableHardwareAcceleration:!1}):new Qc(t,{enableHardwareAcceleration:!0}),rd={...Kl,...da,...Ac,...{layout:{ProjectionNode:Mc,MeasureLayout:Du}}},nd=Cs(((e,t)=>function(e,{forwardMotionProps:t=!1},r,n){return {...Ss(e)?Wo:zo,preloadedFeatures:r,useRender:bo(t),createVisualElement:n,Component:e}}(e,t,rd,td)));function sd(){const e=t.useRef(!1);return as((()=>(e.current=!0,()=>{e.current=!1;})),[]),e}function od(){const e=sd(),[r,n]=t.useState(0),s=t.useCallback((()=>{e.current&&n(r+1);}),[r]);return [t.useCallback((()=>jo.postRender(s)),[s]),r]}class ad extends s.Component{getSnapshotBeforeUpdate(e){const t=this.props.childRef.current;if(t&&e.isPresent&&!this.props.isPresent){const e=this.props.sizeRef.current;e.height=t.offsetHeight||0,e.width=t.offsetWidth||0,e.top=t.offsetTop,e.left=t.offsetLeft;}return null}componentDidUpdate(){}render(){return this.props.children}}function id({children:e,isPresent:r}){const n=t.useId(),o=t.useRef(null),a=t.useRef({width:0,height:0,top:0,left:0});return t.useInsertionEffect((()=>{const{width:e,height:t,top:s,left:i}=a.current;if(r||!o.current||!e||!t)return;o.current.dataset.motionPopId=n;const l=document.createElement("style");return document.head.appendChild(l),l.sheet&&l.sheet.insertRule(`\n          [data-motion-pop-id="${n}"] {\n            position: absolute !important;\n            width: ${e}px !important;\n            height: ${t}px !important;\n            top: ${s}px !important;\n            left: ${i}px !important;\n          }\n        `),()=>{document.head.removeChild(l);}}),[r]),s.createElement(ad,{isPresent:r,childRef:o,sizeRef:a},s.cloneElement(e,{ref:o}))}const ld=({children:e,initial:r,isPresent:n,onExitComplete:o,custom:a,presenceAffectsLayout:i,mode:l})=>{const u=ko(ud),c=t.useId(),d=t.useMemo((()=>({id:c,initial:r,isPresent:n,custom:a,onExitComplete:e=>{u.set(e,!0);for(const e of u.values())if(!e)return;o&&o();},register:e=>(u.set(e,!1),()=>u.delete(e))})),i?void 0:[n]);return t.useMemo((()=>{u.forEach(((e,t)=>u.set(t,!1)));}),[n]),s.useEffect((()=>{!n&&!u.size&&o&&o();}),[n]),"popLayout"===l&&(e=s.createElement(id,{isPresent:n},e)),s.createElement(ss.Provider,{value:d},e)};function ud(){return new Map}const cd=e=>e.key||"";const dd=({children:e,custom:r,initial:n=!0,onExitComplete:o,exitBeforeEnter:a,presenceAffectsLayout:i=!0,mode:l="sync"})=>{ga(!a,"Replace exitBeforeEnter with mode='wait'");const u=t.useContext(bs).forceRender||od()[0],c=sd(),d=function(e){const r=[];return t.Children.forEach(e,(e=>{t.isValidElement(e)&&r.push(e);})),r}(e);let p=d;const h=t.useRef(new Map).current,f=t.useRef(p),m=t.useRef(new Map).current,g=t.useRef(!0);var v;if(as((()=>{g.current=!1,function(e,t){e.forEach((e=>{const r=cd(e);t.set(r,e);}));}(d,m),f.current=p;})),v=()=>{g.current=!0,m.clear(),h.clear();},t.useEffect((()=>()=>v()),[]),g.current)return s.createElement(s.Fragment,null,p.map((e=>s.createElement(ld,{key:cd(e),isPresent:!0,initial:!!n&&void 0,presenceAffectsLayout:i,mode:l},e))));p=[...p];const y=f.current.map(cd),b=d.map(cd),x=y.length;for(let e=0;e<x;e++){const t=y[e];-1!==b.indexOf(t)||h.has(t)||h.set(t,void 0);}return "wait"===l&&h.size&&(p=[]),h.forEach(((e,t)=>{if(-1!==b.indexOf(t))return;const n=m.get(t);if(!n)return;const a=y.indexOf(t);let g=e;if(!g){const e=()=>{h.delete(t);const e=Array.from(m.keys()).filter((e=>!b.includes(e)));if(e.forEach((e=>m.delete(e))),f.current=d.filter((r=>{const n=cd(r);return n===t||e.includes(n)})),!h.size){if(!1===c.current)return;u(),o&&o();}};g=s.createElement(ld,{key:cd(n),isPresent:!1,onExitComplete:e,custom:r,presenceAffectsLayout:i,mode:l},n),h.set(t,g);}p.splice(a,0,g);})),p=p.map((e=>{const t=e.key;return h.has(t)?e:s.createElement(ld,{key:cd(e),isPresent:!0,presenceAffectsLayout:i,mode:l},e)})),"production"!==process.env.NODE_ENV&&"wait"===l&&p.length>1&&console.warn('You\'re attempting to animate multiple children within AnimatePresence, but its mode is set to "wait". This will lead to odd visual behaviour.'),s.createElement(s.Fragment,null,h.size?p:p.map((e=>t.cloneElement(e))))},pd=t.createContext(null),hd=e=>!e.isLayoutDirty&&e.willUpdate(!1);function fd(){const e=new Set,t=new WeakMap,r=()=>e.forEach(hd);return {add:n=>{e.add(n),t.set(n,n.addEventListener("willUpdate",r));},remove:n=>{e.delete(n);const s=t.get(n);s&&(s(),t.delete(n)),r();},dirty:r}}const md=e=>!0===e,gd=({children:e,id:r,inherit:n=!0})=>{const o=t.useContext(bs),a=t.useContext(pd),[i,l]=od(),u=t.useRef(null),c=o.id||a;null===u.current&&((e=>md(!0===e)||"id"===e)(n)&&c&&(r=r?c+"-"+r:c),u.current={id:r,group:md(n)&&o.group||fd()});const d=t.useMemo((()=>({...u.current,forceRender:i})),[l]);return s.createElement(bs.Provider,{value:d},e)};class xd{build(e,t){return this.context=t,wd((()=>this.iterateCollection(e)))}*iterateCollection(e){let{children:r,items:n}=e;if("function"==typeof r){if(!n)throw new Error("props.children was a function but props.items is missing");for(let t of e.items)yield*this.getFullNode({value:t},{renderer:r});}else {let e=[];t.Children.forEach(r,(t=>{e.push(t);}));let n=0;for(let t of e){let e=this.getFullNode({element:t,index:n},{});for(let t of e)n++,yield t;}}}getKey(e,t,r,n){if(null!=e.key)return e.key;if("cell"===t.type&&null!=t.key)return `${n}${t.key}`;let s=t.value;if(null!=s){var o;let e=null!==(o=s.key)&&void 0!==o?o:s.id;if(null==e)throw new Error("No key found for item");return e}return n?`${n}.${t.index}`:`$.${t.index}`}getChildState(e,t){return {renderer:t.renderer||e.renderer}}*getFullNode(e,r,n,s){let o=e.element;if(!o&&e.value&&r&&r.renderer){let t=this.cache.get(e.value);if(t&&(!t.shouldInvalidate||!t.shouldInvalidate(this.context)))return t.index=e.index,t.parentKey=s?s.key:null,void(yield t);o=r.renderer(e.value);}if(t.isValidElement(o)){let t=o.type;if("function"!=typeof t&&"function"!=typeof t.getCollectionNode){let e="function"==typeof o.type?o.type.name:o.type;throw new Error(`Unknown element <${e}> in collection.`)}let a=t.getCollectionNode(o.props,this.context),i=e.index,l=a.next();for(;!l.done&&l.value;){let t=l.value;e.index=i;let u=t.key;u||(u=t.element?null:this.getKey(o,e,r,n));let c=[...this.getFullNode({...t,key:u,index:i,wrapper:Pd(e.wrapper,t.wrapper)},this.getChildState(r,t),n?`${n}${o.key}`:o.key,s)];for(let r of c){if(r.value=t.value||e.value,r.value&&this.cache.set(r.value,r),e.type&&r.type!==e.type)throw new Error(`Unsupported type <${Td(r.type)}> in <${Td(s.type)}>. Only <${Td(e.type)}> is supported.`);i++,yield r;}l=a.next(c);}return}if(null==e.key)return;let a=this,i={type:e.type,props:e.props,key:e.key,parentKey:s?s.key:null,value:e.value,level:s?s.level+1:0,index:e.index,rendered:e.rendered,textValue:e.textValue,"aria-label":e["aria-label"],wrapper:e.wrapper,shouldInvalidate:e.shouldInvalidate,hasChildNodes:e.hasChildNodes,childNodes:wd((function*(){if(!e.hasChildNodes)return;let t=0;for(let n of e.childNodes()){null!=n.key&&(n.key=`${i.key}${n.key}`),n.index=t;let e=a.getFullNode(n,a.getChildState(r,n),i.key,i);for(let r of e)t++,yield r;}}))};yield i;}constructor(){this.cache=new WeakMap;}}function wd(e){let t=[],r=null;return {*[Symbol.iterator](){for(let e of t)yield e;r||(r=e());for(let e of r)t.push(e),yield e;}}}function Pd(e,t){return e&&t?r=>e(t(r)):e||(t||void 0)}function Td(e){return e[0].toUpperCase()+e.slice(1)}function Cd(e){return function(e,t){if(t<0)return;let r=0;for(let n of e){if(r===t)return n;r++;}}(e,0)}function Ed(e,t,r){if(t.parentKey===r.parentKey)return t.index-r.index;let n=[...Sd(e,t),t],s=[...Sd(e,r),r],o=n.slice(0,s.length).findIndex(((e,t)=>e!==s[t]));return -1!==o?(t=n[o],r=s[o],t.index-r.index):n.findIndex((e=>e===r))>=0?1:(s.findIndex((e=>e===t)),-1)}function Sd(e,t){let r=[];for(;null!=(null==t?void 0:t.parentKey);)t=e.getItem(t.parentKey),r.unshift(t);return r}class kd extends Set{constructor(e,t,r){super(e),e instanceof kd?(this.anchorKey=t||e.anchorKey,this.currentKey=r||e.currentKey):(this.anchorKey=t,this.currentKey=r);}}function Md(e,t){return e?"all"===e?"all":new kd(e):t}class Ad{get selectionMode(){return this.state.selectionMode}get disallowEmptySelection(){return this.state.disallowEmptySelection}get selectionBehavior(){return this.state.selectionBehavior}setSelectionBehavior(e){this.state.setSelectionBehavior(e);}get isFocused(){return this.state.isFocused}setFocused(e){this.state.setFocused(e);}get focusedKey(){return this.state.focusedKey}get childFocusStrategy(){return this.state.childFocusStrategy}setFocusedKey(e,t){(null==e||this.collection.getItem(e))&&this.state.setFocusedKey(e,t);}get selectedKeys(){return "all"===this.state.selectedKeys?new Set(this.getSelectAllKeys()):this.state.selectedKeys}get rawSelection(){return this.state.selectedKeys}isSelected(e){return "none"!==this.state.selectionMode&&(e=this.getKey(e),"all"===this.state.selectedKeys?this.canSelectItem(e):this.state.selectedKeys.has(e))}get isEmpty(){return "all"!==this.state.selectedKeys&&0===this.state.selectedKeys.size}get isSelectAll(){if(this.isEmpty)return !1;if("all"===this.state.selectedKeys)return !0;if(null!=this._isSelectAll)return this._isSelectAll;let e=this.getSelectAllKeys(),t=this.state.selectedKeys;return this._isSelectAll=e.every((e=>t.has(e))),this._isSelectAll}get firstSelectedKey(){let e=null;for(let t of this.state.selectedKeys){let r=this.collection.getItem(t);(!e||r&&Ed(this.collection,r,e)<0)&&(e=r);}return null==e?void 0:e.key}get lastSelectedKey(){let e=null;for(let t of this.state.selectedKeys){let r=this.collection.getItem(t);(!e||r&&Ed(this.collection,r,e)>0)&&(e=r);}return null==e?void 0:e.key}get disabledKeys(){return this.state.disabledKeys}get disabledBehavior(){return this.state.disabledBehavior}extendSelection(e){if("none"===this.selectionMode)return;if("single"===this.selectionMode)return void this.replaceSelection(e);let t;if(e=this.getKey(e),"all"===this.state.selectedKeys)t=new kd([e],e,e);else {let r=this.state.selectedKeys,n=r.anchorKey||e;t=new kd(r,n,e);for(let s of this.getKeyRange(n,r.currentKey||e))t.delete(s);for(let r of this.getKeyRange(e,n))this.canSelectItem(r)&&t.add(r);}this.state.setSelectedKeys(t);}getKeyRange(e,t){let r=this.collection.getItem(e),n=this.collection.getItem(t);return r&&n?Ed(this.collection,r,n)<=0?this.getKeyRangeInternal(e,t):this.getKeyRangeInternal(t,e):[]}getKeyRangeInternal(e,t){let r=[],n=e;for(;n;){let e=this.collection.getItem(n);if((e&&"item"===e.type||"cell"===e.type&&this.allowsCellSelection)&&r.push(n),n===t)return r;n=this.collection.getKeyAfter(n);}return []}getKey(e){let t=this.collection.getItem(e);if(!t)return e;if("cell"===t.type&&this.allowsCellSelection)return e;for(;"item"!==t.type&&null!=t.parentKey;)t=this.collection.getItem(t.parentKey);return t&&"item"===t.type?t.key:null}toggleSelection(e){if("none"===this.selectionMode)return;if("single"===this.selectionMode&&!this.isSelected(e))return void this.replaceSelection(e);if(null==(e=this.getKey(e)))return;let t=new kd("all"===this.state.selectedKeys?this.getSelectAllKeys():this.state.selectedKeys);t.has(e)?t.delete(e):this.canSelectItem(e)&&(t.add(e),t.anchorKey=e,t.currentKey=e),this.disallowEmptySelection&&0===t.size||this.state.setSelectedKeys(t);}replaceSelection(e){if("none"===this.selectionMode)return;if(null==(e=this.getKey(e)))return;let t=this.canSelectItem(e)?new kd([e],e,e):new kd;this.state.setSelectedKeys(t);}setSelectedKeys(e){if("none"===this.selectionMode)return;let t=new kd;for(let r of e)if(r=this.getKey(r),null!=r&&(t.add(r),"single"===this.selectionMode))break;this.state.setSelectedKeys(t);}getSelectAllKeys(){let e=[],t=r=>{for(;r;){if(this.canSelectItem(r)){let o=this.collection.getItem(r);"item"===o.type&&e.push(r),o.hasChildNodes&&(this.allowsCellSelection||"item"!==o.type)&&t(Cd((n=o,s=this.collection,"function"==typeof s.getChildren?s.getChildren(n.key):n.childNodes)).key);}r=this.collection.getKeyAfter(r);}var n,s;};return t(this.collection.getFirstKey()),e}selectAll(){this.isSelectAll||"multiple"!==this.selectionMode||this.state.setSelectedKeys("all");}clearSelection(){!this.disallowEmptySelection&&("all"===this.state.selectedKeys||this.state.selectedKeys.size>0)&&this.state.setSelectedKeys(new kd);}toggleSelectAll(){this.isSelectAll?this.clearSelection():this.selectAll();}select(e,t){"none"!==this.selectionMode&&("single"===this.selectionMode?this.isSelected(e)&&!this.disallowEmptySelection?this.toggleSelection(e):this.replaceSelection(e):"toggle"===this.selectionBehavior||t&&("touch"===t.pointerType||"virtual"===t.pointerType)?this.toggleSelection(e):this.replaceSelection(e));}isSelectionEqual(e){if(e===this.state.selectedKeys)return !0;let t=this.selectedKeys;if(e.size!==t.size)return !1;for(let r of e)if(!t.has(r))return !1;for(let r of t)if(!e.has(r))return !1;return !0}canSelectItem(e){if("none"===this.state.selectionMode||this.state.disabledKeys.has(e))return !1;let t=this.collection.getItem(e);return !(!t||"cell"===t.type&&!this.allowsCellSelection)}isDisabled(e){return this.state.disabledKeys.has(e)&&"all"===this.state.disabledBehavior}isLink(e){var t,r;return !!(null===(r=this.collection.getItem(e))||void 0===r||null===(t=r.props)||void 0===t?void 0:t.href)}constructor(e,t,r){var n;this.collection=e,this.state=t,this.allowsCellSelection=null!==(n=null==r?void 0:r.allowsCellSelection)&&void 0!==n&&n,this._isSelectAll=null;}}var Dd=()=>e.jsxs("svg",{"aria-hidden":"true",fill:"none",height:"80%",role:"presentation",viewBox:"0 0 24 24",width:"80%",children:[e.jsx("path",{d:"M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z",fill:"currentColor"}),e.jsx("path",{d:"M17.0809 14.1489C14.2909 12.2889 9.74094 12.2889 6.93094 14.1489C5.66094 14.9989 4.96094 16.1489 4.96094 17.3789C4.96094 18.6089 5.66094 19.7489 6.92094 20.5889C8.32094 21.5289 10.1609 21.9989 12.0009 21.9989C13.8409 21.9989 15.6809 21.5289 17.0809 20.5889C18.3409 19.7389 19.0409 18.5989 19.0409 17.3589C19.0309 16.1289 18.3409 14.9889 17.0809 14.1489Z",fill:"currentColor"})]}),[Id,Vd]=vn({name:"AvatarGroupContext",strict:!1}),Ld=Boolean(null==globalThis?void 0:globalThis.document)?t.useLayoutEffect:t.useEffect;function Kd(e={}){var r,n,s,o,a;const i=Vd(),l=!!i,{as:u,ref:c,src:d,name:p,icon:h,classNames:f,fallback:m,alt:g=p||"avatar",imgRef:v,color:y=(null!=(r=null==i?void 0:i.color)?r:"default"),radius:b=(null!=(n=null==i?void 0:i.radius)?n:"full"),size:x=(null!=(s=null==i?void 0:i.size)?s:"md"),isBordered:w=null!=(o=null==i?void 0:i.isBordered)&&o,isDisabled:P=null!=(a=null==i?void 0:i.isDisabled)&&a,isFocusable:T=!1,getInitials:C=un,ignoreFallback:E=!1,showFallback:S=!1,ImgComponent:k="img",imgProps:M,className:D,onError:I,...V}=e,L=u||"span",K=yn(c),R=yn(v),{isFocusVisible:N,isFocused:j,focusProps:F}=St(),{isHovered:O,hoverProps:B}=ht({isDisabled:P}),W=function(e={}){const{loading:r,src:n,srcSet:s,onLoad:o,onError:a,crossOrigin:i,sizes:l,ignoreFallback:u}=e,[c,d]=t.useState("pending");t.useEffect((()=>{d(n?"loading":"pending");}),[n]);const p=t.useRef(),h=t.useCallback((()=>{if(!n)return;f();const e=new Image;e.src=n,i&&(e.crossOrigin=i),s&&(e.srcset=s),l&&(e.sizes=l),r&&(e.loading=r),e.onload=e=>{f(),d("loaded"),null==o||o(e);},e.onerror=e=>{f(),d("failed"),null==a||a(e);},p.current=e;}),[n,i,s,l,o,a,r]),f=()=>{p.current&&(p.current.onload=null,p.current.onerror=null,p.current=null);};return Ld((()=>{if(!u)return "loading"===c&&h(),()=>{f();}}),[c,h,u]),u?"loaded":c}({src:d,onError:I,ignoreFallback:E}),z="loaded"===W,U=(!d||!z)&&S,H=t.useMemo((()=>{var e;return an({color:y,radius:b,size:x,isBordered:w,isDisabled:P,isInGroup:l,isInGridGroup:null!=(e=null==i?void 0:i.isGrid)&&e})}),[y,b,x,w,P,l,null==i?void 0:i.isGrid]),$=pn(null==f?void 0:f.base,D),_=t.useMemo((()=>T||"button"===u),[T,u]),G=t.useCallback(((e={})=>({ref:K,tabIndex:_?0:-1,"data-hover":gn(O),"data-focus":gn(j),"data-focus-visible":gn(N),className:H.base({class:pn($,null==e?void 0:e.className)}),...A(V,B,_?F:{})})),[_,H,$,F,V]),q=t.useCallback(((e={})=>({ref:R,src:d,"data-loaded":gn(z),className:H.img({class:null==f?void 0:f.img}),...A(M,e)})),[H,z,M,d,R]);return {Component:L,ImgComponent:k,src:d,alt:g,icon:h,name:p,imgRef:R,slots:H,classNames:f,fallback:m,isImgLoaded:z,showFallback:U,ignoreFallback:E,getInitials:C,getAvatarProps:G,getImageProps:q}}var Rd=It(((r,n)=>{const{Component:s,ImgComponent:o,src:a,icon:i=e.jsx(Dd,{}),alt:l,classNames:u,slots:c,name:d,showFallback:p,fallback:h,getInitials:f,getAvatarProps:m,getImageProps:g}=Kd({...r,ref:n}),v=t.useMemo((()=>!p&&a?null:h?e.jsx("div",{"aria-label":l,className:c.fallback({class:null==u?void 0:u.fallback}),role:"img",children:h}):d?e.jsx("span",{"aria-label":l,className:c.name({class:null==u?void 0:u.name}),role:"img",children:f(d)}):e.jsx("span",{"aria-label":l,className:c.icon({class:null==u?void 0:u.icon}),role:"img",children:i})),[p,a,h,d,u]);return e.jsxs(s,{...m(),children:[a&&e.jsx(o,{...g(),alt:l}),v]})}));Rd.displayName="NextUI.Avatar";var [jd,Fd]=vn({name:"ButtonGroupContext",strict:!1});var Od=t=>{const{ripples:r=[],motionProps:n,color:s="currentColor",style:o,onClear:a}=t;return e.jsx(e.Fragment,{children:r.map((t=>{const r=(i=.01*t.size,l=.2,u=t.size>100?.75:.5,Math.min(Math.max(i,l),u));var i,l,u;return e.jsx(dd,{mode:"popLayout",children:e.jsx(nd.span,{animate:{transform:"scale(2)",opacity:0},className:"nextui-ripple",exit:{opacity:0},initial:{transform:"scale(0)",opacity:.35},style:{position:"absolute",backgroundColor:s,borderRadius:"100%",transformOrigin:"center",pointerEvents:"none",zIndex:10,top:t.y,left:t.x,width:`${t.size}px`,height:`${t.size}px`,...o},transition:{duration:r},onAnimationComplete:()=>{a(t.key);},...n})},t.key)}))})};Od.displayName="NextUI.Ripple";var Bd=Od;function Wd(e){var r,n,s,o,a,i,l,u;const c=Fd(),d=!!c,{ref:p,as:h,children:f,startContent:m,endContent:g,autoFocus:v,className:y,spinner:b,fullWidth:x=null!=(r=null==c?void 0:c.fullWidth)&&r,size:w=(null!=(n=null==c?void 0:c.size)?n:"md"),color:P=(null!=(s=null==c?void 0:c.color)?s:"default"),variant:T=(null!=(o=null==c?void 0:c.variant)?o:"solid"),disableAnimation:C=null!=(a=null==c?void 0:c.disableAnimation)&&a,radius:E=(null==c?void 0:c.radius),disableRipple:k=null!=(i=null==c?void 0:c.disableRipple)&&i,isDisabled:M=null!=(l=null==c?void 0:c.isDisabled)&&l,isIconOnly:D=null!=(u=null==c?void 0:c.isIconOnly)&&u,isLoading:I=!1,spinnerPlacement:V="start",onPress:L,onClick:R,...N}=e,j=h||"button",F="string"==typeof j,O=yn(p),{isFocusVisible:B,isFocused:W,focusProps:z}=St({autoFocus:v}),U=M||I,H=t.useMemo((()=>ln({size:w,color:P,variant:T,radius:E,fullWidth:x,isDisabled:U,isInGroup:d,disableAnimation:C,isIconOnly:D,className:y})),[w,P,T,E,x,U,d,D,C,y]),{onClick:$,onClear:_,ripples:G}=function(e={}){const[r,n]=t.useState([]);return {ripples:r,onClick:t.useCallback((e=>{const t=e.currentTarget,r=Math.max(t.clientWidth,t.clientHeight),s=t.getBoundingClientRect();n((t=>{return [...t,{key:(n=t.length.toString(),`${n}-${Math.floor(1e6*Math.random())}`),size:r,x:e.clientX-s.x-r/2,y:e.clientY-s.y-r/2}];var n;}));}),[]),onClear:t.useCallback((e=>{n((t=>t.filter((t=>t.key!==e))));}),[]),...e}}(),q=t.useCallback((e=>{k||U||C||O.current&&$(e);}),[k,U,C,O,$]),{buttonProps:Y,isPressed:X}=function(e,t){let r,{elementType:n="button",isDisabled:s,onPress:o,onPressStart:a,onPressEnd:i,onPressChange:l,preventFocusOnPress:u,allowFocusWhenDisabled:c,onClick:d,href:p,target:h,rel:f,type:m="button",allowTextSelectionOnPress:g}=e;r="button"===n?{type:m,disabled:s}:{role:"button",tabIndex:s?void 0:0,href:"a"===n&&s?void 0:p,target:"a"===n?h:void 0,type:"input"===n?m:void 0,disabled:"input"===n?s:void 0,"aria-disabled":s&&"input"!==n?s:void 0,rel:"a"===n?f:void 0};let{pressProps:v,isPressed:y}=$n({onPressStart:a,onPressEnd:i,onPressChange:l,onPress:o,isDisabled:s,preventFocusOnPress:u,allowTextSelectionOnPress:g,ref:t}),{focusableProps:b}=Mt(e,t);c&&(b.tabIndex=s?-1:b.tabIndex);let x=A(b,v,K(e,{labelable:!0}));return {isPressed:y,buttonProps:A(r,x,{"aria-haspopup":e["aria-haspopup"],"aria-expanded":e["aria-expanded"],"aria-controls":e["aria-controls"],"aria-pressed":e["aria-pressed"],onClick:e=>{null==d||d(e);}})}}({elementType:h,isDisabled:U,onPress:L,onClick:S(R,q),...N},O),{isHovered:Z,hoverProps:J}=ht({isDisabled:U}),Q=t.useCallback(((e={})=>({"data-disabled":gn(U),"data-focus":gn(W),"data-pressed":gn(X),"data-focus-visible":gn(B),"data-hover":gn(Z),"data-loading":gn(I),...A(Y,z,J,Cn(N,{enabled:F}),Cn(e))})),[I,U,W,X,F,B,Z,Y,z,J,N]),ee=e=>t.isValidElement(e)?t.cloneElement(e,{"aria-hidden":!0,focusable:!1,tabIndex:-1}):null,te=ee(m),re=ee(g),ne=t.useMemo((()=>({sm:"sm",md:"sm",lg:"md"}[w])),[w]),se=t.useCallback((()=>({ripples:G,onClear:_})),[G,_]);return {Component:j,children:f,domRef:O,spinner:b,styles:H,startContent:te,endContent:re,isLoading:I,spinnerPlacement:V,spinnerSize:ne,disableRipple:k,getButtonProps:Q,getRippleProps:se,isIconOnly:D}}var zd=It(((r,n)=>{const{slots:s,classNames:o,label:a,getSpinnerProps:i}=function(e){const[r,n]=Vt(e,Qr.variantKeys),{children:s,className:o,classNames:a,label:i,...l}=r,u=t.useMemo((()=>Qr({...n})),[...Object.values(n)]),c=pn(null==a?void 0:a.base,o),d=i||s,p=t.useMemo((()=>d&&"string"==typeof d?d:l["aria-label"]?"":"Loading"),[s,d,l["aria-label"]]),h=t.useCallback((()=>({"aria-label":p,className:u.base({class:c}),...l})),[p,u,c,l]);return {label:d,slots:u,classNames:a,getSpinnerProps:h}}({...r});return e.jsxs("div",{ref:n,...i(),children:[e.jsxs("div",{className:s.wrapper({class:null==o?void 0:o.wrapper}),children:[e.jsx("i",{className:s.circle1({class:null==o?void 0:o.circle1})}),e.jsx("i",{className:s.circle2({class:null==o?void 0:o.circle2})})]}),a&&e.jsx("span",{className:s.label(),children:a})]})}));zd.displayName="NextUI.Spinner";var Ud=zd,Hd=It(((t,r)=>{const{Component:n,domRef:s,children:o,styles:a,spinnerSize:i,spinner:l=e.jsx(Ud,{color:"current",size:i}),spinnerPlacement:u,startContent:c,endContent:d,isLoading:p,disableRipple:h,getButtonProps:f,getRippleProps:m,isIconOnly:g}=Wd({...t,ref:r});return e.jsxs(n,{ref:s,className:a,...f(),children:[c,p&&"start"===u&&l,p&&g?null:o,p&&"end"===u&&l,d,!h&&e.jsx(Bd,{...m()})]})}));Hd.displayName="NextUI.Button";var _d=It(((r,n)=>{const{Component:s,children:o,slots:a,classNames:i,isDot:l,isCloseable:u,startContent:c,endContent:d,getCloseButtonProps:p,getChipProps:h}=function(e){const[r,n]=Vt(e,on$1.variantKeys),{ref:s,as:o,children:a,avatar:i,startContent:l,endContent:u,onClose:c,classNames:d,className:p,...h}=r,f=o||"div",m=yn(s),g=pn(null==d?void 0:d.base,p),v=!!c,y="dot"===e.variant,{focusProps:b,isFocusVisible:x}=St(),w=t.useMemo((()=>"string"==typeof a&&1===(null==a?void 0:a.length)),[a]),P=t.useMemo((()=>!!i||!!l),[i,l]),T=t.useMemo((()=>!!u||v),[u,v]),C=t.useMemo((()=>on$1({...n,hasStartContent:P,hasEndContent:T,isOneChar:w,isCloseable:v,isCloseButtonFocusVisible:x})),[...Object.values(n),x,P,T,w,v]),{pressProps:E}=$n({isDisabled:!!(null==e?void 0:e.isDisabled),onPress:c}),S=e=>t.isValidElement(e)?t.cloneElement(e,{className:pn("max-h-[80%]",e.props.className)}):null;return {Component:f,children:a,slots:C,classNames:d,isDot:y,isCloseable:v,startContent:(k=i,(t.isValidElement(k)?t.cloneElement(k,{className:C.avatar({class:null==d?void 0:d.avatar})}):null)||S(l)),endContent:S(u),getCloseButtonProps:()=>({role:"button",tabIndex:0,className:C.closeButton({class:null==d?void 0:d.closeButton}),...A(E,b)}),getChipProps:()=>({ref:m,className:C.base({class:g}),...h})};var k;}({...r,ref:n}),f=t.useMemo((()=>l&&!c?e.jsx("span",{className:a.dot({class:null==i?void 0:i.dot})}):c),[a,c,l]),m=t.useMemo((()=>u?e.jsx("span",{...p(),children:d||e.jsx(ts,{})}):d),[d,u,p]);return e.jsxs(s,{...h(),children:[f,e.jsx("span",{className:a.content({class:null==i?void 0:i.content}),children:o}),m]})}));_d.displayName="NextUI.Chip";var Gd=_d;function qd(e,r,n){let{validationBehavior:s,focus:o}=e;b((()=>{if("native"===s&&(null==n?void 0:n.current)){let e=r.realtimeValidation.isInvalid?r.realtimeValidation.validationErrors.join(" ")||"Invalid value.":"";n.current.setCustomValidity(e),n.current.hasAttribute("title")||(n.current.title=""),r.realtimeValidation.isInvalid||r.updateValidation(function(e){return {isInvalid:!e.validity.valid,validationDetails:Yd(e),validationErrors:e.validationMessage?[e.validationMessage]:[]}}(n.current));}}));let a=x((()=>{r.resetValidation();})),i=x((e=>{var t;r.displayValidation.isInvalid||r.commitValidation();let s=null==n||null===(t=n.current)||void 0===t?void 0:t.form;var a,i;!e.defaultPrevented&&n&&s&&function(e){for(let t=0;t<e.elements.length;t++){let r=e.elements[t];if(!r.validity.valid)return r}return null}(s)===n.current&&(o?o():null===(a=n.current)||void 0===a||a.focus(),He=i="keyboard",Xe(i,null));e.preventDefault();})),l=x((()=>{r.commitValidation();}));t.useEffect((()=>{let e=null==n?void 0:n.current;if(!e)return;let t=e.form;return e.addEventListener("invalid",i),e.addEventListener("change",l),null==t||t.addEventListener("reset",a),()=>{e.removeEventListener("invalid",i),e.removeEventListener("change",l),null==t||t.removeEventListener("reset",a);}}),[n,i,l,a,s]);}function Yd(e){let t=e.validity;return {badInput:t.badInput,customError:t.customError,patternMismatch:t.patternMismatch,rangeOverflow:t.rangeOverflow,rangeUnderflow:t.rangeUnderflow,stepMismatch:t.stepMismatch,tooLong:t.tooLong,tooShort:t.tooShort,typeMismatch:t.typeMismatch,valueMissing:t.valueMissing,valid:t.valid}}const Xd={badInput:!1,customError:!1,patternMismatch:!1,rangeOverflow:!1,rangeUnderflow:!1,stepMismatch:!1,tooLong:!1,tooShort:!1,typeMismatch:!1,valueMissing:!1,valid:!0},Zd={...Xd,customError:!0,valid:!1},Jd={isInvalid:!1,validationDetails:Xd,validationErrors:[]},Qd=t.createContext({}),ep="__formValidationState"+Date.now();function tp(e){if(e[ep]){let{realtimeValidation:t,displayValidation:r,updateValidation:n,resetValidation:s,commitValidation:o}=e[ep];return {realtimeValidation:t,displayValidation:r,updateValidation:n,resetValidation:s,commitValidation:o}}return function(e){let{isInvalid:r,validationState:n,name:s,value:o,builtinValidation:a,validate:i,validationBehavior:l="aria"}=e;n&&(r||(r="invalid"===n));let u=r?{isInvalid:!0,validationErrors:[],validationDetails:Zd}:null,c=t.useMemo((()=>np(function(e,t){if("function"==typeof e){let r=e(t);if(r&&"boolean"!=typeof r)return rp(r)}return []}(i,o))),[i,o]);(null==a?void 0:a.validationDetails.valid)&&(a=null);let d=t.useContext(Qd),p=t.useMemo((()=>s?Array.isArray(s)?s.flatMap((e=>rp(d[e]))):rp(d[s]):[]),[d,s]),[h,f]=t.useState(d),[m,g]=t.useState(!1);d!==h&&(f(d),g(!1));let v=t.useMemo((()=>np(m?[]:p)),[m,p]),y=t.useRef(Jd),[b,x]=t.useState(Jd),w=t.useRef(Jd),P=()=>{if(!T)return;C(!1);let e=c||a||y.current;sp(e,w.current)||(w.current=e,x(e));},[T,C]=t.useState(!1);return t.useEffect(P),{realtimeValidation:u||v||c||a||Jd,displayValidation:"native"===l?u||v||b:u||v||c||a||b,updateValidation(e){"aria"!==l||sp(b,e)?y.current=e:x(e);},resetValidation(){let e=Jd;sp(e,w.current)||(w.current=e,x(e)),"native"===l&&C(!1),g(!0);},commitValidation(){"native"===l&&C(!0),g(!0);}}}(e)}function rp(e){return e?Array.isArray(e)?e:[e]:[]}function np(e){return e.length?{isInvalid:!0,validationErrors:e,validationDetails:Zd}:null}function sp(e,t){return e===t||e&&t&&e.isInvalid===t.isInvalid&&e.validationErrors.length===t.validationErrors.length&&e.validationErrors.every(((e,r)=>e===t.validationErrors[r]))&&Object.entries(e.validationDetails).every((([e,r])=>t.validationDetails[e]===r))}function op(e){let{description:t,errorMessage:r,isInvalid:n,validationState:s}=e,{labelProps:o,fieldProps:a}=function(e){let{id:t,label:r,"aria-labelledby":n,"aria-label":s,labelElementType:o="label"}=e;t=T(t);let a=T(),i={};return r?(n=n?`${a} ${n}`:a,i={id:a,htmlFor:"label"===o?t:void 0}):n||s||console.warn("If you do not provide a visible label, you must specify an aria-label or aria-labelledby attribute for accessibility"),{labelProps:i,fieldProps:J({id:t,"aria-label":s,"aria-labelledby":n})}}(e),i=E([Boolean(t),Boolean(r),n,s]),l=E([Boolean(t),Boolean(r),n,s]);return a=A(a,{"aria-describedby":[i,l,e["aria-describedby"]].filter(Boolean).join(" ")||void 0}),{labelProps:o,fieldProps:a,descriptionProps:{id:i},errorMessageProps:{id:l}}}const ap=e=>"object"==typeof e&&null!=e&&1===e.nodeType,ip=(e,t)=>(!t||"hidden"!==e)&&"visible"!==e&&"clip"!==e,lp=(e,t)=>{if(e.clientHeight<e.scrollHeight||e.clientWidth<e.scrollWidth){const r=getComputedStyle(e,null);return ip(r.overflowY,t)||ip(r.overflowX,t)||(e=>{const t=(e=>{if(!e.ownerDocument||!e.ownerDocument.defaultView)return null;try{return e.ownerDocument.defaultView.frameElement}catch(e){return null}})(e);return !!t&&(t.clientHeight<e.scrollHeight||t.clientWidth<e.scrollWidth)})(e)}return !1},up=(e,t,r,n,s,o,a,i)=>o<e&&a>t||o>e&&a<t?0:o<=e&&i<=r||a>=t&&i>=r?o-e-n:a>t&&i<r||o<e&&i>r?a-t+s:0,cp=e=>{const t=e.parentElement;return null==t?e.getRootNode().host||null:t},dp=(e,t)=>{var r,n,s,o;if("undefined"==typeof document)return [];const{scrollMode:a,block:i,inline:l,boundary:u,skipOverflowHiddenElements:c}=t,d="function"==typeof u?u:e=>e!==u;if(!ap(e))throw new TypeError("Invalid target");const p=document.scrollingElement||document.documentElement,h=[];let f=e;for(;ap(f)&&d(f);){if(f=cp(f),f===p){h.push(f);break}null!=f&&f===document.body&&lp(f)&&!lp(document.documentElement)||null!=f&&lp(f,c)&&h.push(f);}const m=null!=(n=null==(r=window.visualViewport)?void 0:r.width)?n:innerWidth,g=null!=(o=null==(s=window.visualViewport)?void 0:s.height)?o:innerHeight,{scrollX:v,scrollY:y}=window,{height:b,width:x,top:w,right:P,bottom:T,left:C}=e.getBoundingClientRect(),{top:E,right:S,bottom:k,left:M}=(e=>{const t=window.getComputedStyle(e);return {top:parseFloat(t.scrollMarginTop)||0,right:parseFloat(t.scrollMarginRight)||0,bottom:parseFloat(t.scrollMarginBottom)||0,left:parseFloat(t.scrollMarginLeft)||0}})(e);let A="start"===i||"nearest"===i?w-E:"end"===i?T+k:w+b/2-E+k,D="center"===l?C+x/2-M+S:"end"===l?P+S:C-M;const I=[];for(let e=0;e<h.length;e++){const t=h[e],{height:r,width:n,top:s,right:o,bottom:u,left:c}=t.getBoundingClientRect();if("if-needed"===a&&w>=0&&C>=0&&T<=g&&P<=m&&w>=s&&T<=u&&C>=c&&P<=o)return I;const d=getComputedStyle(t),f=parseInt(d.borderLeftWidth,10),E=parseInt(d.borderTopWidth,10),S=parseInt(d.borderRightWidth,10),k=parseInt(d.borderBottomWidth,10);let M=0,V=0;const L="offsetWidth"in t?t.offsetWidth-t.clientWidth-f-S:0,K="offsetHeight"in t?t.offsetHeight-t.clientHeight-E-k:0,R="offsetWidth"in t?0===t.offsetWidth?0:n/t.offsetWidth:0,N="offsetHeight"in t?0===t.offsetHeight?0:r/t.offsetHeight:0;if(p===t)M="start"===i?A:"end"===i?A-g:"nearest"===i?up(y,y+g,g,E,k,y+A,y+A+b,b):A-g/2,V="start"===l?D:"center"===l?D-m/2:"end"===l?D-m:up(v,v+m,m,f,S,v+D,v+D+x,x),M=Math.max(0,M+y),V=Math.max(0,V+v);else {M="start"===i?A-s-E:"end"===i?A-u+k+K:"nearest"===i?up(s,u,r,E,k+K,A,A+b,b):A-(s+r/2)+K/2,V="start"===l?D-c-f:"center"===l?D-(c+n/2)+L/2:"end"===l?D-o+S+L:up(c,o,n,f,S+L,D,D+x,x);const{scrollLeft:e,scrollTop:a}=t;M=0===N?0:Math.max(0,Math.min(a+M/N,t.scrollHeight-r/N+K)),V=0===R?0:Math.max(0,Math.min(e+V/R,t.scrollWidth-n/R+L)),A+=a-M,D+=e-V;}I.push({el:t,top:M,left:V});}return I};function pp(e,t){if(!e.isConnected||!(e=>{let t=e;for(;t&&t.parentNode;){if(t.parentNode===document)return !0;t=t.parentNode instanceof ShadowRoot?t.parentNode.host:t.parentNode;}return !1})(e))return;if((e=>"object"==typeof e&&"function"==typeof e.behavior)(t))return t.behavior(dp(e,t));const r="boolean"==typeof t||null==t?void 0:t.behavior;for(const{el:n,top:s,left:o}of dp(e,(e=>!1===e?{block:"end",inline:"nearest"}:(e=>e===Object(e)&&0!==Object.keys(e).length)(e)?e:{block:"start",inline:"nearest"})(t)))n.scroll({top:s,left:o,behavior:r});}let hp=Math.round(1e10*Math.random()),fp=0;const mp=new WeakMap;function gp(e){const{as:r,ref:n,classNames:s,children:o,label:a,value:i,name:l,size:u="md",color:c="primary",isDisabled:d=!1,disableAnimation:p=!1,orientation:h="vertical",isRequired:f=!1,validationState:m,isInvalid:v="invalid"===m,isReadOnly:y,errorMessage:b,description:x,className:w,onChange:P,onValueChange:C,...E}=e,S=r||"div",k=yn(n),M=t.useMemo((()=>({...E,value:i,name:l,"aria-label":cn(E["aria-label"],a),isRequired:f,isReadOnly:y,isInvalid:v,orientation:h,onChange:C})),[E,i,l,a,f,y,v,h,C]),D=function(e){let r=t.useMemo((()=>e.name||`radio-group-${hp}-${++fp}`),[e.name]);var n;let[s,o]=g(e.value,null!==(n=e.defaultValue)&&void 0!==n?n:null,e.onChange),[a,i]=t.useState(null),l=tp({...e,value:s}),u=l.displayValidation.isInvalid;return {...l,name:r,selectedValue:s,setSelectedValue:t=>{e.isReadOnly||e.isDisabled||(o(t),l.commitValidation());},lastFocusedValue:a,setLastFocusedValue:i,isDisabled:e.isDisabled||!1,isReadOnly:e.isReadOnly||!1,isRequired:e.isRequired||!1,validationState:e.validationState||(u?"invalid":null),isInvalid:u}}(M),{labelProps:I,radioGroupProps:V,errorMessageProps:L,descriptionProps:R}=function(e,t){let{name:r,isReadOnly:n,isRequired:s,isDisabled:o,orientation:a="vertical",validationBehavior:i="aria"}=e,{direction:l}=ye(),{isInvalid:u,validationErrors:c,validationDetails:d}=t.displayValidation,{labelProps:p,fieldProps:h,descriptionProps:f,errorMessageProps:m}=op({...e,labelElementType:"span",isInvalid:t.isInvalid,errorMessage:e.errorMessage||c}),g=K(e,{labelable:!0}),{focusWithinProps:v}=it({onBlurWithin(){t.selectedValue||t.setLastFocusedValue(null);}}),y=T(r);return mp.set(t,{name:y,descriptionId:f.id,errorMessageId:m.id,validationBehavior:i}),{radioGroupProps:A(g,{role:"radiogroup",onKeyDown:e=>{let r;switch(e.key){case"ArrowRight":r="rtl"===l&&"vertical"!==a?"prev":"next";break;case"ArrowLeft":r="rtl"===l&&"vertical"!==a?"next":"prev";break;case"ArrowDown":r="next";break;case"ArrowUp":r="prev";break;default:return}e.preventDefault();let n,s=Tt(e.currentTarget,{from:e.target});"next"===r?(n=s.nextNode(),n||(s.currentNode=e.currentTarget,n=s.firstChild())):(n=s.previousNode(),n||(s.currentNode=e.currentTarget,n=s.lastChild())),n&&(n.focus(),t.setSelectedValue(n.value));},"aria-invalid":t.isInvalid||void 0,"aria-errormessage":e["aria-errormessage"],"aria-readonly":n||void 0,"aria-required":s||void 0,"aria-disabled":o||void 0,"aria-orientation":a,...h,...v}),labelProps:p,descriptionProps:f,errorMessageProps:m,isInvalid:u,validationErrors:c,validationDetails:d}}(M,D),N=t.useMemo((()=>({size:u,color:c,groupState:D,isRequired:f,isInvalid:v,isDisabled:d,disableAnimation:p,onChange:P})),[u,c,f,d,v,P,p,D.name,null==D?void 0:D.isDisabled,null==D?void 0:D.isReadOnly,null==D?void 0:D.isRequired,null==D?void 0:D.selectedValue,null==D?void 0:D.lastFocusedValue]),j=t.useMemo((()=>nn({isRequired:f,isInvalid:v,disableAnimation:p})),[v,f,p]),F=pn(null==s?void 0:s.base,w),O=t.useCallback((()=>({ref:k,className:j.base({class:F}),...A(V,E)})),[k,j,F,V,E]),B=t.useCallback((()=>({className:j.label({class:null==s?void 0:s.label}),...I})),[j,null==s?void 0:s.label,I,null==s?void 0:s.label]),W=t.useCallback((()=>({className:j.wrapper({class:null==s?void 0:s.wrapper}),role:"presentation","data-orientation":h})),[j,null==s?void 0:s.wrapper,h,j.wrapper]),z=t.useCallback(((e={})=>({...e,...R,className:j.description({class:pn(null==s?void 0:s.description,null==e?void 0:e.className)})})),[j,null==s?void 0:s.description,R,j.description]),U=t.useCallback(((e={})=>({...e,...L,className:j.errorMessage({class:pn(null==s?void 0:s.errorMessage,null==e?void 0:e.className)})})),[j,null==s?void 0:s.errorMessage,L]);return {Component:S,children:o,label:a,context:N,errorMessage:b,description:x,getGroupProps:O,getLabelProps:B,getWrapperProps:W,getDescriptionProps:z,getErrorMessageProps:U}}var[vp,yp]=vn({name:"RadioGroupContext",strict:!1}),bp=It(((t,r)=>{const{Component:n,children:s,label:o,context:a,description:i,errorMessage:l,getGroupProps:u,getLabelProps:c,getWrapperProps:d,getDescriptionProps:p,getErrorMessageProps:h}=gp({...t,ref:r});return e.jsxs(n,{...u(),children:[o&&e.jsx("span",{...c(),children:o}),e.jsx("div",{...d(),children:e.jsx(vp,{value:a,children:s})}),l?e.jsx("div",{...h(),children:l}):i?e.jsx("div",{...p(),children:i}):null]})}));bp.displayName="NextUI.RadioGroup";var xp=bp;function wp(e){var r,n,s,o;const a=yp(),{as:i,ref:l,classNames:u,id:c,value:d,children:p,description:h,size:f=(null!=(r=null==a?void 0:a.size)?r:"md"),color:m=(null!=(n=null==a?void 0:a.color)?n:"primary"),isDisabled:g=null!=(s=null==a?void 0:a.isDisabled)&&s,disableAnimation:v=null!=(o=null==a?void 0:a.disableAnimation)&&o,onChange:y=(null==a?void 0:a.onChange),autoFocus:b=!1,className:x,...w}=e;a&&mn&&("checked"in w&&fn('Remove props "checked" if in the Radio.Group.',"Radio"),void 0===d&&fn('Props "value" must be defined if in the Radio.Group.',"Radio"));const P=i||"label",T=yn(l),C=t.useRef(null),E=t.useId(),k=t.useMemo((()=>{var e;return null!=(e=a.isRequired)&&e}),[a.isRequired]),M=a.isInvalid,D=t.useMemo((()=>{const e=w["aria-label"]||"string"==typeof p?p:void 0,t=w["aria-describedby"]||"string"==typeof h?h:void 0;return {id:c,isRequired:k,isDisabled:g,"aria-label":e,"aria-labelledby":w["aria-labelledby"]||E,"aria-describedby":t}}),[E,c,g,k]),{inputProps:I,isDisabled:V,isSelected:L,isPressed:R}=function(e,t,r){let{value:n,children:s,"aria-label":o,"aria-labelledby":a}=e;const i=e.isDisabled||t.isDisabled;null!=s||null!=o||null!=a||console.warn("If you do not provide children, you must specify an aria-label for accessibility");let l=t.selectedValue===n,{pressProps:u,isPressed:c}=Ie({isDisabled:i}),{focusableProps:d}=Mt(A(e,{onFocus:()=>t.setLastFocusedValue(n)}),r),p=A(u,d),h=K(e,{labelable:!0}),f=-1;null!=t.selectedValue?t.selectedValue===n&&(f=0):t.lastFocusedValue!==n&&null!=t.lastFocusedValue||(f=0),i&&(f=void 0);let{name:m,descriptionId:g,errorMessageId:v,validationBehavior:y}=mp.get(t);return ue(r,t.selectedValue,t.setSelectedValue),qd({validationBehavior:y},t,r),{inputProps:A(h,{...p,type:"radio",name:m,tabIndex:f,disabled:i,required:t.isRequired&&"native"===y,checked:l,value:n,onChange:e=>{e.stopPropagation(),t.setSelectedValue(n);},"aria-describedby":[e["aria-describedby"],t.isInvalid?v:null,g].filter(Boolean).join(" ")||void 0}),isDisabled:i,isSelected:l,isPressed:c}}({value:d,children:p,...a,...D},a.groupState,C),{focusProps:N,isFocused:j,isFocusVisible:F}=St({autoFocus:b}),O=V||I.readOnly,[B,W]=t.useState(!1),{pressProps:z}=$n({isDisabled:O,onPressStart(e){"keyboard"!==e.pointerType&&W(!0);},onPressEnd(e){"keyboard"!==e.pointerType&&W(!1);}}),{hoverProps:U,isHovered:H}=ht({isDisabled:O}),$=!O&&(B||R),_=t.useMemo((()=>rn({color:m,size:f,isInvalid:M,isDisabled:V,disableAnimation:v})),[m,f,V,M,v]),G=pn(null==u?void 0:u.base,x),q=t.useCallback(((e={})=>({...e,ref:T,className:_.base({class:G}),"data-disabled":gn(V),"data-focus":gn(j),"data-focus-visible":gn(F),"data-selected":gn(L),"data-invalid":gn(M),"data-hover":gn(H),"data-pressed":gn($),"data-hover-unselected":gn(H&&!L),"data-readonly":gn(I.readOnly),"aria-required":gn(k),...A(U,z,w)})),[_,G,T,V,j,F,L,M,H,$,I.readOnly,k,w]),Y=t.useCallback(((e={})=>({...e,"aria-hidden":!0,className:pn(_.wrapper({class:pn(null==u?void 0:u.wrapper,e.className)}))})),[_,null==u?void 0:u.wrapper]),X=t.useCallback(((e={})=>({...e,ref:C,required:k,...A(I,N),onChange:S(I.onChange,y)})),[I,N,k,y]),Z=t.useCallback(((e={})=>({...e,id:E,className:_.label({class:null==u?void 0:u.label})})),[_,null==u?void 0:u.label,V,L,M]),J=t.useCallback(((e={})=>({...e,className:_.labelWrapper({class:null==u?void 0:u.labelWrapper})})),[_,null==u?void 0:u.labelWrapper]),Q=t.useCallback(((e={})=>({...e,className:_.control({class:null==u?void 0:u.control})})),[_,null==u?void 0:u.control]);return {Component:P,children:p,slots:_,classNames:u,description:h,isSelected:L,isDisabled:V,isInvalid:M,isFocusVisible:F,getBaseProps:q,getWrapperProps:Y,getInputProps:X,getLabelProps:Z,getLabelWrapperProps:J,getControlProps:Q}}var Pp=It(((t,r)=>{const{Component:n,children:s,slots:o,classNames:a,description:i,getBaseProps:l,getWrapperProps:u,getInputProps:c,getLabelProps:d,getLabelWrapperProps:p,getControlProps:h}=wp({...t,ref:r});return e.jsxs(n,{...l(),children:[e.jsx(Dt,{children:e.jsx("input",{...c()})}),e.jsx("span",{...u(),children:e.jsx("span",{...h()})}),e.jsxs("div",{...p(),children:[s&&e.jsx("span",{...d(),children:s}),i&&e.jsx("span",{className:o.description({class:null==a?void 0:a.description}),children:i})]})]})}));Pp.displayName="NextUI.Radio";var Tp=Pp;function Cp(e,t,r){let{inputProps:n,isSelected:s,isPressed:o,isDisabled:a,isReadOnly:i}=function(e,t,r){let{isDisabled:n=!1,isReadOnly:s=!1,value:o,name:a,children:i,"aria-label":l,"aria-labelledby":u,validationState:c="valid",isInvalid:d}=e;null!=i||null!=l||null!=u||console.warn("If you do not provide children, you must specify an aria-label for accessibility");let{pressProps:p,isPressed:h}=Ie({isDisabled:n}),{focusableProps:f}=Mt(e,r),m=A(p,f),g=K(e,{labelable:!0});return ue(r,t.isSelected,t.setSelected),{inputProps:A(g,{"aria-invalid":d||"invalid"===c||void 0,"aria-errormessage":e["aria-errormessage"],"aria-controls":e["aria-controls"],"aria-readonly":s||void 0,onChange:e=>{e.stopPropagation(),t.setSelected(e.target.checked);},disabled:n,...null==o?{}:{value:o},name:a,type:"checkbox",...m}),isSelected:t.isSelected,isPressed:h,isDisabled:n,isReadOnly:s,isInvalid:d||"invalid"===c}}(e,t,r);return {inputProps:{...n,role:"switch",checked:s},isSelected:s,isPressed:o,isDisabled:a,isReadOnly:i}}function Ep(e={}){const[r,n]=Vt(e,tn.variantKeys),{ref:s,as:o,name:a,value:i="",isReadOnly:l=!1,autoFocus:u=!1,startContent:c,endContent:d,defaultSelected:p,isSelected:h,children:f,thumbIcon:m,className:v,classNames:y,onChange:b,onValueChange:x,...w}=r,P=o||"label",T=t.useRef(null),C=function(e,r){const n=t.useRef(null);return t.useImperativeHandle(e,(()=>function(e,t=e){return {...(r=e,{UNSAFE_getDOMNode:()=>r.current}),focus(){t.current&&t.current.focus();}};var r;}(n,r))),n}(s,T),E=t.useId(),k=t.useMemo((()=>{const t=w["aria-label"]||"string"==typeof f?f:void 0;return {name:a,value:i,children:f,autoFocus:u,defaultSelected:p,isSelected:h,isDisabled:!!e.isDisabled,isReadOnly:l,"aria-label":t,"aria-labelledby":w["aria-labelledby"]||E,onChange:x}}),[i,a,E,f,u,l,h,p,e.isDisabled,w["aria-label"],w["aria-labelledby"],x]),M=function(e={}){let{isReadOnly:t}=e,[r,n]=g(e.isSelected,e.defaultSelected||!1,e.onChange);return {isSelected:r,setSelected:function(e){t||n(e);},toggle:function(){t||n(!r);}}}(k),{inputProps:D,isPressed:I,isReadOnly:V}=Cp(k,M,T),{focusProps:L,isFocused:K,isFocusVisible:R}=St({autoFocus:D.autoFocus}),{hoverProps:N,isHovered:j}=ht({isDisabled:D.disabled}),F=k.isDisabled||V,[O,B]=t.useState(!1),{pressProps:W}=$n({isDisabled:F,onPressStart(e){"keyboard"!==e.pointerType&&B(!0);},onPressEnd(e){"keyboard"!==e.pointerType&&B(!1);}}),z=!F&&(O||I),U=D.checked,H=D.disabled,$=t.useMemo((()=>tn({...n})),[...Object.values(n)]),_=pn(null==y?void 0:y.base,v),G=t.useCallback(((e={})=>({...e,"aria-hidden":!0,className:pn($.wrapper({class:pn(null==y?void 0:y.wrapper,null==e?void 0:e.className)}))})),[$,null==y?void 0:y.wrapper]),q=t.useCallback(((e={})=>({...e,className:$.thumb({class:pn(null==y?void 0:y.thumb,null==e?void 0:e.className)})})),[$,null==y?void 0:y.thumb]),Y=t.useCallback(((e={})=>({...e,id:E,className:$.label({class:pn(null==y?void 0:y.label,null==e?void 0:e.className)})})),[$,null==y?void 0:y.label,H,U]),X=t.useCallback(((e={includeStateProps:!1})=>A({width:"1em",height:"1em",className:$.thumbIcon({class:pn(null==y?void 0:y.thumbIcon)})},e.includeStateProps?{isSelected:U}:{})),[$,null==y?void 0:y.thumbIcon,U]),Z=t.useCallback(((e={})=>({width:"1em",height:"1em",...e,className:$.startContent({class:pn(null==y?void 0:y.startContent,null==e?void 0:e.className)})})),[$,null==y?void 0:y.startContent,U]),J=t.useCallback(((e={})=>({width:"1em",height:"1em",...e,className:$.endContent({class:pn(null==y?void 0:y.endContent,null==e?void 0:e.className)})})),[$,null==y?void 0:y.endContent,U]);return {Component:P,slots:$,classNames:y,domRef:C,children:f,thumbIcon:m,startContent:c,endContent:d,isHovered:j,isSelected:U,isPressed:z,isFocused:K,isFocusVisible:R,isDisabled:H,getBaseProps:e=>({...A(N,W,w,e),ref:C,className:$.base({class:pn(_,null==e?void 0:e.className)}),"data-disabled":gn(H),"data-selected":gn(U),"data-readonly":gn(V),"data-focus":gn(K),"data-focus-visible":gn(R),"data-hover":gn(j),"data-pressed":gn(z)}),getWrapperProps:G,getInputProps:(e={})=>({...A(D,L,e),ref:T,id:D.id,onChange:S(b,D.onChange)}),getLabelProps:Y,getThumbProps:q,getThumbIconProps:X,getStartContentProps:Z,getEndContentProps:J}}var Sp=It(((r,n)=>{const{Component:s,children:o,startContent:a,endContent:i,thumbIcon:l,getBaseProps:u,getInputProps:c,getWrapperProps:d,getThumbProps:p,getThumbIconProps:h,getLabelProps:f,getStartContentProps:m,getEndContentProps:g}=Ep({...r,ref:n}),v="function"==typeof l?l(h({includeStateProps:!0})):l&&t.cloneElement(l,h()),y=a&&t.cloneElement(a,m()),b=i&&t.cloneElement(i,g());return e.jsxs(s,{...u(),children:[e.jsx(Dt,{children:e.jsx("input",{...c()})}),e.jsxs("span",{...d(),children:[a&&y,e.jsx("span",{...p(),children:l&&v}),i&&b]}),o&&e.jsx("span",{...f(),children:o})]})}));Sp.displayName="NextUI.Switch";function Mp(e){const[r,n]=Vt(e,sn.variantKeys),{ref:s,as:o,label:a,baseRef:i,wrapperRef:l,description:u,errorMessage:c,className:d,classNames:p,autoFocus:h,startContent:f,endContent:m,onClear:v,onChange:y,validationState:b,innerWrapperRef:x,onValueChange:w=(()=>{}),...P}=r,T=t.useCallback((e=>{w(null!=e?e:"");}),[w]),[C,E]=g(r.value,r.defaultValue,T),[k,D]=t.useState(!1),I=o||"div",V=!!C,L=V||k,R=pn(null==p?void 0:p.base,d,V?"is-filled":""),N=e.isMultiline,j=yn(s),F=yn(i),O=yn(l),B=yn(x),W=t.useCallback((()=>{E(""),j.current&&(j.current.value="",j.current.focus()),null==v||v();}),[j,E,v]),{labelProps:z,inputProps:U,descriptionProps:H,errorMessageProps:$}=function(e,r){let{inputElementType:n="input",isDisabled:s=!1,isRequired:o=!1,isReadOnly:a=!1,type:i="text",validationBehavior:l="aria"}=e,[u,c]=g(e.value,e.defaultValue||"",e.onChange),{focusableProps:d}=Mt(e,r),p=tp({...e,value:u}),{isInvalid:h,validationErrors:f,validationDetails:m}=p.displayValidation,{labelProps:v,fieldProps:y,descriptionProps:b,errorMessageProps:x}=op({...e,isInvalid:h,errorMessage:e.errorMessage||f}),w=K(e,{labelable:!0});const P={type:i,pattern:e.pattern};return ue(r,u,c),qd(e,p,r),t.useEffect((()=>{if(r.current instanceof M(r.current).HTMLTextAreaElement){let e=r.current;Object.defineProperty(e,"defaultValue",{get:()=>e.value,set:()=>{},configurable:!0});}}),[r]),{labelProps:v,inputProps:A(w,"input"===n&&P,{disabled:s,readOnly:a,required:o&&"native"===l,"aria-required":o&&"aria"===l||void 0,"aria-invalid":h||void 0,"aria-errormessage":e["aria-errormessage"],"aria-activedescendant":e["aria-activedescendant"],"aria-autocomplete":e["aria-autocomplete"],"aria-haspopup":e["aria-haspopup"],value:u,onChange:e=>c(e.target.value),autoComplete:e.autoComplete,maxLength:e.maxLength,minLength:e.minLength,name:e.name,placeholder:e.placeholder,inputMode:e.inputMode,onCopy:e.onCopy,onCut:e.onCut,onPaste:e.onPaste,onCompositionEnd:e.onCompositionEnd,onCompositionStart:e.onCompositionStart,onCompositionUpdate:e.onCompositionUpdate,onSelect:e.onSelect,onBeforeInput:e.onBeforeInput,onInput:e.onInput,...d,...y}),descriptionProps:b,errorMessageProps:x,isInvalid:h,validationErrors:f,validationDetails:m}}({...e,"aria-label":cn(null==e?void 0:e["aria-label"],null==e?void 0:e.label,null==e?void 0:e.placeholder),inputElementType:N?"textarea":"input",onChange:E},j),{isFocusVisible:_,isFocused:G,focusProps:q}=St({autoFocus:h,isTextInput:!0}),{isHovered:Y,hoverProps:X}=ht({isDisabled:!!(null==e?void 0:e.isDisabled)}),{focusProps:Z,isFocusVisible:J}=St(),{focusWithinProps:Q}=it({onFocusWithinChange:D}),{pressProps:ee}=Ie({isDisabled:!!(null==e?void 0:e.isDisabled),onPress:W}),te="invalid"===b||e.isInvalid,re=t.useMemo((()=>{var t;return e.labelPlacement&&"inside"!==e.labelPlacement||a?null!=(t=e.labelPlacement)?t:"inside":"outside"}),[e.labelPlacement,a]),ne=!!v||e.isClearable,se=!!a||!!u||!!c,oe=!!r.placeholder,ae=!!a,ie=!!u||!!c,le="outside"===re||"outside-left"===re,ce="inside"===re,de=!!j.current&&((!j.current.value||""===j.current.value||!C||""===C)&&oe),pe="outside-left"===re,he=!!f,fe=!!le&&("outside-left"===re||oe||"outside"===re&&he),me="outside"===re&&!oe&&!he,ge=t.useMemo((()=>sn({...n,isInvalid:te,isClearable:ne})),[...Object.values(n),te,ne,he]),ve=t.useCallback(((t={})=>({ref:F,className:ge.base({class:R}),"data-slot":"base","data-filled":gn(V||oe||he||de),"data-filled-within":gn(L||oe||he||de),"data-focus-within":gn(k),"data-focus-visible":gn(_),"data-readonly":gn(e.isReadOnly),"data-focus":gn(G),"data-hover":gn(Y),"data-required":gn(e.isRequired),"data-invalid":gn(te),"data-disabled":gn(e.isDisabled),"data-has-elements":gn(se),"data-has-helper":gn(ie),"data-has-label":gn(ae),"data-has-value":gn(!de),...Q,...t})),[ge,R,V,G,Y,te,ie,ae,se,de,he,k,_,L,oe,Q,e.isReadOnly,e.isRequired,e.isDisabled]),ye=t.useCallback(((e={})=>({"data-slot":"label",className:ge.label({class:null==p?void 0:p.label}),...z,...e})),[ge,z,null==p?void 0:p.label]),be=t.useCallback(((t={})=>({ref:j,"data-slot":"input","data-filled":gn(V),"data-filled-within":gn(L),"data-has-start-content":gn(he),"data-has-end-content":gn(!!m),className:ge.input({class:pn(null==p?void 0:p.input,C?"is-filled":"")}),...A(q,U,Cn(P,{enabled:!0,labelable:!0,omitEventNames:new Set(Object.keys(U))}),t),required:e.isRequired,"aria-readonly":gn(e.isReadOnly),"aria-required":gn(e.isRequired),onChange:S(U.onChange,y)})),[ge,C,q,U,P,V,L,he,m,null==p?void 0:p.input,e.isReadOnly,e.isRequired,y]),xe=t.useCallback(((e={})=>({ref:O,"data-slot":"input-wrapper","data-hover":gn(Y),"data-focus-visible":gn(_),"data-focus":gn(G),className:ge.inputWrapper({class:pn(null==p?void 0:p.inputWrapper,C?"is-filled":"")}),...A(e,X),onClick:e=>{j.current&&e.currentTarget===e.target&&j.current.focus();},style:{cursor:"text",...e.style}})),[ge,Y,_,G,C,null==p?void 0:p.inputWrapper]),we=t.useCallback(((e={})=>({...e,ref:B,"data-slot":"inner-wrapper",onClick:e=>{j.current&&e.currentTarget===e.target&&j.current.focus();},className:ge.innerWrapper({class:pn(null==p?void 0:p.innerWrapper,null==e?void 0:e.className)})})),[ge,null==p?void 0:p.innerWrapper]),Pe=t.useCallback(((e={})=>({...e,"data-slot":"main-wrapper",className:ge.mainWrapper({class:pn(null==p?void 0:p.mainWrapper,null==e?void 0:e.className)})})),[ge,null==p?void 0:p.mainWrapper]),Te=t.useCallback(((e={})=>({...e,"data-slot":"helper-wrapper",className:ge.helperWrapper({class:pn(null==p?void 0:p.helperWrapper,null==e?void 0:e.className)})})),[ge,null==p?void 0:p.helperWrapper]),Ce=t.useCallback(((e={})=>({...e,...H,"data-slot":"description",className:ge.description({class:pn(null==p?void 0:p.description,null==e?void 0:e.className)})})),[ge,null==p?void 0:p.description]),Ee=t.useCallback(((e={})=>({...e,...$,"data-slot":"error-message",className:ge.errorMessage({class:pn(null==p?void 0:p.errorMessage,null==e?void 0:e.className)})})),[ge,$,null==p?void 0:p.errorMessage]),Se=t.useCallback(((e={})=>({...e,role:"button",tabIndex:0,"data-slot":"clear-button","data-focus-visible":gn(J),className:ge.clearButton({class:pn(null==p?void 0:p.clearButton,null==e?void 0:e.className)}),...A(ee,Z)})),[ge,J,ee,Z,null==p?void 0:p.clearButton]);return {Component:I,classNames:p,domRef:j,label:a,description:u,startContent:f,endContent:m,labelPlacement:re,isClearable:ne,isInvalid:te,hasHelper:ie,hasStartContent:he,isLabelOutside:fe,isOutsideLeft:pe,isLabelOutsideAsPlaceholder:me,shouldLabelBeOutside:le,shouldLabelBeInside:ce,hasPlaceholder:oe,errorMessage:c,getBaseProps:ve,getLabelProps:ye,getInputProps:be,getMainWrapperProps:Pe,getInputWrapperProps:xe,getInnerWrapperProps:we,getHelperWrapperProps:Te,getDescriptionProps:Ce,getErrorMessageProps:Ee,getClearButtonProps:Se}}var Ap=It(((r,n)=>{const{Component:s,label:o,description:a,isClearable:i,startContent:l,endContent:u,labelPlacement:c,hasHelper:d,isOutsideLeft:p,shouldLabelBeOutside:h,errorMessage:f,getBaseProps:m,getLabelProps:g,getInputProps:v,getInnerWrapperProps:y,getInputWrapperProps:b,getMainWrapperProps:x,getHelperWrapperProps:w,getDescriptionProps:P,getErrorMessageProps:T,getClearButtonProps:C}=Mp({...r,ref:n}),E=o?e.jsx("label",{...g(),children:o}):null,S=t.useMemo((()=>i?e.jsx("span",{...C(),children:u||e.jsx(ts,{})}):u),[i,C]),k=t.useMemo((()=>d?e.jsx("div",{...w(),children:f?e.jsx("div",{...T(),children:f}):a?e.jsx("div",{...P(),children:a}):null}):null),[d,f,a,w,T,P]),M=t.useMemo((()=>l||S?e.jsxs("div",{...y(),children:[l,e.jsx("input",{...v()}),S]}):e.jsx("div",{...y(),children:e.jsx("input",{...v()})})),[l,S,v,y]),A=t.useMemo((()=>h?e.jsxs("div",{...x(),children:[e.jsxs("div",{...b(),children:[p?null:E,M]}),k]}):e.jsxs(e.Fragment,{children:[e.jsxs("div",{...b(),children:[E,M]}),k]})),[c,k,h,E,M,f,a,x,b,T,P]);return e.jsxs(s,{...m(),children:[p?E:null,A]})}));Ap.displayName="NextUI.Input";var Dp=Ap;function Ip(){return Ip=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var n in r)Object.prototype.hasOwnProperty.call(r,n)&&(e[n]=r[n]);}return e},Ip.apply(this,arguments)}var Vp=function(e,t){"function"!=typeof e?e.current=t:e(t);},Lp=function(){},Kp=["cacheMeasurements","maxRows","minRows","onChange","onHeightChange"],Rp=function(e,r){e.cacheMeasurements,e.maxRows,e.minRows;var n=e.onChange,o=void 0===n?Lp:n;e.onHeightChange;var a=function(e,t){if(null==e)return {};var r,n,s={},o=Object.keys(e);for(n=0;n<o.length;n++)r=o[n],t.indexOf(r)>=0||(s[r]=e[r]);return s}(e,Kp);a.value;var i=function(e,r){var n=t.useRef();return t.useCallback((function(t){e.current=t,n.current&&Vp(n.current,null),n.current=r,r&&Vp(r,t);}),[r])}(s.useRef(null),r);return s.useRef(0),s.useRef(),s.createElement("textarea",Ip({},a,{onChange:o,ref:i}))},Np=s.forwardRef(Rp),jp=It((({style:r,minRows:n=3,maxRows:s=8,cacheMeasurements:o=!1,disableAutosize:a=!1,onHeightChange:i,...l},u)=>{const{Component:c,label:d,description:p,startContent:h,endContent:f,hasHelper:m,shouldLabelBeOutside:g,shouldLabelBeInside:v,errorMessage:y,getBaseProps:b,getLabelProps:x,getInputProps:w,getInnerWrapperProps:P,getInputWrapperProps:T,getHelperWrapperProps:C,getDescriptionProps:E,getErrorMessageProps:S}=Mp({...l,ref:u,isMultiline:!0}),[k,M]=t.useState(n>1),[D,I]=t.useState(!1),V=d?e.jsx("label",{...x(),children:d}):null,L=w(),K=a?e.jsx("textarea",{...L,style:A(L.style,null!=r?r:{})}):e.jsx(Np,{...L,cacheMeasurements:o,"data-hide-scroll":gn(!D),maxRows:s,minRows:n,style:A(L.style,null!=r?r:{}),onHeightChange:(e,t)=>{if(1===n&&M(e>=2*t.rowHeight),s>n){const r=e>=s*t.rowHeight;I(r);}null==i||i(e,t);}}),R=t.useMemo((()=>h||f?e.jsxs("div",{...P(),children:[h,K,f]}):e.jsx("div",{...P(),children:K})),[h,L,f,P]);return e.jsxs(c,{...b(),children:[g?V:null,e.jsxs("div",{...T(),"data-has-multiple-rows":gn(k),children:[v?V:null,R]}),m?e.jsx("div",{...C(),children:y?e.jsx("div",{...S(),children:y}):p?e.jsx("div",{...E(),children:p}):null}):null]})}));jp.displayName="NextUI.Textarea";var Fp=jp;const Op=new WeakMap;function Bp(e,t,r){return "string"==typeof t&&(t=t.replace(/\s+/g,"")),`${Op.get(e)}-${r}-${t}`}function Wp(e,r,n){var s;let{key:o,isDisabled:a,shouldSelectOnPressUp:i}=e,{selectionManager:l,selectedKey:u}=r,c=o===u,d=a||r.isDisabled||r.disabledKeys.has(o),{itemProps:p,isPressed:h}=function(e){let{selectionManager:r,key:n,ref:s,shouldSelectOnPressUp:o,shouldUseVirtualFocus:a,focus:i,isDisabled:l,onAction:u,allowsDifferentPressOrigin:c,linkBehavior:d="action"}=e,p=$(),h=e=>{if("keyboard"===e.pointerType&&En(e))r.toggleSelection(n);else {if("none"===r.selectionMode)return;if(r.isLink(n)){if("selection"===d)return p.open(s.current,e),void r.setSelectedKeys(r.selectedKeys);if("override"===d||"none"===d)return}"single"===r.selectionMode?r.isSelected(n)&&!r.disallowEmptySelection?r.toggleSelection(n):r.replaceSelection(n):e&&e.shiftKey?r.extendSelection(n):"toggle"===r.selectionBehavior||e&&(Sn(e)||"touch"===e.pointerType||"virtual"===e.pointerType)?r.toggleSelection(n):r.replaceSelection(n);}};t.useEffect((()=>{n===r.focusedKey&&r.isFocused&&!a&&(i?i():document.activeElement!==s.current&&vt(s.current));}),[s,n,r.focusedKey,r.childFocusStrategy,r.isFocused,a]),l=l||r.isDisabled(n);let f={};a||l?l&&(f.onMouseDown=e=>{e.preventDefault();}):f={tabIndex:n===r.focusedKey?0:-1,onFocus(e){e.target===s.current&&r.setFocusedKey(n);}};let m=r.isLink(n)&&"override"===d,g=r.isLink(n)&&"selection"!==d&&"none"!==d,v=!l&&r.canSelectItem(n)&&!m,y=(u||g)&&!l,b=y&&("replace"===r.selectionBehavior?!v:!v||r.isEmpty),x=y&&v&&"replace"===r.selectionBehavior,w=b||x,P=t.useRef(null),T=w&&v,C=t.useRef(!1),E=t.useRef(!1),S=e=>{u&&u(),g&&p.open(s.current,e);},k={};o?(k.onPressStart=e=>{P.current=e.pointerType,C.current=T,"keyboard"!==e.pointerType||w&&!Dn()||h(e);},c?(k.onPressUp=b?null:e=>{"keyboard"!==e.pointerType&&v&&h(e);},k.onPress=b?S:null):k.onPress=e=>{if(b||x&&"mouse"!==e.pointerType){if("keyboard"===e.pointerType&&!An())return;S(e);}else "keyboard"!==e.pointerType&&v&&h(e);}):(k.onPressStart=e=>{P.current=e.pointerType,C.current=T,E.current=b,v&&("mouse"===e.pointerType&&!b||"keyboard"===e.pointerType&&(!y||Dn()))&&h(e);},k.onPress=e=>{("touch"===e.pointerType||"pen"===e.pointerType||"virtual"===e.pointerType||"keyboard"===e.pointerType&&w&&An()||"mouse"===e.pointerType&&E.current)&&(w?S(e):v&&h(e));}),f["data-key"]=n,k.preventFocusOnPress=a;let{pressProps:M,isPressed:D}=Ie(k),I=x?e=>{"mouse"===P.current&&(e.stopPropagation(),e.preventDefault(),S(e));}:void 0,{longPressProps:V}=gt({isDisabled:!T,onLongPress(e){"touch"===e.pointerType&&(h(e),r.setSelectionBehavior("toggle"));}}),L=r.isLink(n)?e=>{_.isOpening||e.preventDefault();}:void 0;return {itemProps:A(f,v||b?M:{},T?V:{},{onDoubleClick:I,onDragStartCapture:e=>{"touch"===P.current&&C.current&&e.preventDefault();},onClick:L}),isPressed:D,isSelected:r.isSelected(n),isFocused:r.isFocused&&r.focusedKey===n,isDisabled:l,allowsSelection:v,hasAction:w}}({selectionManager:l,key:o,ref:n,isDisabled:d,shouldSelectOnPressUp:i,linkBehavior:"selection"}),f=Bp(r,o,"tab"),m=Bp(r,o,"tabpanel"),{tabIndex:g}=p,v=r.collection.getItem(o),y=K(null==v?void 0:v.props,{isLink:!!(null==v||null===(s=v.props)||void 0===s?void 0:s.href)});return delete y.id,{tabProps:A(y,p,{id:f,"aria-selected":c,"aria-disabled":d||void 0,"aria-controls":c?m:void 0,tabIndex:d?void 0:g,role:"tab"}),isSelected:c,isDisabled:d,isPressed:h}}function zp(e,r,n){let s=function(e,r){let n=null==r?void 0:r.isDisabled,[s,o]=t.useState(!1);return b((()=>{if((null==e?void 0:e.current)&&!n){let t=()=>{if(e.current){let t=Tt(e.current,{tabbable:!0});o(!!t.nextNode());}};t();let r=new MutationObserver(t);return r.observe(e.current,{subtree:!0,childList:!0,attributes:!0,attributeFilter:["tabIndex","disabled"]}),()=>{r.disconnect();}}})),!n&&s}(n)?void 0:0;var o;const a=Bp(r,null!==(o=e.id)&&void 0!==o?o:null==r?void 0:r.selectedKey,"tabpanel");return {tabPanelProps:A(J({...e,id:a,"aria-labelledby":Bp(r,null==r?void 0:r.selectedKey,"tab")}),{tabIndex:s,role:"tabpanel","aria-describedby":e["aria-describedby"],"aria-details":e["aria-details"]})}}class Up{getKeyLeftOf(e){return this.flipDirection?this.getNextKey(e):this.getPreviousKey(e)}getKeyRightOf(e){return this.flipDirection?this.getPreviousKey(e):this.getNextKey(e)}getKeyAbove(e){return this.getPreviousKey(e)}getKeyBelow(e){return this.getNextKey(e)}getFirstKey(){let e=this.collection.getFirstKey();return this.disabledKeys.has(e)&&(e=this.getNextKey(e)),e}getLastKey(){let e=this.collection.getLastKey();return this.disabledKeys.has(e)&&(e=this.getPreviousKey(e)),e}getNextKey(e){do{null==(e=this.collection.getKeyAfter(e))&&(e=this.collection.getFirstKey());}while(this.disabledKeys.has(e));return e}getPreviousKey(e){do{null==(e=this.collection.getKeyBefore(e))&&(e=this.collection.getLastKey());}while(this.disabledKeys.has(e));return e}constructor(e,t,r,n=new Set){this.collection=e,this.flipDirection="rtl"===t&&"horizontal"===r,this.disabledKeys=n;}}var Hp=It(((t,r)=>{var n,s,o;const{as:a,state:i,className:l,slots:u,classNames:c,...d}=t,p=a||"div",h=yn(r),{tabPanelProps:f}=zp(t,i,h),{focusProps:m,isFocused:g,isFocusVisible:v}=St(),y=i.selectedItem,b=null==(n=null==y?void 0:y.props)?void 0:n.children,x=pn(null==c?void 0:c.panel,l,null==(s=null==y?void 0:y.props)?void 0:s.className);return b?e.jsx(p,{ref:h,"data-focus":g,"data-focus-visible":v,...A(f,m,d),className:null==(o=u.panel)?void 0:o.call(u,{class:x}),"data-slot":"panel",children:b}):null}));Hp.displayName="NextUI.TabPanel";var $p=Hp,_p=It(((r,n)=>{var s;const{className:o,as:a,item:i,state:l,classNames:u,isDisabled:c,listRef:d,slots:p,motionProps:h,disableAnimation:f,disableCursorAnimation:m,shouldSelectOnPressUp:g,onClick:v,...y}=r,{key:b}=i,x=yn(n),w=a||(r.href?"a":"button"),P="string"==typeof w,{tabProps:T,isSelected:C,isDisabled:E,isPressed:k}=Wp({key:b,isDisabled:c,shouldSelectOnPressUp:g},l,x),M=c||E,{focusProps:D,isFocused:I,isFocusVisible:V}=St(),{hoverProps:L,isHovered:K}=ht({isDisabled:M}),R=pn(null==u?void 0:u.tab,o),[,N]=function(e={}){const{rerender:r=!1,delay:n=0}=e,s=t.useRef(!1),[o,a]=t.useState(!1);return t.useEffect((()=>{s.current=!0;let e=null;return r&&(n>0?e=setTimeout((()=>{a(!0);}),n):a(!0)),()=>{s.current=!1,r&&a(!1),e&&clearTimeout(e);}}),[r]),[t.useCallback((()=>s.current),[]),o]}({rerender:!0});return e.jsxs(w,{ref:x,"data-disabled":gn(E),"data-focus":gn(I),"data-focus-visible":gn(V),"data-hover":gn(K),"data-hover-unselected":gn((K||k)&&!C),"data-pressed":gn(k),"data-selected":gn(C),"data-slot":"tab",...A(T,M?{}:{...D,...L},Cn(y,{enabled:P,omitPropNames:new Set(["title"])})),className:null==(s=p.tab)?void 0:s.call(p,{class:R}),title:null==y?void 0:y.titleValue,type:"button"===w?"button":void 0,onClick:()=>{S(v,T.onClick),(null==x?void 0:x.current)&&(null==d?void 0:d.current)&&pp(x.current,{scrollMode:"if-needed",behavior:"smooth",block:"end",inline:"end",boundary:null==d?void 0:d.current});},children:[C&&!f&&!m&&N?e.jsx(nd.span,{className:p.cursor({class:null==u?void 0:u.cursor}),"data-slot":"cursor",layoutDependency:!1,layoutId:"cursor",transition:{type:"spring",bounce:.15,duration:.5},...h}):null,e.jsx("div",{className:p.tabContent({class:null==u?void 0:u.tabContent}),"data-slot":"tabContent",children:i.rendered})]})}));_p.displayName="NextUI.Tab";var Gp=_p;class qp{*[Symbol.iterator](){yield*this.iterable;}get size(){return this.keyMap.size}getKeys(){return this.keyMap.keys()}getKeyBefore(e){let t=this.keyMap.get(e);return t?t.prevKey:null}getKeyAfter(e){let t=this.keyMap.get(e);return t?t.nextKey:null}getFirstKey(){return this.firstKey}getLastKey(){return this.lastKey}getItem(e){return this.keyMap.get(e)}at(e){const t=[...this.getKeys()];return this.getItem(t[e])}getChildren(e){let t=this.keyMap.get(e);return (null==t?void 0:t.childNodes)||[]}constructor(e){this.keyMap=new Map,this.iterable=e;let t,r=e=>{if(this.keyMap.set(e.key,e),e.childNodes&&"section"===e.type)for(let t of e.childNodes)r(t);};for(let t of e)r(t);let n=0;for(let[e,r]of this.keyMap)t?(t.nextKey=e,r.prevKey=t.key):(this.firstKey=e,r.prevKey=void 0),"item"===r.type&&(r.index=n++),t=r,t.nextKey=void 0;this.lastKey=null==t?void 0:t.key;}}function Yp(e){let{filter:r}=e,n=function(e){let{selectionMode:r="none",disallowEmptySelection:n,allowDuplicateSelectionEvents:s,selectionBehavior:o="toggle",disabledBehavior:a="all"}=e,i=t.useRef(!1),[,l]=t.useState(!1),u=t.useRef(null),c=t.useRef(null),[,d]=t.useState(null),p=t.useMemo((()=>Md(e.selectedKeys)),[e.selectedKeys]),h=t.useMemo((()=>Md(e.defaultSelectedKeys,new kd)),[e.defaultSelectedKeys]),[f,m]=g(p,h,e.onSelectionChange),v=t.useMemo((()=>e.disabledKeys?new Set(e.disabledKeys):new Set),[e.disabledKeys]),[y,b]=t.useState(o);"replace"===o&&"toggle"===y&&"object"==typeof f&&0===f.size&&b("replace");let x=t.useRef(o);return t.useEffect((()=>{o!==x.current&&(b(o),x.current=o);}),[o]),{selectionMode:r,disallowEmptySelection:n,selectionBehavior:y,setSelectionBehavior:b,get isFocused(){return i.current},setFocused(e){i.current=e,l(e);},get focusedKey(){return u.current},get childFocusStrategy(){return c.current},setFocusedKey(e,t="first"){u.current=e,c.current=t,d(e);},selectedKeys:f,setSelectedKeys(e){!s&&function(e,t){if(e.size!==t.size)return !1;for(let r of e)if(!t.has(r))return !1;return !0}(e,f)||m(e);},disabledKeys:v,disabledBehavior:a}}(e),s=t.useMemo((()=>e.disabledKeys?new Set(e.disabledKeys):new Set),[e.disabledKeys]),o=t.useCallback((e=>new qp(r?r(e):e)),[r]),a=t.useMemo((()=>({suppressTextValueWarning:e.suppressTextValueWarning})),[e.suppressTextValueWarning]),i=function(e,r,n){let s=t.useMemo((()=>new xd),[]),{children:o,items:a,collection:i}=e;return t.useMemo((()=>{if(i)return i;let e=s.build({children:o,items:a},n);return r(e)}),[s,o,a,i,n,r])}(e,o,a),l=t.useMemo((()=>new Ad(i,n)),[i,n]);const u=t.useRef(null);return t.useEffect((()=>{if(null!=n.focusedKey&&!i.getItem(n.focusedKey)){const e=u.current.getItem(n.focusedKey),t=[...u.current.getKeys()].map((e=>{const t=u.current.getItem(e);return "item"===t.type?t:null})).filter((e=>null!==e)),r=[...i.getKeys()].map((e=>{const t=i.getItem(e);return "item"===t.type?t:null})).filter((e=>null!==e)),s=t.length-r.length;let o,a=Math.min(s>1?Math.max(e.index-s+1,0):e.index,r.length-1);for(;a>=0;){if(!l.isDisabled(r[a].key)){o=r[a];break}a<r.length-1?a++:(a>e.index&&(a=e.index),a--);}n.setFocusedKey(o?o.key:null);}u.current=i;}),[i,l,n,n.focusedKey]),{collection:i,disabledKeys:s,selectionManager:l}}function Xp(e){var r;let n=function(e){var r;let[n,s]=g(e.selectedKey,null!==(r=e.defaultSelectedKey)&&void 0!==r?r:null,e.onSelectionChange),o=t.useMemo((()=>null!=n?[n]:[]),[n]),{collection:a,disabledKeys:i,selectionManager:l}=Yp({...e,selectionMode:"single",disallowEmptySelection:!0,allowDuplicateSelectionEvents:!0,selectedKeys:o,onSelectionChange:t=>{var r;let o=null!==(r=t.values().next().value)&&void 0!==r?r:null;o===n&&e.onSelectionChange&&e.onSelectionChange(o),s(o);}}),u=null!=n?a.getItem(n):null;return {collection:a,disabledKeys:i,selectionManager:l,selectedKey:n,setSelectedKey:s,selectedItem:u}}({...e,suppressTextValueWarning:!0,defaultSelectedKey:null!==(r=e.defaultSelectedKey)&&void 0!==r?r:Zp(e.collection,e.disabledKeys?new Set(e.disabledKeys):new Set)}),{selectionManager:s,collection:o,selectedKey:a}=n,i=t.useRef(a);return t.useEffect((()=>{let e=a;!s.isEmpty&&o.getItem(e)||(e=Zp(o,n.disabledKeys),null!=e&&s.setSelectedKeys([e])),(null!=e&&null==s.focusedKey||!s.isFocused&&e!==i.current)&&s.setFocusedKey(e),i.current=e;})),{...n,isDisabled:e.isDisabled||!1}}function Zp(e,t){let r=null;if(e){for(r=e.getFirstKey();t.has(r)&&r!==e.getLastKey();)r=e.getKeyAfter(r);t.has(r)&&r===e.getLastKey()&&(r=e.getFirstKey());}return r}function Jp(e){const[r,n]=Vt(e,en.variantKeys),{ref:s,as:o,className:a,classNames:i,children:l,disableCursorAnimation:u,shouldSelectOnPressUp:c=!0,motionProps:d,...p}=r,h=o||"div",f="string"==typeof h,m=yn(s),g=Xp({children:l,...p}),{tabListProps:v}=function(e,r,n){let{orientation:s="horizontal",keyboardActivation:o="automatic"}=e,{collection:a,selectionManager:i,disabledKeys:l}=r,{direction:u}=ye(),c=t.useMemo((()=>new Up(a,u,s,l)),[a,l,s,u]),{collectionProps:d}=Mn({ref:n,selectionManager:i,keyboardDelegate:c,selectOnFocus:"automatic"===o,disallowEmptySelection:!0,scrollRef:n,linkBehavior:"selection"}),p=T();return Op.set(r,p),{tabListProps:{...A(d,J({...e,id:p})),role:"tablist","aria-orientation":s,tabIndex:void 0}}}(p,g,m),y=t.useMemo((()=>en({...n,className:a})),[...Object.values(n),a]),b=pn(null==i?void 0:i.base,a),x=t.useMemo((()=>({state:g,slots:y,classNames:i,motionProps:d,listRef:m,shouldSelectOnPressUp:c,disableCursorAnimation:u,isDisabled:null==e?void 0:e.isDisabled,disableAnimation:null==e?void 0:e.disableAnimation})),[g,y,m,d,u,c,null==e?void 0:e.disableAnimation,null==e?void 0:e.isDisabled,i]),w=t.useCallback((e=>({"data-slot":"base",className:y.base({class:pn(b,null==e?void 0:e.className)}),...A(Cn(p,{enabled:f}),e)})),[b,p,y]),P=t.useCallback((e=>({ref:m,"data-slot":"tabList",className:y.tabList({class:pn(null==i?void 0:i.tabList,null==e?void 0:e.className)}),...A(v,e)})),[m,v,i,y]);return {Component:h,domRef:m,state:g,values:x,getBaseProps:w,getTabListProps:P}}function Qp(r,n){var s;const{Component:o,values:a,state:i,getBaseProps:l,getTabListProps:u}=Jp({...r,ref:n}),c=t.useId(),d=!r.disableAnimation&&!r.disableCursorAnimation,p={state:i,listRef:a.listRef,slots:a.slots,classNames:a.classNames,isDisabled:a.isDisabled,motionProps:a.motionProps,disableAnimation:a.disableAnimation,shouldSelectOnPressUp:a.shouldSelectOnPressUp,disableCursorAnimation:a.disableCursorAnimation},h=[...i.collection].map((t=>e.jsx(Gp,{item:t,...p,...t.props},t.key)));return e.jsxs(e.Fragment,{children:[e.jsx("div",{...l(),children:e.jsx(o,{...u(),children:d?e.jsx(gd,{id:c,children:h}):h})}),e.jsx($p,{classNames:a.classNames,slots:a.slots,state:a.state},null==(s=i.selectedItem)?void 0:s.key)]})}It(Qp);Qp.displayName="NextUI.Tabs";var rh="undefined"!=typeof window?window:null;Chip = function(t){var r=t.children,n=t.className,s=t.variant,o=t.size,a=t.onClick,i=void 0===a?function(){}:a;return e.jsx(Gd,be({className:n,variant:s,radius:"lg",size:o,classNames:{base:"font-header selection:none"},onClick:function(e){return i(e)}},{children:r}))},Input = function(t){var r=t.label,n=t.placeholder,s=t.description,o=t.value,a=t.setValue,i=void 0===a?function(){}:a,l=t.defaultValue,u=t.isInvalid,c=t.errorMessage,d=t.isDisabled,p=t.className,h=t.additionalClasses,f=t.style,m=t.startContent,g=t.endContent,v=t.variant;return e.jsx(Dp,{label:r,placeholder:n,description:s,value:o,radius:"lg",labelPlacement:"inside",onChange:function(e){return i(e.target.value)},defaultValue:l,isInvalid:u,errorMessage:c,isDisabled:d,className:h?p+" "+h:p,classNames:{base:"placeholder-gray-100",label:"font-header text-sm py-1",input:"font-content text-base",innerWrapper:"flex items-center",errorMessage:"font-header text-base"},style:f,startContent:m,endContent:g,variant:v})},Page = function(r){var n=r.name,s=r.version,o=r.children,a=r.className,i=r.additionalClasses,l=r.style;return t.useEffect((function(){rh.TONE_DEBUG&&(rh.TONE_PAGE={name:n,version:s});}),[]),e.jsx("div",be({className:a||"h-full p-4 w-full "+i,style:l},{children:o}))},Radio = function(t){var r=t.children,n=t.value;return t.classNames,e.jsx(Tp,be({value:n,className:"font-content"},{children:r}))},RadioGroup = function(t){var r=t.children,n=t.label,s=t.orientation,o=t.additionalClasses,a=t.value,i=t.setValue,l=void 0===i?function(){}:i;return e.jsx(xp,be({label:n,orientation:s,className:o&&" "+o,classNames:{label:"font-header text-sm"},value:a,onValueChange:function(e){return l(e)}},{children:r}))},Textarea = function(t){var r=t.label,n=t.value,s=t.setValue,o=void 0===s?function(){}:s,a=t.isDisabled,i=t.className,l=t.additionalClasses,u=t.style;return e.jsx(Fp,{label:r,labelPlacement:"inside",value:n,onChange:function(e){return o(e.target.value)},isDisabled:a,className:l?"".concat(i," ").concat(l):i,classNames:{label:"font-header text-sm py-1",input:"font-content text-base"},style:u})};
 
 var name = "@sone-dao/tone-react-page-upload";
-var version = "0.10.0";
+var version$1 = "0.10.0";
 
 var n="undefined"!=typeof window?window:null;
 
@@ -316,7 +310,7 @@ var getArgs = ({
   sample
 });
 
-var format$2 = (input, args) => {
+var format$3 = (input, args) => {
   var list = input.map(val => {
     var rgb = Array.isArray(val) ? val : val.split(',').map(Number);
     return args.format === 'hex' ? rgbToHex(rgb) : rgb;
@@ -362,7 +356,7 @@ var getProminent = (data, args) => {
     colors[rgb] = colors[rgb] ? colors[rgb] + 1 : 1;
   }
 
-  return format$2(Object.entries(colors).sort(([_keyA, valA], [_keyB, valB]) => valA > valB ? -1 : 1).slice(0, args.amount).map(([rgb]) => rgb), args);
+  return format$3(Object.entries(colors).sort(([_keyA, valA], [_keyB, valB]) => valA > valB ? -1 : 1).slice(0, args.amount).map(([rgb]) => rgb), args);
 };
 
 var process$1 = (handler, item, args) => new Promise((resolve, reject) => getImageData(getSrc(item)).then(data => resolve(handler(data, getArgs(args)))).catch(error => reject(error)));
@@ -376,6 +370,5420 @@ var utils$q = {};
 var support$4 = {};
 
 var readable$1 = {exports: {}};
+
+var domain;
+
+// This constructor is used to store event handlers. Instantiating this is
+// faster than explicitly calling `Object.create(null)` to get a "clean" empty
+// object (tested with v8 v4.9).
+function EventHandlers() {}
+EventHandlers.prototype = Object.create(null);
+
+function EventEmitter() {
+  EventEmitter.init.call(this);
+}
+
+// nodejs oddity
+// require('events') === require('events').EventEmitter
+EventEmitter.EventEmitter = EventEmitter;
+
+EventEmitter.usingDomains = false;
+
+EventEmitter.prototype.domain = undefined;
+EventEmitter.prototype._events = undefined;
+EventEmitter.prototype._maxListeners = undefined;
+
+// By default EventEmitters will print a warning if more than 10 listeners are
+// added to it. This is a useful default which helps finding memory leaks.
+EventEmitter.defaultMaxListeners = 10;
+
+EventEmitter.init = function() {
+  this.domain = null;
+  if (EventEmitter.usingDomains) {
+    // if there is an active domain, then attach to it.
+    if (domain.active ) ;
+  }
+
+  if (!this._events || this._events === Object.getPrototypeOf(this)._events) {
+    this._events = new EventHandlers();
+    this._eventsCount = 0;
+  }
+
+  this._maxListeners = this._maxListeners || undefined;
+};
+
+// Obviously not all Emitters should be limited to 10. This function allows
+// that to be increased. Set to zero for unlimited.
+EventEmitter.prototype.setMaxListeners = function setMaxListeners(n) {
+  if (typeof n !== 'number' || n < 0 || isNaN(n))
+    throw new TypeError('"n" argument must be a positive number');
+  this._maxListeners = n;
+  return this;
+};
+
+function $getMaxListeners(that) {
+  if (that._maxListeners === undefined)
+    return EventEmitter.defaultMaxListeners;
+  return that._maxListeners;
+}
+
+EventEmitter.prototype.getMaxListeners = function getMaxListeners() {
+  return $getMaxListeners(this);
+};
+
+// These standalone emit* functions are used to optimize calling of event
+// handlers for fast cases because emit() itself often has a variable number of
+// arguments and can be deoptimized because of that. These functions always have
+// the same number of arguments and thus do not get deoptimized, so the code
+// inside them can execute faster.
+function emitNone(handler, isFn, self) {
+  if (isFn)
+    handler.call(self);
+  else {
+    var len = handler.length;
+    var listeners = arrayClone(handler, len);
+    for (var i = 0; i < len; ++i)
+      listeners[i].call(self);
+  }
+}
+function emitOne(handler, isFn, self, arg1) {
+  if (isFn)
+    handler.call(self, arg1);
+  else {
+    var len = handler.length;
+    var listeners = arrayClone(handler, len);
+    for (var i = 0; i < len; ++i)
+      listeners[i].call(self, arg1);
+  }
+}
+function emitTwo(handler, isFn, self, arg1, arg2) {
+  if (isFn)
+    handler.call(self, arg1, arg2);
+  else {
+    var len = handler.length;
+    var listeners = arrayClone(handler, len);
+    for (var i = 0; i < len; ++i)
+      listeners[i].call(self, arg1, arg2);
+  }
+}
+function emitThree(handler, isFn, self, arg1, arg2, arg3) {
+  if (isFn)
+    handler.call(self, arg1, arg2, arg3);
+  else {
+    var len = handler.length;
+    var listeners = arrayClone(handler, len);
+    for (var i = 0; i < len; ++i)
+      listeners[i].call(self, arg1, arg2, arg3);
+  }
+}
+
+function emitMany(handler, isFn, self, args) {
+  if (isFn)
+    handler.apply(self, args);
+  else {
+    var len = handler.length;
+    var listeners = arrayClone(handler, len);
+    for (var i = 0; i < len; ++i)
+      listeners[i].apply(self, args);
+  }
+}
+
+EventEmitter.prototype.emit = function emit(type) {
+  var er, handler, len, args, i, events, domain;
+  var doError = (type === 'error');
+
+  events = this._events;
+  if (events)
+    doError = (doError && events.error == null);
+  else if (!doError)
+    return false;
+
+  domain = this.domain;
+
+  // If there is no 'error' event listener then throw.
+  if (doError) {
+    er = arguments[1];
+    if (domain) {
+      if (!er)
+        er = new Error('Uncaught, unspecified "error" event');
+      er.domainEmitter = this;
+      er.domain = domain;
+      er.domainThrown = false;
+      domain.emit('error', er);
+    } else if (er instanceof Error) {
+      throw er; // Unhandled 'error' event
+    } else {
+      // At least give some kind of context to the user
+      var err = new Error('Uncaught, unspecified "error" event. (' + er + ')');
+      err.context = er;
+      throw err;
+    }
+    return false;
+  }
+
+  handler = events[type];
+
+  if (!handler)
+    return false;
+
+  var isFn = typeof handler === 'function';
+  len = arguments.length;
+  switch (len) {
+    // fast cases
+    case 1:
+      emitNone(handler, isFn, this);
+      break;
+    case 2:
+      emitOne(handler, isFn, this, arguments[1]);
+      break;
+    case 3:
+      emitTwo(handler, isFn, this, arguments[1], arguments[2]);
+      break;
+    case 4:
+      emitThree(handler, isFn, this, arguments[1], arguments[2], arguments[3]);
+      break;
+    // slower
+    default:
+      args = new Array(len - 1);
+      for (i = 1; i < len; i++)
+        args[i - 1] = arguments[i];
+      emitMany(handler, isFn, this, args);
+  }
+
+  return true;
+};
+
+function _addListener(target, type, listener, prepend) {
+  var m;
+  var events;
+  var existing;
+
+  if (typeof listener !== 'function')
+    throw new TypeError('"listener" argument must be a function');
+
+  events = target._events;
+  if (!events) {
+    events = target._events = new EventHandlers();
+    target._eventsCount = 0;
+  } else {
+    // To avoid recursion in the case that type === "newListener"! Before
+    // adding it to the listeners, first emit "newListener".
+    if (events.newListener) {
+      target.emit('newListener', type,
+                  listener.listener ? listener.listener : listener);
+
+      // Re-assign `events` because a newListener handler could have caused the
+      // this._events to be assigned to a new object
+      events = target._events;
+    }
+    existing = events[type];
+  }
+
+  if (!existing) {
+    // Optimize the case of one listener. Don't need the extra array object.
+    existing = events[type] = listener;
+    ++target._eventsCount;
+  } else {
+    if (typeof existing === 'function') {
+      // Adding the second element, need to change to array.
+      existing = events[type] = prepend ? [listener, existing] :
+                                          [existing, listener];
+    } else {
+      // If we've already got an array, just append.
+      if (prepend) {
+        existing.unshift(listener);
+      } else {
+        existing.push(listener);
+      }
+    }
+
+    // Check for listener leak
+    if (!existing.warned) {
+      m = $getMaxListeners(target);
+      if (m && m > 0 && existing.length > m) {
+        existing.warned = true;
+        var w = new Error('Possible EventEmitter memory leak detected. ' +
+                            existing.length + ' ' + type + ' listeners added. ' +
+                            'Use emitter.setMaxListeners() to increase limit');
+        w.name = 'MaxListenersExceededWarning';
+        w.emitter = target;
+        w.type = type;
+        w.count = existing.length;
+        emitWarning(w);
+      }
+    }
+  }
+
+  return target;
+}
+function emitWarning(e) {
+  typeof console.warn === 'function' ? console.warn(e) : console.log(e);
+}
+EventEmitter.prototype.addListener = function addListener(type, listener) {
+  return _addListener(this, type, listener, false);
+};
+
+EventEmitter.prototype.on = EventEmitter.prototype.addListener;
+
+EventEmitter.prototype.prependListener =
+    function prependListener(type, listener) {
+      return _addListener(this, type, listener, true);
+    };
+
+function _onceWrap(target, type, listener) {
+  var fired = false;
+  function g() {
+    target.removeListener(type, g);
+    if (!fired) {
+      fired = true;
+      listener.apply(target, arguments);
+    }
+  }
+  g.listener = listener;
+  return g;
+}
+
+EventEmitter.prototype.once = function once(type, listener) {
+  if (typeof listener !== 'function')
+    throw new TypeError('"listener" argument must be a function');
+  this.on(type, _onceWrap(this, type, listener));
+  return this;
+};
+
+EventEmitter.prototype.prependOnceListener =
+    function prependOnceListener(type, listener) {
+      if (typeof listener !== 'function')
+        throw new TypeError('"listener" argument must be a function');
+      this.prependListener(type, _onceWrap(this, type, listener));
+      return this;
+    };
+
+// emits a 'removeListener' event iff the listener was removed
+EventEmitter.prototype.removeListener =
+    function removeListener(type, listener) {
+      var list, events, position, i, originalListener;
+
+      if (typeof listener !== 'function')
+        throw new TypeError('"listener" argument must be a function');
+
+      events = this._events;
+      if (!events)
+        return this;
+
+      list = events[type];
+      if (!list)
+        return this;
+
+      if (list === listener || (list.listener && list.listener === listener)) {
+        if (--this._eventsCount === 0)
+          this._events = new EventHandlers();
+        else {
+          delete events[type];
+          if (events.removeListener)
+            this.emit('removeListener', type, list.listener || listener);
+        }
+      } else if (typeof list !== 'function') {
+        position = -1;
+
+        for (i = list.length; i-- > 0;) {
+          if (list[i] === listener ||
+              (list[i].listener && list[i].listener === listener)) {
+            originalListener = list[i].listener;
+            position = i;
+            break;
+          }
+        }
+
+        if (position < 0)
+          return this;
+
+        if (list.length === 1) {
+          list[0] = undefined;
+          if (--this._eventsCount === 0) {
+            this._events = new EventHandlers();
+            return this;
+          } else {
+            delete events[type];
+          }
+        } else {
+          spliceOne(list, position);
+        }
+
+        if (events.removeListener)
+          this.emit('removeListener', type, originalListener || listener);
+      }
+
+      return this;
+    };
+    
+// Alias for removeListener added in NodeJS 10.0
+// https://nodejs.org/api/events.html#events_emitter_off_eventname_listener
+EventEmitter.prototype.off = function(type, listener){
+    return this.removeListener(type, listener);
+};
+
+EventEmitter.prototype.removeAllListeners =
+    function removeAllListeners(type) {
+      var listeners, events;
+
+      events = this._events;
+      if (!events)
+        return this;
+
+      // not listening for removeListener, no need to emit
+      if (!events.removeListener) {
+        if (arguments.length === 0) {
+          this._events = new EventHandlers();
+          this._eventsCount = 0;
+        } else if (events[type]) {
+          if (--this._eventsCount === 0)
+            this._events = new EventHandlers();
+          else
+            delete events[type];
+        }
+        return this;
+      }
+
+      // emit removeListener for all listeners on all events
+      if (arguments.length === 0) {
+        var keys = Object.keys(events);
+        for (var i = 0, key; i < keys.length; ++i) {
+          key = keys[i];
+          if (key === 'removeListener') continue;
+          this.removeAllListeners(key);
+        }
+        this.removeAllListeners('removeListener');
+        this._events = new EventHandlers();
+        this._eventsCount = 0;
+        return this;
+      }
+
+      listeners = events[type];
+
+      if (typeof listeners === 'function') {
+        this.removeListener(type, listeners);
+      } else if (listeners) {
+        // LIFO order
+        do {
+          this.removeListener(type, listeners[listeners.length - 1]);
+        } while (listeners[0]);
+      }
+
+      return this;
+    };
+
+EventEmitter.prototype.listeners = function listeners(type) {
+  var evlistener;
+  var ret;
+  var events = this._events;
+
+  if (!events)
+    ret = [];
+  else {
+    evlistener = events[type];
+    if (!evlistener)
+      ret = [];
+    else if (typeof evlistener === 'function')
+      ret = [evlistener.listener || evlistener];
+    else
+      ret = unwrapListeners(evlistener);
+  }
+
+  return ret;
+};
+
+EventEmitter.listenerCount = function(emitter, type) {
+  if (typeof emitter.listenerCount === 'function') {
+    return emitter.listenerCount(type);
+  } else {
+    return listenerCount$1.call(emitter, type);
+  }
+};
+
+EventEmitter.prototype.listenerCount = listenerCount$1;
+function listenerCount$1(type) {
+  var events = this._events;
+
+  if (events) {
+    var evlistener = events[type];
+
+    if (typeof evlistener === 'function') {
+      return 1;
+    } else if (evlistener) {
+      return evlistener.length;
+    }
+  }
+
+  return 0;
+}
+
+EventEmitter.prototype.eventNames = function eventNames() {
+  return this._eventsCount > 0 ? Reflect.ownKeys(this._events) : [];
+};
+
+// About 1.5x faster than the two-arg version of Array#splice().
+function spliceOne(list, index) {
+  for (var i = index, k = i + 1, n = list.length; k < n; i += 1, k += 1)
+    list[i] = list[k];
+  list.pop();
+}
+
+function arrayClone(arr, i) {
+  var copy = new Array(i);
+  while (i--)
+    copy[i] = arr[i];
+  return copy;
+}
+
+function unwrapListeners(arr) {
+  var ret = new Array(arr.length);
+  for (var i = 0; i < ret.length; ++i) {
+    ret[i] = arr[i].listener || arr[i];
+  }
+  return ret;
+}
+
+var _polyfillNode_events = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    EventEmitter: EventEmitter,
+    default: EventEmitter
+});
+
+// shim for using process in browser
+// based off https://github.com/defunctzombie/node-process/blob/master/browser.js
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+var cachedSetTimeout = defaultSetTimout;
+var cachedClearTimeout = defaultClearTimeout;
+if (typeof global.setTimeout === 'function') {
+    cachedSetTimeout = setTimeout;
+}
+if (typeof global.clearTimeout === 'function') {
+    cachedClearTimeout = clearTimeout;
+}
+
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+function nextTick(fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+}
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+var title = 'browser';
+var platform$1 = 'browser';
+var browser$1 = true;
+var env = {};
+var argv = [];
+var version = ''; // empty string to avoid regexp issues
+var versions = {};
+var release$1 = {};
+var config = {};
+
+function noop() {}
+
+var on = noop;
+var addListener = noop;
+var once = noop;
+var off = noop;
+var removeListener = noop;
+var removeAllListeners = noop;
+var emit = noop;
+
+function binding(name) {
+    throw new Error('process.binding is not supported');
+}
+
+function cwd () { return '/' }
+function chdir (dir) {
+    throw new Error('process.chdir is not supported');
+}function umask() { return 0; }
+
+// from https://github.com/kumavis/browser-process-hrtime/blob/master/index.js
+var performance$1 = global.performance || {};
+var performanceNow =
+  performance$1.now        ||
+  performance$1.mozNow     ||
+  performance$1.msNow      ||
+  performance$1.oNow       ||
+  performance$1.webkitNow  ||
+  function(){ return (new Date()).getTime() };
+
+// generate timestamp or delta
+// see http://nodejs.org/api/process.html#process_process_hrtime
+function hrtime(previousTimestamp){
+  var clocktime = performanceNow.call(performance$1)*1e-3;
+  var seconds = Math.floor(clocktime);
+  var nanoseconds = Math.floor((clocktime%1)*1e9);
+  if (previousTimestamp) {
+    seconds = seconds - previousTimestamp[0];
+    nanoseconds = nanoseconds - previousTimestamp[1];
+    if (nanoseconds<0) {
+      seconds--;
+      nanoseconds += 1e9;
+    }
+  }
+  return [seconds,nanoseconds]
+}
+
+var startTime = new Date();
+function uptime$1() {
+  var currentTime = new Date();
+  var dif = currentTime - startTime;
+  return dif / 1000;
+}
+
+var browser$1$1 = {
+  nextTick: nextTick,
+  title: title,
+  browser: browser$1,
+  env: env,
+  argv: argv,
+  version: version,
+  versions: versions,
+  on: on,
+  addListener: addListener,
+  once: once,
+  off: off,
+  removeListener: removeListener,
+  removeAllListeners: removeAllListeners,
+  emit: emit,
+  binding: binding,
+  cwd: cwd,
+  chdir: chdir,
+  umask: umask,
+  hrtime: hrtime,
+  platform: platform$1,
+  release: release$1,
+  config: config,
+  uptime: uptime$1
+};
+
+var inherits$2;
+if (typeof Object.create === 'function'){
+  inherits$2 = function inherits(ctor, superCtor) {
+    // implementation from standard node.js 'util' module
+    ctor.super_ = superCtor;
+    ctor.prototype = Object.create(superCtor.prototype, {
+      constructor: {
+        value: ctor,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+  };
+} else {
+  inherits$2 = function inherits(ctor, superCtor) {
+    ctor.super_ = superCtor;
+    var TempCtor = function () {};
+    TempCtor.prototype = superCtor.prototype;
+    ctor.prototype = new TempCtor();
+    ctor.prototype.constructor = ctor;
+  };
+}
+var inherits$3 = inherits$2;
+
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+var getOwnPropertyDescriptors = Object.getOwnPropertyDescriptors ||
+  function getOwnPropertyDescriptors(obj) {
+    var keys = Object.keys(obj);
+    var descriptors = {};
+    for (var i = 0; i < keys.length; i++) {
+      descriptors[keys[i]] = Object.getOwnPropertyDescriptor(obj, keys[i]);
+    }
+    return descriptors;
+  };
+
+var formatRegExp = /%[sdj%]/g;
+function format$2(f) {
+  if (!isString(f)) {
+    var objects = [];
+    for (var i = 0; i < arguments.length; i++) {
+      objects.push(inspect(arguments[i]));
+    }
+    return objects.join(' ');
+  }
+
+  var i = 1;
+  var args = arguments;
+  var len = args.length;
+  var str = String(f).replace(formatRegExp, function(x) {
+    if (x === '%%') return '%';
+    if (i >= len) return x;
+    switch (x) {
+      case '%s': return String(args[i++]);
+      case '%d': return Number(args[i++]);
+      case '%j':
+        try {
+          return JSON.stringify(args[i++]);
+        } catch (_) {
+          return '[Circular]';
+        }
+      default:
+        return x;
+    }
+  });
+  for (var x = args[i]; i < len; x = args[++i]) {
+    if (isNull(x) || !isObject(x)) {
+      str += ' ' + x;
+    } else {
+      str += ' ' + inspect(x);
+    }
+  }
+  return str;
+}
+
+// Mark that a method should not be used.
+// Returns a modified function which warns once by default.
+// If --no-deprecation is set, then it is a no-op.
+function deprecate(fn, msg) {
+  // Allow for deprecating things in the process of starting up.
+  if (isUndefined(global.process)) {
+    return function() {
+      return deprecate(fn, msg).apply(this, arguments);
+    };
+  }
+
+  if (browser$1$1.noDeprecation === true) {
+    return fn;
+  }
+
+  var warned = false;
+  function deprecated() {
+    if (!warned) {
+      if (browser$1$1.throwDeprecation) {
+        throw new Error(msg);
+      } else if (browser$1$1.traceDeprecation) {
+        console.trace(msg);
+      } else {
+        console.error(msg);
+      }
+      warned = true;
+    }
+    return fn.apply(this, arguments);
+  }
+
+  return deprecated;
+}
+
+var debugs = {};
+var debugEnviron;
+function debuglog(set) {
+  if (isUndefined(debugEnviron))
+    debugEnviron = browser$1$1.env.NODE_DEBUG || '';
+  set = set.toUpperCase();
+  if (!debugs[set]) {
+    if (new RegExp('\\b' + set + '\\b', 'i').test(debugEnviron)) {
+      var pid = 0;
+      debugs[set] = function() {
+        var msg = format$2.apply(null, arguments);
+        console.error('%s %d: %s', set, pid, msg);
+      };
+    } else {
+      debugs[set] = function() {};
+    }
+  }
+  return debugs[set];
+}
+
+/**
+ * Echos the value of a value. Trys to print the value out
+ * in the best way possible given the different types.
+ *
+ * @param {Object} obj The object to print out.
+ * @param {Object} opts Optional options object that alters the output.
+ */
+/* legacy: obj, showHidden, depth, colors*/
+function inspect(obj, opts) {
+  // default options
+  var ctx = {
+    seen: [],
+    stylize: stylizeNoColor
+  };
+  // legacy...
+  if (arguments.length >= 3) ctx.depth = arguments[2];
+  if (arguments.length >= 4) ctx.colors = arguments[3];
+  if (isBoolean(opts)) {
+    // legacy...
+    ctx.showHidden = opts;
+  } else if (opts) {
+    // got an "options" object
+    _extend(ctx, opts);
+  }
+  // set default options
+  if (isUndefined(ctx.showHidden)) ctx.showHidden = false;
+  if (isUndefined(ctx.depth)) ctx.depth = 2;
+  if (isUndefined(ctx.colors)) ctx.colors = false;
+  if (isUndefined(ctx.customInspect)) ctx.customInspect = true;
+  if (ctx.colors) ctx.stylize = stylizeWithColor;
+  return formatValue(ctx, obj, ctx.depth);
+}
+
+// http://en.wikipedia.org/wiki/ANSI_escape_code#graphics
+inspect.colors = {
+  'bold' : [1, 22],
+  'italic' : [3, 23],
+  'underline' : [4, 24],
+  'inverse' : [7, 27],
+  'white' : [37, 39],
+  'grey' : [90, 39],
+  'black' : [30, 39],
+  'blue' : [34, 39],
+  'cyan' : [36, 39],
+  'green' : [32, 39],
+  'magenta' : [35, 39],
+  'red' : [31, 39],
+  'yellow' : [33, 39]
+};
+
+// Don't use 'blue' not visible on cmd.exe
+inspect.styles = {
+  'special': 'cyan',
+  'number': 'yellow',
+  'boolean': 'yellow',
+  'undefined': 'grey',
+  'null': 'bold',
+  'string': 'green',
+  'date': 'magenta',
+  // "name": intentionally not styling
+  'regexp': 'red'
+};
+
+
+function stylizeWithColor(str, styleType) {
+  var style = inspect.styles[styleType];
+
+  if (style) {
+    return '\u001b[' + inspect.colors[style][0] + 'm' + str +
+           '\u001b[' + inspect.colors[style][1] + 'm';
+  } else {
+    return str;
+  }
+}
+
+
+function stylizeNoColor(str, styleType) {
+  return str;
+}
+
+
+function arrayToHash(array) {
+  var hash = {};
+
+  array.forEach(function(val, idx) {
+    hash[val] = true;
+  });
+
+  return hash;
+}
+
+
+function formatValue(ctx, value, recurseTimes) {
+  // Provide a hook for user-specified inspect functions.
+  // Check that value is an object with an inspect function on it
+  if (ctx.customInspect &&
+      value &&
+      isFunction(value.inspect) &&
+      // Filter out the util module, it's inspect function is special
+      value.inspect !== inspect &&
+      // Also filter out any prototype objects using the circular check.
+      !(value.constructor && value.constructor.prototype === value)) {
+    var ret = value.inspect(recurseTimes, ctx);
+    if (!isString(ret)) {
+      ret = formatValue(ctx, ret, recurseTimes);
+    }
+    return ret;
+  }
+
+  // Primitive types cannot have properties
+  var primitive = formatPrimitive(ctx, value);
+  if (primitive) {
+    return primitive;
+  }
+
+  // Look up the keys of the object.
+  var keys = Object.keys(value);
+  var visibleKeys = arrayToHash(keys);
+
+  if (ctx.showHidden) {
+    keys = Object.getOwnPropertyNames(value);
+  }
+
+  // IE doesn't make error fields non-enumerable
+  // http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx
+  if (isError(value)
+      && (keys.indexOf('message') >= 0 || keys.indexOf('description') >= 0)) {
+    return formatError(value);
+  }
+
+  // Some type of object without properties can be shortcutted.
+  if (keys.length === 0) {
+    if (isFunction(value)) {
+      var name = value.name ? ': ' + value.name : '';
+      return ctx.stylize('[Function' + name + ']', 'special');
+    }
+    if (isRegExp$1(value)) {
+      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
+    }
+    if (isDate(value)) {
+      return ctx.stylize(Date.prototype.toString.call(value), 'date');
+    }
+    if (isError(value)) {
+      return formatError(value);
+    }
+  }
+
+  var base = '', array = false, braces = ['{', '}'];
+
+  // Make Array say that they are Array
+  if (isArray$1(value)) {
+    array = true;
+    braces = ['[', ']'];
+  }
+
+  // Make functions say that they are functions
+  if (isFunction(value)) {
+    var n = value.name ? ': ' + value.name : '';
+    base = ' [Function' + n + ']';
+  }
+
+  // Make RegExps say that they are RegExps
+  if (isRegExp$1(value)) {
+    base = ' ' + RegExp.prototype.toString.call(value);
+  }
+
+  // Make dates with properties first say the date
+  if (isDate(value)) {
+    base = ' ' + Date.prototype.toUTCString.call(value);
+  }
+
+  // Make error with message first say the error
+  if (isError(value)) {
+    base = ' ' + formatError(value);
+  }
+
+  if (keys.length === 0 && (!array || value.length == 0)) {
+    return braces[0] + base + braces[1];
+  }
+
+  if (recurseTimes < 0) {
+    if (isRegExp$1(value)) {
+      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
+    } else {
+      return ctx.stylize('[Object]', 'special');
+    }
+  }
+
+  ctx.seen.push(value);
+
+  var output;
+  if (array) {
+    output = formatArray(ctx, value, recurseTimes, visibleKeys, keys);
+  } else {
+    output = keys.map(function(key) {
+      return formatProperty(ctx, value, recurseTimes, visibleKeys, key, array);
+    });
+  }
+
+  ctx.seen.pop();
+
+  return reduceToSingleString(output, base, braces);
+}
+
+
+function formatPrimitive(ctx, value) {
+  if (isUndefined(value))
+    return ctx.stylize('undefined', 'undefined');
+  if (isString(value)) {
+    var simple = '\'' + JSON.stringify(value).replace(/^"|"$/g, '')
+                                             .replace(/'/g, "\\'")
+                                             .replace(/\\"/g, '"') + '\'';
+    return ctx.stylize(simple, 'string');
+  }
+  if (isNumber(value))
+    return ctx.stylize('' + value, 'number');
+  if (isBoolean(value))
+    return ctx.stylize('' + value, 'boolean');
+  // For some reason typeof null is "object", so special case here.
+  if (isNull(value))
+    return ctx.stylize('null', 'null');
+}
+
+
+function formatError(value) {
+  return '[' + Error.prototype.toString.call(value) + ']';
+}
+
+
+function formatArray(ctx, value, recurseTimes, visibleKeys, keys) {
+  var output = [];
+  for (var i = 0, l = value.length; i < l; ++i) {
+    if (hasOwnProperty(value, String(i))) {
+      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
+          String(i), true));
+    } else {
+      output.push('');
+    }
+  }
+  keys.forEach(function(key) {
+    if (!key.match(/^\d+$/)) {
+      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
+          key, true));
+    }
+  });
+  return output;
+}
+
+
+function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
+  var name, str, desc;
+  desc = Object.getOwnPropertyDescriptor(value, key) || { value: value[key] };
+  if (desc.get) {
+    if (desc.set) {
+      str = ctx.stylize('[Getter/Setter]', 'special');
+    } else {
+      str = ctx.stylize('[Getter]', 'special');
+    }
+  } else {
+    if (desc.set) {
+      str = ctx.stylize('[Setter]', 'special');
+    }
+  }
+  if (!hasOwnProperty(visibleKeys, key)) {
+    name = '[' + key + ']';
+  }
+  if (!str) {
+    if (ctx.seen.indexOf(desc.value) < 0) {
+      if (isNull(recurseTimes)) {
+        str = formatValue(ctx, desc.value, null);
+      } else {
+        str = formatValue(ctx, desc.value, recurseTimes - 1);
+      }
+      if (str.indexOf('\n') > -1) {
+        if (array) {
+          str = str.split('\n').map(function(line) {
+            return '  ' + line;
+          }).join('\n').substr(2);
+        } else {
+          str = '\n' + str.split('\n').map(function(line) {
+            return '   ' + line;
+          }).join('\n');
+        }
+      }
+    } else {
+      str = ctx.stylize('[Circular]', 'special');
+    }
+  }
+  if (isUndefined(name)) {
+    if (array && key.match(/^\d+$/)) {
+      return str;
+    }
+    name = JSON.stringify('' + key);
+    if (name.match(/^"([a-zA-Z_][a-zA-Z_0-9]*)"$/)) {
+      name = name.substr(1, name.length - 2);
+      name = ctx.stylize(name, 'name');
+    } else {
+      name = name.replace(/'/g, "\\'")
+                 .replace(/\\"/g, '"')
+                 .replace(/(^"|"$)/g, "'");
+      name = ctx.stylize(name, 'string');
+    }
+  }
+
+  return name + ': ' + str;
+}
+
+
+function reduceToSingleString(output, base, braces) {
+  var length = output.reduce(function(prev, cur) {
+    if (cur.indexOf('\n') >= 0) ;
+    return prev + cur.replace(/\u001b\[\d\d?m/g, '').length + 1;
+  }, 0);
+
+  if (length > 60) {
+    return braces[0] +
+           (base === '' ? '' : base + '\n ') +
+           ' ' +
+           output.join(',\n  ') +
+           ' ' +
+           braces[1];
+  }
+
+  return braces[0] + base + ' ' + output.join(', ') + ' ' + braces[1];
+}
+
+
+// NOTE: These type checking functions intentionally don't use `instanceof`
+// because it is fragile and can be easily faked with `Object.create()`.
+function isArray$1(ar) {
+  return Array.isArray(ar);
+}
+
+function isBoolean(arg) {
+  return typeof arg === 'boolean';
+}
+
+function isNull(arg) {
+  return arg === null;
+}
+
+function isNullOrUndefined(arg) {
+  return arg == null;
+}
+
+function isNumber(arg) {
+  return typeof arg === 'number';
+}
+
+function isString(arg) {
+  return typeof arg === 'string';
+}
+
+function isSymbol(arg) {
+  return typeof arg === 'symbol';
+}
+
+function isUndefined(arg) {
+  return arg === void 0;
+}
+
+function isRegExp$1(re) {
+  return isObject(re) && objectToString(re) === '[object RegExp]';
+}
+
+function isObject(arg) {
+  return typeof arg === 'object' && arg !== null;
+}
+
+function isDate(d) {
+  return isObject(d) && objectToString(d) === '[object Date]';
+}
+
+function isError(e) {
+  return isObject(e) &&
+      (objectToString(e) === '[object Error]' || e instanceof Error);
+}
+
+function isFunction(arg) {
+  return typeof arg === 'function';
+}
+
+function isPrimitive(arg) {
+  return arg === null ||
+         typeof arg === 'boolean' ||
+         typeof arg === 'number' ||
+         typeof arg === 'string' ||
+         typeof arg === 'symbol' ||  // ES6 symbol
+         typeof arg === 'undefined';
+}
+
+function isBuffer$1(maybeBuf) {
+  return Buffer.isBuffer(maybeBuf);
+}
+
+function objectToString(o) {
+  return Object.prototype.toString.call(o);
+}
+
+
+function pad(n) {
+  return n < 10 ? '0' + n.toString(10) : n.toString(10);
+}
+
+
+var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
+              'Oct', 'Nov', 'Dec'];
+
+// 26 Feb 16:19:34
+function timestamp() {
+  var d = new Date();
+  var time = [pad(d.getHours()),
+              pad(d.getMinutes()),
+              pad(d.getSeconds())].join(':');
+  return [d.getDate(), months[d.getMonth()], time].join(' ');
+}
+
+
+// log is just a thin wrapper to console.log that prepends a timestamp
+function log() {
+  console.log('%s - %s', timestamp(), format$2.apply(null, arguments));
+}
+
+function _extend(origin, add) {
+  // Don't do anything if add isn't an object
+  if (!add || !isObject(add)) return origin;
+
+  var keys = Object.keys(add);
+  var i = keys.length;
+  while (i--) {
+    origin[keys[i]] = add[keys[i]];
+  }
+  return origin;
+}
+function hasOwnProperty(obj, prop) {
+  return Object.prototype.hasOwnProperty.call(obj, prop);
+}
+
+var kCustomPromisifiedSymbol = typeof Symbol !== 'undefined' ? Symbol('util.promisify.custom') : undefined;
+
+function promisify(original) {
+  if (typeof original !== 'function')
+    throw new TypeError('The "original" argument must be of type Function');
+
+  if (kCustomPromisifiedSymbol && original[kCustomPromisifiedSymbol]) {
+    var fn = original[kCustomPromisifiedSymbol];
+    if (typeof fn !== 'function') {
+      throw new TypeError('The "util.promisify.custom" argument must be of type Function');
+    }
+    Object.defineProperty(fn, kCustomPromisifiedSymbol, {
+      value: fn, enumerable: false, writable: false, configurable: true
+    });
+    return fn;
+  }
+
+  function fn() {
+    var promiseResolve, promiseReject;
+    var promise = new Promise(function (resolve, reject) {
+      promiseResolve = resolve;
+      promiseReject = reject;
+    });
+
+    var args = [];
+    for (var i = 0; i < arguments.length; i++) {
+      args.push(arguments[i]);
+    }
+    args.push(function (err, value) {
+      if (err) {
+        promiseReject(err);
+      } else {
+        promiseResolve(value);
+      }
+    });
+
+    try {
+      original.apply(this, args);
+    } catch (err) {
+      promiseReject(err);
+    }
+
+    return promise;
+  }
+
+  Object.setPrototypeOf(fn, Object.getPrototypeOf(original));
+
+  if (kCustomPromisifiedSymbol) Object.defineProperty(fn, kCustomPromisifiedSymbol, {
+    value: fn, enumerable: false, writable: false, configurable: true
+  });
+  return Object.defineProperties(
+    fn,
+    getOwnPropertyDescriptors(original)
+  );
+}
+
+promisify.custom = kCustomPromisifiedSymbol;
+
+function callbackifyOnRejected(reason, cb) {
+  // `!reason` guard inspired by bluebird (Ref: https://goo.gl/t5IS6M).
+  // Because `null` is a special error value in callbacks which means "no error
+  // occurred", we error-wrap so the callback consumer can distinguish between
+  // "the promise rejected with null" or "the promise fulfilled with undefined".
+  if (!reason) {
+    var newReason = new Error('Promise was rejected with a falsy value');
+    newReason.reason = reason;
+    reason = newReason;
+  }
+  return cb(reason);
+}
+
+function callbackify(original) {
+  if (typeof original !== 'function') {
+    throw new TypeError('The "original" argument must be of type Function');
+  }
+
+  // We DO NOT return the promise as it gives the user a false sense that
+  // the promise is actually somehow related to the callback's execution
+  // and that the callback throwing will reject the promise.
+  function callbackified() {
+    var args = [];
+    for (var i = 0; i < arguments.length; i++) {
+      args.push(arguments[i]);
+    }
+
+    var maybeCb = args.pop();
+    if (typeof maybeCb !== 'function') {
+      throw new TypeError('The last argument must be of type Function');
+    }
+    var self = this;
+    var cb = function() {
+      return maybeCb.apply(self, arguments);
+    };
+    // In true node style we process the callback on `nextTick` with all the
+    // implications (stack, `uncaughtException`, `async_hooks`)
+    original.apply(this, args)
+      .then(function(ret) { browser$1$1.nextTick(cb.bind(null, null, ret)); },
+        function(rej) { browser$1$1.nextTick(callbackifyOnRejected.bind(null, rej, cb)); });
+  }
+
+  Object.setPrototypeOf(callbackified, Object.getPrototypeOf(original));
+  Object.defineProperties(callbackified, getOwnPropertyDescriptors(original));
+  return callbackified;
+}
+
+var _polyfillNode_util = {
+  inherits: inherits$3,
+  _extend: _extend,
+  log: log,
+  isBuffer: isBuffer$1,
+  isPrimitive: isPrimitive,
+  isFunction: isFunction,
+  isError: isError,
+  isDate: isDate,
+  isObject: isObject,
+  isRegExp: isRegExp$1,
+  isUndefined: isUndefined,
+  isSymbol: isSymbol,
+  isString: isString,
+  isNumber: isNumber,
+  isNullOrUndefined: isNullOrUndefined,
+  isNull: isNull,
+  isBoolean: isBoolean,
+  isArray: isArray$1,
+  inspect: inspect,
+  deprecate: deprecate,
+  format: format$2,
+  debuglog: debuglog,
+  promisify: promisify,
+  callbackify: callbackify,
+};
+
+var _polyfillNode_util$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    _extend: _extend,
+    callbackify: callbackify,
+    debuglog: debuglog,
+    default: _polyfillNode_util,
+    deprecate: deprecate,
+    format: format$2,
+    inherits: inherits$3,
+    inspect: inspect,
+    isArray: isArray$1,
+    isBoolean: isBoolean,
+    isBuffer: isBuffer$1,
+    isDate: isDate,
+    isError: isError,
+    isFunction: isFunction,
+    isNull: isNull,
+    isNullOrUndefined: isNullOrUndefined,
+    isNumber: isNumber,
+    isObject: isObject,
+    isPrimitive: isPrimitive,
+    isRegExp: isRegExp$1,
+    isString: isString,
+    isSymbol: isSymbol,
+    isUndefined: isUndefined,
+    log: log,
+    promisify: promisify
+});
+
+var lookup = [];
+var revLookup = [];
+var Arr = typeof Uint8Array !== 'undefined' ? Uint8Array : Array;
+var inited = false;
+function init () {
+  inited = true;
+  var code = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
+  for (var i = 0, len = code.length; i < len; ++i) {
+    lookup[i] = code[i];
+    revLookup[code.charCodeAt(i)] = i;
+  }
+
+  revLookup['-'.charCodeAt(0)] = 62;
+  revLookup['_'.charCodeAt(0)] = 63;
+}
+
+function toByteArray (b64) {
+  if (!inited) {
+    init();
+  }
+  var i, j, l, tmp, placeHolders, arr;
+  var len = b64.length;
+
+  if (len % 4 > 0) {
+    throw new Error('Invalid string. Length must be a multiple of 4')
+  }
+
+  // the number of equal signs (place holders)
+  // if there are two placeholders, than the two characters before it
+  // represent one byte
+  // if there is only one, then the three characters before it represent 2 bytes
+  // this is just a cheap hack to not do indexOf twice
+  placeHolders = b64[len - 2] === '=' ? 2 : b64[len - 1] === '=' ? 1 : 0;
+
+  // base64 is 4/3 + up to two characters of the original data
+  arr = new Arr(len * 3 / 4 - placeHolders);
+
+  // if there are placeholders, only get up to the last complete 4 chars
+  l = placeHolders > 0 ? len - 4 : len;
+
+  var L = 0;
+
+  for (i = 0, j = 0; i < l; i += 4, j += 3) {
+    tmp = (revLookup[b64.charCodeAt(i)] << 18) | (revLookup[b64.charCodeAt(i + 1)] << 12) | (revLookup[b64.charCodeAt(i + 2)] << 6) | revLookup[b64.charCodeAt(i + 3)];
+    arr[L++] = (tmp >> 16) & 0xFF;
+    arr[L++] = (tmp >> 8) & 0xFF;
+    arr[L++] = tmp & 0xFF;
+  }
+
+  if (placeHolders === 2) {
+    tmp = (revLookup[b64.charCodeAt(i)] << 2) | (revLookup[b64.charCodeAt(i + 1)] >> 4);
+    arr[L++] = tmp & 0xFF;
+  } else if (placeHolders === 1) {
+    tmp = (revLookup[b64.charCodeAt(i)] << 10) | (revLookup[b64.charCodeAt(i + 1)] << 4) | (revLookup[b64.charCodeAt(i + 2)] >> 2);
+    arr[L++] = (tmp >> 8) & 0xFF;
+    arr[L++] = tmp & 0xFF;
+  }
+
+  return arr
+}
+
+function tripletToBase64 (num) {
+  return lookup[num >> 18 & 0x3F] + lookup[num >> 12 & 0x3F] + lookup[num >> 6 & 0x3F] + lookup[num & 0x3F]
+}
+
+function encodeChunk (uint8, start, end) {
+  var tmp;
+  var output = [];
+  for (var i = start; i < end; i += 3) {
+    tmp = (uint8[i] << 16) + (uint8[i + 1] << 8) + (uint8[i + 2]);
+    output.push(tripletToBase64(tmp));
+  }
+  return output.join('')
+}
+
+function fromByteArray (uint8) {
+  if (!inited) {
+    init();
+  }
+  var tmp;
+  var len = uint8.length;
+  var extraBytes = len % 3; // if we have 1 byte left, pad 2 bytes
+  var output = '';
+  var parts = [];
+  var maxChunkLength = 16383; // must be multiple of 3
+
+  // go through the array every three bytes, we'll deal with trailing stuff later
+  for (var i = 0, len2 = len - extraBytes; i < len2; i += maxChunkLength) {
+    parts.push(encodeChunk(uint8, i, (i + maxChunkLength) > len2 ? len2 : (i + maxChunkLength)));
+  }
+
+  // pad the end with zeros, but make sure to not forget the extra bytes
+  if (extraBytes === 1) {
+    tmp = uint8[len - 1];
+    output += lookup[tmp >> 2];
+    output += lookup[(tmp << 4) & 0x3F];
+    output += '==';
+  } else if (extraBytes === 2) {
+    tmp = (uint8[len - 2] << 8) + (uint8[len - 1]);
+    output += lookup[tmp >> 10];
+    output += lookup[(tmp >> 4) & 0x3F];
+    output += lookup[(tmp << 2) & 0x3F];
+    output += '=';
+  }
+
+  parts.push(output);
+
+  return parts.join('')
+}
+
+function read (buffer, offset, isLE, mLen, nBytes) {
+  var e, m;
+  var eLen = nBytes * 8 - mLen - 1;
+  var eMax = (1 << eLen) - 1;
+  var eBias = eMax >> 1;
+  var nBits = -7;
+  var i = isLE ? (nBytes - 1) : 0;
+  var d = isLE ? -1 : 1;
+  var s = buffer[offset + i];
+
+  i += d;
+
+  e = s & ((1 << (-nBits)) - 1);
+  s >>= (-nBits);
+  nBits += eLen;
+  for (; nBits > 0; e = e * 256 + buffer[offset + i], i += d, nBits -= 8) {}
+
+  m = e & ((1 << (-nBits)) - 1);
+  e >>= (-nBits);
+  nBits += mLen;
+  for (; nBits > 0; m = m * 256 + buffer[offset + i], i += d, nBits -= 8) {}
+
+  if (e === 0) {
+    e = 1 - eBias;
+  } else if (e === eMax) {
+    return m ? NaN : ((s ? -1 : 1) * Infinity)
+  } else {
+    m = m + Math.pow(2, mLen);
+    e = e - eBias;
+  }
+  return (s ? -1 : 1) * m * Math.pow(2, e - mLen)
+}
+
+function write (buffer, value, offset, isLE, mLen, nBytes) {
+  var e, m, c;
+  var eLen = nBytes * 8 - mLen - 1;
+  var eMax = (1 << eLen) - 1;
+  var eBias = eMax >> 1;
+  var rt = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0);
+  var i = isLE ? 0 : (nBytes - 1);
+  var d = isLE ? 1 : -1;
+  var s = value < 0 || (value === 0 && 1 / value < 0) ? 1 : 0;
+
+  value = Math.abs(value);
+
+  if (isNaN(value) || value === Infinity) {
+    m = isNaN(value) ? 1 : 0;
+    e = eMax;
+  } else {
+    e = Math.floor(Math.log(value) / Math.LN2);
+    if (value * (c = Math.pow(2, -e)) < 1) {
+      e--;
+      c *= 2;
+    }
+    if (e + eBias >= 1) {
+      value += rt / c;
+    } else {
+      value += rt * Math.pow(2, 1 - eBias);
+    }
+    if (value * c >= 2) {
+      e++;
+      c /= 2;
+    }
+
+    if (e + eBias >= eMax) {
+      m = 0;
+      e = eMax;
+    } else if (e + eBias >= 1) {
+      m = (value * c - 1) * Math.pow(2, mLen);
+      e = e + eBias;
+    } else {
+      m = value * Math.pow(2, eBias - 1) * Math.pow(2, mLen);
+      e = 0;
+    }
+  }
+
+  for (; mLen >= 8; buffer[offset + i] = m & 0xff, i += d, m /= 256, mLen -= 8) {}
+
+  e = (e << mLen) | m;
+  eLen += mLen;
+  for (; eLen > 0; buffer[offset + i] = e & 0xff, i += d, e /= 256, eLen -= 8) {}
+
+  buffer[offset + i - d] |= s * 128;
+}
+
+var toString$2 = {}.toString;
+
+var isArray = Array.isArray || function (arr) {
+  return toString$2.call(arr) == '[object Array]';
+};
+
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
+ * @license  MIT
+ */
+/* eslint-disable no-proto */
+
+
+var INSPECT_MAX_BYTES = 50;
+
+/**
+ * If `Buffer.TYPED_ARRAY_SUPPORT`:
+ *   === true    Use Uint8Array implementation (fastest)
+ *   === false   Use Object implementation (most compatible, even IE6)
+ *
+ * Browsers that support typed arrays are IE 10+, Firefox 4+, Chrome 7+, Safari 5.1+,
+ * Opera 11.6+, iOS 4.2+.
+ *
+ * Due to various browser bugs, sometimes the Object implementation will be used even
+ * when the browser supports typed arrays.
+ *
+ * Note:
+ *
+ *   - Firefox 4-29 lacks support for adding new properties to `Uint8Array` instances,
+ *     See: https://bugzilla.mozilla.org/show_bug.cgi?id=695438.
+ *
+ *   - Chrome 9-10 is missing the `TypedArray.prototype.subarray` function.
+ *
+ *   - IE10 has a broken `TypedArray.prototype.subarray` function which returns arrays of
+ *     incorrect length in some situations.
+
+ * We detect these buggy browsers and set `Buffer.TYPED_ARRAY_SUPPORT` to `false` so they
+ * get the Object implementation, which is slower but behaves correctly.
+ */
+Buffer$1.TYPED_ARRAY_SUPPORT = global.TYPED_ARRAY_SUPPORT !== undefined
+  ? global.TYPED_ARRAY_SUPPORT
+  : true;
+
+/*
+ * Export kMaxLength after typed array support is determined.
+ */
+var _kMaxLength = kMaxLength();
+
+function kMaxLength () {
+  return Buffer$1.TYPED_ARRAY_SUPPORT
+    ? 0x7fffffff
+    : 0x3fffffff
+}
+
+function createBuffer (that, length) {
+  if (kMaxLength() < length) {
+    throw new RangeError('Invalid typed array length')
+  }
+  if (Buffer$1.TYPED_ARRAY_SUPPORT) {
+    // Return an augmented `Uint8Array` instance, for best performance
+    that = new Uint8Array(length);
+    that.__proto__ = Buffer$1.prototype;
+  } else {
+    // Fallback: Return an object instance of the Buffer class
+    if (that === null) {
+      that = new Buffer$1(length);
+    }
+    that.length = length;
+  }
+
+  return that
+}
+
+/**
+ * The Buffer constructor returns instances of `Uint8Array` that have their
+ * prototype changed to `Buffer.prototype`. Furthermore, `Buffer` is a subclass of
+ * `Uint8Array`, so the returned instances will have all the node `Buffer` methods
+ * and the `Uint8Array` methods. Square bracket notation works as expected -- it
+ * returns a single octet.
+ *
+ * The `Uint8Array` prototype remains unmodified.
+ */
+
+function Buffer$1 (arg, encodingOrOffset, length) {
+  if (!Buffer$1.TYPED_ARRAY_SUPPORT && !(this instanceof Buffer$1)) {
+    return new Buffer$1(arg, encodingOrOffset, length)
+  }
+
+  // Common case.
+  if (typeof arg === 'number') {
+    if (typeof encodingOrOffset === 'string') {
+      throw new Error(
+        'If encoding is specified then the first argument must be a string'
+      )
+    }
+    return allocUnsafe(this, arg)
+  }
+  return from(this, arg, encodingOrOffset, length)
+}
+
+Buffer$1.poolSize = 8192; // not used by this implementation
+
+// TODO: Legacy, not needed anymore. Remove in next major version.
+Buffer$1._augment = function (arr) {
+  arr.__proto__ = Buffer$1.prototype;
+  return arr
+};
+
+function from (that, value, encodingOrOffset, length) {
+  if (typeof value === 'number') {
+    throw new TypeError('"value" argument must not be a number')
+  }
+
+  if (typeof ArrayBuffer !== 'undefined' && value instanceof ArrayBuffer) {
+    return fromArrayBuffer(that, value, encodingOrOffset, length)
+  }
+
+  if (typeof value === 'string') {
+    return fromString(that, value, encodingOrOffset)
+  }
+
+  return fromObject(that, value)
+}
+
+/**
+ * Functionally equivalent to Buffer(arg, encoding) but throws a TypeError
+ * if value is a number.
+ * Buffer.from(str[, encoding])
+ * Buffer.from(array)
+ * Buffer.from(buffer)
+ * Buffer.from(arrayBuffer[, byteOffset[, length]])
+ **/
+Buffer$1.from = function (value, encodingOrOffset, length) {
+  return from(null, value, encodingOrOffset, length)
+};
+
+if (Buffer$1.TYPED_ARRAY_SUPPORT) {
+  Buffer$1.prototype.__proto__ = Uint8Array.prototype;
+  Buffer$1.__proto__ = Uint8Array;
+  if (typeof Symbol !== 'undefined' && Symbol.species &&
+      Buffer$1[Symbol.species] === Buffer$1) ;
+}
+
+function assertSize (size) {
+  if (typeof size !== 'number') {
+    throw new TypeError('"size" argument must be a number')
+  } else if (size < 0) {
+    throw new RangeError('"size" argument must not be negative')
+  }
+}
+
+function alloc (that, size, fill, encoding) {
+  assertSize(size);
+  if (size <= 0) {
+    return createBuffer(that, size)
+  }
+  if (fill !== undefined) {
+    // Only pay attention to encoding if it's a string. This
+    // prevents accidentally sending in a number that would
+    // be interpretted as a start offset.
+    return typeof encoding === 'string'
+      ? createBuffer(that, size).fill(fill, encoding)
+      : createBuffer(that, size).fill(fill)
+  }
+  return createBuffer(that, size)
+}
+
+/**
+ * Creates a new filled Buffer instance.
+ * alloc(size[, fill[, encoding]])
+ **/
+Buffer$1.alloc = function (size, fill, encoding) {
+  return alloc(null, size, fill, encoding)
+};
+
+function allocUnsafe (that, size) {
+  assertSize(size);
+  that = createBuffer(that, size < 0 ? 0 : checked(size) | 0);
+  if (!Buffer$1.TYPED_ARRAY_SUPPORT) {
+    for (var i = 0; i < size; ++i) {
+      that[i] = 0;
+    }
+  }
+  return that
+}
+
+/**
+ * Equivalent to Buffer(num), by default creates a non-zero-filled Buffer instance.
+ * */
+Buffer$1.allocUnsafe = function (size) {
+  return allocUnsafe(null, size)
+};
+/**
+ * Equivalent to SlowBuffer(num), by default creates a non-zero-filled Buffer instance.
+ */
+Buffer$1.allocUnsafeSlow = function (size) {
+  return allocUnsafe(null, size)
+};
+
+function fromString (that, string, encoding) {
+  if (typeof encoding !== 'string' || encoding === '') {
+    encoding = 'utf8';
+  }
+
+  if (!Buffer$1.isEncoding(encoding)) {
+    throw new TypeError('"encoding" must be a valid string encoding')
+  }
+
+  var length = byteLength(string, encoding) | 0;
+  that = createBuffer(that, length);
+
+  var actual = that.write(string, encoding);
+
+  if (actual !== length) {
+    // Writing a hex string, for example, that contains invalid characters will
+    // cause everything after the first invalid character to be ignored. (e.g.
+    // 'abxxcd' will be treated as 'ab')
+    that = that.slice(0, actual);
+  }
+
+  return that
+}
+
+function fromArrayLike (that, array) {
+  var length = array.length < 0 ? 0 : checked(array.length) | 0;
+  that = createBuffer(that, length);
+  for (var i = 0; i < length; i += 1) {
+    that[i] = array[i] & 255;
+  }
+  return that
+}
+
+function fromArrayBuffer (that, array, byteOffset, length) {
+  array.byteLength; // this throws if `array` is not a valid ArrayBuffer
+
+  if (byteOffset < 0 || array.byteLength < byteOffset) {
+    throw new RangeError('\'offset\' is out of bounds')
+  }
+
+  if (array.byteLength < byteOffset + (length || 0)) {
+    throw new RangeError('\'length\' is out of bounds')
+  }
+
+  if (byteOffset === undefined && length === undefined) {
+    array = new Uint8Array(array);
+  } else if (length === undefined) {
+    array = new Uint8Array(array, byteOffset);
+  } else {
+    array = new Uint8Array(array, byteOffset, length);
+  }
+
+  if (Buffer$1.TYPED_ARRAY_SUPPORT) {
+    // Return an augmented `Uint8Array` instance, for best performance
+    that = array;
+    that.__proto__ = Buffer$1.prototype;
+  } else {
+    // Fallback: Return an object instance of the Buffer class
+    that = fromArrayLike(that, array);
+  }
+  return that
+}
+
+function fromObject (that, obj) {
+  if (internalIsBuffer(obj)) {
+    var len = checked(obj.length) | 0;
+    that = createBuffer(that, len);
+
+    if (that.length === 0) {
+      return that
+    }
+
+    obj.copy(that, 0, 0, len);
+    return that
+  }
+
+  if (obj) {
+    if ((typeof ArrayBuffer !== 'undefined' &&
+        obj.buffer instanceof ArrayBuffer) || 'length' in obj) {
+      if (typeof obj.length !== 'number' || isnan(obj.length)) {
+        return createBuffer(that, 0)
+      }
+      return fromArrayLike(that, obj)
+    }
+
+    if (obj.type === 'Buffer' && isArray(obj.data)) {
+      return fromArrayLike(that, obj.data)
+    }
+  }
+
+  throw new TypeError('First argument must be a string, Buffer, ArrayBuffer, Array, or array-like object.')
+}
+
+function checked (length) {
+  // Note: cannot use `length < kMaxLength()` here because that fails when
+  // length is NaN (which is otherwise coerced to zero.)
+  if (length >= kMaxLength()) {
+    throw new RangeError('Attempt to allocate Buffer larger than maximum ' +
+                         'size: 0x' + kMaxLength().toString(16) + ' bytes')
+  }
+  return length | 0
+}
+
+function SlowBuffer (length) {
+  if (+length != length) { // eslint-disable-line eqeqeq
+    length = 0;
+  }
+  return Buffer$1.alloc(+length)
+}
+Buffer$1.isBuffer = isBuffer;
+function internalIsBuffer (b) {
+  return !!(b != null && b._isBuffer)
+}
+
+Buffer$1.compare = function compare (a, b) {
+  if (!internalIsBuffer(a) || !internalIsBuffer(b)) {
+    throw new TypeError('Arguments must be Buffers')
+  }
+
+  if (a === b) return 0
+
+  var x = a.length;
+  var y = b.length;
+
+  for (var i = 0, len = Math.min(x, y); i < len; ++i) {
+    if (a[i] !== b[i]) {
+      x = a[i];
+      y = b[i];
+      break
+    }
+  }
+
+  if (x < y) return -1
+  if (y < x) return 1
+  return 0
+};
+
+Buffer$1.isEncoding = function isEncoding (encoding) {
+  switch (String(encoding).toLowerCase()) {
+    case 'hex':
+    case 'utf8':
+    case 'utf-8':
+    case 'ascii':
+    case 'latin1':
+    case 'binary':
+    case 'base64':
+    case 'ucs2':
+    case 'ucs-2':
+    case 'utf16le':
+    case 'utf-16le':
+      return true
+    default:
+      return false
+  }
+};
+
+Buffer$1.concat = function concat (list, length) {
+  if (!isArray(list)) {
+    throw new TypeError('"list" argument must be an Array of Buffers')
+  }
+
+  if (list.length === 0) {
+    return Buffer$1.alloc(0)
+  }
+
+  var i;
+  if (length === undefined) {
+    length = 0;
+    for (i = 0; i < list.length; ++i) {
+      length += list[i].length;
+    }
+  }
+
+  var buffer = Buffer$1.allocUnsafe(length);
+  var pos = 0;
+  for (i = 0; i < list.length; ++i) {
+    var buf = list[i];
+    if (!internalIsBuffer(buf)) {
+      throw new TypeError('"list" argument must be an Array of Buffers')
+    }
+    buf.copy(buffer, pos);
+    pos += buf.length;
+  }
+  return buffer
+};
+
+function byteLength (string, encoding) {
+  if (internalIsBuffer(string)) {
+    return string.length
+  }
+  if (typeof ArrayBuffer !== 'undefined' && typeof ArrayBuffer.isView === 'function' &&
+      (ArrayBuffer.isView(string) || string instanceof ArrayBuffer)) {
+    return string.byteLength
+  }
+  if (typeof string !== 'string') {
+    string = '' + string;
+  }
+
+  var len = string.length;
+  if (len === 0) return 0
+
+  // Use a for loop to avoid recursion
+  var loweredCase = false;
+  for (;;) {
+    switch (encoding) {
+      case 'ascii':
+      case 'latin1':
+      case 'binary':
+        return len
+      case 'utf8':
+      case 'utf-8':
+      case undefined:
+        return utf8ToBytes(string).length
+      case 'ucs2':
+      case 'ucs-2':
+      case 'utf16le':
+      case 'utf-16le':
+        return len * 2
+      case 'hex':
+        return len >>> 1
+      case 'base64':
+        return base64ToBytes(string).length
+      default:
+        if (loweredCase) return utf8ToBytes(string).length // assume utf8
+        encoding = ('' + encoding).toLowerCase();
+        loweredCase = true;
+    }
+  }
+}
+Buffer$1.byteLength = byteLength;
+
+function slowToString (encoding, start, end) {
+  var loweredCase = false;
+
+  // No need to verify that "this.length <= MAX_UINT32" since it's a read-only
+  // property of a typed array.
+
+  // This behaves neither like String nor Uint8Array in that we set start/end
+  // to their upper/lower bounds if the value passed is out of range.
+  // undefined is handled specially as per ECMA-262 6th Edition,
+  // Section 13.3.3.7 Runtime Semantics: KeyedBindingInitialization.
+  if (start === undefined || start < 0) {
+    start = 0;
+  }
+  // Return early if start > this.length. Done here to prevent potential uint32
+  // coercion fail below.
+  if (start > this.length) {
+    return ''
+  }
+
+  if (end === undefined || end > this.length) {
+    end = this.length;
+  }
+
+  if (end <= 0) {
+    return ''
+  }
+
+  // Force coersion to uint32. This will also coerce falsey/NaN values to 0.
+  end >>>= 0;
+  start >>>= 0;
+
+  if (end <= start) {
+    return ''
+  }
+
+  if (!encoding) encoding = 'utf8';
+
+  while (true) {
+    switch (encoding) {
+      case 'hex':
+        return hexSlice(this, start, end)
+
+      case 'utf8':
+      case 'utf-8':
+        return utf8Slice(this, start, end)
+
+      case 'ascii':
+        return asciiSlice(this, start, end)
+
+      case 'latin1':
+      case 'binary':
+        return latin1Slice(this, start, end)
+
+      case 'base64':
+        return base64Slice(this, start, end)
+
+      case 'ucs2':
+      case 'ucs-2':
+      case 'utf16le':
+      case 'utf-16le':
+        return utf16leSlice(this, start, end)
+
+      default:
+        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
+        encoding = (encoding + '').toLowerCase();
+        loweredCase = true;
+    }
+  }
+}
+
+// The property is used by `Buffer.isBuffer` and `is-buffer` (in Safari 5-7) to detect
+// Buffer instances.
+Buffer$1.prototype._isBuffer = true;
+
+function swap (b, n, m) {
+  var i = b[n];
+  b[n] = b[m];
+  b[m] = i;
+}
+
+Buffer$1.prototype.swap16 = function swap16 () {
+  var len = this.length;
+  if (len % 2 !== 0) {
+    throw new RangeError('Buffer size must be a multiple of 16-bits')
+  }
+  for (var i = 0; i < len; i += 2) {
+    swap(this, i, i + 1);
+  }
+  return this
+};
+
+Buffer$1.prototype.swap32 = function swap32 () {
+  var len = this.length;
+  if (len % 4 !== 0) {
+    throw new RangeError('Buffer size must be a multiple of 32-bits')
+  }
+  for (var i = 0; i < len; i += 4) {
+    swap(this, i, i + 3);
+    swap(this, i + 1, i + 2);
+  }
+  return this
+};
+
+Buffer$1.prototype.swap64 = function swap64 () {
+  var len = this.length;
+  if (len % 8 !== 0) {
+    throw new RangeError('Buffer size must be a multiple of 64-bits')
+  }
+  for (var i = 0; i < len; i += 8) {
+    swap(this, i, i + 7);
+    swap(this, i + 1, i + 6);
+    swap(this, i + 2, i + 5);
+    swap(this, i + 3, i + 4);
+  }
+  return this
+};
+
+Buffer$1.prototype.toString = function toString () {
+  var length = this.length | 0;
+  if (length === 0) return ''
+  if (arguments.length === 0) return utf8Slice(this, 0, length)
+  return slowToString.apply(this, arguments)
+};
+
+Buffer$1.prototype.equals = function equals (b) {
+  if (!internalIsBuffer(b)) throw new TypeError('Argument must be a Buffer')
+  if (this === b) return true
+  return Buffer$1.compare(this, b) === 0
+};
+
+Buffer$1.prototype.inspect = function inspect () {
+  var str = '';
+  var max = INSPECT_MAX_BYTES;
+  if (this.length > 0) {
+    str = this.toString('hex', 0, max).match(/.{2}/g).join(' ');
+    if (this.length > max) str += ' ... ';
+  }
+  return '<Buffer ' + str + '>'
+};
+
+Buffer$1.prototype.compare = function compare (target, start, end, thisStart, thisEnd) {
+  if (!internalIsBuffer(target)) {
+    throw new TypeError('Argument must be a Buffer')
+  }
+
+  if (start === undefined) {
+    start = 0;
+  }
+  if (end === undefined) {
+    end = target ? target.length : 0;
+  }
+  if (thisStart === undefined) {
+    thisStart = 0;
+  }
+  if (thisEnd === undefined) {
+    thisEnd = this.length;
+  }
+
+  if (start < 0 || end > target.length || thisStart < 0 || thisEnd > this.length) {
+    throw new RangeError('out of range index')
+  }
+
+  if (thisStart >= thisEnd && start >= end) {
+    return 0
+  }
+  if (thisStart >= thisEnd) {
+    return -1
+  }
+  if (start >= end) {
+    return 1
+  }
+
+  start >>>= 0;
+  end >>>= 0;
+  thisStart >>>= 0;
+  thisEnd >>>= 0;
+
+  if (this === target) return 0
+
+  var x = thisEnd - thisStart;
+  var y = end - start;
+  var len = Math.min(x, y);
+
+  var thisCopy = this.slice(thisStart, thisEnd);
+  var targetCopy = target.slice(start, end);
+
+  for (var i = 0; i < len; ++i) {
+    if (thisCopy[i] !== targetCopy[i]) {
+      x = thisCopy[i];
+      y = targetCopy[i];
+      break
+    }
+  }
+
+  if (x < y) return -1
+  if (y < x) return 1
+  return 0
+};
+
+// Finds either the first index of `val` in `buffer` at offset >= `byteOffset`,
+// OR the last index of `val` in `buffer` at offset <= `byteOffset`.
+//
+// Arguments:
+// - buffer - a Buffer to search
+// - val - a string, Buffer, or number
+// - byteOffset - an index into `buffer`; will be clamped to an int32
+// - encoding - an optional encoding, relevant is val is a string
+// - dir - true for indexOf, false for lastIndexOf
+function bidirectionalIndexOf (buffer, val, byteOffset, encoding, dir) {
+  // Empty buffer means no match
+  if (buffer.length === 0) return -1
+
+  // Normalize byteOffset
+  if (typeof byteOffset === 'string') {
+    encoding = byteOffset;
+    byteOffset = 0;
+  } else if (byteOffset > 0x7fffffff) {
+    byteOffset = 0x7fffffff;
+  } else if (byteOffset < -0x80000000) {
+    byteOffset = -0x80000000;
+  }
+  byteOffset = +byteOffset;  // Coerce to Number.
+  if (isNaN(byteOffset)) {
+    // byteOffset: it it's undefined, null, NaN, "foo", etc, search whole buffer
+    byteOffset = dir ? 0 : (buffer.length - 1);
+  }
+
+  // Normalize byteOffset: negative offsets start from the end of the buffer
+  if (byteOffset < 0) byteOffset = buffer.length + byteOffset;
+  if (byteOffset >= buffer.length) {
+    if (dir) return -1
+    else byteOffset = buffer.length - 1;
+  } else if (byteOffset < 0) {
+    if (dir) byteOffset = 0;
+    else return -1
+  }
+
+  // Normalize val
+  if (typeof val === 'string') {
+    val = Buffer$1.from(val, encoding);
+  }
+
+  // Finally, search either indexOf (if dir is true) or lastIndexOf
+  if (internalIsBuffer(val)) {
+    // Special case: looking for empty string/buffer always fails
+    if (val.length === 0) {
+      return -1
+    }
+    return arrayIndexOf(buffer, val, byteOffset, encoding, dir)
+  } else if (typeof val === 'number') {
+    val = val & 0xFF; // Search for a byte value [0-255]
+    if (Buffer$1.TYPED_ARRAY_SUPPORT &&
+        typeof Uint8Array.prototype.indexOf === 'function') {
+      if (dir) {
+        return Uint8Array.prototype.indexOf.call(buffer, val, byteOffset)
+      } else {
+        return Uint8Array.prototype.lastIndexOf.call(buffer, val, byteOffset)
+      }
+    }
+    return arrayIndexOf(buffer, [ val ], byteOffset, encoding, dir)
+  }
+
+  throw new TypeError('val must be string, number or Buffer')
+}
+
+function arrayIndexOf (arr, val, byteOffset, encoding, dir) {
+  var indexSize = 1;
+  var arrLength = arr.length;
+  var valLength = val.length;
+
+  if (encoding !== undefined) {
+    encoding = String(encoding).toLowerCase();
+    if (encoding === 'ucs2' || encoding === 'ucs-2' ||
+        encoding === 'utf16le' || encoding === 'utf-16le') {
+      if (arr.length < 2 || val.length < 2) {
+        return -1
+      }
+      indexSize = 2;
+      arrLength /= 2;
+      valLength /= 2;
+      byteOffset /= 2;
+    }
+  }
+
+  function read (buf, i) {
+    if (indexSize === 1) {
+      return buf[i]
+    } else {
+      return buf.readUInt16BE(i * indexSize)
+    }
+  }
+
+  var i;
+  if (dir) {
+    var foundIndex = -1;
+    for (i = byteOffset; i < arrLength; i++) {
+      if (read(arr, i) === read(val, foundIndex === -1 ? 0 : i - foundIndex)) {
+        if (foundIndex === -1) foundIndex = i;
+        if (i - foundIndex + 1 === valLength) return foundIndex * indexSize
+      } else {
+        if (foundIndex !== -1) i -= i - foundIndex;
+        foundIndex = -1;
+      }
+    }
+  } else {
+    if (byteOffset + valLength > arrLength) byteOffset = arrLength - valLength;
+    for (i = byteOffset; i >= 0; i--) {
+      var found = true;
+      for (var j = 0; j < valLength; j++) {
+        if (read(arr, i + j) !== read(val, j)) {
+          found = false;
+          break
+        }
+      }
+      if (found) return i
+    }
+  }
+
+  return -1
+}
+
+Buffer$1.prototype.includes = function includes (val, byteOffset, encoding) {
+  return this.indexOf(val, byteOffset, encoding) !== -1
+};
+
+Buffer$1.prototype.indexOf = function indexOf (val, byteOffset, encoding) {
+  return bidirectionalIndexOf(this, val, byteOffset, encoding, true)
+};
+
+Buffer$1.prototype.lastIndexOf = function lastIndexOf (val, byteOffset, encoding) {
+  return bidirectionalIndexOf(this, val, byteOffset, encoding, false)
+};
+
+function hexWrite (buf, string, offset, length) {
+  offset = Number(offset) || 0;
+  var remaining = buf.length - offset;
+  if (!length) {
+    length = remaining;
+  } else {
+    length = Number(length);
+    if (length > remaining) {
+      length = remaining;
+    }
+  }
+
+  // must be an even number of digits
+  var strLen = string.length;
+  if (strLen % 2 !== 0) throw new TypeError('Invalid hex string')
+
+  if (length > strLen / 2) {
+    length = strLen / 2;
+  }
+  for (var i = 0; i < length; ++i) {
+    var parsed = parseInt(string.substr(i * 2, 2), 16);
+    if (isNaN(parsed)) return i
+    buf[offset + i] = parsed;
+  }
+  return i
+}
+
+function utf8Write (buf, string, offset, length) {
+  return blitBuffer(utf8ToBytes(string, buf.length - offset), buf, offset, length)
+}
+
+function asciiWrite (buf, string, offset, length) {
+  return blitBuffer(asciiToBytes(string), buf, offset, length)
+}
+
+function latin1Write (buf, string, offset, length) {
+  return asciiWrite(buf, string, offset, length)
+}
+
+function base64Write (buf, string, offset, length) {
+  return blitBuffer(base64ToBytes(string), buf, offset, length)
+}
+
+function ucs2Write (buf, string, offset, length) {
+  return blitBuffer(utf16leToBytes(string, buf.length - offset), buf, offset, length)
+}
+
+Buffer$1.prototype.write = function write (string, offset, length, encoding) {
+  // Buffer#write(string)
+  if (offset === undefined) {
+    encoding = 'utf8';
+    length = this.length;
+    offset = 0;
+  // Buffer#write(string, encoding)
+  } else if (length === undefined && typeof offset === 'string') {
+    encoding = offset;
+    length = this.length;
+    offset = 0;
+  // Buffer#write(string, offset[, length][, encoding])
+  } else if (isFinite(offset)) {
+    offset = offset | 0;
+    if (isFinite(length)) {
+      length = length | 0;
+      if (encoding === undefined) encoding = 'utf8';
+    } else {
+      encoding = length;
+      length = undefined;
+    }
+  // legacy write(string, encoding, offset, length) - remove in v0.13
+  } else {
+    throw new Error(
+      'Buffer.write(string, encoding, offset[, length]) is no longer supported'
+    )
+  }
+
+  var remaining = this.length - offset;
+  if (length === undefined || length > remaining) length = remaining;
+
+  if ((string.length > 0 && (length < 0 || offset < 0)) || offset > this.length) {
+    throw new RangeError('Attempt to write outside buffer bounds')
+  }
+
+  if (!encoding) encoding = 'utf8';
+
+  var loweredCase = false;
+  for (;;) {
+    switch (encoding) {
+      case 'hex':
+        return hexWrite(this, string, offset, length)
+
+      case 'utf8':
+      case 'utf-8':
+        return utf8Write(this, string, offset, length)
+
+      case 'ascii':
+        return asciiWrite(this, string, offset, length)
+
+      case 'latin1':
+      case 'binary':
+        return latin1Write(this, string, offset, length)
+
+      case 'base64':
+        // Warning: maxLength not taken into account in base64Write
+        return base64Write(this, string, offset, length)
+
+      case 'ucs2':
+      case 'ucs-2':
+      case 'utf16le':
+      case 'utf-16le':
+        return ucs2Write(this, string, offset, length)
+
+      default:
+        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
+        encoding = ('' + encoding).toLowerCase();
+        loweredCase = true;
+    }
+  }
+};
+
+Buffer$1.prototype.toJSON = function toJSON () {
+  return {
+    type: 'Buffer',
+    data: Array.prototype.slice.call(this._arr || this, 0)
+  }
+};
+
+function base64Slice (buf, start, end) {
+  if (start === 0 && end === buf.length) {
+    return fromByteArray(buf)
+  } else {
+    return fromByteArray(buf.slice(start, end))
+  }
+}
+
+function utf8Slice (buf, start, end) {
+  end = Math.min(buf.length, end);
+  var res = [];
+
+  var i = start;
+  while (i < end) {
+    var firstByte = buf[i];
+    var codePoint = null;
+    var bytesPerSequence = (firstByte > 0xEF) ? 4
+      : (firstByte > 0xDF) ? 3
+      : (firstByte > 0xBF) ? 2
+      : 1;
+
+    if (i + bytesPerSequence <= end) {
+      var secondByte, thirdByte, fourthByte, tempCodePoint;
+
+      switch (bytesPerSequence) {
+        case 1:
+          if (firstByte < 0x80) {
+            codePoint = firstByte;
+          }
+          break
+        case 2:
+          secondByte = buf[i + 1];
+          if ((secondByte & 0xC0) === 0x80) {
+            tempCodePoint = (firstByte & 0x1F) << 0x6 | (secondByte & 0x3F);
+            if (tempCodePoint > 0x7F) {
+              codePoint = tempCodePoint;
+            }
+          }
+          break
+        case 3:
+          secondByte = buf[i + 1];
+          thirdByte = buf[i + 2];
+          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80) {
+            tempCodePoint = (firstByte & 0xF) << 0xC | (secondByte & 0x3F) << 0x6 | (thirdByte & 0x3F);
+            if (tempCodePoint > 0x7FF && (tempCodePoint < 0xD800 || tempCodePoint > 0xDFFF)) {
+              codePoint = tempCodePoint;
+            }
+          }
+          break
+        case 4:
+          secondByte = buf[i + 1];
+          thirdByte = buf[i + 2];
+          fourthByte = buf[i + 3];
+          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80 && (fourthByte & 0xC0) === 0x80) {
+            tempCodePoint = (firstByte & 0xF) << 0x12 | (secondByte & 0x3F) << 0xC | (thirdByte & 0x3F) << 0x6 | (fourthByte & 0x3F);
+            if (tempCodePoint > 0xFFFF && tempCodePoint < 0x110000) {
+              codePoint = tempCodePoint;
+            }
+          }
+      }
+    }
+
+    if (codePoint === null) {
+      // we did not generate a valid codePoint so insert a
+      // replacement char (U+FFFD) and advance only 1 byte
+      codePoint = 0xFFFD;
+      bytesPerSequence = 1;
+    } else if (codePoint > 0xFFFF) {
+      // encode to utf16 (surrogate pair dance)
+      codePoint -= 0x10000;
+      res.push(codePoint >>> 10 & 0x3FF | 0xD800);
+      codePoint = 0xDC00 | codePoint & 0x3FF;
+    }
+
+    res.push(codePoint);
+    i += bytesPerSequence;
+  }
+
+  return decodeCodePointsArray(res)
+}
+
+// Based on http://stackoverflow.com/a/22747272/680742, the browser with
+// the lowest limit is Chrome, with 0x10000 args.
+// We go 1 magnitude less, for safety
+var MAX_ARGUMENTS_LENGTH = 0x1000;
+
+function decodeCodePointsArray (codePoints) {
+  var len = codePoints.length;
+  if (len <= MAX_ARGUMENTS_LENGTH) {
+    return String.fromCharCode.apply(String, codePoints) // avoid extra slice()
+  }
+
+  // Decode in chunks to avoid "call stack size exceeded".
+  var res = '';
+  var i = 0;
+  while (i < len) {
+    res += String.fromCharCode.apply(
+      String,
+      codePoints.slice(i, i += MAX_ARGUMENTS_LENGTH)
+    );
+  }
+  return res
+}
+
+function asciiSlice (buf, start, end) {
+  var ret = '';
+  end = Math.min(buf.length, end);
+
+  for (var i = start; i < end; ++i) {
+    ret += String.fromCharCode(buf[i] & 0x7F);
+  }
+  return ret
+}
+
+function latin1Slice (buf, start, end) {
+  var ret = '';
+  end = Math.min(buf.length, end);
+
+  for (var i = start; i < end; ++i) {
+    ret += String.fromCharCode(buf[i]);
+  }
+  return ret
+}
+
+function hexSlice (buf, start, end) {
+  var len = buf.length;
+
+  if (!start || start < 0) start = 0;
+  if (!end || end < 0 || end > len) end = len;
+
+  var out = '';
+  for (var i = start; i < end; ++i) {
+    out += toHex(buf[i]);
+  }
+  return out
+}
+
+function utf16leSlice (buf, start, end) {
+  var bytes = buf.slice(start, end);
+  var res = '';
+  for (var i = 0; i < bytes.length; i += 2) {
+    res += String.fromCharCode(bytes[i] + bytes[i + 1] * 256);
+  }
+  return res
+}
+
+Buffer$1.prototype.slice = function slice (start, end) {
+  var len = this.length;
+  start = ~~start;
+  end = end === undefined ? len : ~~end;
+
+  if (start < 0) {
+    start += len;
+    if (start < 0) start = 0;
+  } else if (start > len) {
+    start = len;
+  }
+
+  if (end < 0) {
+    end += len;
+    if (end < 0) end = 0;
+  } else if (end > len) {
+    end = len;
+  }
+
+  if (end < start) end = start;
+
+  var newBuf;
+  if (Buffer$1.TYPED_ARRAY_SUPPORT) {
+    newBuf = this.subarray(start, end);
+    newBuf.__proto__ = Buffer$1.prototype;
+  } else {
+    var sliceLen = end - start;
+    newBuf = new Buffer$1(sliceLen, undefined);
+    for (var i = 0; i < sliceLen; ++i) {
+      newBuf[i] = this[i + start];
+    }
+  }
+
+  return newBuf
+};
+
+/*
+ * Need to make sure that buffer isn't trying to write out of bounds.
+ */
+function checkOffset (offset, ext, length) {
+  if ((offset % 1) !== 0 || offset < 0) throw new RangeError('offset is not uint')
+  if (offset + ext > length) throw new RangeError('Trying to access beyond buffer length')
+}
+
+Buffer$1.prototype.readUIntLE = function readUIntLE (offset, byteLength, noAssert) {
+  offset = offset | 0;
+  byteLength = byteLength | 0;
+  if (!noAssert) checkOffset(offset, byteLength, this.length);
+
+  var val = this[offset];
+  var mul = 1;
+  var i = 0;
+  while (++i < byteLength && (mul *= 0x100)) {
+    val += this[offset + i] * mul;
+  }
+
+  return val
+};
+
+Buffer$1.prototype.readUIntBE = function readUIntBE (offset, byteLength, noAssert) {
+  offset = offset | 0;
+  byteLength = byteLength | 0;
+  if (!noAssert) {
+    checkOffset(offset, byteLength, this.length);
+  }
+
+  var val = this[offset + --byteLength];
+  var mul = 1;
+  while (byteLength > 0 && (mul *= 0x100)) {
+    val += this[offset + --byteLength] * mul;
+  }
+
+  return val
+};
+
+Buffer$1.prototype.readUInt8 = function readUInt8 (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 1, this.length);
+  return this[offset]
+};
+
+Buffer$1.prototype.readUInt16LE = function readUInt16LE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 2, this.length);
+  return this[offset] | (this[offset + 1] << 8)
+};
+
+Buffer$1.prototype.readUInt16BE = function readUInt16BE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 2, this.length);
+  return (this[offset] << 8) | this[offset + 1]
+};
+
+Buffer$1.prototype.readUInt32LE = function readUInt32LE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 4, this.length);
+
+  return ((this[offset]) |
+      (this[offset + 1] << 8) |
+      (this[offset + 2] << 16)) +
+      (this[offset + 3] * 0x1000000)
+};
+
+Buffer$1.prototype.readUInt32BE = function readUInt32BE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 4, this.length);
+
+  return (this[offset] * 0x1000000) +
+    ((this[offset + 1] << 16) |
+    (this[offset + 2] << 8) |
+    this[offset + 3])
+};
+
+Buffer$1.prototype.readIntLE = function readIntLE (offset, byteLength, noAssert) {
+  offset = offset | 0;
+  byteLength = byteLength | 0;
+  if (!noAssert) checkOffset(offset, byteLength, this.length);
+
+  var val = this[offset];
+  var mul = 1;
+  var i = 0;
+  while (++i < byteLength && (mul *= 0x100)) {
+    val += this[offset + i] * mul;
+  }
+  mul *= 0x80;
+
+  if (val >= mul) val -= Math.pow(2, 8 * byteLength);
+
+  return val
+};
+
+Buffer$1.prototype.readIntBE = function readIntBE (offset, byteLength, noAssert) {
+  offset = offset | 0;
+  byteLength = byteLength | 0;
+  if (!noAssert) checkOffset(offset, byteLength, this.length);
+
+  var i = byteLength;
+  var mul = 1;
+  var val = this[offset + --i];
+  while (i > 0 && (mul *= 0x100)) {
+    val += this[offset + --i] * mul;
+  }
+  mul *= 0x80;
+
+  if (val >= mul) val -= Math.pow(2, 8 * byteLength);
+
+  return val
+};
+
+Buffer$1.prototype.readInt8 = function readInt8 (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 1, this.length);
+  if (!(this[offset] & 0x80)) return (this[offset])
+  return ((0xff - this[offset] + 1) * -1)
+};
+
+Buffer$1.prototype.readInt16LE = function readInt16LE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 2, this.length);
+  var val = this[offset] | (this[offset + 1] << 8);
+  return (val & 0x8000) ? val | 0xFFFF0000 : val
+};
+
+Buffer$1.prototype.readInt16BE = function readInt16BE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 2, this.length);
+  var val = this[offset + 1] | (this[offset] << 8);
+  return (val & 0x8000) ? val | 0xFFFF0000 : val
+};
+
+Buffer$1.prototype.readInt32LE = function readInt32LE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 4, this.length);
+
+  return (this[offset]) |
+    (this[offset + 1] << 8) |
+    (this[offset + 2] << 16) |
+    (this[offset + 3] << 24)
+};
+
+Buffer$1.prototype.readInt32BE = function readInt32BE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 4, this.length);
+
+  return (this[offset] << 24) |
+    (this[offset + 1] << 16) |
+    (this[offset + 2] << 8) |
+    (this[offset + 3])
+};
+
+Buffer$1.prototype.readFloatLE = function readFloatLE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 4, this.length);
+  return read(this, offset, true, 23, 4)
+};
+
+Buffer$1.prototype.readFloatBE = function readFloatBE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 4, this.length);
+  return read(this, offset, false, 23, 4)
+};
+
+Buffer$1.prototype.readDoubleLE = function readDoubleLE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 8, this.length);
+  return read(this, offset, true, 52, 8)
+};
+
+Buffer$1.prototype.readDoubleBE = function readDoubleBE (offset, noAssert) {
+  if (!noAssert) checkOffset(offset, 8, this.length);
+  return read(this, offset, false, 52, 8)
+};
+
+function checkInt (buf, value, offset, ext, max, min) {
+  if (!internalIsBuffer(buf)) throw new TypeError('"buffer" argument must be a Buffer instance')
+  if (value > max || value < min) throw new RangeError('"value" argument is out of bounds')
+  if (offset + ext > buf.length) throw new RangeError('Index out of range')
+}
+
+Buffer$1.prototype.writeUIntLE = function writeUIntLE (value, offset, byteLength, noAssert) {
+  value = +value;
+  offset = offset | 0;
+  byteLength = byteLength | 0;
+  if (!noAssert) {
+    var maxBytes = Math.pow(2, 8 * byteLength) - 1;
+    checkInt(this, value, offset, byteLength, maxBytes, 0);
+  }
+
+  var mul = 1;
+  var i = 0;
+  this[offset] = value & 0xFF;
+  while (++i < byteLength && (mul *= 0x100)) {
+    this[offset + i] = (value / mul) & 0xFF;
+  }
+
+  return offset + byteLength
+};
+
+Buffer$1.prototype.writeUIntBE = function writeUIntBE (value, offset, byteLength, noAssert) {
+  value = +value;
+  offset = offset | 0;
+  byteLength = byteLength | 0;
+  if (!noAssert) {
+    var maxBytes = Math.pow(2, 8 * byteLength) - 1;
+    checkInt(this, value, offset, byteLength, maxBytes, 0);
+  }
+
+  var i = byteLength - 1;
+  var mul = 1;
+  this[offset + i] = value & 0xFF;
+  while (--i >= 0 && (mul *= 0x100)) {
+    this[offset + i] = (value / mul) & 0xFF;
+  }
+
+  return offset + byteLength
+};
+
+Buffer$1.prototype.writeUInt8 = function writeUInt8 (value, offset, noAssert) {
+  value = +value;
+  offset = offset | 0;
+  if (!noAssert) checkInt(this, value, offset, 1, 0xff, 0);
+  if (!Buffer$1.TYPED_ARRAY_SUPPORT) value = Math.floor(value);
+  this[offset] = (value & 0xff);
+  return offset + 1
+};
+
+function objectWriteUInt16 (buf, value, offset, littleEndian) {
+  if (value < 0) value = 0xffff + value + 1;
+  for (var i = 0, j = Math.min(buf.length - offset, 2); i < j; ++i) {
+    buf[offset + i] = (value & (0xff << (8 * (littleEndian ? i : 1 - i)))) >>>
+      (littleEndian ? i : 1 - i) * 8;
+  }
+}
+
+Buffer$1.prototype.writeUInt16LE = function writeUInt16LE (value, offset, noAssert) {
+  value = +value;
+  offset = offset | 0;
+  if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0);
+  if (Buffer$1.TYPED_ARRAY_SUPPORT) {
+    this[offset] = (value & 0xff);
+    this[offset + 1] = (value >>> 8);
+  } else {
+    objectWriteUInt16(this, value, offset, true);
+  }
+  return offset + 2
+};
+
+Buffer$1.prototype.writeUInt16BE = function writeUInt16BE (value, offset, noAssert) {
+  value = +value;
+  offset = offset | 0;
+  if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0);
+  if (Buffer$1.TYPED_ARRAY_SUPPORT) {
+    this[offset] = (value >>> 8);
+    this[offset + 1] = (value & 0xff);
+  } else {
+    objectWriteUInt16(this, value, offset, false);
+  }
+  return offset + 2
+};
+
+function objectWriteUInt32 (buf, value, offset, littleEndian) {
+  if (value < 0) value = 0xffffffff + value + 1;
+  for (var i = 0, j = Math.min(buf.length - offset, 4); i < j; ++i) {
+    buf[offset + i] = (value >>> (littleEndian ? i : 3 - i) * 8) & 0xff;
+  }
+}
+
+Buffer$1.prototype.writeUInt32LE = function writeUInt32LE (value, offset, noAssert) {
+  value = +value;
+  offset = offset | 0;
+  if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0);
+  if (Buffer$1.TYPED_ARRAY_SUPPORT) {
+    this[offset + 3] = (value >>> 24);
+    this[offset + 2] = (value >>> 16);
+    this[offset + 1] = (value >>> 8);
+    this[offset] = (value & 0xff);
+  } else {
+    objectWriteUInt32(this, value, offset, true);
+  }
+  return offset + 4
+};
+
+Buffer$1.prototype.writeUInt32BE = function writeUInt32BE (value, offset, noAssert) {
+  value = +value;
+  offset = offset | 0;
+  if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0);
+  if (Buffer$1.TYPED_ARRAY_SUPPORT) {
+    this[offset] = (value >>> 24);
+    this[offset + 1] = (value >>> 16);
+    this[offset + 2] = (value >>> 8);
+    this[offset + 3] = (value & 0xff);
+  } else {
+    objectWriteUInt32(this, value, offset, false);
+  }
+  return offset + 4
+};
+
+Buffer$1.prototype.writeIntLE = function writeIntLE (value, offset, byteLength, noAssert) {
+  value = +value;
+  offset = offset | 0;
+  if (!noAssert) {
+    var limit = Math.pow(2, 8 * byteLength - 1);
+
+    checkInt(this, value, offset, byteLength, limit - 1, -limit);
+  }
+
+  var i = 0;
+  var mul = 1;
+  var sub = 0;
+  this[offset] = value & 0xFF;
+  while (++i < byteLength && (mul *= 0x100)) {
+    if (value < 0 && sub === 0 && this[offset + i - 1] !== 0) {
+      sub = 1;
+    }
+    this[offset + i] = ((value / mul) >> 0) - sub & 0xFF;
+  }
+
+  return offset + byteLength
+};
+
+Buffer$1.prototype.writeIntBE = function writeIntBE (value, offset, byteLength, noAssert) {
+  value = +value;
+  offset = offset | 0;
+  if (!noAssert) {
+    var limit = Math.pow(2, 8 * byteLength - 1);
+
+    checkInt(this, value, offset, byteLength, limit - 1, -limit);
+  }
+
+  var i = byteLength - 1;
+  var mul = 1;
+  var sub = 0;
+  this[offset + i] = value & 0xFF;
+  while (--i >= 0 && (mul *= 0x100)) {
+    if (value < 0 && sub === 0 && this[offset + i + 1] !== 0) {
+      sub = 1;
+    }
+    this[offset + i] = ((value / mul) >> 0) - sub & 0xFF;
+  }
+
+  return offset + byteLength
+};
+
+Buffer$1.prototype.writeInt8 = function writeInt8 (value, offset, noAssert) {
+  value = +value;
+  offset = offset | 0;
+  if (!noAssert) checkInt(this, value, offset, 1, 0x7f, -0x80);
+  if (!Buffer$1.TYPED_ARRAY_SUPPORT) value = Math.floor(value);
+  if (value < 0) value = 0xff + value + 1;
+  this[offset] = (value & 0xff);
+  return offset + 1
+};
+
+Buffer$1.prototype.writeInt16LE = function writeInt16LE (value, offset, noAssert) {
+  value = +value;
+  offset = offset | 0;
+  if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000);
+  if (Buffer$1.TYPED_ARRAY_SUPPORT) {
+    this[offset] = (value & 0xff);
+    this[offset + 1] = (value >>> 8);
+  } else {
+    objectWriteUInt16(this, value, offset, true);
+  }
+  return offset + 2
+};
+
+Buffer$1.prototype.writeInt16BE = function writeInt16BE (value, offset, noAssert) {
+  value = +value;
+  offset = offset | 0;
+  if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000);
+  if (Buffer$1.TYPED_ARRAY_SUPPORT) {
+    this[offset] = (value >>> 8);
+    this[offset + 1] = (value & 0xff);
+  } else {
+    objectWriteUInt16(this, value, offset, false);
+  }
+  return offset + 2
+};
+
+Buffer$1.prototype.writeInt32LE = function writeInt32LE (value, offset, noAssert) {
+  value = +value;
+  offset = offset | 0;
+  if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000);
+  if (Buffer$1.TYPED_ARRAY_SUPPORT) {
+    this[offset] = (value & 0xff);
+    this[offset + 1] = (value >>> 8);
+    this[offset + 2] = (value >>> 16);
+    this[offset + 3] = (value >>> 24);
+  } else {
+    objectWriteUInt32(this, value, offset, true);
+  }
+  return offset + 4
+};
+
+Buffer$1.prototype.writeInt32BE = function writeInt32BE (value, offset, noAssert) {
+  value = +value;
+  offset = offset | 0;
+  if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000);
+  if (value < 0) value = 0xffffffff + value + 1;
+  if (Buffer$1.TYPED_ARRAY_SUPPORT) {
+    this[offset] = (value >>> 24);
+    this[offset + 1] = (value >>> 16);
+    this[offset + 2] = (value >>> 8);
+    this[offset + 3] = (value & 0xff);
+  } else {
+    objectWriteUInt32(this, value, offset, false);
+  }
+  return offset + 4
+};
+
+function checkIEEE754 (buf, value, offset, ext, max, min) {
+  if (offset + ext > buf.length) throw new RangeError('Index out of range')
+  if (offset < 0) throw new RangeError('Index out of range')
+}
+
+function writeFloat (buf, value, offset, littleEndian, noAssert) {
+  if (!noAssert) {
+    checkIEEE754(buf, value, offset, 4);
+  }
+  write(buf, value, offset, littleEndian, 23, 4);
+  return offset + 4
+}
+
+Buffer$1.prototype.writeFloatLE = function writeFloatLE (value, offset, noAssert) {
+  return writeFloat(this, value, offset, true, noAssert)
+};
+
+Buffer$1.prototype.writeFloatBE = function writeFloatBE (value, offset, noAssert) {
+  return writeFloat(this, value, offset, false, noAssert)
+};
+
+function writeDouble (buf, value, offset, littleEndian, noAssert) {
+  if (!noAssert) {
+    checkIEEE754(buf, value, offset, 8);
+  }
+  write(buf, value, offset, littleEndian, 52, 8);
+  return offset + 8
+}
+
+Buffer$1.prototype.writeDoubleLE = function writeDoubleLE (value, offset, noAssert) {
+  return writeDouble(this, value, offset, true, noAssert)
+};
+
+Buffer$1.prototype.writeDoubleBE = function writeDoubleBE (value, offset, noAssert) {
+  return writeDouble(this, value, offset, false, noAssert)
+};
+
+// copy(targetBuffer, targetStart=0, sourceStart=0, sourceEnd=buffer.length)
+Buffer$1.prototype.copy = function copy (target, targetStart, start, end) {
+  if (!start) start = 0;
+  if (!end && end !== 0) end = this.length;
+  if (targetStart >= target.length) targetStart = target.length;
+  if (!targetStart) targetStart = 0;
+  if (end > 0 && end < start) end = start;
+
+  // Copy 0 bytes; we're done
+  if (end === start) return 0
+  if (target.length === 0 || this.length === 0) return 0
+
+  // Fatal error conditions
+  if (targetStart < 0) {
+    throw new RangeError('targetStart out of bounds')
+  }
+  if (start < 0 || start >= this.length) throw new RangeError('sourceStart out of bounds')
+  if (end < 0) throw new RangeError('sourceEnd out of bounds')
+
+  // Are we oob?
+  if (end > this.length) end = this.length;
+  if (target.length - targetStart < end - start) {
+    end = target.length - targetStart + start;
+  }
+
+  var len = end - start;
+  var i;
+
+  if (this === target && start < targetStart && targetStart < end) {
+    // descending copy from end
+    for (i = len - 1; i >= 0; --i) {
+      target[i + targetStart] = this[i + start];
+    }
+  } else if (len < 1000 || !Buffer$1.TYPED_ARRAY_SUPPORT) {
+    // ascending copy from start
+    for (i = 0; i < len; ++i) {
+      target[i + targetStart] = this[i + start];
+    }
+  } else {
+    Uint8Array.prototype.set.call(
+      target,
+      this.subarray(start, start + len),
+      targetStart
+    );
+  }
+
+  return len
+};
+
+// Usage:
+//    buffer.fill(number[, offset[, end]])
+//    buffer.fill(buffer[, offset[, end]])
+//    buffer.fill(string[, offset[, end]][, encoding])
+Buffer$1.prototype.fill = function fill (val, start, end, encoding) {
+  // Handle string cases:
+  if (typeof val === 'string') {
+    if (typeof start === 'string') {
+      encoding = start;
+      start = 0;
+      end = this.length;
+    } else if (typeof end === 'string') {
+      encoding = end;
+      end = this.length;
+    }
+    if (val.length === 1) {
+      var code = val.charCodeAt(0);
+      if (code < 256) {
+        val = code;
+      }
+    }
+    if (encoding !== undefined && typeof encoding !== 'string') {
+      throw new TypeError('encoding must be a string')
+    }
+    if (typeof encoding === 'string' && !Buffer$1.isEncoding(encoding)) {
+      throw new TypeError('Unknown encoding: ' + encoding)
+    }
+  } else if (typeof val === 'number') {
+    val = val & 255;
+  }
+
+  // Invalid ranges are not set to a default, so can range check early.
+  if (start < 0 || this.length < start || this.length < end) {
+    throw new RangeError('Out of range index')
+  }
+
+  if (end <= start) {
+    return this
+  }
+
+  start = start >>> 0;
+  end = end === undefined ? this.length : end >>> 0;
+
+  if (!val) val = 0;
+
+  var i;
+  if (typeof val === 'number') {
+    for (i = start; i < end; ++i) {
+      this[i] = val;
+    }
+  } else {
+    var bytes = internalIsBuffer(val)
+      ? val
+      : utf8ToBytes(new Buffer$1(val, encoding).toString());
+    var len = bytes.length;
+    for (i = 0; i < end - start; ++i) {
+      this[i + start] = bytes[i % len];
+    }
+  }
+
+  return this
+};
+
+// HELPER FUNCTIONS
+// ================
+
+var INVALID_BASE64_RE = /[^+\/0-9A-Za-z-_]/g;
+
+function base64clean (str) {
+  // Node strips out invalid characters like \n and \t from the string, base64-js does not
+  str = stringtrim(str).replace(INVALID_BASE64_RE, '');
+  // Node converts strings with length < 2 to ''
+  if (str.length < 2) return ''
+  // Node allows for non-padded base64 strings (missing trailing ===), base64-js does not
+  while (str.length % 4 !== 0) {
+    str = str + '=';
+  }
+  return str
+}
+
+function stringtrim (str) {
+  if (str.trim) return str.trim()
+  return str.replace(/^\s+|\s+$/g, '')
+}
+
+function toHex (n) {
+  if (n < 16) return '0' + n.toString(16)
+  return n.toString(16)
+}
+
+function utf8ToBytes (string, units) {
+  units = units || Infinity;
+  var codePoint;
+  var length = string.length;
+  var leadSurrogate = null;
+  var bytes = [];
+
+  for (var i = 0; i < length; ++i) {
+    codePoint = string.charCodeAt(i);
+
+    // is surrogate component
+    if (codePoint > 0xD7FF && codePoint < 0xE000) {
+      // last char was a lead
+      if (!leadSurrogate) {
+        // no lead yet
+        if (codePoint > 0xDBFF) {
+          // unexpected trail
+          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD);
+          continue
+        } else if (i + 1 === length) {
+          // unpaired lead
+          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD);
+          continue
+        }
+
+        // valid lead
+        leadSurrogate = codePoint;
+
+        continue
+      }
+
+      // 2 leads in a row
+      if (codePoint < 0xDC00) {
+        if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD);
+        leadSurrogate = codePoint;
+        continue
+      }
+
+      // valid surrogate pair
+      codePoint = (leadSurrogate - 0xD800 << 10 | codePoint - 0xDC00) + 0x10000;
+    } else if (leadSurrogate) {
+      // valid bmp char, but last char was a lead
+      if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD);
+    }
+
+    leadSurrogate = null;
+
+    // encode utf8
+    if (codePoint < 0x80) {
+      if ((units -= 1) < 0) break
+      bytes.push(codePoint);
+    } else if (codePoint < 0x800) {
+      if ((units -= 2) < 0) break
+      bytes.push(
+        codePoint >> 0x6 | 0xC0,
+        codePoint & 0x3F | 0x80
+      );
+    } else if (codePoint < 0x10000) {
+      if ((units -= 3) < 0) break
+      bytes.push(
+        codePoint >> 0xC | 0xE0,
+        codePoint >> 0x6 & 0x3F | 0x80,
+        codePoint & 0x3F | 0x80
+      );
+    } else if (codePoint < 0x110000) {
+      if ((units -= 4) < 0) break
+      bytes.push(
+        codePoint >> 0x12 | 0xF0,
+        codePoint >> 0xC & 0x3F | 0x80,
+        codePoint >> 0x6 & 0x3F | 0x80,
+        codePoint & 0x3F | 0x80
+      );
+    } else {
+      throw new Error('Invalid code point')
+    }
+  }
+
+  return bytes
+}
+
+function asciiToBytes (str) {
+  var byteArray = [];
+  for (var i = 0; i < str.length; ++i) {
+    // Node's code seems to be doing this and not & 0x7F..
+    byteArray.push(str.charCodeAt(i) & 0xFF);
+  }
+  return byteArray
+}
+
+function utf16leToBytes (str, units) {
+  var c, hi, lo;
+  var byteArray = [];
+  for (var i = 0; i < str.length; ++i) {
+    if ((units -= 2) < 0) break
+
+    c = str.charCodeAt(i);
+    hi = c >> 8;
+    lo = c % 256;
+    byteArray.push(lo);
+    byteArray.push(hi);
+  }
+
+  return byteArray
+}
+
+
+function base64ToBytes (str) {
+  return toByteArray(base64clean(str))
+}
+
+function blitBuffer (src, dst, offset, length) {
+  for (var i = 0; i < length; ++i) {
+    if ((i + offset >= dst.length) || (i >= src.length)) break
+    dst[i + offset] = src[i];
+  }
+  return i
+}
+
+function isnan (val) {
+  return val !== val // eslint-disable-line no-self-compare
+}
+
+
+// the following is from is-buffer, also by Feross Aboukhadijeh and with same lisence
+// The _isBuffer check is for Safari 5-7 support, because it's missing
+// Object.prototype.constructor. Remove this eventually
+function isBuffer(obj) {
+  return obj != null && (!!obj._isBuffer || isFastBuffer(obj) || isSlowBuffer(obj))
+}
+
+function isFastBuffer (obj) {
+  return !!obj.constructor && typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
+}
+
+// For Node v0.10 support. Remove this eventually.
+function isSlowBuffer (obj) {
+  return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isFastBuffer(obj.slice(0, 0))
+}
+
+var _polyfillNode_buffer = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    Buffer: Buffer$1,
+    INSPECT_MAX_BYTES: INSPECT_MAX_BYTES,
+    SlowBuffer: SlowBuffer,
+    isBuffer: isBuffer,
+    kMaxLength: _kMaxLength
+});
+
+function BufferList$1() {
+  this.head = null;
+  this.tail = null;
+  this.length = 0;
+}
+
+BufferList$1.prototype.push = function (v) {
+  var entry = { data: v, next: null };
+  if (this.length > 0) this.tail.next = entry;else this.head = entry;
+  this.tail = entry;
+  ++this.length;
+};
+
+BufferList$1.prototype.unshift = function (v) {
+  var entry = { data: v, next: this.head };
+  if (this.length === 0) this.tail = entry;
+  this.head = entry;
+  ++this.length;
+};
+
+BufferList$1.prototype.shift = function () {
+  if (this.length === 0) return;
+  var ret = this.head.data;
+  if (this.length === 1) this.head = this.tail = null;else this.head = this.head.next;
+  --this.length;
+  return ret;
+};
+
+BufferList$1.prototype.clear = function () {
+  this.head = this.tail = null;
+  this.length = 0;
+};
+
+BufferList$1.prototype.join = function (s) {
+  if (this.length === 0) return '';
+  var p = this.head;
+  var ret = '' + p.data;
+  while (p = p.next) {
+    ret += s + p.data;
+  }return ret;
+};
+
+BufferList$1.prototype.concat = function (n) {
+  if (this.length === 0) return Buffer$1.alloc(0);
+  if (this.length === 1) return this.head.data;
+  var ret = Buffer$1.allocUnsafe(n >>> 0);
+  var p = this.head;
+  var i = 0;
+  while (p) {
+    p.data.copy(ret, i);
+    i += p.data.length;
+    p = p.next;
+  }
+  return ret;
+};
+
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+var isBufferEncoding = Buffer$1.isEncoding
+  || function(encoding) {
+       switch (encoding && encoding.toLowerCase()) {
+         case 'hex': case 'utf8': case 'utf-8': case 'ascii': case 'binary': case 'base64': case 'ucs2': case 'ucs-2': case 'utf16le': case 'utf-16le': case 'raw': return true;
+         default: return false;
+       }
+     };
+
+
+function assertEncoding(encoding) {
+  if (encoding && !isBufferEncoding(encoding)) {
+    throw new Error('Unknown encoding: ' + encoding);
+  }
+}
+
+// StringDecoder provides an interface for efficiently splitting a series of
+// buffers into a series of JS strings without breaking apart multi-byte
+// characters. CESU-8 is handled as part of the UTF-8 encoding.
+//
+// @TODO Handling all encodings inside a single object makes it very difficult
+// to reason about this code, so it should be split up in the future.
+// @TODO There should be a utf8-strict encoding that rejects invalid UTF-8 code
+// points as used by CESU-8.
+function StringDecoder(encoding) {
+  this.encoding = (encoding || 'utf8').toLowerCase().replace(/[-_]/, '');
+  assertEncoding(encoding);
+  switch (this.encoding) {
+    case 'utf8':
+      // CESU-8 represents each of Surrogate Pair by 3-bytes
+      this.surrogateSize = 3;
+      break;
+    case 'ucs2':
+    case 'utf16le':
+      // UTF-16 represents each of Surrogate Pair by 2-bytes
+      this.surrogateSize = 2;
+      this.detectIncompleteChar = utf16DetectIncompleteChar;
+      break;
+    case 'base64':
+      // Base-64 stores 3 bytes in 4 chars, and pads the remainder.
+      this.surrogateSize = 3;
+      this.detectIncompleteChar = base64DetectIncompleteChar;
+      break;
+    default:
+      this.write = passThroughWrite;
+      return;
+  }
+
+  // Enough space to store all bytes of a single character. UTF-8 needs 4
+  // bytes, but CESU-8 may require up to 6 (3 bytes per surrogate).
+  this.charBuffer = new Buffer$1(6);
+  // Number of bytes received for the current incomplete multi-byte character.
+  this.charReceived = 0;
+  // Number of bytes expected for the current incomplete multi-byte character.
+  this.charLength = 0;
+}
+
+// write decodes the given buffer and returns it as JS string that is
+// guaranteed to not contain any partial multi-byte characters. Any partial
+// character found at the end of the buffer is buffered up, and will be
+// returned when calling write again with the remaining bytes.
+//
+// Note: Converting a Buffer containing an orphan surrogate to a String
+// currently works, but converting a String to a Buffer (via `new Buffer`, or
+// Buffer#write) will replace incomplete surrogates with the unicode
+// replacement character. See https://codereview.chromium.org/121173009/ .
+StringDecoder.prototype.write = function(buffer) {
+  var charStr = '';
+  // if our last write ended with an incomplete multibyte character
+  while (this.charLength) {
+    // determine how many remaining bytes this buffer has to offer for this char
+    var available = (buffer.length >= this.charLength - this.charReceived) ?
+        this.charLength - this.charReceived :
+        buffer.length;
+
+    // add the new bytes to the char buffer
+    buffer.copy(this.charBuffer, this.charReceived, 0, available);
+    this.charReceived += available;
+
+    if (this.charReceived < this.charLength) {
+      // still not enough chars in this buffer? wait for more ...
+      return '';
+    }
+
+    // remove bytes belonging to the current character from the buffer
+    buffer = buffer.slice(available, buffer.length);
+
+    // get the character that was split
+    charStr = this.charBuffer.slice(0, this.charLength).toString(this.encoding);
+
+    // CESU-8: lead surrogate (D800-DBFF) is also the incomplete character
+    var charCode = charStr.charCodeAt(charStr.length - 1);
+    if (charCode >= 0xD800 && charCode <= 0xDBFF) {
+      this.charLength += this.surrogateSize;
+      charStr = '';
+      continue;
+    }
+    this.charReceived = this.charLength = 0;
+
+    // if there are no more bytes in this buffer, just emit our char
+    if (buffer.length === 0) {
+      return charStr;
+    }
+    break;
+  }
+
+  // determine and set charLength / charReceived
+  this.detectIncompleteChar(buffer);
+
+  var end = buffer.length;
+  if (this.charLength) {
+    // buffer the incomplete character bytes we got
+    buffer.copy(this.charBuffer, 0, buffer.length - this.charReceived, end);
+    end -= this.charReceived;
+  }
+
+  charStr += buffer.toString(this.encoding, 0, end);
+
+  var end = charStr.length - 1;
+  var charCode = charStr.charCodeAt(end);
+  // CESU-8: lead surrogate (D800-DBFF) is also the incomplete character
+  if (charCode >= 0xD800 && charCode <= 0xDBFF) {
+    var size = this.surrogateSize;
+    this.charLength += size;
+    this.charReceived += size;
+    this.charBuffer.copy(this.charBuffer, size, 0, size);
+    buffer.copy(this.charBuffer, 0, 0, size);
+    return charStr.substring(0, end);
+  }
+
+  // or just emit the charStr
+  return charStr;
+};
+
+// detectIncompleteChar determines if there is an incomplete UTF-8 character at
+// the end of the given buffer. If so, it sets this.charLength to the byte
+// length that character, and sets this.charReceived to the number of bytes
+// that are available for this character.
+StringDecoder.prototype.detectIncompleteChar = function(buffer) {
+  // determine how many bytes we have to check at the end of this buffer
+  var i = (buffer.length >= 3) ? 3 : buffer.length;
+
+  // Figure out if one of the last i bytes of our buffer announces an
+  // incomplete char.
+  for (; i > 0; i--) {
+    var c = buffer[buffer.length - i];
+
+    // See http://en.wikipedia.org/wiki/UTF-8#Description
+
+    // 110XXXXX
+    if (i == 1 && c >> 5 == 0x06) {
+      this.charLength = 2;
+      break;
+    }
+
+    // 1110XXXX
+    if (i <= 2 && c >> 4 == 0x0E) {
+      this.charLength = 3;
+      break;
+    }
+
+    // 11110XXX
+    if (i <= 3 && c >> 3 == 0x1E) {
+      this.charLength = 4;
+      break;
+    }
+  }
+  this.charReceived = i;
+};
+
+StringDecoder.prototype.end = function(buffer) {
+  var res = '';
+  if (buffer && buffer.length)
+    res = this.write(buffer);
+
+  if (this.charReceived) {
+    var cr = this.charReceived;
+    var buf = this.charBuffer;
+    var enc = this.encoding;
+    res += buf.slice(0, cr).toString(enc);
+  }
+
+  return res;
+};
+
+function passThroughWrite(buffer) {
+  return buffer.toString(this.encoding);
+}
+
+function utf16DetectIncompleteChar(buffer) {
+  this.charReceived = buffer.length % 2;
+  this.charLength = this.charReceived ? 2 : 0;
+}
+
+function base64DetectIncompleteChar(buffer) {
+  this.charReceived = buffer.length % 3;
+  this.charLength = this.charReceived ? 3 : 0;
+}
+
+var _polyfillNode_string_decoder = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    StringDecoder: StringDecoder
+});
+
+Readable.ReadableState = ReadableState;
+
+var debug$o = debuglog('stream');
+inherits$3(Readable, EventEmitter);
+
+function prependListener(emitter, event, fn) {
+  // Sadly this is not cacheable as some libraries bundle their own
+  // event emitter implementation with them.
+  if (typeof emitter.prependListener === 'function') {
+    return emitter.prependListener(event, fn);
+  } else {
+    // This is a hack to make sure that our error handler is attached before any
+    // userland ones.  NEVER DO THIS. This is here only because this code needs
+    // to continue to work with older versions of Node.js that do not include
+    // the prependListener() method. The goal is to eventually remove this hack.
+    if (!emitter._events || !emitter._events[event])
+      emitter.on(event, fn);
+    else if (Array.isArray(emitter._events[event]))
+      emitter._events[event].unshift(fn);
+    else
+      emitter._events[event] = [fn, emitter._events[event]];
+  }
+}
+function listenerCount (emitter, type) {
+  return emitter.listeners(type).length;
+}
+function ReadableState(options, stream) {
+
+  options = options || {};
+
+  // object stream flag. Used to make read(n) ignore n and to
+  // make all the buffer merging and length checks go away
+  this.objectMode = !!options.objectMode;
+
+  if (stream instanceof Duplex) this.objectMode = this.objectMode || !!options.readableObjectMode;
+
+  // the point at which it stops calling _read() to fill the buffer
+  // Note: 0 is a valid value, means "don't call _read preemptively ever"
+  var hwm = options.highWaterMark;
+  var defaultHwm = this.objectMode ? 16 : 16 * 1024;
+  this.highWaterMark = hwm || hwm === 0 ? hwm : defaultHwm;
+
+  // cast to ints.
+  this.highWaterMark = ~ ~this.highWaterMark;
+
+  // A linked list is used to store data chunks instead of an array because the
+  // linked list can remove elements from the beginning faster than
+  // array.shift()
+  this.buffer = new BufferList$1();
+  this.length = 0;
+  this.pipes = null;
+  this.pipesCount = 0;
+  this.flowing = null;
+  this.ended = false;
+  this.endEmitted = false;
+  this.reading = false;
+
+  // a flag to be able to tell if the onwrite cb is called immediately,
+  // or on a later tick.  We set this to true at first, because any
+  // actions that shouldn't happen until "later" should generally also
+  // not happen before the first write call.
+  this.sync = true;
+
+  // whenever we return null, then we set a flag to say
+  // that we're awaiting a 'readable' event emission.
+  this.needReadable = false;
+  this.emittedReadable = false;
+  this.readableListening = false;
+  this.resumeScheduled = false;
+
+  // Crypto is kind of old and crusty.  Historically, its default string
+  // encoding is 'binary' so we have to make this configurable.
+  // Everything else in the universe uses 'utf8', though.
+  this.defaultEncoding = options.defaultEncoding || 'utf8';
+
+  // when piping, we only care about 'readable' events that happen
+  // after read()ing all the bytes and not getting any pushback.
+  this.ranOut = false;
+
+  // the number of writers that are awaiting a drain event in .pipe()s
+  this.awaitDrain = 0;
+
+  // if true, a maybeReadMore has been scheduled
+  this.readingMore = false;
+
+  this.decoder = null;
+  this.encoding = null;
+  if (options.encoding) {
+    this.decoder = new StringDecoder(options.encoding);
+    this.encoding = options.encoding;
+  }
+}
+function Readable(options) {
+
+  if (!(this instanceof Readable)) return new Readable(options);
+
+  this._readableState = new ReadableState(options, this);
+
+  // legacy
+  this.readable = true;
+
+  if (options && typeof options.read === 'function') this._read = options.read;
+
+  EventEmitter.call(this);
+}
+
+// Manually shove something into the read() buffer.
+// This returns true if the highWaterMark has not been hit yet,
+// similar to how Writable.write() returns true if you should
+// write() some more.
+Readable.prototype.push = function (chunk, encoding) {
+  var state = this._readableState;
+
+  if (!state.objectMode && typeof chunk === 'string') {
+    encoding = encoding || state.defaultEncoding;
+    if (encoding !== state.encoding) {
+      chunk = Buffer.from(chunk, encoding);
+      encoding = '';
+    }
+  }
+
+  return readableAddChunk(this, state, chunk, encoding, false);
+};
+
+// Unshift should *always* be something directly out of read()
+Readable.prototype.unshift = function (chunk) {
+  var state = this._readableState;
+  return readableAddChunk(this, state, chunk, '', true);
+};
+
+Readable.prototype.isPaused = function () {
+  return this._readableState.flowing === false;
+};
+
+function readableAddChunk(stream, state, chunk, encoding, addToFront) {
+  var er = chunkInvalid(state, chunk);
+  if (er) {
+    stream.emit('error', er);
+  } else if (chunk === null) {
+    state.reading = false;
+    onEofChunk(stream, state);
+  } else if (state.objectMode || chunk && chunk.length > 0) {
+    if (state.ended && !addToFront) {
+      var e = new Error('stream.push() after EOF');
+      stream.emit('error', e);
+    } else if (state.endEmitted && addToFront) {
+      var _e = new Error('stream.unshift() after end event');
+      stream.emit('error', _e);
+    } else {
+      var skipAdd;
+      if (state.decoder && !addToFront && !encoding) {
+        chunk = state.decoder.write(chunk);
+        skipAdd = !state.objectMode && chunk.length === 0;
+      }
+
+      if (!addToFront) state.reading = false;
+
+      // Don't add to the buffer if we've decoded to an empty string chunk and
+      // we're not in object mode
+      if (!skipAdd) {
+        // if we want the data now, just emit it.
+        if (state.flowing && state.length === 0 && !state.sync) {
+          stream.emit('data', chunk);
+          stream.read(0);
+        } else {
+          // update the buffer info.
+          state.length += state.objectMode ? 1 : chunk.length;
+          if (addToFront) state.buffer.unshift(chunk);else state.buffer.push(chunk);
+
+          if (state.needReadable) emitReadable(stream);
+        }
+      }
+
+      maybeReadMore(stream, state);
+    }
+  } else if (!addToFront) {
+    state.reading = false;
+  }
+
+  return needMoreData(state);
+}
+
+// if it's past the high water mark, we can push in some more.
+// Also, if we have no data yet, we can stand some
+// more bytes.  This is to work around cases where hwm=0,
+// such as the repl.  Also, if the push() triggered a
+// readable event, and the user called read(largeNumber) such that
+// needReadable was set, then we ought to push more, so that another
+// 'readable' event will be triggered.
+function needMoreData(state) {
+  return !state.ended && (state.needReadable || state.length < state.highWaterMark || state.length === 0);
+}
+
+// backwards compatibility.
+Readable.prototype.setEncoding = function (enc) {
+  this._readableState.decoder = new StringDecoder(enc);
+  this._readableState.encoding = enc;
+  return this;
+};
+
+// Don't raise the hwm > 8MB
+var MAX_HWM = 0x800000;
+function computeNewHighWaterMark(n) {
+  if (n >= MAX_HWM) {
+    n = MAX_HWM;
+  } else {
+    // Get the next highest power of 2 to prevent increasing hwm excessively in
+    // tiny amounts
+    n--;
+    n |= n >>> 1;
+    n |= n >>> 2;
+    n |= n >>> 4;
+    n |= n >>> 8;
+    n |= n >>> 16;
+    n++;
+  }
+  return n;
+}
+
+// This function is designed to be inlinable, so please take care when making
+// changes to the function body.
+function howMuchToRead(n, state) {
+  if (n <= 0 || state.length === 0 && state.ended) return 0;
+  if (state.objectMode) return 1;
+  if (n !== n) {
+    // Only flow one buffer at a time
+    if (state.flowing && state.length) return state.buffer.head.data.length;else return state.length;
+  }
+  // If we're asking for more than the current hwm, then raise the hwm.
+  if (n > state.highWaterMark) state.highWaterMark = computeNewHighWaterMark(n);
+  if (n <= state.length) return n;
+  // Don't have enough
+  if (!state.ended) {
+    state.needReadable = true;
+    return 0;
+  }
+  return state.length;
+}
+
+// you can override either this method, or the async _read(n) below.
+Readable.prototype.read = function (n) {
+  debug$o('read', n);
+  n = parseInt(n, 10);
+  var state = this._readableState;
+  var nOrig = n;
+
+  if (n !== 0) state.emittedReadable = false;
+
+  // if we're doing read(0) to trigger a readable event, but we
+  // already have a bunch of data in the buffer, then just trigger
+  // the 'readable' event and move on.
+  if (n === 0 && state.needReadable && (state.length >= state.highWaterMark || state.ended)) {
+    debug$o('read: emitReadable', state.length, state.ended);
+    if (state.length === 0 && state.ended) endReadable(this);else emitReadable(this);
+    return null;
+  }
+
+  n = howMuchToRead(n, state);
+
+  // if we've ended, and we're now clear, then finish it up.
+  if (n === 0 && state.ended) {
+    if (state.length === 0) endReadable(this);
+    return null;
+  }
+
+  // All the actual chunk generation logic needs to be
+  // *below* the call to _read.  The reason is that in certain
+  // synthetic stream cases, such as passthrough streams, _read
+  // may be a completely synchronous operation which may change
+  // the state of the read buffer, providing enough data when
+  // before there was *not* enough.
+  //
+  // So, the steps are:
+  // 1. Figure out what the state of things will be after we do
+  // a read from the buffer.
+  //
+  // 2. If that resulting state will trigger a _read, then call _read.
+  // Note that this may be asynchronous, or synchronous.  Yes, it is
+  // deeply ugly to write APIs this way, but that still doesn't mean
+  // that the Readable class should behave improperly, as streams are
+  // designed to be sync/async agnostic.
+  // Take note if the _read call is sync or async (ie, if the read call
+  // has returned yet), so that we know whether or not it's safe to emit
+  // 'readable' etc.
+  //
+  // 3. Actually pull the requested chunks out of the buffer and return.
+
+  // if we need a readable event, then we need to do some reading.
+  var doRead = state.needReadable;
+  debug$o('need readable', doRead);
+
+  // if we currently have less than the highWaterMark, then also read some
+  if (state.length === 0 || state.length - n < state.highWaterMark) {
+    doRead = true;
+    debug$o('length less than watermark', doRead);
+  }
+
+  // however, if we've ended, then there's no point, and if we're already
+  // reading, then it's unnecessary.
+  if (state.ended || state.reading) {
+    doRead = false;
+    debug$o('reading or ended', doRead);
+  } else if (doRead) {
+    debug$o('do read');
+    state.reading = true;
+    state.sync = true;
+    // if the length is currently zero, then we *need* a readable event.
+    if (state.length === 0) state.needReadable = true;
+    // call internal read method
+    this._read(state.highWaterMark);
+    state.sync = false;
+    // If _read pushed data synchronously, then `reading` will be false,
+    // and we need to re-evaluate how much data we can return to the user.
+    if (!state.reading) n = howMuchToRead(nOrig, state);
+  }
+
+  var ret;
+  if (n > 0) ret = fromList(n, state);else ret = null;
+
+  if (ret === null) {
+    state.needReadable = true;
+    n = 0;
+  } else {
+    state.length -= n;
+  }
+
+  if (state.length === 0) {
+    // If we have nothing in the buffer, then we want to know
+    // as soon as we *do* get something into the buffer.
+    if (!state.ended) state.needReadable = true;
+
+    // If we tried to read() past the EOF, then emit end on the next tick.
+    if (nOrig !== n && state.ended) endReadable(this);
+  }
+
+  if (ret !== null) this.emit('data', ret);
+
+  return ret;
+};
+
+function chunkInvalid(state, chunk) {
+  var er = null;
+  if (!Buffer.isBuffer(chunk) && typeof chunk !== 'string' && chunk !== null && chunk !== undefined && !state.objectMode) {
+    er = new TypeError('Invalid non-string/buffer chunk');
+  }
+  return er;
+}
+
+function onEofChunk(stream, state) {
+  if (state.ended) return;
+  if (state.decoder) {
+    var chunk = state.decoder.end();
+    if (chunk && chunk.length) {
+      state.buffer.push(chunk);
+      state.length += state.objectMode ? 1 : chunk.length;
+    }
+  }
+  state.ended = true;
+
+  // emit 'readable' now to make sure it gets picked up.
+  emitReadable(stream);
+}
+
+// Don't emit readable right away in sync mode, because this can trigger
+// another read() call => stack overflow.  This way, it might trigger
+// a nextTick recursion warning, but that's not so bad.
+function emitReadable(stream) {
+  var state = stream._readableState;
+  state.needReadable = false;
+  if (!state.emittedReadable) {
+    debug$o('emitReadable', state.flowing);
+    state.emittedReadable = true;
+    if (state.sync) nextTick(emitReadable_, stream);else emitReadable_(stream);
+  }
+}
+
+function emitReadable_(stream) {
+  debug$o('emit readable');
+  stream.emit('readable');
+  flow(stream);
+}
+
+// at this point, the user has presumably seen the 'readable' event,
+// and called read() to consume some data.  that may have triggered
+// in turn another _read(n) call, in which case reading = true if
+// it's in progress.
+// However, if we're not ended, or reading, and the length < hwm,
+// then go ahead and try to read some more preemptively.
+function maybeReadMore(stream, state) {
+  if (!state.readingMore) {
+    state.readingMore = true;
+    nextTick(maybeReadMore_, stream, state);
+  }
+}
+
+function maybeReadMore_(stream, state) {
+  var len = state.length;
+  while (!state.reading && !state.flowing && !state.ended && state.length < state.highWaterMark) {
+    debug$o('maybeReadMore read 0');
+    stream.read(0);
+    if (len === state.length)
+      // didn't get any data, stop spinning.
+      break;else len = state.length;
+  }
+  state.readingMore = false;
+}
+
+// abstract method.  to be overridden in specific implementation classes.
+// call cb(er, data) where data is <= n in length.
+// for virtual (non-string, non-buffer) streams, "length" is somewhat
+// arbitrary, and perhaps not very meaningful.
+Readable.prototype._read = function (n) {
+  this.emit('error', new Error('not implemented'));
+};
+
+Readable.prototype.pipe = function (dest, pipeOpts) {
+  var src = this;
+  var state = this._readableState;
+
+  switch (state.pipesCount) {
+    case 0:
+      state.pipes = dest;
+      break;
+    case 1:
+      state.pipes = [state.pipes, dest];
+      break;
+    default:
+      state.pipes.push(dest);
+      break;
+  }
+  state.pipesCount += 1;
+  debug$o('pipe count=%d opts=%j', state.pipesCount, pipeOpts);
+
+  var doEnd = (!pipeOpts || pipeOpts.end !== false);
+
+  var endFn = doEnd ? onend : cleanup;
+  if (state.endEmitted) nextTick(endFn);else src.once('end', endFn);
+
+  dest.on('unpipe', onunpipe);
+  function onunpipe(readable) {
+    debug$o('onunpipe');
+    if (readable === src) {
+      cleanup();
+    }
+  }
+
+  function onend() {
+    debug$o('onend');
+    dest.end();
+  }
+
+  // when the dest drains, it reduces the awaitDrain counter
+  // on the source.  This would be more elegant with a .once()
+  // handler in flow(), but adding and removing repeatedly is
+  // too slow.
+  var ondrain = pipeOnDrain(src);
+  dest.on('drain', ondrain);
+
+  var cleanedUp = false;
+  function cleanup() {
+    debug$o('cleanup');
+    // cleanup event handlers once the pipe is broken
+    dest.removeListener('close', onclose);
+    dest.removeListener('finish', onfinish);
+    dest.removeListener('drain', ondrain);
+    dest.removeListener('error', onerror);
+    dest.removeListener('unpipe', onunpipe);
+    src.removeListener('end', onend);
+    src.removeListener('end', cleanup);
+    src.removeListener('data', ondata);
+
+    cleanedUp = true;
+
+    // if the reader is waiting for a drain event from this
+    // specific writer, then it would cause it to never start
+    // flowing again.
+    // So, if this is awaiting a drain, then we just call it now.
+    // If we don't know, then assume that we are waiting for one.
+    if (state.awaitDrain && (!dest._writableState || dest._writableState.needDrain)) ondrain();
+  }
+
+  // If the user pushes more data while we're writing to dest then we'll end up
+  // in ondata again. However, we only want to increase awaitDrain once because
+  // dest will only emit one 'drain' event for the multiple writes.
+  // => Introduce a guard on increasing awaitDrain.
+  var increasedAwaitDrain = false;
+  src.on('data', ondata);
+  function ondata(chunk) {
+    debug$o('ondata');
+    increasedAwaitDrain = false;
+    var ret = dest.write(chunk);
+    if (false === ret && !increasedAwaitDrain) {
+      // If the user unpiped during `dest.write()`, it is possible
+      // to get stuck in a permanently paused state if that write
+      // also returned false.
+      // => Check whether `dest` is still a piping destination.
+      if ((state.pipesCount === 1 && state.pipes === dest || state.pipesCount > 1 && indexOf(state.pipes, dest) !== -1) && !cleanedUp) {
+        debug$o('false write response, pause', src._readableState.awaitDrain);
+        src._readableState.awaitDrain++;
+        increasedAwaitDrain = true;
+      }
+      src.pause();
+    }
+  }
+
+  // if the dest has an error, then stop piping into it.
+  // however, don't suppress the throwing behavior for this.
+  function onerror(er) {
+    debug$o('onerror', er);
+    unpipe();
+    dest.removeListener('error', onerror);
+    if (listenerCount(dest, 'error') === 0) dest.emit('error', er);
+  }
+
+  // Make sure our error handler is attached before userland ones.
+  prependListener(dest, 'error', onerror);
+
+  // Both close and finish should trigger unpipe, but only once.
+  function onclose() {
+    dest.removeListener('finish', onfinish);
+    unpipe();
+  }
+  dest.once('close', onclose);
+  function onfinish() {
+    debug$o('onfinish');
+    dest.removeListener('close', onclose);
+    unpipe();
+  }
+  dest.once('finish', onfinish);
+
+  function unpipe() {
+    debug$o('unpipe');
+    src.unpipe(dest);
+  }
+
+  // tell the dest that it's being piped to
+  dest.emit('pipe', src);
+
+  // start the flow if it hasn't been started already.
+  if (!state.flowing) {
+    debug$o('pipe resume');
+    src.resume();
+  }
+
+  return dest;
+};
+
+function pipeOnDrain(src) {
+  return function () {
+    var state = src._readableState;
+    debug$o('pipeOnDrain', state.awaitDrain);
+    if (state.awaitDrain) state.awaitDrain--;
+    if (state.awaitDrain === 0 && src.listeners('data').length) {
+      state.flowing = true;
+      flow(src);
+    }
+  };
+}
+
+Readable.prototype.unpipe = function (dest) {
+  var state = this._readableState;
+
+  // if we're not piping anywhere, then do nothing.
+  if (state.pipesCount === 0) return this;
+
+  // just one destination.  most common case.
+  if (state.pipesCount === 1) {
+    // passed in one, but it's not the right one.
+    if (dest && dest !== state.pipes) return this;
+
+    if (!dest) dest = state.pipes;
+
+    // got a match.
+    state.pipes = null;
+    state.pipesCount = 0;
+    state.flowing = false;
+    if (dest) dest.emit('unpipe', this);
+    return this;
+  }
+
+  // slow case. multiple pipe destinations.
+
+  if (!dest) {
+    // remove all.
+    var dests = state.pipes;
+    var len = state.pipesCount;
+    state.pipes = null;
+    state.pipesCount = 0;
+    state.flowing = false;
+
+    for (var _i = 0; _i < len; _i++) {
+      dests[_i].emit('unpipe', this);
+    }return this;
+  }
+
+  // try to find the right one.
+  var i = indexOf(state.pipes, dest);
+  if (i === -1) return this;
+
+  state.pipes.splice(i, 1);
+  state.pipesCount -= 1;
+  if (state.pipesCount === 1) state.pipes = state.pipes[0];
+
+  dest.emit('unpipe', this);
+
+  return this;
+};
+
+// set up data events if they are asked for
+// Ensure readable listeners eventually get something
+Readable.prototype.on = function (ev, fn) {
+  var res = EventEmitter.prototype.on.call(this, ev, fn);
+
+  if (ev === 'data') {
+    // Start flowing on next tick if stream isn't explicitly paused
+    if (this._readableState.flowing !== false) this.resume();
+  } else if (ev === 'readable') {
+    var state = this._readableState;
+    if (!state.endEmitted && !state.readableListening) {
+      state.readableListening = state.needReadable = true;
+      state.emittedReadable = false;
+      if (!state.reading) {
+        nextTick(nReadingNextTick, this);
+      } else if (state.length) {
+        emitReadable(this);
+      }
+    }
+  }
+
+  return res;
+};
+Readable.prototype.addListener = Readable.prototype.on;
+
+function nReadingNextTick(self) {
+  debug$o('readable nexttick read 0');
+  self.read(0);
+}
+
+// pause() and resume() are remnants of the legacy readable stream API
+// If the user uses them, then switch into old mode.
+Readable.prototype.resume = function () {
+  var state = this._readableState;
+  if (!state.flowing) {
+    debug$o('resume');
+    state.flowing = true;
+    resume(this, state);
+  }
+  return this;
+};
+
+function resume(stream, state) {
+  if (!state.resumeScheduled) {
+    state.resumeScheduled = true;
+    nextTick(resume_, stream, state);
+  }
+}
+
+function resume_(stream, state) {
+  if (!state.reading) {
+    debug$o('resume read 0');
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  state.awaitDrain = 0;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading) stream.read(0);
+}
+
+Readable.prototype.pause = function () {
+  debug$o('call pause flowing=%j', this._readableState.flowing);
+  if (false !== this._readableState.flowing) {
+    debug$o('pause');
+    this._readableState.flowing = false;
+    this.emit('pause');
+  }
+  return this;
+};
+
+function flow(stream) {
+  var state = stream._readableState;
+  debug$o('flow', state.flowing);
+  while (state.flowing && stream.read() !== null) {}
+}
+
+// wrap an old-style stream as the async data source.
+// This is *not* part of the readable stream interface.
+// It is an ugly unfortunate mess of history.
+Readable.prototype.wrap = function (stream) {
+  var state = this._readableState;
+  var paused = false;
+
+  var self = this;
+  stream.on('end', function () {
+    debug$o('wrapped end');
+    if (state.decoder && !state.ended) {
+      var chunk = state.decoder.end();
+      if (chunk && chunk.length) self.push(chunk);
+    }
+
+    self.push(null);
+  });
+
+  stream.on('data', function (chunk) {
+    debug$o('wrapped data');
+    if (state.decoder) chunk = state.decoder.write(chunk);
+
+    // don't skip over falsy values in objectMode
+    if (state.objectMode && (chunk === null || chunk === undefined)) return;else if (!state.objectMode && (!chunk || !chunk.length)) return;
+
+    var ret = self.push(chunk);
+    if (!ret) {
+      paused = true;
+      stream.pause();
+    }
+  });
+
+  // proxy all the other methods.
+  // important when wrapping filters and duplexes.
+  for (var i in stream) {
+    if (this[i] === undefined && typeof stream[i] === 'function') {
+      this[i] = function (method) {
+        return function () {
+          return stream[method].apply(stream, arguments);
+        };
+      }(i);
+    }
+  }
+
+  // proxy certain important events.
+  var events = ['error', 'close', 'destroy', 'pause', 'resume'];
+  forEach(events, function (ev) {
+    stream.on(ev, self.emit.bind(self, ev));
+  });
+
+  // when we try to consume some more bytes, simply unpause the
+  // underlying stream.
+  self._read = function (n) {
+    debug$o('wrapped _read', n);
+    if (paused) {
+      paused = false;
+      stream.resume();
+    }
+  };
+
+  return self;
+};
+
+// exposed for testing purposes only.
+Readable._fromList = fromList;
+
+// Pluck off n bytes from an array of buffers.
+// Length is the combined lengths of all the buffers in the list.
+// This function is designed to be inlinable, so please take care when making
+// changes to the function body.
+function fromList(n, state) {
+  // nothing buffered
+  if (state.length === 0) return null;
+
+  var ret;
+  if (state.objectMode) ret = state.buffer.shift();else if (!n || n >= state.length) {
+    // read it all, truncate the list
+    if (state.decoder) ret = state.buffer.join('');else if (state.buffer.length === 1) ret = state.buffer.head.data;else ret = state.buffer.concat(state.length);
+    state.buffer.clear();
+  } else {
+    // read part of list
+    ret = fromListPartial(n, state.buffer, state.decoder);
+  }
+
+  return ret;
+}
+
+// Extracts only enough buffered data to satisfy the amount requested.
+// This function is designed to be inlinable, so please take care when making
+// changes to the function body.
+function fromListPartial(n, list, hasStrings) {
+  var ret;
+  if (n < list.head.data.length) {
+    // slice is the same for buffers and strings
+    ret = list.head.data.slice(0, n);
+    list.head.data = list.head.data.slice(n);
+  } else if (n === list.head.data.length) {
+    // first chunk is a perfect match
+    ret = list.shift();
+  } else {
+    // result spans more than one buffer
+    ret = hasStrings ? copyFromBufferString(n, list) : copyFromBuffer(n, list);
+  }
+  return ret;
+}
+
+// Copies a specified amount of characters from the list of buffered data
+// chunks.
+// This function is designed to be inlinable, so please take care when making
+// changes to the function body.
+function copyFromBufferString(n, list) {
+  var p = list.head;
+  var c = 1;
+  var ret = p.data;
+  n -= ret.length;
+  while (p = p.next) {
+    var str = p.data;
+    var nb = n > str.length ? str.length : n;
+    if (nb === str.length) ret += str;else ret += str.slice(0, n);
+    n -= nb;
+    if (n === 0) {
+      if (nb === str.length) {
+        ++c;
+        if (p.next) list.head = p.next;else list.head = list.tail = null;
+      } else {
+        list.head = p;
+        p.data = str.slice(nb);
+      }
+      break;
+    }
+    ++c;
+  }
+  list.length -= c;
+  return ret;
+}
+
+// Copies a specified amount of bytes from the list of buffered data chunks.
+// This function is designed to be inlinable, so please take care when making
+// changes to the function body.
+function copyFromBuffer(n, list) {
+  var ret = Buffer.allocUnsafe(n);
+  var p = list.head;
+  var c = 1;
+  p.data.copy(ret);
+  n -= p.data.length;
+  while (p = p.next) {
+    var buf = p.data;
+    var nb = n > buf.length ? buf.length : n;
+    buf.copy(ret, ret.length - n, 0, nb);
+    n -= nb;
+    if (n === 0) {
+      if (nb === buf.length) {
+        ++c;
+        if (p.next) list.head = p.next;else list.head = list.tail = null;
+      } else {
+        list.head = p;
+        p.data = buf.slice(nb);
+      }
+      break;
+    }
+    ++c;
+  }
+  list.length -= c;
+  return ret;
+}
+
+function endReadable(stream) {
+  var state = stream._readableState;
+
+  // If we get here before consuming all the bytes, then that is a
+  // bug in node.  Should never happen.
+  if (state.length > 0) throw new Error('"endReadable()" called on non-empty stream');
+
+  if (!state.endEmitted) {
+    state.ended = true;
+    nextTick(endReadableNT, state, stream);
+  }
+}
+
+function endReadableNT(state, stream) {
+  // Check that we didn't get one last unshift.
+  if (!state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.readable = false;
+    stream.emit('end');
+  }
+}
+
+function forEach(xs, f) {
+  for (var i = 0, l = xs.length; i < l; i++) {
+    f(xs[i], i);
+  }
+}
+
+function indexOf(xs, x) {
+  for (var i = 0, l = xs.length; i < l; i++) {
+    if (xs[i] === x) return i;
+  }
+  return -1;
+}
+
+// A bit simpler than readable streams.
+// Implement an async ._write(chunk, encoding, cb), and it'll handle all
+// the drain event emission and buffering.
+
+Writable.WritableState = WritableState;
+inherits$3(Writable, EventEmitter);
+
+function nop() {}
+
+function WriteReq(chunk, encoding, cb) {
+  this.chunk = chunk;
+  this.encoding = encoding;
+  this.callback = cb;
+  this.next = null;
+}
+
+function WritableState(options, stream) {
+  Object.defineProperty(this, 'buffer', {
+    get: deprecate(function () {
+      return this.getBuffer();
+    }, '_writableState.buffer is deprecated. Use _writableState.getBuffer ' + 'instead.')
+  });
+  options = options || {};
+
+  // object stream flag to indicate whether or not this stream
+  // contains buffers or objects.
+  this.objectMode = !!options.objectMode;
+
+  if (stream instanceof Duplex) this.objectMode = this.objectMode || !!options.writableObjectMode;
+
+  // the point at which write() starts returning false
+  // Note: 0 is a valid value, means that we always return false if
+  // the entire buffer is not flushed immediately on write()
+  var hwm = options.highWaterMark;
+  var defaultHwm = this.objectMode ? 16 : 16 * 1024;
+  this.highWaterMark = hwm || hwm === 0 ? hwm : defaultHwm;
+
+  // cast to ints.
+  this.highWaterMark = ~ ~this.highWaterMark;
+
+  this.needDrain = false;
+  // at the start of calling end()
+  this.ending = false;
+  // when end() has been called, and returned
+  this.ended = false;
+  // when 'finish' is emitted
+  this.finished = false;
+
+  // should we decode strings into buffers before passing to _write?
+  // this is here so that some node-core streams can optimize string
+  // handling at a lower level.
+  var noDecode = options.decodeStrings === false;
+  this.decodeStrings = !noDecode;
+
+  // Crypto is kind of old and crusty.  Historically, its default string
+  // encoding is 'binary' so we have to make this configurable.
+  // Everything else in the universe uses 'utf8', though.
+  this.defaultEncoding = options.defaultEncoding || 'utf8';
+
+  // not an actual buffer we keep track of, but a measurement
+  // of how much we're waiting to get pushed to some underlying
+  // socket or file.
+  this.length = 0;
+
+  // a flag to see when we're in the middle of a write.
+  this.writing = false;
+
+  // when true all writes will be buffered until .uncork() call
+  this.corked = 0;
+
+  // a flag to be able to tell if the onwrite cb is called immediately,
+  // or on a later tick.  We set this to true at first, because any
+  // actions that shouldn't happen until "later" should generally also
+  // not happen before the first write call.
+  this.sync = true;
+
+  // a flag to know if we're processing previously buffered items, which
+  // may call the _write() callback in the same tick, so that we don't
+  // end up in an overlapped onwrite situation.
+  this.bufferProcessing = false;
+
+  // the callback that's passed to _write(chunk,cb)
+  this.onwrite = function (er) {
+    onwrite(stream, er);
+  };
+
+  // the callback that the user supplies to write(chunk,encoding,cb)
+  this.writecb = null;
+
+  // the amount that is being written when _write is called.
+  this.writelen = 0;
+
+  this.bufferedRequest = null;
+  this.lastBufferedRequest = null;
+
+  // number of pending user-supplied write callbacks
+  // this must be 0 before 'finish' can be emitted
+  this.pendingcb = 0;
+
+  // emit prefinish if the only thing we're waiting for is _write cbs
+  // This is relevant for synchronous Transform streams
+  this.prefinished = false;
+
+  // True if the error was already emitted and should not be thrown again
+  this.errorEmitted = false;
+
+  // count buffered requests
+  this.bufferedRequestCount = 0;
+
+  // allocate the first CorkedRequest, there is always
+  // one allocated and free to use, and we maintain at most two
+  this.corkedRequestsFree = new CorkedRequest(this);
+}
+
+WritableState.prototype.getBuffer = function writableStateGetBuffer() {
+  var current = this.bufferedRequest;
+  var out = [];
+  while (current) {
+    out.push(current);
+    current = current.next;
+  }
+  return out;
+};
+function Writable(options) {
+
+  // Writable ctor is applied to Duplexes, though they're not
+  // instanceof Writable, they're instanceof Readable.
+  if (!(this instanceof Writable) && !(this instanceof Duplex)) return new Writable(options);
+
+  this._writableState = new WritableState(options, this);
+
+  // legacy.
+  this.writable = true;
+
+  if (options) {
+    if (typeof options.write === 'function') this._write = options.write;
+
+    if (typeof options.writev === 'function') this._writev = options.writev;
+  }
+
+  EventEmitter.call(this);
+}
+
+// Otherwise people can pipe Writable streams, which is just wrong.
+Writable.prototype.pipe = function () {
+  this.emit('error', new Error('Cannot pipe, not readable'));
+};
+
+function writeAfterEnd(stream, cb) {
+  var er = new Error('write after end');
+  // TODO: defer error events consistently everywhere, not just the cb
+  stream.emit('error', er);
+  nextTick(cb, er);
+}
+
+// If we get something that is not a buffer, string, null, or undefined,
+// and we're not in objectMode, then that's an error.
+// Otherwise stream chunks are all considered to be of length=1, and the
+// watermarks determine how many objects to keep in the buffer, rather than
+// how many bytes or characters.
+function validChunk(stream, state, chunk, cb) {
+  var valid = true;
+  var er = false;
+  // Always throw error if a null is written
+  // if we are not in object mode then throw
+  // if it is not a buffer, string, or undefined.
+  if (chunk === null) {
+    er = new TypeError('May not write null values to stream');
+  } else if (!Buffer$1.isBuffer(chunk) && typeof chunk !== 'string' && chunk !== undefined && !state.objectMode) {
+    er = new TypeError('Invalid non-string/buffer chunk');
+  }
+  if (er) {
+    stream.emit('error', er);
+    nextTick(cb, er);
+    valid = false;
+  }
+  return valid;
+}
+
+Writable.prototype.write = function (chunk, encoding, cb) {
+  var state = this._writableState;
+  var ret = false;
+
+  if (typeof encoding === 'function') {
+    cb = encoding;
+    encoding = null;
+  }
+
+  if (Buffer$1.isBuffer(chunk)) encoding = 'buffer';else if (!encoding) encoding = state.defaultEncoding;
+
+  if (typeof cb !== 'function') cb = nop;
+
+  if (state.ended) writeAfterEnd(this, cb);else if (validChunk(this, state, chunk, cb)) {
+    state.pendingcb++;
+    ret = writeOrBuffer(this, state, chunk, encoding, cb);
+  }
+
+  return ret;
+};
+
+Writable.prototype.cork = function () {
+  var state = this._writableState;
+
+  state.corked++;
+};
+
+Writable.prototype.uncork = function () {
+  var state = this._writableState;
+
+  if (state.corked) {
+    state.corked--;
+
+    if (!state.writing && !state.corked && !state.finished && !state.bufferProcessing && state.bufferedRequest) clearBuffer(this, state);
+  }
+};
+
+Writable.prototype.setDefaultEncoding = function setDefaultEncoding(encoding) {
+  // node::ParseEncoding() requires lower case.
+  if (typeof encoding === 'string') encoding = encoding.toLowerCase();
+  if (!(['hex', 'utf8', 'utf-8', 'ascii', 'binary', 'base64', 'ucs2', 'ucs-2', 'utf16le', 'utf-16le', 'raw'].indexOf((encoding + '').toLowerCase()) > -1)) throw new TypeError('Unknown encoding: ' + encoding);
+  this._writableState.defaultEncoding = encoding;
+  return this;
+};
+
+function decodeChunk(state, chunk, encoding) {
+  if (!state.objectMode && state.decodeStrings !== false && typeof chunk === 'string') {
+    chunk = Buffer$1.from(chunk, encoding);
+  }
+  return chunk;
+}
+
+// if we're already writing something, then just put this
+// in the queue, and wait our turn.  Otherwise, call _write
+// If we return false, then we need a drain event, so set that flag.
+function writeOrBuffer(stream, state, chunk, encoding, cb) {
+  chunk = decodeChunk(state, chunk, encoding);
+
+  if (Buffer$1.isBuffer(chunk)) encoding = 'buffer';
+  var len = state.objectMode ? 1 : chunk.length;
+
+  state.length += len;
+
+  var ret = state.length < state.highWaterMark;
+  // we must ensure that previous needDrain will not be reset to false.
+  if (!ret) state.needDrain = true;
+
+  if (state.writing || state.corked) {
+    var last = state.lastBufferedRequest;
+    state.lastBufferedRequest = new WriteReq(chunk, encoding, cb);
+    if (last) {
+      last.next = state.lastBufferedRequest;
+    } else {
+      state.bufferedRequest = state.lastBufferedRequest;
+    }
+    state.bufferedRequestCount += 1;
+  } else {
+    doWrite(stream, state, false, len, chunk, encoding, cb);
+  }
+
+  return ret;
+}
+
+function doWrite(stream, state, writev, len, chunk, encoding, cb) {
+  state.writelen = len;
+  state.writecb = cb;
+  state.writing = true;
+  state.sync = true;
+  if (writev) stream._writev(chunk, state.onwrite);else stream._write(chunk, encoding, state.onwrite);
+  state.sync = false;
+}
+
+function onwriteError(stream, state, sync, er, cb) {
+  --state.pendingcb;
+  if (sync) nextTick(cb, er);else cb(er);
+
+  stream._writableState.errorEmitted = true;
+  stream.emit('error', er);
+}
+
+function onwriteStateUpdate(state) {
+  state.writing = false;
+  state.writecb = null;
+  state.length -= state.writelen;
+  state.writelen = 0;
+}
+
+function onwrite(stream, er) {
+  var state = stream._writableState;
+  var sync = state.sync;
+  var cb = state.writecb;
+
+  onwriteStateUpdate(state);
+
+  if (er) onwriteError(stream, state, sync, er, cb);else {
+    // Check if we're actually ready to finish, but don't emit yet
+    var finished = needFinish(state);
+
+    if (!finished && !state.corked && !state.bufferProcessing && state.bufferedRequest) {
+      clearBuffer(stream, state);
+    }
+
+    if (sync) {
+      /*<replacement>*/
+        nextTick(afterWrite, stream, state, finished, cb);
+      /*</replacement>*/
+    } else {
+        afterWrite(stream, state, finished, cb);
+      }
+  }
+}
+
+function afterWrite(stream, state, finished, cb) {
+  if (!finished) onwriteDrain(stream, state);
+  state.pendingcb--;
+  cb();
+  finishMaybe(stream, state);
+}
+
+// Must force callback to be called on nextTick, so that we don't
+// emit 'drain' before the write() consumer gets the 'false' return
+// value, and has a chance to attach a 'drain' listener.
+function onwriteDrain(stream, state) {
+  if (state.length === 0 && state.needDrain) {
+    state.needDrain = false;
+    stream.emit('drain');
+  }
+}
+
+// if there's something in the buffer waiting, then process it
+function clearBuffer(stream, state) {
+  state.bufferProcessing = true;
+  var entry = state.bufferedRequest;
+
+  if (stream._writev && entry && entry.next) {
+    // Fast case, write everything using _writev()
+    var l = state.bufferedRequestCount;
+    var buffer = new Array(l);
+    var holder = state.corkedRequestsFree;
+    holder.entry = entry;
+
+    var count = 0;
+    while (entry) {
+      buffer[count] = entry;
+      entry = entry.next;
+      count += 1;
+    }
+
+    doWrite(stream, state, true, state.length, buffer, '', holder.finish);
+
+    // doWrite is almost always async, defer these to save a bit of time
+    // as the hot path ends with doWrite
+    state.pendingcb++;
+    state.lastBufferedRequest = null;
+    if (holder.next) {
+      state.corkedRequestsFree = holder.next;
+      holder.next = null;
+    } else {
+      state.corkedRequestsFree = new CorkedRequest(state);
+    }
+  } else {
+    // Slow case, write chunks one-by-one
+    while (entry) {
+      var chunk = entry.chunk;
+      var encoding = entry.encoding;
+      var cb = entry.callback;
+      var len = state.objectMode ? 1 : chunk.length;
+
+      doWrite(stream, state, false, len, chunk, encoding, cb);
+      entry = entry.next;
+      // if we didn't call the onwrite immediately, then
+      // it means that we need to wait until it does.
+      // also, that means that the chunk and cb are currently
+      // being processed, so move the buffer counter past them.
+      if (state.writing) {
+        break;
+      }
+    }
+
+    if (entry === null) state.lastBufferedRequest = null;
+  }
+
+  state.bufferedRequestCount = 0;
+  state.bufferedRequest = entry;
+  state.bufferProcessing = false;
+}
+
+Writable.prototype._write = function (chunk, encoding, cb) {
+  cb(new Error('not implemented'));
+};
+
+Writable.prototype._writev = null;
+
+Writable.prototype.end = function (chunk, encoding, cb) {
+  var state = this._writableState;
+
+  if (typeof chunk === 'function') {
+    cb = chunk;
+    chunk = null;
+    encoding = null;
+  } else if (typeof encoding === 'function') {
+    cb = encoding;
+    encoding = null;
+  }
+
+  if (chunk !== null && chunk !== undefined) this.write(chunk, encoding);
+
+  // .end() fully uncorks
+  if (state.corked) {
+    state.corked = 1;
+    this.uncork();
+  }
+
+  // ignore unnecessary end() calls.
+  if (!state.ending && !state.finished) endWritable(this, state, cb);
+};
+
+function needFinish(state) {
+  return state.ending && state.length === 0 && state.bufferedRequest === null && !state.finished && !state.writing;
+}
+
+function prefinish(stream, state) {
+  if (!state.prefinished) {
+    state.prefinished = true;
+    stream.emit('prefinish');
+  }
+}
+
+function finishMaybe(stream, state) {
+  var need = needFinish(state);
+  if (need) {
+    if (state.pendingcb === 0) {
+      prefinish(stream, state);
+      state.finished = true;
+      stream.emit('finish');
+    } else {
+      prefinish(stream, state);
+    }
+  }
+  return need;
+}
+
+function endWritable(stream, state, cb) {
+  state.ending = true;
+  finishMaybe(stream, state);
+  if (cb) {
+    if (state.finished) nextTick(cb);else stream.once('finish', cb);
+  }
+  state.ended = true;
+  stream.writable = false;
+}
+
+// It seems a linked list but it is not
+// there will be only 2 of these for each stream
+function CorkedRequest(state) {
+  var _this = this;
+
+  this.next = null;
+  this.entry = null;
+
+  this.finish = function (err) {
+    var entry = _this.entry;
+    _this.entry = null;
+    while (entry) {
+      var cb = entry.callback;
+      state.pendingcb--;
+      cb(err);
+      entry = entry.next;
+    }
+    if (state.corkedRequestsFree) {
+      state.corkedRequestsFree.next = _this;
+    } else {
+      state.corkedRequestsFree = _this;
+    }
+  };
+}
+
+inherits$3(Duplex, Readable);
+
+var keys = Object.keys(Writable.prototype);
+for (var v = 0; v < keys.length; v++) {
+  var method = keys[v];
+  if (!Duplex.prototype[method]) Duplex.prototype[method] = Writable.prototype[method];
+}
+function Duplex(options) {
+  if (!(this instanceof Duplex)) return new Duplex(options);
+
+  Readable.call(this, options);
+  Writable.call(this, options);
+
+  if (options && options.readable === false) this.readable = false;
+
+  if (options && options.writable === false) this.writable = false;
+
+  this.allowHalfOpen = true;
+  if (options && options.allowHalfOpen === false) this.allowHalfOpen = false;
+
+  this.once('end', onend);
+}
+
+// the no-half-open enforcer
+function onend() {
+  // if we allow half-open state, or if the writable side ended,
+  // then we're ok.
+  if (this.allowHalfOpen || this._writableState.ended) return;
+
+  // no more data can be written.
+  // But allow more writes to happen in this tick.
+  nextTick(onEndNT, this);
+}
+
+function onEndNT(self) {
+  self.end();
+}
+
+// a transform stream is a readable/writable stream where you do
+// something with the data.  Sometimes it's called a "filter",
+// but that's not a great name for it, since that implies a thing where
+// some bits pass through, and others are simply ignored.  (That would
+// be a valid example of a transform, of course.)
+//
+// While the output is causally related to the input, it's not a
+// necessarily symmetric or synchronous transformation.  For example,
+// a zlib stream might take multiple plain-text writes(), and then
+// emit a single compressed chunk some time in the future.
+//
+// Here's how this works:
+//
+// The Transform stream has all the aspects of the readable and writable
+// stream classes.  When you write(chunk), that calls _write(chunk,cb)
+// internally, and returns false if there's a lot of pending writes
+// buffered up.  When you call read(), that calls _read(n) until
+// there's enough pending readable data buffered up.
+//
+// In a transform stream, the written data is placed in a buffer.  When
+// _read(n) is called, it transforms the queued up data, calling the
+// buffered _write cb's as it consumes chunks.  If consuming a single
+// written chunk would result in multiple output chunks, then the first
+// outputted bit calls the readcb, and subsequent chunks just go into
+// the read buffer, and will cause it to emit 'readable' if necessary.
+//
+// This way, back-pressure is actually determined by the reading side,
+// since _read has to be called to start processing a new chunk.  However,
+// a pathological inflate type of transform can cause excessive buffering
+// here.  For example, imagine a stream where every byte of input is
+// interpreted as an integer from 0-255, and then results in that many
+// bytes of output.  Writing the 4 bytes {ff,ff,ff,ff} would result in
+// 1kb of data being output.  In this case, you could write a very small
+// amount of input, and end up with a very large amount of output.  In
+// such a pathological inflating mechanism, there'd be no way to tell
+// the system to stop doing the transform.  A single 4MB write could
+// cause the system to run out of memory.
+//
+// However, even in such a pathological case, only a single written chunk
+// would be consumed, and then the rest would wait (un-transformed) until
+// the results of the previous transformed chunk were consumed.
+
+inherits$3(Transform, Duplex);
+
+function TransformState(stream) {
+  this.afterTransform = function (er, data) {
+    return afterTransform(stream, er, data);
+  };
+
+  this.needTransform = false;
+  this.transforming = false;
+  this.writecb = null;
+  this.writechunk = null;
+  this.writeencoding = null;
+}
+
+function afterTransform(stream, er, data) {
+  var ts = stream._transformState;
+  ts.transforming = false;
+
+  var cb = ts.writecb;
+
+  if (!cb) return stream.emit('error', new Error('no writecb in Transform class'));
+
+  ts.writechunk = null;
+  ts.writecb = null;
+
+  if (data !== null && data !== undefined) stream.push(data);
+
+  cb(er);
+
+  var rs = stream._readableState;
+  rs.reading = false;
+  if (rs.needReadable || rs.length < rs.highWaterMark) {
+    stream._read(rs.highWaterMark);
+  }
+}
+function Transform(options) {
+  if (!(this instanceof Transform)) return new Transform(options);
+
+  Duplex.call(this, options);
+
+  this._transformState = new TransformState(this);
+
+  // when the writable side finishes, then flush out anything remaining.
+  var stream = this;
+
+  // start out asking for a readable event once data is transformed.
+  this._readableState.needReadable = true;
+
+  // we have implemented the _read method, and done the other things
+  // that Readable wants before the first _read call, so unset the
+  // sync guard flag.
+  this._readableState.sync = false;
+
+  if (options) {
+    if (typeof options.transform === 'function') this._transform = options.transform;
+
+    if (typeof options.flush === 'function') this._flush = options.flush;
+  }
+
+  this.once('prefinish', function () {
+    if (typeof this._flush === 'function') this._flush(function (er) {
+      done(stream, er);
+    });else done(stream);
+  });
+}
+
+Transform.prototype.push = function (chunk, encoding) {
+  this._transformState.needTransform = false;
+  return Duplex.prototype.push.call(this, chunk, encoding);
+};
+
+// This is the part where you do stuff!
+// override this function in implementation classes.
+// 'chunk' is an input chunk.
+//
+// Call `push(newChunk)` to pass along transformed output
+// to the readable side.  You may call 'push' zero or more times.
+//
+// Call `cb(err)` when you are done with this chunk.  If you pass
+// an error, then that'll put the hurt on the whole operation.  If you
+// never call cb(), then you'll never get another chunk.
+Transform.prototype._transform = function (chunk, encoding, cb) {
+  throw new Error('Not implemented');
+};
+
+Transform.prototype._write = function (chunk, encoding, cb) {
+  var ts = this._transformState;
+  ts.writecb = cb;
+  ts.writechunk = chunk;
+  ts.writeencoding = encoding;
+  if (!ts.transforming) {
+    var rs = this._readableState;
+    if (ts.needTransform || rs.needReadable || rs.length < rs.highWaterMark) this._read(rs.highWaterMark);
+  }
+};
+
+// Doesn't matter what the args are here.
+// _transform does all the work.
+// That we got here means that the readable side wants more data.
+Transform.prototype._read = function (n) {
+  var ts = this._transformState;
+
+  if (ts.writechunk !== null && ts.writecb && !ts.transforming) {
+    ts.transforming = true;
+    this._transform(ts.writechunk, ts.writeencoding, ts.afterTransform);
+  } else {
+    // mark that we need a transform, so that any data that comes in
+    // will get processed, now that we've asked for it.
+    ts.needTransform = true;
+  }
+};
+
+function done(stream, er) {
+  if (er) return stream.emit('error', er);
+
+  // if there's nothing in the write buffer, then that means
+  // that nothing more will ever be provided
+  var ws = stream._writableState;
+  var ts = stream._transformState;
+
+  if (ws.length) throw new Error('Calling transform done when ws.length != 0');
+
+  if (ts.transforming) throw new Error('Calling transform done when still transforming');
+
+  return stream.push(null);
+}
+
+inherits$3(PassThrough, Transform);
+function PassThrough(options) {
+  if (!(this instanceof PassThrough)) return new PassThrough(options);
+
+  Transform.call(this, options);
+}
+
+PassThrough.prototype._transform = function (chunk, encoding, cb) {
+  cb(null, chunk);
+};
+
+inherits$3(Stream, EventEmitter);
+Stream.Readable = Readable;
+Stream.Writable = Writable;
+Stream.Duplex = Duplex;
+Stream.Transform = Transform;
+Stream.PassThrough = PassThrough;
+
+// Backwards-compat with node 0.4.x
+Stream.Stream = Stream;
+
+// old-style streams.  Note that the pipe method (the only relevant
+// part of this class) is overridden in the Readable class.
+
+function Stream() {
+  EventEmitter.call(this);
+}
+
+Stream.prototype.pipe = function(dest, options) {
+  var source = this;
+
+  function ondata(chunk) {
+    if (dest.writable) {
+      if (false === dest.write(chunk) && source.pause) {
+        source.pause();
+      }
+    }
+  }
+
+  source.on('data', ondata);
+
+  function ondrain() {
+    if (source.readable && source.resume) {
+      source.resume();
+    }
+  }
+
+  dest.on('drain', ondrain);
+
+  // If the 'end' option is not supplied, dest.end() will be called when
+  // source gets the 'end' or 'close' events.  Only dest.end() once.
+  if (!dest._isStdio && (!options || options.end !== false)) {
+    source.on('end', onend);
+    source.on('close', onclose);
+  }
+
+  var didOnEnd = false;
+  function onend() {
+    if (didOnEnd) return;
+    didOnEnd = true;
+
+    dest.end();
+  }
+
+
+  function onclose() {
+    if (didOnEnd) return;
+    didOnEnd = true;
+
+    if (typeof dest.destroy === 'function') dest.destroy();
+  }
+
+  // don't leave dangling pipes when there are errors.
+  function onerror(er) {
+    cleanup();
+    if (EventEmitter.listenerCount(this, 'error') === 0) {
+      throw er; // Unhandled stream error in pipe.
+    }
+  }
+
+  source.on('error', onerror);
+  dest.on('error', onerror);
+
+  // remove all the event listeners that were added.
+  function cleanup() {
+    source.removeListener('data', ondata);
+    dest.removeListener('drain', ondrain);
+
+    source.removeListener('end', onend);
+    source.removeListener('close', onclose);
+
+    source.removeListener('error', onerror);
+    dest.removeListener('error', onerror);
+
+    source.removeListener('end', cleanup);
+    source.removeListener('close', cleanup);
+
+    dest.removeListener('close', cleanup);
+  }
+
+  source.on('end', cleanup);
+  source.on('close', cleanup);
+
+  dest.on('close', cleanup);
+
+  dest.emit('pipe', source);
+
+  // Allow for unix-like usage: A.pipe(B).pipe(C)
+  return dest;
+};
+
+var _polyfillNode_stream = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    Duplex: Duplex,
+    PassThrough: PassThrough,
+    Readable: Readable,
+    Stream: Stream,
+    Transform: Transform,
+    Writable: Writable,
+    default: Stream
+});
+
+var require$$0$3 = /*@__PURE__*/getAugmentedNamespace(_polyfillNode_stream);
 
 var processNextickArgs = {exports: {}};
 
@@ -444,27 +5852,31 @@ function requireIsarray () {
 	return isarray;
 }
 
+var require$$0$2 = /*@__PURE__*/getAugmentedNamespace(_polyfillNode_events);
+
 var stream$2;
 var hasRequiredStream$1;
 
 function requireStream$1 () {
 	if (hasRequiredStream$1) return stream$2;
 	hasRequiredStream$1 = 1;
-	stream$2 = require$$0$1;
+	stream$2 = require$$0$3;
 	return stream$2;
 }
 
-var safeBuffer$1 = {exports: {}};
+var safeBuffer = {exports: {}};
+
+var require$$2 = /*@__PURE__*/getAugmentedNamespace(_polyfillNode_buffer);
 
 /* eslint-disable node/no-deprecated-api */
 
-var hasRequiredSafeBuffer$1;
+var hasRequiredSafeBuffer;
 
-function requireSafeBuffer$1 () {
-	if (hasRequiredSafeBuffer$1) return safeBuffer$1.exports;
-	hasRequiredSafeBuffer$1 = 1;
+function requireSafeBuffer () {
+	if (hasRequiredSafeBuffer) return safeBuffer.exports;
+	hasRequiredSafeBuffer = 1;
 	(function (module, exports) {
-		var buffer = require$$0$2;
+		var buffer = require$$2;
 		var Buffer = buffer.Buffer;
 
 		// alternative to using Object.keys for old browsers
@@ -525,8 +5937,8 @@ function requireSafeBuffer$1 () {
 		  }
 		  return buffer.SlowBuffer(size)
 		}; 
-	} (safeBuffer$1, safeBuffer$1.exports));
-	return safeBuffer$1.exports;
+	} (safeBuffer, safeBuffer.exports));
+	return safeBuffer.exports;
 }
 
 var util$c = {};
@@ -638,7 +6050,7 @@ function requireUtil () {
 	}
 	util$c.isPrimitive = isPrimitive;
 
-	util$c.isBuffer = require$$0$2.Buffer.isBuffer;
+	util$c.isBuffer = require$$2.Buffer.isBuffer;
 
 	function objectToString(o) {
 	  return Object.prototype.toString.call(o);
@@ -646,61 +6058,39 @@ function requireUtil () {
 	return util$c;
 }
 
-var inherits = {exports: {}};
-
-var inherits_browser = {exports: {}};
-
-var hasRequiredInherits_browser;
-
-function requireInherits_browser () {
-	if (hasRequiredInherits_browser) return inherits_browser.exports;
-	hasRequiredInherits_browser = 1;
-	if (typeof Object.create === 'function') {
-	  // implementation from standard node.js 'util' module
-	  inherits_browser.exports = function inherits(ctor, superCtor) {
-	    if (superCtor) {
-	      ctor.super_ = superCtor;
-	      ctor.prototype = Object.create(superCtor.prototype, {
-	        constructor: {
-	          value: ctor,
-	          enumerable: false,
-	          writable: true,
-	          configurable: true
-	        }
-	      });
-	    }
-	  };
-	} else {
-	  // old school shim for old browsers
-	  inherits_browser.exports = function inherits(ctor, superCtor) {
-	    if (superCtor) {
-	      ctor.super_ = superCtor;
-	      var TempCtor = function () {};
-	      TempCtor.prototype = superCtor.prototype;
-	      ctor.prototype = new TempCtor();
-	      ctor.prototype.constructor = ctor;
-	    }
-	  };
-	}
-	return inherits_browser.exports;
+var inherits;
+if (typeof Object.create === 'function'){
+  inherits = function inherits(ctor, superCtor) {
+    // implementation from standard node.js 'util' module
+    ctor.super_ = superCtor;
+    ctor.prototype = Object.create(superCtor.prototype, {
+      constructor: {
+        value: ctor,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+  };
+} else {
+  inherits = function inherits(ctor, superCtor) {
+    ctor.super_ = superCtor;
+    var TempCtor = function () {};
+    TempCtor.prototype = superCtor.prototype;
+    ctor.prototype = new TempCtor();
+    ctor.prototype.constructor = ctor;
+  };
 }
+var inherits$1 = inherits;
 
-var hasRequiredInherits;
+var _polyfillNode_inherits = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: inherits$1
+});
 
-function requireInherits () {
-	if (hasRequiredInherits) return inherits.exports;
-	hasRequiredInherits = 1;
-	try {
-	  var util = require('util');
-	  /* istanbul ignore next */
-	  if (typeof util.inherits !== 'function') throw '';
-	  inherits.exports = util.inherits;
-	} catch (e) {
-	  /* istanbul ignore next */
-	  inherits.exports = requireInherits_browser();
-	}
-	return inherits.exports;
-}
+var require$$1 = /*@__PURE__*/getAugmentedNamespace(_polyfillNode_inherits);
+
+var require$$3 = /*@__PURE__*/getAugmentedNamespace(_polyfillNode_util$1);
 
 var BufferList = {exports: {}};
 
@@ -713,8 +6103,8 @@ function requireBufferList () {
 
 		function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-		var Buffer = requireSafeBuffer$1().Buffer;
-		var util = require$$1$1;
+		var Buffer = requireSafeBuffer().Buffer;
+		var util = require$$3;
 
 		function copyBuffer(src, target, offset) {
 		  src.copy(target, offset);
@@ -893,7 +6283,7 @@ function requireNode$1 () {
 	 * For Node.js, simply re-export the core `util.deprecate` function.
 	 */
 
-	node$1 = require$$1$1.deprecate;
+	node$1 = require$$3.deprecate;
 	return node$1;
 }
 
@@ -936,7 +6326,7 @@ function require_stream_writable$1 () {
 
 	/*<replacement>*/
 	var util = Object.create(requireUtil());
-	util.inherits = requireInherits();
+	util.inherits = require$$1;
 	/*</replacement>*/
 
 	/*<replacement>*/
@@ -951,7 +6341,7 @@ function require_stream_writable$1 () {
 
 	/*<replacement>*/
 
-	var Buffer = requireSafeBuffer$1().Buffer;
+	var Buffer = requireSafeBuffer().Buffer;
 	var OurUint8Array = (typeof commonjsGlobal !== 'undefined' ? commonjsGlobal : typeof window !== 'undefined' ? window : typeof self !== 'undefined' ? self : {}).Uint8Array || function () {};
 	function _uint8ArrayToBuffer(chunk) {
 	  return Buffer.from(chunk);
@@ -1582,7 +6972,7 @@ function require_stream_duplex$1 () {
 
 	/*<replacement>*/
 	var util = Object.create(requireUtil());
-	util.inherits = requireInherits();
+	util.inherits = require$$1;
 	/*</replacement>*/
 
 	var Readable = require_stream_readable$1();
@@ -1670,288 +7060,7 @@ function require_stream_duplex$1 () {
 	return _stream_duplex$1;
 }
 
-var string_decoder$1 = {};
-
-var hasRequiredString_decoder$1;
-
-function requireString_decoder$1 () {
-	if (hasRequiredString_decoder$1) return string_decoder$1;
-	hasRequiredString_decoder$1 = 1;
-
-	/*<replacement>*/
-
-	var Buffer = requireSafeBuffer$1().Buffer;
-	/*</replacement>*/
-
-	var isEncoding = Buffer.isEncoding || function (encoding) {
-	  encoding = '' + encoding;
-	  switch (encoding && encoding.toLowerCase()) {
-	    case 'hex':case 'utf8':case 'utf-8':case 'ascii':case 'binary':case 'base64':case 'ucs2':case 'ucs-2':case 'utf16le':case 'utf-16le':case 'raw':
-	      return true;
-	    default:
-	      return false;
-	  }
-	};
-
-	function _normalizeEncoding(enc) {
-	  if (!enc) return 'utf8';
-	  var retried;
-	  while (true) {
-	    switch (enc) {
-	      case 'utf8':
-	      case 'utf-8':
-	        return 'utf8';
-	      case 'ucs2':
-	      case 'ucs-2':
-	      case 'utf16le':
-	      case 'utf-16le':
-	        return 'utf16le';
-	      case 'latin1':
-	      case 'binary':
-	        return 'latin1';
-	      case 'base64':
-	      case 'ascii':
-	      case 'hex':
-	        return enc;
-	      default:
-	        if (retried) return; // undefined
-	        enc = ('' + enc).toLowerCase();
-	        retried = true;
-	    }
-	  }
-	}
-	// Do not cache `Buffer.isEncoding` when checking encoding names as some
-	// modules monkey-patch it to support additional encodings
-	function normalizeEncoding(enc) {
-	  var nenc = _normalizeEncoding(enc);
-	  if (typeof nenc !== 'string' && (Buffer.isEncoding === isEncoding || !isEncoding(enc))) throw new Error('Unknown encoding: ' + enc);
-	  return nenc || enc;
-	}
-
-	// StringDecoder provides an interface for efficiently splitting a series of
-	// buffers into a series of JS strings without breaking apart multi-byte
-	// characters.
-	string_decoder$1.StringDecoder = StringDecoder;
-	function StringDecoder(encoding) {
-	  this.encoding = normalizeEncoding(encoding);
-	  var nb;
-	  switch (this.encoding) {
-	    case 'utf16le':
-	      this.text = utf16Text;
-	      this.end = utf16End;
-	      nb = 4;
-	      break;
-	    case 'utf8':
-	      this.fillLast = utf8FillLast;
-	      nb = 4;
-	      break;
-	    case 'base64':
-	      this.text = base64Text;
-	      this.end = base64End;
-	      nb = 3;
-	      break;
-	    default:
-	      this.write = simpleWrite;
-	      this.end = simpleEnd;
-	      return;
-	  }
-	  this.lastNeed = 0;
-	  this.lastTotal = 0;
-	  this.lastChar = Buffer.allocUnsafe(nb);
-	}
-
-	StringDecoder.prototype.write = function (buf) {
-	  if (buf.length === 0) return '';
-	  var r;
-	  var i;
-	  if (this.lastNeed) {
-	    r = this.fillLast(buf);
-	    if (r === undefined) return '';
-	    i = this.lastNeed;
-	    this.lastNeed = 0;
-	  } else {
-	    i = 0;
-	  }
-	  if (i < buf.length) return r ? r + this.text(buf, i) : this.text(buf, i);
-	  return r || '';
-	};
-
-	StringDecoder.prototype.end = utf8End;
-
-	// Returns only complete characters in a Buffer
-	StringDecoder.prototype.text = utf8Text;
-
-	// Attempts to complete a partial non-UTF-8 character using bytes from a Buffer
-	StringDecoder.prototype.fillLast = function (buf) {
-	  if (this.lastNeed <= buf.length) {
-	    buf.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, this.lastNeed);
-	    return this.lastChar.toString(this.encoding, 0, this.lastTotal);
-	  }
-	  buf.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, buf.length);
-	  this.lastNeed -= buf.length;
-	};
-
-	// Checks the type of a UTF-8 byte, whether it's ASCII, a leading byte, or a
-	// continuation byte. If an invalid byte is detected, -2 is returned.
-	function utf8CheckByte(byte) {
-	  if (byte <= 0x7F) return 0;else if (byte >> 5 === 0x06) return 2;else if (byte >> 4 === 0x0E) return 3;else if (byte >> 3 === 0x1E) return 4;
-	  return byte >> 6 === 0x02 ? -1 : -2;
-	}
-
-	// Checks at most 3 bytes at the end of a Buffer in order to detect an
-	// incomplete multi-byte UTF-8 character. The total number of bytes (2, 3, or 4)
-	// needed to complete the UTF-8 character (if applicable) are returned.
-	function utf8CheckIncomplete(self, buf, i) {
-	  var j = buf.length - 1;
-	  if (j < i) return 0;
-	  var nb = utf8CheckByte(buf[j]);
-	  if (nb >= 0) {
-	    if (nb > 0) self.lastNeed = nb - 1;
-	    return nb;
-	  }
-	  if (--j < i || nb === -2) return 0;
-	  nb = utf8CheckByte(buf[j]);
-	  if (nb >= 0) {
-	    if (nb > 0) self.lastNeed = nb - 2;
-	    return nb;
-	  }
-	  if (--j < i || nb === -2) return 0;
-	  nb = utf8CheckByte(buf[j]);
-	  if (nb >= 0) {
-	    if (nb > 0) {
-	      if (nb === 2) nb = 0;else self.lastNeed = nb - 3;
-	    }
-	    return nb;
-	  }
-	  return 0;
-	}
-
-	// Validates as many continuation bytes for a multi-byte UTF-8 character as
-	// needed or are available. If we see a non-continuation byte where we expect
-	// one, we "replace" the validated continuation bytes we've seen so far with
-	// a single UTF-8 replacement character ('\ufffd'), to match v8's UTF-8 decoding
-	// behavior. The continuation byte check is included three times in the case
-	// where all of the continuation bytes for a character exist in the same buffer.
-	// It is also done this way as a slight performance increase instead of using a
-	// loop.
-	function utf8CheckExtraBytes(self, buf, p) {
-	  if ((buf[0] & 0xC0) !== 0x80) {
-	    self.lastNeed = 0;
-	    return '\ufffd';
-	  }
-	  if (self.lastNeed > 1 && buf.length > 1) {
-	    if ((buf[1] & 0xC0) !== 0x80) {
-	      self.lastNeed = 1;
-	      return '\ufffd';
-	    }
-	    if (self.lastNeed > 2 && buf.length > 2) {
-	      if ((buf[2] & 0xC0) !== 0x80) {
-	        self.lastNeed = 2;
-	        return '\ufffd';
-	      }
-	    }
-	  }
-	}
-
-	// Attempts to complete a multi-byte UTF-8 character using bytes from a Buffer.
-	function utf8FillLast(buf) {
-	  var p = this.lastTotal - this.lastNeed;
-	  var r = utf8CheckExtraBytes(this, buf);
-	  if (r !== undefined) return r;
-	  if (this.lastNeed <= buf.length) {
-	    buf.copy(this.lastChar, p, 0, this.lastNeed);
-	    return this.lastChar.toString(this.encoding, 0, this.lastTotal);
-	  }
-	  buf.copy(this.lastChar, p, 0, buf.length);
-	  this.lastNeed -= buf.length;
-	}
-
-	// Returns all complete UTF-8 characters in a Buffer. If the Buffer ended on a
-	// partial character, the character's bytes are buffered until the required
-	// number of bytes are available.
-	function utf8Text(buf, i) {
-	  var total = utf8CheckIncomplete(this, buf, i);
-	  if (!this.lastNeed) return buf.toString('utf8', i);
-	  this.lastTotal = total;
-	  var end = buf.length - (total - this.lastNeed);
-	  buf.copy(this.lastChar, 0, end);
-	  return buf.toString('utf8', i, end);
-	}
-
-	// For UTF-8, a replacement character is added when ending on a partial
-	// character.
-	function utf8End(buf) {
-	  var r = buf && buf.length ? this.write(buf) : '';
-	  if (this.lastNeed) return r + '\ufffd';
-	  return r;
-	}
-
-	// UTF-16LE typically needs two bytes per character, but even if we have an even
-	// number of bytes available, we need to check if we end on a leading/high
-	// surrogate. In that case, we need to wait for the next two bytes in order to
-	// decode the last character properly.
-	function utf16Text(buf, i) {
-	  if ((buf.length - i) % 2 === 0) {
-	    var r = buf.toString('utf16le', i);
-	    if (r) {
-	      var c = r.charCodeAt(r.length - 1);
-	      if (c >= 0xD800 && c <= 0xDBFF) {
-	        this.lastNeed = 2;
-	        this.lastTotal = 4;
-	        this.lastChar[0] = buf[buf.length - 2];
-	        this.lastChar[1] = buf[buf.length - 1];
-	        return r.slice(0, -1);
-	      }
-	    }
-	    return r;
-	  }
-	  this.lastNeed = 1;
-	  this.lastTotal = 2;
-	  this.lastChar[0] = buf[buf.length - 1];
-	  return buf.toString('utf16le', i, buf.length - 1);
-	}
-
-	// For UTF-16LE we do not explicitly append special replacement characters if we
-	// end on a partial character, we simply let v8 handle that.
-	function utf16End(buf) {
-	  var r = buf && buf.length ? this.write(buf) : '';
-	  if (this.lastNeed) {
-	    var end = this.lastTotal - this.lastNeed;
-	    return r + this.lastChar.toString('utf16le', 0, end);
-	  }
-	  return r;
-	}
-
-	function base64Text(buf, i) {
-	  var n = (buf.length - i) % 3;
-	  if (n === 0) return buf.toString('base64', i);
-	  this.lastNeed = 3 - n;
-	  this.lastTotal = 3;
-	  if (n === 1) {
-	    this.lastChar[0] = buf[buf.length - 1];
-	  } else {
-	    this.lastChar[0] = buf[buf.length - 2];
-	    this.lastChar[1] = buf[buf.length - 1];
-	  }
-	  return buf.toString('base64', i, buf.length - n);
-	}
-
-	function base64End(buf) {
-	  var r = buf && buf.length ? this.write(buf) : '';
-	  if (this.lastNeed) return r + this.lastChar.toString('base64', 0, 3 - this.lastNeed);
-	  return r;
-	}
-
-	// Pass bytes on through for single-byte encodings (e.g. ascii, latin1, hex)
-	function simpleWrite(buf) {
-	  return buf.toString(this.encoding);
-	}
-
-	function simpleEnd(buf) {
-	  return buf && buf.length ? this.write(buf) : '';
-	}
-	return string_decoder$1;
-}
+var require$$10 = /*@__PURE__*/getAugmentedNamespace(_polyfillNode_string_decoder);
 
 var _stream_readable$1;
 var hasRequired_stream_readable$1;
@@ -1978,7 +7087,7 @@ function require_stream_readable$1 () {
 	Readable.ReadableState = ReadableState;
 
 	/*<replacement>*/
-	require$$2$1.EventEmitter;
+	require$$0$2.EventEmitter;
 
 	var EElistenerCount = function (emitter, type) {
 	  return emitter.listeners(type).length;
@@ -1991,7 +7100,7 @@ function require_stream_readable$1 () {
 
 	/*<replacement>*/
 
-	var Buffer = requireSafeBuffer$1().Buffer;
+	var Buffer = requireSafeBuffer().Buffer;
 	var OurUint8Array = (typeof commonjsGlobal !== 'undefined' ? commonjsGlobal : typeof window !== 'undefined' ? window : typeof self !== 'undefined' ? self : {}).Uint8Array || function () {};
 	function _uint8ArrayToBuffer(chunk) {
 	  return Buffer.from(chunk);
@@ -2004,11 +7113,11 @@ function require_stream_readable$1 () {
 
 	/*<replacement>*/
 	var util = Object.create(requireUtil());
-	util.inherits = requireInherits();
+	util.inherits = require$$1;
 	/*</replacement>*/
 
 	/*<replacement>*/
-	var debugUtil = require$$1$1;
+	var debugUtil = require$$3;
 	var debug = void 0;
 	if (debugUtil && debugUtil.debuglog) {
 	  debug = debugUtil.debuglog('stream');
@@ -2108,7 +7217,7 @@ function require_stream_readable$1 () {
 	  this.decoder = null;
 	  this.encoding = null;
 	  if (options.encoding) {
-	    if (!StringDecoder) StringDecoder = requireString_decoder$1().StringDecoder;
+	    if (!StringDecoder) StringDecoder = require$$10.StringDecoder;
 	    this.decoder = new StringDecoder(options.encoding);
 	    this.encoding = options.encoding;
 	  }
@@ -2264,7 +7373,7 @@ function require_stream_readable$1 () {
 
 	// backwards compatibility.
 	Readable.prototype.setEncoding = function (enc) {
-	  if (!StringDecoder) StringDecoder = requireString_decoder$1().StringDecoder;
+	  if (!StringDecoder) StringDecoder = require$$10.StringDecoder;
 	  this._readableState.decoder = new StringDecoder(enc);
 	  this._readableState.encoding = enc;
 	  return this;
@@ -2972,7 +8081,7 @@ function require_stream_transform$1 () {
 
 	/*<replacement>*/
 	var util = Object.create(requireUtil());
-	util.inherits = requireInherits();
+	util.inherits = require$$1;
 	/*</replacement>*/
 
 	util.inherits(Transform, Duplex);
@@ -3131,7 +8240,7 @@ function require_stream_passthrough$1 () {
 
 	/*<replacement>*/
 	var util = Object.create(requireUtil());
-	util.inherits = requireInherits();
+	util.inherits = require$$1;
 	/*</replacement>*/
 
 	util.inherits(PassThrough, Transform);
@@ -3154,7 +8263,7 @@ function requireReadable () {
 	if (hasRequiredReadable) return readable$1.exports;
 	hasRequiredReadable = 1;
 	(function (module, exports) {
-		var Stream = require$$0$1;
+		var Stream = require$$0$3;
 		if (process.env.READABLE_STREAM === 'disable' && Stream) {
 		  module.exports = Stream;
 		  exports = module.exports = Stream.Readable;
@@ -3792,201 +8901,6 @@ var external$3 = {
     Promise: ES6Promise
 };
 
-var setImmediate$1 = {};
-
-var hasRequiredSetImmediate;
-
-function requireSetImmediate () {
-	if (hasRequiredSetImmediate) return setImmediate$1;
-	hasRequiredSetImmediate = 1;
-	(function (global, undefined$1) {
-
-	    if (global.setImmediate) {
-	        return;
-	    }
-
-	    var nextHandle = 1; // Spec says greater than zero
-	    var tasksByHandle = {};
-	    var currentlyRunningATask = false;
-	    var doc = global.document;
-	    var registerImmediate;
-
-	    function setImmediate(callback) {
-	      // Callback can either be a function or a string
-	      if (typeof callback !== "function") {
-	        callback = new Function("" + callback);
-	      }
-	      // Copy function arguments
-	      var args = new Array(arguments.length - 1);
-	      for (var i = 0; i < args.length; i++) {
-	          args[i] = arguments[i + 1];
-	      }
-	      // Store and register the task
-	      var task = { callback: callback, args: args };
-	      tasksByHandle[nextHandle] = task;
-	      registerImmediate(nextHandle);
-	      return nextHandle++;
-	    }
-
-	    function clearImmediate(handle) {
-	        delete tasksByHandle[handle];
-	    }
-
-	    function run(task) {
-	        var callback = task.callback;
-	        var args = task.args;
-	        switch (args.length) {
-	        case 0:
-	            callback();
-	            break;
-	        case 1:
-	            callback(args[0]);
-	            break;
-	        case 2:
-	            callback(args[0], args[1]);
-	            break;
-	        case 3:
-	            callback(args[0], args[1], args[2]);
-	            break;
-	        default:
-	            callback.apply(undefined$1, args);
-	            break;
-	        }
-	    }
-
-	    function runIfPresent(handle) {
-	        // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
-	        // So if we're currently running a task, we'll need to delay this invocation.
-	        if (currentlyRunningATask) {
-	            // Delay by doing a setTimeout. setImmediate was tried instead, but in Firefox 7 it generated a
-	            // "too much recursion" error.
-	            setTimeout(runIfPresent, 0, handle);
-	        } else {
-	            var task = tasksByHandle[handle];
-	            if (task) {
-	                currentlyRunningATask = true;
-	                try {
-	                    run(task);
-	                } finally {
-	                    clearImmediate(handle);
-	                    currentlyRunningATask = false;
-	                }
-	            }
-	        }
-	    }
-
-	    function installNextTickImplementation() {
-	        registerImmediate = function(handle) {
-	            process.nextTick(function () { runIfPresent(handle); });
-	        };
-	    }
-
-	    function canUsePostMessage() {
-	        // The test against `importScripts` prevents this implementation from being installed inside a web worker,
-	        // where `global.postMessage` means something completely different and can't be used for this purpose.
-	        if (global.postMessage && !global.importScripts) {
-	            var postMessageIsAsynchronous = true;
-	            var oldOnMessage = global.onmessage;
-	            global.onmessage = function() {
-	                postMessageIsAsynchronous = false;
-	            };
-	            global.postMessage("", "*");
-	            global.onmessage = oldOnMessage;
-	            return postMessageIsAsynchronous;
-	        }
-	    }
-
-	    function installPostMessageImplementation() {
-	        // Installs an event handler on `global` for the `message` event: see
-	        // * https://developer.mozilla.org/en/DOM/window.postMessage
-	        // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
-
-	        var messagePrefix = "setImmediate$" + Math.random() + "$";
-	        var onGlobalMessage = function(event) {
-	            if (event.source === global &&
-	                typeof event.data === "string" &&
-	                event.data.indexOf(messagePrefix) === 0) {
-	                runIfPresent(+event.data.slice(messagePrefix.length));
-	            }
-	        };
-
-	        if (global.addEventListener) {
-	            global.addEventListener("message", onGlobalMessage, false);
-	        } else {
-	            global.attachEvent("onmessage", onGlobalMessage);
-	        }
-
-	        registerImmediate = function(handle) {
-	            global.postMessage(messagePrefix + handle, "*");
-	        };
-	    }
-
-	    function installMessageChannelImplementation() {
-	        var channel = new MessageChannel();
-	        channel.port1.onmessage = function(event) {
-	            var handle = event.data;
-	            runIfPresent(handle);
-	        };
-
-	        registerImmediate = function(handle) {
-	            channel.port2.postMessage(handle);
-	        };
-	    }
-
-	    function installReadyStateChangeImplementation() {
-	        var html = doc.documentElement;
-	        registerImmediate = function(handle) {
-	            // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
-	            // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
-	            var script = doc.createElement("script");
-	            script.onreadystatechange = function () {
-	                runIfPresent(handle);
-	                script.onreadystatechange = null;
-	                html.removeChild(script);
-	                script = null;
-	            };
-	            html.appendChild(script);
-	        };
-	    }
-
-	    function installSetTimeoutImplementation() {
-	        registerImmediate = function(handle) {
-	            setTimeout(runIfPresent, 0, handle);
-	        };
-	    }
-
-	    // If supported, we should attach to the prototype of global, since that is where setTimeout et al. live.
-	    var attachTo = Object.getPrototypeOf && Object.getPrototypeOf(global);
-	    attachTo = attachTo && attachTo.setTimeout ? attachTo : global;
-
-	    // Don't get fooled by e.g. browserify environments.
-	    if ({}.toString.call(global.process) === "[object process]") {
-	        // For Node.js before 0.9
-	        installNextTickImplementation();
-
-	    } else if (canUsePostMessage()) {
-	        // For non-IE10 modern browsers
-	        installPostMessageImplementation();
-
-	    } else if (global.MessageChannel) {
-	        // For web workers, where supported
-	        installMessageChannelImplementation();
-
-	    } else if (doc && "onreadystatechange" in doc.createElement("script")) {
-	        // For IE 6–8
-	        installReadyStateChangeImplementation();
-
-	    } else {
-	        // For older browsers
-	        installSetTimeoutImplementation();
-	    }
-
-	    attachTo.setImmediate = setImmediate;
-	    attachTo.clearImmediate = clearImmediate;
-	}(typeof self === "undefined" ? typeof commonjsGlobal === "undefined" ? commonjsGlobal : commonjsGlobal : self));
-	return setImmediate$1;
-}
-
 var hasRequiredUtils;
 
 function requireUtils () {
@@ -3998,7 +8912,7 @@ function requireUtils () {
 		var base64 = requireBase64();
 		var nodejsUtils = nodejsUtils$2;
 		var external = external$3;
-		requireSetImmediate();
+
 
 
 		/**
@@ -18240,6 +23154,188 @@ function requireBrowser () {
 
 var node = {exports: {}};
 
+// MIT lisence
+// from https://github.com/substack/tty-browserify/blob/1ba769a6429d242f36226538835b4034bf6b7886/index.js
+
+function isatty() {
+  return false;
+}
+
+function ReadStream() {
+  throw new Error('tty.ReadStream is not implemented');
+}
+
+function WriteStream() {
+  throw new Error('tty.ReadStream is not implemented');
+}
+
+var _polyfillNode_tty = {
+  isatty: isatty,
+  ReadStream: ReadStream,
+  WriteStream: WriteStream
+};
+
+var _polyfillNode_tty$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    ReadStream: ReadStream,
+    WriteStream: WriteStream,
+    default: _polyfillNode_tty,
+    isatty: isatty
+});
+
+var require$$0$1 = /*@__PURE__*/getAugmentedNamespace(_polyfillNode_tty$1);
+
+/*
+The MIT License (MIT)
+
+Copyright (c) 2016 CoderPuppy
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*/
+var _endianness;
+function endianness() {
+  if (typeof _endianness === 'undefined') {
+    var a = new ArrayBuffer(2);
+    var b = new Uint8Array(a);
+    var c = new Uint16Array(a);
+    b[0] = 1;
+    b[1] = 2;
+    if (c[0] === 258) {
+      _endianness = 'BE';
+    } else if (c[0] === 513){
+      _endianness = 'LE';
+    } else {
+      throw new Error('unable to figure out endianess');
+    }
+  }
+  return _endianness;
+}
+
+function hostname() {
+  if (typeof global.location !== 'undefined') {
+    return global.location.hostname
+  } else return '';
+}
+
+function loadavg() {
+  return [];
+}
+
+function uptime() {
+  return 0;
+}
+
+function freemem() {
+  return Number.MAX_VALUE;
+}
+
+function totalmem() {
+  return Number.MAX_VALUE;
+}
+
+function cpus() {
+  return [];
+}
+
+function type$1() {
+  return 'Browser';
+}
+
+function release () {
+  if (typeof global.navigator !== 'undefined') {
+    return global.navigator.appVersion;
+  }
+  return '';
+}
+
+function networkInterfaces () {
+  return {};
+}
+
+function getNetworkInterfaces () {
+  return {};
+}
+
+function arch() {
+  return 'javascript';
+}
+
+function platform() {
+  return 'browser';
+}
+
+function tmpDir() {
+  return '/tmp';
+}
+var tmpdir = tmpDir;
+
+var EOL = '\n';
+
+function homedir(){
+  return '$HOME'
+}
+
+var _polyfillNode_os = {
+  homedir: homedir,
+  EOL: EOL,
+  arch: arch,
+  platform: platform,
+  tmpdir: tmpdir,
+  tmpDir: tmpDir,
+  networkInterfaces:networkInterfaces,
+  getNetworkInterfaces: getNetworkInterfaces,
+  release: release,
+  type: type$1,
+  cpus: cpus,
+  totalmem: totalmem,
+  freemem: freemem,
+  uptime: uptime,
+  loadavg: loadavg,
+  hostname: hostname,
+  endianness: endianness,
+};
+
+var _polyfillNode_os$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    EOL: EOL,
+    arch: arch,
+    cpus: cpus,
+    default: _polyfillNode_os,
+    endianness: endianness,
+    freemem: freemem,
+    getNetworkInterfaces: getNetworkInterfaces,
+    homedir: homedir,
+    hostname: hostname,
+    loadavg: loadavg,
+    networkInterfaces: networkInterfaces,
+    platform: platform,
+    release: release,
+    tmpDir: tmpDir,
+    tmpdir: tmpdir,
+    totalmem: totalmem,
+    type: type$1,
+    uptime: uptime
+});
+
+var require$$0 = /*@__PURE__*/getAugmentedNamespace(_polyfillNode_os$1);
+
 var hasFlag;
 var hasRequiredHasFlag;
 
@@ -18262,8 +23358,8 @@ var hasRequiredSupportsColor;
 function requireSupportsColor () {
 	if (hasRequiredSupportsColor) return supportsColor_1;
 	hasRequiredSupportsColor = 1;
-	const os = require$$0$3;
-	const tty = require$$1$2;
+	const os = require$$0;
+	const tty = require$$0$1;
 	const hasFlag = requireHasFlag();
 
 	const {env} = process;
@@ -18409,8 +23505,8 @@ function requireNode () {
 	if (hasRequiredNode) return node.exports;
 	hasRequiredNode = 1;
 	(function (module, exports) {
-		const tty = require$$1$2;
-		const util = require$$1$1;
+		const tty = require$$0$1;
+		const util = require$$3;
 
 		/**
 		 * This is the Node.js implementation of `debug()`.
@@ -29958,7 +35054,7 @@ var hasRequiredStream;
 function requireStream () {
 	if (hasRequiredStream) return stream;
 	hasRequiredStream = 1;
-	stream = require$$0$1;
+	stream = require$$0$3;
 	return stream;
 }
 
@@ -29977,9 +35073,9 @@ function requireBuffer_list () {
 	function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 	function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return typeof key === "symbol" ? key : String(key); }
 	function _toPrimitive(input, hint) { if (typeof input !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (typeof res !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-	var _require = require$$0$2,
+	var _require = require$$2,
 	  Buffer = _require.Buffer;
-	var _require2 = require$$1$1,
+	var _require2 = require$$3,
 	  inspect = _require2.inspect;
 	var custom = inspect && inspect.custom || 'inspect';
 	function copyBuffer(src, target, offset) {
@@ -30449,7 +35545,7 @@ function require_stream_writable () {
 	var Stream = requireStream();
 	/*</replacement>*/
 
-	var Buffer = require$$0$2.Buffer;
+	var Buffer = require$$2.Buffer;
 	var OurUint8Array = (typeof commonjsGlobal !== 'undefined' ? commonjsGlobal : typeof window !== 'undefined' ? window : typeof self !== 'undefined' ? self : {}).Uint8Array || function () {};
 	function _uint8ArrayToBuffer(chunk) {
 	  return Buffer.from(chunk);
@@ -30470,7 +35566,7 @@ function require_stream_writable () {
 	  ERR_STREAM_WRITE_AFTER_END = _require$codes.ERR_STREAM_WRITE_AFTER_END,
 	  ERR_UNKNOWN_ENCODING = _require$codes.ERR_UNKNOWN_ENCODING;
 	var errorOrDestroy = destroyImpl.errorOrDestroy;
-	requireInherits()(Writable, Stream);
+	require$$1(Writable, Stream);
 	function nop() {}
 	function WritableState(options, stream, isDuplex) {
 	  Duplex = Duplex || require_stream_duplex();
@@ -31046,7 +36142,7 @@ function require_stream_duplex () {
 	_stream_duplex = Duplex;
 	var Readable = require_stream_readable();
 	var Writable = require_stream_writable();
-	requireInherits()(Duplex, Readable);
+	require$$1(Duplex, Readable);
 	{
 	  // Allow the keys array to be GC'ed.
 	  var keys = objectKeys(Writable.prototype);
@@ -31134,367 +36230,6 @@ function require_stream_duplex () {
 	  }
 	});
 	return _stream_duplex;
-}
-
-var string_decoder = {};
-
-var safeBuffer = {exports: {}};
-
-/*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
-
-var hasRequiredSafeBuffer;
-
-function requireSafeBuffer () {
-	if (hasRequiredSafeBuffer) return safeBuffer.exports;
-	hasRequiredSafeBuffer = 1;
-	(function (module, exports) {
-		/* eslint-disable node/no-deprecated-api */
-		var buffer = require$$0$2;
-		var Buffer = buffer.Buffer;
-
-		// alternative to using Object.keys for old browsers
-		function copyProps (src, dst) {
-		  for (var key in src) {
-		    dst[key] = src[key];
-		  }
-		}
-		if (Buffer.from && Buffer.alloc && Buffer.allocUnsafe && Buffer.allocUnsafeSlow) {
-		  module.exports = buffer;
-		} else {
-		  // Copy properties from require('buffer')
-		  copyProps(buffer, exports);
-		  exports.Buffer = SafeBuffer;
-		}
-
-		function SafeBuffer (arg, encodingOrOffset, length) {
-		  return Buffer(arg, encodingOrOffset, length)
-		}
-
-		SafeBuffer.prototype = Object.create(Buffer.prototype);
-
-		// Copy static methods from Buffer
-		copyProps(Buffer, SafeBuffer);
-
-		SafeBuffer.from = function (arg, encodingOrOffset, length) {
-		  if (typeof arg === 'number') {
-		    throw new TypeError('Argument must not be a number')
-		  }
-		  return Buffer(arg, encodingOrOffset, length)
-		};
-
-		SafeBuffer.alloc = function (size, fill, encoding) {
-		  if (typeof size !== 'number') {
-		    throw new TypeError('Argument must be a number')
-		  }
-		  var buf = Buffer(size);
-		  if (fill !== undefined) {
-		    if (typeof encoding === 'string') {
-		      buf.fill(fill, encoding);
-		    } else {
-		      buf.fill(fill);
-		    }
-		  } else {
-		    buf.fill(0);
-		  }
-		  return buf
-		};
-
-		SafeBuffer.allocUnsafe = function (size) {
-		  if (typeof size !== 'number') {
-		    throw new TypeError('Argument must be a number')
-		  }
-		  return Buffer(size)
-		};
-
-		SafeBuffer.allocUnsafeSlow = function (size) {
-		  if (typeof size !== 'number') {
-		    throw new TypeError('Argument must be a number')
-		  }
-		  return buffer.SlowBuffer(size)
-		}; 
-	} (safeBuffer, safeBuffer.exports));
-	return safeBuffer.exports;
-}
-
-var hasRequiredString_decoder;
-
-function requireString_decoder () {
-	if (hasRequiredString_decoder) return string_decoder;
-	hasRequiredString_decoder = 1;
-
-	/*<replacement>*/
-
-	var Buffer = requireSafeBuffer().Buffer;
-	/*</replacement>*/
-
-	var isEncoding = Buffer.isEncoding || function (encoding) {
-	  encoding = '' + encoding;
-	  switch (encoding && encoding.toLowerCase()) {
-	    case 'hex':case 'utf8':case 'utf-8':case 'ascii':case 'binary':case 'base64':case 'ucs2':case 'ucs-2':case 'utf16le':case 'utf-16le':case 'raw':
-	      return true;
-	    default:
-	      return false;
-	  }
-	};
-
-	function _normalizeEncoding(enc) {
-	  if (!enc) return 'utf8';
-	  var retried;
-	  while (true) {
-	    switch (enc) {
-	      case 'utf8':
-	      case 'utf-8':
-	        return 'utf8';
-	      case 'ucs2':
-	      case 'ucs-2':
-	      case 'utf16le':
-	      case 'utf-16le':
-	        return 'utf16le';
-	      case 'latin1':
-	      case 'binary':
-	        return 'latin1';
-	      case 'base64':
-	      case 'ascii':
-	      case 'hex':
-	        return enc;
-	      default:
-	        if (retried) return; // undefined
-	        enc = ('' + enc).toLowerCase();
-	        retried = true;
-	    }
-	  }
-	}
-	// Do not cache `Buffer.isEncoding` when checking encoding names as some
-	// modules monkey-patch it to support additional encodings
-	function normalizeEncoding(enc) {
-	  var nenc = _normalizeEncoding(enc);
-	  if (typeof nenc !== 'string' && (Buffer.isEncoding === isEncoding || !isEncoding(enc))) throw new Error('Unknown encoding: ' + enc);
-	  return nenc || enc;
-	}
-
-	// StringDecoder provides an interface for efficiently splitting a series of
-	// buffers into a series of JS strings without breaking apart multi-byte
-	// characters.
-	string_decoder.StringDecoder = StringDecoder;
-	function StringDecoder(encoding) {
-	  this.encoding = normalizeEncoding(encoding);
-	  var nb;
-	  switch (this.encoding) {
-	    case 'utf16le':
-	      this.text = utf16Text;
-	      this.end = utf16End;
-	      nb = 4;
-	      break;
-	    case 'utf8':
-	      this.fillLast = utf8FillLast;
-	      nb = 4;
-	      break;
-	    case 'base64':
-	      this.text = base64Text;
-	      this.end = base64End;
-	      nb = 3;
-	      break;
-	    default:
-	      this.write = simpleWrite;
-	      this.end = simpleEnd;
-	      return;
-	  }
-	  this.lastNeed = 0;
-	  this.lastTotal = 0;
-	  this.lastChar = Buffer.allocUnsafe(nb);
-	}
-
-	StringDecoder.prototype.write = function (buf) {
-	  if (buf.length === 0) return '';
-	  var r;
-	  var i;
-	  if (this.lastNeed) {
-	    r = this.fillLast(buf);
-	    if (r === undefined) return '';
-	    i = this.lastNeed;
-	    this.lastNeed = 0;
-	  } else {
-	    i = 0;
-	  }
-	  if (i < buf.length) return r ? r + this.text(buf, i) : this.text(buf, i);
-	  return r || '';
-	};
-
-	StringDecoder.prototype.end = utf8End;
-
-	// Returns only complete characters in a Buffer
-	StringDecoder.prototype.text = utf8Text;
-
-	// Attempts to complete a partial non-UTF-8 character using bytes from a Buffer
-	StringDecoder.prototype.fillLast = function (buf) {
-	  if (this.lastNeed <= buf.length) {
-	    buf.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, this.lastNeed);
-	    return this.lastChar.toString(this.encoding, 0, this.lastTotal);
-	  }
-	  buf.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, buf.length);
-	  this.lastNeed -= buf.length;
-	};
-
-	// Checks the type of a UTF-8 byte, whether it's ASCII, a leading byte, or a
-	// continuation byte. If an invalid byte is detected, -2 is returned.
-	function utf8CheckByte(byte) {
-	  if (byte <= 0x7F) return 0;else if (byte >> 5 === 0x06) return 2;else if (byte >> 4 === 0x0E) return 3;else if (byte >> 3 === 0x1E) return 4;
-	  return byte >> 6 === 0x02 ? -1 : -2;
-	}
-
-	// Checks at most 3 bytes at the end of a Buffer in order to detect an
-	// incomplete multi-byte UTF-8 character. The total number of bytes (2, 3, or 4)
-	// needed to complete the UTF-8 character (if applicable) are returned.
-	function utf8CheckIncomplete(self, buf, i) {
-	  var j = buf.length - 1;
-	  if (j < i) return 0;
-	  var nb = utf8CheckByte(buf[j]);
-	  if (nb >= 0) {
-	    if (nb > 0) self.lastNeed = nb - 1;
-	    return nb;
-	  }
-	  if (--j < i || nb === -2) return 0;
-	  nb = utf8CheckByte(buf[j]);
-	  if (nb >= 0) {
-	    if (nb > 0) self.lastNeed = nb - 2;
-	    return nb;
-	  }
-	  if (--j < i || nb === -2) return 0;
-	  nb = utf8CheckByte(buf[j]);
-	  if (nb >= 0) {
-	    if (nb > 0) {
-	      if (nb === 2) nb = 0;else self.lastNeed = nb - 3;
-	    }
-	    return nb;
-	  }
-	  return 0;
-	}
-
-	// Validates as many continuation bytes for a multi-byte UTF-8 character as
-	// needed or are available. If we see a non-continuation byte where we expect
-	// one, we "replace" the validated continuation bytes we've seen so far with
-	// a single UTF-8 replacement character ('\ufffd'), to match v8's UTF-8 decoding
-	// behavior. The continuation byte check is included three times in the case
-	// where all of the continuation bytes for a character exist in the same buffer.
-	// It is also done this way as a slight performance increase instead of using a
-	// loop.
-	function utf8CheckExtraBytes(self, buf, p) {
-	  if ((buf[0] & 0xC0) !== 0x80) {
-	    self.lastNeed = 0;
-	    return '\ufffd';
-	  }
-	  if (self.lastNeed > 1 && buf.length > 1) {
-	    if ((buf[1] & 0xC0) !== 0x80) {
-	      self.lastNeed = 1;
-	      return '\ufffd';
-	    }
-	    if (self.lastNeed > 2 && buf.length > 2) {
-	      if ((buf[2] & 0xC0) !== 0x80) {
-	        self.lastNeed = 2;
-	        return '\ufffd';
-	      }
-	    }
-	  }
-	}
-
-	// Attempts to complete a multi-byte UTF-8 character using bytes from a Buffer.
-	function utf8FillLast(buf) {
-	  var p = this.lastTotal - this.lastNeed;
-	  var r = utf8CheckExtraBytes(this, buf);
-	  if (r !== undefined) return r;
-	  if (this.lastNeed <= buf.length) {
-	    buf.copy(this.lastChar, p, 0, this.lastNeed);
-	    return this.lastChar.toString(this.encoding, 0, this.lastTotal);
-	  }
-	  buf.copy(this.lastChar, p, 0, buf.length);
-	  this.lastNeed -= buf.length;
-	}
-
-	// Returns all complete UTF-8 characters in a Buffer. If the Buffer ended on a
-	// partial character, the character's bytes are buffered until the required
-	// number of bytes are available.
-	function utf8Text(buf, i) {
-	  var total = utf8CheckIncomplete(this, buf, i);
-	  if (!this.lastNeed) return buf.toString('utf8', i);
-	  this.lastTotal = total;
-	  var end = buf.length - (total - this.lastNeed);
-	  buf.copy(this.lastChar, 0, end);
-	  return buf.toString('utf8', i, end);
-	}
-
-	// For UTF-8, a replacement character is added when ending on a partial
-	// character.
-	function utf8End(buf) {
-	  var r = buf && buf.length ? this.write(buf) : '';
-	  if (this.lastNeed) return r + '\ufffd';
-	  return r;
-	}
-
-	// UTF-16LE typically needs two bytes per character, but even if we have an even
-	// number of bytes available, we need to check if we end on a leading/high
-	// surrogate. In that case, we need to wait for the next two bytes in order to
-	// decode the last character properly.
-	function utf16Text(buf, i) {
-	  if ((buf.length - i) % 2 === 0) {
-	    var r = buf.toString('utf16le', i);
-	    if (r) {
-	      var c = r.charCodeAt(r.length - 1);
-	      if (c >= 0xD800 && c <= 0xDBFF) {
-	        this.lastNeed = 2;
-	        this.lastTotal = 4;
-	        this.lastChar[0] = buf[buf.length - 2];
-	        this.lastChar[1] = buf[buf.length - 1];
-	        return r.slice(0, -1);
-	      }
-	    }
-	    return r;
-	  }
-	  this.lastNeed = 1;
-	  this.lastTotal = 2;
-	  this.lastChar[0] = buf[buf.length - 1];
-	  return buf.toString('utf16le', i, buf.length - 1);
-	}
-
-	// For UTF-16LE we do not explicitly append special replacement characters if we
-	// end on a partial character, we simply let v8 handle that.
-	function utf16End(buf) {
-	  var r = buf && buf.length ? this.write(buf) : '';
-	  if (this.lastNeed) {
-	    var end = this.lastTotal - this.lastNeed;
-	    return r + this.lastChar.toString('utf16le', 0, end);
-	  }
-	  return r;
-	}
-
-	function base64Text(buf, i) {
-	  var n = (buf.length - i) % 3;
-	  if (n === 0) return buf.toString('base64', i);
-	  this.lastNeed = 3 - n;
-	  this.lastTotal = 3;
-	  if (n === 1) {
-	    this.lastChar[0] = buf[buf.length - 1];
-	  } else {
-	    this.lastChar[0] = buf[buf.length - 2];
-	    this.lastChar[1] = buf[buf.length - 1];
-	  }
-	  return buf.toString('base64', i, buf.length - n);
-	}
-
-	function base64End(buf) {
-	  var r = buf && buf.length ? this.write(buf) : '';
-	  if (this.lastNeed) return r + this.lastChar.toString('base64', 0, 3 - this.lastNeed);
-	  return r;
-	}
-
-	// Pass bytes on through for single-byte encodings (e.g. ascii, latin1, hex)
-	function simpleWrite(buf) {
-	  return buf.toString(this.encoding);
-	}
-
-	function simpleEnd(buf) {
-	  return buf && buf.length ? this.write(buf) : '';
-	}
-	return string_decoder;
 }
 
 var endOfStream;
@@ -31852,7 +36587,7 @@ function require_stream_readable () {
 	Readable.ReadableState = ReadableState;
 
 	/*<replacement>*/
-	require$$2$1.EventEmitter;
+	require$$0$2.EventEmitter;
 	var EElistenerCount = function EElistenerCount(emitter, type) {
 	  return emitter.listeners(type).length;
 	};
@@ -31862,7 +36597,7 @@ function require_stream_readable () {
 	var Stream = requireStream();
 	/*</replacement>*/
 
-	var Buffer = require$$0$2.Buffer;
+	var Buffer = require$$2.Buffer;
 	var OurUint8Array = (typeof commonjsGlobal !== 'undefined' ? commonjsGlobal : typeof window !== 'undefined' ? window : typeof self !== 'undefined' ? self : {}).Uint8Array || function () {};
 	function _uint8ArrayToBuffer(chunk) {
 	  return Buffer.from(chunk);
@@ -31872,7 +36607,7 @@ function require_stream_readable () {
 	}
 
 	/*<replacement>*/
-	var debugUtil = require$$1$1;
+	var debugUtil = require$$3;
 	var debug;
 	if (debugUtil && debugUtil.debuglog) {
 	  debug = debugUtil.debuglog('stream');
@@ -31895,7 +36630,7 @@ function require_stream_readable () {
 	var StringDecoder;
 	var createReadableStreamAsyncIterator;
 	var from;
-	requireInherits()(Readable, Stream);
+	require$$1(Readable, Stream);
 	var errorOrDestroy = destroyImpl.errorOrDestroy;
 	var kProxyEvents = ['error', 'close', 'destroy', 'pause', 'resume'];
 	function prependListener(emitter, event, fn) {
@@ -31977,7 +36712,7 @@ function require_stream_readable () {
 	  this.decoder = null;
 	  this.encoding = null;
 	  if (options.encoding) {
-	    if (!StringDecoder) StringDecoder = requireString_decoder().StringDecoder;
+	    if (!StringDecoder) StringDecoder = require$$10.StringDecoder;
 	    this.decoder = new StringDecoder(options.encoding);
 	    this.encoding = options.encoding;
 	  }
@@ -32120,7 +36855,7 @@ function require_stream_readable () {
 
 	// backwards compatibility.
 	Readable.prototype.setEncoding = function (enc) {
-	  if (!StringDecoder) StringDecoder = requireString_decoder().StringDecoder;
+	  if (!StringDecoder) StringDecoder = require$$10.StringDecoder;
 	  var decoder = new StringDecoder(enc);
 	  this._readableState.decoder = decoder;
 	  // If setEncoding(null), decoder.encoding equals utf8
@@ -32864,7 +37599,7 @@ function require_stream_transform () {
 	  ERR_TRANSFORM_ALREADY_TRANSFORMING = _require$codes.ERR_TRANSFORM_ALREADY_TRANSFORMING,
 	  ERR_TRANSFORM_WITH_LENGTH_0 = _require$codes.ERR_TRANSFORM_WITH_LENGTH_0;
 	var Duplex = require_stream_duplex();
-	requireInherits()(Transform, Duplex);
+	require$$1(Transform, Duplex);
 	function afterTransform(er, data) {
 	  var ts = this._transformState;
 	  ts.transforming = false;
@@ -32994,7 +37729,7 @@ function require_stream_passthrough () {
 
 	_stream_passthrough = PassThrough;
 	var Transform = require_stream_transform();
-	requireInherits()(PassThrough, Transform);
+	require$$1(PassThrough, Transform);
 	function PassThrough(options) {
 	  if (!(this instanceof PassThrough)) return new PassThrough(options);
 	  Transform.call(this, options);
@@ -33097,7 +37832,7 @@ function requirePipeline () {
 }
 
 (function (module, exports) {
-	var Stream = require$$0$1;
+	var Stream = require$$0$3;
 	if (process.env.READABLE_STREAM === 'disable' && Stream) {
 	  module.exports = Stream.Readable;
 	  Object.assign(module.exports, Stream);
@@ -33653,12 +38388,12 @@ var ImportZip = /** @class */ (function () {
 
 function ZipDropzone(_a) {
     var className = _a.className, handleFile = _a.handleFile;
-    return (require$$0.jsx("input", { type: "file", onChange: function (e) { var _a; return ((_a = e.target.files) === null || _a === void 0 ? void 0 : _a.length) && handleFile(e.target.files[0]); }, className: className, style: { all: 'unset' } }));
+    return (require$$0$4.jsx("input", { type: "file", onChange: function (e) { var _a; return ((_a = e.target.files) === null || _a === void 0 ? void 0 : _a.length) && handleFile(e.target.files[0]); }, className: className, style: { all: 'unset' } }));
 }
 
 function BulkUpload(_a) {
     var setReleaseProperty = _a.setReleaseProperty, setSongs = _a.setSongs;
-    return (require$$0.jsxs("div", __assign({ className: "my-4" }, { children: [require$$0.jsx("h3", __assign({ className: "font-header text-2xl" }, { children: "Bulk Upload" })), require$$0.jsx(ZipDropzone, { handleFile: handleZip })] })));
+    return (require$$0$4.jsxs("div", __assign({ className: "my-4" }, { children: [require$$0$4.jsx("h3", __assign({ className: "font-header text-2xl" }, { children: "Bulk Upload" })), require$$0$4.jsx(ZipDropzone, { handleFile: handleZip })] })));
     function handleZip(file) {
         return __awaiter$1(this, void 0, void 0, function () {
             var importZip_1;
@@ -33683,9 +38418,9 @@ function BulkUpload(_a) {
 function AlbumArt(_a) {
     var image = _a.image;
     if (image) {
-        return require$$0.jsx("img", { width: "400", height: "400", src: image });
+        return require$$0$4.jsx("img", { width: "400", height: "400", src: image });
     }
-    return (require$$0.jsx("div", __assign({ className: "h-[400px] w-[400px] border-4 border-dashed border-slate-400 hover:border-slate-600 rounded-xl flex justify-center items-center cursor-pointer text-slate-400 hover:text-slate-600" }, { children: require$$0.jsxs("p", __assign({ className: "font-header text-center" }, { children: ["album art (cover, back, etc...)", require$$0.jsx("br", {}), "(minimum size 1000px x 1000px)", require$$0.jsx("br", {}), require$$0.jsx("i", { className: "fa-fw fa-sharp fa-solid fa-upload text-xl mt-2" })] })) })));
+    return (require$$0$4.jsx("div", __assign({ className: "h-[400px] w-[400px] border-4 border-dashed border-slate-400 hover:border-slate-600 rounded-xl flex justify-center items-center cursor-pointer text-slate-400 hover:text-slate-600" }, { children: require$$0$4.jsxs("p", __assign({ className: "font-header text-center" }, { children: ["album art (cover, back, etc...)", require$$0$4.jsx("br", {}), "(minimum size 1000px x 1000px)", require$$0$4.jsx("br", {}), require$$0$4.jsx("i", { className: "fa-fw fa-sharp fa-solid fa-upload text-xl mt-2" })] })) })));
 }
 
 var artTypes = [
@@ -33698,51 +38433,51 @@ var artTypes = [
 function ReleaseArt(_a) {
     var _b;
     var release = _a.release; _a.setReleaseProperty; var artColors = _a.artColors, setArtColors = _a.setArtColors;
-    var _c = require$$1.useState('cover'), selected = _c[0], setSelected = _c[1];
-    require$$1.useEffect(function () {
+    var _c = require$$1$1.useState('cover'), selected = _c[0], setSelected = _c[1];
+    require$$1$1.useEffect(function () {
         for (var type in release.art) {
             var colors = release.art[type].colors || [];
             setArtColors(__spreadArray(__spreadArray([], artColors, true), colors, true));
         }
     }, [release.art]);
     var image = (_b = release.art[selected]) === null || _b === void 0 ? void 0 : _b.dataURL;
-    return (require$$0.jsxs("div", __assign({ className: "w-full flex flex-col items-center" }, { children: [require$$0.jsx(AlbumArt, { image: image }), require$$0.jsx("div", __assign({ className: "w-full flex justify-center my-4" }, { children: artTypes.map(function (entry, i) {
+    return (require$$0$4.jsxs("div", __assign({ className: "w-full flex flex-col items-center" }, { children: [require$$0$4.jsx(AlbumArt, { image: image }), require$$0$4.jsx("div", __assign({ className: "w-full flex justify-center my-4" }, { children: artTypes.map(function (entry, i) {
                     var variant = selected == entry.type
                         ? 'solid'
                         : release.art[entry.type]
                             ? 'faded'
                             : 'bordered';
-                    return (require$$0.jsx(Chip, __assign({ className: "mx-2 cursor-pointer", variant: variant, onClick: function () { return setSelected(entry.type); } }, { children: entry.display }), i));
+                    return (require$$0$4.jsx(Chip, __assign({ className: "mx-2 cursor-pointer", variant: variant, onClick: function () { return setSelected(entry.type); } }, { children: entry.display }), i));
                 }) }))] })));
 }
 
 function ReleaseInfo(_a) {
     var release = _a.release, setReleaseProperty = _a.setReleaseProperty; _a.artColors;
-    return (require$$0.jsxs("div", { children: [require$$0.jsx(Input, { label: "release title", placeholder: "Title of your release", value: release.display, setValue: function (value) { return setReleaseProperty('display', value); } }), require$$0.jsxs(RadioGroup
+    return (require$$0$4.jsxs("div", { children: [require$$0$4.jsx(Input, { label: "release title", placeholder: "Title of your release", value: release.display, setValue: function (value) { return setReleaseProperty('display', value); } }), require$$0$4.jsxs(RadioGroup
             //label="release type"
             , __assign({ 
                 //label="release type"
-                orientation: "horizontal", additionalClasses: "my-4", value: release.type, setValue: function (value) { return setReleaseProperty('type', value); } }, { children: [require$$0.jsx(Radio, __assign({ value: "demo" }, { children: "Demo" })), require$$0.jsx(Radio, __assign({ value: "ep" }, { children: "EP" })), require$$0.jsx(Radio, __assign({ value: "lp" }, { children: "LP" })), require$$0.jsx(Radio, __assign({ value: "split" }, { children: "Split" })), require$$0.jsx(Radio, __assign({ value: "comp" }, { children: "Compilation" }))] })), require$$0.jsx(Textarea, { label: "about the release", additionalClasses: "my-4", value: release.description, setValue: function (value) { return setReleaseProperty('description', value); } }), require$$0.jsx(Textarea, { label: "credits & thanks", additionalClasses: "my-4", value: release.credits, setValue: function (value) { return setReleaseProperty('credits', value); } }), require$$0.jsx(Input, { additionalClasses: "mt-4 mb-2", label: "tags", placeholder: "type to search tags..." }), require$$0.jsxs("p", __assign({ className: "bg-zinc-500 font-content text-sm text-white p-1 rounded-xl" }, { children: [require$$0.jsx("i", { className: "fa-fw fa-solid fa-tag mr-1" }), "A little blurb on the importance of tags here."] })), require$$0.jsx(Input, { placeholder: "EZ123420", additionalClasses: "my-4", label: "upc/ean", value: release.upc, setValue: function (value) { return setReleaseProperty('upc', value); } })] }));
+                orientation: "horizontal", additionalClasses: "my-4", value: release.type, setValue: function (value) { return setReleaseProperty('type', value); } }, { children: [require$$0$4.jsx(Radio, __assign({ value: "demo" }, { children: "Demo" })), require$$0$4.jsx(Radio, __assign({ value: "ep" }, { children: "EP" })), require$$0$4.jsx(Radio, __assign({ value: "lp" }, { children: "LP" })), require$$0$4.jsx(Radio, __assign({ value: "split" }, { children: "Split" })), require$$0$4.jsx(Radio, __assign({ value: "comp" }, { children: "Compilation" }))] })), require$$0$4.jsx(Textarea, { label: "about the release", additionalClasses: "my-4", value: release.description, setValue: function (value) { return setReleaseProperty('description', value); } }), require$$0$4.jsx(Textarea, { label: "credits & thanks", additionalClasses: "my-4", value: release.credits, setValue: function (value) { return setReleaseProperty('credits', value); } }), require$$0$4.jsx(Input, { additionalClasses: "mt-4 mb-2", label: "tags", placeholder: "type to search tags..." }), require$$0$4.jsxs("p", __assign({ className: "bg-zinc-500 font-content text-sm text-white p-1 rounded-xl" }, { children: [require$$0$4.jsx("i", { className: "fa-fw fa-solid fa-tag mr-1" }), "A little blurb on the importance of tags here."] })), require$$0$4.jsx(Input, { placeholder: "EZ123420", additionalClasses: "my-4", label: "upc/ean", value: release.upc, setValue: function (value) { return setReleaseProperty('upc', value); } })] }));
 }
 
 function ColorPalette(_a) {
     var artColors = _a.artColors;
-    return (require$$0.jsx("div", __assign({ className: "flex flex-wrap justify-around w-full" }, { children: artColors.map(function (color, i) { return (require$$0.jsx("div", { className: "w-[3rem] h-[3rem] cursor-pointer my-2", style: { backgroundColor: color }, onClick: function () { return navigator.clipboard.writeText(color); } }, i)); }) })));
+    return (require$$0$4.jsx("div", __assign({ className: "flex flex-wrap justify-around w-full" }, { children: artColors.map(function (color, i) { return (require$$0$4.jsx("div", { className: "w-[3rem] h-[3rem] cursor-pointer my-2", style: { backgroundColor: color }, onClick: function () { return navigator.clipboard.writeText(color); } }, i)); }) })));
 }
 
 function ReleaseTheme(_a) {
     var artColors = _a.artColors, release = _a.release, setReleaseProperty = _a.setReleaseProperty;
-    return (require$$0.jsxs("div", { children: [require$$0.jsx("h3", __assign({ className: "font-header text-2xl" }, { children: "Theme" })), artColors.length ? (require$$0.jsxs("div", __assign({ className: "w-full" }, { children: [require$$0.jsx(ColorPalette, { artColors: artColors }), require$$0.jsxs("p", __assign({ className: "bg-zinc-500 font-content text-sm text-white p-2 rounded-xl" }, { children: [require$$0.jsx("i", { className: "fa-sharp fa-solid fa-circle-info mr-1" }), "We've gathered these colors from the art you've uploaded. Click to copy it's hex code."] }))] }))) : (require$$0.jsx(require$$0.Fragment, {})), require$$0.jsx(Input, { additionalClasses: "mt-4 mb-2", label: "primary color", placeholder: "#000000", value: release.colors.primary, setValue: function (value) {
+    return (require$$0$4.jsxs("div", { children: [require$$0$4.jsx("h3", __assign({ className: "font-header text-2xl" }, { children: "Theme" })), artColors.length ? (require$$0$4.jsxs("div", __assign({ className: "w-full" }, { children: [require$$0$4.jsx(ColorPalette, { artColors: artColors }), require$$0$4.jsxs("p", __assign({ className: "bg-zinc-500 font-content text-sm text-white p-2 rounded-xl" }, { children: [require$$0$4.jsx("i", { className: "fa-sharp fa-solid fa-circle-info mr-1" }), "We've gathered these colors from the art you've uploaded. Click to copy it's hex code."] }))] }))) : (require$$0$4.jsx(require$$0$4.Fragment, {})), require$$0$4.jsx(Input, { additionalClasses: "mt-4 mb-2", label: "primary color", placeholder: "#000000", value: release.colors.primary, setValue: function (value) {
                     return setReleaseProperty('colors', __assign(__assign({}, release.colors), { primary: value }));
-                } }), require$$0.jsx(Input, { additionalClasses: "mt-4 mb-2", label: "secondary color", placeholder: "#FFFFFF", value: release.colors.secondary, setValue: function (value) {
+                } }), require$$0$4.jsx(Input, { additionalClasses: "mt-4 mb-2", label: "secondary color", placeholder: "#FFFFFF", value: release.colors.secondary, setValue: function (value) {
                     return setReleaseProperty('colors', __assign(__assign({}, release.colors), { secondary: value }));
                 } })] }));
 }
 
 function Song(_a) {
     var index = _a.index, data = _a.data;
-    var _b = require$$1.useState(false), isOpen = _b[0], setOpen = _b[1];
-    return (require$$0.jsxs("div", __assign({ className: "border-b-1 py-4" }, { children: [require$$0.jsxs("h4", __assign({ className: "font-header text-xl cursor-pointer", onClick: function () { return setOpen(!isOpen); } }, { children: [index + 1, ". ", data.display] })), require$$0.jsxs("div", __assign({ className: "".concat(isOpen ? 'flex' : 'hidden', " flex-col") }, { children: [require$$0.jsx(Input, { label: "title", additionalClasses: "my-2", value: data.display }), require$$0.jsx(Textarea, { label: "lyrics", additionalClasses: "my-2", value: data.lyrics.unsynced }), require$$0.jsx(Input, { label: "isrc", additionalClasses: "my-2", value: data.isrc })] }))] })));
+    var _b = require$$1$1.useState(false), isOpen = _b[0], setOpen = _b[1];
+    return (require$$0$4.jsxs("div", __assign({ className: "border-b-1 py-4" }, { children: [require$$0$4.jsxs("h4", __assign({ className: "font-header text-xl cursor-pointer", onClick: function () { return setOpen(!isOpen); } }, { children: [index + 1, ". ", data.display] })), require$$0$4.jsxs("div", __assign({ className: "".concat(isOpen ? 'flex' : 'hidden', " flex-col") }, { children: [require$$0$4.jsx(Input, { label: "title", additionalClasses: "my-2", value: data.display }), require$$0$4.jsx(Textarea, { label: "lyrics", additionalClasses: "my-2", value: data.lyrics.unsynced }), require$$0$4.jsx(Input, { label: "isrc", additionalClasses: "my-2", value: data.isrc })] }))] })));
 }
 
 var ToneCSSUtils = /** @class */ (function () {
@@ -33801,20 +38536,20 @@ var uploadReleaseDefaults = {
 };
 function UploadPage(_a) {
     var _b;
-    var _c = require$$1.useState(uploadReleaseDefaults), release = _c[0], setRelease = _c[1];
-    var _d = require$$1.useState([]), songs = _d[0], setSongs = _d[1];
-    var _e = require$$1.useState([]), artColors = _e[0], setArtColors = _e[1];
-    var _f = require$$1.useState(false); _f[0]; _f[1];
+    var _c = require$$1$1.useState(uploadReleaseDefaults), release = _c[0], setRelease = _c[1];
+    var _d = require$$1$1.useState([]), songs = _d[0], setSongs = _d[1];
+    var _e = require$$1$1.useState([]), artColors = _e[0], setArtColors = _e[1];
+    var _f = require$$1$1.useState(false); _f[0]; _f[1];
     new useToneApi();
-    require$$1.useEffect(function () {
+    require$$1$1.useEffect(function () {
         console.log({ release: release });
     }, [release]);
-    require$$1.useEffect(function () {
+    require$$1$1.useEffect(function () {
         var _a = release.colors, primary = _a.primary, secondary = _a.secondary;
         if (primary && secondary)
             ToneCSSUtils.setColors('tone-upload-preview', primary, secondary);
     }, [release.colors]);
-    return (require$$0.jsxs(Page, __assign({ name: name, version: version, className: "flex" }, { children: [require$$0.jsxs("div", __assign({ className: "w-1/2 p-4 h-full max-h-screen bg-[var(--tone-upload-preview-lighter)] text-[var(--tone-upload-preview-darker)] dark:bg-[var(--tone-upload-preview-darker)] dark:text-[var(--tone-upload-preview-lighter)]", style: { overflowY: 'scroll' } }, { children: [require$$0.jsxs("div", { children: [Object.keys(release.art).length ? (require$$0.jsx("div", __assign({ className: "w-full flex items-center justify-center p-4" }, { children: require$$0.jsx("img", { src: (_b = release.art['cover']) === null || _b === void 0 ? void 0 : _b.dataURL, style: { height: '100%', maxWidth: 'auto' } }) }))) : (require$$0.jsx(require$$0.Fragment, {})), require$$0.jsxs("div", __assign({ className: "my-2" }, { children: [release.display ? (require$$0.jsx("h1", __assign({ className: "font-release text-5xl font-bold" }, { children: release.display }))) : (require$$0.jsx("h1", __assign({ className: "font-release text-5xl font-bold opacity-20" }, { children: "Title of your release" }))), require$$0.jsxs("p", __assign({ className: "font-header text-sm" }, { children: [songs.length || 0, " song", songs.length !== 1 && 's', ", total time,", ' ' + formatReleaseType(release.type)] })), require$$0.jsxs("p", __assign({ className: "font-content text-sm" }, { children: ["by ", require$$0.jsx("span", __assign({ className: "font-header" }, { children: "[artist]" }))] }))] })), require$$0.jsxs("p", __assign({ className: "font-content text-sm" }, { children: ["Released on ", require$$0.jsx("span", __assign({ className: "font-header" }, { children: "[date]" }))] }))] }), require$$0.jsxs("div", { children: [require$$0.jsx("h4", __assign({ className: "font-header hidden" }, { children: "About the release" })), require$$0.jsx("p", __assign({ className: "font-content whitespace-pre-wrap" }, { children: release.description }))] }), require$$0.jsx("div", { children: songs.length ? (songs.map(function (song, i) { return (require$$0.jsxs("div", __assign({ className: "py-4 flex align-center justify-between" }, { children: [require$$0.jsx("span", __assign({ className: "font-content" }, { children: song.display })), require$$0.jsx("span", __assign({ className: "font-header" }, { children: formatMSS(Math.trunc(song.duration)) }))] }), i)); })) : (require$$0.jsx(require$$0.Fragment, {})) }), require$$0.jsxs("div", { children: [require$$0.jsx("h4", __assign({ className: "font-header hidden" }, { children: "Release credits" })), require$$0.jsx("p", __assign({ className: "font-content whitespace-pre-wrap" }, { children: release.credits }))] })] })), require$$0.jsxs("div", __assign({ className: "w-1/2 max-h-screen p-4", style: { overflowY: 'scroll' } }, { children: [require$$0.jsx(BulkUpload, { setReleaseProperty: setReleaseProperty, setSongs: setSongs }), require$$0.jsx(ReleaseArt, { release: release, setReleaseProperty: setReleaseProperty, artColors: artColors, setArtColors: setArtColors }), require$$0.jsx(ReleaseInfo, { release: release, setReleaseProperty: setReleaseProperty, artColors: artColors }), require$$0.jsx(ReleaseTheme, { artColors: artColors, release: release, setReleaseProperty: setReleaseProperty }), songs.map(function (data, i) { return (require$$0.jsx(Song, { index: i, data: data }, i)); })] }))] })));
+    return (require$$0$4.jsxs(Page, __assign({ name: name, version: version$1, className: "flex" }, { children: [require$$0$4.jsxs("div", __assign({ className: "w-1/2 p-4 h-full max-h-screen bg-[var(--tone-upload-preview-lighter)] text-[var(--tone-upload-preview-darker)] dark:bg-[var(--tone-upload-preview-darker)] dark:text-[var(--tone-upload-preview-lighter)]", style: { overflowY: 'scroll' } }, { children: [require$$0$4.jsxs("div", { children: [Object.keys(release.art).length ? (require$$0$4.jsx("div", __assign({ className: "w-full flex items-center justify-center p-4" }, { children: require$$0$4.jsx("img", { src: (_b = release.art['cover']) === null || _b === void 0 ? void 0 : _b.dataURL, style: { height: '100%', maxWidth: 'auto' } }) }))) : (require$$0$4.jsx(require$$0$4.Fragment, {})), require$$0$4.jsxs("div", __assign({ className: "my-2" }, { children: [release.display ? (require$$0$4.jsx("h1", __assign({ className: "font-release text-5xl font-bold" }, { children: release.display }))) : (require$$0$4.jsx("h1", __assign({ className: "font-release text-5xl font-bold opacity-20" }, { children: "Title of your release" }))), require$$0$4.jsxs("p", __assign({ className: "font-header text-sm" }, { children: [songs.length || 0, " song", songs.length !== 1 && 's', ", total time,", ' ' + formatReleaseType(release.type)] })), require$$0$4.jsxs("p", __assign({ className: "font-content text-sm" }, { children: ["by ", require$$0$4.jsx("span", __assign({ className: "font-header" }, { children: "[artist]" }))] }))] })), require$$0$4.jsxs("p", __assign({ className: "font-content text-sm" }, { children: ["Released on ", require$$0$4.jsx("span", __assign({ className: "font-header" }, { children: "[date]" }))] }))] }), require$$0$4.jsxs("div", { children: [require$$0$4.jsx("h4", __assign({ className: "font-header hidden" }, { children: "About the release" })), require$$0$4.jsx("p", __assign({ className: "font-content whitespace-pre-wrap" }, { children: release.description }))] }), require$$0$4.jsx("div", { children: songs.length ? (songs.map(function (song, i) { return (require$$0$4.jsxs("div", __assign({ className: "py-4 flex align-center justify-between" }, { children: [require$$0$4.jsx("span", __assign({ className: "font-content" }, { children: song.display })), require$$0$4.jsx("span", __assign({ className: "font-header" }, { children: formatMSS(Math.trunc(song.duration)) }))] }), i)); })) : (require$$0$4.jsx(require$$0$4.Fragment, {})) }), require$$0$4.jsxs("div", { children: [require$$0$4.jsx("h4", __assign({ className: "font-header hidden" }, { children: "Release credits" })), require$$0$4.jsx("p", __assign({ className: "font-content whitespace-pre-wrap" }, { children: release.credits }))] })] })), require$$0$4.jsxs("div", __assign({ className: "w-1/2 max-h-screen p-4", style: { overflowY: 'scroll' } }, { children: [require$$0$4.jsx(BulkUpload, { setReleaseProperty: setReleaseProperty, setSongs: setSongs }), require$$0$4.jsx(ReleaseArt, { release: release, setReleaseProperty: setReleaseProperty, artColors: artColors, setArtColors: setArtColors }), require$$0$4.jsx(ReleaseInfo, { release: release, setReleaseProperty: setReleaseProperty, artColors: artColors }), require$$0$4.jsx(ReleaseTheme, { artColors: artColors, release: release, setReleaseProperty: setReleaseProperty }), songs.map(function (data, i) { return (require$$0$4.jsx(Song, { index: i, data: data }, i)); })] }))] })));
     function setReleaseProperty(key, value) {
         var _a;
         setRelease(__assign(__assign({}, release), (_a = {}, _a[key] = value, _a)));
