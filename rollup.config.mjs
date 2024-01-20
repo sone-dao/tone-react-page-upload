@@ -20,8 +20,6 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: './rollup.tsconfig.cjs.json' }),
-      //nodePolyfills({ include: ['fs', 'stream', 'zlib'] }),
-      //terser(),
     ],
     external: [/\.(css|less|scss)$/, 'react', 'react-dom'],
     onwarn(warning, warn) {
