@@ -1,11 +1,8 @@
 import commonjs from '@rollup/plugin-commonjs'
-import json from '@rollup/plugin-json'
 import resolve from '@rollup/plugin-node-resolve'
 //import terser from '@rollup/plugin-terser'
 import typescript from '@rollup/plugin-typescript'
-import banner2 from 'rollup-plugin-banner2'
 import dts from 'rollup-plugin-dts'
-import builtins from 'rollup-plugin-node-builtins'
 import PeerDepsExternalPlugin from 'rollup-plugin-peer-deps-external'
 
 export default [
@@ -16,36 +13,26 @@ export default [
         dir: 'dist',
         format: 'cjs',
         sourcemap: true,
-        globals: {
-          process,
-        },
       },
     ],
     plugins: [
-      typescript({ tsconfig: './rollup.tsconfig.cjs.json' }),
-      json(),
       PeerDepsExternalPlugin(),
-      builtins(),
       resolve(),
       commonjs(),
+      typescript({ tsconfig: './rollup.tsconfig.cjs.json' }),
+      //nodePolyfills({ include: ['fs', 'stream', 'zlib'] }),
       //terser(),
-      banner2(
-        () => `'use client'
-  `
-      ),
     ],
+    external: [/\.(css|less|scss)$/, 'react', 'react-dom'],
     onwarn(warning, warn) {
-      if (
-        warning.code !== 'MODULE_LEVEL_DIRECTIVE' ||
-        warning.code !== 'EVAL'
-      ) {
+      if (warning.code !== 'MODULE_LEVEL_DIRECTIVE') {
         warn(warning)
       }
     },
   },
   {
-    input: 'dist/types/src/index.d.ts',
-    output: [{ file: './dist/index.d.ts', format: 'cjs' }],
+    input: 'dist/types/index.d.ts',
+    output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
   },
 ]
