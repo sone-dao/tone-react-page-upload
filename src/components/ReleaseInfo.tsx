@@ -5,20 +5,35 @@ import {
   Textarea,
 } from '@sone-dao/tone-react-core-ui'
 import { UploadRelease } from '../types'
+import ArtistsInput from './ArtistsInput'
+import TagsInput from './TagsInput'
 
 type ReleaseInfoProps = {
+  user: any
+  canUploadAs: string[]
   release: UploadRelease
   setReleaseProperty: Function
   artColors: string[]
 }
 
 export default function ReleaseInfo({
+  user,
+  canUploadAs,
   release,
   setReleaseProperty,
   artColors,
 }: ReleaseInfoProps) {
+  const custodialArtists = user.custodianOn
+    .map((entity: any) => canUploadAs.includes(entity.entityId) && entity)
+    .filter((x: any) => x)
+
   return (
     <div>
+      <ArtistsInput
+        custodialArtists={custodialArtists}
+        setReleaseProperty={setReleaseProperty}
+        release={release}
+      />
       <Input
         label="release title"
         placeholder="Title of your release"
@@ -50,31 +65,23 @@ export default function ReleaseInfo({
       */}
       <Textarea
         label="about the release"
-        additionalClasses="my-4"
         value={release.description}
         setValue={(value: string) => setReleaseProperty('description', value)}
+        className="my-4"
       />
       <Textarea
         label="credits & thanks"
-        additionalClasses="my-4"
         value={release.credits}
         setValue={(value: string) => setReleaseProperty('credits', value)}
+        className="my-4"
       />
-      <Input
-        additionalClasses="mt-4 mb-2"
-        label="tags"
-        placeholder="type to search tags..."
-      />
-      <p className="bg-zinc-500 font-content text-sm text-white p-1 rounded-xl">
-        <i className="fa-fw fa-solid fa-tag mr-1" />A little blurb on the
-        importance of tags here.
-      </p>
+      <TagsInput release={release} setReleaseProperty={setReleaseProperty} />
       <Input
         placeholder="EZ123420"
-        additionalClasses="my-4"
         label="upc/ean"
         value={release.upc}
         setValue={(value: string) => setReleaseProperty('upc', value)}
+        className="my-2"
       />
     </div>
   )

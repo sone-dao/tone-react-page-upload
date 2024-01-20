@@ -2101,7 +2101,7 @@
   resolved "https://registry.yarnpkg.com/@sone-dao/sone-react-placeholder/-/sone-react-placeholder-2.0.2.tgz#4c9ba97abc72bf18dcb4123136f35090de16b415"
   integrity sha512-5x03ptIpZPi03zR0qWHM265WMb0bsj71RG9j3UDCA/seCmBsKYsQLxy8DIhfejcxW7W5yotoNbSWQx45DTsYzg==
 
-"@sone-dao/sone-react-utils@^1.0.1":
+"@sone-dao/sone-react-utils@1.0.1", "@sone-dao/sone-react-utils@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@sone-dao/sone-react-utils/-/sone-react-utils-1.0.1.tgz#81da4c7e8c83115b66e4b4b875f6e77554770328"
   integrity sha512-48hho0n41lqMY5NByAqnMPy11vVN5xXOYwTapdOvgRHVtVZVboA5U/zRJcLEzbvTN/P8w6gzCuqXfgh/xyTHiA==
@@ -2114,13 +2114,22 @@
     "@sone-dao/sone-react-utils" "^1.0.1"
     axios "^1.4.0"
 
-"@sone-dao/tone-react-core-ui@^2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@sone-dao/tone-react-core-ui/-/tone-react-core-ui-2.4.0.tgz#8d6181b6566094e18f57e7bd3f24615778859ddf"
-  integrity sha512-VUHaJY3GVXLFmhZH+Us7DtALe40fK5b/9lfgeR3MvYa0Ot2cWMWsq/V6u6eiwLFpp/LHwsBXfVRD17o64zjZRw==
+"@sone-dao/tone-react-core-ui@^2.18.0":
+  version "2.18.0"
+  resolved "https://registry.yarnpkg.com/@sone-dao/tone-react-core-ui/-/tone-react-core-ui-2.18.0.tgz#70b5610374afb9234fc0a91bd82c6a0d911cc54f"
+  integrity sha512-NZ64WxOFYo7lhYlTSx3H3mT1Amauthkx/RANWG3pe0mC4CLHLROYfyYr3Kmor1shcehJGvxHleQk29lx9ZyqYg==
   dependencies:
     "@nextui-org/react" "^2.2.9"
+    "@sone-dao/sone-react-utils" "1.0.1"
+    "@sone-dao/tone-react-css-utils" "^0.2.1"
     framer-motion "^10.16.5"
+    react-slider "^2.0.6"
+    usehooks-ts "^2.9.4"
+
+"@sone-dao/tone-react-css-utils@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@sone-dao/tone-react-css-utils/-/tone-react-css-utils-0.2.1.tgz#558faefc428abf6e8b2ac258a1db3cc7a93074e2"
+  integrity sha512-eoGEWoDyEn6645RjkWpDc8tymvl854JfB6Eg4xETw9Y3cl2uPnEJcTi9uqDZ9F/mA8fojtoalAZ294sVRatMGw==
 
 "@swc/helpers@0.5.2":
   version "0.5.2"
@@ -5714,6 +5723,13 @@ react-remove-scroll@^2.5.6:
     use-callback-ref "^1.3.0"
     use-sidecar "^1.1.2"
 
+react-slider@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/react-slider/-/react-slider-2.0.6.tgz#8c7ff0301211f7c3ff32aa0163b33bdab6258559"
+  integrity sha512-gJxG1HwmuMTJ+oWIRCmVWvgwotNCbByTwRkFZC6U4MBsHqJBmxwbYRJUmxy4Tke1ef8r9jfXjgkmY/uHOCEvbA==
+  dependencies:
+    prop-types "^15.8.1"
+
 react-style-singleton@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/react-style-singleton/-/react-style-singleton-2.2.1.tgz#f99e420492b2d8f34d38308ff660b60d0b1205b4"
@@ -6707,6 +6723,11 @@ use-sidecar@^1.1.2:
   dependencies:
     detect-node-es "^1.1.0"
     tslib "^2.0.0"
+
+usehooks-ts@^2.9.4:
+  version "2.9.5"
+  resolved "https://registry.yarnpkg.com/usehooks-ts/-/usehooks-ts-2.9.5.tgz#1ef554505f1acd0d914b6eae82e652b42c8e0425"
+  integrity sha512-M5LrjX9Wo4XRsof0zCCsq81x5+so/b89aUO53XPTjUehKAbOFhRq/DDRyv7qsRK4AEaJe1rhReFZqesPGnREhQ==
 
 util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   version "1.0.2"

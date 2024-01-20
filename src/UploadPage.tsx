@@ -1,21 +1,20 @@
-'use client'
-
 import useToneApi from '@sone-dao/tone-react-api'
-import { Page } from '@sone-dao/tone-react-core-ui'
+import { Form } from '@sone-dao/tone-react-core-ui'
+import ToneCSSUtils from '@sone-dao/tone-react-css-utils'
+import Head from 'next/head'
 import { useEffect, useState } from 'react'
-import { name, version } from '../package.json'
-import BulkUpload from './components/BulkUpload'
-import ReleaseArt from './components/ReleaseArt'
 import ReleaseInfo from './components/ReleaseInfo'
-import ReleaseTheme from './components/ReleaseTheme'
-import Song from './components/Song'
+import ReleaseTheme from './components/ReleaseTone'
 import { ReleaseSong, UploadRelease } from './types'
-import ToneCSSUtils from './utils/css'
 
-type UploadPageProps = {}
+type UploadPageProps = {
+  user: any
+  canUploadAs: any
+}
 
 const uploadReleaseDefaults: UploadRelease = {
   display: '',
+  artists: [],
   type: 'lp',
   description: '',
   art: {},
@@ -32,71 +31,43 @@ const uploadReleaseDefaults: UploadRelease = {
   },
 }
 
-export default function UploadPage({}: UploadPageProps) {
+export default function UploadPage({ user, canUploadAs }: UploadPageProps) {
   const [release, setRelease] = useState<UploadRelease>(uploadReleaseDefaults)
   const [songs, setSongs] = useState<ReleaseSong[]>([])
   const [artColors, setArtColors] = useState<string[]>([])
-  const [dark, setDark] = useState<boolean>(false)
 
   const api = new useToneApi()
-
-  useEffect(() => {
-    console.log({ release })
-  }, [release])
 
   useEffect(() => {
     const { primary, secondary } = release.colors
 
     if (primary && secondary)
-      ToneCSSUtils.setColors('tone-upload-preview', primary, secondary)
+      ToneCSSUtils.setColors('global', primary, secondary)
   }, [release.colors])
 
+  useEffect(() => {
+    console.log({ release })
+  }, [release])
+
   return (
-    <Page name={name} version={version} className="flex">
-      <div
-        className="w-1/2 p-4 h-full max-h-screen bg-[var(--tone-upload-preview-lighter)] text-[var(--tone-upload-preview-darker)] dark:bg-[var(--tone-upload-preview-darker)] dark:text-[var(--tone-upload-preview-lighter)]"
-        style={{ overflowY: 'scroll' }}
-      >
-        <div>
-          {Object.keys(release.art).length ? (
-            <div className="w-full flex items-center justify-center p-4">
-              <img
-                src={release.art['cover']?.dataURL}
-                style={{ height: '100%', maxWidth: 'auto' }}
-              />
-            </div>
-          ) : (
-            <></>
-          )}
-          <div className="my-2">
-            {release.display ? (
-              <h1 className="font-release text-5xl font-bold">
-                {release.display}
-              </h1>
-            ) : (
-              <h1 className="font-release text-5xl font-bold opacity-20">
-                Title of your release
-              </h1>
-            )}
-            <p className="font-header text-sm">
-              {songs.length || 0} song{songs.length !== 1 && 's'}, total time,
-              {' ' + formatReleaseType(release.type)}
-            </p>
-            <p className="font-content text-sm">
-              by <span className="font-header">[artist]</span>
-            </p>
-          </div>
-          <p className="font-content text-sm">
-            Released on <span className="font-header">[date]</span>
-          </p>
-        </div>
-        <div>
-          <h4 className="font-header hidden">About the release</h4>
-          <p className="font-content whitespace-pre-wrap">
-            {release.description}
-          </p>
-        </div>
-        <div>
+    <>
+      <Head>
+        <title>Tone - Upload</title>
+      </Head>
+      <div className="p-4 bg-global text-global">
+        <Form>
+          <ReleaseInfo
+            user={user}
+            canUploadAs={canUploadAs}
+            release={release}
+            setReleaseProperty={setReleaseProperty}
+            artColors={artColors}
+          />
+          <ReleaseTheme
+            artColors={artColors}
+            release={release}
+            setReleaseProperty={setReleaseProperty}
+          />
           {songs.length ? (
             songs.map((song, i) => (
               <div key={i} className="py-4 flex align-center justify-between">
@@ -109,39 +80,9 @@ export default function UploadPage({}: UploadPageProps) {
           ) : (
             <></>
           )}
-        </div>
-        <div>
-          <h4 className="font-header hidden">Release credits</h4>
-          <p className="font-content whitespace-pre-wrap">{release.credits}</p>
-        </div>
+        </Form>
       </div>
-      <div className="w-1/2 max-h-screen p-4" style={{ overflowY: 'scroll' }}>
-        {/* Uploader user context switching here */}
-        <BulkUpload
-          setReleaseProperty={setReleaseProperty}
-          setSongs={setSongs}
-        />
-        <ReleaseArt
-          release={release}
-          setReleaseProperty={setReleaseProperty}
-          artColors={artColors}
-          setArtColors={setArtColors}
-        />
-        <ReleaseInfo
-          release={release}
-          setReleaseProperty={setReleaseProperty}
-          artColors={artColors}
-        />
-        <ReleaseTheme
-          artColors={artColors}
-          release={release}
-          setReleaseProperty={setReleaseProperty}
-        />
-        {songs.map((data, i) => (
-          <Song key={i} index={i} data={data} />
-        ))}
-      </div>
-    </Page>
+    </>
   )
 
   function setReleaseProperty(key: string, value: any) {

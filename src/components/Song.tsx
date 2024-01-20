@@ -39,16 +39,12 @@ export default function Song({ index, data }: ReleaseSongProps) {
          * - listeners can choose to not pay you greedy lil bitch
          *
          */}
-        <Input label="title" additionalClasses="my-2" value={data.display} />
+        <Input label="title" value={data.display} />
         {/** ARTIST OVERRIDE INPUT
          * - + sign to keep adding, etc
          */}
-        <Textarea
-          label="lyrics"
-          additionalClasses="my-2"
-          value={data.lyrics.unsynced}
-        />
-        <Input label="isrc" additionalClasses="my-2" value={data.isrc} />
+        <Textarea label="lyrics" value={data.lyrics.unsynced} />
+        <Input label="isrc" value={data.isrc} />
       </div>
     </div>
   )
