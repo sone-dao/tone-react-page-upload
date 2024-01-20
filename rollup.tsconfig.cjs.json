@@ -8,7 +8,8 @@
     "strict": true,
     "esModuleInterop": false,
     "declaration": true,
-    "declarationDir": "dist/cjs/types",
-    "jsx": "react-jsx"
+    "declarationDir": "dist/types",
+    "jsx": "react-jsx",
+    "resolveJsonModule": true
   }
 }

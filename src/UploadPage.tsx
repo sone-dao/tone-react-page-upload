@@ -1,170 +1,108 @@
-'use client'
-
 import useToneApi from '@sone-dao/tone-react-api'
-import { Page } from '@sone-dao/tone-react-core-ui'
-import { useParams } from 'next/navigation'
+import { Form } from '@sone-dao/tone-react-core-ui'
+import ToneCSSUtils from '@sone-dao/tone-react-css-utils'
+import Head from 'next/head'
 import { useEffect, useState } from 'react'
-import styles from './UploadPage.module.scss'
-import ReleaseArtwork from './components/ReleaseArtwork/ReleaseArtwork'
-import ReleaseHeader from './components/ReleaseHeader'
-import ReleaseImporter from './components/ReleaseImporter/ReleaseImporter'
-import ReleaseMetadata from './components/ReleaseMetadata'
-import ReleasePricing from './components/ReleasePricing'
-import ReleaseSongs from './components/ReleaseSongs/ReleaseSongs'
+import ReleaseInfo from './components/ReleaseInfo'
+import ReleaseTheme from './components/ReleaseTone'
+import { ReleaseSong, UploadRelease } from './types'
 
-export interface IUploadReleaseSong {
-  display: string
-  lyrics: {
-    unsynced: string
-    synced: {
-      line: string
-      start: number
-    }[]
-  }
-  description: string
-  isrc: string
-  iswc: string
-  duration: number
-  data: ArrayBuffer | null
-  uploaded: {
-    flac: boolean
-    '128': boolean
-    '320': boolean
-  }
+type UploadPageProps = {
+  user: any
+  canUploadAs: any
 }
 
-export const uploadReleaseSongDefaults: IUploadReleaseSong = {
+const uploadReleaseDefaults: UploadRelease = {
   display: '',
-  lyrics: {
-    unsynced: '',
-    synced: [],
-  },
-  description: '',
-  isrc: '',
-  iswc: '',
-  duration: 0,
-  data: null,
-  uploaded: {
-    flac: false,
-    '128': false,
-    '320': false,
-  },
-}
-
-export interface IUploadArtwork {
-  cover: ArrayBuffer | null
-  back?: ArrayBuffer | null
-  gatefoldL?: ArrayBuffer | null
-  gatefoldR?: ArrayBuffer | null
-  vinyl?: ArrayBuffer | null
-  insert?: ArrayBuffer | null
-  tape?: ArrayBuffer | null
-}
-
-const uploadArtworkDefaults = {}
-
-export interface IUploadRelease {
-  artists: {
-    uniqueUrl: string
-    display: string
-    colors: {
-      primary: string
-      secondary: string
-    }
-  }[]
-  labels: {
-    uniqueUrl: string
-    display: string
-    colors: {
-      primary: string
-      secondary: string
-    }
-  }[]
-  display: string
-  custodians: { owners: string[]; maintainers: string[] }
-  description: string
-  credits: {
-    written: string
-    tagged: string[]
-  }
-  artwork: IUploadArtwork
-  colors: {
-    primary: string
-    secondary: string
-  }
-  tags: string[]
-  upc: string
-  catalog: ''
-  songs: IUploadReleaseSong[]
-}
-
-const uploadReleaseDefaults: IUploadRelease = {
   artists: [],
-  labels: [],
-  display: '',
-  custodians: { owners: [], maintainers: [] },
+  type: 'lp',
   description: '',
-  credits: {
-    written: '',
-    tagged: [],
-  },
-  artwork: {
-    cover: null,
-  },
-  colors: {
-    primary: '',
-    secondary: '',
-  },
-  tags: [],
+  art: {},
   upc: '',
   catalog: '',
-  songs: [],
+  credits: '',
+  colors: {
+    primary: '#000000',
+    secondary: '#FFFFFF',
+  },
+  pricing: {
+    purchase: '',
+    streamDefault: '',
+  },
 }
 
-interface IUploadPageProps {}
+export default function UploadPage({ user, canUploadAs }: UploadPageProps) {
+  const [release, setRelease] = useState<UploadRelease>(uploadReleaseDefaults)
+  const [songs, setSongs] = useState<ReleaseSong[]>([])
+  const [artColors, setArtColors] = useState<string[]>([])
 
-export default function UploadPage({}: IUploadPageProps) {
-  const [isLoading, setLoading] = useState<boolean>(true)
-  const [release, setRelease] = useState<IUploadRelease>(uploadReleaseDefaults)
-  const [songCache, setSongCache] = useState<ArrayBuffer[]>([])
-
-  const { releaseId } = useParams()
-  const api = useToneApi()
+  const api = new useToneApi()
 
   useEffect(() => {
-    loadRelease()
-  }, [])
+    const { primary, secondary } = release.colors
 
-  useEffect(() => console.log({ release }), [release])
+    if (primary && secondary)
+      ToneCSSUtils.setColors('global', primary, secondary)
+  }, [release.colors])
+
+  useEffect(() => {
+    console.log({ release })
+  }, [release])
 
   return (
-    <Page className={styles.component} isLoading={isLoading}>
-      <ReleaseImporter
-        release={release}
-        setRelease={setRelease}
-        setSongCache={setSongCache}
-      />
-      <ReleaseHeader release={release} setRelease={setRelease} />
-      <ReleasePricing release={release} setRelease={setRelease} />
-      <ReleaseArtwork release={release} setRelease={setRelease} />
-      <ReleaseMetadata release={release} setRelease={setRelease} />
-      <ReleaseSongs
-        release={release}
-        setRelease={setRelease}
-        songCache={songCache}
-      />
-    </Page>
+    <>
+      <Head>
+        <title>Tone - Upload</title>
+      </Head>
+      <div className="p-4 bg-global text-global">
+        <Form>
+          <ReleaseInfo
+            user={user}
+            canUploadAs={canUploadAs}
+            release={release}
+            setReleaseProperty={setReleaseProperty}
+            artColors={artColors}
+          />
+          <ReleaseTheme
+            artColors={artColors}
+            release={release}
+            setReleaseProperty={setReleaseProperty}
+          />
+          {songs.length ? (
+            songs.map((song, i) => (
+              <div key={i} className="py-4 flex align-center justify-between">
+                <span className="font-content">{song.display}</span>
+                <span className="font-header">
+                  {formatMSS(Math.trunc(song.duration))}
+                </span>
+              </div>
+            ))
+          ) : (
+            <></>
+          )}
+        </Form>
+      </div>
+    </>
   )
 
-  async function loadRelease() {
-    const results = await api.catalog.release.get(releaseId)
+  function setReleaseProperty(key: string, value: any) {
+    setRelease({ ...release, [key as keyof typeof release]: value })
+  }
 
-    if (results.ok) {
-      const { artists, description, display, labels } = results.release
+  function formatMSS(s: any) {
+    return (s - (s %= 60)) / 60 + (9 < s ? ':' : ':0') + s
+  }
 
-      setRelease({ ...release, artists, description, display, labels })
-
-      setLoading(false)
+  function formatReleaseType(type: string) {
+    switch (type) {
+      case 'lp':
+        return 'LP'
+      case 'ep':
+        return 'EP'
+      case 'demo':
+        return 'Demo'
+      case 'comp':
+        return 'Compilation'
     }
   }
 }
