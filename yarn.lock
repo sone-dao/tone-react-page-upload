@@ -2116,14 +2116,16 @@
     axios "^1.4.0"
     cookies-next "^4.1.0"
 
-"@sone-dao/tone-react-core-ui@^2.18.3":
-  version "2.18.3"
-  resolved "https://registry.yarnpkg.com/@sone-dao/tone-react-core-ui/-/tone-react-core-ui-2.18.3.tgz#0f6c5d65dc429ef3eeaac01d45e0556cdff70ab0"
-  integrity sha512-dLStI5/vnT7U8+Cwl7Pw/BR4W5qD1Jzop/dqWNJUKN6d2miHrhasfh8jBGCg1pPfYUXYmUU2ZRUg4PRwheFkmQ==
+"@sone-dao/tone-react-core-ui@^2.20.0":
+  version "2.20.0"
+  resolved "https://registry.yarnpkg.com/@sone-dao/tone-react-core-ui/-/tone-react-core-ui-2.20.0.tgz#fd9ebeadf2d75ca06d3848dc090b2631f3b18ce1"
+  integrity sha512-VTyat80n9yAjCUN8Yil+jKv1PyFc0qsFoEnuHMAacTHzkZdqkmRB/TtkKmfaKulC7cNcZbUXwgElG/KDjq4EBA==
   dependencies:
     "@nextui-org/react" "^2.2.9"
     "@sone-dao/sone-react-utils" "1.0.1"
+    "@sone-dao/tone-react-api" "^2.10.0"
     "@sone-dao/tone-react-css-utils" "^0.2.1"
+    accessible-colors "^1.0.5"
     framer-motion "^10.16.5"
     react-slider "^2.0.6"
     usehooks-ts "^2.9.4"
@@ -2406,6 +2408,11 @@ abstract-leveldown@~0.12.0, abstract-leveldown@~0.12.1:
   integrity sha512-TOod9d5RDExo6STLMGa+04HGkl+TlMfbDnTyN93/ETJ9DpQ0DaYLqcMZlbXvdc4W3vVo1Qrl+WhSp8zvDsJ+jA==
   dependencies:
     xtend "~3.0.0"
+
+accessible-colors@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/accessible-colors/-/accessible-colors-1.0.5.tgz#a5ad3fc929fbcdf4fb9387b0cb29449052ff90e4"
+  integrity sha512-DZLpfYddLs67qbiLC2g4BFJp9aXxoedVz9uBQ65CBFegeogJ0S0+hNXWFqE6ljvBDWM8soBwDoeZ3gpV1YRPaA==
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
