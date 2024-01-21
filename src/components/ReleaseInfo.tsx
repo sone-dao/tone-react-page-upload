@@ -2,11 +2,11 @@ import {
   Input,
   Radio,
   RadioGroup,
+  Tags,
   Textarea,
 } from '@sone-dao/tone-react-core-ui'
 import { UploadRelease } from '../types'
 import ArtistsInput from './ArtistsInput'
-import TagsInput from './TagsInput'
 
 type ReleaseInfoProps = {
   user: any
@@ -75,7 +75,10 @@ export default function ReleaseInfo({
         setValue={(value: string) => setReleaseProperty('credits', value)}
         className="my-4"
       />
-      <TagsInput release={release} setReleaseProperty={setReleaseProperty} />
+      <Tags
+        tags={release.tags}
+        setTags={(tags) => setReleaseProperty('tags', tags)}
+      />
       <Input
         placeholder="EZ123420"
         label="upc/ean"

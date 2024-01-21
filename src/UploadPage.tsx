@@ -1,10 +1,11 @@
 import useToneApi from '@sone-dao/tone-react-api'
-import { Form } from '@sone-dao/tone-react-core-ui'
+import { Form, TonePicker } from '@sone-dao/tone-react-core-ui'
 import ToneCSSUtils from '@sone-dao/tone-react-css-utils'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
+import ColorPalette from './components/ColorPalette'
+import ReleaseArtInput from './components/ReleaseArtInput'
 import ReleaseInfo from './components/ReleaseInfo'
-import ReleaseTheme from './components/ReleaseTone'
 import { ReleaseSong, UploadRelease } from './types'
 
 type UploadPageProps = {
@@ -17,14 +18,12 @@ const uploadReleaseDefaults: UploadRelease = {
   artists: [],
   type: 'lp',
   description: '',
+  tags: [],
   art: {},
   upc: '',
   catalog: '',
   credits: '',
-  colors: {
-    primary: '#000000',
-    secondary: '#FFFFFF',
-  },
+  colors: ['#000000', '#FFFFFF'],
   pricing: {
     purchase: '',
     streamDefault: '',
@@ -39,10 +38,8 @@ export default function UploadPage({ user, canUploadAs }: UploadPageProps) {
   const api = new useToneApi()
 
   useEffect(() => {
-    const { primary, secondary } = release.colors
-
-    if (primary && secondary)
-      ToneCSSUtils.setColors('global', primary, secondary)
+    if (release.colors[0] && release.colors[1])
+      ToneCSSUtils.setColors('global', release.colors[0], release.colors[1])
   }, [release.colors])
 
   useEffect(() => {
@@ -56,6 +53,7 @@ export default function UploadPage({ user, canUploadAs }: UploadPageProps) {
       </Head>
       <div className="p-4 bg-global text-global">
         <Form>
+          <ReleaseArtInput setReleaseArt={(art) => {}} />
           <ReleaseInfo
             user={user}
             canUploadAs={canUploadAs}
@@ -63,11 +61,29 @@ export default function UploadPage({ user, canUploadAs }: UploadPageProps) {
             setReleaseProperty={setReleaseProperty}
             artColors={artColors}
           />
-          <ReleaseTheme
-            artColors={artColors}
-            release={release}
-            setReleaseProperty={setReleaseProperty}
-          />
+          <TonePicker
+            tone={release.colors}
+            setTone={(tone) => setReleaseProperty('colors', tone)}
+          >
+            <p className="text-global text-sm font-content">
+              These colors will represent this release on the platform, and will
+              effect the sites visual appearance when interacting with pages
+              relating to it (ie. search colors, release page, etc). You can
+              change these colors at anytime in the release's settings.
+            </p>
+            {artColors.length ? (
+              <div className="w-full">
+                <ColorPalette artColors={artColors} />
+                <p className="bg-global-flipped font-content my-4 text-sm text-global-flipped p-2 rounded-xl">
+                  <i className="fa-sharp fa-solid fa-circle-info mr-1" />
+                  We've gathered these colors from the art you've uploaded.
+                  Click to copy it's hex code.
+                </p>
+              </div>
+            ) : (
+              <></>
+            )}
+          </TonePicker>
           {songs.length ? (
             songs.map((song, i) => (
               <div key={i} className="py-4 flex align-center justify-between">

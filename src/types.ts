@@ -3,14 +3,12 @@ export type UploadRelease = {
   artists?: string[]
   type: string
   description: string
+  tags: any[]
   art: ReleaseArt
   upc: string
   catalog: string
   credits: string
-  colors: {
-    primary: string
-    secondary: string
-  }
+  colors: [string, string]
   pricing?: {
     purchase?: string
     streamDefault?: string
