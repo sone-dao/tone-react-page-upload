@@ -4,7 +4,7 @@ export type UploadRelease = {
   type: string
   description: string
   tags: any[]
-  art: ReleaseArt
+  art: Blob | null
   upc: string
   catalog: string
   credits: string
@@ -28,8 +28,4 @@ export type ReleaseSong = {
   duration: number
   isrc: string
   fileId: string
-  pricing?: {
-    purchase?: string
-    stream?: string
-  }
 }

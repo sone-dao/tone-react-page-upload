@@ -5,7 +5,9 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import ColorPalette from './components/ColorPalette'
 import ReleaseArtInput from './components/ReleaseArtInput'
+import ReleaseImport from './components/ReleaseImport'
 import ReleaseInfo from './components/ReleaseInfo'
+import SongItem from './components/SongItem'
 import { ReleaseSong, UploadRelease } from './types'
 
 type UploadPageProps = {
@@ -18,8 +20,8 @@ const uploadReleaseDefaults: UploadRelease = {
   artists: [],
   type: 'lp',
   description: '',
+  art: null,
   tags: [],
-  art: {},
   upc: '',
   catalog: '',
   credits: '',
@@ -46,14 +48,34 @@ export default function UploadPage({ user, canUploadAs }: UploadPageProps) {
     console.log({ release })
   }, [release])
 
+  useEffect(() => {
+    console.log({ songs })
+  }, [songs])
+
+  useEffect(() => {
+    console.log({ artColors })
+  }, [artColors])
+
   return (
     <>
       <Head>
         <title>Tone - Upload</title>
       </Head>
       <div className="p-4 bg-global text-global">
+        <ReleaseImport
+          release={release}
+          setRelease={setRelease}
+          songs={songs}
+          setSongs={setSongs}
+          setArtColors={setArtColors}
+        />
         <Form>
-          <ReleaseArtInput setReleaseArt={(art) => {}} />
+          <ReleaseArtInput
+            art={release.art}
+            setArt={(art) => art && setReleaseProperty('art', art)}
+            artColors={artColors}
+            setArtColors={setArtColors}
+          />
           <ReleaseInfo
             user={user}
             canUploadAs={canUploadAs}
@@ -71,31 +93,21 @@ export default function UploadPage({ user, canUploadAs }: UploadPageProps) {
               relating to it (ie. search colors, release page, etc). You can
               change these colors at anytime in the release's settings.
             </p>
-            {artColors.length ? (
-              <div className="w-full">
-                <ColorPalette artColors={artColors} />
-                <p className="bg-global-flipped font-content my-4 text-sm text-global-flipped p-2 rounded-xl">
-                  <i className="fa-sharp fa-solid fa-circle-info mr-1" />
-                  We've gathered these colors from the art you've uploaded.
-                  Click to copy it's hex code.
-                </p>
-              </div>
+            {artColors.length ? <ColorPalette artColors={artColors} /> : <></>}
+          </TonePicker>
+          <div className="my-4">
+            {songs.length ? (
+              songs.map((song, i) => (
+                <SongItem
+                  index={i}
+                  song={song}
+                  setReleaseSong={setReleaseSong}
+                />
+              ))
             ) : (
               <></>
             )}
-          </TonePicker>
-          {songs.length ? (
-            songs.map((song, i) => (
-              <div key={i} className="py-4 flex align-center justify-between">
-                <span className="font-content">{song.display}</span>
-                <span className="font-header">
-                  {formatMSS(Math.trunc(song.duration))}
-                </span>
-              </div>
-            ))
-          ) : (
-            <></>
-          )}
+          </div>
         </Form>
       </div>
     </>
@@ -105,20 +117,11 @@ export default function UploadPage({ user, canUploadAs }: UploadPageProps) {
     setRelease({ ...release, [key as keyof typeof release]: value })
   }
 
-  function formatMSS(s: any) {
-    return (s - (s %= 60)) / 60 + (9 < s ? ':' : ':0') + s
-  }
+  function setReleaseSong(index: number, data: any) {
+    const updatedSongs = songs.map((song, i) =>
+      index == i ? { ...song, ...data } : song
+    )
 
-  function formatReleaseType(type: string) {
-    switch (type) {
-      case 'lp':
-        return 'LP'
-      case 'ep':
-        return 'EP'
-      case 'demo':
-        return 'Demo'
-      case 'comp':
-        return 'Compilation'
-    }
+    setSongs(updatedSongs)
   }
 }

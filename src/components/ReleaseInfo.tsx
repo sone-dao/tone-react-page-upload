@@ -1,10 +1,4 @@
-import {
-  Input,
-  Radio,
-  RadioGroup,
-  Tags,
-  Textarea,
-} from '@sone-dao/tone-react-core-ui'
+import { Input, Tags, Textarea } from '@sone-dao/tone-react-core-ui'
 import { UploadRelease } from '../types'
 import ArtistsInput from './ArtistsInput'
 
@@ -40,19 +34,7 @@ export default function ReleaseInfo({
         value={release.display}
         setValue={(value: string) => setReleaseProperty('display', value)}
       />
-      <RadioGroup
-        //label="release type"
-        orientation="horizontal"
-        additionalClasses="my-4"
-        value={release.type}
-        setValue={(value: string) => setReleaseProperty('type', value)}
-      >
-        <Radio value="demo">Demo</Radio>
-        <Radio value="ep">EP</Radio>
-        <Radio value="lp">LP</Radio>
-        <Radio value="split">Split</Radio>
-        <Radio value="comp">Compilation</Radio>
-      </RadioGroup>
+
       {/* 
       RELEASE PRICING HERE 
       - checked by default

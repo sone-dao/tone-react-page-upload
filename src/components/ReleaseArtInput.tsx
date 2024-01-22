@@ -3,28 +3,36 @@ import { getColorsFromImage } from '../utils/art'
 import { blobToDataURL } from '../utils/file'
 
 type ReleaseArtInputProps = {
-  setReleaseArt?: (releaseArt: Blob | null) => void
+  art: Blob | null
+  setArt: (releaseArt: Blob | null) => void
+  artColors: string[]
+  setArtColors: (artColors: string[]) => void
 }
 
 export default function ReleaseArtInput({
-  setReleaseArt = () => {},
+  art,
+  setArt = () => {},
+  artColors,
+  setArtColors = () => {},
 }: ReleaseArtInputProps) {
-  const [art, setArt] = useState<Blob | null>(null)
   const [dataURL, setDataURL] = useState<string>('')
-  const [artColors, setArtColors] = useState<string[]>([])
 
   const inputElement = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
-    setReleaseArt(art)
+    setArt(art)
 
     art && blobToDataURL(art).then((dataURL) => setDataURL(dataURL))
   }, [art])
 
+  useEffect(() => {
+    setArtColors(artColors)
+  }, [artColors])
+
   return (
     <div className="mb-4">
       {dataURL ? (
-        <img className="w-full h-auto aspect-square" src={dataURL} />
+        <img className="w-full h-auto aspect-square rounded-xl" src={dataURL} />
       ) : (
         <div
           className="flex flex-col items-center justify-center w-full h-auto border-global border-2 border-dashed rounded-xl aspect-square cursor-pointer"

@@ -7,6 +7,6 @@ export async function getColorsFromImage(image: Blob) {
   return (await prominent(dataURL, {
     amount: 5,
     format: 'hex',
-    group: 100,
+    group: 90,
   })) as string[]
 }
