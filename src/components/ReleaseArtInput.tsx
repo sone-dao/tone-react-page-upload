@@ -22,7 +22,9 @@ export default function ReleaseArtInput({
   useEffect(() => {
     setArt(art)
 
-    art && blobToDataURL(art).then((dataURL) => setDataURL(dataURL))
+    art
+      ? blobToDataURL(art).then((dataURL) => setDataURL(dataURL))
+      : setDataURL('')
   }, [art])
 
   useEffect(() => {
@@ -32,14 +34,26 @@ export default function ReleaseArtInput({
   return (
     <div className="mb-4">
       {dataURL ? (
-        <img className="w-full h-auto aspect-square rounded-xl" src={dataURL} />
+        <>
+          <img
+            className="w-full h-auto aspect-square rounded-xl cursor-pointer"
+            src={dataURL}
+            onClick={() => setArt(null)}
+          />
+          <p className="bg-global-flipped font-content text-global-flipped text-sm p-1 w-full rounded-xl mt-2">
+            <i className="fa-fw fa-solid fa-circle-info mx-1" />
+            Click/tap on art to remove it from the release.
+          </p>
+        </>
       ) : (
         <div
           className="flex flex-col items-center justify-center w-full h-auto border-global border-2 border-dashed rounded-xl aspect-square cursor-pointer"
           onClick={() => inputElement.current?.click()}
         >
-          <i className="fa-fw fa-sharp fa-solid fa-upload text-5xl" />
-          <span className="font-header text-xl mt-2">release art</span>
+          <i className="fa-fw fa-sharp fa-solid fa-file-image text-5xl" />
+          <span className="font-content mt-2">
+            Click/tap to select an image for release art
+          </span>
           <span className="font-content text-sm">
             (1000px x 1000px minimum)
           </span>

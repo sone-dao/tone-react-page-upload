@@ -50,12 +50,22 @@ export default function ReleaseInfo({
         value={release.description}
         setValue={(value: string) => setReleaseProperty('description', value)}
         className="my-4"
+        styles={{
+          textarea: {
+            height: '15vh',
+          },
+        }}
       />
       <Textarea
         label="credits & thanks"
         value={release.credits}
         setValue={(value: string) => setReleaseProperty('credits', value)}
         className="my-4"
+        styles={{
+          textarea: {
+            height: '15vh',
+          },
+        }}
       />
       <Tags
         tags={release.tags}

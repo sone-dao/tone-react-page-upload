@@ -12,7 +12,7 @@ export default function ColorPalette({ artColors }: ColorPaletteProps) {
       <p className="font-content text-sm">
         <i className="fa-solid fa-triangle-exclamation mr-1" />
         Some of these colors may fall out of the accessible color boundary for
-        Tone and may have to be slightly adjusted using the color picker.
+        Tone and may have to be adjusted.
       </p>
       <div className="flex flex-wrap justify-around w-full">
         {artColors.map((color, i) => (

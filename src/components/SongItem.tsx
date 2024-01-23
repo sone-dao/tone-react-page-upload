@@ -1,31 +1,47 @@
-import { Input, Textarea } from '@sone-dao/tone-react-core-ui'
-import { useState } from 'react'
+import { Button, Input, Textarea } from '@sone-dao/tone-react-core-ui'
+import { useEffect, useState } from 'react'
 import { ReleaseSong } from '../types'
+import SongFileInput from './SongFileInput'
 
 type SongItemProps = {
   index: number
   song: ReleaseSong
-  setReleaseSong: Function
+  setReleaseSongProperties: Function
+  removeSongFromRelease: Function
+  uploadPlayer: any
 }
 
 export default function SongItem({
   index,
   song,
-  setReleaseSong,
+  setReleaseSongProperties,
+  removeSongFromRelease,
+  uploadPlayer,
 }: SongItemProps) {
   const [isOpen, setOpen] = useState<boolean>(false)
 
+  useEffect(() => {
+    !song.display && setOpen(true)
+  }, [])
+
   return (
-    <div className="border-b-1">
+    <div className="border-b-1 border-global">
       <div
         className="flex items-center justify-between py-4 cursor-pointer text-lg"
         onClick={() => setOpen(!isOpen)}
       >
         <h4 className="font-content">
-          {index + 1}. {song.display}
+          {index + 1}.
+          {song.display ? (
+            <span className="ml-1">{song.display}</span>
+          ) : (
+            <span className="ml-1 opacity-30 font-italic">Untitled Song</span>
+          )}
         </h4>
         <div>
-          <span>{formatMSS(Math.floor(song.duration))}</span>
+          <span>
+            {song.duration ? formatMSS(Math.floor(song.duration)) : <></>}
+          </span>
           <i
             className={`fa-sharp fa-solid ${
               !isOpen ? 'fa-angle-right' : 'fa-angle-down'
@@ -33,7 +49,7 @@ export default function SongItem({
           />
         </div>
       </div>
-      <div className={`${isOpen ? 'flex' : 'hidden'} flex-col`}>
+      <div className={`${isOpen ? 'flex' : 'hidden'} flex-col mb-4`}>
         {/**
          * Dynamically set pricing blurb
          */}
@@ -54,24 +70,44 @@ export default function SongItem({
          * - listeners can choose to not pay you greedy lil bitch
          *
          */}
+        <SongFileInput
+          index={index}
+          fileId={song.fileId}
+          setReleaseSong={setReleaseSongProperties}
+          uploadPlayer={uploadPlayer}
+        />
         <Input
           label="title"
           value={song.display}
-          setValue={(value) => setReleaseSong(index, { display: value })}
+          setValue={(value) =>
+            setReleaseSongProperties(index, { display: value })
+          }
         />
         <Textarea
           label="lyrics"
           value={song.lyrics.unsynced}
           setValue={(value) =>
-            setReleaseSong(index, { lyrics: { unsynced: value } })
+            setReleaseSongProperties(index, { lyrics: { unsynced: value } })
           }
           className="my-4"
+          styles={{
+            textarea: {
+              height: '15vh',
+            },
+          }}
         />
         <Input
           label="isrc"
           value={song.isrc}
-          setValue={(value) => setReleaseSong(index, { isrc: value })}
+          setValue={(value) => setReleaseSongProperties(index, { isrc: value })}
         />
+        <Button
+          isSubmit={false}
+          className="mt-4"
+          onClick={() => removeSongFromRelease(index)}
+        >
+          Remove Song From Release
+        </Button>
       </div>
     </div>
   )
