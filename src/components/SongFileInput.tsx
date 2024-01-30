@@ -7,14 +7,12 @@ type SongFileInputProps = {
   index: number
   fileId: string
   setReleaseSong: Function
-  uploadPlayer: any
 }
 
 export default function SongFileInput({
   index,
   fileId,
   setReleaseSong,
-  uploadPlayer,
 }: SongFileInputProps) {
   const [file, setFile] = useState<File | null>(null)
 
@@ -28,15 +26,9 @@ export default function SongFileInput({
     <div>
       {fileId ? (
         <div className="flex items-center justify-between w-full p-1 border-2 rounded-xl border-global mb-4 w-full">
-          {uploadPlayer.isPlaying && uploadPlayer.fileId == fileId ? (
-            <button type="button" onClick={() => uploadPlayer.pause()}>
-              <i className="fa-fw fa-sharp fa-solid fa-pause text-3xl px-2" />
-            </button>
-          ) : (
-            <button type="button" onClick={() => uploadPlayer.play(fileId)}>
-              <i className="fa-fw fa-sharp fa-solid fa-play text-3xl px-2" />
-            </button>
-          )}
+          <button type="button">
+            <i className="fa-fw fa-sharp fa-solid fa-play text-3xl px-2" />
+          </button>
           <button type="button" onClick={() => setFile(null)}>
             <i className="fa-fw fa-sharp fa-regular fa-xmark text-2xl px-2" />
           </button>
@@ -81,8 +73,6 @@ export default function SongFileInput({
       if (fileId) {
         await localforage.removeItem('tone.upload.' + fileId).then(() => {
           setReleaseSong(index, { fileId: '' })
-
-          if (fileId == uploadPlayer.fileId) uploadPlayer.stop()
         })
       }
     }

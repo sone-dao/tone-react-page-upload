@@ -3,7 +3,7 @@ import { UploadRelease } from '../types'
 import ArtistsInput from './ArtistsInput'
 
 type ReleaseInfoProps = {
-  user: any
+  custodialArtists: any[]
   canUploadAs: string[]
   release: UploadRelease
   setReleaseProperty: Function
@@ -11,16 +11,12 @@ type ReleaseInfoProps = {
 }
 
 export default function ReleaseInfo({
-  user,
+  custodialArtists,
   canUploadAs,
   release,
   setReleaseProperty,
   artColors,
 }: ReleaseInfoProps) {
-  const custodialArtists = user.custodianOn
-    .map((entity: any) => canUploadAs.includes(entity.entityId) && entity)
-    .filter((x: any) => x)
-
   return (
     <div>
       <ArtistsInput

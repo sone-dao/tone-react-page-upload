@@ -21,7 +21,6 @@ export default [
       commonjs(),
       typescript({ tsconfig: './rollup.tsconfig.cjs.json' }),
     ],
-    external: [/\.(css|less|scss)$/, 'react', 'react-dom'],
     onwarn(warning, warn) {
       if (warning.code !== 'MODULE_LEVEL_DIRECTIVE') {
         warn(warning)

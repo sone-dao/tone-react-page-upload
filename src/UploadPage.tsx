@@ -1,3 +1,4 @@
+import { win } from '@sone-dao/sone-react-utils'
 import useToneApi from '@sone-dao/tone-react-api'
 import {
   Button,
@@ -15,7 +16,6 @@ import ReleaseImport from './components/ReleaseImport'
 import ReleaseInfo from './components/ReleaseInfo'
 import SongItem from './components/SongItem'
 import { ReleaseSong, UploadRelease } from './types'
-import { blobToDataURL } from './utils/file'
 
 type UploadPageProps = {
   user: any
@@ -53,9 +53,9 @@ export default function UploadPage({ user, canUploadAs }: UploadPageProps) {
   const [release, setRelease] = useState<UploadRelease>(uploadReleaseDefaults)
   const [songs, setSongs] = useState<ReleaseSong[]>([])
   const [artColors, setArtColors] = useState<string[]>([])
+
   const [isImporting, setImporting] = useState<boolean>(false)
-  const [playingId, setPlayingId] = useState<string>('')
-  const [isPlaying, setPlaying] = useState<boolean>(false)
+
   const [publish, setPublish] = useState<boolean>(true)
   const [agreeTOS, setAgreeTOS] = useState<boolean>(false)
 
@@ -63,54 +63,14 @@ export default function UploadPage({ user, canUploadAs }: UploadPageProps) {
 
   const audioElement = useRef<HTMLAudioElement>(null)
 
-  const uploadPlayer = {
-    play: async (fileId?: string) => {
-      if (fileId && fileId !== playingId) {
-        const namespace = 'tone.upload.' + fileId
-
-        await localforage.getItem(namespace).then(async (file) => {
-          console.log({ file })
-
-          const dataURL = await blobToDataURL(file as File)
-
-          console.log({ dataURL })
-
-          audioElement.current?.pause()
-
-          audioElement.current?.setAttribute('src', dataURL)
-
-          audioElement.current?.play()
-
-          setPlayingId(fileId)
-
-          setPlaying(true)
-        })
-      }
-
-      audioElement.current?.play()
-
-      setPlaying(true)
-    },
-    pause: async () => {
-      audioElement.current?.pause()
-
-      setPlaying(false)
-    },
-    stop: () => {
-      audioElement.current?.pause()
-
-      setPlaying(false)
-
-      setPlayingId('')
-    },
-    fileId: playingId,
-    isPlaying,
-  }
-
   useEffect(() => {
     if (release.colors[0] && release.colors[1])
       ToneCSSUtils.setColors('global', release.colors[0], release.colors[1])
   }, [release.colors])
+
+  const custodialArtists = user.custodianOn
+    .map((entity: any) => canUploadAs.includes(entity.entityId) && entity)
+    .filter((x: any) => x)
 
   return (
     <>
@@ -128,10 +88,7 @@ export default function UploadPage({ user, canUploadAs }: UploadPageProps) {
           isImporting={isImporting}
           setImporting={setImporting}
         />
-        <Form
-          onSubmit={() => console.log('Release Form submit')}
-          disabled={isImporting}
-        >
+        <Form onSubmit={() => uploadReleaseToTone()} disabled={isImporting}>
           <ReleaseArtInput
             art={release.art}
             setArt={(art) => setReleaseProperty('art', art)}
@@ -139,7 +96,7 @@ export default function UploadPage({ user, canUploadAs }: UploadPageProps) {
             setArtColors={setArtColors}
           />
           <ReleaseInfo
-            user={user}
+            custodialArtists={custodialArtists}
             canUploadAs={canUploadAs}
             release={release}
             setReleaseProperty={setReleaseProperty}
@@ -166,7 +123,6 @@ export default function UploadPage({ user, canUploadAs }: UploadPageProps) {
                   song={song}
                   setReleaseSongProperties={setReleaseSongProperties}
                   removeSongFromRelease={removeSongFromRelease}
-                  uploadPlayer={uploadPlayer}
                 />
               ))
             ) : (
@@ -200,6 +156,52 @@ export default function UploadPage({ user, canUploadAs }: UploadPageProps) {
     </>
   )
 
+  function uploadReleaseToTone() {
+    const artists = release.artists?.map((artist) => artist.entityId)
+
+    const tags = release.tags?.map((tag) => tag.tagId)
+
+    const uploadRelease = {
+      display: release.display,
+      catalog: release.catalog,
+      colors: release.colors,
+      credits: release.credits,
+      description: release.description,
+      upc: release.upc,
+      artists: artists || [],
+      tags,
+      songs,
+    }
+
+    api.releases
+      .addRelease(uploadRelease)
+      .then((release: any) => startFileUploadToTone(release.songs))
+      .catch((error) => console.log({ error }))
+  }
+
+  async function startFileUploadToTone(songs: any[] = []) {
+    await win.__TONE_CONVERTER__.loadFFmpeg()
+
+    for await (const song of songs) {
+      const fileId = song.additionalData.localFileId
+
+      const flac = (await localforage.getItem('tone.upload.' + fileId)) as File
+
+      await api.songs
+        .uploadSongAudio(song.songId, flac)
+        .then(async () => {
+          const mp3 = await win.__TONE_CONVERTER__.convertFlacToMp3(
+            flac as File
+          )
+
+          await api.songs
+            .uploadSongAudio(song.songId, mp3)
+            .catch((error) => console.log({ error }))
+        })
+        .catch((error) => console.log({ error }))
+    }
+  }
+
   function setReleaseProperty(key: string, value: any) {
     return setRelease({ ...release, [key as keyof typeof release]: value })
   }
@@ -222,8 +224,6 @@ export default function UploadPage({ user, canUploadAs }: UploadPageProps) {
     if (fileId) {
       localforage.removeItem('tone.upload.' + fileId)
     }
-
-    if (fileId == playingId) uploadPlayer.pause()
 
     const updatedSongs = songs.filter((song: any, i: number) => {
       if (i !== index) return song

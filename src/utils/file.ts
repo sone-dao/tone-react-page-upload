@@ -9,3 +9,7 @@ export async function blobToDataURL(blob: Blob) {
     reader.readAsDataURL(blob)
   })
 }
+
+export function getFileTypeFromName(name: string) {
+  return name.split('.')[name.split('.').length - 1]
+}

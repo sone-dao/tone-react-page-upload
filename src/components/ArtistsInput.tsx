@@ -75,7 +75,7 @@ export default function ArtistsInput({
               } as CSSProperties
 
               return (
-                <li>
+                <li key={i}>
                   <Chip
                     key={i}
                     style={style}

@@ -6,6 +6,8 @@ import { v4 as uuidv4 } from 'uuid'
 import { ReleaseSong, UploadRelease } from '../types'
 import { getColorsFromImage } from '../utils/art'
 import { getMetadata } from '../utils/audio'
+import { getFileTypeFromName } from '../utils/file'
+import { getFilesFromZip } from '../utils/zip'
 
 type ReleaseImportProps = {
   release: UploadRelease
@@ -28,15 +30,20 @@ export default function ReleaseImport({
 }: ReleaseImportProps) {
   const inputElement = useRef<HTMLInputElement>(null)
 
-  const [filesToSave, setFilesToSave] = useState<
-    {
-      fileId: string
-      file: File
-    }[]
-  >([])
+  const [importedSongs, setImportedSongs] = useState<any[]>([])
+
+  const [filesToSave, setFilesToSave] = useState<any[]>([])
 
   useEffect(() => {
-    filesToSave.length && saveFiles(filesToSave)
+    if (importedSongs.length) {
+      setSongs([...songs, ...importedSongs])
+    }
+  }, [importedSongs])
+
+  useEffect(() => {
+    if (filesToSave.length) {
+      saveFiles(filesToSave)
+    }
   }, [filesToSave])
 
   return (
@@ -70,7 +77,7 @@ export default function ReleaseImport({
         <input
           type="file"
           onChange={(e) =>
-            e.target.files?.length && handleFiles(e.target.files)
+            e.target.files && !isImporting && handleFiles(e.target.files)
           }
           style={{ display: 'none' }}
           ref={inputElement}
@@ -82,54 +89,122 @@ export default function ReleaseImport({
   async function handleFiles(fileList: FileList) {
     setImporting(true)
 
-    const fileCount = fileList.length
-
-    for (let x = 0; x < fileCount; x++) {
-      const file = fileList[x]
-
-      const validFileTypes = ['png', 'jpg', 'jpeg', 'zip', 'wav', 'flac']
+    if (fileList[0]) {
+      const file = fileList[0]
 
       const fileType = file.name.split('.')[file.name.split('.').length - 1]
 
-      if (validFileTypes.includes(fileType)) {
-        switch (fileType) {
-          case 'zip':
-            const zip = await parseZip(file)
+      if (fileType == 'zip') {
+        const zipSongs: any = []
 
-            const art = zip?.art
+        let zipArt: {
+          colors?: string[]
+          data?: Blob | null
+        } = {}
 
-            const files = zip?.files || []
+        let zipFiles: any[] = []
 
-            if (files.length) setFilesToSave(files)
+        let releaseDisplay = ''
 
-            if (art) {
-              const colors = await getColorsFromImage(art)
+        const files = await getFilesFromZip(file)
 
-              setArtColors(colors)
+        for await (const file of files) {
+          const type = getFileTypeFromName(file.name)
+
+          if (type == 'flac' || type == 'wav') {
+            const meta = await getMetadata(file)
+
+            if (!meta.lossless) return
+
+            if (meta.releaseDisplay && !releaseDisplay) {
+              releaseDisplay = meta.releaseDisplay
             }
 
-            const imported = {
-              display: zip?.releaseDisplay,
-              art,
+            const fileId = uuidv4()
+
+            zipSongs.push({
+              display: meta.display,
+              duration: meta.duration,
+              isrc: meta.isrc,
+              lyrics: {
+                unsynced: meta.unsyncedLyrics,
+              },
+              fileId,
+            })
+
+            zipFiles.push({
+              fileId,
+              data: file,
+            })
+          }
+
+          if (type == 'png' || type == 'jpg' || type == 'jpeg') {
+            const colors = await getColorsFromImage(file)
+
+            zipArt = {
+              colors,
+              data: file,
             }
-
-            setRelease({ ...release, ...imported })
-
-            if (zip?.songs.length) setSongs(zip.songs)
-
-            return setImporting(false)
-          case 'wav':
-          case 'flac':
-            await parseSong(file)
-
-            return setImporting(false)
-          case 'png':
-          case 'jpg':
-          case 'jpeg':
-            await parseArt(file)
-
-            return setImporting(false)
+          }
         }
+
+        setRelease({ ...release, display: releaseDisplay, art: zipArt.data })
+
+        setArtColors(zipArt.colors)
+
+        setImportedSongs(zipSongs)
+
+        setFilesToSave(zipFiles)
+
+        setImporting(false)
+      }
+
+      if (fileType == 'zoop') {
+        const audioFileTypes = ['flac', 'wav', 'wave']
+
+        const artFileTypes = ['png', 'jpg', 'jpeg']
+
+        let art: Blob | null = null
+
+        let releaseDisplay: string = ''
+
+        const zip = await JSZip.loadAsync(file)
+
+        const paths: string[] = []
+
+        zip.forEach(async (relativePath) => paths.push(relativePath))
+
+        for await (const path of paths) {
+          const jsZipFile = zip.file(path)!
+
+          const blob = await jsZipFile.async('blob')
+
+          const file = new File([blob], jsZipFile.name)
+
+          const type = file.name.split('.')[file.name.split('.').length - 1]
+
+          if (artFileTypes.includes(type)) {
+            setRelease({ ...release, art: file })
+
+            const colors = await getColorsFromImage(file)
+
+            setArtColors(colors)
+          }
+        }
+
+        return setImporting(false)
+      }
+
+      if (fileType == 'wav' || fileType == 'flac') {
+        parseSong(file)
+
+        return setImporting(false)
+      }
+
+      if (fileType == 'png' || fileType == 'jpg' || fileType == 'jpeg') {
+        parseSong(file)
+
+        return setImporting(false)
       }
     }
   }
@@ -158,78 +233,9 @@ export default function ReleaseImport({
     setRelease({ ...release, art: file })
   }
 
-  async function parseZip(file: File) {
-    const audioFileTypes = ['flac', 'wav', 'wave']
-
-    const artFileTypes = ['png', 'jpg', 'jpeg']
-
-    const zipSongs: ReleaseSong[] = []
-
-    const files: {
-      fileId: string
-      file: File
-    }[] = []
-
-    let art: Blob | null = null
-
-    let releaseDisplay: string = ''
-
-    const zip = await JSZip.loadAsync(file)
-
-    const paths: string[] = []
-
-    zip.forEach(async (relativePath) => paths.push(relativePath))
-
-    for await (const path of paths) {
-      const jsZipFile = zip.file(path)!
-
-      const blob = await jsZipFile.async('blob')
-
-      const file = new File([blob], jsZipFile.name)
-
-      const type = file.name.split('.')[file.name.split('.').length - 1]
-
-      if (audioFileTypes.includes(type)) {
-        const meta = await getMetadata(file)
-
-        if (!meta.lossless) return
-
-        if (meta.releaseDisplay && !releaseDisplay) {
-          releaseDisplay = meta.releaseDisplay
-        }
-
-        const fileId = uuidv4()
-
-        zipSongs.push({
-          display: meta.display,
-          duration: meta.duration,
-          isrc: meta.isrc,
-          lyrics: {
-            unsynced: meta.unsyncedLyrics,
-          },
-          fileId,
-        })
-
-        files.push({
-          fileId,
-          file,
-        })
-      }
-
-      if (artFileTypes.includes(type)) art = file
-    }
-
-    return { songs: zipSongs, releaseDisplay, art, files }
-  }
-
-  async function saveFiles(filesToSave: { fileId: string; file: File }[]) {
-    console.log('Saving files...')
-
-    for await (const fileToSave of filesToSave) {
-      console.log('Saving file:', fileToSave.file)
-      await localforage
-        .setItem('tone.upload.' + fileToSave.fileId, fileToSave.file)
-        .then((file) => console.log('Saved file:', file))
+  async function saveFiles(filesToSave: any[]) {
+    for await (const file of filesToSave) {
+      await localforage.setItem('tone.upload.' + file.fileId, file.data)
     }
   }
 }

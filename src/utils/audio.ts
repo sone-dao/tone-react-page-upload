@@ -14,7 +14,7 @@ export async function getMetadata(file: File) {
 
     const duration = meta.format.duration || 0
 
-    const isrc = (meta.common.isrc?.length && meta.common.isrc[0]) || ''
+    const isrc = meta.common.isrc?.length ? meta.common.isrc[0] : ''
 
     return { lossless, releaseDisplay, display, unsyncedLyrics, duration, isrc }
   })

@@ -8,7 +8,6 @@ type SongItemProps = {
   song: ReleaseSong
   setReleaseSongProperties: Function
   removeSongFromRelease: Function
-  uploadPlayer: any
 }
 
 export default function SongItem({
@@ -16,7 +15,6 @@ export default function SongItem({
   song,
   setReleaseSongProperties,
   removeSongFromRelease,
-  uploadPlayer,
 }: SongItemProps) {
   const [isOpen, setOpen] = useState<boolean>(false)
 
@@ -73,21 +71,21 @@ export default function SongItem({
         <SongFileInput
           index={index}
           fileId={song.fileId}
-          setReleaseSong={setReleaseSongProperties}
-          uploadPlayer={uploadPlayer}
+          setReleaseSong={() => {}}
         />
         <Input
           label="title"
           value={song.display}
-          setValue={(value) =>
-            setReleaseSongProperties(index, { display: value })
-          }
+          setValue={(value) => setReleaseSongProperties('display', value)}
         />
         <Textarea
           label="lyrics"
-          value={song.lyrics.unsynced}
+          value={song.lyrics.unsynced || ''}
           setValue={(value) =>
-            setReleaseSongProperties(index, { lyrics: { unsynced: value } })
+            setReleaseSongProperties('lyrics', {
+              ...song.lyrics,
+              unsynced: value,
+            })
           }
           className="my-4"
           styles={{
@@ -99,7 +97,7 @@ export default function SongItem({
         <Input
           label="isrc"
           value={song.isrc}
-          setValue={(value) => setReleaseSongProperties(index, { isrc: value })}
+          setValue={(value) => setReleaseSongProperties('isrc', value)}
         />
         <Button
           isSubmit={false}

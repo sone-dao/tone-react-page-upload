@@ -1,6 +1,6 @@
 export type UploadRelease = {
   display: string
-  artists?: string[]
+  artists?: any[]
   type: string
   description: string
   tags: any[]
